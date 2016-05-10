@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{Phys.Rev.Lett.19.1264}
+S.~Weinberg,
+\newblock Phys. Rev. Lett. {\bf 19}, 1264 (1967).
+
+\bibitem{Phys.Rev.D2.1285}
+S.~L. Glashow, J.~Iliopoulos, and L.~Maiani,
+\newblock Phys. Rev. {\bf D2}, 1285 (1970).
+
+\bibitem{hep-ph/0410370}
+S.~Willenbrock,
+\newblock (2004), hep-ph/0410370.
+
+\bibitem{Brianti:2004qq}
+G.~Brianti,
+\newblock Phys. Rept. {\bf 403-404}, 349 (2004).
+
+\bibitem{Amato:1998xt}
+LHCb, S.~Amato {\em et~al.},
+\newblock CERN-LHCC-98-4.
+
+\bibitem{hepthesis}
+A.~Buckley,
+\newblock The hepthesis {\LaTeX} class.
+
+\end{thebibliography}
