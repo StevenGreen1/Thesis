@@ -42,7 +42,30 @@ Each of these aspects needs separately addressing for each new detector model co
 % How digitsation is applied
 The goal of the digitisation step of the calibration procedure is to ensure an accurate estimation of the energy deposited in the absorber layers of the calorimeter based on the energy deposits in the active layers.  The energy deposited in a given calorimeter cell, containing an active and absorber layer pair, is assumed to be equal to a constant, hereby known as a digitsation constant, multipled by the energy measured within the active layer.  This approximation holds true given a sufficiently high spatial sampling of the shower that variations in the longitudinal energy deposition profile across the cells are negligible.  
 
-The digitisation constants depend upon several aspects of the detector including the material properties of the active and absorber layers, the magnetic field strength in the region of the subdetector and energy losses occuring within the gaps between the active and absorber layers.  Gaps between the active and aborber layer are simulated in the detector to give the effect of the instrumented read out technology region that would exist in a completed detector.  The empirical calculation of these constants for each subdetector is discussed below. 
+The digitisation constants depend upon several aspects of the detector including the material properties of the active and absorber layers, the magnetic field strength in the region of the subdetector and energy losses occuring within the gaps between the active and absorber layers.  Some dead material between the active and aborber layer is simulated in the detector to give the effect of the instrumented read out technology that would exist in a completed detector.  The empirical calculation of these constants for each subdetector is discussed below. 
+
+\subsection{Calorimetry Probably Theory Section}
+% Particle Showers
+Calorimetry relies upon the assumption that the energy deposited within a detector is directly proprtional to the energy of the incoming particle.  The incoming particle if charged will deposit energy throughout the calorimeter via ionisation.  However, the incoming particle may also begin a particle shower.  This occurs when the incoming particle interacts via some process with the material inside the calorimeter and produces a cascase of secondard particles.  These secondary particles may then go on to shower later in the calorimeter.  Each particle in this heirarchy will deposit energy within the detector in various ways such as ionisation, exciting of atomic nuclei, collision with nuclei etc.  These energy deposits if recorded can then be summed to give a measurement of the initial particles energy.
+
+% Why Gaussian
+Effective calorimetry then becomes a counting exercise to measure as many of these energy deposits as well as possible.  The energy deposits are primarily recorded via ionisation effects.  If we denote the sum of all the ionisation track lengths of a particle shower as $T_{0}$ then this is propartional to the number of ionising particles in the shower $N$.  In this case $N = E_{0}/\epsilon$ where $E_{0}$ is the energy of the particle initiating the shower and $\epsilon$ is the average particle energy within the shower.  This means the energy measurement $E_{0}$ is directly prortional to the number of ionised tracks in the shower.  So if $E \propto N$ then $\sigma_{E} \propto \sigma_{N} = \sqrt{N}$.  The last statement holds true as Poissonian statistics hold for measuring the signal $N$.  In the limit of large $N$, which is the typical case for a calorimeter the Poissonian statistics behave as Gaussian statistics and calorimetry yeilds Gaussian distributions for reconstructed energy measurements.  Therefore, the resolution in an ideal calorimeter goes as $\frac{\sigma_{E}}{E} \propto \frac{1}{\sqrt{E}}$.
+
+% Resolution Terms
+There are, however, other sources contributing to the resolution of a calorimeter that must be considered.  In general calorimeter energy resolutions are quotes using the following form:
+
+\begin{equation}
+\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c
+\end{equation}
+
+There are many different contributing sources to the resolution, these include:
+\begin{enumerate}
+\item Stoichastic term:  These are the errros resulting 
+\item Noise term:
+\item Constant term:
+\end{enumerate}
+
+In a sampling calorimetry the energy is deposited in the active layers of the calorimeter and this information is used to infer the energy deposited in the adjacent absorber layers.
 
 % How the empirical calculation works
 The proecdure for determining the digitisation constants is as follows, fixed energy single particle events are simulated that are fully contained within the detector.  As the calibration procedure is iterative the first step applies a trial calibration that may contain miscalibration.  The energy of the calorimeter hits are summed on an event by event basis and the mean of a Gaussian fit to this distribution is produced.  In theory for perfect calibration the mean of the fit would be equal to the MC energy of the simulated single particle events and any shift in the mean is assumed to be due to miscalibration.  To correct this the digitsation constant from the trial calibration is adjusted such that the mean of the new distibution would centred on the MC energy for the single particle sample.  
@@ -68,12 +91,16 @@ The choice of photons helps with the issue of contained events as, due to the la
 % Cuts on event selection
 The photon event sample was generated with fixed energy uniformly in solid angle.  To excude events passing down the beam line a cut on the polar angle, $\theta$, of the magnitude of cos$\theta$ to be less than 0.95 was applied to the reconsturcted PFOs.  To veto photon conversion events ($\gamma \rightarrow e^{+}e^{-}$ pair creation) events from the calibration sample it was required that there be a single photon target (*explain PFO targets).  Finally, to ensure that events were contained within the ECal it was required that at least 99\% of the event energy occur within the ECal.  The effect of these preselection cuts on a typical calibration sample is shown in figure \ref{engest:fig:cutsphotondigi}.  
 
-
 \begin{figure}
 \includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/ECalDigiCuts.pdf}
   \caption[Sum of the raw calorimeter hit energies for a 10 GeV photon with and without the preselection cuts.]{Sum of the raw calorimeter hit energies for a 10 GeV photon with and without the preselection cuts.}
   \label{engest:fig:cutsphotondigi}
 \end{figure}
+
+% Still not perfectly Gaussian 
+As figure \ref{engest:fig:cutsphotondigi} shows there are still some outlying events in the distribution.  These are most likely due to events that encounter gaps between detector modeules in the simulation.  This means that they encounter much less material in the simulation than expected and could potentailly shower much deeper into the calorimeters than expected.  An example event suffering from the effect of detector gaps is shown in figure BLAH.
+
+
 
 \subsection{MIP Scale Setting}
 
