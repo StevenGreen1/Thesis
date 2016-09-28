@@ -4,127 +4,30 @@
 \chapterquote{There, sir! that is the perfection of vessels!}
 {Jules Verne, 1828--1905}
 
-\section{Unitarisation}
+\section{Particle Flow Calorimetry}
 \label{sec:unitarisation}
 
-\section{The K - Matrix}
-\label{sec:kmatrix}
+\subsection{Overview}
 
-The probability relating an initial state $\Phi_{i}$ to a final state $\Phi_{f}$ is given by
+Particle flow calorimetry is a method of calorimetry where the goal is to reconstruct every visible particle in any given event.  This prcoesses has numerous advantages over traditional calorimetry in that it yeilds superior energy resolutions as well as more topological information that can be used further downstream in physics analyses.  Careful use of this approach to calorimetry allows us to make signficant strides forward in physics understanding in comparison to traditional calorimetric methods.
 
-\begin{equation}
-  S_{fi} = \bra{\Phi_{f}} S \ket{\Phi_{i}}
-  \label{eq:sdefinition}
-\end{equation}
+The application of particle flow calorimetry creates new challenges for detector response on both the hardware and software side.  Fine granularity calorimeters are crucial to be able to track the energy deposits from individual particles and sophisticated pattern recongition software is essential for piecing these energy deposits back together into reconstructed particles.  For particle flow calorimetry to be successful there has to be a synergy between the hardware and software so that the two work together well with success being dictated by physics performance.  
 
-where the \textit{S} operator is defined as... (fill in)
+The immense benefits offered by particle flow calorimetry have made it the front runner in terms of the calorimetric approach and as such has been adopted by the future linear lepton-lepton collider.  
 
-The conservation of probability currents demand that the \textit{S} operator be unitary.  
+\subsection{Paradigm}
 
-\begin{equation}
-  SS^{\dagger} = S^{\dagger}S = \textbf{1}
-  \label{eq:sunitarity}
-\end{equation}
+The principle of particle flow calorimetry is a simple one, that is to record the energy deposited by a particle in a dectector in the subsystem that offers the best energy resolution.  While a relatively simple aim the application of such a paradigm is challenging as different particles deposit energy throughout the detector in different regions.  
 
-The transition operator, whose purpose is to encompass changes to states in the given process, is defined as follows 
+The stable particles that it is possible to measure in a particle collider detector are relatively few in number and can be broken into three categories depending upon their energy depositions.  There are:
 
-\begin{equation}
-   S = \textbf{1} + iT
-\label{eq:tdefinition}
-\end{equation}
+\begin{itemize}
+\item Charged hardons.  These produce energy depoits in the tracker and both the electromangetic and hadronics calorimeters.
+\item Neutral hadrons.  These produce energy depoits in the electromangetic and hadronics calorimeters.
+\item Photons.  These produce energy deposits primarily in the electromangetic calorimeters. 
+\end{itemize}
 
-The uniarity property of the S operator leads to the following identity, also known as the optical theorem (reference), for the transition operator.  
+As the energy resolution offered by the tracker is signifcantly better that that offered by the calorimeters it is desirable to measure the energy of charged particles in the tracker.  As photons and neutral hadrons do not produce tracks these energy deposits must come from the calorimeter.  This approach is to be contrasted with traditional calorimetry where all energy deposits arise from the calorimeters.  
 
-\begin{equation}
-  iT^{\dagger}T = T - T^{\dagger} 
-  \label{eq:opticaltheorem}
-\end{equation}
 
-By applying a Cayley transform to the unitary scattering operator \textit{S} it is possible to map this operator onto a Hermitian operator \textit{K}.  
-
-\begin{equation}
-  S = \frac{\textbf{1} + iK/2}{\textbf{1} - iK/2} 
-  \label{eq:kdef}
-\end{equation}
-
-This is a beneficial construct for comparisons to the interaction Hamiltonian due to the property of Hermiticiy, which is not shared with the \textit{S} operator.
-
-Inverting the above relationships yeilds
-
-\begin{equation}
-  K = 2i \frac{\textbf{1} - S}{\textbf{1} + S} = \frac{T}{\textbf{1} + iT/2}
-  \label{eq:kdef2}
-\end{equation}
-
-This construction is used as the basis for the unitarisation scheme applied in this analysis.  
-
-\section{Unitarisation}
-\label{sec:unitarisation}
-
-In a basis where the \textit{S} operator has been diagonalised both \textit{T} and \textit{K} operators will be diagonal from equations \ref{eq:tdefinition} and \ref{eq:kdef2} respectively.  Consdier the complex eigenvalues \textit{t} of the transition operator \textit{T}.  If \textit{t} \= 2\textit{a} then the optical theorem yeilds
-
-\begin{equation}
-  |a - i/2| = 1/2
-  \label{eq:toperatoreval}
-\end{equation}
-
-Therefore, the eigenvalues, \textit{a}, of the \textit{T} operator are found on a circle in the Argand plance centred at i/2 with radius 1/2.  Defining the real eigenvalue of the \textit{K} matrix to be $\textit{k} = 2\textit{a}_{\textit{K}}$ they can be realated to \textit{a} as follows
-
-\begin{equation}
-  a_{K} = \frac{a}{1+ia}
-  \label{eq:akdef}
-\end{equation}
-
-In this basis the Cayley transform is identical to an inverse sterographic projection of the transition operator \textit{T} onto the space of Hermitian operators.  DIAGRAM
-
-It is possible to apply a unitarisation scheme using a \textit{K} matrix calculated up to finite order.  This is done by calculating the eigenvalues of \textit{S} or \textit{T} operators using the inverse of equation \ref{eq:akdef}
-
-\begin{equation}
-  a = \frac{a_{K}}{1-ia_{K}}
-  \label{eq:adef}
-\end{equation}
-
-If we take the \textit{n}-th order approximation to the \textit{T} operator, which is represented by the eigenamplitudes $a_0^{n}$ we can calculate the \textit{n}-th order approximation to the \textit{K} operator using equation \ref{eq:akdef}
-
-\begin{equation}
-  a_{K}^{(n)} &= \frac{a_{0}^{(n)}}{1+ia_{0}^{(n)}} = a_{0}^{(1)} + \text{Re} a_{0}^{(2)} + i( \text{Im}a_{0}^{(2)} - ( a_{0}^{(1)} )^{2} ) + ... \\
-              &= a_{0}^{(1)} + \text{Re} a_{0}^{(2)} 
-  \label{eq:akdef}
-\end{equation}
-
-Where in the last step the first order expansion of the optical theorem was applied and terms were kept to second order only.
-
-The next step involves substituting the truncated pertubation series for $a_{K}^{(n)}$ into equation \ref{eq:adef}.  No truncation of the series is applied in this step.  If the theory allows for a perturbative method then this method yeilds an \textit{S} operator that is unitary and reproducibile on an order by order basis. 
-
-Expansion of optical theorem to first order.  
-
-Represent the \textit{n}-th order approximation, $T_0^{n}$, of the \textit{T} operator by the eigenamplitudes $a_0^{n}$.  Substitute this into \ref{eq:opticaltheorem}.
-
-\begin{equation}
-  iT^{\dagger}T = T - T^{\dagger} \\
-  iT_0^{(n)*}T_0^{(n)} = T_0^{(n)} - T_0^{(n)*}
-  \label{eq:opticaltheoremexp}
-\end{equation}
-
-Applying this approximation to second order yeilds
-
-\begin{equation}
-  4i(a_0^{(1)} + a_0^{(2)})^{*}(a_0^{(1)} + a_0^{(2)}) = 2(a_0^{(1)} + a_0^{(2)}) - 2(a_0^{(1)} + a_0^{(2)})^{*} 
-  \label{eq:opticaltheoremexp2}
-\end{equation}
-
-Given the \textit{K} operator is Hermitian the values of $a_{K}^{(n)}$ are real for a complete series.  Therefore, we assume the first eigenamplitude $a_{K}^{(1)}$ is real.  Using this assumption equation \ref{eq:opticaltheoremexp2} and keeping only the lowest order terms gives
-
-\begin{equation}  
-  (a_0^{(1)})^2 = \text{Im}a_0^{(2)} 
-  \label{eq:opticaltheoremexp2}
-\end{equation}
-
-%\begin{subequations}
-%  \label{eq:cosThetaCk}
-%  \begin{equation}
-%    \textit{S} = \textbf{1} + i\textit{T}
-%    \label{eq:cosThetaCkApprox}
-%  \end{equation}
-%\end{subequations}
-
+\section{Physics Theory }

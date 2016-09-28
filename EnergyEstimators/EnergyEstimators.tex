@@ -45,11 +45,15 @@ The goal of the digitisation step of the calibration procedure is to ensure an a
 The digitisation constants depend upon several aspects of the detector including the material properties of the active and absorber layers, the magnetic field strength in the region of the subdetector and energy losses occuring within the gaps between the active and absorber layers.  Some dead material between the active and aborber layer is simulated in the detector to give the effect of the instrumented read out technology that would exist in a completed detector.  The empirical calculation of these constants for each subdetector is discussed below. 
 
 \subsection{Calorimetry Probably Theory Section}
+% Probably start taking about EM showers and then move onto differences later.
+
 % Particle Showers
 Calorimetry relies upon the assumption that the energy deposited within a detector is directly proprtional to the energy of the incoming particle.  The incoming particle if charged will deposit energy throughout the calorimeter via ionisation.  However, the incoming particle may also begin a particle shower.  This occurs when the incoming particle interacts via some process with the material inside the calorimeter and produces a cascase of secondard particles.  These secondary particles may then go on to shower later in the calorimeter.  Each particle in this heirarchy will deposit energy within the detector in various ways such as ionisation, exciting of atomic nuclei, collision with nuclei etc.  These energy deposits if recorded can then be summed to give a measurement of the initial particles energy.
 
 % Why Gaussian
-Effective calorimetry then becomes a counting exercise to measure as many of these energy deposits as well as possible.  The energy deposits are primarily recorded via ionisation effects.  If we denote the sum of all the ionisation track lengths of a particle shower as $T_{0}$ then this is propartional to the number of ionising particles in the shower $N$.  In this case $N = E_{0}/\epsilon$ where $E_{0}$ is the energy of the particle initiating the shower and $\epsilon$ is the average particle energy within the shower.  This means the energy measurement $E_{0}$ is directly prortional to the number of ionised tracks in the shower.  So if $E \propto N$ then $\sigma_{E} \propto \sigma_{N} = \sqrt{N}$.  The last statement holds true as Poissonian statistics hold for measuring the signal $N$.  In the limit of large $N$, which is the typical case for a calorimeter the Poissonian statistics behave as Gaussian statistics and calorimetry yeilds Gaussian distributions for reconstructed energy measurements.  Therefore, the resolution in an ideal calorimeter goes as $\frac{\sigma_{E}}{E} \propto \frac{1}{\sqrt{E}}$.
+Effective calorimetry then becomes a counting exercise to measure as many of these energy deposits as well as possible.  These energy deposits can be recorded in multiple ways depending upon the choice of detector concept, however, these methods exclusively involve counting either the number of charged tracks, e.g. silicon detectors, or the number of photons, e.g. PMT detector, within the particle shower.
+
+For example consider a silicon detector.  If we denote the sum of all the ionisation track lengths of a particle shower within this detector as $T_{0}$ then this is propartional to the number of ionising particles in the shower $N$.  In this case $N = E_{0}/\epsilon$ where $E_{0}$ is the energy of the particle initiating the shower and $\epsilon$ is the average particle energy within the shower.  This means the energy measurement $E_{0}$ is directly prortional to the number of ionised tracks in the shower.  So if $E \propto N$ then $\sigma_{E} \propto \sigma_{N} = \sqrt{N}$.  The last statement holds true as Poissonian statistics hold for measuring the signal $N$.  In the limit of large $N$, which is the typical case for a calorimeter the Poissonian statistics behave as Gaussian statistics and calorimetry yeilds Gaussian distributions for reconstructed energy measurements.  Therefore, the resolution in an ideal calorimeter goes as $\frac{\sigma_{E}}{E} \propto \frac{1}{\sqrt{E}}$.  The same arguement can be applied when we consider counting the number of photons instead of ionisation tracks in the shower.
 
 % Resolution Terms
 There are, however, other sources contributing to the resolution of a calorimeter that must be considered.  In general calorimeter energy resolutions are quotes using the following form:
@@ -60,15 +64,20 @@ There are, however, other sources contributing to the resolution of a calorimete
 
 There are many different contributing sources to the resolution, these include:
 \begin{enumerate}
-\item Stoichastic term:  These are the errros resulting 
-\item Noise term:
-\item Constant term:
+\item Stoichastic term:  This term contributes to the resolution due to the statistical nature of counting quanta to get a measurement.
+\item Noise term:  A noise term can also be added to the resolution that scales as $\frac{1}{E}$.  This is the case as the effect of noise on $\sigma_{E}$ is independant of energy, therefore$\sigma_{E}{E} \propto \frac{1}{E}$.
+\item Constant term:  Accounts for effects such as leakage that grow with energy.  If $\sigma_{E} \propto E$ then a constant term is added to the resolution.
 \end{enumerate}
 
+% Sampling
 In a sampling calorimetry the energy is deposited in the active layers of the calorimeter and this information is used to infer the energy deposited in the adjacent absorber layers.
 
 % How the empirical calculation works
-The proecdure for determining the digitisation constants is as follows, fixed energy single particle events are simulated that are fully contained within the detector.  As the calibration procedure is iterative the first step applies a trial calibration that may contain miscalibration.  The energy of the calorimeter hits are summed on an event by event basis and the mean of a Gaussian fit to this distribution is produced.  In theory for perfect calibration the mean of the fit would be equal to the MC energy of the simulated single particle events and any shift in the mean is assumed to be due to miscalibration.  To correct this the digitsation constant from the trial calibration is adjusted such that the mean of the new distibution would centred on the MC energy for the single particle sample.  
+The procedure for determining the digitisation constants is as follows, fixed energy single particle events are simulated that are fully contained within the detector.  As the calibration procedure is iterative the first step applies a trial calibration that may contain miscalibration.  The energy of the calorimeter hits are summed on an event by event basis.  This distribution should, for an ideal calorimeter, be Gaussian as described in section BLAH, therefore, a Gaussian fit is applied to this distribtuion and the mean extracted.  For the case of perfect calibration the mean of this fit would be equal to the MC energy of the simulated single particle events, therefore, it is assumed that any deviation from the MC energy is due to miscalibration.  To correct for this offset the digitsation constant from the trial calibration is rescaled by the ratio of the MC energy to mean of the fitted distribution.
+
+\begin{equation}
+\alpha_{Digi0} \rightarrow \alpha_{Digi} = \alpha_{Digi0} \times \frac{E_{MC}}{E_{Gauss}}
+\end{equation}
 
 % Each detector needs its own constants to be calibrated separately 
 Due to the different physcial structure and positioning of the subdetectors in a full detector, each subdetector system will require a distinct digitisation constant that will require calibrating.  The calibration is applied independantly to each subdetector system to ensure that the assumption that the distribution of calorimeter hits in a given subdetector should, for perfect calibration, be centred on the MC energy of the single particle events in use.  This assumption also replies upon the fact that leakage out of the back of the subdetector is not a dominant effect.  Details on how this is accounted for are given below.

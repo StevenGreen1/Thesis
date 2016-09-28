@@ -1,0 +1,130 @@
+\chapter{Theory}
+\label{chap:theory}
+
+\chapterquote{There, sir! that is the perfection of vessels!}
+{Jules Verne, 1828--1905}
+
+\section{Unitarisation}
+\label{sec:unitarisation}
+
+\section{The K - Matrix}
+\label{sec:kmatrix}
+
+The probability relating an initial state $\Phi_{i}$ to a final state $\Phi_{f}$ is given by
+
+\begin{equation}
+  S_{fi} = \bra{\Phi_{f}} S \ket{\Phi_{i}}
+  \label{eq:sdefinition}
+\end{equation}
+
+where the \textit{S} operator is defined as... (fill in)
+
+The conservation of probability currents demand that the \textit{S} operator be unitary.  
+
+\begin{equation}
+  SS^{\dagger} = S^{\dagger}S = \textbf{1}
+  \label{eq:sunitarity}
+\end{equation}
+
+The transition operator, whose purpose is to encompass changes to states in the given process, is defined as follows 
+
+\begin{equation}
+   S = \textbf{1} + iT
+\label{eq:tdefinition}
+\end{equation}
+
+The uniarity property of the S operator leads to the following identity, also known as the optical theorem (reference), for the transition operator.  
+
+\begin{equation}
+  iT^{\dagger}T = T - T^{\dagger} 
+  \label{eq:opticaltheorem}
+\end{equation}
+
+By applying a Cayley transform to the unitary scattering operator \textit{S} it is possible to map this operator onto a Hermitian operator \textit{K}.  
+
+\begin{equation}
+  S = \frac{\textbf{1} + iK/2}{\textbf{1} - iK/2} 
+  \label{eq:kdef}
+\end{equation}
+
+This is a beneficial construct for comparisons to the interaction Hamiltonian due to the property of Hermiticiy, which is not shared with the \textit{S} operator.
+
+Inverting the above relationships yeilds
+
+\begin{equation}
+  K = 2i \frac{\textbf{1} - S}{\textbf{1} + S} = \frac{T}{\textbf{1} + iT/2}
+  \label{eq:kdef2}
+\end{equation}
+
+This construction is used as the basis for the unitarisation scheme applied in this analysis.  
+
+\section{Unitarisation}
+\label{sec:unitarisation}
+
+In a basis where the \textit{S} operator has been diagonalised both \textit{T} and \textit{K} operators will be diagonal from equations \ref{eq:tdefinition} and \ref{eq:kdef2} respectively.  Consdier the complex eigenvalues \textit{t} of the transition operator \textit{T}.  If \textit{t} \= 2\textit{a} then the optical theorem yeilds
+
+\begin{equation}
+  |a - i/2| = 1/2
+  \label{eq:toperatoreval}
+\end{equation}
+
+Therefore, the eigenvalues, \textit{a}, of the \textit{T} operator are found on a circle in the Argand plance centred at i/2 with radius 1/2.  Defining the real eigenvalue of the \textit{K} matrix to be $\textit{k} = 2\textit{a}_{\textit{K}}$ they can be realated to \textit{a} as follows
+
+\begin{equation}
+  a_{K} = \frac{a}{1+ia}
+  \label{eq:akdef}
+\end{equation}
+
+In this basis the Cayley transform is identical to an inverse sterographic projection of the transition operator \textit{T} onto the space of Hermitian operators.  DIAGRAM
+
+It is possible to apply a unitarisation scheme using a \textit{K} matrix calculated up to finite order.  This is done by calculating the eigenvalues of \textit{S} or \textit{T} operators using the inverse of equation \ref{eq:akdef}
+
+\begin{equation}
+  a = \frac{a_{K}}{1-ia_{K}}
+  \label{eq:adef}
+\end{equation}
+
+If we take the \textit{n}-th order approximation to the \textit{T} operator, which is represented by the eigenamplitudes $a_0^{n}$ we can calculate the \textit{n}-th order approximation to the \textit{K} operator using equation \ref{eq:akdef}
+
+\begin{equation}
+  a_{K}^{(n)} &= \frac{a_{0}^{(n)}}{1+ia_{0}^{(n)}} = a_{0}^{(1)} + \text{Re} a_{0}^{(2)} + i( \text{Im}a_{0}^{(2)} - ( a_{0}^{(1)} )^{2} ) + ... \\
+              &= a_{0}^{(1)} + \text{Re} a_{0}^{(2)} 
+  \label{eq:akdef}
+\end{equation}
+
+Where in the last step the first order expansion of the optical theorem was applied and terms were kept to second order only.
+
+The next step involves substituting the truncated pertubation series for $a_{K}^{(n)}$ into equation \ref{eq:adef}.  No truncation of the series is applied in this step.  If the theory allows for a perturbative method then this method yeilds an \textit{S} operator that is unitary and reproducibile on an order by order basis. 
+
+Expansion of optical theorem to first order.  
+
+Represent the \textit{n}-th order approximation, $T_0^{n}$, of the \textit{T} operator by the eigenamplitudes $a_0^{n}$.  Substitute this into \ref{eq:opticaltheorem}.
+
+\begin{equation}
+  iT^{\dagger}T = T - T^{\dagger} \\
+  iT_0^{(n)*}T_0^{(n)} = T_0^{(n)} - T_0^{(n)*}
+  \label{eq:opticaltheoremexp}
+\end{equation}
+
+Applying this approximation to second order yeilds
+
+\begin{equation}
+  4i(a_0^{(1)} + a_0^{(2)})^{*}(a_0^{(1)} + a_0^{(2)}) = 2(a_0^{(1)} + a_0^{(2)}) - 2(a_0^{(1)} + a_0^{(2)})^{*} 
+  \label{eq:opticaltheoremexp2}
+\end{equation}
+
+Given the \textit{K} operator is Hermitian the values of $a_{K}^{(n)}$ are real for a complete series.  Therefore, we assume the first eigenamplitude $a_{K}^{(1)}$ is real.  Using this assumption equation \ref{eq:opticaltheoremexp2} and keeping only the lowest order terms gives
+
+\begin{equation}  
+  (a_0^{(1)})^2 = \text{Im}a_0^{(2)} 
+  \label{eq:opticaltheoremexp2}
+\end{equation}
+
+%\begin{subequations}
+%  \label{eq:cosThetaCk}
+%  \begin{equation}
+%    \textit{S} = \textbf{1} + i\textit{T}
+%    \label{eq:cosThetaCkApprox}
+%  \end{equation}
+%\end{subequations}
+
