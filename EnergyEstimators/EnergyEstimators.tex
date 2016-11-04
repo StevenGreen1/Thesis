@@ -18,7 +18,7 @@ The other crucial energy deposit used in particle flow claorimetry are track ene
 
 Calibration of the linear collider simulation extends beyond the raw calorimeter hits and into the particle flow algorithm itself.  The fine calorimeter granularity required for particle flow calorimetry yeilds excellent physical separation of hadronic and electormangetic showers.  Thanks to sophisticatd particle identification occuring within PandoraPFA it is possible to distinguish hadronic and electormangetic showers, which allows for distinct treatments of the hadronic and electromangetic energy estimators.  This distinction can be used to produce a response from the calorimeter that is compensating despite the intrinsic response being non-compensating.  A compensating calorimeter would give significant improvmetns to the energy resolution for the detector.
 
-Two example energy esimator treatments for hadronic and electromangetic showers are discussed in this chapter.  The first use of this distinction is a relatively simple independant rescale the energies of these two types of shower.  The seconds involves a more sophisticated approach to determining the energy estiamtors for hadronic and electromagnetic showers invoving reweighting the individual calorimter hits based upon their energy densities.
+Two treatments designed to achieve a compensating response from the calorimeters are discussed.  The both involve rescaling the energies, the first rescaling is applied using a series of fixed energy independant constants, while the second uses the energy density of the calorimeter hits in the shower to determine the energy rescaling factor.
 
 \subsection{Calibration and detector optimisation}
 
@@ -43,34 +43,6 @@ Each of these aspects needs separately addressing for each new detector model co
 The goal of the digitisation step of the calibration procedure is to ensure an accurate estimation of the energy deposited in the absorber layers of the calorimeter based on the energy deposits in the active layers.  The energy deposited in a given calorimeter cell, containing an active and absorber layer pair, is assumed to be equal to a constant, hereby known as a digitsation constant, multipled by the energy measured within the active layer.  This approximation holds true given a sufficiently high spatial sampling of the shower that variations in the longitudinal energy deposition profile across the cells are negligible.  
 
 The digitisation constants depend upon several aspects of the detector including the material properties of the active and absorber layers, the magnetic field strength in the region of the subdetector and energy losses occuring within the gaps between the active and absorber layers.  Some dead material between the active and aborber layer is simulated in the detector to give the effect of the instrumented read out technology that would exist in a completed detector.  The empirical calculation of these constants for each subdetector is discussed below. 
-
-\subsection{Calorimetry Probably Theory Section}
-% Probably start taking about EM showers and then move onto differences later.
-
-% Particle Showers
-Calorimetry relies upon the assumption that the energy deposited within a detector is directly proprtional to the energy of the incoming particle.  The incoming particle if charged will deposit energy throughout the calorimeter via ionisation.  However, the incoming particle may also begin a particle shower.  This occurs when the incoming particle interacts via some process with the material inside the calorimeter and produces a cascase of secondard particles.  These secondary particles may then go on to shower later in the calorimeter.  Each particle in this heirarchy will deposit energy within the detector in various ways such as ionisation, exciting of atomic nuclei, collision with nuclei etc.  These energy deposits if recorded can then be summed to give a measurement of the initial particles energy.
-
-% Why Gaussian
-Effective calorimetry then becomes a counting exercise to measure as many of these energy deposits as well as possible.  These energy deposits can be recorded in multiple ways depending upon the choice of detector concept, however, these methods exclusively involve counting either the number of charged tracks, e.g. silicon detectors, or the number of photons, e.g. PMT detector, within the particle shower.
-
-For example consider a silicon detector.  If we denote the sum of all the ionisation track lengths of a particle shower within this detector as $T_{0}$ then this is propartional to the number of ionising particles in the shower $N$.  In this case $N = E_{0}/\epsilon$ where $E_{0}$ is the energy of the particle initiating the shower and $\epsilon$ is the average particle energy within the shower.  This means the energy measurement $E_{0}$ is directly prortional to the number of ionised tracks in the shower.  So if $E \propto N$ then $\sigma_{E} \propto \sigma_{N} = \sqrt{N}$.  The last statement holds true as Poissonian statistics hold for measuring the signal $N$.  In the limit of large $N$, which is the typical case for a calorimeter the Poissonian statistics behave as Gaussian statistics and calorimetry yeilds Gaussian distributions for reconstructed energy measurements.  Therefore, the resolution in an ideal calorimeter goes as $\frac{\sigma_{E}}{E} \propto \frac{1}{\sqrt{E}}$.  The same arguement can be applied when we consider counting the number of photons instead of ionisation tracks in the shower.
-
-% Resolution Terms
-There are, however, other sources contributing to the resolution of a calorimeter that must be considered.  In general calorimeter energy resolutions are quotes using the following form:
-
-\begin{equation}
-\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c
-\end{equation}
-
-There are many different contributing sources to the resolution, these include:
-\begin{enumerate}
-\item Stoichastic term:  This term contributes to the resolution due to the statistical nature of counting quanta to get a measurement.
-\item Noise term:  A noise term can also be added to the resolution that scales as $\frac{1}{E}$.  This is the case as the effect of noise on $\sigma_{E}$ is independant of energy, therefore$\sigma_{E}{E} \propto \frac{1}{E}$.
-\item Constant term:  Accounts for effects such as leakage that grow with energy.  If $\sigma_{E} \propto E$ then a constant term is added to the resolution.
-\end{enumerate}
-
-% Sampling
-In a sampling calorimetry the energy is deposited in the active layers of the calorimeter and this information is used to infer the energy deposited in the adjacent absorber layers.
 
 % How the empirical calculation works
 The procedure for determining the digitisation constants is as follows, fixed energy single particle events are simulated that are fully contained within the detector.  As the calibration procedure is iterative the first step applies a trial calibration that may contain miscalibration.  The energy of the calorimeter hits are summed on an event by event basis.  This distribution should, for an ideal calorimeter, be Gaussian as described in section BLAH, therefore, a Gaussian fit is applied to this distribtuion and the mean extracted.  For the case of perfect calibration the mean of this fit would be equal to the MC energy of the simulated single particle events, therefore, it is assumed that any deviation from the MC energy is due to miscalibration.  To correct for this offset the digitsation constant from the trial calibration is rescaled by the ratio of the MC energy to mean of the fitted distribution.
