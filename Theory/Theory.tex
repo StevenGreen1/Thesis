@@ -41,7 +41,7 @@ There are many different contributing sources to the resolution, these include:
 
 \subsection{Hadronic Showers and Detection of Hadronic Showers}
 % Hadronic interactions - Could maybe should add more details here.  See particle physics spetra decoding note by F.Gianette
-Calorimeters are also used to determine the incoming energy of hadronic particles producing a shower when interacting within the calorimeter.  These hadronic showers are far more challenging to model due to the variety of different hadrons that could be producing the shower and indeed the difficulty of the underlying QCD interaction occuring within the shower.  In general the most common type of process to occur when a hadron collides with a nucleus is spallation.  In this process the incoming hadron collides with nucleons in the nucleus creating a cascase of subsequent nucleon nucleon collisions at varying energies.  If the energies are high enough various hadrons may be created and while others may become liberated from the nucleus if they reach the edge of the nucleus and have enough energy to overcome the nuclear binding energy.  After the cascase has largely ceased a secondary stage of spallation occurs whereby nucleons are ejected from the nucleus until the nucleus retuns to a stable state.  In this process if the excess energy of the nucleus is greater nucelar binding energy of a nucleon the remaining energy can be released via $\gamma$ emission.  In such processes many charged particles, predominantly protons, will be produced in hadronic showers and, analogously to the case of electromagnetic showers, the higher the incoming energy of the hadron the larger the number of charged tracks within the hadronic shower.  Therefore, the principle behind hadronic calorimetery is the same as the of electromagnetic calorimetry in terms of counting the number of charged particle tracks occuring within the shower and relating this to the energy of the incoming particle.  By identical logic to that applied for electromagnetic calorimeters Gaussian distributions are expected from the energy measurements from hadronic calorimeters.  Simlarly the energy resolution for hadronic calorimeters goes as $\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c$ again with the same stoichastic, noise and constant terms as described for electromagnetic calorimeters.
+Calorimeters are also used to determine the incoming energy of hadronic particles producing a shower when interacting within the calorimeter.  These hadronic showers are far more challenging to model due to the variety of different hadrons that could be producing the shower and indeed the difficulty of the underlying QCD interaction occuring within the shower.  In general the most common type of process to occur when a hadron collides with a nucleus is spallation.  In this process the incoming hadron collides with nucleons in the nucleus creating a cascase of subsequent nucleon nucleon collisions at varying energies.  If the energies are high enough various hadrons may be created and while others may become liberated from the nucleus if they reach the edge of the nucleus and have enough energy to overcome the nuclear binding energy.  After the cascase has largely ceased a secondary stage of spallation occurs whereby 'evaporation' nucleons are ejected from the nucleus until the nucleus retuns to a stable state.  In this process if the excess energy of the nucleus is greater nucelar binding energy of a nucleon the remaining energy can be released via $\gamma$ emission.  In such processes many charged particles, predominantly protons, will be produced in hadronic showers and, analogously to the case of electromagnetic showers, the higher the incoming energy of the hadron the larger the number of charged tracks within the hadronic shower.  Therefore, the principle behind hadronic calorimetery is the same as the of electromagnetic calorimetry in terms of counting the number of charged particle tracks occuring within the shower and relating this to the energy of the incoming particle.  By identical logic to that applied for electromagnetic calorimeters Gaussian distributions are expected from the energy measurements from hadronic calorimeters.  Simlarly the energy resolution for hadronic calorimeters goes as $\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c$ again with the same stoichastic, noise and constant terms as described for electromagnetic calorimeters.
 
 \subsection{Sampling Calorimeters}
 % Sampling principle
@@ -51,10 +51,11 @@ While ideally the goal of a calorimeter would be to record all of the charged tr
 % Compensating vs non compensating 
 The response of a calorimeter to an electromangetic shower and a hadronic shower are inherently different due to the different mechanisms dictating shower formation, however, one crucial difference is that in hadronic showers containg an 'invisible energy' component.  This corresponds to energy deposits from the shower that do not produce a calorimeter response.  For example, the nuclear binding energies required to liberate nucleons in spallation do not affect the calorimeter response.  
 
-This is an undesirable feature of a calorimeter and so there are multiple approaches, in both hardware and software, to achieving a uniform response from the caloirmeter.  There will be further discussion on the software approach to acheiveing a compensating calorimeter response in subsequent chapters.  One particularly interesting novel approach on the hardware side that is worth mentioning is the uranium scintillator detector used at the ZEUS experiment.  The uranium calorimeter produces a larger response 
+% Introduce software compensation for later
+This is an undesirable feature of a calorimeter and so there are multiple approaches, in both hardware and software, to achieving a uniform response from the caloirmeter.  The fine calorimeter transverse granularity and the sophisticated particle identification software that is to be applied at the calorimeters at a future linear collider allow a distinction of hadronic and electromangetic showers to be made and a compensation applied to the energies of the reconstructed particles at a software level.  Further discussion of such techniques can be found in subsequent chapters. 
 
-There are novel approaches to correct the energy deposits from hadronic showers including having a radioactive absorber material that will yield extra nuclear binding
-
+% Uranium calorimeter
+It is worth nothing that for calorimeters for pre-existing particle collider experiments it is far more challenging to apply 'software compensation' due to the coarse granularity of the calorimeters.  However, it is also possible to achieve a compensating calorimeter response via 'hardware compensation'.  One such approach to 'hardware compensation' is a uranium based calorimeter such as that used at the ZEUS experiment.  A uranium calorimeter produces a larger response for hadronic showers as the hadronic shower can induce nucelar fission within the absorber material that yeields extra energy in the form of evaporation neutrons and \gamma s.  If the density of uranisum is properly tuned this extra energy can be enough to produce a calorimeter with identical responses for hadronic and electromangetic showers induced by particles with the same initial energy.  While both software and hardward compensation can achieve a compensating calorimeter response it should be emphasised that the calorimeter granularity and sophisticated particle identification software at a future linear collider creates the opportunity to vastly improve the application of 'software compensation' in comparison to any prior particle physics experiment.
 
 \section{Particle Flow Calorimetry}
 \label{sec:unitarisation}
@@ -82,4 +83,22 @@ The stable particles that it is possible to measure in a particle collider detec
 As the energy resolution offered by the tracker is signifcantly better that that offered by the calorimeters it is desirable to measure the energy of charged particles in the tracker.  As photons and neutral hadrons do not produce tracks these energy deposits must come from the calorimeter.  This approach is to be contrasted with traditional calorimetry where all energy deposits arise from the calorimeters.  
 
 
-\section{Physics Theory }
+\section{Physics Theory}
+
+Quantum field theory is the best theory that curretnly exists for modelling the behaviour of fundamental particles in the universe.  It is based upon fundamental symetries that the Lagrangian must obey.  In the standard model a $\text{SU}3 \times \text{SU}2_{\text{L}} \times \text{U}1$ symmetry is adheared to.  
+
+For example if we start with a simple scalar field theory that has the following Lagrangian:
+
+\begin{equation}
+\mathcal{L} = \partial^{\mu} \phi \partial_{\mu} \phi - \text{V}(\phi)
+\end{equation}
+
+Where V is a function of $\phi$, typically a polynomial, which will be taken as $\phi^{2}$.  $\partial$^{\mu} is the partial derivate of the scalar field $\phi$ with respoect to the position 4-vector.  $\mathcal{L}$ is Lorentz invariant.
+
+If our template theory conforms to a U(1) gauge theory then $\mathcal{L}$ must be invariant when $\phi(x) \rightarrow e^{i\alpha(x)} \phi(x)$.  $\alpha(x)$ is an arbitrary, smooth function.  While the potential term is invariant under this transformation the derviate term is not.  To resolve this a real gauge potential, $\text{A}_{\mu}$, is added to the derivate in the following way
+
+$D_{\mu} = $
+
+
+
+$ 
