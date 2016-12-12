@@ -7,6 +7,7 @@
 \section{Calibration}
 
 \subsection{Calibration in the particle flow paradigm}
+% Results use detector model 85 and calibration variant 71
 
 %Say why calibration is important and how it fits into particle flow
 
@@ -23,7 +24,6 @@ Two treatments designed to achieve a compensating response from the calorimeters
 \subsection{Calibration and detector optimisation}
 
 % Say why calibration important for detector optimisation 
-
 Optimising the detector at a future linear collider will be crucial to exploit the full physiscs potential available to it.  An extensive optimisation of the calorimeters was performed the results of which can be found in chapter ....  However, this study would not have been possible without the development of a robust and well motivated calibration procedure.  This procedure had to be robust so that it could be applied to multiple detector concepts and well motivated so that true physics potential of each detector was realised.
 
 \subsection{Calibration Goals}
@@ -57,7 +57,7 @@ Due to the different physcial structure and positioning of the subdetectors in a
 \subsubsection{ECal Digitisation}
 
 % Choice of photon for ECal and event selection
-The first subdetector system to be considered is the electromagnetic calorimeter (ECal).  The primary goal of the ECal is to record energy deposits from electromagentic showers.  Therefore, photons at a fixed energy of 10 GeV are used as the single particle sample for calibration.  Photon energy measurements in the particle flow paradigm arise from the calorimeter energy deposits, specifically those in the ECal, therefore they were an obvious choice of calibration event.  Electrons could have been used for this stage of the calibration as such events would also yeild electromagnetic showers, however, the reconstructed energy from such events would ultimately come from the track measurment.  
+The first subdetector system to be considered is the electromagnetic calorimeter (ECal).  As the primary goal of the ECal is to record energy deposits from electromagentic showers photons are used as the single particle sample for calibration.  Photons were the natural choice for calibration of the ECal as their energy measurements, unlike electron energy measurements in the particle flow paradigm, originate entriely from the calorimeters.  As the electromangetic shower structure produced from electrons and photons are almost identical the choice of photons over electrons is purely aesthetic.  10 GeV photons are used for this stage of the procedure as there would be little longitudinal leakage from the rear of the ECal, while lower energies would be subject to larger effects of MIP cuts in the reconstruction.  
 
 % Contained events 
 
@@ -79,9 +79,7 @@ The photon event sample was generated with fixed energy uniformly in solid angle
 \end{figure}
 
 % Still not perfectly Gaussian 
-As figure \ref{engest:fig:cutsphotondigi} shows there are still some outlying events in the distribution.  These are most likely due to events that encounter gaps between detector modeules in the simulation.  This means that they encounter much less material in the simulation than expected and could potentailly shower much deeper into the calorimeters than expected.  An example event suffering from the effect of detector gaps is shown in figure BLAH.
-
-
+As figure \ref{engest:fig:cutsphotondigi} shows there are still some outlying events in the distribution.  These events are due to the photon showering in uninstrumented regions of the detector, such as the gap region between the barrel and endcap.
 
 \subsection{MIP Scale Setting}
 
@@ -98,11 +96,6 @@ As figure \ref{engest:fig:cutsphotondigi} shows there are still some outlying ev
 \end{figure}
 
 
-
-
-\subsection{Compensating Calorimeter}
-
-By accurately determining these rescaling values it is possible to apply an energy correction to compensate for the invisible energy component of hadronic showers.  This invisible componenet arises from mechanisms such as low energy neutron release and nuclear binding energy losses amongst other such processes.  Discussion of this procedure and how to calibrate such a process is the main focus of this section.  
 
 
 \begin{figure}
