@@ -1,0 +1,95 @@
+{
+//=========Macro generated from canvas: c1_n50/c1_n50
+//=========  (Thu Aug 11 09:06:07 2016) by ROOT version5.34/30
+   TCanvas *c1_n50 = new TCanvas("c1_n50", "c1_n50",0,0,700,500);
+   gStyle->SetOptStat(0);
+   c1_n50->SetHighLightColor(2);
+   c1_n50->Range(0,0,1,1);
+   c1_n50->SetFillColor(0);
+   c1_n50->SetBorderMode(0);
+   c1_n50->SetBorderSize(2);
+   c1_n50->SetFrameBorderMode(0);
+   
+   TH1F *EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq = new TH1F("EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq","EnergyAroundMostEnergeticTrack CLIC_ee_nunuqqqq",100,0,1000);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(1,30057.92);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(2,564.8038);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(3,702.6346);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(4,710.7883);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(5,654.6061);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(6,552.6292);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(7,465.3959);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(8,403.5172);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(9,355.8237);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(10,314.2734);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(11,255.7456);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(12,235.5317);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(13,197.6725);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(14,177.682);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(15,153.8943);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(16,140.8279);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(17,121.5074);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(18,113.5782);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(19,102.2986);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(20,83.08978);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(21,80.52116);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(22,66.78463);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(23,62.54082);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(24,55.05832);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(25,47.01743);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(26,36.63128);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(27,36.29624);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(28,32.38747);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(29,30.93563);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(30,28.47864);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(31,21.1077);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(32,15.41197);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(33,15.85869);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(34,12.61994);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(35,10.72137);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(36,10.38632);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(37,9.381196);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(38,6.700852);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(39,7.5943);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(40,5.249);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(41,4.913957);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(42,5.137319);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(43,2.79202);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(44,2.68034);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(45,2.456978);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(46,3.015382);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(47,1.005127);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(48,1.563532);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(49,0.8934465);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(50,1.005127);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(51,0.6700849);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(52,0.7817657);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(53,0.4467233);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(54,0.4467233);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(56,0.1116808);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(57,0.1116808);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetBinContent(58,0.2233616);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetEntries(331749);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#000099");
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->SetLineColor(ci);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetXaxis()->SetTitle("EnergyAroundMostEnergeticTrack");
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetXaxis()->SetLabelFont(42);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetXaxis()->SetLabelSize(0.035);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetXaxis()->SetTitleSize(0.035);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetXaxis()->SetTitleFont(42);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetYaxis()->SetTitle("Entries");
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetYaxis()->SetLabelFont(42);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetYaxis()->SetLabelSize(0.035);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetYaxis()->SetTitleSize(0.035);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetYaxis()->SetTitleFont(42);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetZaxis()->SetLabelFont(42);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetZaxis()->SetLabelSize(0.035);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetZaxis()->SetTitleSize(0.035);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->GetZaxis()->SetTitleFont(42);
+   EnergyAroundMostEnergeticTrack_CLIC_ee_nunuqqqq->Draw("");
+   c1_n50->Modified();
+   c1_n50->cd();
+   c1_n50->SetSelected(c1_n50);
+}

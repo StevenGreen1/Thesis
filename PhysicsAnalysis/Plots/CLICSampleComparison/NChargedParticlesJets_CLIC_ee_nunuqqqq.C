@@ -1,0 +1,90 @@
+{
+//=========Macro generated from canvas: c1_n58/c1_n58
+//=========  (Thu Aug 11 09:06:07 2016) by ROOT version5.34/30
+   TCanvas *c1_n58 = new TCanvas("c1_n58", "c1_n58",0,0,700,500);
+   gStyle->SetOptStat(0);
+   c1_n58->SetHighLightColor(2);
+   c1_n58->Range(0,0,1,1);
+   c1_n58->SetFillColor(0);
+   c1_n58->SetBorderMode(0);
+   c1_n58->SetBorderSize(2);
+   c1_n58->SetFrameBorderMode(0);
+   
+   TH1F *NChargedParticlesJets_CLIC_ee_nunuqqqq = new TH1F("NChargedParticlesJets_CLIC_ee_nunuqqqq","NChargedParticlesJets CLIC_ee_nunuqqqq",150,0,150);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(1,690.3483);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(2,1426.749);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(3,3048.461);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(4,5254.991);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(5,7954.91);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(6,10407.28);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(7,12258.22);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(8,13313.83);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(9,13542.95);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(10,13115.22);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(11,12103.25);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(12,10675.58);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(13,9162.074);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(14,7626.952);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(15,6254.07);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(16,5077.985);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(17,3951.862);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(18,3081.152);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(19,2383.156);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(20,1807.292);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(21,1358.727);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(22,988.0137);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(23,725.0852);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(24,548.6082);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(25,394.8051);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(26,284.8978);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(27,203.8149);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(28,151.5491);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(29,102.6336);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(30,73.93209);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(31,49.36269);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(32,37.07799);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(33,25.68662);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(34,15.63533);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(35,12.73163);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(36,8.822791);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(37,5.584043);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(38,3.685466);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(39,2.903701);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(40,1.563532);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(41,1.116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(42,1.451851);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(43,0.5584041);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(44,0.5584041);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(45,0.2233616);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(46,0.1116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(47,0.1116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(48,0.1116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(49,0.1116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(50,0.1116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(53,0.1116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetBinContent(54,0.1116808);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetEntries(1326996);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#000099");
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->SetLineColor(ci);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetXaxis()->SetTitle("NChargedParticlesJets");
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetXaxis()->SetLabelFont(42);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetXaxis()->SetLabelSize(0.035);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetXaxis()->SetTitleSize(0.035);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetXaxis()->SetTitleFont(42);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetYaxis()->SetTitle("Entries");
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetYaxis()->SetLabelFont(42);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetYaxis()->SetLabelSize(0.035);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetYaxis()->SetTitleSize(0.035);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetYaxis()->SetTitleFont(42);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetZaxis()->SetLabelFont(42);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetZaxis()->SetLabelSize(0.035);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetZaxis()->SetTitleSize(0.035);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->GetZaxis()->SetTitleFont(42);
+   NChargedParticlesJets_CLIC_ee_nunuqqqq->Draw("");
+   c1_n58->Modified();
+   c1_n58->cd();
+   c1_n58->SetSelected(c1_n58);
+}
