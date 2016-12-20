@@ -1,7 +1,32 @@
 \begin{thebibliography}{1}
 
+\bibitem{arXiv:1006.3396}
+Toshinori Abe et~al.
+\newblock {The International Large Detector: Letter of Intent}.
+\newblock 2010, 1006.3396.
+
 \bibitem{hepthesis}
-A.~Buckley,
+Andy Buckley.
 \newblock The hepthesis {\LaTeX} class.
+
+\bibitem{0708.4233}
+Wolfgang Kilian, Thorsten Ohl, and Jurgen Reuter.
+\newblock {WHIZARD: Simulating Multi-Particle Processes at LHC and ILC}.
+\newblock {\em Eur. Phys. J.}, C71:1742, 2011, 0708.4233.
+
+\bibitem{arXiv:1209.4039}
+J.~S. Marshall, A.~Münnich, and M.~A. Thomson.
+\newblock {Performance of Particle Flow Calorimetry at CLIC}.
+\newblock {\em Nucl. Instrum. Meth.}, A700:153--162, 2013, 1209.4039.
+
+\bibitem{hep-ph/0102195}
+Mauro Moretti, Thorsten Ohl, and Jurgen Reuter.
+\newblock {O'Mega: An Optimizing matrix element generator}.
+\newblock 2001, hep-ph/0102195.
+
+\bibitem{arXiv:0907.3577}
+M.~A. Thomson.
+\newblock {Particle Flow Calorimetry and the PandoraPFA Algorithm}.
+\newblock {\em Nucl. Instrum. Meth.}, A611:25--40, 2009, 0907.3577.
 
 \end{thebibliography}
