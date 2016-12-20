@@ -452,7 +452,12 @@ TGraph *OneDSinglePlot(TString name, TString quantity, TString variable)
     pTGraph->SetMarkerStyle(2);
     pTGraph->GetXaxis()->SetTitleSize(0.05);
     pTGraph->GetXaxis()->SetLabelSize(0.035);
-    pTGraph->GetXaxis()->SetTitle("#alpha_{4}");
+
+    if (variable == "Alpha4")
+        pTGraph->GetXaxis()->SetTitle("#alpha_{4}");
+    else if (variable == "Alpha5")
+        pTGraph->GetXaxis()->SetTitle("#alpha_{5}");
+
     pTGraph->GetXaxis()->SetRangeUser(-0.01,0.01);
     pTGraph->GetYaxis()->SetTitleOffset(1);
     pTGraph->GetYaxis()->SetTitleSize(0.05);

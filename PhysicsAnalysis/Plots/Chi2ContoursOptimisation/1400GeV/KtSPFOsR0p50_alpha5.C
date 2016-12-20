@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: KtSPFOsR0p50_Alpha5/
-//=========  (Tue Dec 20 14:32:43 2016) by ROOT version5.34/37
+//=========  (Tue Dec 20 15:17:48 2016) by ROOT version5.34/37
    TCanvas *KtSPFOsR0p50_Alpha5 = new TCanvas("KtSPFOsR0p50_Alpha5", "",0,45,600,600);
    gStyle->SetOptStat(0);
    KtSPFOsR0p50_Alpha5->Range(-0.01245176,-1.875,0.01126588,16.875);
@@ -70,7 +70,7 @@
    Graph_Graph2->SetStats(0);
    Graph_Graph2->SetLineWidth(2);
    Graph_Graph2->SetMarkerStyle(20);
-   Graph_Graph2->GetXaxis()->SetTitle("#alpha_{4}");
+   Graph_Graph2->GetXaxis()->SetTitle("#alpha_{5}");
    Graph_Graph2->GetXaxis()->SetRange(30,71);
    Graph_Graph2->GetXaxis()->SetNdivisions(505);
    Graph_Graph2->GetXaxis()->SetLabelFont(132);
