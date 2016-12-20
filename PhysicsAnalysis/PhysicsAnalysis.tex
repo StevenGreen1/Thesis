@@ -211,7 +211,7 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 59.7 & 68.6 & +14.9 & 62.
 \begin{tabular}{ l l l l l}
 \hline
 Final State & Cross Section [fb] & Cross Section [fb] & Percentage & CLIC Cross Section \\ 
-& ($\alpha_{4} = \alpha_{5} = 0.00$) & ($\alpha_{4} = \alpha_{5} = 0.005$) & Change[\%] & [fb] \\ 
+& ($\alpha_{4} = \alpha_{5} = 0.000$) & ($\alpha_{4} = \alpha_{5} = 0.005$) & Change[\%] & [fb] \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 51.2 & 77.7 & +51.8 & 71.5 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}{\nu}\text{qqqq}$ & 111.9 & 115.9 & +3.6 & 106.6 \\
@@ -349,10 +349,9 @@ The sensitivity of CLIC to the anomalous gauge couplings is determined through t
 
 \section{Optimisation of Jet Reconstruction}
 
-The minimum sensitivity arises from the reconstruction where loose selected PFOs and an R parameter of 0.7.  However, performing similarly to this was the selected PFO and R parameter of 0.9 combination.  In proceeding both algorithm settings are used to look at background reconstruction.
+The minimum sensitivity arises from the reconstruction where loose selected PFOs and an R parameter of 0.7 as can be seen from tables \ref{table:precisiona4signaljetalgo} and \ref{table:precisiona5signaljetalgo}.  However, performing similarly to this was the selected PFO and R parameter of 0.9 combination.  In proceeding both algorithm settings are used to look at background reconstruction. 
 
-
-
+The optimal contours can be found in figure \ref{fig:chi2jetalgoideal1400GeV} and the optimal 1D plot that produce the errors references in the tables  can be found in figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV}.  All other contours and plots for this optimisation can be found in the appendices.  
 
 \begin{table}[h!]
 \centering
@@ -385,6 +384,28 @@ R Parameter & & & \\
 \caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal.]{Precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
 \label{table:precisiona5signaljetalgo}
 \end{table}
+
+\begin{figure}
+\subfloat[][Longitudinally Invariant Kt Algorithm, R = 0.7, Loose Selected PFOs, 1.4 TeV Events]{\label{fig:chi2jetalgoptkt0p70lpfos1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtLPFOsR0p70.pdf}}
+\subfloat[][Longitudinally Invariant Kt Algorithm, R = 0.9, Selected PFOs, 1.4 TeV Events]{\label{fig:chi2jetalgoptkt0p90spfos1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90.pdf}}
+\caption[$\chi^{2}$ Sensitivity contours for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ Sensitivity contours for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.}
+\label{fig:chi2jetalgoideal1400GeV}
+\end{figure}
+
+\begin{figure}
+\subfloat[][Longitudinally Invariant Kt Algorithm, R = 0.7, Loose Selected PFOs, 1.4 TeV Events]{\label{fig:a4chi2jetalgoptkt0p70lpfos1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtLPFOsR0p70_alpha4.pdf}}
+\subfloat[][Longitudinally Invariant Kt Algorithm, R = 0.9, Selected PFOs, 1.4 TeV Events]{\label{fig:a4chi2jetalgoptkt0p90spfos1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4.pdf}}
+\caption[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.}
+\label{fig:a4chi2jetalgoideal1400GeV}
+\end{figure}
+
+\begin{figure}
+\subfloat[][Longitudinally Invariant Kt Algorithm, R = 0.7, Loose Selected PFOs, 1.4 TeV Events]{\label{fig:a5chi2jetalgoptkt0p70lpfos1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtLPFOsR0p70_alpha5.pdf}}
+\subfloat[][Longitudinally Invariant Kt Algorithm, R = 0.9, Selected PFOs, 1.4 TeV Events]{\label{fig:a5chi2jetalgoptkt0p90spfos1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5.pdf}}
+\caption[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.}
+\label{fig:a5chi2jetalgoideal1400GeV}
+\end{figure}
+
 
 
 
