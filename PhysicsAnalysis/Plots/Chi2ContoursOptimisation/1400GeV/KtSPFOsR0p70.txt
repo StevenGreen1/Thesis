@@ -1,0 +1,6 @@
+Longitudinally Invariant Kt, Selected PFOs, R = 0.7
+KtSPFOsR0p70
+The 1D confidence limits for alpha 4 are (-0.00384414, 0.00500069)
+The 1D confidence limits for alpha 5 are (-0.00265791, 0.00317754)
+-0.00384 & 0.005
+-0.00266 & 0.00318
