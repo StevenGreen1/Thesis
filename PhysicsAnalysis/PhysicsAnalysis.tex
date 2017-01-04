@@ -177,7 +177,7 @@ This cross check was also applied to the background samples that are to be inclu
 \item $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$  
 \end{itemize}
 
-The sensitivity of an individual event to the anomalous gauge couplings is determined through an event weight. This weight corresponds to the ratio using non-zero $\alpha_{4}$ and $\alpha_{5}$ and using zero $\alpha_{4}$ and $\alpha_{5}$ of the square of the matrix element used in the cross section calculation. This reweighting procedure has many advantages over the alternative procedure of generating new samples with fixed $\alpha_{4}$ and $\alpha_{5}$ most notably the absence of systematic errors that may appear in new event generation. Each event picks up different weights based on $\alpha_{4}$ and $\alpha_{5}$ as the matrix element contributions from the anomalous couplings depend upon the kinematics of the final state, which is unique for each event. Examples of the event weights as a function of $\alpha_{4}$ and $\alpha_{5}$ for selected events is shown in figure \ref{fig:eventweights}.
+The sensitivity of an individual event to the anomalous gauge couplings is determined through an event weight. This weight corresponds to the ratio using non-zero $\alpha_{4}$ and $\alpha_{5}$ and using zero $\alpha_{4}$ and $\alpha_{5}$ of the square of the matrix element used in the cross section calculation. This reweighting procedure has many advantages over the alternative procedure of generating new samples with fixed $\alpha_{4}$ and $\alpha_{5}$ most notably the absence of systematic errors that may appear in new event generation. Each event picks up different weights based on $\alpha_{4}$ and $\alpha_{5}$ as the matrix element contributions from the anomalous couplings depend upon the kinematics of the final state, which is unique for each event. Examples of the event weights as a function of $\alpha_{4}$ and $\alpha_{5}$ for selected events is shown in figure \ref{fig:eventweights1400raw}.
 
 \begin{figure}
 \centering
@@ -186,7 +186,7 @@ The sensitivity of an individual event to the anomalous gauge couplings is deter
 \subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
 \subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
 \caption[Event weights from Whizard for 1.4TeV \nu{\nu}qqqq final state events.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for 1.4TeV \nu{\nu}qqqq final state events.}
-\label{fig:eventweights}
+\label{fig:eventweights1400raw}
 \end{figure}
 
 The cross check shows that the most sensitive channel to the anomalous gauge couplings is the \nu{\nu}qqqq indicating that the best sensitivity measurement should focus upon this channel, which is the aim of this analysis.
@@ -261,7 +261,7 @@ where ${\Delta}R^{2}_{ij} = (y_{i} - y_{j})^2 + (\phi_{i} - \phi_{j})^2$.  $p_{t
 \item Repeat until no particles are left or the requested number of jets have been created (or optionally apply a minimum $d_{cut}$ where clustering stops, but here the event is forced into 4 jets).
 \end{itemize}
 
-An inclusive mode is available, but not applied here as the finally number of jets in the output varies and events need to be clustered into 4 jets in this analysis.  Two other clustering modes were considered, but were found to be inappropriate for this analysis as is shown in figure \ref{fig:eventweights}. They were:
+An inclusive mode is available, but not applied here as the finally number of jets in the output varies and events need to be clustered into 4 jets in this analysis.  Two other clustering modes were considered, but were found to be inappropriate for this analysis as is shown in figure \ref{fig:eventweights1400raw}. They were:
 
 \begin{itemize}
 \item The kt algorithm for e+e  colliders (or Durham algorithm) where $d_{ij} = 2\text{min}(E_{i}^{2}, E_{j}^{2})(1-cos\theta_{ij})$ and $d_{iB}$ is not used. $\theta_{ij}$ is the opening angle of the particles. In the collinear limit this corresponds to the relative transverse momentum of the particles. Unlike the other algorithm choices this is not invariant to boosts along the beam direction as in theory for e+e  colliders the collision should occur with no net 3 momentum, unlike hadron colliders where the events have a net 3-momentum. However, the presence of ISR and beam effects makes this algorithm inappropriate for CLIC. The major failure of this algorithm choice is the absence of diB as this associates too many background particles to jets when applied at CLIC.
@@ -273,7 +273,7 @@ An inclusive mode is available, but not applied here as the finally number of je
 \subfloat[]{\label{fig:invariantmassalgoveto1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto.pdf}}
 \subfloat[]{\label{fig:invariantmassalgoveto3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto3000GeV.pdf}}
 \caption[Reconstructed invariant masses for different choices of jet algorithm for 1.4 TeV and 3 TeV \nu{\nu}qqqq events.]{Reconstructed masses for different choices of jet algorithm for 1.4 TeV and 3 TeV \nu{\nu}qqqq events. These masses arise by forcing the reconstructed events into 4 jets and then pairing up the jets into pairs such that the reconstructed invariant masses of the pairs are closest to each other. These samples should be dominated by vector boson scattering involving pairs of W bosons and so it is expected that a peak at the W boson true mass should be observed. As this does not occur for the Cambridge-Aachen algorithm or the ee\_kt algorithm they were deemed unsuitable for this analysis at both 1.4 and 3 TeV. In the case of the kt algorithm and the ee\_kt algorithm an R parameter of 0.7 was used.}
-\label{fig:eventweights}
+\label{fig:eventweights1400raw}
 \end{figure}
 
 Alongside the jet clustering an isolated lepton finder is run to help reject back- ground events containing high energy leptons. The LCFIPlus vertex processor is also run on these events once clustered into jets to produce a value for the B and C tag likelihood. This information is also used for background rejection instead of contributing to the sensitivity of the event to the anomalous couplings. The LCFIPlus vertex tagger was trained using events of $\text{e}^{+}\text{e}^{-}\rightarrow \text{Z}\nu\nu \rightarrow \text{q}\bar{\text{q}}\nu\nu$ for q = u,d,s,c,b.
@@ -345,6 +345,20 @@ The sensitivity of CLIC to the anomalous gauge couplings is determined through t
 \subfloat[3 TeV Events]{\label{fig:costhetastarbosons3000GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p70_3000GeV.pdf}}
 \caption[Sensitivity of $\text{cos}\theta^{8}_{Bosons}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 and 3 TeV.]{Sensitivity of $\text{cos}\theta^{*}_{Bosons}$ to anomalous couplings at 1.4 and 3 TeV. The jet algorithm used for this example was the longitudinally invariant kt algorithm with an R parameter of 0.7. This sample corresponds to pure signal of hadronic decays in vector boson scattering i.e. \nu{\nu}qqqq.}
 \label{fig:costhetastarbosons}
+\end{figure}
+
+At 1.4 TeV event weights were produced from Whizard stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07 as shown in figure \ref{fig:eventweights1400raw}, however, to produce a smooth $\chi^{2}$ contour much finer sampling is needed.  While it is feasible to generate new event weights in Whizard for any pair of $\alpha_{4}$ and $\alpha_{5}$ it is time consuming making it impractical for this analysis.  To overcome this difficulty bicubic interpolation is applied between these points to allow for the extract of event weights anywhere within the range -0.05 to 0.05.  As figures \ref{fig:eventweights1400interpolated} show the interpolated surface proves to be a good fit to the data produced from the generator in that it is smooth and continuous.  
+
+Similarly at 3 TeV the same procedure was used but stepping occurs in steps of 0.001 ranging from -0.007 to 0.007 in both $\alpha_{4}$ and $\alpha_{5}$.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at this energy.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:weight1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
+\subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}} \hfill
+\subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
+\subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
+\caption[Event weights from Whizard for 1.4TeV \nu{\nu}qqqq final state events with interpolated surface.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for 1.4TeV \nu{\nu}qqqq final state events.  The hollow circles show the event weight produced from the generator while the surface shown is found using bicubic interpolation between those points.}
+\label{fig:eventweights1400interpolated}
 \end{figure}
 
 \section{Optimisation of Jet Reconstruction}
