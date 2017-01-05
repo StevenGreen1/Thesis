@@ -328,10 +328,13 @@ Alongside these variables, for the \nu{\nu}qqqq final state a number of Monte-Ca
 \end{itemize}
 
 \section{Methodology for Fitting}
+It is necessary to discuss the fitting procedure in this analysis as the optimisation of the jet algorithms relies on this methodology. In this section only the signal events are considered to determine the underlying sensitivity of the CLIC detector to the anomalous couplings. This decision was made to save analysis of the large number of background samples in the optimisation of the jet reconstruction algorithms, while still optimising the algorithm on the physics of interest.
 
-It is necessary now to skip ahead to discuss the fitting procedure in this analysis as the optimisation of the jet algorithms relies on this methodology. In this section only the signal events are considered to determine the underlying sensitivity of the CLIC detector to the anomalous couplings. This decision was made to save analysis of the large number of background samples in the optimisation of the jet reconstruction algorithms, while still optimising the algorithm on the physics of interest.
+The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$ where $\theta^{*}_{Jets}$ is the angle between the two jets produced from the hadronic decay of the W/Z boson in the rest frame of that boson.  The distribution of $\text{cos}\theta^{*}_{Jets}$ proved to be sensitive to the anomalous gauge couplings as shown in figure \ref{fig:costhetastarjets}.
 
-The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$ where $\theta^{*}_{Jets}$ is the angle between the two jets produced from the hadronic decay of the W/Z boson in the rest frame of that boson.  Examples of such distributions can be found in figures \ref{fig:costhetastarjets} and \ref{fig:costhetastarbosons}.  
+Another distribution considered for the sensitivity study was  $\text{cos}\theta^{*}_{Bosons}$ where $\theta^{*}_{Bosons}$ is the angle between the two bosons produced in vector boson scattering in the rest frame of the boson pair.  This distribution was found to be less sensitive to the anomalous gauge couplings than $\text{cos}\theta^{*}_{Jets}$, which can be seen when comparing figures \ref{fig:costhetastarjets} and \ref{fig:costhetastarbosons}, and so was not considered for the rest of this study.  Furthermore, it was found that a two dimensional $\chi^{2}$ fit produced by combining $\text{cos}\theta^{*}_{Jets}$ and $\text{cos}\theta^{*}_{Bosons}$ did not improve the sensitivity significantly in comparison to $\text{cos}\theta^{*}_{Jets}$.
+
+The $\text{cos}\theta^{*}_{Jets}$ variable was binned in histograms of 10 bins before begin converted into a value of $\chi^{2}$.  This binning was selected to maximise the number of bins in the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
 
 \begin{figure}
 \subfloat[1.4 TeV Events]{\label{fig:costhetastarjets1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_1400GeV.pdf}}
@@ -347,7 +350,7 @@ The sensitivity of CLIC to the anomalous gauge couplings is determined through t
 \label{fig:costhetastarbosons}
 \end{figure}
 
-At 1.4 TeV event weights were produced from Whizard stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07 as shown in figure \ref{fig:eventweights1400raw}, however, to produce a smooth $\chi^{2}$ contour much finer sampling is needed.  While it is feasible to generate new event weights in Whizard for any pair of $\alpha_{4}$ and $\alpha_{5}$ it is time consuming making it impractical for this analysis.  To overcome this difficulty bicubic interpolation is applied between these points to allow for the extract of event weights anywhere within the range -0.05 to 0.05.  As figures \ref{fig:eventweights1400interpolated} show the interpolated surface proves to be a good fit to the data produced from the generator in that it is smooth and continuous.  
+At 1.4 TeV event weights were produced from Whizard stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07 as shown in figure \ref{fig:eventweights1400raw}, however, to produce a smooth $\chi^{2}$ contour much finer sampling is needed.  While it is feasible to generate new event weights in Whizard for any pair of $\alpha_{4}$ and $\alpha_{5}$ it is time consuming making it impractical for this analysis.  To overcome this difficulty bicubic interpolation is applied between these points to allow for the extract of event weights anywhere within the range -0.05 to 0.05.  As figure \ref{fig:eventweights1400interpolated} shows the interpolated surface proves to be a good fit to the data produced from the generator in that it is smooth and continuous.  
 
 Similarly at 3 TeV the same procedure was used but stepping occurs in steps of 0.001 ranging from -0.007 to 0.007 in both $\alpha_{4}$ and $\alpha_{5}$.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at this energy.
 
@@ -360,6 +363,16 @@ Similarly at 3 TeV the same procedure was used but stepping occurs in steps of 0
 \caption[Event weights from Whizard for 1.4TeV \nu{\nu}qqqq final state events with interpolated surface.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for 1.4TeV \nu{\nu}qqqq final state events.  The hollow circles show the event weight produced from the generator while the surface shown is found using bicubic interpolation between those points.}
 \label{fig:eventweights1400interpolated}
 \end{figure}
+
+Using these interpolated surfaces for the event weights, distribution of $\text{cos}\theta^{*}_{Jets}$ were produced stepping across $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.0001 at 1.4 TeV and 0.00001 at 3 TeV.  Each distribution was converted into a value of $\chi^{2}$ using the following formula:
+
+\begin{equation}
+\chi^{2} = \Sigma_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}}
+\end{equation}
+
+where $O_{i}$ is the observed bin content for bin i in the distribution with non-zero $\alpha_{4}$ and $\alpha_{5}$ and $E_{i}$ is the expected bin content for bin i in the distribution with zero $\alpha_{4}$ and $\alpha_{5}$ i.e. the standard model expected value.
+
+
 
 \section{Optimisation of Jet Reconstruction}
 
@@ -463,9 +476,9 @@ Equivalent photon approximation processes models interactions of the electric fi
 
 A dominant background process appearing at CLIC is $\gamma\gamma \rightarrow \text{Hadron}$. Example Feynman diagrams for such processes is shown in figure ??. Unlike the majority of other background processes, such as incoherent pair production of e+e  pairs from beamstrhlung photons and beam halo muons from interactions of the beam with particles outside the detector, the $\gamma\gamma \rightarrow \text{Hadron}$ processes have a large transverse momentum and cannot be vetoed with a simple transverse momentum cut. To account for this non negligible background $\gamma\gamma \rightarrow \text{Hadron}$ events are overlayed onto CLIC samples. The number of events overlayed per event is drawn from a Poisson with a mean of 3.2 for 3 TeV and 1.3 for 1.4 TeV samples. Maybe include CDR plot on page 54.
 
-\subsection{Pre Selection}
+\subsection{Pre Selection - 1.4 TeV}
 
-The primary selection of the \nu{\nu}qqqq signal will be done using a multivariant analysis, however, in an attempt to veto obvious backgrounds a simple cut based preselection is applied. Cuts are applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is
+The primary selection of the \nu{\nu}qqqq signal will be done using a multivariate analysis, however, in an attempt to veto trivial backgrounds a simple cut based preselection is applied. Cuts are applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is
 shown in figures \ref{fig:preselection1}, \ref{fig:preselection2} and \ref{fig:preselection3}. Based on these distributions the following cuts were applied:
 
 \begin{itemize}
@@ -475,29 +488,68 @@ shown in figures \ref{fig:preselection1}, \ref{fig:preselection2} and \ref{fig:p
 The effect of these preselection cuts can be found in table 1.3. While a large fraction of the signal events are lost through these cuts, particularly the transverse momentum cuts, a much large fraction of background events are removed justifying the cut.
 \end{itemize}
 
+The event numbers for the signal and background are shown in table \ref{table:cutflow1400GeV} as these cuts are cumulatively applied.  These numbers are normalised to the correct luminosity for CLIC running at 1.4 TeV.  
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l l}
+\hline
+Final State & Raw Event  & $p_{T}$ > 100 GeV & $p_{T}$ > 100 GeV \& & $p_{T}$ > 100 GeV \& \\ 
+& Numbers & & $M_{\text{Vis}}$ > 200 GeV & $M_{\text{Vis}}$ > 200 GeV \&\\ 
+& & & & $N_{\text{Isolated Leptons}}$ = 0\\ 
+\hline
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 3.705E+04	& 2.378E+04 & 2.109E+04 & 2.103E+04 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 1.656E+05 & 8.163E+04 & 8.083E+04 & 4.233E+04 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 9.315E+04 & 1.154E+03 & 1.142E+03 & 7.098E+02 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1.868E+06 & 6.755E+03 & 6.742E+03 & 6.729E+03 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 1.181E+06 & 5.147E+05 & 4.969E+04 & 4.959E+04 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 6.464E+06 & 2.002E+06 & 1.258E+06 & 5.685E+05 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 4.088E+06 &7.656E+03 & 7.263E+03 & 5.651E+03 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 6.010E+06 & 3.412E+04 & 3.368E+04 & 3.360E+04 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 4.306E+05 & 2.301E+03 & 2.294E+03 & 7.624E+02 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1.741E+06 & 1.773E+03 & 1.688E+03 & 1.294E+03 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 4.303E+05 & 2.787E+03 & 2.774E+03 & 1.057E+03 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1.734E+06 & 8.135E+02 & 7.845E+02 & 5.520E+02 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 4.889E+04 & 1.747E+04 & 1.356E+04 & 8.895E+03 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 2.053E+05 & 7.543E+04 & 4.865E+04 & 4.802E+04 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 4.889E+04 & 1.766E+04 & 1.359E+04 & 8.951E+03 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 2.046E+05 & 7.489E+04 & 4.846E+04 & 4.790E+04 \\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 1.129E+06 & 3.126E+03 & 3.018E+03 & 1.421E+03\\
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 6.052E+06 & 7.205E+03 & 7.059E+03 & 5.531E+03\\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 6.028E+06 & 5.187E+03 & 5.116E+03 & 3.197E+03\\
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 3.211E+07 & 4.421E+03 & 4.421E+03 & 3.617E+03 \\
+\hline
+\end{tabular}
+\caption[Impact of preselection cuts on signal and background at 1.4 TeV.]{Impact of preselection cuts on signal and background at 1.4 TeV.  $p_{T}$ is the transverse momentum of the event,  $M_{\text{Vis}}$ is the visible mass and $N_{\text{Isolated Leptons}}$ is the number of isolated leptons in the event.  In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahhlung.}
+\label{table:cutflow1400GeV}
+\end{table}
+
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/Pt.pdf}
+\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}
 \caption[Transverse momentum at 1.4 TeV.]{The transverse momentum of signal and background events at 1.4 TeV.}
 \label{fig:preselection1}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/InvariantMassSystem.pdf}
+\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/InvariantMassSystem.pdf}
 \caption[Invariant mass of the visible system at 1.4 TeV.]{The invariant mass of the visible system of signal and background events at 1.4 TeV.}
 \label{fig:preselection2}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/NumberOfIsolatedLeptons.pdf}
+\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}
 \caption[Number of isolated leptons at 1.4 TeV.]{The number of isolated leptons for signal and background events at 1.4 TeV.}
 \label{fig:preselection3}
 \end{figure}
 
-\subsection{MVA}
+\subsection{MVA - 1.4 TeV}
 A multivariate analysis is applied to the data set to refine the selection. The following variables were used for training the TMVA selection.
+
+\subsection{Pre Selection - 3 TeV}
+\subsection{MVA - 3 TeV}
 
 \section{Fit}
 
