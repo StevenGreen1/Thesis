@@ -222,6 +222,12 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 169.7 & 161.7 & -4.9 & 16
 \label{table:crosssectionsensitivity3000}
 \end{table}
 
+\section{Simulation and Reconstruction}
+
+The CLID\_ILD detector \cite{arXiv:1006.3396} was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj} a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry to these samples and to produce PFOs that are used in this analysis.  
+ 
+Using the CLIC\_ILD detector for this analysis provides access to the background samples created by the CLIC collaboration. The CLIC\_ILD detector has a 60 layer scintillator-tugsten HCal in comparison to the 48 layer HCal found in the default ILD detector. The increase in thickness of the detector for the CLIC experiment is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. Practically speaking the ILD and CLIC\_ILD detectors are otherwise identical.
+
 \section{Validation of New Samples}
 
 An identical setup to that used for the official CLIC sample was used for the event generation and reconstruction. Several reconstructed level distributions were compared to the official CLIC samples and all were found to be comparably to each other. A selection of these distributions is shown in figure \ref{fig:cliccomp}.
@@ -234,15 +240,9 @@ An identical setup to that used for the official CLIC sample was used for the ev
 \label{fig:cliccomp}
 \end{figure}
 
-\section{Simulation and Reconstruction}
-
-The CLID\_ILD detector \cite{arXiv:1006.3396} was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj} a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry to these samples and to produce PFOs that are used in this analysis.  
- 
-Using the CLIC\_ILD detector for this analysis provides access to the background samples created by the CLIC collaboration. The CLIC\_ILD detector has a 60 layer scintillator-tugsten HCal in comparison to the 48 layer HCal found in the default ILD detector. The increase in thickness of the detector for the CLIC experiment is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. Practically speaking the ILD and CLIC\_ILD detectors are otherwise identical.
-
 \section{Analysis Processor and Jet Pairing} \label{sec:jetpairing}
 
-For both signal and background events the FastJet processor is run to cluster the events into 4 jets. These are then assumed to be from the decays of the vector boson scattering bosons and the jets are paired up on the assumption that the correct pair arises when the invariant masses of the two pairs are closest together. The longitudinally invariant kt jet algorithm in exclusive modes is used for the jet clustering.
+For both signal and background events the MarlinFastJet processor, a wrapper for the FastJet \cite{Cacciari:2011ma} process, is used to cluster the events into 4 jets. These are  jets assumed to be from the hadronic decays of the bosons involved in the vector scattering process.  These jets are paired up such that on the assumption that the correct pair arises when the invariant masses of the two pairs are closest together. The longitudinally invariant kt jet algorithm in exclusive modes is used for the jet clustering.
 This jet algorithm proceeds as follows:
 
 \begin{itemize}
@@ -255,7 +255,7 @@ where ${\Delta}R^{2}_{ij} = (y_{i} - y_{j})^2 + (\phi_{i} - \phi_{j})^2$.  $p_{t
 \item Repeat until no particles are left or the requested number of jets have been created (or optionally apply a minimum $d_{cut}$ where clustering stops, but here the event is forced into 4 jets).
 \end{itemize}
 
-An inclusive mode is available, but not applied here as the finally number of jets in the output varies and events need to be clustered into 4 jets in this analysis.  Two other clustering modes were considered, but were found to be inappropriate for this analysis as is shown in figure \ref{fig:eventweights1400raw}. They were:
+An inclusive mode is available, but not applied here as the finally number of jets in the output varies and events need to be clustered into 4 jets for this analysis.  Two other clustering modes were considered, but were found to be inappropriate for this analysis as is shown in figure \ref{fig:eventweights1400raw}. They were:
 
 \begin{itemize}
 \item The kt algorithm for e+e  colliders (or Durham algorithm) where $d_{ij} = 2\text{min}(E_{i}^{2}, E_{j}^{2})(1-cos\theta_{ij})$ and $d_{iB}$ is not used. $\theta_{ij}$ is the opening angle of the particles. In the collinear limit this corresponds to the relative transverse momentum of the particles. Unlike the other algorithm choices this is not invariant to boosts along the beam direction as in theory for e+e  colliders the collision should occur with no net 3 momentum, unlike hadron colliders where the events have a net 3-momentum. However, the presence of ISR and beam effects makes this algorithm inappropriate for CLIC. The major failure of this algorithm choice is the absence of diB as this associates too many background particles to jets when applied at CLIC.
@@ -270,7 +270,9 @@ An inclusive mode is available, but not applied here as the finally number of je
 \label{fig:eventweights1400raw}
 \end{figure}
 
-Alongside the jet clustering an isolated lepton finder is run to help reject back- ground events containing high energy leptons. The LCFIPlus vertex processor is also run on these events once clustered into jets to produce a value for the B and C tag likelihood. This information is also used for background rejection instead of contributing to the sensitivity of the event to the anomalous couplings. The LCFIPlus vertex tagger was trained using events of $\text{e}^{+}\text{e}^{-}\rightarrow \text{Z}\nu\nu \rightarrow \text{q}\bar{\text{q}}\nu\nu$ for q = u,d,s,c,b.
+HERE
+
+Alongside the jet clustering an isolated lepton finder is run to help reject background events containing high energy leptons. The LCFIPlus vertex processor is also run on these events once clustered into jets to produce a value for the B and C tag likelihood. This information is also used for background rejection instead of contributing to the sensitivity of the event to the anomalous couplings. The LCFIPlus vertex tagger was trained using events of $\text{e}^{+}\text{e}^{-}\rightarrow \text{Z}\nu\nu \rightarrow \text{q}\bar{\text{q}}\nu\nu$ for q = u,d,s,c,b.
 
 Finally, an analysis processor is run, which calculates a number of variables used downstream in the analysis. Included in these are:
 \begin{itemize}
