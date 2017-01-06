@@ -236,9 +236,9 @@ An identical setup to that used for the official CLIC sample was used for the ev
 
 \section{Simulation and Reconstruction}
 
-The CLID\_ILD detector \cite{arXiv:1006.3396} was simulated using the GEANT4 wrapper MOKKA and events were reconstructed using the MARLIN framework. Using the CLIC\_ILD detector for this analysis provides access to the background samples created by the CLIC collaboration. The CLIC\_ILD detector has a 60 layer scintillator-tugsten HCal in comparison to the 48 layer HCal found in the default ILD detector. The increase in thickness of the detector for the CLIC experiment is needed to compensate for the effects of leakage at the higher energies that will be seen by the CLIC experiment in comparison to the ILC. Practically speaking the ILD and CLIC\_ILD detectors are otherwise identical.
-
-Version of MOKKA used is 08-00-03. MarlinPandora version used is v00-09-02. PandoraPFANew version v00-09 \cite{arXiv:0907.3577, arXiv:1209.4039}.
+The CLID\_ILD detector \cite{arXiv:1006.3396} was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj} a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry to these samples and to produce PFOs that are used in this analysis.  
+ 
+Using the CLIC\_ILD detector for this analysis provides access to the background samples created by the CLIC collaboration. The CLIC\_ILD detector has a 60 layer scintillator-tugsten HCal in comparison to the 48 layer HCal found in the default ILD detector. The increase in thickness of the detector for the CLIC experiment is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. Practically speaking the ILD and CLIC\_ILD detectors are otherwise identical.
 
 \section{Analysis Processor and Jet Pairing} \label{sec:jetpairing}
 
