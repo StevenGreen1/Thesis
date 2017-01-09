@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: LPFOsR0p70/
-//=========  (Mon Jan  9 11:36:43 2017) by ROOT version5.34/30
+//=========  (Mon Jan  9 15:00:30 2017) by ROOT version5.34/30
    TCanvas *LPFOsR0p70 = new TCanvas("LPFOsR0p70", "",14,233,600,600);
    gStyle->SetOptStat(0);
    LPFOsR0p70->Range(-0.00275,-0.0025,0.00225,0.0025);
