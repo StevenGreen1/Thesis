@@ -1,10 +1,26 @@
 void SensitiveDistributions()
 {
-    TFile *pTFile = new TFile("../SPFOs_kt_0p70_3000GeV_FitData.root"); 
+    TString energy("3000");
 
-    TH1F *pTH1F_0_0 = (TH1F*)pTFile->Get("CosThetaStarSynBosons_Alpha4_1.04083e-17_Alpha5_1.04083e-17");
-    TH1F *pTH1F_0p02_0 = (TH1F*)pTFile->Get("CosThetaStarSynBosons_Alpha4_0.02_Alpha5_1.04083e-17");
-    TH1F *pTH1F_0_0p02 = (TH1F*)pTFile->Get("CosThetaStarSynBosons_Alpha4_1.04083e-17_Alpha5_0.02");
+//    TString name("CosThetaStarSynJets_vs_Bosons");
+//    TString name("CosThetaStarSynJets");
+    TString name("CosThetaStarSynBosons");
+
+    TString zeroFloat("6.23416e-19"); // 3000 GeV
+//    TString zeroFloat("1.04083e-17"); // 1400 GeV
+
+    TString upperLimit("0.002");
+//    TString upperLimit("0.02");
+
+    TFile *pTFile = new TFile("../JetAlgorithmConfiguration/" + energy + "GeV/SPFOs_kt_0p70_" + energy + "GeV_FitData.root");
+
+    TH1F *pTH1F_0_0 = (TH1F*)pTFile->Get(name + "_Alpha4_" + zeroFloat + "_Alpha5_" + zeroFloat);
+    TH1F *pTH1F_0p02_0 = (TH1F*)pTFile->Get(name + "_Alpha4_" + upperLimit + "_Alpha5_" + zeroFloat);
+    TH1F *pTH1F_0_0p02 = (TH1F*)pTFile->Get(name + "_Alpha4_" + zeroFloat + "_Alpha5_" + upperLimit);
+
+    pTH1F_0_0->SetName("Reference");
+    pTH1F_0p02_0->SetName("Alpha4Change");
+    pTH1F_0_0p02->SetName("Alpha5Change");
 
     int binmax1 = pTH1F_0_0->GetMaximumBin();
     double content1 = pTH1F_0_0->GetBinContent(binmax1);
@@ -59,7 +75,7 @@ void SensitiveDistributions()
     pTH1F_0_0p02->SetFillColor(kGreen+2);
     pTH1F_0_0p02->SetFillStyle(3006);
 
-    TCanvas *pTCanvas = new TCanvas("CosThetaStarSynBosons", "", 600, 600);
+    TCanvas *pTCanvas = new TCanvas(name, "", 600, 600);
     pTCanvas->Draw();
     pTCanvas->SetRightMargin(0.05);
     pTCanvas->SetLeftMargin(0.15);
@@ -69,8 +85,8 @@ void SensitiveDistributions()
     TLegend *pTLegend = new TLegend(0.2, 0.7, 0.6, 0.9);
     pTLegend->SetFillStyle(0);
     pTLegend->AddEntry(pTH1F_0_0, "#alpha_{4} = #alpha_{5} = 0", "l");
-    pTLegend->AddEntry(pTH1F_0p02_0, "#alpha_{4} = 0.02, #alpha_{5} = 0", "l");
-    pTLegend->AddEntry(pTH1F_0_0p02, "#alpha_{4} = 0, #alpha_{5} = 0.02", "l");
+    pTLegend->AddEntry(pTH1F_0p02_0, "#alpha_{4} = " + upperLimit + ", #alpha_{5} = 0", "l");
+    pTLegend->AddEntry(pTH1F_0_0p02, "#alpha_{4} = 0, #alpha_{5} = " + upperLimit, "l");
 
     pTH1F_0_0p02->Draw("");
     pTH1F_0_0p02->SetTitle("");
@@ -84,6 +100,6 @@ void SensitiveDistributions()
     pTH1F_0_0->Draw("same");
     pTLegend->Draw();
 
-    pTCanvas->SaveAs("CosThetaStarSynBosons_SPFOs_kt_0p70_3000GeV.pdf");
-    pTCanvas->SaveAs("CosThetaStarSynBosons_SPFOs_kt_0p70_3000GeV.C");
+    pTCanvas->SaveAs(name + "_SPFOs_kt_0p70_" + energy + "GeV.pdf");
+    pTCanvas->SaveAs(name + "_SPFOs_kt_0p70_" + energy + "GeV.C");
 }
