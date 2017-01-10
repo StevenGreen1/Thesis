@@ -13,7 +13,7 @@ A process that will show sensitivity to the $\alpha_{4}$ and $\alpha_{5}$ anomal
 
 To determine whether an event is sensitive to $\alpha_{4}$ and $\alpha_{5}$ it will be necessary to determine whether the visible final states have been produced from the decay of W and Z bosons. A key discriminator in this procedure will be the invariant mass of the W and Z candidates. In light of this the hadronic decays of the W and Z bosons are only considered as the leptonic decays may contain neutrinos.
 
-As the W and Z bosons in vector boson scattering are intermediate states in the Feynman diagrams, they will not be directly observed in the detector and will instead contribute to processes with the final states containing possible decay products of the bosons $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq. In theory all processes will be affected by non zero $\alpha_{4}$ and $\alpha_{5}$, however, the effects may be extremely small as they contribute to very high order expansions of the Hamiltonian. Event generation software does not calculate the expansions of the Hamiltonian to all orders, but instead tuncates the expansion to leave the dominant terms. In the case of anomalous couplings this corresponds to certain final state cross sections being invariant to changes in $\alpha_{4}$ and $\alpha_{5}$.
+As the W and Z bosons in vector boson scattering are intermediate states in the Feynman diagrams, they will not be directly observed in the detector and will instead contribute to processes with the final states containing possible decay products of the bosons $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq. In theory all processes will be affected by non zero $\alpha_{4}$ and $\alpha_{5}$, however, the effects may be extremely small as they contribute to very high order expansions of the Hamiltonian. Event generation software does not calculate the expansions of the Hamiltonian to all orders, but instead truncates the expansion to leave the dominant terms. In the case of anomalous couplings this corresponds to certain final state cross sections being invariant to changes in $\alpha_{4}$ and $\alpha_{5}$.
 
 \iffalse
 
@@ -151,7 +151,7 @@ As the W and Z bosons in vector boson scattering are intermediate states in the 
 
 The event generation software used by the CLIC experiment is Whizard \cite{0708.4233, hep-ph/0102195}. Whizard version 1.97 was used for generating the new samples, while version 1.95 is used for the official CLIC samples. It was recommended by the Whizard authors to use version 1.97 as it contains a unitarisation scheme that ensures the probabilities remain physical up to high energies when considering the effect of anomalous gauge couplings. 
 
-It was necessary to specify the anomalous coupling model in Whizard to study their impact, however, this did enforce a unit CKM matrix. In the context of vector boson scattering this will restrict the decays of the W  to d$\bar{\text{u}}$ and s$\bar{\text{c}}$, the W+ to u$\bar{\text{d}}$ and c$\bar{\text{s}}$ and the Z to u$\bar{\text{u}}$ , d$\bar{\text{d}}$, s$\bar{\text{s}}$, c$\bar{\text{c}}$, b$\bar{\text{b}}$. This has little overall impact on the study as the cross section calculation using this model was, within the errors quoted by Whizard, identical to the standard model CKM matrix. The only aspect of the analysis effected by this modification is flavour tagging of jets and this will be addressed in subsequent chapters.
+It was necessary to specify the anomalous coupling model in Whizard to study their impact, however, this did enforce a unit CKM matrix. In the context of vector boson scattering this will restrict the decays of the W  to d$\bar{\text{u}}$ and s$\bar{\text{c}}$, the W+ to u$\bar{\text{d}}$ and c$\bar{\text{s}}$ and the Z to u$\bar{\text{u}}$ , d$\bar{\text{d}}$, s$\bar{\text{s}}$, c$\bar{\text{c}}$, b$\bar{\text{b}}$.  This has little overall impact on the study as the cross section calculation using this model was, within the errors quoted by Whizard, identical to the standard model CKM matrix.  The only aspect of the analysis affected by this modification is the flavour tagging of jets, however, this procedure while applied in this analysis is not used for event selection as it was found to be of negligible use in separating signal from background in subsequent chapter.
 
 To find out which states show sensitivity to the anomalous couplings cross section calculations were made using different values of $\alpha_{4}$ and $\alpha_{5}$ for relevant processes involving the hadronic decays of the W and Z bosons from vector boson scattering.  These results can be found in table \ref{table:crosssectionsensitivity1400} for 1.4 TeV samples and \ref{table:crosssectionsensitivity3000} for 3 TeV samples.  The only final states showing sensitivity to the anomalous couplings are \nu{\nu}qqqq, l{\nu}qqqq and llqqqq, which correspond to the final states from the Feynman diagrams shown above in figures \ref{fig:vbsw}, \ref{fig:vbsz}, \ ref{fig:vbswz} and \ref{fig:vbszw}.  As this analysis focuses on the hadronic decays of the bosons involved in vector boson scattering the final states involving leptonic decays of the bosons e.g. \nu{\nu}llqq were not included in this cross check. These leptonic dominated final states were also removed from the background samples used in this study as isolated lepton finding would largely veto all such events from selection.
 
@@ -223,13 +223,40 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 169.7 & 161.7 & -4.9 & 16
 \end{table}
 
 \section{Simulation and Reconstruction}
-
 The CLID\_ILD detector \cite{arXiv:1006.3396} was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj} a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry to these samples and to produce PFOs that are used in this analysis.  
  
 Using the CLIC\_ILD detector for this analysis provides access to the background samples created by the CLIC collaboration. The CLIC\_ILD detector has a 60 layer scintillator-tugsten HCal in comparison to the 48 layer HCal found in the default ILD detector. The increase in thickness of the detector for the CLIC experiment is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. Practically speaking the ILD and CLIC\_ILD detectors are otherwise identical.
 
-\section{Validation of New Samples}
+\subsection{Experimental Conditions at CLIC}
+The CLIC experiment will operate in a unique environment in comparison to previous generations of lepton colliders and these must be properly accounted for in any analysis to get a measure of the true physics potential CLIC has to offer.  The following aspects of the CLIC experiment present the largest challenges to the physics potential for the CLIC experiment:
 
+\begin{itemize}
+\item The high bunch charge density.  The small beam size at the impact point produces very large electromagnetic fields that interact with the particles from the opposite beam causing them to radiate photons.  This effect is known as beamstrahlung and it acts to reduce the collision energy of the $\text{e}^{+}\text{e}^{-}$ pairs.   
+\item Beam related backgrounds.  Beamstrahlung photons can further interact through a number of different mechanisms each of which contribute to different background processes that must be accounted for.  Dominant processes that cannot be easily vetoed include incoherent pair production of $\text{e}^{+}\text{e}^{-}$ and $\gamma\gamma \rightarrow \text{Hadron}$.  
+\item Fast readout technology is crucial.  The CLIC bunch train consists of 312 bunches with a repetition rate of 50 Hz.  Each bunch is separated by 0.5ns.  As this is such a small separation it will be necessary to integrate over multiple bunch crossing when reading out the detectors.  This places tight constraints on all detector electrical readout speeds and time resolutions.   
+\end{itemize}
+
+\subsection{Beam-Related Backgrounds at CLIC}
+The primary sources of background for the CLIC experiment are as follows:
+\begin{itemize}
+\item $\text{e}^{+}\text{e}^{-}$ pair creation from the interaction of a beamstrahlung photons with the electromagnetic field from the opposite beam.  The different mechanisms for pair creation are coherent, incoherent and trident pairs are pair production.  Coherent pair production occurs when a real beamstrahlung photon interacts with the electromagnetic field from the opposite beam, trident pair production occurs when a virtual beamstrahlung photon interacts with the electromagnetic field from the opposite beam and incoherent pair production occur when a real or virtual beamstrahlung photon interacts with the individual particles in the opposite beam.  
+\item $\gamma\gamma \rightarrow \text{Hadron}$ from the interaction of real or virtual beamstrahlung photons with each other.  Example Feynman diagrams for such processes is shown in figure ??. 
+\item Beam halo muons that arise from inelastic collisions of the beam particles during collimation.
+\end{itemize}
+
+Each of these has to be properly addressed to get a true measure of the physics potential at CLIC.  Coherent and trident pair production is not a dominant source of background as they are produced at low transverse momenta, as figure \ref{fig:backgroundangle} shows, and a simple cut could veto these backgrounds.  This is not the case for incoherent pair production of $\text{e}^{+}\text{e}^{-}$, which are dominant in the forward regions of the detector, and $\gamma\gamma \rightarrow \text{Hadron}$, which are dominant in the tracker and the calorimeters (with the exception of low radii in the calorimeter endcaps) \cite{Linssen:2012hp, Sailer:2012mfa}.  Beam halo muons prove not to be a dominant source of background either as, thanks to the unique topology of a muon passing through a detector it is possible to isolate them at PFO construction and remove them from further processing.  A preliminary version of a processor designed for this purpose was implemented within PandoraPFA \cite{Linssen:2012hp}.  
+
+As $\gamma\gamma \rightarrow \text{Hadron}$ events deposit more energy than incoherent pair production \cite{Linssen:2012hp}, they are the most dominant background to consider.  They are included into this analysis by overlaying $\gamma\gamma \rightarrow \text{Hadron}$ events onto the signal events.  For each event the exact number of events overlaid is drawn from a Poisson distribution with a mean of 3.2(1.3) events per bunch crossing at 3(1.4) TeV.  While incoherent pairs are still a source of background they will produce a second order effect in comparison to the $\gamma\gamma \rightarrow \text{Hadron}$ events.
+
+The PFO choices described in section \ref{sec:optimisationjetalgo} are applied to veto PFOs that arise from the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ events.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CDRPlots/BackgroundAngleCut.pdf}
+\caption[]{Angular distribution of number of particles for beam induced backgrounds for CLIC at $\sqrt{s} = 3$ TeV.  Taken from CLIC CDR.}
+\label{fig:backgroundangle}
+\end{figure}
+
+\section{Validation of New Samples}
 An identical setup to that used for the official CLIC sample was used for the event generation and reconstruction. Several reconstructed level distributions were compared to the official CLIC samples and all were found to be comparably to each other. A selection of these distributions is shown in figure \ref{fig:cliccomp}.
 
 \begin{figure}
@@ -369,7 +396,6 @@ Using these interpolated surfaces for the event weights, distribution of $\text{
 where $O_{i}$ is the observed bin content for bin i in the distribution with non-zero $\alpha_{4}$ and $\alpha_{5}$ and $E_{i}$ is the expected bin content for bin i in the distribution with zero $\alpha_{4}$ and $\alpha_{5}$ i.e. the standard model expected value.
 
 \section{Optimisation of Jet Reconstruction} \label{sec:optimisationjetalgo}
-
 The jet algorithm used for this analysis is the longitudinally invariant kt algorithm as described in section \ref{sec:jetpairing}.  The parameter choices under consideration for optimisation are the R parameter, used in the kt algorithm definition, used and the PFO selection.  
 
 A number of cuts \cite{arXiv:1209.4039} are applied to the transverse momenta and the time of the PFOs produced by PandoraPFA to reduce the PFOs into a subset that are believed to originate from the desired interaction in an attempt to veto the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ background events.  Different options for these cuts  give rise to the tight, default and loose selected PFOs that are considered in this optimisation.  
@@ -496,28 +522,7 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2 & 13050
 \label{table:crosssectionfull}
 \end{table}
 
-EPA (equivalent photon approximation) processes models interactions of the electric field of the incoming electrons and positrons with their corresponding antiparticles at the collision point. In such interactions the electric fields of the charged particles are approximated as photons hence the name. The beamstrahlung processes model the collision of a photon radiated off a charged particle with the corresponding bunch incoming lepton. Photons are radiated from the incoming charged leptons as the bunches carrying the leptons are very small producing very large electromagnetic fields. Interactions with the charged leptons and these fields yields the beamstrahlung photons. The energy spectrum of the incoming particles for CLIC at the relevant operating energy is used to model the energy of the incoming photons. Included in these cases are the photon-photon interactions from photons appearing from the EPA and beamstrahlung processes.
-
-The dominant beam related background processes at CLIC are as follows:
-\begin{itemize}
-\item $\text{e}^{+}\text{e}^{-}$ pair creation from the interaction of a beamstrahlung photon with the electromagnetic field from the opposite beam.  The different mechanisms for pair creation are coherent, incoherent and trident pairs are pair production.  Coherent pair production occurs when a real beamstrahlung photon interacts with the electromagnetic field from the opposite beam, trident pair production occurs when a virtual beamstrahlung photon interacts with the electromagnetic field from the opposite beam and incoherent pair production occur when a real or virtual beamstrahlung photon interacts with the individual particles in the opposite beam.  
-\item $\gamma\gamma \rightarrow \text{Hadron}$ from the interaction of beamstrahlung photons with each other and or the electric field of charged particles in the opposite beam that may appear as virtual photons.  Example Feynman diagrams for such processes is shown in figure ??. 
-\item Beam halo muons that arise from inelastic collisions of the beam particles during collimation.
-\end{itemize}
-
-These have to be properly addressed to get a true measure of the physics potential at CLIC.  As figure \ref{fig:backgroundangle} shows the transverse momentum of coherent and trident pair produced $\text{e}^{+}\text{e}^{-}$ is sufficiently small that a transverse momentum cut is enough to remove the vast majority of these particles.  This is not the case however for incoherent pair production $\text{e}^{+}\text{e}^{-}$ and $\gamma\gamma \rightarrow \text{Hadron}$.
-
-HERE
-
-Unlike the majority the other major background processes for the CLIC experiment \cite{Linssen:2012hp}, those of incoherent pair production of $\text{e}^{+}\text{e}^{-}$ pairs from beamstrahlung photons and beam halo muons from interactions of the beam with particles outside the detector, the $\gamma\gamma \rightarrow \text{Hadron}$ processes have a large transverse momentum and cannot be vetoed with a simple transverse momentum cut as shown in figure . 
-
-To account for this non negligible background $\gamma\gamma \rightarrow \text{Hadron}$ events are overlaid onto CLIC samples. The number of events overlaid per event is drawn from a Poisson with a mean of 3.2 for 3 TeV and 1.3 for 1.4 TeV samples.  The PFO choices described in section \ref{sec:optimisationjetalgo} are applied to veto PFOs that arise from these overlaid background events.
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CDRPlots/BackgroundAngleCut.pdf}
-\caption[]{Angular distribution of number of particles for beam induced backgrounds for CLIC at $\sqrt{s} = 3$ TeV.  Taken from CLIC CDR.}
-\label{fig:backgroundangle}
-\end{figure}
+EPA (equivalent photon approximation) processes model the electromagnetic field of a charged particle as virtual photons.  BS (beamstrahlung) processes involve photons that have been radiated from incoming charged particles due to interactions with the electromagnetic field of the opposite beam.   The energy spectrum of the incoming particles for CLIC at the relevant operating energy is used to model the energy of these incoming photons.  Included in this study are photon-photon interactions from photons appearing from the EPA and beamstrahlung processes.
 
 \subsection{Pre Selection - 1.4 TeV}
 
@@ -659,7 +664,7 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 32,109,300 & 0 
 \subsection{Pre Selection - 3 TeV}
 \subsection{MVA - 3 TeV}
 
-\section{Fit}
+\section{Results}
 
 \iffalse
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$
