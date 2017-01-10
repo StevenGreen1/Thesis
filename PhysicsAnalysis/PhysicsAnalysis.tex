@@ -591,7 +591,38 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 32,109,300 & 4,
 \end{figure}
 
 \subsection{MVA - 1.4 TeV}
-A multivariate analysis is applied to the data set to refine the selection. The following variables were used for training the TMVA selection.
+A multivariate analysis was applied to the data set to refine the selection using the TMVA toolkit \cite{Hocker:2007ht}. The following variables were used for training the TMVA selection.  
+
+\begin{itemize}
+\item Number of PFOs in the event.
+\item Highest energy PFO type.
+\item Transverse momentum of the event.
+\item $\text{cos}\theta_{Missing}$.  The cosine of the polar angle of the missing momentum.
+\item $\text{cos}\theta_{\text{Highest Energy Track}}$.  The cosine of the polar angle of the track with the largest momentum.
+\item $y_{i}$, $y_{i+1}$. Jet clustering parameters ranging from i = 0 to 6.
+\item Principle thrust, sphericity and aplanarity as defined in section BLAH.
+\item Energy of the highest energy electron in the event.
+\item Energy of the highest energy PFO in the event.
+\item Energy of the reconstructed bosons.
+\item Acolinearity of the reconstructed boson pair.
+\item Invariant mass of the reconstructed bosons.
+\item Acolinearity of the jets forming the reconstructed bosons. 
+\end{itemize}
+
+It was found that the best MVA algorithm for both performance and speed was the booted decision tree (BDT) when comparing different methods using the default settings.  Add plot here.
+
+The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied.  The results shown in the rest of this section use the optimal configuration.  For the optimal BDT configuration a significance of S/$\sqrt(\text{S + B}) = 49.7$ was obtained.  
+
+The event numbers passing the BDT cut can be found in table \ref{table:postmvanumbers1400GeV}.  The performance of the BDT is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact}, which shows the change in the distribution of the the invariant mass of the reconstructed bosons as the MVA is applied. As expected the dominant background processes after the MVA is applied are those that will look identical to the visible signal process i.e. qqqq and missing energy.  Two smaller sources of background that pass the MVA exists, those where two jets and missing energy are confused as four jets and missing energy and those where a lepton is not properly reconstructed and the events look like four jets and missing energy.  
+
+\begin{figure}
+\centering
+\subfloat[No cuts applied.]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_NoCuts.pdf}}\hfill
+\subfloat[Preselection cuts applied.]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_PreSelection.pdf}}
+\subfloat[Preselection cuts and MVA applied.]{\label{fig:postmvasynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_PostMVA.pdf}} 
+\caption[Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at 1.4 TeV.]{Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at 1.4 TeV.}
+\label{fig:synbosonmass1400GeVMVAimpact}
+\end{figure}
 
 \begin{table}[h!]
 \centering
