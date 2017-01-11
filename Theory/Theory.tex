@@ -10,20 +10,20 @@
 
 \subsection{Electromagnetic Showers}
 % Explain what happens when an electron passes through matter
-When an electron passes through a material there are several ways different energy loss mechanisms such as ionisation, nuclear excitation and interactions, bremsstrahlung and \delta ray production (high energy electron knoack on).  The dominant mechanism varies both as a function of the material being transversed and the energy of the transversing particle, howevere, at the highest energies, such as those found in modern day particle collider experiments, the dominant energy loss meachnism is bremsstrahlung.  Bremsstrahlung is the process by which a photon is radiated off a charged particle as it interacts with the electromagnetic field of a nucleus.  In general multiple photons are radiated from an electron as typically only a small fraction of the energy of the electron is carried away by any individual photon (passage of particles through matter). 
+When an electron passes through a material there are several ways different energy loss mechanisms such as ionisation, nuclear excitation and interactions, bremsstrahlung and \delta ray production (high energy electron knock on).  The dominant mechanism varies both as a function of the material being transversed and the energy of the transversing particle, however, at the highest energies, such as those found in modern day particle collider experiments, the dominant energy loss mechanism is bremsstrahlung.  Bremsstrahlung is the process by which a photon is radiated off a charged particle as it interacts with the electromagnetic field of a nucleus.  In general multiple photons are radiated from an electron as typically only a small fraction of the energy of the electron is carried away by any individual photon (passage of particles through matter). 
 
 % Explain what happens when a photon passes through matter
-The incoming electron energy is thus distributed into serveal bremsstrahlung photons, which in turn deposit energy within the absorbing material through different mechanisms such as the photoelectric effect, Compton scattering and pair-production.  Again, at high energies a single process is dominant, which in this case is pair production whereby an $\text{e}^{+}\text{e}^{-}$ pair are produced from the interaction of a photon in the field of a charged particle (p22 pptm, 32.15).  Once pair production occurs the $\text{e}^{+}$ will go onto annihilate with an the $\text{e}^{-}$ in the absorber material producing two photons (spin conservation) and, if the energies are sufficiecntly high, the $\text{e}^{-}$ from the pair production will produce further bremsstrahlung photons.  
+The incoming electron energy is thus distributed into several bremsstrahlung photons, which in turn deposit energy within the absorbing material through different mechanisms such as the photoelectric effect, Compton scattering and pair-production.  Again, at high energies a single process is dominant, which in this case is pair production whereby an $\text{e}^{+}\text{e}^{-}$ pair are produced from the interaction of a photon in the field of a charged particle (p22 pptm, 32.15).  Once pair production occurs the $\text{e}^{+}$ will go onto annihilate with an the $\text{e}^{-}$ in the absorber material producing two photons (spin conservation) and, if the energies are sufficiently high, the $\text{e}^{-}$ from the pair production will produce further bremsstrahlung photons.  
 
 % Explain how both combine to make EM shower
-The combination of these two mechanims mean that when an electron enters a material a shower of particles are produced from a chain reaction bremsstrahlung and pair production mechanisms, known as an electromagentic shower.  The same shower mechanics also apply if the incoming particle were a positron, annihilation occuring first, or a photon, pair-production occuring first.  While this doesn't give the full picture of the interactions occuring at low energies is is sufficient to allow us to effectively model the behaviour of high energy electromageitc showers that occur in particle physics collider experiments.
+The combination of these two mechanisms mean that when an electron enters a material a shower of particles are produced from a chain reaction bremsstrahlung and pair production mechanisms, known as an electromagnetic shower.  The same shower mechanics also apply if the incoming particle were a positron, annihilation occurring first, or a photon, pair-production occurring first.  While this doesn't give the full picture of the interactions occurring at low energies is is sufficient to allow us to effectively model the behaviour of high energy electromagnetic showers that occur in particle physics collider experiments.
 
 \subsection{Detection of Electromagnetic Showers}
 % Explain it's a counting exercise
-The goal of effective calorimetry is to get an accurate estimate of the energy of the incoming particle based on the measurements that can be made from the showering particles.  A commen technique for this would be to count the number of ionisation tracks produced in the electromagnetic shower e.g. silicon detectors.  The number of tracks in the absorber material will be directly proportional to the energy of the incoming particle as the higher the energy of the incoming particle the larger the number of showering particles and so the larger the number of tracks appearing in the shower.  Similarly it is also possible to count the number of photons occuring within the shower and convert this into a measure of the incoming particle energy e.g. scintillator detectors.  Calorimetry is reduced to a counting exercise to measure as many charged particle tracks or photons occuring within a shower as possible.
+The goal of effective calorimetry is to get an accurate estimate of the energy of the incoming particle based on the measurements that can be made from the showering particles.  A common technique for this would be to count the number of ionisation tracks produced in the electromagnetic shower e.g. silicon detectors.  The number of tracks in the absorber material will be directly proportional to the energy of the incoming particle as the higher the energy of the incoming particle the larger the number of showering particles and so the larger the number of tracks appearing in the shower.  Similarly it is also possible to count the number of photons occurring within the shower and convert this into a measure of the incoming particle energy e.g. scintillator detectors.  Calorimetry is reduced to a counting exercise to measure as many charged particle tracks or photons occurring within a shower as possible.
 
 % Mathematics example 
-For example consider a silicon detector.  If we denote the sum of all the ionisation track lengths of a particle shower within this detector as $T_{0}$ then this is propartional to the number of ionising particles in the shower $N$.  In this case $N = E_{0}/\epsilon$ where $E_{0}$ is the energy of the particle initiating the shower and $\epsilon$ is the average particle energy within the shower.  This means the energy measurement $E_{0}$ is directly prortional to the number of ionised tracks in the shower.  So if $E \propto N$ then $\sigma_{E} \propto \sigma_{N} = \sqrt{N}$.  The last statement holds true as Poissonian statistics hold for measuring the signal $N$.  In the limit of large $N$, as is the typical case for a calorimeter, the Poissonian statistics behave as Gaussian statistics and calorimetry yeilds Gaussian distributions for reconstructed energy measurements.  Therefore, the resolution in an ideal calorimeter goes as $\frac{\sigma_{E}}{E} \propto \frac{1}{\sqrt{E}}$.  The same arguement can be applied when we consider counting the number of photons instead of ionisation tracks in the shower.
+For example consider a silicon detector.  If we denote the sum of all the ionisation track lengths of a particle shower within this detector as $T_{0}$ then this is proportional to the number of ionising particles in the shower $N$.  In this case $N = E_{0}/\epsilon$ where $E_{0}$ is the energy of the particle initiating the shower and $\epsilon$ is the average particle energy within the shower.  This means the energy measurement $E_{0}$ is directly proportional to the number of ionised tracks in the shower.  So if $E \propto N$ then $\sigma_{E} \propto \sigma_{N} = \sqrt{N}$.  The last statement holds true as Poissonian statistics hold for measuring the signal $N$.  In the limit of large $N$, as is the typical case for a calorimeter, the Poissonian statistics behave as Gaussian statistics and calorimetry yields Gaussian distributions for reconstructed energy measurements.  Therefore, the resolution in an ideal calorimeter goes as $\frac{\sigma_{E}}{E} \propto \frac{1}{\sqrt{E}}$.  The same argument can be applied when we consider counting the number of photons instead of ionisation tracks in the shower.
 
 % Resolution Terms
 There are, however, other sources contributing to the resolution of a calorimeter that must be considered.  In general calorimeter energy resolutions are quotes using the following form:
@@ -35,149 +35,48 @@ There are, however, other sources contributing to the resolution of a calorimete
 There are many different contributing sources to the resolution, these include:
 \begin{enumerate}
 \item Stoichastic term:  This term contributes to the resolution due to the statistical nature of counting quanta to get a measurement as described above.
-\item Noise term:  Accounts for the effects of electrical noise occuring within the calorimeter.  This term goes as $\frac{1}{E}$ in the energy resoltuion as the effect of noise on $\sigma_{E}$ is independant of energy.
+\item Noise term:  Accounts for the effects of electrical noise occurring within the calorimeter.  This term goes as $\frac{1}{E}$ in the energy resolution as the effect of noise on $\sigma_{E}$ is independant of energy.
 \item Constant term:  Accounts for effects such as leakage that grow with energy.  This term goes as a constant in the energy resolution as $\sigma_{E} \propto E$ then a constant term is added to the resolution.
 \end{enumerate}
 
 \subsection{Hadronic Showers and Detection of Hadronic Showers}
 % Hadronic interactions - Could maybe should add more details here.  See particle physics spetra decoding note by F.Gianette
-Calorimeters are also used to determine the incoming energy of hadronic particles producing a shower when interacting within the calorimeter.  These hadronic showers are far more challenging to model due to the variety of different hadrons that could be producing the shower and indeed the difficulty of the underlying QCD interaction occuring within the shower.  In general the most common type of process to occur when a hadron collides with a nucleus is spallation.  In this process the incoming hadron collides with nucleons in the nucleus creating a cascase of subsequent nucleon nucleon collisions at varying energies.  If the energies are high enough various hadrons may be created and while others may become liberated from the nucleus if they reach the edge of the nucleus and have enough energy to overcome the nuclear binding energy.  After the cascase has largely ceased a secondary stage of spallation occurs whereby 'evaporation' nucleons are ejected from the nucleus until the nucleus retuns to a stable state.  In this process if the excess energy of the nucleus is greater nucelar binding energy of a nucleon the remaining energy can be released via $\gamma$ emission.  In such processes many charged particles, predominantly protons, will be produced in hadronic showers and, analogously to the case of electromagnetic showers, the higher the incoming energy of the hadron the larger the number of charged tracks within the hadronic shower.  Therefore, the principle behind hadronic calorimetery is the same as the of electromagnetic calorimetry in terms of counting the number of charged particle tracks occuring within the shower and relating this to the energy of the incoming particle.  By identical logic to that applied for electromagnetic calorimeters Gaussian distributions are expected from the energy measurements from hadronic calorimeters.  Simlarly the energy resolution for hadronic calorimeters goes as $\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c$ again with the same stoichastic, noise and constant terms as described for electromagnetic calorimeters.
+Calorimeters are also used to determine the incoming energy of hadronic particles producing a shower when interacting within the calorimeter.  These hadronic showers are far more challenging to model due to the variety of different hadrons that could be producing the shower and indeed the difficulty of the underlying QCD interaction occurring within the shower.  In general the most common type of process to occur when a hadron collides with a nucleus is spallation.  In this process the incoming hadron collides with nucleons in the nucleus creating a cascade of subsequent nucleon nucleon collisions at varying energies.  If the energies are high enough various hadrons may be created and while others may become liberated from the nucleus if they reach the edge of the nucleus and have enough energy to overcome the nuclear binding energy.  After the cascade has largely ceased a secondary stage of spallation occurs whereby 'evaporation' nucleons are ejected from the nucleus until the nucleus returns to a stable state.  In this process if the excess energy of the nucleus is greater nuclear binding energy of a nucleon the remaining energy can be released via $\gamma$ emission.  In such processes many charged particles, predominantly protons, will be produced in hadronic showers and, analogously to the case of electromagnetic showers, the higher the incoming energy of the hadron the larger the number of charged tracks within the hadronic shower.  Therefore, the principle behind hadronic calorimetery is the same as the of electromagnetic calorimetry in terms of counting the number of charged particle tracks occurring within the shower and relating this to the energy of the incoming particle.  By identical logic to that applied for electromagnetic calorimeters Gaussian distributions are expected from the energy measurements from hadronic calorimeters.  Similarly the energy resolution for hadronic calorimeters goes as $\frac{\sigma_{E}}{E} = \frac{a}{\sqrt{E}} \oplus \frac{b}{E} \oplus c$ again with the same stochastic, noise and constant terms as described for electromagnetic calorimeters.
 
 \subsection{Sampling Calorimeters}
 % Sampling principle
-While ideally the goal of a calorimeter would be to record all of the charged tracks within it this can be impractical as it requires a calorimeter made entirely of active elements that are often have a low impedance to the particle shower e.g a large radiation length for electromangnetic showes or nuclear interaction lengths for hadronic showers, and would result in an unfeasibly large detector.  Therefore a common technique employed to avoid this is to use a sampling calorimeter.  A sampling calorimeter is formed of pairs of layers of active and absorber material.  The absorber material has a high impedance to the particle shower and induces the showers while the active layers record the number of charged particles passing through a section of the shower.  Given a sufficient sampling rate of the particle shower the measurements from the active layers can be used to infer the energy deposited in the abosrber layer and hence give a good estimate of the energy of the incoming particle.  
+While ideally the goal of a calorimeter would be to record all of the charged tracks within it this can be impractical as it requires a calorimeter made entirely of active elements that are often have a low impedance to the particle shower e.g a large radiation length for electromagnetic shower or nuclear interaction lengths for hadronic showers, and would result in an unfeasibly large detector.  Therefore a common technique employed to avoid this is to use a sampling calorimeter.  A sampling calorimeter is formed of pairs of layers of active and absorber material.  The absorber material has a high impedance to the particle shower and induces the showers while the active layers record the number of charged particles passing through a section of the shower.  Given a sufficient sampling rate of the particle shower the measurements from the active layers can be used to infer the energy deposited in the absorber layer and hence give a good estimate of the energy of the incoming particle.  
 
 \subsection{Compensating Calorimeters}
 % Compensating vs non compensating 
-The response of a calorimeter to an electromangetic shower and a hadronic shower are inherently different due to the different mechanisms dictating shower formation, however, one crucial difference is that in hadronic showers containg an 'invisible energy' component.  This corresponds to energy deposits from the shower that do not produce a calorimeter response.  For example, the nuclear binding energies required to liberate nucleons in spallation do not affect the calorimeter response.  
+The response of a calorimeter to an electromagnetic shower and a hadronic shower are inherently different due to the different mechanisms dictating shower formation, however, one crucial difference is that in hadronic showers containing an 'invisible energy' component.  This corresponds to energy deposits from the shower that do not produce a calorimeter response.  For example, the nuclear binding energies required to liberate nucleons in spallation do not affect the calorimeter response.  
 
 % Introduce software compensation for later
 This is an undesirable feature of a calorimeter and so there are multiple approaches, in both hardware and software, to achieving a uniform response from the caloirmeter.  The fine calorimeter transverse granularity and the sophisticated particle identification software that is to be applied at the calorimeters at a future linear collider allow a distinction of hadronic and electromangetic showers to be made and a compensation applied to the energies of the reconstructed particles at a software level.  Further discussion of such techniques can be found in subsequent chapters. 
 
 % Uranium calorimeter
-It is worth nothing that for calorimeters for pre-existing particle collider experiments it is far more challenging to apply 'software compensation' due to the coarse granularity of the calorimeters.  However, it is also possible to achieve a compensating calorimeter response via 'hardware compensation'.  One such approach to 'hardware compensation' is a uranium based calorimeter such as that used at the ZEUS experiment.  A uranium calorimeter produces a larger response for hadronic showers as the hadronic shower can induce nucelar fission within the absorber material that yeields extra energy in the form of evaporation neutrons and \gamma s.  If the density of uranisum is properly tuned this extra energy can be enough to produce a calorimeter with identical responses for hadronic and electromangetic showers induced by particles with the same initial energy.  While both software and hardward compensation can achieve a compensating calorimeter response it should be emphasised that the calorimeter granularity and sophisticated particle identification software at a future linear collider creates the opportunity to vastly improve the application of 'software compensation' in comparison to any prior particle physics experiment.
+It is worth nothing that for calorimeters for pre-existing particle collider experiments it is far more challenging to apply 'software compensation' due to the coarse granularity of the calorimeters.  However, it is also possible to achieve a compensating calorimeter response via 'hardware compensation'.  One such approach to 'hardware compensation' is a uranium based calorimeter such as that used at the ZEUS experiment.  A uranium calorimeter produces a larger response for hadronic showers as the hadronic shower can induce nuclear fission within the absorber material that yields extra energy in the form of evaporation neutrons and \gamma s.  If the density of uranium is properly tuned this extra energy can be enough to produce a calorimeter with identical responses for hadronic and electromagnetic showers induced by particles with the same initial energy.  While both software and hardware compensation can achieve a compensating calorimeter response it should be emphasised that the calorimeter granularity and sophisticated particle identification software at a future linear collider creates the opportunity to vastly improve the application of 'software compensation' in comparison to any prior particle physics experiment.
 
 \section{Particle Flow Calorimetry}
 \label{sec:unitarisation}
 
 \subsection{Overview}
+Particle flow calorimetry is a method of calorimetry where the goal is to reconstruct every visible particle in any given event.  This process has numerous advantages over traditional calorimetry in that it yields superior energy resolutions as well as more topological information that can be used further downstream in physics analyses.  Careful use of this approach to calorimetry allows us to make significant strides forward in physics understanding in comparison to traditional calorimetric methods.
 
-Particle flow calorimetry is a method of calorimetry where the goal is to reconstruct every visible particle in any given event.  This prcoesses has numerous advantages over traditional calorimetry in that it yeilds superior energy resolutions as well as more topological information that can be used further downstream in physics analyses.  Careful use of this approach to calorimetry allows us to make signficant strides forward in physics understanding in comparison to traditional calorimetric methods.
-
-The application of particle flow calorimetry creates new challenges for detector response on both the hardware and software side.  Fine granularity calorimeters are crucial to be able to track the energy deposits from individual particles and sophisticated pattern recongition software is essential for piecing these energy deposits back together into reconstructed particles.  For particle flow calorimetry to be successful there has to be a synergy between the hardware and software so that the two work together well with success being dictated by physics performance.  
+The application of particle flow calorimetry creates new challenges for detector response on both the hardware and software side.  Fine granularity calorimeters are crucial to be able to track the energy deposits from individual particles and sophisticated pattern recognition software is essential for piecing these energy deposits back together into reconstructed particles.  For particle flow calorimetry to be successful there has to be a synergy between the hardware and software so that the two work together well with success being dictated by physics performance.  
 
 The immense benefits offered by particle flow calorimetry have made it the front runner in terms of the calorimetric approach and as such has been adopted by the future linear lepton-lepton collider.  
 
 \subsection{Paradigm}
 
-The principle of particle flow calorimetry is a simple one, that is to record the energy deposited by a particle in a dectector in the subsystem that offers the best energy resolution.  While a relatively simple aim the application of such a paradigm is challenging as different particles deposit energy throughout the detector in different regions.  
+The principle of particle flow calorimetry is a simple one, that is to record the energy deposited by a particle in a detector in the subsystem that offers the best energy resolution.  While a relatively simple aim the application of such a paradigm is challenging as different particles deposit energy throughout the detector in different regions.  
 
 The stable particles that it is possible to measure in a particle collider detector are relatively few in number and can be broken into three categories depending upon their energy depositions.  There are:
 
 \begin{itemize}
-\item Charged hardons.  These produce energy depoits in the tracker and both the electromangetic and hadronics calorimeters.
-\item Neutral hadrons.  These produce energy depoits in the electromangetic and hadronics calorimeters.
-\item Photons.  These produce energy deposits primarily in the electromangetic calorimeters. 
+\item Charged hardons.  These produce energy deposits in the tracker and both the electromagnetic and hadronic calorimeters.
+\item Neutral hadrons.  These produce energy deposits in the electromagnetic and hadronic calorimeters.
+\item Photons.  These produce energy deposits primarily in the electromagnetic calorimeters. 
 \end{itemize}
 
-As the energy resolution offered by the tracker is signifcantly better that that offered by the calorimeters it is desirable to measure the energy of charged particles in the tracker.  As photons and neutral hadrons do not produce tracks these energy deposits must come from the calorimeter.  This approach is to be contrasted with traditional calorimetry where all energy deposits arise from the calorimeters.  
-
-
-\section{Physics Theory}
-
-Quantum field theory is the best theory that curretnly exists for modelling the behaviour of fundamental particles in the universe.  It is based upon fundamental symetries that the Lagrangian must obey.  In the standard model a $\text{SU}3 \times \text{SU}2_{\text{L}} \times \text{U}1$ symmetry is adheared to.
-
-\subsection{Sponteneous Symmetry Breaking}
-
-Consider a complex scalar field \phi with the Klein-Gordon Lagrangian
-
-\begin{equation}
-\mathcal{L} = \partial^{\mu} \phi^{*} \partial_{\mu} \phi - \text{m}^{2} |\phi|^{2} = \partial^{\mu} \phi^{*} \partial_{\mu} \phi - \text{V}(\phi)
-\end{equation}
-
-$\partial^{\mu}$ is the partial derivate of the scalar field $\phi$ with respect to the position 4-vector.  $\mathcal{L}$ is Lorentz invariant.
-
-This Lagrangian is invariant under the global symmetry $\phi \rightarrow e^{i\alpha} \phi$.  By adding extra terms to the Lagrangian that obey this global symmetry it is possible to modify the interactions of the scalar field, while retaining the overall symmetry of the Lagrangian.  This can be interpreted as modifying the potential, all terms in the Lagrangian without derivaties, of the scalar field.  For example consider a fourth order potential of the following form.
-
-\begin{equation}
-\text{V}(\phi) = \text{m}^{2}|\phi|^{2} + \lambda |\phi|^{4}
-\end{equation}
-
-The potential has a minima at zero, however, if $\text{m}^{2} < 0$ then the minima exists on a circle in the complex $\phi$ plane, centred at $(0,0)$ with radius $\sqrt{\frac{-\text{m}^{2}}{\lambda}}$.  To quantize such a theory it is necessary to expand about the minima of the potential, however, in the case of $\text{m}^{2} < 0$ there are an infinite number of choices of minima to expand about.  Irrespective of the choice of minima for this configuration the symmetry $\phi \rightarrow e^{i\alpha} \phi$ is broken.  Fluctuations about the minima along the degenerate direction leave the potential unchanged is a consequence of the breaking of the $\phi \rightarrow e^{i\alpha} \phi$ symmetry; this is known as spontaneous symmetry breaking.
-
-Goldstone's theorem implies that for Lorentz-invariant theories spontaneous symmetry breaking always leads to the existance a massless particle.  This can be seen when expanding the complex scalar theory about the minima.
-
-\begin{equation}
-\phi = \frac{1}{\sqrt{2}}(v + \phi_{1} + i \phi_{2})
-\end{equation}
-
-Where $\phi_{1/2}$ are real fields.  Applying this parameterisation to the Lagrangian shows that yields a mass term of $\sqrt{-\text{m}^{2}}$ for the $\phi_{1}$ field while the mass of the $\phi_{2}$ field yeilds a massless particle.  
-
-\begin{equation}
-\mathcal{L} = \frac{1}{2}\partial^{\mu} \phi_{1} \partial_{\mu} \phi_{1} + \frac{1}{2}\partial^{\mu} \phi_{2} \partial_{\mu} \phi_{2} - \text{m}^{2}|\phi_{1}|^{2} + 0.|\phi_{2}|^{2} + ...
-\end{equation}
-
-This procedure is the origin of the gauge boson mass terms when considering local symmetries instead of global ones.  In this example to promote the global to local symmetry let $\alpha \rightarrow \alpha(x)$ and $\partial^{\mu} \rightarrow D^{\mu} = \partial^{\mu} + ieA^{\mu}$ where $A^{\mu}$ a the gauge field that transforms as $A^{\mu} \rightarrow A^{\mu} - \partial^{\mu}\alpha(x)$.  The new Lagrangian becomes
-
-\begin{equation}
-\mathcal{L} = (D^{\mu} \phi)^{*} (D_{\mu} \phi) - \text{m}^{2} |\phi|^{2} - \lambda |\phi|^{4}
-\end{equation}
-
-If there is a non zero minima in the potential, v, then a gauge boson mass term appears of the form $+\frac{e^{2}v^{2}}{2} A^{\mu} A_{\mu}$.
-
-\subsection{Electroweak Interactions}
-
-The electroweak sector of the standard model can be summarised as a SU(2) $\times$ U(1) gauge summetry that is broken, via spontaneous symmetry breaking, to yield massive $\text{W}^{+/-}$ and Z bosons while leaving the \gamma massless.  This can be seen by consiering the Higgs field H that is a doublet of the SU(2) symmetry with hypercharge $\frac{1}{2}$.  Consider the Higgs field in the following potential.
-
-\begin{equation}
-\text{V}(\phi) = -\text{\mu}^{2}\text{H}^{\dagger}\text{H} + \lambda (\text{H}^{\dagger}\text{H})^{2}
-\end{equation}
-
-The minima of this field is at 
-
-\begin{equation}
-\sqrt{\text{H}^{\dagger}\text{H}} = \frac{v}{\sqrt{2}} = \sqrt{\frac{\mu^{2}}{2\lambda}}
-\end{equation}
-
-without loss of generality we may chosse to expand this field around the point
-
-\begin{equation}
-\langle \text{H} \rangle = \binom{0}{\frac{v}{\sqrt{2}}}
-\end{equation}
-
-where v is real.  Consider the kinematic term in the Lagrangian, $\partial^{\mu} \text{H}^{\dagger} \partial_{\mu} \text{H}$.  The covariant derivative of this Higgs field must satisfy the SU(2) $\times$ U(1) gauge summetry and so takes the following form
-
-\begin{equation}
-D_{\mu} \text{H} = (\partial_{\mu} + ig\frac{\sigma^{i}}{2}W^{i}_{\mu} + i\frac{g'}{2}B_{\mu})H
-\end{equation}
-
-If there is mixing of the SU(2) and U(1) fields of the form $W^{3}_{\mu} = \text{cos}{\theta_{W}}Z_{\mu} + \text{sin}{\theta_{W}}Z_{\mu}$ and $B_{\mu} = -\text{sin}{\theta_{W}}Z_{\mu} + \text{cos}{\theta_{W}}Z_{\mu}$ and the unmixed SU(2) fields transform in the following way $W^{/pm}_{\mu} = \frac{1}{\sqrt{2}}(W^{1}_{\mu} \mp i W^{2}_{\mu})$, then the following boson mass terms arise.
-
-\begin{equation}
-\frac{(gv)^{2}}{4} W^{+}_{\mu} W^{-\mu} + \frac{(g^{2} + g'^{2})v^{2}}{8} Z_{\mu} Z^{\mu}
-\end{equation}
-
-The boson mass terms are as follows
-\begin{equation}
-m_{W} = \frac{gv}{2}, m_{Z} = \frac{v\sqrt{g^{2} + g'^{2}}}{2} = \frac{m_{W}}{\text{cos}{\theta_{W}}}, m_{A} = 0
-\end{equation}
-
-\subsection{Effective Field Theory}
-
-There are a number of features in the observable universe that cannot be accounted for using the standard model of particle physics.  However, the standard model is a very good description of the interactions between particles over the energy range being probed at modern particle collider experiments.  Therefore, any underlying theory governing the interactions of particles must behave like the standard model over the enrgy range, or distance scale, that modern particle collider experiments have covered and then will deviate to account for the true underlying theory.  Effective field theories (EFTs) work from this premise by assuming that an underlying theory has a momentum scale, $\Lambda$, below which standard model behaviour is replicated.  
-
-Quantum field theories must be renormalizable to ensure that non-infinite predictions of the coefficients in the Lagrangian can be made and tested.  Infinities arise from non-renormalizable theories due to divergent integrals from loop diagrams that assume the theory being applied is valid at all energy and length scales.  Effective field theories act to avoid such problems by only integrating up to the momentum scale $\Lambda$ and not above it.  This avoids assumptions that the theory is applicable across all energy scales and allows the theory to make measureable predictions.  
-
-In the EFT framework it is no longer necessary to enforce renormalization in the choice of operators appearing in the Lagrangian.  As the standard model should be replicated at the low energy scale it is approparite when creating the EFT Lagrangian to append new operators, which may violate some or all the gauge symmetries of the standard model, to the standard model Lagrangian.
-
-\begin{equation}
-\mathcal{L}_{EFT} = \mathcal{L}_{SM} + \sum_{\text{dimension d}} \sum_{i} \frac{c_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
-\end{equation}
-
-Where the sums runs over d, all the dimensions of the operator, and i, any operator of dimension d.  The additional operator coefficients are chosen such that dimensionally they are consistent with the standard model Lagrangian.  
-
-\subsection{$\alpha_{4}$ and $\alpha_{5}$}
-
-
-
-
+As the energy resolution offered by the tracker is significantly better that that offered by the calorimeters it is desirable to measure the energy of charged particles in the tracker.  As photons and neutral hadrons do not produce tracks these energy deposits must come from the calorimeter.  This approach is to be contrasted with traditional calorimetry where all energy deposits arise from the calorimeters.  
