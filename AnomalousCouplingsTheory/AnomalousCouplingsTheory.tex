@@ -82,7 +82,13 @@ The boson mass terms are as follows
 m_{W} = \frac{gv}{2}, m_{Z} = \frac{v\sqrt{g^{2} + g'^{2}}}{2} = \frac{m_{W}}{\text{cos}{\theta_{W}}}, m_{A} = 0
 \end{equation}
 
-This model yields a massless photon, $m_{A} = 0$, as well as producing massive electroweak gauge bosons in a ratio that match the measured values of $m_{W} = 80.385 \pm 0.015$ and $m_{Z} = 91.1876 \pm 0.0021$ \cite{Beringer:1900zz}.
+This model yields a massless photon, $m_{A} = 0$, as well as producing massive electroweak gauge bosons in a ratio that match the measured values of $m_{W} = 80.385 \pm 0.015$ and $m_{Z} = 91.1876 \pm 0.0021$ \cite{Beringer:1900zz}.  These masses predicate that $\rho = 1$ where $\rho$ is defined as:
+
+\begin{equation}
+\rho = \frac{m_{W}^{2}}{m_{Z}^{2}\text{cos}{\theta_{W}}^{2}}
+\end{equation}
+
+This is ratio is constant, which occurs due to the custodial symmetry that exists after the $\text{SU}(2_{\text{L}}) \times \text{U}(1)$ symmetry has been broken to $\text{U}_{Q}(1)$.
 
 \subsection{Effective Field Theory}
 There are a number of features in the observable universe that cannot be accounted for using the standard model of particle physics.  However, the standard model is a very good description of the interactions between particles over the energy range being probed at modern particle collider experiments.  Therefore, any underlying theory governing the interactions of particles must behave like the standard model over the energy range, or distance scale, that modern particle collider experiments have covered and then will deviate to account for the true underlying theory.  Effective field theories (EFTs) work from this premise by assuming that an underlying theory has a momentum scale, $\Lambda$, below which standard model behaviour is replicated.  
@@ -95,20 +101,39 @@ In the EFT framework it is no longer necessary to enforce renormalization in the
 \mathcal{L}_{EFT} = \mathcal{L}_{SM} + \sum_{\text{dimension d}} \sum_{i} \frac{c_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
 \end{equation}
 
-Where the sums runs over d, all the dimensions of the operator, and i, any operator of dimension d.  The additional operator coefficients are chosen such that dimensionally they are consistent with the standard model Lagrangian.  
+Where the sums runs over d, all the dimensions of the operator, and i, any operator of dimension d.  The additional operator coefficients are chosen such that dimensionally they are consistent with the standard model Lagrangian.  The standard model is recovered in the limit of $\Lambda \rightarrow \infty$.
 
-\subsection{$\alpha_{4}$ and $\alpha_{5}$}
+\subsection{Electroweak Chiral Lagrangian}
+While the introduction of a Higgs field transforming appropriately under the relevant gauge transformations is able to produce mass terms in the Lagrangian for the $\text{W}^{\pm}$ and Z bosons it is possible to introduce these terms via an effective field theory approach.  In this approach the effective field theory considered is that of the electroweak chiral Lagrangian.  
 
-In subsequent chapters a discussion of the sensitivity of the CLIC experiment to the $\alpha_{4}$ and $\alpha_{5}$ parameters takes place.  The origin of those parameters is discussed here.
-
-$\alpha_{4}$ and $\alpha_{5}$ are coefficients that arise from an effective field theory.  They arise by considering the following operators in an EFT framework.
+In this model the symmetry breaking is achieved by introducing a field $\Sigma(x)$ that transforms under the $\text{SU}(2_{\text{L}})$ transformations U($x$) and $\text{U}(1)$ transformations V($x$) as
 
 \begin{equation}
-\text{Tr}[V^{\mu}V_{\mu}]^{2} \text{ and } \text{Tr}[V^{\mu}V_{\nu}]\text{Tr}[V^{\nu}V_{\mu}]
+\Sigma(x) \rightarrow U(x) \Sigma(x) V^{\dagger}(x)
 \end{equation}
 
-Where 
+$\Sigma(x)$ is parameterised as follows
 
 \begin{equation}
-V^{\mu} = 
- \end{equation}
+\Sigma(x) = \text{exp} (\frac{-i}{v} \Sigma^{3}_{a=1} w^{a}\tau^{a})
+\end{equation}
+
+where $w^{a}$ are the Goldstone bosons generated from the spontaneous symmetry breaking of the electroweak symmetry.  The following term if added to the Lagrangian generate the mass terms for the $\text{W}^{\pm}$ and Z gauge bosons.
+
+\begin{equation}
+\mathcal{L}_{M} = \frac{v^{2}}{4} \text{Tr} (\mathcal{D}^{\mu} \Sigma^{\dagger} \mathcal{D}_{\mu} \Sigma) = -\frac{v^{2}}{4}\text{Tr}(V_{\mu} V^{\mu})
+\end{equation}
+
+Where $V_{\mu} = (\mathcal{D}_{\mu}\Sigma) \Sigma^{\dagger}$ and $m_{W} = \frac{gv}{2}$.  The covariant derivate of the $\Sigma(x)$ is defined as
+
+\begin{equation}
+\mathcal{D}_{\mu} \Sigma(x) = \partial_{\mu} \Sigma(x) + \frac{ig}{2}\text{W}_{\mu}^{a}\tau^{a}\Sigma(x) - \frac{ig'}{2}\text{B}_{\mu}\tau^{3}\Sigma(x)
+\end{equation}
+
+The full parameterisation of the gauge boson interactions is found in \cite{Herrero:1994tj}.  It is sufficient for this study to note that the origin of these terms is the parameterisation of the Higgs field through $\Sigma$ that replicates the low energy behaviour of the standard model.  It was shown by Longhitano that there are several relevant operators that are $\text{SU}(2_{\text{L}}) \times \text{U}(1)$ and CP invariant up to dimension 4 that could be considered in this theory \cite{Longhitano:1980tm}.  Of those operators only two involve quartic massive gauge boson vertices.  They are:
+
+\begin{equation}
+\alpha_{4}\text{Tr}[V^{\mu}V_{\nu}]\text{Tr}[V^{\nu}V_{\mu}] \text{ and } \alpha_{5}\text{Tr}[V^{\mu}V_{\mu}]^{2}
+\end{equation}
+
+The full expansion of these terms in terms of the massive gauge bosons $\text{W}^{\pm}$ and Z is given in the appendices \ref{sec:expansionalpha4alpha5}.   
