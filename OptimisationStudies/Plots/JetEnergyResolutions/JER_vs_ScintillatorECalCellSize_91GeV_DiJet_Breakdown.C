@@ -4,9 +4,12 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,1,25,12000,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,1,25,12000,0,5.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("Scintillator ECal Cell Size [mm^{2}]");
+    pAxesEj->GetXaxis()->SetTitle("ECal Cell Size [mm^{2}]");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.9);
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+ 
     pAxesEj->Draw();
 
     float xAxisVairable[6] = {3,5,7,10,15,20};
@@ -37,14 +40,14 @@
 
     float Pandora_Settings_OtherConfusion_JERError[6] = {0.0563043714869,0.0562888817185,0.0554359924531,0.0547477457262,0.0562071456619,0.0571203416626};
 
-    TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    TLegend *pLegend = new TLegend(0.15, 0.7, 0.55, 0.9);
     TGraphErrors *pTGraphErrors_Pandora_SettingsDefault = new TGraphErrors(6,xAxisVairable,Pandora_Settings_Default_JER,xAxisVairableError,Pandora_Settings_Default_JERError);
 
     pTGraphErrors_Pandora_SettingsDefault->SetLineColor(1);
     pTGraphErrors_Pandora_SettingsDefault->SetMarkerColor(1);
     pTGraphErrors_Pandora_SettingsDefault->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsDefault, "Default", "lp");
+    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsDefault, "Standard Reconstruction", "lp");
 
     TGraphErrors *pTGraphErrors_Pandora_SettingsPerfectPFA = new TGraphErrors(6,xAxisVairable,Pandora_Settings_PerfectPFA_JER,xAxisVairableError,Pandora_Settings_PerfectPFA_JERError);
 
@@ -58,33 +61,33 @@
 
     pTGraphErrors_Pandora_SettingsTotalConfusion->SetLineColor(2);
     pTGraphErrors_Pandora_SettingsTotalConfusion->SetMarkerColor(2);
-    pTGraphErrors_Pandora_SettingsTotalConfusion->Draw("lp,same");
+//    pTGraphErrors_Pandora_SettingsTotalConfusion->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsTotalConfusion, "TotalConfusion", "lp");
+//    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsTotalConfusion, "TotalConfusion", "lp");
 
     TGraphErrors *pTGraphErrors_Pandora_SettingsPhotonConfusion = new TGraphErrors(6,xAxisVairable,Pandora_Settings_PhotonConfusion_JER,xAxisVairableError,Pandora_Settings_PhotonConfusion_JERError);
 
-    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetLineColor(kOrange);
-    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetMarkerColor(kOrange);
+    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetLineColor(kRed);
+    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetMarkerColor(kRed);
     pTGraphErrors_Pandora_SettingsPhotonConfusion->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsPhotonConfusion, "PhotonConfusion", "lp");
+    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsPhotonConfusion, "Photon Confusion", "lp");
 
     TGraphErrors *pTGraphErrors_Pandora_SettingsNeutralHadronConfusion = new TGraphErrors(6,xAxisVairable,Pandora_Settings_NeutralHadronConfusion_JER,xAxisVairableError,Pandora_Settings_NeutralHadronConfusion_JERError);
 
     pTGraphErrors_Pandora_SettingsNeutralHadronConfusion->SetLineColor(kGreen-2);
     pTGraphErrors_Pandora_SettingsNeutralHadronConfusion->SetMarkerColor(kGreen-2);
-    pTGraphErrors_Pandora_SettingsNeutralHadronConfusion->Draw("lp,same");
+//    pTGraphErrors_Pandora_SettingsNeutralHadronConfusion->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsNeutralHadronConfusion, "NeutralHadronConfusion", "lp");
+//    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsNeutralHadronConfusion, "NeutralHadronConfusion", "lp");
 
     TGraphErrors *pTGraphErrors_Pandora_SettingsOtherConfusion = new TGraphErrors(6,xAxisVairable,Pandora_Settings_OtherConfusion_JER,xAxisVairableError,Pandora_Settings_OtherConfusion_JERError);
 
     pTGraphErrors_Pandora_SettingsOtherConfusion->SetLineColor(kMagenta);
     pTGraphErrors_Pandora_SettingsOtherConfusion->SetMarkerColor(kMagenta);
-    pTGraphErrors_Pandora_SettingsOtherConfusion->Draw("lp,same");
+//    pTGraphErrors_Pandora_SettingsOtherConfusion->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsOtherConfusion, "OtherConfusion", "lp");
+//    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsOtherConfusion, "OtherConfusion", "lp");
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
