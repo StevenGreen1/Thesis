@@ -12,21 +12,23 @@
    c1->SetFrameLineWidth(2);
    c1->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","100 GeV Photon Energy Resolution vs Number of Layers in ECal (Si)",100,14,32,1000,2.4,3.4);
+   TH2F *axesEj = new TH2F("axesEj","",100,14,32,1000,2,3.8);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
-   axesEj->SetMarkerStyle(20);
-   axesEj->GetXaxis()->SetTitle("Number of ECal Layers");
+   axesEj->SetMarkerStyle(1);
+   axesEj->GetXaxis()->SetTitle("N_{Layers ECal}");
    axesEj->GetXaxis()->SetNdivisions(505);
    axesEj->GetXaxis()->SetLabelFont(132);
-   axesEj->GetXaxis()->SetLabelSize(0.03);
-   axesEj->GetXaxis()->SetTitleSize(0.036);
+   axesEj->GetXaxis()->SetLabelSize(0.05);
+   axesEj->GetXaxis()->SetTitleSize(0.05);
    axesEj->GetXaxis()->SetTitleFont(132);
-   axesEj->GetYaxis()->SetTitle("#sigma_{Reco} / E_{Reco}");
+   axesEj->GetXaxis()->SetTitleOffset(0.95);
+   axesEj->GetYaxis()->SetTitle("Energy Resolution [%]");
    axesEj->GetYaxis()->SetLabelFont(132);
-   axesEj->GetYaxis()->SetLabelSize(0.03);
-   axesEj->GetYaxis()->SetTitleSize(0.036);
+   axesEj->GetYaxis()->SetLabelSize(0.05);
+   axesEj->GetYaxis()->SetTitleSize(0.05);
    axesEj->GetYaxis()->SetTitleFont(132);
+   axesEj->GetYaxis()->SetTitleOffset(0.9);
    axesEj->GetZaxis()->SetLabelFont(132);
    axesEj->GetZaxis()->SetLabelSize(0.03);
    axesEj->GetZaxis()->SetTitleSize(0.036);
@@ -38,7 +40,7 @@
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
    gre->SetLineWidth(2);
-   gre->SetMarkerStyle(20);
+   gre->SetMarkerStyle(1);
    gre->SetPoint(0,30,2.589786);
    gre->SetPointError(0,0,0.05956549);
    gre->SetPoint(1,26,2.735755);
@@ -51,4 +53,6 @@
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+
+   c1->SaveAs("SiECal100GeVPhotonResVsLayerNumber.pdf");
 }

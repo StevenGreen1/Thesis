@@ -12,7 +12,7 @@
    c1->SetFrameLineWidth(2);
    c1->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","",100,0,25,1000,2,3.5);
+   TH2F *axesEj = new TH2F("axesEj","",100,0,25,1000,2,3.8);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(1);

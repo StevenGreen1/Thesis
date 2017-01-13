@@ -4,9 +4,11 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,12,36,12000,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,12,36,12000,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("Silicon ECal Number of Layers");
+    pAxesEj->GetXaxis()->SetTitle("N_{Layers ECal}");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
     pAxesEj->Draw();
 
     float xAxisVairable[4] = {16,20,26,30};
