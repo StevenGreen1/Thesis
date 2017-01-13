@@ -1,16 +1,16 @@
 {
-//=========Macro generated from canvas: c1_n2/c1_n2
-//=========  (Fri Dec  2 09:00:28 2016) by ROOT version5.34/30
-   TCanvas *c1_n2 = new TCanvas("c1_n2", "c1_n2",12,51,700,500);
+//=========Macro generated from canvas: c1/c1
+//=========  (Fri Jan 13 11:02:05 2017) by ROOT version5.34/30
+   TCanvas *c1 = new TCanvas("c1", "c1",12,51,700,500);
    gStyle->SetOptStat(0);
-   c1_n2->Range(0,0,1,1);
-   c1_n2->SetFillColor(0);
-   c1_n2->SetBorderMode(0);
-   c1_n2->SetBorderSize(2);
-   c1_n2->SetTickx(1);
-   c1_n2->SetTicky(1);
-   c1_n2->SetFrameLineWidth(2);
-   c1_n2->SetFrameBorderMode(0);
+   c1->Range(0,0,1,1);
+   c1->SetFillColor(0);
+   c1->SetBorderMode(0);
+   c1->SetBorderSize(2);
+   c1->SetTickx(1);
+   c1->SetTicky(1);
+   c1->SetFrameLineWidth(2);
+   c1->SetFrameBorderMode(0);
    
    TH2F *axesEj = new TH2F("axesEj","100 GeV Photon Energy Resolution vs Number of Layers in ECal (Si)",100,14,32,1000,2.4,3.4);
    axesEj->SetStats(0);
@@ -48,7 +48,7 @@
    gre->SetPoint(3,16,3.19947);
    gre->SetPointError(3,0,0.08651526);
    gre->Draw(" pl");
-   c1_n2->Modified();
-   c1_n2->cd();
-   c1_n2->SetSelected(c1_n2);
+   c1->Modified();
+   c1->cd();
+   c1->SetSelected(c1);
 }

@@ -30,7 +30,7 @@ The energy resolution for single photon events as a function of photon energy, f
 
 \section{Electromagnetic Calorimeter Optimisation}
 \label{sec:ecal}
-The ECal primarily measures the energy deposits of electromagnetic showers.  The default ILD detector model, summarised in table \ref{table:defaultildecal}, contains 24 radiation lengths, which acts to confine all but the highest energy electromagnetic showers within it.  The longitudinal structure of this default model is 29 readout layers, consisting of pairs of active and absorber material, and one presampling layer, which exists to encourage shower development.  Increasing the thickness of the absorber material part way into the detector reduces the number of readout channels and cost of the overall calorimeter while retaining a high sampling rate at the start of particle showers, which is crucial for the pattern recognition aspect of particle flow calorimetry.  
+The ECal primarily measures the energy deposits of electromagnetic showers.  The default ILD detector model, summarised in table \ref{table:defaultildecal}, contains 24 radiation lengths ($\text{X}_{0}$, which acts to confine all but the highest energy electromagnetic showers within it.  The longitudinal structure of this default model is 29 readout layers, consisting of pairs of active and absorber material, and one presampling layer, which exists to encourage shower development.  Increasing the thickness of the absorber material part way into the detector reduces the number of readout channels and cost of the overall calorimeter while retaining a high sampling rate at the start of particle showers, which is crucial for the pattern recognition aspect of particle flow calorimetry.  
 
 \begin{table}[h!]
 \centering
@@ -62,15 +62,13 @@ For this study a number of different detector models were considered where the t
 
 \begin{figure}
 \centering
-\subfloat[Silicon active material.]{\label{fig:ecalsccellsize}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize.pdf}}
-\subfloat[Scintillator active material.]{\label{fig:ecalsicellsize}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCellSize.pdf}} \hfill
+\subfloat[Silicon active material.]{\label{fig:ecalsicellsize}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize.pdf}}
+\subfloat[Scintillator active material.]{\label{fig:ecalsccellsize}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCellSize.pdf}} \hfill
 \caption[Jet energy resolution as a function of ECal cell size.]{Jet energy resolution as a function of ECal cell size for the silicon and scintillator ECal options.}
 \label{fig:ecalcellsize}
 \end{figure}
 
 The jet energy resolution was found to improve with decreasing cell size.  This is expected as smaller cell size lead to better separation of energy deposits from neutral and charged particle showers.  
-
-By examining the breakdown of the jet energy resolution into intrinsic resolution and confusion terms, as explained in chapter BLAH, it is possible to conclude that the dominant factor affecting the jet energy resolution when the transverse granularity of the ECal is varied is the confusion arising from photon energy deposits.  Examples of jet energy resolution breakdowns are shown for 45 and 250 GeV jets for both the silicon and scintillator ECal options in figure \ref{fig:ecalcellsize}.  As expected in the intrinsic energy resolution does not change significantly with the transverse granularity.  
 
 \begin{figure}
 \centering
@@ -82,9 +80,7 @@ By examining the breakdown of the jet energy resolution into intrinsic resolutio
 \label{fig:ecalcellsize}
 \end{figure}
 
-A more targeted test of the intrinsic energy resolution of the ECal is presented in figure \ref{fig:ecalcellsizegamma}, which examines the energy resolution of single photon samples at 100 GeV.  For the silicon option the intrinsic energy resolution was found to not vary significantly across the transverse granularities under consideration, however, there is a degradation in energy resolution with increasing cell size for the scintillator option.  This originates from an inactive region of material in the simulation that represents the multi pixel photon counter (MPPC).  The MPPC occupies a fixed area of the cell irrespective of cell size and so fractionally the "dead" region of the cell increases as cell size is reduced (cite this somehow).  These trends will be present in the jet energy resolution studies, however, as only a small fraction, $\approx 10$\%, of the jet energy arises from the ECal these trends will be washed out when looking purely at jets.
-
-In conclusion smaller transverse granularities in the ECal significantly improve the jet energy resolution for both the silicon and scintillator options.  The intrinsic energy resolution of the ECal is largely invariant to changes in the transverse granularity for the silicon option, while larger transverse granularities are beneficial to the scintillator option as they reduce the impact of "dead" regions of the detector.  
+By examining the breakdown of the jet energy resolution into intrinsic resolution and confusion terms, as explained in chapter BLAH, it is possible to conclude that the dominant factor affecting the jet energy resolution when the transverse granularity of the ECal is varied is the confusion arising from photon energy deposits.  Examples of jet energy resolution breakdowns are shown for 45 and 250 GeV jets for both the silicon and scintillator ECal options in figure \ref{fig:ecalcellsize}.  As expected in the intrinsic energy resolution does not change significantly with the transverse granularity.  
 
 \begin{figure}
 \centering
@@ -96,40 +92,61 @@ In conclusion smaller transverse granularities in the ECal significantly improve
 \label{fig:ecalcellsizegamma}
 \end{figure}
 
-\subsection{ECal Longitudinal Granularity}
+A more targeted test of the intrinsic energy resolution of the ECal is presented in figure \ref{fig:ecalcellsizegamma}, which examines the energy resolution of single photon samples at 100 GeV.  For the silicon option the intrinsic energy resolution was found to not vary significantly across the transverse granularities under consideration, however, there is a degradation in energy resolution with increasing cell size for the scintillator option.  This originates from an inactive region of material in the simulation that represents the multi pixel photon counter (MPPC).  The MPPC occupies a fixed area of the cell irrespective of cell size and so fractionally the "dead" region of the cell increases as cell size is reduced (cite this somehow).  These trends will be present in the jet energy resolution studies, however, as only a small fraction, $\approx 10$\%, of the jet energy arises from the ECal these trends will be washed out when looking purely at jets.
 
-For this study a number of different detector models were considered where the longitudinal granularity of the ECal absorber material, which in all cases is tungsten, had been varied about the nominal value for both the silicon and scintillator active material options.  In all cases the active layer thicknesses were left unchanged, that is 0.5 mm for the silicon option and 2 mm for the scintillator option.  The layout of the ECal for detector models considered are summarised in table \ref{longitudinalgranularityecaloptions}.
+In conclusion smaller transverse granularities in the ECal significantly improve the jet energy resolution for both the silicon and scintillator options.  The intrinsic energy resolution of the ECal is largely invariant to changes in the transverse granularity for the silicon option, while larger transverse granularities are beneficial to the scintillator option as they reduce the impact of "dead" regions of the detector.  
+
+\subsection{ECal Longitudinal Granularity}
+The performance of a number of detector configurations was examined where the longitudinal granularity of the ECal absorber material had been varied about the nominal value.  This study was performed for both the silicon and scintillator active material options.  In all cases considered tungsten was used as the absorber material in the ECal and the active layer thicknesses were not changed, that is 0.5 mm for the silicon option and 2 mm for the scintillator option.  The layout of the ECal for detector models considered are summarised in table \ref{table:nlayersecaloption}.
 
  \begin{table}[h!]
 \centering
 \begin{tabular}{ l l l l l l}
 \hline
-Total Number & $N_{Layers}$ & Absorber Depth & $N_{Layers}$ & Absorber Depth & $N_{Radiation Lengths In Absorber}$ \\
-of Layers & Region 1 & Region 1 & Region 2 &  Region 2 & \\
+Total Number & $N_{Layers}$ & Absorber & $N_{Layers}$ & Absorber & Total  \\
+of Layers & Region 1 & Thickness & Region 2 & Thickness & Thickness \\
+$N_{\text{Layers ECal}}$ & & Region 1 [mm] & &  Region 2 [mm] &  [$\text{X}_{0}$] \\
+
 \hline
-29 & 20 & 2.10 & 9 & 4.20 & 22.77 \\
-25 & 17 & 2.40 & 8 & 4.80 & 22.60 \\
-19 & 13 & 3.15 & 6 & 6.30 & 22.47 \\
-15 & 10 & 4.00 & 5 & 8.00 & 22.31\\
+30 & 20 & 2.10 & 9 & 4.20 & 22.77 \\
+26 & 17 & 2.40 & 8 & 4.80 & 22.60 \\
+20 & 13 & 3.15 & 6 & 6.30 & 22.47 \\
+16 & 10 & 4.00 & 5 & 8.00 & 22.31\\
 \hline
 \end{tabular}
-\caption[Transverse granularity layout of ECal models considered in this optimisation study.]{Transverse granularity layout of ECal models considered in this optimisation study.  Radiation length of tungsten absorber is 3.504mm information from PDG.}
-\label{table:longitudinalgranularityecaloptions}
+\caption[Transverse granularity layout of various ECal models considered in this study.]{Transverse granularity layout of various ECal models considered in this study.  Radiation length of tungsten absorber is 3.504mm \cite{Olive:2016xmw}.  Note that the presampler layer contributes one layer to the cumulative number of layers value for all detector models considered.}
+\label{table:nlayersecaloption}
 \end{table}
 
+\begin{figure}
+\centering
+\subfloat[Silicon active material.]{\label{fig:ecalsinlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers.pdf}}
+\subfloat[Scintillator active material.]{\label{fig:ecalscnlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers.pdf}} \hfill
+\caption[Jet energy resolution as a function of longitudinal granularity in the ECal.]{Jet energy resolution as a function of longitudinal granularity in the ECal for the silicon and scintillator ECal options.}
+\label{fig:ecalnlayers}
+\end{figure}
+
+The jet energy resolution was found to improve with increasing longitudinal granularity.  This is expected as a more layers in the calorimeter, for the same total thickness, implies greater sampling of the particle shower and so, as the energy resolution obeys Poissonian statistics, an improvement in the resolution.  
+
+\begin{figure}
+\centering
+\subfloat[Silicon active material, 45 GeV Jets.]{\label{fig:ecalsinlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[Scintillator active material, 45 GeV Jets.]{\label{fig:ecalscnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers_91GeV_DiJet_Breakdown.pdf}} \hfill
+\subfloat[Silicon active material, 250 GeV Jets.]{\label{fig:ecalsinlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers_500GeV_DiJet_Breakdown.pdf}}
+\subfloat[Scintillator active material, 250 GeV Jets.]{\label{fig:ecalscnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers_500GeV_DiJet_Breakdown.pdf}}
+\caption[Jet energy resolution breakdown as a function of ECal longitudinal granularity for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.]{Jet energy resolution breakdown as a function of ECal longitudinal granularity for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.}
+\label{fig:ecalnlayers}
+\end{figure}
+
+When the jet energy resolution breakdowns as a function of ECal longitudinal granularity, figure \ref{fig:ecalnlayers}, are examined it becomes clear that the improvement to the resolution with finer longitudinal granularities occurs due to a twofold effect.  There is an improvement to the intrinsic energy resolution with more sampling of particle showers, while finer longitudinal granularity also reduces the impact of confusion.  In this case the reduction in confusion is not localised purely to the reconstruction of photons, as was largely the case for the ECal transverse granularity study, but extends to all reconstructed particles.  This indicates that finer longitudinal granularity in the ECal benefits the reconstruction of hadrons as well as photons and charged particles.
+
+
+
+
+
+
+
 \iffalse
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers.pdf}
-  \caption[Jet energy resolution as a function of the number of layers in the ECal for the silicon tungsten ECal option.]{Jet energy resolution is shown for several fixed energy jets as a function of the number of layers in the ECal for the silicon tungsten ECal option.}
-  \label{optstud:fig:siecallayers}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers.pdf}
-  \caption[Jet energy resolution as a function of the number of layers in the ECal for the scintillator tungsten ECal option.]{Jet energy resolution is shown for several fixed energy jets as a function of the number of layers in the ECal for the scintillator tungsten ECal option.}
-  \label{optstud:fig:scecallayers}
-\end{figure}
 
 \section{Hadronic Calorimeter Optimsation}
 \label{optstud:sec:hcal}
