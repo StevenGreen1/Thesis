@@ -147,6 +147,7 @@ As the W and Z bosons in vector boson scattering are intermediate states in the 
 \fi
 
 \section{Event Generation}
+\label{sec:eventgenerationandbackgrounds}
 
 The event generation software used by the CLIC experiment is Whizard \cite{0708.4233, hep-ph/0102195}. Whizard version 1.97 was used for generating the new samples, while version 1.95 is used for the official CLIC samples. It was recommended by the Whizard authors to use version 1.97 as it contains a unitarisation scheme that ensures the probabilities remain physical up to high energies when considering the effect of anomalous gauge couplings. 
 
@@ -443,21 +444,12 @@ R Parameter & & & \\
 \end{table}
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90.pdf}
-\caption[$\chi^{2}$ Sensitivity contours for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ Sensitivity contours for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.}
-\label{fig:chi2jetalgoideal1400GeV}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4.pdf}
-\caption[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.}
-\label{fig:a4chi2jetalgoideal1400GeV}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5.pdf}
-\caption[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$ for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.}
-\label{fig:a5chi2jetalgoideal1400GeV}
+\centering
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5.pdf}}
+\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.} 
+\label{fig:allchi2jetalgoideal1400GeV}
 \end{figure}
 
 \begin{table}[h!]
@@ -527,16 +519,17 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2 & 13050
 \label{table:crosssectionfull}
 \end{table}
 
-EPA (equivalent photon approximation) processes model the electromagnetic field of a charged particle as virtual photons.  BS (beamstrahlung) processes involve photons that have been radiated from incoming charged particles due to interactions with the electromagnetic field of the opposite beam.   The energy spectrum of the incoming particles for CLIC at the relevant operating energy is used to model the energy of these incoming photons.  Included in this study are photon-photon interactions from photons appearing from the EPA and beamstrahlung processes.
+Equivalent Photon Approximation (EPA) processes model the electromagnetic field of a charged particle as virtual photons.  BS (beamstrahlung) processes involve photons that have been radiated from incoming charged particles due to interactions with the electromagnetic field of the opposite beam.   The energy spectrum of the incoming particles for CLIC at the relevant operating energy is used to model the energy of these incoming photons.  Included in this study are photon-photon interactions from photons appearing from the EPA and beamstrahlung processes.
 
 \subsection{Pre Selection - 1.4 TeV}
+\label{sec:preselection1400GeV}
 The primary selection of the \nu{\nu}qqqq signal will be done using a multivariate analysis, however, in an attempt to veto trivial backgrounds a simple cut based preselection is applied. Cuts are applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is
-shown in figures \ref{fig:preselection1}, \ref{fig:preselection2} and \ref{fig:preselection3}. Based on these distributions the following cuts were applied:
+shown in figure \ref{fig:preselection}. Based on these distributions the following cuts were applied:
 
 \begin{itemize}
 \item Transverse momentum > 100 GeV. This cut is effective due to the presence of missing energy in the form of neutrinos in the signal final state.
 \item Visible mass of the system > 200 GeV. This cut is effective for accounting for the missing energy of the neutrinos in the final state along the longitudinal direction of the detector instead.
-\item Number of isolated leptons = 0. This cut vetos a large number of events with leptons in the final state.
+\item Number of isolated leptons = 0. This cut vetoes a large number of events with leptons in the final state.
 The effect of these preselection cuts can be found in table 1.3. While a large fraction of the signal events are lost through these cuts, particularly the transverse momentum cuts, a much large fraction of background events are removed justifying the cut.
 \end{itemize}
 
@@ -578,26 +571,15 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 32,109,300 & 4,
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}
-\caption[Transverse momentum at 1.4 TeV.]{The transverse momentum of signal and background events at 1.4 TeV.}
-\label{fig:preselection1}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/InvariantMassSystem.pdf}
-\caption[Invariant mass of the visible system at 1.4 TeV.]{The invariant mass of the visible system of signal and background events at 1.4 TeV.}
-\label{fig:preselection2}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}
-\caption[Number of isolated leptons at 1.4 TeV.]{The number of isolated leptons for signal and background events at 1.4 TeV.}
-\label{fig:preselection3}
+\subfloat[Transverse momentum of system.]{\label{fig:preselection1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}}\hfill
+\subfloat[Invariant mass of the visible system.]{\label{fig:preselection2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/InvariantMassSystem.pdf}}
+\subfloat[Number of isolated leptons.]{\label{fig:preselection3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}}
+\caption[Distribution of variables cut on in the preselection at 1.4 TeV.]{Distribution of variables cut on in the preselection at 1.4 TeV.}
+\label{fig:preselection}
 \end{figure}
 
 \subsection{MVA - 1.4 TeV}
+\label{sec:mva1400GeV}
 A multivariate analysis was applied to the data set to refine the selection using the TMVA toolkit \cite{Hocker:2007ht}. The following variables were used for training the TMVA selection.  
 
 \begin{itemize}
@@ -689,6 +671,17 @@ $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 23.4\% & 12.6\% & 
 \subsection{MVA - 3 TeV}
 
 \section{Results}
+\subsection{1.4 TeV}
+The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV is shown in figure \ref{fig:finalresult1400GeV}.  This result shows the sensitivity after the application of preselection and MVA described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV} purposed to remove the included background channels, described in section \ref{sec:eventgenerationandbackgrounds}.  These contours yield the one $\sigma$ confidence limit on the measurement of $\alpha_{4}$ to the range -0.00831, 0.0130 and similarly for the measurement of $\alpha_{5}$ the range is -0.00606, 0.00904.
+
+\begin{figure}
+\centering
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha5.pdf}}
+\caption[$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.]{$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.}
+\label{fig:allfinalresult1400GeV}
+\end{figure}
 
 \iffalse
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$
