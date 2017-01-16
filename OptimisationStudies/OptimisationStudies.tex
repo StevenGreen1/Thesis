@@ -59,7 +59,7 @@ The parameters being optimised in this study are:
 
 \subsection{ECal Transverse Granularity}
 \label{sec:ecalcells}
-For this study a number of different detector models were considered where the transverse granularity in the ECal had been varied about the nominal value of $5 \times 5 \text{mm}^{2}$ square cells.  The granularities considered were $3 \times 3 \text{mm}^{2}$, $5 \times 5 \text{mm}^{2}$, $7 \times 7 \text{mm}^{2}$, $10 \times 10 \text{mm}^{2}$, $15 \times 15 \text{mm}^{2}$ and $20 \times 20 \text{mm}^{2}$ square cells for both the silicon and scintillator active material options.  The jet energy resolution for these detector models as a function of transverse granularity in the ECal is shown in figure \ref{fig:ecalcellsize}.
+For this study a number of different detector models were considered where the transverse granularity in the ECal had been varied about the nominal value of $5 \times 5 \text{mm}^{2}$ square cells.  The granularities considered were $3 \times 3 \text{mm}^{2}$, $5 \times 5 \text{mm}^{2}$, $7 \times 7 \text{mm}^{2}$, $10 \times 10 \text{mm}^{2}$, $15 \times 15 \text{mm}^{2}$ and $20 \times 20 \text{mm}^{2}$ square cells for both the silicon and scintillator active material options.  The jet energy resolution as a function of transverse granularity in the ECal is shown in figure \ref{fig:ecalcellsize}.
 
 \begin{figure}
 \centering
@@ -193,11 +193,24 @@ Absorber Material Thickness & 20 mm \\
 The parameters being optimised in this study are:
 \begin{itemize}
 \item Transverse granularity or cell size.  This is key to successful application of pattern recognition in the particle flow paradigm, but should not change intrinsic energy resolution.   
-\item Longitudinal granularity or cell depth.  This governs the intrinsic energy resolution of a calorimeter.  
-\item Depth of calorimeter.  
-\item Sampling fraction.
-\item Absorber material choice.  This is a choice between steel or tungsten.  
+\item Longitudinal granularity or cell depth.  This governs the intrinsic energy resolution of a calorimeter.
+\item Depth of calorimeter.  This is important in determining the impact of leakage of energy out of the detector.  
+\item Sampling fraction.  This is the ratio of the active medium thickness to the absorber medium thickness.  As sampling calorimetry is based on sampling of particle showers it is expected that this is an important parameter.  However, above a given sampling fraction there should be little difference between performance if showers are sampled at a high enough rate to get a good estimate of the incoing particles energy.
+\item Absorber material choice.  This is a choice between steel or tungsten.  While this does not change the active medium choice it does dictate the growth and propagation of showers and so plays a crucial role in calorimetry.  While tungsten is more expensive than steel for the raw material the larger number of interaction lengths per length scale for tungsten mean that it is possible to create a smaller detector with the same number of interaction lengths within it.  This reduces the size of the solenoid needed to generate the magnetic field and so lowers the price of the detector.  As both of these materials are viable as absorber medium choices it is crucial to determine if either is more advantageous from a physics perspective.  
 \end{itemize}
+
+\subsection{HCal Transverse Granularity}
+\label{sec:hcalcells}
+For this study a number of different detector models were considered where the transverse granularity in the HCal had been varied about the nominal value of $30 \times 30 \text{mm}^{2}$ square cells.  The granularities considered were $10 \times 10 \text{mm}^{2}$, $20 \times 20 \text{mm}^{2}$, $30 \times 30 \text{mm}^{2}$, $40 \times 40 \text{mm}^{2}$, $50 \times 50 \text{mm}^{2}$ and $100 \times 100 \text{mm}^{2}$ square cells.  The jet energy resolution as a function of transverse granularity in the HCal is shown in figure \ref{fig:hcalcellsize}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf}
+\caption[Jet energy resolution as a function of HCal cell size.]{Jet energy resolution as a function of HCal cell size.}
+\label{fig:hcalcellsize}
+\end{figure}
+
+As with the case for the ECal, the jet energy resolution was found to improve with decreasing cell size as smaller cell size lead to better separation of energy deposits from neutral and charged particle showers.  
 
 \iffalse
 
