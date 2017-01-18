@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: KtLPFOsR1p10_Alpha5/
-//=========  (Mon Jan  9 15:03:18 2017) by ROOT version5.34/37
+//=========  (Wed Jan 18 13:58:26 2017) by ROOT version5.34/37
    TCanvas *KtLPFOsR1p10_Alpha5 = new TCanvas("KtLPFOsR1p10_Alpha5", "",0,45,600,600);
    gStyle->SetOptStat(0);
    KtLPFOsR1p10_Alpha5->Range(-0.003024,-1.875,0.002736,16.875);
@@ -22,45 +22,45 @@
    graph->SetLineWidth(2);
    graph->SetMarkerStyle(2);
    graph->SetPoint(0,-0.002,316.8382733);
-   graph->SetPoint(1,-0.0019,273.5239224);
-   graph->SetPoint(2,-0.0018,233.0729586);
-   graph->SetPoint(3,-0.0017,195.8934337);
-   graph->SetPoint(4,-0.0016,162.264176);
-   graph->SetPoint(5,-0.0015,132.3701814);
-   graph->SetPoint(6,-0.0014,106.2596456);
-   graph->SetPoint(7,-0.0013,83.89465576);
-   graph->SetPoint(8,-0.0012,65.12658211);
-   graph->SetPoint(9,-0.0011,49.73373844);
+   graph->SetPoint(1,-0.0019,273.2620279);
+   graph->SetPoint(2,-0.0018,233.3974895);
+   graph->SetPoint(3,-0.0017,197.2218578);
+   graph->SetPoint(4,-0.0016,164.5530847);
+   graph->SetPoint(5,-0.0015,135.3937559);
+   graph->SetPoint(6,-0.0014,109.5832095);
+   graph->SetPoint(7,-0.0013,86.99790925);
+   graph->SetPoint(8,-0.0012,67.5913423);
+   graph->SetPoint(9,-0.0011,51.07803447);
    graph->SetPoint(10,-0.001,37.42076454);
-   graph->SetPoint(11,-0.0009,27.29707691);
-   graph->SetPoint(12,-0.0008,18.82982949);
-   graph->SetPoint(13,-0.0007,12.12695345);
-   graph->SetPoint(14,-0.0006,7.149361063);
-   graph->SetPoint(15,-0.0005,3.743212261);
-   graph->SetPoint(16,-0.0004,1.652709387);
-   graph->SetPoint(17,-0.0003,0.558302274);
-   graph->SetPoint(18,-0.0002,0.1155487831);
-   graph->SetPoint(19,-0.0001,0.00717153985);
+   graph->SetPoint(11,-0.0009,26.34776296);
+   graph->SetPoint(12,-0.0008,17.64115788);
+   graph->SetPoint(13,-0.0007,11.13377399);
+   graph->SetPoint(14,-0.0006,6.428624654);
+   graph->SetPoint(15,-0.0005,3.328094418);
+   graph->SetPoint(16,-0.0004,1.453300628);
+   graph->SetPoint(17,-0.0003,0.4771510995);
+   graph->SetPoint(18,-0.0002,0.1021015647);
+   graph->SetPoint(19,-0.0001,0.00660731186);
    graph->SetPoint(20,6.234162492e-19,0);
-   graph->SetPoint(21,0.0001,0.01150740439);
-   graph->SetPoint(22,0.0002,0.1485612701);
-   graph->SetPoint(23,0.0003,0.6657609544);
-   graph->SetPoint(24,0.0004,1.897993572);
-   graph->SetPoint(25,0.0005,4.202038322);
-   graph->SetPoint(26,0.0006,7.904879903);
-   graph->SetPoint(27,0.0007,13.2635971);
-   graph->SetPoint(28,0.0008,20.42564302);
-   graph->SetPoint(29,0.0009,29.42072433);
+   graph->SetPoint(21,0.0001,0.01133378511);
+   graph->SetPoint(22,0.0002,0.1366455574);
+   graph->SetPoint(23,0.0003,0.5855560574);
+   graph->SetPoint(24,0.0004,1.698413513);
+   graph->SetPoint(25,0.0005,3.780067406);
+   graph->SetPoint(26,0.0006,7.166208007);
+   graph->SetPoint(27,0.0007,12.24155638);
+   graph->SetPoint(28,0.0008,19.19893137);
+   graph->SetPoint(29,0.0009,28.43800924);
    graph->SetPoint(30,0.001,40.12062284);
-   graph->SetPoint(31,0.0011,53.07293448);
-   graph->SetPoint(32,0.0012,69.18768856);
-   graph->SetPoint(33,0.0013,88.75569024);
-   graph->SetPoint(34,0.0014,111.9950818);
-   graph->SetPoint(35,0.0015,139.0465164);
-   graph->SetPoint(36,0.0016,169.9376767);
-   graph->SetPoint(37,0.0017,204.6084007);
-   graph->SetPoint(38,0.0018,242.8683719);
-   graph->SetPoint(39,0.0019,284.4217571);
+   graph->SetPoint(31,0.0011,54.46430044);
+   graph->SetPoint(32,0.0012,71.73175504);
+   graph->SetPoint(33,0.0013,91.95538108);
+   graph->SetPoint(34,0.0014,115.4174449);
+   graph->SetPoint(35,0.0015,142.1579316);
+   graph->SetPoint(36,0.0016,172.2945805);
+   graph->SetPoint(37,0.0017,205.984007);
+   graph->SetPoint(38,0.0018,243.2129434);
+   graph->SetPoint(39,0.0019,284.1676999);
    graph->SetPoint(40,0.002,328.8489112);
    
    TH1F *Graph_Graph18 = new TH1F("Graph_Graph18","",100,-0.0024,0.0024);
@@ -69,7 +69,6 @@
    Graph_Graph18->SetDirectory(0);
    Graph_Graph18->SetStats(0);
    Graph_Graph18->SetLineWidth(2);
-   Graph_Graph18->SetMarkerStyle(20);
    Graph_Graph18->GetXaxis()->SetTitle("#alpha_{5}");
    Graph_Graph18->GetXaxis()->SetRange(0,101);
    Graph_Graph18->GetXaxis()->SetNdivisions(505);
@@ -83,8 +82,8 @@
    Graph_Graph18->GetYaxis()->SetTitleSize(0.05);
    Graph_Graph18->GetYaxis()->SetTitleFont(132);
    Graph_Graph18->GetZaxis()->SetLabelFont(132);
-   Graph_Graph18->GetZaxis()->SetLabelSize(0.03);
-   Graph_Graph18->GetZaxis()->SetTitleSize(0.036);
+   Graph_Graph18->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph18->GetZaxis()->SetTitleSize(0.05);
    Graph_Graph18->GetZaxis()->SetTitleFont(132);
    graph->SetHistogram(Graph_Graph18);
    

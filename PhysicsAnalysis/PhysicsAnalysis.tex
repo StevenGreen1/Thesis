@@ -407,9 +407,10 @@ The jet algorithm used for this analysis is the longitudinally invariant kt algo
 
 A number of cuts \cite{arXiv:1209.4039} are applied to the transverse momenta and the time of the PFOs produced by PandoraPFA to reduce the PFOs into a subset that are believed to originate from the desired interaction in an attempt to veto the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ background events.  Different options for these cuts  give rise to the tight, default and loose selected PFOs that are considered in this optimisation.  
 
-The optimal sensitivity is achieved for either loose selected PFOs with an R parameter of 0.7 or default selected PFOs with an R parameter of 0.9 as can be seen from tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV}.  As a tie breaker between these options the separation power, the fraction of events misidentified as either arising from a WW pair or a ZZ pair, was considered.  Again performance was similar, but there was a slight preference towards the use of selected PFOs and an R parameter of 0.9.  While not used in the primary analysis the separation of samples into WW and ZZ events is important for an extension analysis found in section BLAH.
+\subsection{1.4 TeV Optimal Jet Reconstruction}
+At 1.4 TeV the optimal sensitivity is achieved for either loose selected PFOs with an R parameter of 0.7 or default selected PFOs with an R parameter of 0.9 as can be seen from tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV}.  As a tie breaker between these options the separation power, the fraction of events misidentified as either arising from a WW pair or a ZZ pair, was considered.  Again performance was similar, but there was a slight preference towards the use of selected PFOs and an R parameter of 0.9.  While not used in the primary analysis the separation of samples into WW and ZZ events is important for an extension analysis found in section BLAH.  
 
-The optimal contours can be found in figure \ref{fig:chi2jetalgoideal1400GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV} can be found in figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  
+The optimal contours can be found in figure \ref{fig:chi2jetalgoideal1400GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV} can be found in figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  There are minimal performance differences between the various jet algorithm configurations at 1.4 TeV.
 
 \begin{table}[h!]
 \centering
@@ -452,6 +453,11 @@ R Parameter & & & \\
 \label{fig:allchi2jetalgoideal1400GeV}
 \end{figure}
 
+\subsection{3 TeV Optimal Jet Reconstruction}
+At 3 TeV the optimal sensitivity for the reconstructions considered is achieved for tight selected PFOs with an R parameter of 1.1 as can be seen from tables \ref{table:precisiona4signaljetalgo3000GeV} and \ref{table:precisiona5signaljetalgo3000GeV}.  The optimal contours can be found in figure \ref{fig:chi2jetalgoideal3000GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo3000GeV} and \ref{table:precisiona5signaljetalgo3000GeV} can be found in figures \ref{fig:a4chi2jetalgoideal3000GeV} and \ref{fig:a5chi2jetalgoideal3000GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  
+
+The gains in optimising the jet algorithm at 3 TeV are larger than those found at 1.4 TeV.  The preference for the tight selected PFOs is to be expected as this configuration minimises the effect of beam induced backgrounds, which are more prominent at higher energies.  
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{l l l l}
@@ -459,9 +465,9 @@ R Parameter & & & \\
 PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
 R Parameter & & & \\ 
 \hline
-0.7 & $-0.00051$ $+0.000508$ & $-0.000477$ $+0.000487$ & $-0.000531$ $+0.000539$ \\
-0.9 & $-0.000548$ $+0.000541$ & $-0.000519$ $+0.000505$ & $-0.000550$ $+0.000539$ \\
-1.1 & $-0.000446$ $+0.00045$ & $-0.000481$ $+0.000466$ & $-0.000478$ $+0.000467$ \\
+0.7 & $-0.000529$ $+0.000525$ & $-0.000510$ $+0.000507$ & $-0.000547$ $+0.000555$ \\
+0.9 & $-0.000566$ $+0.000555$ & $-0.000539$ $+0.000520$ & $-0.000568$ $+0.000553$ \\
+1.1 & $-0.000472$ $+0.000472$ & $-0.000508$ $+0.000492$ & $-0.000504$ $+0.000489$ \\
 \hline
 \end{tabular}
 \caption[$1\sigma$ precision on measurement of $\alpha_{4}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{4}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
@@ -475,14 +481,23 @@ R Parameter & & & \\
 PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
 R Parameter & & & \\ 
 \hline
-0.7 & $-0.000375$ $+0.000358$ & $-0.000350$ $+0.000343$ & $-0.000346$ $+0.00034$ \\
-0.9 & $-0.000378$ $+0.000355$ & $-0.000376$ $+0.000351$ & $-0.000379$ $+0.000358$ \\
-1.1 & $-0.000339$ $+0.000328$ & $-0.000358$ $+0.000343$ & $-0.000339$ $+0.000326$ \\
+0.7 & $-0.000392$ $+0.000369$ & $-0.000355$ $+0.000348$ & $-0.000356$ $+0.000348$ \\
+0.9 & $-0.000394$ $+0.000365$ & $-0.000391$ $+0.000361$ & $-0.000395$ $+0.000368$ \\
+1.1 & $-0.000350$ $+0.000337$ & $-0.000374$ $+0.000354$ & $-0.000352$ $+0.000336$ \\
 \hline
 \end{tabular}
 \caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{5}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
 \label{table:precisiona5signaljetalgo3000GeV}
 \end{table}
+
+\begin{figure}
+\centering
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha4.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtSPFOsR1p10_alpha5.pdf}}
+\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.} 
+\label{fig:allchi2jetalgoideal3000GeV}
+\end{figure}
 
 \section{Event Selection}
 As discussed earlier the signal events for this analysis contain the \nu{\nu}qqqq final state. The processes to be considered in this analysis alongside the signal are events that would topologically look similar to signal in the detector. This includes events that could be confused with 4 jet events with missing energy, while excluding those events with large numbers of high energy leptons that could be vetoed easily during the analysis stage. In full the list includes:
