@@ -4,7 +4,7 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,1,25,12000,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,1,25,12000,0,5.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetXaxis()->SetTitle("ECal Cell Size [mm^{2}]");
     pAxesEj->GetXaxis()->SetTitleOffset(0.9);
