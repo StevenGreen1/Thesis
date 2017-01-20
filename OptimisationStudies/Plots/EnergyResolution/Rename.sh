@@ -30,7 +30,7 @@ sed -i -e 's/->GetXaxis()->SetTitleSize(0.036);/->GetXaxis()->SetTitleSize(0.05)
 sed -i -e 's/->GetYaxis()->SetTitleSize(0.036);/->GetYaxis()->SetTitleSize(0.05);/g' $1
 sed -i -e "s/->GetXaxis()->SetTitle(.*);/->GetXaxis()->SetTitle(\"$2\");/g" $1
 sed -i -e "s/->GetYaxis()->SetTitle(.*);/->GetYaxis()->SetTitle(\"Energy Resolution [%]\");/g" $1
-sed -i -e "s/0.7,0.7,1,1/0.7,0.1,0.95,0.95/g" $1:x
+sed -i -e "s/0.7,0.7,1,1/0.7,0.1,0.95,0.95/g" $1
 
  
 
