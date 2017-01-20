@@ -4,9 +4,11 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,12,66,12000,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,12,66,12000,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("Number Of Layers In The HCal");
+    pAxesEj->GetXaxis()->SetTitle("N_{Layers HCal}");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
     pAxesEj->Draw();
 
     float xAxisVairable[8] = {18,24,30,36,42,48,54,60};
@@ -61,7 +63,6 @@
     pTGraphErrors_Jet_Energy_500->Draw("lp,same");
 
     pLegend->AddEntry(pTGraphErrors_Jet_Energy_500, "250 GeV Jets", "lp");
-
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
     pCanvasEj->SaveAs("JER_vs_NumberOfLayersInTheHCal.pdf");

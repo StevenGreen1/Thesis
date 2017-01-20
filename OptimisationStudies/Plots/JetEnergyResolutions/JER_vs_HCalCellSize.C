@@ -31,7 +31,8 @@
 
     float Jet_Energy_500GeV_JERError[6] = {0.0354884,0.0370281,0.0381957,0.0394732,0.039587,0.0449774};
 
-    TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    TLegend *pLegend = new TLegend(0.2, 0.75, 0.8, 0.9);
+    pLegend->SetNColumns(2);
     TGraphErrors *pTGraphErrors_Jet_Energy_91 = new TGraphErrors(6,xAxisVairable,Jet_Energy_91GeV_JER,xAxisVairableError,Jet_Energy_91GeV_JERError);
 
     pTGraphErrors_Jet_Energy_91->SetLineColor(4);
