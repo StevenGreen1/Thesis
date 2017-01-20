@@ -210,7 +210,34 @@ For this study a number of different detector models were considered where the t
 \label{fig:hcalcellsize}
 \end{figure}
 
-As with the case for the ECal, the jet energy resolution was found to improve with decreasing cell size as smaller cell size lead to better separation of energy deposits from neutral and charged particle showers.  
+As with the case for the ECal, the jet energy resolution was found to improve with decreasing cell size as smaller cell size lead to better separation of energy deposits from neutral and charged particle showers.
+
+\begin{figure}
+\centering
+\subfloat[45 GeV Jets.]{\label{fig:hcalcellsize45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalcellsize250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_500GeV_DiJet_Breakdown.pdf}}
+\caption[Jet energy resolution breakdown as a function of HCal transverse granularity for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal transverse granularity for 45 and 250 GeV jets.}
+\label{fig:hcalcellsizebreak}
+\end{figure}
+
+The jet energy resolution breakdowns, shown in figure, \ref{ig:hcalcellsizebreak}, show that the confusion term varies when changing the HCal transverse granularity, but the intrinsic energy resolution does not.  Furthermore, the photon confusion is invariant to changes in HCal transverse granularity, indicating that the observed overall performance changes are due to the effects of confusion arising from energy deposits from charged and neutral hadrons.  Once again for 45 GeV jets the detector performance is dominated by intrinsic energy resolution and so HCal transverse granularity has little effect, while for 250 GeV jets the performance is dominated by confusion and HCal transverse granularity becomes more significant.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L.pdf}
+\caption[Energy resolution as a function of HCal transverse granularity for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal transverse granularity for 50 GeV $\text{K}^{0}_{L}$.}
+\label{fig:hcalcellskaon}
+\end{figure}
+
+The energy resolution of single long lived neutral kaons, $\text{K}^{0}_{L}$, at 50 GeV is considered as a function of transverse granularity in the HCal.  This is shown in figure \ref{fig:hcalcellskaon} and, as expected, the energy resolution of the detector is largely invariant to changes in the transverse granularity in the HCal.  As these $\text{K}^{0}_{L}$ samples may deposit energy in the ECal, this figure represents the intrinsic energy resolution of the ILD detector as a whole and not purely that of the HCal.  However, it expected that the bulk of the energy deposited by these samples occurs within the HCal and so such plots are a useful representation of the HCal performance.  
+
+The transverse granularity of the HCal acts to determine the impact of confusion from charged and neutral hadron energy deposits.  It does not vary the intrinsic energy resolution of the detector, nor does it impact the reconstruction of photons.  As confusion is dominant at high jet energies the HCal transverse granularity gains an increasing role in determining detector performance as the energy in an event increases. 
+
+
+
+
+
+
 
 \iffalse
 
