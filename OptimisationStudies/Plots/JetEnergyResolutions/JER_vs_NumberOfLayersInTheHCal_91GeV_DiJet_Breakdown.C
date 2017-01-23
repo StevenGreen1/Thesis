@@ -39,7 +39,7 @@
 
     float Pandora_Settings_OtherConfusion_JERError[8] = {0.0648896375376,0.0608167554709,0.0599744607909,0.0604484892859,0.0582294048492,0.0576279253217,0.0613063553714,0.057779614421};
 
-    TLegend *pLegend = new TLegend(0.45, 0.7, 0.85, 0.9);
+    TLegend *pLegend = new TLegend(0.45, 0.7, 0.9, 0.9);
     TGraphErrors *pTGraphErrors_Pandora_SettingsDefault = new TGraphErrors(8,xAxisVairable,Pandora_Settings_Default_JER,xAxisVairableError,Pandora_Settings_Default_JERError);
 
     pTGraphErrors_Pandora_SettingsDefault->SetLineColor(1);

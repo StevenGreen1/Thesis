@@ -63,6 +63,7 @@
     pTGraphErrors_Jet_Energy_500->Draw("lp,same");
 
     pLegend->AddEntry(pTGraphErrors_Jet_Energy_500, "250 GeV Jets", "lp");
+
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
     pCanvasEj->SaveAs("JER_vs_NumberOfLayersInTheHCal.pdf");
