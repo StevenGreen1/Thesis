@@ -4,7 +4,7 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,4.004,7.436,12000,1.5,5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,4.004,7.436,12000,0,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetXaxis()->SetTitle("HCal Depth [#lambda_{I}]");
     pAxesEj->GetXaxis()->SetTitleOffset(0.95);
@@ -66,11 +66,11 @@
 
     TGraphErrors *pTGraphErrors_Pandora_SettingsPhotonConfusion = new TGraphErrors(5,xAxisVairable,Pandora_Settings_PhotonConfusion_JER,xAxisVairableError,Pandora_Settings_PhotonConfusion_JERError);
 
-    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetLineColor(kOrange);
-    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetMarkerColor(kOrange);
-//    pTGraphErrors_Pandora_SettingsPhotonConfusion->Draw("lp,same");
+    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetLineColor(kRed);
+    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetMarkerColor(kRed);
+    pTGraphErrors_Pandora_SettingsPhotonConfusion->Draw("lp,same");
 
-//    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsPhotonConfusion, "PhotonConfusion", "lp");
+    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsPhotonConfusion, "PhotonConfusion", "lp");
 
     TGraphErrors *pTGraphErrors_Pandora_SettingsNeutralHadronConfusion = new TGraphErrors(5,xAxisVairable,Pandora_Settings_NeutralHadronConfusion_JER,xAxisVairableError,Pandora_Settings_NeutralHadronConfusion_JERError);
 

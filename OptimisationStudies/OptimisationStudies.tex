@@ -237,7 +237,7 @@ The transverse granularity of the HCal acts to determine the impact of confusion
 \label{sec:hcalnlayers}
 A number of different detector models were examined where the longitudinal granularity of the HCal had been varied about the nominal value.  In all cases the absorber material was steel while the active material was scintillator.  Each HCal configuration had the same total number of nuclear interaction lengths, 5.72 $\lambda_{I}$ in the absorber material and 0.19 $\lambda_{I}$ in the active material, however, the thickness of the layers was varied depending on the total number of layers being considered.  The ratio of the active material layers to the absorber material layers, the sampling fraction, was also kept constant in this study.  A summary of the detector models considered in this study can be found in table \ref{table:nlayershcaloption}.  
 
- \begin{table}[h!]
+\begin{table}[h!]
 \centering
 \begin{tabular}{ l l l }
 \hline
@@ -254,7 +254,7 @@ Number $N_{\text{Layers HCal}}$& Absorber Thickness & Active Thickness \\
 18 & 53.33 & 8.00 \\
 \hline
 \end{tabular}
-\caption[Transverse granularity layout of various HCal models considered in this study.]{Transverse granularity layout of various HCal models considered in this study.}
+\caption[Transverse granularity layout of various HCal models considered.]{Transverse granularity layout of various HCal models considered.}
 \label{table:nlayershcaloption}
 \end{table}
 
@@ -284,19 +284,58 @@ These trends are further explored by considering the breakdown of jet energy res
 \label{fig:hcalnlayers}
 \end{figure}
 
+The change in the intrinsic energy resolution of the HCal when varying the longitudinal granularity is best summarised by looking at the energy resolution of neutral hadrons as in the particle flow paradigm the energy of neutral hadrons is primarily measured in the HCal.  A plot of energy resolution against the number of layers in the HCal for 50 GeV $\text{K}^{0}_{L}$ can be found in figure \ref{fig:hcalnlayers}.  This data shows that a reduction in sampling frequency of a particle shower that accompanies a reduction in the number of readout layers results in a broadening of energy distributions and a degradation in the resolution.  It should again be emphasised that these results are for the full ILD detector model and so include the effect of the $\approx 1 \lambda_{I}$ in the ECal.  
+
+The increasing the HCal longitudinal granularity has a twofold effect on the detector performance: an increase in sampling rate of particle showers and an improvement to the intrinsic energy resolution and a reduction in the confusion arising from associating energy deposits from hadrons.  
+
+\subsection{HCal Depth}
+\label{sec:hcaldepth}
+In this section the total depth of the HCal is varied about the nominal value of 5.72 $\lambda_{I}$ keeping the total number of readout layers fixed at 48, the active material as scintillator, the absorber material as iron and ratio of the thicknesses of the active to absorber layers fixed.  The details of the detector models considered in this study can be found in table \ref{table:hcaldepthoptions}
+
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l }
+\hline
+HCal Depth & Absorber Thickness & Active Thickness \\
+$[\lambda_{I}]$ & [mm] & [mm] \\
+\hline
+4.58 & 16 & 2.4 \\
+5.15 & 18 & 2.7 \\
+5.72 & 20 & 3.0 \\
+6.29 & 22 & 3.3 \\
+6.86 & 24 & 3.6 \\
+\hline
+\end{tabular}
+\caption[Depth and layout of various HCal models considered.]{Depth and layout of various HCal models considered.}
+\label{table:hcaldepthoptions}
+\end{table}
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf}
+\caption[Jet energy resolution as a function of the number of nuclear interaction lengths in the HCal.]{Jet energy resolution is shown for several fixed energy jets as a function of the number of nuclear interaction lengths in the HCal.}
+\label{fig:hcaldepth}
+\end{figure}
+
+The jet energy resolution as a function of the total depth in the HCal is shown in figure \ref{fig:hcaldepth}.  There is little variation in the detector performance as a function of the total depth of the HCal for all but the highest energy jets.  At high jet energies there is a slight degradation in detector performance as the total thickness of the HCal is reduced.  
+
+\begin{figure}
+\centering
+\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal_500GeV_DiJet_Breakdown.pdf}}
+\caption[Jet energy resolution breakdown as a function of nuclear interaction lengths in the HCal for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of nuclear interaction lengths in the HCal for 45 and 250 GeV jets.}
+\label{fig:hcaldepthbreak}
+\end{figure}
+
+Examining the breakdown of these trends at high energies, shown in figure \ref{fig:hcaldepthbreak}, it becomes clear that the degradation in performance is due to confusion in associating energy deposits from hadrons.  This is somewhat unexpected as it would be neutral to assume any improvements with a deeper HCal would be due to a reduction in the impact of leakage out of the back of the detector.  This may be partially masked by the definition of RMS90 (PLOT?), however, it is clear that leakage is not a significant problem across the depth of HCals considered here for a typical event at these energies.  
+
+INTRINSIC ENERGY RESOLUTION FOR HIGH ENERGIES?
 HERE
-
-
 
 
 \iffalse
 \label{optstud:sec:hcal:nlayers}
 
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal.pdf}
-  \caption[Jet energy resolution as a function of the number of layers in the HCal for the scintillator steel HCal option.]{Jet energy resolution is shown for several fixed energy jets as a function of the number of layers in the HCal for the scintillator steel HCal option.}
-  \label{optstud:fig:hcalnlayers}
-\end{figure}
 
 \begin{figure}
   \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf}
