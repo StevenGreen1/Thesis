@@ -5,11 +5,7 @@
 {Homer Simpson}
 
 \section{Background}
-A process that will show sensitivity to the $\alpha_{4}$ and $\alpha_{5}$ anomalous gauge couplings in the CLIC experiment is vector boson scattering. There are several channels that will be affected by these anomalous couplings at CLIC and these are summarised in figures \ref{fig:vbsw}, \ref{fig:vbsz}, \ ref{fig:vbswz} and \ref{fig:vbszw} where $q = \text{u, d, s, b, c}$ and $l = \text{e, } \mu \text{, } \tau \text{, } \nu_{e} \text{, } \nu_{\nu} \text{, } \nu_{\tau}$.
-
-To determine whether an event is sensitive to $\alpha_{4}$ and $\alpha_{5}$ it will be necessary to determine whether the visible final states have been produced from the decay of W and Z bosons. A key discriminator in this procedure will be the invariant mass of the W and Z candidates. In light of this the hadronic decays of the W and Z bosons are only considered as the leptonic decays may contain neutrinos.
-
-As the W and Z bosons in vector boson scattering are intermediate states in the Feynman diagrams, they will not be directly observed in the detector and will instead contribute to processes with the final states containing possible decay products of the bosons $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq. In theory all processes will be affected by non zero $\alpha_{4}$ and $\alpha_{5}$, however, the effects may be extremely small as they contribute to very high order expansions of the Hamiltonian. Event generation software does not calculate the expansions of the Hamiltonian to all orders, but instead truncates the expansion to leave the dominant terms. In the case of anomalous couplings this corresponds to certain final state cross sections being invariant to changes in $\alpha_{4}$ and $\alpha_{5}$.
+A potential source of beyond the standard model physics that could be studied at the CLIC experiment is that of the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.  The theoretical basis for these couplings is described in section THEORY REF.  CLIC would show sensitivity to these couplings through vector boson scattering processes that are summarised in figures \ref{fig:vbsw}, \ref{fig:vbsz}, \ref{fig:vbswz} and \ref{fig:vbszw}.  An analysis of the sensitivity of CLIC to this processes is presented in the following chapter.
 
 \iffalse
 
@@ -41,7 +37,7 @@ As the W and Z bosons in vector boson scattering are intermediate states in the 
 };
 \end{feynman}
 \end{tikzpicture}
-\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of W bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of W bosons.}
+\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of W bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of W bosons.  $q = \text{u, d, s, b, c}$ and $l = \text{e, } \mu \text{, } \tau \text{, } \nu_{e} \text{, } \nu_{\nu} \text{, } \nu_{\tau}$}
 \label{fig:vbsw}
 \end{figure}
 
@@ -73,7 +69,7 @@ As the W and Z bosons in vector boson scattering are intermediate states in the 
 };
 \end{feynman}
 \end{tikzpicture}
-\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.}
+\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.  $q = \text{u, d, s, b, c}$ and $l = \text{e, } \mu \text{, } \tau \text{, } \nu_{e} \text{, } \nu_{\nu} \text{, } \nu_{\tau}$}
 \label{fig:vbsz}
 \end{figure}
 
@@ -105,7 +101,7 @@ As the W and Z bosons in vector boson scattering are intermediate states in the 
 };
 \end{feynman}
 \end{tikzpicture}
-\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of a W and Z boson.}
+\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of a W and Z boson.  $q = \text{u, d, s, b, c}$ and $l = \text{e, } \mu \text{, } \tau \text{, } \nu_{e} \text{, } \nu_{\nu} \text{, } \nu_{\tau}$}
 \label{fig:vbswz}
 \end{figure}
 
@@ -137,58 +133,35 @@ As the W and Z bosons in vector boson scattering are intermediate states in the 
 };
 \end{feynman}
 \end{tikzpicture}
-\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of a W and Z boson.}
+\caption[Feynman diagram of vector boson scattering at CLIC involving radiation of Z bosons.]{Feynman diagram of vector boson scattering at CLIC involving radiation of a W and Z boson.  $q = \text{u, d, s, b, c}$ and $l = \text{e, } \mu \text{, } \tau \text{, } \nu_{e} \text{, } \nu_{\nu} \text{, } \nu_{\tau}$}
 \label{fig:vbszw}
 \end{figure}
 
 \fi
 
-\section{Event Generation}
+\section{Generation}
 \label{sec:eventgenerationandbackgrounds}
+The event generation software used by the CLIC experiment is Whizard \cite{0708.4233, hep-ph/0102195}.  Whizard version 1.97 was used for generating the new samples, while version 1.95 is used for the official CLIC samples. It was recommended by the Whizard authors to use version 1.97 as it contains a unitarisation scheme that ensures the probabilities remain physical up to high energies when considering the effect of anomalous gauge couplings.  
 
-The event generation software used by the CLIC experiment is Whizard \cite{0708.4233, hep-ph/0102195}. Whizard version 1.97 was used for generating the new samples, while version 1.95 is used for the official CLIC samples. It was recommended by the Whizard authors to use version 1.97 as it contains a unitarisation scheme that ensures the probabilities remain physical up to high energies when considering the effect of anomalous gauge couplings. 
+The hadronic channels are the dominant decay modes of the W and the Z boson, with branching fractions of the order of 70\% for both (REFERENCE PDG), and as the vector boson scattering is the desired signal channel, the focus of this analysis will be upon the hadronic decays of the W and Z.  The vector boson scattering dominated signal final states containing hadronic decay products for the bosons are $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  
 
-It was necessary to specify the anomalous coupling model in Whizard to study their impact, however, this did enforce a unit CKM matrix. In the context of vector boson scattering this will restrict the decays of the W  to d$\bar{\text{u}}$ and s$\bar{\text{c}}$, the W+ to u$\bar{\text{d}}$ and c$\bar{\text{s}}$ and the Z to u$\bar{\text{u}}$ , d$\bar{\text{d}}$, s$\bar{\text{s}}$, c$\bar{\text{c}}$, b$\bar{\text{b}}$.  This has little overall impact on the study as the cross section calculation using this model was, within the errors quoted by Whizard, identical to the standard model CKM matrix.  The only aspect of the analysis affected by this modification is the flavour tagging of jets, however, this procedure while applied in this analysis is not used for event selection as it was found to be of negligible use in separating signal from background in subsequent chapter.
-
-To find out which states show sensitivity to the anomalous couplings cross section calculations were made using different values of $\alpha_{4}$ and $\alpha_{5}$ for relevant processes involving the hadronic decays of the W and Z bosons from vector boson scattering.  These results can be found in table \ref{table:crosssectionsensitivity1400} for 1.4 TeV samples and \ref{table:crosssectionsensitivity3000} for 3 TeV samples.  The only final states showing sensitivity to the anomalous couplings are \nu{\nu}qqqq, l{\nu}qqqq and llqqqq, which correspond to the final states from the Feynman diagrams shown above in figures \ref{fig:vbsw}, \ref{fig:vbsz}, \ ref{fig:vbswz} and \ref{fig:vbszw}.  As this analysis focuses on the hadronic decays of the bosons involved in vector boson scattering the final states involving leptonic decays of the bosons e.g. \nu{\nu}llqq were not included in this cross check. These leptonic dominated final states were also removed from the background samples used in this study as isolated lepton finding would largely veto all such events from selection.
-
-This cross check was also applied to the background samples that are to be included in this analysis. It was found that the cross sections was invariant to changes in $\alpha_{4}$ and $\alpha_{5}$ for the following processes:
+\subsection{Cross Section Sensitivity}
+To determine which final states are sensitive to $\alpha_{4}$ and $\alpha_{5}$ a comparison was made between the cross section using the standard model values of $\alpha_{4}$ and $\alpha_{5}$, i.e. 0, and the same calculation using non-zero values of these couplings.  This comparison was performed on all final states that would be relevant  either as signal or background processes, for an analysis involving the purely hadronic decay channels of a vector boson scattering process.  In full the states that were tested are:
 
 \begin{itemize}
-\item $\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$
-\item $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$
-\item $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$
-\item $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$
-\item $\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$
-\item $\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$
-\item $\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$
-\item $\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$
-\item $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$
-\item $\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$
-\item $\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$
-\item $\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$
-\item $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$
-\item $\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$
-\item $\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$
-\item $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ 
-\item $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$  
+\item Vector boson scattering signal final states that are expected to show sensitivity to the anomalous couplings: $\text{e}^{+}\text{e}^{-} \rightarrow \nu\nu\text{qqqq}$, $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ and $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$
+\item Four jet final states arising from $\text{e}^{+}\text{e}^{-}$ interactions: $\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$.
+\item Two jet final states arising from $\text{e}^{+}\text{e}^{-}$ interactions: $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$, $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$, $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ and $\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$.
+\item Four jet final states arising from the interactions of either $\text{e}^{+}$ or $\text{e}^{-}$ with a beamstrahlung photon: $\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$, $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$, $\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ and $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$.
+\item Four jet final states arising from the interactions of either $\text{e}^{+}$ or $\text{e}^{-}$ with the electromagnetic field of the opposing beam particle.  These cross sections are calculated using equivalent photon approximation (EPA), which represents the electromagnetic field of the opposing beam particle as a series of photon and so the final states appear as interactions of $\text{e}^{+}$ or $\text{e}^{-}$ with photons: $\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$, $\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$, $\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ and $\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$.
+\item Four jet final states arising from the interaction of the electromagnetic fields of opposing beam particles using the EPA approximation: $\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$.
+\item Four jet final states arising from the interaction of the electromagnetic field of either $\text{e}^{+}$ or $\text{e}^{-}$ using the EPA approximation with a beamstrahlung photon: $\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ or $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$.
+\item Four jet final states arising from the interaction of two beamstrahlung photons: $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$.
 \end{itemize}
 
-The sensitivity of an individual event to the anomalous gauge couplings is determined through an event weight. This weight corresponds to the ratio using non-zero $\alpha_{4}$ and $\alpha_{5}$ and using zero $\alpha_{4}$ and $\alpha_{5}$ of the square of the matrix element used in the cross section calculation. This reweighting procedure has many advantages over the alternative procedure of generating new samples with fixed $\alpha_{4}$ and $\alpha_{5}$ most notably the absence of systematic errors that may appear in new event generation. Each event picks up different weights based on $\alpha_{4}$ and $\alpha_{5}$ as the matrix element contributions from the anomalous couplings depend upon the kinematics of the final state, which is unique for each event. Examples of the event weights as a function of $\alpha_{4}$ and $\alpha_{5}$ for selected events is shown in figure \ref{fig:eventweights1400raw}.
+Note: In the above list q = u, d, s, c and b, l = e, $\mu$, $\tau$ and $\nu$ = $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.
 
-\begin{figure}
-\centering
-\subfloat[]{\label{fig:weight1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
-\subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}} \hfill
-\subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
-\subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
-\caption[Event weights from Whizard for 1.4TeV \nu{\nu}qqqq final state events.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for 1.4TeV \nu{\nu}qqqq final state events.}
-\label{fig:eventweights1400raw}
-\end{figure}
-
-The cross check shows that the most sensitive channel to the anomalous gauge couplings is the \nu{\nu}qqqq indicating that the best sensitivity measurement should focus upon this channel, which is the aim of this analysis.
-
-The CLIC experiment has a repository of simulated and reconstructed samples that can be used for physics analyses, however, for the relevant final states there is no way to calculate the event weights for these samples. Therefore, new samples for which reweighting is possible were created and processed through the CLIC reconstruction chain. New samples were created only for the \nu{\nu}qqqq final state as the l{\nu}qqqq and llqqqq final states have a significantly lower sensitivity. As will be shown in subsequent chapters, the application of an isolated lepton finder in the selection processor will largely veto the l{\nu}qqqq and llqqqq final states, therefore, the absence of weight information for these final states will not significantly affect the sensitivity measurement based on the \nu{\nu}qqqq final state.
+The cross section was found to differ when using non-zero values for the anomalous couplings in comparison to the standard model prediction for the vector boson scattering signal final states $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  The cross section comparisons for these final states can be found in table \ref{table:crosssectionsensitivity1400} and table \ref{table:crosssectionsensitivity3000} for 1.4 and 3 TeV samples respectively.  In reality, non-zero anomalous couplings would change the cross sections of all processes considered, however, the sensitivity would only arise from high order terms in the Lagrangian.  Such terms would not be dominant in determining the cross section and so are omitted from the generator making certain final states appear invariant to changes in the anomalous couplings.
 
 \begin{table}[h!]
 \centering
@@ -218,6 +191,45 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 169.7 & 161.7 & -4.9 & 16
 \caption{Cross section for selected processes for given value of $\alpha_{4}$ and $\alpha_{5}$ at 3 TeV.}
 \label{table:crosssectionsensitivity3000}
 \end{table}
+
+The cross section calculations show that the most sensitive final state to the anomalous gauge couplings is \nu{\nu}qqqq, therefore, this analysis will focus solely upon this final state.  Furthermore, as the l{\nu}qqqq final state has a much reduced sensitivity in comparison to the \nu{\nu}qqqq state and as the llqqqq can be easily vetoed from the analysis, as will be shown in subsequent chapters, it is only necessary to consider the sensitivity of the \nu{\nu}qqqq final state.  For the aforementioned reasons the l{\nu}qqqq and llqqqq final states will be treated as backgrounds that are invariant to changes in the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$.  
+
+\subsection{Event Weights}
+The sensitivity of an individual event to the anomalous gauge couplings is determined through an event weight. This weight is given by the ratio of the squares of the matrix element used in the cross section calculation, one matrix element using non-zero values of $\alpha_{4}$ and $\alpha_{5}$ and the other matrix element using the standard model values of $\alpha_{4}$ and $\alpha_{5}$, i.e. 0.  The weight varies as a function of $\alpha_{4}$ and $\alpha_{5}$ as well as varying on an event by event basis as the kinematics of the final state changes.  Examples of the event weights as a function of $\alpha_{4}$ and $\alpha_{5}$ for selected events is shown in figure \ref{fig:eventweights1400raw} for 1.4 TeV events.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:weight1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
+\subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}} \hfill
+\subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
+\subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
+\caption[Event weights from Whizard for 1.4TeV \nu{\nu}qqqq final state events.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for 1.4TeV \nu{\nu}qqqq final state events.}
+\label{fig:eventweights1400raw}
+\end{figure}
+
+This reweighting procedure has many advantages over the alternative of generating new samples with fixed $\alpha_{4}$ and $\alpha_{5}$, notably the absence of systematic errors arising from new event generation, simulation and reconstruction.  
+
+\subsection{Validation of Samples}
+\label{sec:validationofsamples}
+The CLIC experiment has a repository of simulated and reconstructed samples that can be used for physics analyses, however, it is not possible to calculate the event weights for these samples as the raw Whizard format event files are missing.  Therefore, a new $\text{e}^{+}\text{e}^{-} \rightarrow \nu\nu\text{qqqq}$ sample was generated with the relevant files to make reweighting as a function of $\alpha_{4}$ and $\alpha_{5}$ possible.  An identical setup to that used for the production of official CLIC samples was used for the event generation, detector simulation and reconstruction.  Mimicking this production chain made it possible to use the official CLIC samples for the background final states used in this analysis.  
+
+Several reconstructed level distributions were compared to the official CLIC samples and were found to be comparable to each other. A selection of these distributions is shown in figure \ref{fig:cliccomp}.
+
+In order to determine the event weights it was necessary to use the anomalous gauge coupling model in Whizard, which in turn enforces a unit CKM matrix.  In the context of vector boson scattering this will restrict the hadronic decays of the $\text{W}^{-}$ boson to d$\bar{\text{u}}$ and s$\bar{\text{c}}$, the $\text{W}^{+}$ boson to u$\bar{\text{d}}$ and c$\bar{\text{s}}$ and the Z boson to u$\bar{\text{u}}$ , d$\bar{\text{d}}$, s$\bar{\text{s}}$, c$\bar{\text{c}}$ and b$\bar{\text{b}}$.  In contrast the official CLIC samples use a non-unit CKM matrix, which gives rise to alternative hadronic decay modes for the W and Z bosons.  When comparing the unit CKM matrix and the non-unit CKM $\nu\nu\text{qqqq}$ final state samples it was found that there were negligible differences in a variety of reconstructed level distributions, such as those found in figure \ref{fig:cliccomp}.  Furthermore, as flavour tagging information is not used in this analysis this difference was deemed insignificant.  
+
+\begin{figure}
+\centering
+\subfloat[Visible Mass]{\label{fig:cliccomp1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/InvariantMassSystem.pdf}}
+\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event.]{\label{fig:cliccomp2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/CosThetaMissing.pdf}} 
+\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state and 1.4 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 TeV.}
+\label{fig:cliccomp}
+\end{figure}
+
+Make 3 TeV Comparison <-
+
+
+
+
 
 \section{Simulation and Reconstruction}
 The CLID\_ILD detector \cite{arXiv:1006.3396} was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj} a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry to these samples and to produce PFOs that are used in this analysis.  
@@ -251,17 +263,6 @@ The PFO choices described in section \ref{sec:optimisationjetalgo} are applied t
 \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CDRPlots/BackgroundAngleCut.pdf}
 \caption[]{Angular distribution of number of particles for beam induced backgrounds for CLIC at $\sqrt{s} = 3$ TeV.  Taken from CLIC CDR.}
 \label{fig:backgroundangle}
-\end{figure}
-
-\section{Validation of New Samples}
-An identical setup to that used for the official CLIC sample was used for the event generation and reconstruction. Several reconstructed level distributions were compared to the official CLIC samples and all were found to be comparably to each other. A selection of these distributions is shown in figure \ref{fig:cliccomp}.
-
-\begin{figure}
-\centering
-\subfloat[Visible Mass]{\label{fig:cliccomp1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/InvariantMassSystem.pdf}}
-\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event.]{\label{fig:cliccomp2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/CosThetaMissing.pdf}} 
-\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state.}
-\label{fig:cliccomp}
 \end{figure}
 
 \section{Analysis Processor and Jet Pairing} \label{sec:jetpairing}
