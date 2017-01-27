@@ -146,7 +146,8 @@ The event generation software used by the CLIC experiment is Whizard \cite{0708.
 The hadronic channels are the dominant decay modes of the W and the Z boson, with branching fractions of the order of 70\% for both (REFERENCE PDG), and as the vector boson scattering is the desired signal channel, the focus of this analysis will be upon the hadronic decays of the W and Z.  The vector boson scattering dominated signal final states containing hadronic decay products for the bosons are $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  
 
 \subsection{Cross Section Sensitivity}
-To determine which final states are sensitive to $\alpha_{4}$ and $\alpha_{5}$ a comparison was made between the cross section using the standard model values of $\alpha_{4}$ and $\alpha_{5}$, i.e. 0, and the same calculation using non-zero values of these couplings.  This comparison was performed on all final states that would be relevant  either as signal or background processes, for an analysis involving the purely hadronic decay channels of a vector boson scattering process.  In full the states that were tested are:
+\label{sec:crosssectioncheck}
+To determine which final states are sensitive to $\alpha_{4}$ and $\alpha_{5}$ a comparison was made between the cross section using the standard model values of $\alpha_{4}$ and $\alpha_{5}$, i.e. 0, and the same calculation using non-zero values of these couplings.  This comparison was performed on all final states that would be relevant either as signal or background processes, for an analysis involving the purely hadronic decay channels of a vector boson scattering process.  In full the states that were tested are:
 
 \begin{itemize}
 \item Vector boson scattering signal final states that are expected to show sensitivity to the anomalous couplings: $\text{e}^{+}\text{e}^{-} \rightarrow \nu\nu\text{qqqq}$, $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ and $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$
@@ -221,43 +222,48 @@ In order to determine the event weights it was necessary to use the anomalous ga
 \centering
 \subfloat[Visible Mass]{\label{fig:cliccomp1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/InvariantMassSystem.pdf}}
 \subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event.]{\label{fig:cliccomp2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/CosThetaMissing.pdf}} 
-\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state and 1.4 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 TeV.}
+\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state and 1.4 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 TeV.  Both samples have been normalised to the correct luminosity for CLIC running at 1.4 TeV.}
 \label{fig:cliccomp}
 \end{figure}
 
-Make 3 TeV Comparison <-
+Make 3 TeV Comparison <- Making the plots now
 
 
 
 
 
 \section{Simulation and Reconstruction}
-The CLID\_ILD detector \cite{arXiv:1006.3396} was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj} a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry to these samples and to produce PFOs that are used in this analysis.  
+For all samples considered in this analysis, the CLID\_ILD detector \cite{arXiv:1006.3396} was used.  The detector was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry in this reconstruction.
  
-Using the CLIC\_ILD detector for this analysis provides access to the background samples created by the CLIC collaboration. The CLIC\_ILD detector has a 60 layer scintillator-tugsten HCal in comparison to the 48 layer HCal found in the default ILD detector. The increase in thickness of the detector for the CLIC experiment is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. Practically speaking the ILD and CLIC\_ILD detectors are otherwise identical.
+The CLIC\_ILD is a variant of the ILD detector described in section REFERENCE.  The only significant difference between the modles is that CLIC\_ILD has a 60 layer scintillator-tugsten HCal in comparison to the 48 layers found in the default ILD detector.  The thicknesses of the layers in the HCal models are identical, so the extra layers correspond to an increase in the total thickness of the HCal.  This is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. 
 
 \subsection{Experimental Conditions at CLIC}
-The CLIC experiment will operate in a unique environment in comparison to previous generations of lepton colliders and these must be properly accounted for in any analysis to get a measure of the true physics potential CLIC has to offer.  The following aspects of the CLIC experiment present the largest challenges to the physics potential for the CLIC experiment:
+The CLIC experiment will operate in a unique environment in comparison to previous generations of lepton colliders and this must be properly accounted for to get an accourate measure of the physics potential that CLIC has to offer.  The following aspects of the CLIC experiment present the largest challenges to the physics potential for the CLIC experiment:
 
 \begin{itemize}
-\item The high bunch charge density.  The small beam size at the impact point produces very large electromagnetic fields that interact with the particles from the opposite beam causing them to radiate photons.  This effect is known as beamstrahlung and it acts to reduce the collision energy of the $\text{e}^{+}\text{e}^{-}$ pairs.   
-\item Beam related backgrounds.  Beamstrahlung photons can further interact through a number of different mechanisms each of which contribute to different background processes that must be accounted for.  Dominant processes that cannot be easily vetoed include incoherent pair production of $\text{e}^{+}\text{e}^{-}$ and $\gamma\gamma \rightarrow \text{Hadron}$.  
-\item Fast readout technology is crucial.  The CLIC bunch train consists of 312 bunches with a repetition rate of 50 Hz.  Each bunch is separated by 0.5ns.  As this is such a small separation it will be necessary to integrate over multiple bunch crossing when reading out the detectors.  This places tight constraints on all detector electrical readout speeds and time resolutions.   
+\item The high bunch charge density.  The small beam size at the impact point produces very large electromagnetic fields.  These fields can interact with the opposite beam particles causing them to radiate photons in an effect known as beamstrahlung.  Beamstrahlung acts to reduce the collision energy of the $\text{e}^{+}\text{e}^{-}$ pairs.   
+\item Beam related backgrounds.  Beamstrahlung photons can subsequently interact to produce background events that must be accounted for.  Dominant backgrounds of this form that cannot be easily vetoed in the reconstruction include incoherent pair production of $\text{e}^{+}\text{e}^{-}$ and $\gamma\gamma \rightarrow \text{Hadron}$.  
+\item Fast readout technology is crucial.  The CLIC bunch train consists of 312 bunches with a repetition rate of 50 Hz.  Each bunch is separated by 0.5ns, therefore, it will be necessary to integrate over multiple bunch crossing when reading out the detectors.  This places tight constraints on all detector electrical readout speeds and time resolutions.   
 \end{itemize}
 
-\subsection{Beam-Related Backgrounds at CLIC}
+\subsubsection{Beam-Related Backgrounds at CLIC}
 The primary sources of background for the CLIC experiment are as follows:
 \begin{itemize}
-\item $\text{e}^{+}\text{e}^{-}$ pair creation from the interaction of a beamstrahlung photons with the electromagnetic field from the opposite beam.  The different mechanisms for pair creation are coherent, incoherent and trident pairs are pair production.  Coherent pair production occurs when a real beamstrahlung photon interacts with the electromagnetic field from the opposite beam, trident pair production occurs when a virtual beamstrahlung photon interacts with the electromagnetic field from the opposite beam and incoherent pair production occur when a real or virtual beamstrahlung photon interacts with the individual particles in the opposite beam.  
+\item $\text{e}^{+}\text{e}^{-}$ pair creation from the interaction of a beamstrahlung photons with the opposing beam.  The different mechanisms for pair creation are as follows:
+\begin{itemize}
+\item \textbf{Coherent pair production}.  This mechanism involves the interaction of a real beamstrahlung photon with the electromagnetic field from the opposing beam.
+\item \textbf{Trident pair production}.  This mechanism involves the interaction of a virtual beamstrahlung photon with the electromagnetic field from the opposing beam.
+\item \textbf{Incoherent pair production}.  This mechanism involves the interaction of a real or virtual beamstrahlung photon with the individual particles in the opposing beam.
+\end{itemize}
 \item $\gamma\gamma \rightarrow \text{Hadron}$ from the interaction of real or virtual beamstrahlung photons with each other.  Example Feynman diagrams for such processes is shown in figure ??. 
-\item Beam halo muons that arise from inelastic collisions of the beam particles during collimation.
+\item Beam halo muons that arise from interactions of the beam particles during collimation.  The dominant mechanisms producing beam halo muons are photon conversions into muon pairs ($\gamma \text{e}^{-} \rightarrow \mu^{+}\mu^{-}\text{e}^{-}$) and annihilation of positrons with atomic $\text{e}^{-}$ into muon pairs ($\text{e}^{+}\text{e}^{-} \rightarrow \mu^{+}\mu^{-}$) \cite{Pilicer:2015ijy}.
 \end{itemize}
 
-Each of these has to be properly addressed to get a true measure of the physics potential at CLIC.  Coherent and trident pair production is not a dominant source of background as they are produced at low transverse momenta, as figure \ref{fig:backgroundangle} shows, and a simple cut could veto these backgrounds.  This is not the case for incoherent pair production of $\text{e}^{+}\text{e}^{-}$, which are dominant in the forward regions of the detector, and $\gamma\gamma \rightarrow \text{Hadron}$, which are dominant in the tracker and the calorimeters (with the exception of low radii in the calorimeter endcaps) \cite{Linssen:2012hp, Sailer:2012mfa}.  Beam halo muons prove not to be a dominant source of background either as, thanks to the unique topology of a muon passing through a detector it is possible to isolate them at PFO construction and remove them from further processing.  A preliminary version of a processor designed for this purpose was implemented within PandoraPFA \cite{Linssen:2012hp}.  
+Each of these has to be properly addressed to get a true measure of the physics potential at CLIC.  Coherent and trident pair production is not a dominant source of background as they are produced at low transverse momenta, as figure \ref{fig:backgroundangle} shows, and a simple cut would veto these backgrounds.  This is not the case for incoherent pair production of $\text{e}^{+}\text{e}^{-}$, which are dominant in the forward regions of the detector, and $\gamma\gamma \rightarrow \text{Hadron}$, which are dominant in the tracker and the calorimeters (with the exception of low radii in the calorimeter endcaps) \cite{Linssen:2012hp, Sailer:2012mfa}.  Beam halo muons are not a major source of background either as they can be easily removed during the reconstruction due to the clear signal they create in the detector.  An algorithm was developed within the PandoraPFA framework for this purpose and it was found to be highly effective at removing the beam halo muons background \cite{Linssen:2012hp}.  
 
-As $\gamma\gamma \rightarrow \text{Hadron}$ events deposit more energy than incoherent pair production \cite{Linssen:2012hp}, they are the most dominant background to consider.  They are included into this analysis by overlaying $\gamma\gamma \rightarrow \text{Hadron}$ events onto the signal events.  For each event the exact number of events overlaid is drawn from a Poisson distribution with a mean of 3.2(1.3) events per bunch crossing at 3(1.4) TeV.  While incoherent pairs are still a source of background they will produce a second order effect in comparison to the $\gamma\gamma \rightarrow \text{Hadron}$ events.
+$\gamma\gamma \rightarrow \text{Hadron}$ events are the most dominant source of background to consider at CLIC as these events deposit more energy throughout the detector than incoherent pair production of $\text{e}^{+}\text{e}^{-}$ events \cite{Linssen:2012hp}.  The effect of the $\gamma\gamma \rightarrow \text{Hadron}$ background is incorporated into this analysis by overlaying $\gamma\gamma \rightarrow \text{Hadron}$ events onto the event samples used in this analysis.  The overlaid backgrounds are added prior to reconstruction so that their effect on the reconstruction is fully accounted for.  For a given event the exact number of background events overlaid is drawn from a Poisson distribution with a mean of 3.2 (1.3) events per bunch crossing at 3 (1.4) TeV.  While incoherent pairs are still a source of background they will produce a second order effect in comparison to the $\gamma\gamma \rightarrow \text{Hadron}$ events.
 
-The PFO choices described in section \ref{sec:optimisationjetalgo} are applied to veto PFOs that arise from the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ events.
+The PFO choices described in section \ref{sec:optimisationjetalgo} are applied to veto the effect of PFOs that arise from the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ events.
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CDRPlots/BackgroundAngleCut.pdf}
@@ -265,27 +271,29 @@ The PFO choices described in section \ref{sec:optimisationjetalgo} are applied t
 \label{fig:backgroundangle}
 \end{figure}
 
-\section{Analysis Processor and Jet Pairing} \label{sec:jetpairing}
+\section{Analysis}
+The focus of this section is to describe the post reconstruction procedure applied to the signal and background events, described in \ref{sec:crosssectioncheck}, to extract the relevant information needed for this sensitivity study. 
 
-For both signal and background events the MarlinFastJet processor, a wrapper for the FastJet \cite{Cacciari:2011ma} process, is used to cluster the events into 4 jets. These are  jets assumed to be from the hadronic decays of the bosons involved in the vector scattering process.  These jets are paired up such that on the assumption that the correct pair arises when the invariant masses of the two pairs are closest together. The longitudinally invariant kt jet algorithm in exclusive modes is used for the jet clustering.
-This jet algorithm proceeds as follows:
+\subsection{Jet Pairing} 
+\label{sec:jetpairing}
+The MarlinFastJet processor, a wrapper for the FastJet \cite{Cacciari:2011ma} processor, is used to cluster the signal and background events into four jets.  In the case of the signal final state, $\nu\nu$qqqq, it is assumed these four jets have arisen from the hadronic decays of the bosons involved in the vector scattering process.  These jets are paired up on the assumption that the correct pairing is achieved when the invariant masses of the two pairs are closest together. 
 
+The longitudinally invariant $k_{t}$ jet algorithm in exclusive mode was used for the jet clustering.  In contrast to the inclusive mode, the exclusive mode allows the user to request a fixed number of jets in the output from MarlinFastJet.  The longitudinally invariant $k_{t}$ algorithm proceeds as follows:
 \begin{itemize}
-\item For each pair of particles i and j work out the kt distance and beam distance $d_{iB} = p_{t}^{2}$.
+\item For each pair of particles, i and j, the $k_{t}$ distance, $d_{ij}$, and beam distance, $d_{iB} = p_{t}^{2}$, are calculated.
 \begin{equation}
 d_{ij} = \text{min}(p_{ti}^{2}, p_{tj}^{2}){\Delta}R^{2}_{ij}/R^{2}
 \end{equation}
-where ${\Delta}R^{2}_{ij} = (y_{i} - y_{j})^2 + (\phi_{i} - \phi_{j})^2$.  $p_{t}$ is the transverse momentum of the particle with respect to the beam axis, $y_{i}$ is the rapidity of particle i and $\phi_{i}$ is the azimuthal angle of particle i. $R$ is a configurable parameter that typically is of the order of 1.
-\item Find the minimum distance $d\text{min}$ of all the $k_{t}$ and beam distances. If the minima occurs for a $k_{t}$ distance, merge particles i and j, summing their 4-momenta in the energy combination scheme (also configurable). If the beam distance is the minimum declare particle i to be apart of the "beam" jet and remove it from the list of particles and not included in the final output jets.
-\item Repeat until no particles are left or the requested number of jets have been created (or optionally apply a minimum $d_{cut}$ where clustering stops, but here the event is forced into 4 jets).
+where ${\Delta}R^{2}_{ij} = (y_{i} - y_{j})^2 + (\phi_{i} - \phi_{j})^2$, $p_{t}$ is the transverse momentum of the particle with respect to the beam axis, $y_{i}$ is the rapidity of particle i and $\phi_{i}$ is the azimuthal angle of particle i. $R$ is a configurable parameter that typically is of the order of 1.
+\item The minimum distance, $d_\text{min}$, of all the $k_{t}$ and beam distances is found.  If the minimum occurs for a $k_{t}$ distance, merge particles i and j, summing their 4-momenta in the energy combination scheme.  If the beam distance is the minimum, declare particle i to be apart of the "beam" jet.  Remove this particle from the list of particles and do not included in the final jet output.
+\item Repeat until the requested number of jets have been created, or inclusive mode no particles are left in the event.
 \end{itemize}
 
-An inclusive mode is available, but not applied here as the finally number of jets in the output varies and events need to be clustered into 4 jets for this analysis.  Two other clustering modes were considered, but were found to be inappropriate for this analysis as is shown in figure \ref{fig:eventweights1400raw}. They were:
+Two other clustering algorithms were considered, but, as figure \ref{fig:eventweights1400raw} shows, were found to be inappropriate for the experimental conditions at CLIC.  These alternative algorithm choices are applied in the same manor as the longitudinally invariant $k_{t}$ algorithm, however, they differ in their for the $k_{t}$ distance, $d_{ij}$, and beam distance, $d_{iB}$.
 
-\begin{itemize}
-\item The kt algorithm for e+e  colliders (or Durham algorithm) where $d_{ij} = 2\text{min}(E_{i}^{2}, E_{j}^{2})(1-cos\theta_{ij})$ and $d_{iB}$ is not used. $\theta_{ij}$ is the opening angle of the particles. In the collinear limit this corresponds to the relative transverse momentum of the particles. Unlike the other algorithm choices this is not invariant to boosts along the beam direction as in theory for e+e  colliders the collision should occur with no net 3 momentum, unlike hadron colliders where the events have a net 3-momentum. However, the presence of ISR and beam effects makes this algorithm inappropriate for CLIC. The major failure of this algorithm choice is the absence of diB as this associates too many background particles to jets when applied at CLIC.
-\item The Cambridge/Aachen jet algorithm where $d_{ij} = {\Delta}R_{ij}^{2}/R^2$ and $d_{iB} = 1$. This algorithm gave poor performance as it is based entirely on spacial information and does not account for the transverse momentum or energy of the particles being grouped. In essence this is a cone clustering algorithm with a cone radius defined through ${\Delta}R_{ij} = R$, which even for large R was found to throw away too much energy in the event to be useful for this analysis. This algorithm can be useful for events with small jets that are highly boosted, but in this case the jets are too large to be successfully merged.
-\end{itemize}
+The first alternative jet algorithm considered was the $k_{t}$ algorithm for $\text{e}^{+}\text{e}^{-}$ colliders (or Durham algorithm) where $d_{ij} = 2\text{min}(E_{i}^{2}, E_{j}^{2})(1-cos\theta_{ij})$ and $d_{iB}$ is not used.  $\theta_{ij}$ is the opening angle of particles i and j meaning that in the collinear limit $d_{ij}$ corresponds to the relative transverse momenta of the particles.  The major failure of this algorithm when applied to CLIC is the absence of $d_{iB}$, which leads to many beam related background particles being associated to jets.  As figure \ref{fig:eventweights1400raw} shows, the invariant mass of the paired jets, which is expected to be centred around the W and Z boson masses, is much larger than expected, due to the presence of the beam related backgrounds in the jets.  Also this algorithm is not invariant to boosts along the beam direction making it inappropriate to use at CLIC as the beam induced backgrounds modify the nominal collision kinematics.  
+
+The second alternative jet algortihm considered was the Cambridge/Aachen jet algorithm where $d_{ij} = {\Delta}R_{ij}^{2}/R^2$ and $d_{iB} = 1$.  This algorithm gave poor performance as does not account for the transverse momentum or energy of the particles being clustered. In essence, this is a cone clustering algorithm with a cone radius defined through ${\Delta}R_{ij} = R$, which even for large R was found to discard too much energy in the event to be useful for this analysis.  This can be seen in figure \ref{fig:eventweights1400raw} as the invariant mass of the paired jets is much lower than expected.  This algorithm is useful for events with highly boosted jets, but at CLIC the jets are too disperse.
 
 \begin{figure}
 \centering
@@ -295,9 +303,24 @@ An inclusive mode is available, but not applied here as the finally number of je
 \label{fig:eventweights1400raw}
 \end{figure}
 
-An isolated lepton finder is included in the analysis chain in an attempt to reject background events containing leptons. The LCFIPlus \cite{Suehara:2015ura} processor is also run on these events once clustered into jets to produce a value for the B and C tag likelihood for a jet.  
+\subsection{Isolated Lepton Finding} 
+\label{sec:isolatedleptonfinding}
+
+\textcolor{red}{Unsure of details needed in this section.}
+
+An isolated lepton finder is included in the analysis chain in an attempt to reject background events containing leptons. 
+
+\subsection{Flavour Tagging} 
+\label{sec:flavourtagging}
+
+\textcolor{red}{Don't actually use in this analysis.  I assume I skip this section.}
+The LCFIPlus \cite{Suehara:2015ura} processor is also run on these events once clustered into jets to produce a value for the B and C tag likelihood for a jet.  
 
 This information is available for background rejection rather than contributing to the sensitivity of the event to the anomalous couplings. The LCFIPlus vertex processor was trained using events of $\text{e}^{+}\text{e}^{-}\rightarrow \text{Z}\nu\nu \rightarrow \text{q}\bar{\text{q}}\nu\nu$ for q = u,d,s,c,b.
+
+\subsection{Analysis Processor} 
+\label{sec:analysisprocessor}
+\textcolor{red}{Best way to show this?}
 
 Finally, an analysis processor is run, which calculates a number of variables used downstream in the analysis. Included in these are:
 \begin{itemize}
