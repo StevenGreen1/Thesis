@@ -195,7 +195,8 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 169.7 & 161.7 & -4.9 & 16
 
 The cross section calculations show that the most sensitive final state to the anomalous gauge couplings is \nu{\nu}qqqq, therefore, this analysis will focus solely upon this final state.  Furthermore, as the l{\nu}qqqq final state has a much reduced sensitivity in comparison to the \nu{\nu}qqqq state and as the llqqqq can be easily vetoed from the analysis, as will be shown in subsequent chapters, it is only necessary to consider the sensitivity of the \nu{\nu}qqqq final state.  For the aforementioned reasons the l{\nu}qqqq and llqqqq final states will be treated as backgrounds that are invariant to changes in the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$.  
 
-\subsection{Event Weights}
+\subsection{Anomalous Gauge Coupling Event Weights}
+\label{sec:eventweights}
 The sensitivity of an individual event to the anomalous gauge couplings is determined through an event weight. This weight is given by the ratio of the squares of the matrix element used in the cross section calculation, one matrix element using non-zero values of $\alpha_{4}$ and $\alpha_{5}$ and the other matrix element using the standard model values of $\alpha_{4}$ and $\alpha_{5}$, i.e. 0.  The weight varies as a function of $\alpha_{4}$ and $\alpha_{5}$ as well as varying on an event by event basis as the kinematics of the final state changes.  Examples of the event weights as a function of $\alpha_{4}$ and $\alpha_{5}$ for selected events is shown in figure \ref{fig:eventweights1400raw} for 1.4 TeV events.
 
 \begin{figure}
@@ -268,6 +269,7 @@ The PFO choices described in section \ref{sec:optimisationjetalgo} are applied t
 \end{figure}
 
 \section{Analysis}
+\label{sec:analysis}
 The focus of this section is to describe the post reconstruction procedure applied to the signal and background events, described in \ref{sec:crosssectioncheck}, to extract the relevant information needed for this sensitivity study. 
 
 \subsection{Jet Pairing} 
@@ -285,18 +287,18 @@ where ${\Delta}R^{2}_{ij} = (y_{i} - y_{j})^2 + (\phi_{i} - \phi_{j})^2$, $p_{t}
 \item Repeat until the requested number of jets have been created, or inclusive mode no particles are left in the event.
 \end{itemize}
 
-Two other clustering algorithms were considered, but, as figure \ref{fig:eventweights1400raw} shows, were found to be inappropriate for the experimental conditions at CLIC.  These alternative algorithm choices are applied in the same manor as the longitudinally invariant $k_{t}$ algorithm, however, they differ in their for the $k_{t}$ distance, $d_{ij}$, and beam distance, $d_{iB}$.
+Two other clustering algorithms were considered, but, as figure \ref{fig:invariantmassalgoveto} shows, were found to be inappropriate for the experimental conditions at CLIC.  These alternative algorithm choices are applied in the same manor as the longitudinally invariant $k_{t}$ algorithm, however, they differ in their for the $k_{t}$ distance, $d_{ij}$, and beam distance, $d_{iB}$.
 
-The first alternative jet algorithm considered was the $k_{t}$ algorithm for $\text{e}^{+}\text{e}^{-}$ colliders (or Durham algorithm) where $d_{ij} = 2\text{min}(E_{i}^{2}, E_{j}^{2})(1-cos\theta_{ij})$ and $d_{iB}$ is not used.  $\theta_{ij}$ is the opening angle of particles i and j meaning that in the collinear limit $d_{ij}$ corresponds to the relative transverse momenta of the particles.  The major failure of this algorithm when applied to CLIC is the absence of $d_{iB}$, which leads to many beam related background particles being associated to jets.  As figure \ref{fig:eventweights1400raw} shows, the invariant mass of the paired jets, which is expected to be centred around the W and Z boson masses, is much larger than expected, due to the presence of the beam related backgrounds in the jets.  Also this algorithm is not invariant to boosts along the beam direction making it inappropriate to use at CLIC as the beam induced backgrounds modify the nominal collision kinematics.  
+The first alternative jet algorithm considered was the $k_{t}$ algorithm for $\text{e}^{+}\text{e}^{-}$ colliders (or Durham algorithm) where $d_{ij} = 2\text{min}(E_{i}^{2}, E_{j}^{2})(1-cos\theta_{ij})$ and $d_{iB}$ is not used.  $\theta_{ij}$ is the opening angle of particles i and j meaning that in the collinear limit $d_{ij}$ corresponds to the relative transverse momenta of the particles.  The major failure of this algorithm when applied to CLIC is the absence of $d_{iB}$, which leads to many beam related background particles being associated to jets.  As figure \ref{fig:invariantmassalgoveto} shows, the invariant mass of the paired jets, which is expected to be centred around the W and Z boson masses, is much larger than expected, due to the presence of the beam related backgrounds in the jets.  Also this algorithm is not invariant to boosts along the beam direction making it inappropriate to use at CLIC as the beam induced backgrounds modify the nominal collision kinematics.  
 
-The second alternative jet algortihm considered was the Cambridge/Aachen jet algorithm where $d_{ij} = {\Delta}R_{ij}^{2}/R^2$ and $d_{iB} = 1$.  This algorithm gave poor performance as does not account for the transverse momentum or energy of the particles being clustered. In essence, this is a cone clustering algorithm with a cone radius defined through ${\Delta}R_{ij} = R$, which even for large R was found to discard too much energy in the event to be useful for this analysis.  This can be seen in figure \ref{fig:eventweights1400raw} as the invariant mass of the paired jets is much lower than expected.  This algorithm is useful for events with highly boosted jets, but at CLIC the jets are too disperse.
+The second alternative jet algortihm considered was the Cambridge/Aachen jet algorithm where $d_{ij} = {\Delta}R_{ij}^{2}/R^2$ and $d_{iB} = 1$.  This algorithm gave poor performance as does not account for the transverse momentum or energy of the particles being clustered. In essence, this is a cone clustering algorithm with a cone radius defined through ${\Delta}R_{ij} = R$, which even for large R was found to discard too much energy in the event to be useful for this analysis.  This can be seen in figure \ref{fig:invariantmassalgoveto} as the invariant mass of the paired jets is much lower than expected.  This algorithm is useful for events with highly boosted jets, but at CLIC the jets are too disperse for this algorithm to be successfully applied.
 
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:invariantmassalgoveto1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto.pdf}}
 \subfloat[]{\label{fig:invariantmassalgoveto3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto3000GeV.pdf}}
 \caption[Reconstructed invariant masses for different choices of jet algorithm for 1.4 TeV and 3 TeV \nu{\nu}qqqq events.]{Reconstructed masses for different choices of jet algorithm for 1.4 TeV and 3 TeV \nu{\nu}qqqq events. These masses arise by forcing the reconstructed events into 4 jets and then pairing up the jets into pairs such that the reconstructed invariant masses of the pairs are closest to each other. These samples should be dominated by vector boson scattering involving pairs of W bosons and so it is expected that a peak at the W boson true mass should be observed. As this does not occur for the Cambridge-Aachen algorithm or the ee\_kt algorithm they were deemed unsuitable for this analysis at both 1.4 and 3 TeV. In the case of the kt algorithm and the ee\_kt algorithm an R parameter of 0.7 was used.}
-\label{fig:eventweights1400raw}
+\label{fig:invariantmassalgoveto}
 \end{figure}
 
 \subsection{Isolated Lepton Finding} 
@@ -367,15 +369,13 @@ Alongside these variables, for the \nu{\nu}qqqq final state a number of Monte-Ca
 \item Invariant mass of boson pair using MC pairing and reconstructed jet energy.
 \end{itemize}
 
-\section{Methodology for Fitting}
-It is necessary to discuss the fitting procedure in this analysis as the optimisation of the jet algorithms relies on this methodology. In this section only the signal events are considered to determine the underlying sensitivity of the CLIC detector to the anomalous couplings. This decision was made to save analysis of the large number of background samples in the optimisation of the jet reconstruction algorithms, while still optimising the algorithm on the physics of interest.
+\section{Fitting Technique}
+The metric used to determine the optimal jet algorithm for this analysis is the sensitivity of the pure signal final state, $\nu\nu\text{qqqq}$, to the anomalous gauge couplings.  Pure signal was used in the optimisation to avoid the need to process the large number of background files for each iteration of the jet algorithm considered, while still basing the optimisation on the physics of interest.  The focus of this section in the description of the fitting technique that will be used for both jet algorithm optimisation and in the final sensitivity study.
 
 \subsection{Choice of Fitting Distribution}
-The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$ where $\theta^{*}_{Jets}$ is the angle between the two jets produced from the hadronic decay of the W/Z boson in the rest frame of that boson.  The distribution of $\text{cos}\theta^{*}_{Jets}$ proved to be sensitive to the anomalous gauge couplings as shown in figure \ref{fig:costhetastarjets}.
+The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$.  For a given event, the jet clustering and pairing proceeds as described in section \ref{sec:analysis} and leads to the event being clustered into four jets, which are then paired up to give two candidate bosons.  $\theta^{*}_{Jets}$ is defined as the opening angle of the jets in the rest frame of these candidate bosons.  The distribution of $\text{cos}\theta^{*}_{Jets}$ proved to be highly sensitive to the anomalous gauge couplings as shown in figure \ref{fig:costhetastarjets}.
 
-Another distribution considered for the sensitivity study was  $\text{cos}\theta^{*}_{Bosons}$ where $\theta^{*}_{Bosons}$ is the angle between the two bosons produced in vector boson scattering in the rest frame of the boson pair.  This distribution was found to be less sensitive to the anomalous gauge couplings than $\text{cos}\theta^{*}_{Jets}$, which can be seen when comparing figures \ref{fig:costhetastarjets} and \ref{fig:costhetastarbosons}, and so was not considered for the rest of this study.  Furthermore, it was found that a two dimensional $\chi^{2}$ fit produced by combining $\text{cos}\theta^{*}_{Jets}$ and $\text{cos}\theta^{*}_{Bosons}$ did not improve the sensitivity significantly in comparison to $\text{cos}\theta^{*}_{Jets}$.
-
-The $\text{cos}\theta^{*}_{Jets}$ variable was binned in histograms of 10 bins before begin converted into a value of $\chi^{2}$.  This binning was selected to maximise the number of bins in the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
+The distribution of $\text{cos}\theta^{*}_{Bosons}$ was also considered for this sensitivity study, however, it proved to be less sensitive than $\text{cos}\theta^{*}_{Jets}$.  This can be seen when comparing figures \ref{fig:costhetastarjets} and \ref{fig:costhetastarbosons}.  $\theta^{*}_{Bosons}$ is defined as the opening angle between the two candidate bosons two bosons in the rest frame of the candidate boson pair.  Furthermore, it was found that the $\chi^{2}$ distribution formed from the two dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ against $\text{cos}\theta^{*}_{Bosons}$ did not significantly benefit the sensitivity in comparison using the one dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ and therefore was not considered for this analysis.
 
 \begin{figure}
 \subfloat[1.4 TeV Events]{\label{fig:costhetastarjets1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_1400GeV.pdf}}
@@ -391,10 +391,15 @@ The $\text{cos}\theta^{*}_{Jets}$ variable was binned in histograms of 10 bins b
 \label{fig:costhetastarbosons}
 \end{figure}
 
-\subsection{Event Weight Impact on Fitting Distribution}
-At 1.4 TeV event weights were produced from Whizard stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07 as shown in figure \ref{fig:eventweights1400raw}, however, to produce a smooth $\chi^{2}$ contour much finer sampling is needed.  While it is feasible to generate new event weights in Whizard for any pair of $\alpha_{4}$ and $\alpha_{5}$ it is time consuming making it impractical for this analysis.  To overcome this difficulty bicubic interpolation is applied between these points to allow for the extract of event weights anywhere within the range -0.05 to 0.05.  As figure \ref{fig:eventweights1400interpolated} shows the interpolated surface proves to be a good fit to the data produced from the generator in that it is smooth and continuous.  
 
-Similarly at 3 TeV the same procedure was used but stepping occurs in steps of 0.001 ranging from -0.007 to 0.007 in both $\alpha_{4}$ and $\alpha_{5}$.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at this energy.
+
+
+\subsection{Application Of Anomalous Gauge Coupling Event Weights}
+As described in section \ref{sec:eventweights}, event weights are used to determine the sensitivity of CLIC to the anomalous gauge couplings.  These event weights are extracted on an event by event basis for the signal final state $\nu\nu\text{qqqq}$ from the generator software Whizard.  To achieve a smooth $\chi^{2}$ distribution in the final result a fine sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the $\alpha_{4}$ and $\alpha_{5}$ space is needed, however, extracting the weights on an event by event basis to populate this distribution is highly CPU intensive.  While this is feasible, it is highly impractical and so in an attempt to resolve this issue, an interpolation scheme was applied to determine the event weights within a sampled region of the $\alpha_{4}$ and $\alpha_{5}$ space.  This allows for an infinite sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the space of $\alpha_{4}$ and $\alpha_{5}$ within the sampled region, without having to call the generator an infinite number of times.
+
+A bicubic interpolation scheme, cubic interpolation along two dimensions, was applied to the event weights that were extracted from the generator.  This procedure is best illustrated by showing the interpolated surface superimposed with the raw event weights from the generator, which is shown for several $\nu\nu\text{qqqq}$ events at 1.4 TeV in figure \ref{fig:eventweights1400interpolated} (ADD 3 TEV).  This interpolation scheme produces a smooth and continuous surface that is sufficiently accurate for the fitting procedure applied in this analysis.  
+
+For reference at 1.4 TeV event weights were produced from Whizard stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07, as shown in figure \ref{fig:eventweights1400raw}, while at 3 TeC event weights were samples in steps of 0.00025 from -0.0045 to 0.0045.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at this energy.
 
 \begin{figure}
 \centering
@@ -406,7 +411,11 @@ Similarly at 3 TeV the same procedure was used but stepping occurs in steps of 0
 \label{fig:eventweights1400interpolated}
 \end{figure}
 
+
+
 \subsection{Analysis of Fitting Distribution}
+The $\text{cos}\theta^{*}_{Jets}$ variable was binned in a histograms containing 10 bins before begin converted into a value of $\chi^{2}$.  This binning was selected to maximise the number of bins in the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
+
 Using these interpolated surfaces for the event weights, distribution of $\text{cos}\theta^{*}_{Jets}$ were produced stepping across $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.0001 at 1.4 TeV and 0.00001 at 3 TeV.  Each distribution was converted into a value of $\chi^{2}$ using the following formula:
 
 \begin{equation}
