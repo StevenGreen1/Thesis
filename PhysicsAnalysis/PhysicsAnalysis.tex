@@ -220,17 +220,13 @@ In order to determine the event weights it was necessary to use the anomalous ga
 
 \begin{figure}
 \centering
-\subfloat[Visible Mass]{\label{fig:cliccomp1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/InvariantMassSystem.pdf}}
-\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event.]{\label{fig:cliccomp2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/CosThetaMissing.pdf}} 
-\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state and 1.4 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 TeV.  Both samples have been normalised to the correct luminosity for CLIC running at 1.4 TeV.}
+\subfloat[Visible Mass, 1.4 TeV]{\label{fig:cliccomp1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/InvariantMassSystem.pdf}}
+\subfloat[Visible Mass, 3 TeV]{\label{fig:cliccomp3000_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/3000GeV/InvariantMassSystem.pdf}} \hfill
+\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event, 1.4 TeV.]{\label{fig:cliccomp1400_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/CosThetaMissing.pdf}} 
+\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event, 3 TeV.]{\label{fig:cliccomp3000_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/CosThetaMissing.pdf}} 
+\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 and 3 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 and 3 TeV.  Both samples have been normalised to the correct luminosity for CLIC running at the relevant energies TeV.}
 \label{fig:cliccomp}
 \end{figure}
-
-Make 3 TeV Comparison <- Making the plots now
-
-
-
-
 
 \section{Simulation and Reconstruction}
 For all samples considered in this analysis, the CLID\_ILD detector \cite{arXiv:1006.3396} was used.  The detector was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry in this reconstruction.
@@ -658,23 +654,23 @@ Final State & Raw Event Numbers & Post MVA Selection Numbers \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 37,050 & 14,770 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 165,600 & 6,159 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 93,150 & 80 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1,867,631 & 1,264 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 1,181,218 & 3,286 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 6,463,852 & 6,262 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 4,088,143 & 234 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 6,010,154 & 1,016 \\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 430,643 & 20 \\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1,741,050 & 42 \\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 430,344 & 19 \\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1,734,450 & 44 \\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 48,893 & 3,552 \\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 205,326 & 18,540 \\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 48,893 & 3,652 \\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 204,581 & 18,770 \\
-$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 1,129,459 & 68 \\
-$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 6,052,200 & 55 \\
-$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 6,027,979 & 0 \\
-$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 32,109,300 & 0 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1,868,000 & 1,264 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 1,181,000 & 3,286 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 6,464,000 & 6,262 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 4,088,000 & 234 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 6,011,000 & 1,016 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 430,300 & 20 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1,306,000 & 42 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 430,300 & 19 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1,301,000 & 44 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 48,890 & 3,552 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 154,000 & 18,540 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 48,890 & 3,652 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 153,400 & 18,770 \\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 1,129,000 & 68 \\
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 4,539,000 & 55 \\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4,521,000 & 0 \\
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 20,550,000 & 0 \\
 \hline
 \end{tabular}
 \caption[Number of events passing the MVA selection at 1.4TeV.]{Number of events passing the MVA selection at 1.4TeV.  Event numbers are normalised to the correct luminosity for CLIC at 1.4 TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
@@ -699,7 +695,7 @@ $\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 18.2\% & 7.5\% & 
 $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 23.4\% & 12.2\% & 18,770 \\
 \hline
 \end{tabular}
-\caption[Selection summary at 1.4TeV.]{Selection summary at 1.4TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\caption[Selection summary at 1.4TeV.]{Selection summary at 1.4TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Channels omitted from this table have less than 1,500 events in the post MVA selection.}
 \label{table:selectionsummary1400GeV}
 \end{table}
 
@@ -713,26 +709,26 @@ Final State & Raw Event  & $p_{T}$ > 100 GeV & $p_{T}$ > 100 GeV \& & $p_{T}$ > 
 & Numbers & & $M_{\text{Vis}}$ > 200 GeV & $M_{\text{Vis}}$ > 200 GeV \&\\ 
 & & & & $N_{\text{Isolated Leptons}}$ = 0\\ 
 \hline
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 143,000  &  106,600  &  99,390  &  99,130 \\ 
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 213,200  &  129,800  &  127,300  &  82,880 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ &338,600  &  32,750  &  31,010  &  23,550 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1,093,000  &  40,180  &  37,360  &  37,300 \\ 
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 2,634,000  &  1,333,000  &  380,100  &  379,500 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 11,120,000  &  4,240,000  &  2,479,000  &  1,836,000 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 6,639,000  &  131,400  &  84,980  &  54,780 \\ 
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ &5,897,000  &  79,440  &  66,790  &  66,730 \\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 575,600  &  57,920  &  54,640  &  34,480 \\ 
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 2,004,000  &  99,930  &  90,750  &  83,440 \\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 575,600  &  57,990  &  54,290  &  34,190 \\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 2,002,000  &  100,300  &  90,830  &  83,960 \\   
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 108,400  &  63,780  &  60,660  &  46,380 \\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 414,700  &  233,800  &  215,600  &  213,600 \\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 108,400  &  64,230  &  61,130  &  46,720 \\ 
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 414,400  &  236,400  &  219,000  &  217,000 \\
-$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 805,400  &  54,010  &  48,720  &  37,730 \\ 
-$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 3,828,000  &  150,800  &  131,600  &  114,500 \\ 
-$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3,825,000  &  150,600  &  133,600  &  116,900 \\ 
-$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 18,010,000  &  123,500  &  115,400  &  105,000 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 143,000 & 106,600 & 99,390 & 99,130 \\ 
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 213,200 & 129,800 & 127,300 & 82,880 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ &338,600 & 32,750 & 31,010 & 23,550 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1,093,000 & 40,180 & 37,360 & 37,300 \\ 
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 2,634,000 & 1,333,000 & 380,100 & 379,500 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 11,120,000 & 4,240,000 & 2,479,000 & 1,836,000 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 6,639,000 & 131,400 & 84,980 & 54,780 \\ 
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ &5,897,000 & 79,440 & 66,790 & 66,730 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 575,600 & 57,920 & 54,640 & 34,480 \\ 
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 2,004,000 & 99,930 & 90,750 & 83,440 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 575,600 & 57,990 & 54,290 & 34,190 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 2,002,000 & 100,300 & 90,830 & 83,960 \\   
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 108,400 & 63,780 & 60,660 & 46,380 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 414,700 & 233,800 & 215,600 & 213,600 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 108,400 & 64,230 & 61,130 & 46,720 \\ 
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 414,400 & 236,400 & 219,000 & 217,000 \\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 805,400 & 54,010 & 48,720 & 37,730 \\ 
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 3,828,000 & 150,800 & 131,600 & 114,500 \\ 
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3,825,000 & 150,600 & 133,600 & 116,900 \\ 
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 18,010,000 & 123,500 & 115,400 & 105,000 \\
 \hline
 \end{tabular}
 \caption[Number of events passing the various cuts applied in the preselection at 3 TeV.]{Number of events passing the various cuts applied in the preselection at 3 TeV.  Event numbers are normalised to the correct luminosity for CLIC at 3 TeV.  $p_{T}$ is the transverse momentum of the event,  $M_{\text{Vis}}$ is the visible mass and $N_{\text{Isolated Leptons}}$ is the number of isolated leptons in the event.  In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
@@ -749,6 +745,62 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 18,010,000  &  
 \end{figure}
 
 \subsection{MVA - 3 TeV}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l}
+\hline
+Final State & Raw Event Numbers & Post MVA Selection Numbers \\ 
+\hline
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 143,000 & 64,750 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 213,200 & 23,310 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 338,600 & 2,409 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1,093,000 & 3,069 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 2,634,000 & 19,040 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 11,120,000 & 27,910 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 6,639,000 & 786 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 5,897,000 & 1,335 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 575,600 & 2,860 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 2,004,000 & 8,352 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 575,600 & 3,063 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 2,002,000 & 8,090 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 108,400 & 17,950 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 414,700 & 108,000 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 108,400 & 17,980 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 414,400 & 109,700 \\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 805,400 & 3,058 \\
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 3,828,000 & 9,812 \\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3,825,000 & 8,880 \\
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 18,010,000 & 2,213 \\
+\hline
+\end{tabular}
+\caption[Number of events passing the MVA selection at 3 TeV.]{Number of events passing the MVA selection at 3 TeV.  Event numbers are normalised to the correct luminosity for CLIC at 3 TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\label{table:postmvanumbers3000GeV}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l}
+\hline
+Final State & $\epsilon_{\text{presel}}$ & $\epsilon_{\text{BDT}}$ & $N_{\text{BDT}}$ \\ 
+\hline
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 69.4\% & 45.3\% & 64.750 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 38.9\% & 10.9\% & 23,310 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 14.4\% & 0.7\% & 19,040 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 16.5\% & 0.3\% & 27,910 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 4.1\% & 0.4\% & 8,352 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 4.2\% & 0.4\% & 8,090 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 42.8\% & 16.6\% & 17,950 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 51.6\% & 26.0\% & 108,000 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 43.1\% & 16.6\% & 17,980 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 52.3\% & 26.5\% & 109,700 \\
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 3.0\% & 0.3\% & 9,812 \\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3.1\% & 0.2\% & 8,880 \\
+\hline
+\end{tabular}
+\caption[Selection summary at 3 TeV.]{Selection summary at 3 TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Channels omitted from this table have less than 6,000 events in the post MVA selection.}
+\label{table:selectionsummary3000GeV}
+\end{table}
 
 \section{Results}
 \subsection{1.4 TeV}
