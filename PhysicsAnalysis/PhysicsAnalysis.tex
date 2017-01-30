@@ -560,7 +560,7 @@ Equivalent Photon Approximation (EPA) processes model the electromagnetic field 
 \subsection{Pre Selection - 1.4 TeV}
 \label{sec:preselection1400GeV}
 The primary selection of the \nu{\nu}qqqq signal will be done using a multivariate analysis, however, in an attempt to veto trivial backgrounds a simple cut based preselection is applied. Cuts are applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is
-shown in figure \ref{fig:preselection}. Based on these distributions the following cuts were applied:
+shown in figure \ref{fig:preselection1400}. Based on these distributions the following cuts were applied:
 
 \begin{itemize}
 \item Transverse momentum > 100 GeV. This cut is effective due to the presence of missing energy in the form of neutrinos in the signal final state.
@@ -607,11 +607,11 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 20,550,000 & 2,
 
 \begin{figure}
 \centering
-\subfloat[Transverse momentum of system.]{\label{fig:preselection1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}}\hfill
-\subfloat[Invariant mass of the visible system.]{\label{fig:preselection2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/InvariantMassSystem.pdf}}
-\subfloat[Number of isolated leptons.]{\label{fig:preselection3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}}
+\subfloat[Transverse momentum of system.]{\label{fig:preselection1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}}\hfill
+\subfloat[Invariant mass of the visible system.]{\label{fig:preselection1400_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/InvariantMassSystem.pdf}}
+\subfloat[Number of isolated leptons.]{\label{fig:preselection1400_3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}}
 \caption[Distribution of variables cut on in the preselection at 1.4 TeV.]{Distribution of variables cut on in the preselection at 1.4 TeV.}
-\label{fig:preselection}
+\label{fig:preselection1400}
 \end{figure}
 
 \subsection{MVA - 1.4 TeV}
@@ -704,6 +704,50 @@ $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 23.4\% & 12.2\% & 
 \end{table}
 
 \subsection{Pre Selection - 3 TeV}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l l}
+\hline
+Final State & Raw Event  & $p_{T}$ > 100 GeV & $p_{T}$ > 100 GeV \& & $p_{T}$ > 100 GeV \& \\ 
+& Numbers & & $M_{\text{Vis}}$ > 200 GeV & $M_{\text{Vis}}$ > 200 GeV \&\\ 
+& & & & $N_{\text{Isolated Leptons}}$ = 0\\ 
+\hline
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 143,000  &  106,600  &  99,390  &  99,130 \\ 
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 213,200  &  129,800  &  127,300  &  82,880 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ &338,600  &  32,750  &  31,010  &  23,550 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1,093,000  &  40,180  &  37,360  &  37,300 \\ 
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 2,634,000  &  1,333,000  &  380,100  &  379,500 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 11,120,000  &  4,240,000  &  2,479,000  &  1,836,000 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 6,639,000  &  131,400  &  84,980  &  54,780 \\ 
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ &5,897,000  &  79,440  &  66,790  &  66,730 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 575,600  &  57,920  &  54,640  &  34,480 \\ 
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 2,004,000  &  99,930  &  90,750  &  83,440 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 575,600  &  57,990  &  54,290  &  34,190 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 2,002,000  &  100,300  &  90,830  &  83,960 \\   
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 108,400  &  63,780  &  60,660  &  46,380 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 414,700  &  233,800  &  215,600  &  213,600 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 108,400  &  64,230  &  61,130  &  46,720 \\ 
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 414,400  &  236,400  &  219,000  &  217,000 \\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 805,400  &  54,010  &  48,720  &  37,730 \\ 
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 3,828,000  &  150,800  &  131,600  &  114,500 \\ 
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3,825,000  &  150,600  &  133,600  &  116,900 \\ 
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 18,010,000  &  123,500  &  115,400  &  105,000 \\
+\hline
+\end{tabular}
+\caption[Number of events passing the various cuts applied in the preselection at 3 TeV.]{Number of events passing the various cuts applied in the preselection at 3 TeV.  Event numbers are normalised to the correct luminosity for CLIC at 3 TeV.  $p_{T}$ is the transverse momentum of the event,  $M_{\text{Vis}}$ is the visible mass and $N_{\text{Isolated Leptons}}$ is the number of isolated leptons in the event.  In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\label{table:preselectionnumbers3000GeV}
+\end{table}
+
+\begin{figure}
+\centering
+\subfloat[Transverse momentum of system.]{\label{fig:preselection3000_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/3000GeV/TransverseMomentum.pdf}}\hfill
+\subfloat[Invariant mass of the visible system.]{\label{fig:preselection3000_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/3000GeV/InvariantMassSystem.pdf}}
+\subfloat[Number of isolated leptons.]{\label{fig:preselection3000_3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/3000GeV/NumberOfIsolatedLeptons.pdf}}
+\caption[Distribution of variables cut on in the preselection at 3 TeV.]{Distribution of variables cut on in the preselection at 3 TeV.}
+\label{fig:preselection3000}
+\end{figure}
+
 \subsection{MVA - 3 TeV}
 
 \section{Results}
