@@ -6,10 +6,10 @@
 
 void Plot()
 {
-    TString name1 = "SPFOs_kt_0p50_1400GeV_FitData.root";
+//    TString name1 = "SPFOs_kt_0p50_1400GeV_FitData.root";
     TString name2 = "SPFOs_kt_0p70_1400GeV_FitData.root";
     TString name3 = "SPFOs_kt_0p90_1400GeV_FitData.root";
-    TString name4 = "SPFOs_kt_1p00_1400GeV_FitData.root";
+//    TString name4 = "SPFOs_kt_1p00_1400GeV_FitData.root";
     TString name5 = "SPFOs_kt_1p10_1400GeV_FitData.root";
     TString name6 = "TPFOs_kt_0p70_1400GeV_FitData.root";
     TString name7 = "LPFOs_kt_0p70_1400GeV_FitData.root";
@@ -18,10 +18,10 @@ void Plot()
     TString name10 = "TPFOs_kt_0p90_1400GeV_FitData.root";
     TString name11 = "TPFOs_kt_1p10_1400GeV_FitData.root";
 
-    MakePlots(name1, "Longitudinally Invariant Kt, Selected PFOs, R = 0.5", "KtSPFOsR0p50");
+//    MakePlots(name1, "Longitudinally Invariant Kt, Selected PFOs, R = 0.5", "KtSPFOsR0p50");
     MakePlots(name2, "Longitudinally Invariant Kt, Selected PFOs, R = 0.7", "KtSPFOsR0p70");
     MakePlots(name3, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "KtSPFOsR0p90");
-    MakePlots(name4, "Longitudinally Invariant Kt, Selected PFOs, R = 1.0", "KtSPFOsR1p00");
+//    MakePlots(name4, "Longitudinally Invariant Kt, Selected PFOs, R = 1.0", "KtSPFOsR1p00");
     MakePlots(name5, "Longitudinally Invariant Kt, Selected PFOs, R = 1.1", "KtSPFOsR1p10");
     MakePlots(name6, "Longitudinally Invariant Kt, Tight Selected PFOs, R = 0.7", "KtTPFOsR0p70");
     MakePlots(name7, "Longitudinally Invariant Kt, Loose Selected PFOs, R = 0.7", "KtLPFOsR0p70");

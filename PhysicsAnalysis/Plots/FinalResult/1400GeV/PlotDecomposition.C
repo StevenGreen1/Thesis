@@ -6,7 +6,7 @@
 
 void PlotDecomposition()
 {
-    TString name1 = "SPFOs_kt_0p90_Final_1400GeV_FitData.root";
+    TString name1 = "SPFOs_kt_0p90_1400GeV_FitDataOptimal.root";
 
     MakePlots(name1, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "Final");
 }
