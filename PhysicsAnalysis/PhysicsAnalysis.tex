@@ -395,11 +395,12 @@ The distribution of $\text{cos}\theta^{*}_{Bosons}$ was also considered for this
 
 
 \subsection{Application Of Anomalous Gauge Coupling Event Weights}
-As described in section \ref{sec:eventweights}, event weights are used to determine the sensitivity of CLIC to the anomalous gauge couplings.  These event weights are extracted on an event by event basis for the signal final state $\nu\nu\text{qqqq}$ from the generator software Whizard.  To achieve a smooth $\chi^{2}$ distribution in the final result a fine sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the $\alpha_{4}$ and $\alpha_{5}$ space is needed, however, extracting the weights on an event by event basis to populate this distribution is highly CPU intensive.  While this is feasible, it is highly impractical and so in an attempt to resolve this issue, an interpolation scheme was applied to determine the event weights within a sampled region of the $\alpha_{4}$ and $\alpha_{5}$ space.  This allows for an infinite sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the space of $\alpha_{4}$ and $\alpha_{5}$ within the sampled region, without having to call the generator an infinite number of times.
+\label{sec:eventweightsinterpolation}
+As described in section \ref{sec:eventweights}, event weights are used to determine the sensitivity of CLIC to the anomalous gauge couplings.  These event weights are extracted on an event by event basis for the signal final state $\nu\nu\text{qqqq}$ from the generator software Whizard.  To achieve a smooth $\chi^{2}$ distribution a fine sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the $\alpha_{4}$ and $\alpha_{5}$ space is needed.  However, as extracting the event weights is highly CPU intensive, it is unfeasible to produce a finely sampled grid of event weights on an event by event basis by calling the generator.  To resolve this issue, an interpolation scheme was applied to determine the event weights within a sampled region of the $\alpha_{4}$ and $\alpha_{5}$ space.  This allows for an infinite sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the space of $\alpha_{4}$ and $\alpha_{5}$ within the sampled region, without having to call the generator an infinite number of times.
 
 A bicubic interpolation scheme, cubic interpolation along two dimensions, was applied to the event weights that were extracted from the generator.  This procedure is best illustrated by showing the interpolated surface superimposed with the raw event weights from the generator, which is shown for several $\nu\nu\text{qqqq}$ events at 1.4 TeV in figure \ref{fig:eventweights1400interpolated} (ADD 3 TEV).  This interpolation scheme produces a smooth and continuous surface that is sufficiently accurate for the fitting procedure applied in this analysis.  
 
-For reference at 1.4 TeV event weights were produced from Whizard stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07, as shown in figure \ref{fig:eventweights1400raw}, while at 3 TeC event weights were samples in steps of 0.00025 from -0.0045 to 0.0045.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at this energy.
+For reference at 1.4 TeV event weights were produced from the generator, Whizard, by stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07, as shown in figure \ref{fig:eventweights1400raw}, while at 3 TeV event weights were samples in steps of 0.00025 from -0.0045 to 0.0045.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at these energies.
 
 \begin{figure}
 \centering
@@ -411,22 +412,20 @@ For reference at 1.4 TeV event weights were produced from Whizard stepping along
 \label{fig:eventweights1400interpolated}
 \end{figure}
 
-
-
-\subsection{Analysis of Fitting Distribution}
-The $\text{cos}\theta^{*}_{Jets}$ variable was binned in a histograms containing 10 bins before begin converted into a value of $\chi^{2}$.  This binning was selected to maximise the number of bins in the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
-
-Using these interpolated surfaces for the event weights, distribution of $\text{cos}\theta^{*}_{Jets}$ were produced stepping across $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.0001 at 1.4 TeV and 0.00001 at 3 TeV.  Each distribution was converted into a value of $\chi^{2}$ using the following formula:
+\subsection{Determination of Sensitivity}
+The sensitivity of CLIC to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ was determined using a $\chi^{2}$ of the following form:
 
 \begin{equation}
 \chi^{2} = \Sigma_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}}
 \end{equation}
 
-where $O_{i}$ is the observed bin content for bin i in the distribution with non-zero $\alpha_{4}$ and $\alpha_{5}$ and $E_{i}$ is the expected bin content for bin i in the distribution with zero $\alpha_{4}$ and $\alpha_{5}$ i.e. the standard model expected value.
+Here, where $O_{i}$ is the observed, or data, bin content for bin i in the distribution of $\text{cos}\theta^{*}_{Jets}$ produced with event weights corresponding to zero $\alpha_{4}$ and $\alpha_{5}$ and $E_{i}$ is the expected, or Monte-Carlo, bin content for bin i produced with event weights corresponding to non-zero $\alpha_{4}$ and $\alpha_{5}$.  The distribution of $\text{cos}\theta^{*}_{Jets}$ was binned in a histograms containing 10 bins ranging from 0 to 1, as shown in figure \ref{fig:costhetastarjets}.  This binning was selected to maximise the sensitivity of the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
 
-Confidence limits indicate the probability of measuring a given value of $\chi^{2}$ in the $\alpha_{4}$ and $\alpha_{5}$ space.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\% are defined using constant $\chi^{2}$ contours of 2.28, 4.61 and 9.21, which arise from the integral of the two dimensional $\chi^{2}$ function.
+Confidence limits that describe the sensitivity of CLIC to the anomalous gauge couplings, were found by examining the $\chi^{2}$ surface in $\alpha_{4}$ and $\alpha_{5}$ space.  Deviations about the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$ based on the $\text{cos}\theta^{*}_{Jets}$ distribution.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ contours of 2.28, 4.61 and 9.21 respectively.  These numbers arise from the integral of the two dimensional $\chi^{2}$ function.
 
-It is useful to reduce these distributions to sensitivities to the individual parameters $\alpha_{4}$ and $\alpha_{5}$ independently.  This is done by projecting out either the $\alpha_{4} = 0$ or $\alpha_{5} = 0$ one dimensional $\chi^{2}$ distribution from the two dimensional $\chi^{2}$ distribution.  Using these one dimensional plots it is possible to extract the sensitivity to an individual parameters using confidence limits arising from the integral of the two dimensional $\chi^{2}$ function i.e. 68\% confidence limit occurs for $\chi^{2} = 0.989$.  In subsequent chapters these are the sensitivities quoted for individual anomalous gauge coupling parameters. 
+It proved useful to consider the sensitivities to the individual parameters $\alpha_{4}$ and $\alpha_{5}$ independently.  This was done by projecting out the $\alpha_{4} = 0$ or $\alpha_{5} = 0$ one dimensional $\chi^{2}$ distribution from the two dimensional $\chi^{2}$ previously discussed.  It was then possible to extract the sensitivity to an individual parameters using confidence limits arising from the integral of the one dimensional $\chi^{2}$ function i.e. 68\% confidence limit occurs for $\chi^{2} = 0.989$.  In subsequent chapters these are the sensitivities quoted for individual anomalous gauge coupling parameters. 
+
+HERE
 
 \section{Optimisation of Jet Reconstruction} \label{sec:optimisationjetalgo}
 The jet algorithm used for this analysis is the longitudinally invariant kt algorithm as described in section \ref{sec:jetpairing}.  The parameter choices under consideration for optimisation are the R parameter, used in the kt algorithm definition, used and the PFO selection.  
@@ -445,9 +444,9 @@ The optimal contours can be found in figure \ref{fig:chi2jetalgoideal1400GeV} an
 PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
 R Parameter & & & \\ 
 \hline
-0.7 & $-0.0039$ $+0.0050$ & $-0.0038$ $+0.0050$ & $-0.0037$ $+0.0046$ \\
-0.9 & $-0.0041$ $+0.0051$ & $-0.0038$ $+0.0046$ & $-0.0038$ $+0.0048$ \\
-1.1 & $-0.0041$ $+0.0051$ & $-0.0039$ $+0.0050$ & $-0.0040$ $+0.0050$ \\
+0.7 & $-0.00391$ $+0.00497$ & $-0.00385$ $+0.00500$ & $-0.00368$ $+0.00465$ \\
+0.9 & $-0.00405$ $+0.00508$ & $-0.00375$ $+0.00464$ & $-0.00379$ $+0.00475$ \\
+1.1 & $-0.00406$ $+0.00509$ & $-0.00392$ $+0.00502$ & $-0.00403$ $+0.00496$ \\
 \hline
 \end{tabular}
 \caption[$1\sigma$ precision on measurement of $\alpha_{4}$ for different jet reconstruction parameters considering pure signal at 1.4 TeV.]{Precision on measurement of $\alpha_{4}$ at 1.4 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
@@ -461,9 +460,9 @@ R Parameter & & & \\
 PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
 R Parameter & & & \\ 
 \hline
-0.7 & $-0.0027$ $+0.0031$ & $-0.0027$ $+0.0032$ & $-0.0025$ $+0.0030$ \\
-0.9 & $-0.0028$ $+0.0032$ & $-0.0026$ $+0.0030$ & $-0.0026$ $+0.0030$ \\
-1.1 & $-0.0028$ $+0.0032$ & $-0.0027$ $+0.0032$ & $-0.0028$ $+0.0031$ \\
+0.7 & $-0.00267$ $+0.00313$ & $-0.00266$ $+0.00318$ & $-0.00255$ $+0.00302$ \\
+0.9 & $-0.00280$ $+0.00320$ & $-0.00259$ $+0.00302$ & $-0.00258$ $+0.00303$ \\
+1.1 & $-0.00281$ $+0.00321$ & $-0.00272$ $+0.00319$ & $-0.00282$ $+0.00315$ \\
 \hline
 \end{tabular}
 \caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal at 1.4 TeV.]{Precision on measurement of $\alpha_{5}$ at 1.4 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
@@ -491,9 +490,9 @@ The gains in optimising the jet algorithm at 3 TeV are larger than those found a
 PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
 R Parameter & & & \\ 
 \hline
-0.7 & $-0.000529$ $+0.000525$ & $-0.000510$ $+0.000507$ & $-0.000547$ $+0.000555$ \\
-0.9 & $-0.000566$ $+0.000555$ & $-0.000539$ $+0.000520$ & $-0.000568$ $+0.000553$ \\
-1.1 & $-0.000472$ $+0.000472$ & $-0.000508$ $+0.000492$ & $-0.000504$ $+0.000489$ \\
+0.7 & $-0.000547$ $+0.000555$ & $-0.000502$ $+0.000507$ & $-0.000547$ $+0.000555$ \\
+0.9 & $-0.000568$ $+0.000553$ & $-0.000539$ $+0.000520$ & $-0.000568$ $+0.000553$ \\
+1.1 & $-0.000504$ $+0.000490$ & $-0.000508$ $+0.000492$ & $-0.000504$ $+0.000490$ \\
 \hline
 \end{tabular}
 \caption[$1\sigma$ precision on measurement of $\alpha_{4}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{4}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
@@ -507,9 +506,9 @@ R Parameter & & & \\
 PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
 R Parameter & & & \\ 
 \hline
-0.7 & $-0.000392$ $+0.000369$ & $-0.000355$ $+0.000348$ & $-0.000356$ $+0.000348$ \\
-0.9 & $-0.000394$ $+0.000365$ & $-0.000391$ $+0.000361$ & $-0.000395$ $+0.000368$ \\
-1.1 & $-0.000350$ $+0.000337$ & $-0.000374$ $+0.000354$ & $-0.000352$ $+0.000336$ \\
+0.7 & $-0.000357$ $+0.000348$ & $-0.000356$ $+0.000348$ & $-0.000357$ $+0.000348$ \\
+0.9 & $-0.000396$ $+0.000368$ & $-0.000392$ $+0.000361$ & $-0.000396$ $+0.000368$ \\
+1.1 & $-0.000353$ $+0.000336$ & $-0.000374$ $+0.000354$ & $-0.000353$ $+0.000336$ \\
 \hline
 \end{tabular}
 \caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{5}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
