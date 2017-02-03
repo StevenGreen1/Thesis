@@ -1,0 +1,154 @@
+{
+//=========Macro generated from canvas: KtTPFOsR1p10_Alpha5/
+//=========  (Fri Feb  3 15:00:58 2017) by ROOT version5.34/37
+   TCanvas *KtTPFOsR1p10_Alpha5 = new TCanvas("KtTPFOsR1p10_Alpha5", "",177,127,600,600);
+   gStyle->SetOptStat(0);
+   KtTPFOsR1p10_Alpha5->Range(-0.003024,-1.875,0.002736,16.875);
+   KtTPFOsR1p10_Alpha5->SetFillColor(0);
+   KtTPFOsR1p10_Alpha5->SetBorderMode(0);
+   KtTPFOsR1p10_Alpha5->SetBorderSize(2);
+   KtTPFOsR1p10_Alpha5->SetTickx(1);
+   KtTPFOsR1p10_Alpha5->SetTicky(1);
+   KtTPFOsR1p10_Alpha5->SetRightMargin(0.05);
+   KtTPFOsR1p10_Alpha5->SetFrameLineWidth(2);
+   KtTPFOsR1p10_Alpha5->SetFrameBorderMode(0);
+   KtTPFOsR1p10_Alpha5->SetFrameLineWidth(2);
+   KtTPFOsR1p10_Alpha5->SetFrameBorderMode(0);
+   
+   TGraph *graph = new TGraph(41);
+   graph->SetName("");
+   graph->SetTitle("");
+   graph->SetFillColor(1);
+   graph->SetLineWidth(2);
+   graph->SetMarkerStyle(2);
+   graph->SetPoint(0,-0.00200299668,288.733704);
+   graph->SetPoint(1,-0.001906675609,249.8641377);
+   graph->SetPoint(2,-0.00180072243,214.1576149);
+   graph->SetPoint(3,-0.001704401359,181.679353);
+   graph->SetPoint(4,-0.001608080288,152.2337);
+   graph->SetPoint(5,-0.00150212711,125.8206557);
+   graph->SetPoint(6,-0.001405806039,102.3423941);
+   graph->SetPoint(7,-0.001309484968,81.70108917);
+   graph->SetPoint(8,-0.00120353179,63.83152342);
+   graph->SetPoint(9,-0.001107210719,48.5706534);
+   graph->SetPoint(10,-0.001001257541,35.82065302);
+   graph->SetPoint(11,-0.0009049364696,25.41847879);
+   graph->SetPoint(12,-0.0008086153985,17.13586985);
+   graph->SetPoint(13,-0.0007026622203,10.94021749);
+   graph->SetPoint(14,-0.0006063411493,6.374999966);
+   graph->SetPoint(15,-0.0005003879711,3.34239118);
+   graph->SetPoint(16,-0.0004040669001,1.483695473);
+   graph->SetPoint(17,-0.000307745829,0.5054345742);
+   graph->SetPoint(18,-0.0002017926508,0.1141302147);
+   graph->SetPoint(19,-0.0001054715798,0.01630412479);
+   graph->SetPoint(20,-9.150508724e-06,0.01630412479);
+   graph->SetPoint(21,9.680266944e-05,0.01630412479);
+   graph->SetPoint(22,0.0001931237405,0.1467389113);
+   graph->SetPoint(23,0.0002990769187,0.603260664);
+   graph->SetPoint(24,0.0003953979897,1.679347653);
+   graph->SetPoint(25,0.0004917190608,3.73369554);
+   graph->SetPoint(26,0.0005976722389,6.994565202);
+   graph->SetPoint(27,0.00069399331,11.853261);
+   graph->SetPoint(28,0.0007999464882,18.40760902);
+   graph->SetPoint(29,0.0008962675592,27.08152232);
+   graph->SetPoint(30,0.0009925886303,37.9402183);
+   graph->SetPoint(31,0.001098541808,51.17934913);
+   graph->SetPoint(32,0.001194862879,67.02717569);
+   graph->SetPoint(33,0.001291183951,85.48369798);
+   graph->SetPoint(34,0.001397137129,106.7771769);
+   graph->SetPoint(35,0.0014934582,130.9402211);
+   graph->SetPoint(36,0.001599411378,158.0706567);
+   graph->SetPoint(37,0.001695732449,188.2663097);
+   graph->SetPoint(38,0.00179205352,221.5271803);
+   graph->SetPoint(39,0.001898006698,258.0163118);
+   graph->SetPoint(40,0.001994327769,297.766313);
+   
+   TH1F *Graph_Graph_Graph23 = new TH1F("Graph_Graph_Graph23","",100,-0.0024,0.0024);
+   Graph_Graph_Graph23->SetMinimum(0);
+   Graph_Graph_Graph23->SetMaximum(15);
+   Graph_Graph_Graph23->SetDirectory(0);
+   Graph_Graph_Graph23->SetStats(0);
+   Graph_Graph_Graph23->SetLineWidth(2);
+   Graph_Graph_Graph23->GetXaxis()->SetTitle("#alpha_{5}");
+   Graph_Graph_Graph23->GetXaxis()->SetRange(0,101);
+   Graph_Graph_Graph23->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph23->GetXaxis()->SetLabelFont(132);
+   Graph_Graph_Graph23->GetXaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph23->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph23->GetXaxis()->SetTitleFont(132);
+   Graph_Graph_Graph23->GetYaxis()->SetTitle("#chi^{2}");
+   Graph_Graph_Graph23->GetYaxis()->SetLabelFont(132);
+   Graph_Graph_Graph23->GetYaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph23->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph23->GetYaxis()->SetTitleFont(132);
+   Graph_Graph_Graph23->GetZaxis()->SetLabelFont(132);
+   Graph_Graph_Graph23->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph23->GetZaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph23->GetZaxis()->SetTitleFont(132);
+   graph->SetHistogram(Graph_Graph_Graph23);
+   
+   
+   TF1 *PrevFitTMP = new TF1("PrevFitTMP","pol4",-0.000672,0.000576);
+   PrevFitTMP->SetFillColor(1);
+   PrevFitTMP->SetFillStyle(0);
+   PrevFitTMP->SetLineColor(4);
+   PrevFitTMP->SetLineWidth(2);
+   PrevFitTMP->SetChisquare(0.01458712);
+   PrevFitTMP->SetNDF(7);
+   PrevFitTMP->GetXaxis()->SetNdivisions(505);
+   PrevFitTMP->GetXaxis()->SetLabelFont(132);
+   PrevFitTMP->GetXaxis()->SetLabelSize(0.05);
+   PrevFitTMP->GetXaxis()->SetTitleSize(0.05);
+   PrevFitTMP->GetXaxis()->SetTitleFont(132);
+   PrevFitTMP->GetYaxis()->SetLabelFont(132);
+   PrevFitTMP->GetYaxis()->SetLabelSize(0.05);
+   PrevFitTMP->GetYaxis()->SetTitleSize(0.05);
+   PrevFitTMP->GetYaxis()->SetTitleFont(132);
+   PrevFitTMP->SetParameter(0,-0.04093212);
+   PrevFitTMP->SetParError(0,0.02477229);
+   PrevFitTMP->SetParLimits(0,0,0);
+   PrevFitTMP->SetParameter(1,-67.68689);
+   PrevFitTMP->SetParError(1,105.3147);
+   PrevFitTMP->SetParLimits(1,0,0);
+   PrevFitTMP->SetParameter(2,2912110);
+   PrevFitTMP->SetParError(2,445611.9);
+   PrevFitTMP->SetParLimits(2,0,0);
+   PrevFitTMP->SetParameter(3,2.033229e+09);
+   PrevFitTMP->SetParError(3,5.181279e+08);
+   PrevFitTMP->SetParLimits(3,0,0);
+   PrevFitTMP->SetParameter(4,4.471854e+13);
+   PrevFitTMP->SetParError(4,1.487855e+12);
+   PrevFitTMP->SetParLimits(4,0,0);
+   graph->GetListOfFunctions()->Add(PrevFitTMP);
+   graph->Draw("apl");
+
+   std::cout << "Lower best limit on alpha 5 = " << PrevFitTMP->GetX(0.989,-0.005,0) << std::endl;
+   std::cout << "Upper best limit on alpha 5 = " << PrevFitTMP->GetX(0.989,0,0.005) << std::endl;
+
+   TLegend *leg = new TLegend(0.15,0.15,0.35,0.35,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetTextFont(132);
+   leg->SetLineColor(0);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(2);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("NULL","#splitline{4th Order}{Polynomial Fit}","l");
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#0000ff");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(132);
+   leg->Draw();
+   KtTPFOsR1p10_Alpha5->Modified();
+   KtTPFOsR1p10_Alpha5->cd();
+   KtTPFOsR1p10_Alpha5->SetSelected(KtTPFOsR1p10_Alpha5);
+
+   KtTPFOsR1p10_Alpha5->SaveAs("KtTPFOsR1p10_alpha5Optimal.pdf");
+}

@@ -428,11 +428,15 @@ It proved useful to consider the sensitivities to the individual parameters $\al
 HERE
 
 \section{Optimisation of Jet Reconstruction} \label{sec:optimisationjetalgo}
-The jet algorithm used for this analysis is the longitudinally invariant kt algorithm as described in section \ref{sec:jetpairing}.  The parameter choices under consideration for optimisation are the R parameter, used in the kt algorithm definition, used and the PFO selection.  
+The jet algorithm used in this analysis is the longitudinally invariant kt algorithm as described in section \ref{sec:jetpairing}.  The parameters considered in this optimisation were the R parameter, used in the kt algorithm definition, and the PFO selection.  
 
-A number of cuts \cite{arXiv:1209.4039} are applied to the transverse momenta and the time of the PFOs produced by PandoraPFA to reduce the PFOs into a subset that are believed to originate from the desired interaction in an attempt to veto the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ background events.  Different options for these cuts  give rise to the tight, default and loose selected PFOs that are considered in this optimisation.  
+In attempt to remove the effects of the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ background event a number of cuts \cite{arXiv:1209.4039} are applied to the transverse momenta and the timing information of the PFOs produced by PandoraPFA to reduce the PFOs into a subset that are believed to originate from the desired interaction.  Different values of these cuts give rise to the tight, default and loose selected PFOs that were considered in this optimisation.  
+
+
 
 \subsection{1.4 TeV Optimal Jet Reconstruction}
+
+
 At 1.4 TeV the optimal sensitivity is achieved for either loose selected PFOs with an R parameter of 0.7 or default selected PFOs with an R parameter of 0.9 as can be seen from tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV}.  As a tie breaker between these options the separation power, the fraction of events misidentified as either arising from a WW pair or a ZZ pair, was considered.  Again performance was similar, but there was a slight preference towards the use of selected PFOs and an R parameter of 0.9.  While not used in the primary analysis the separation of samples into WW and ZZ events is important for an extension analysis found in section BLAH.  
 
 The optimal contours can be found in figure \ref{fig:chi2jetalgoideal1400GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV} can be found in figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  There are minimal performance differences between the various jet algorithm configurations at 1.4 TeV.
@@ -472,8 +476,8 @@ R Parameter & & & \\
 \begin{figure}
 \centering
 \subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90.pdf}}\hfill
-\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4.pdf}}
-\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4Optimal.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5Optimal.pdf}}
 \caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.} 
 \label{fig:allchi2jetalgoideal1400GeV}
 \end{figure}
@@ -518,8 +522,8 @@ R Parameter & & & \\
 \begin{figure}
 \centering
 \subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10.pdf}}\hfill
-\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha4.pdf}}
-\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtSPFOsR1p10_alpha5.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha4Optimal.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha5Optimal.pdf}}
 \caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.} 
 \label{fig:allchi2jetalgoideal3000GeV}
 \end{figure}
