@@ -4,7 +4,14 @@
 \chapterquote{Kids, you tried your best, and you failed miserably.  The lesson is, never try.}%
 {Homer Simpson}
 
-\section{Background}
+\section{Motivation}
+Vector boson scattering is the interaction of the form $\text{VV} \rightarrow \text{VV}$ where V is any of the electroweak gauge bosons $\text{W}^{+}$, $\text{W}^{-}$, Z or $\gamma$.  This is an interesting process to look at because it provides insights into beyond standard model physics that impacts the electroweak sector through the probing of anomalous triple and quartic gauge couplings.  Vector boson scattering also gives a detailed understanding of how the Higgs of the standard model is able to unitarise the otherwise unbounded cross section for longitudinal gauge boson scattering.  
+
+The anomalous triple and quartic gauge couplings are introduced as parameters in an effective field theory....
+
+
+
+
 A potential source of beyond the standard model physics that could be studied at the CLIC experiment is that of the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.  The theoretical basis for these couplings is described in section THEORY REF.  CLIC would show sensitivity to these couplings through vector boson scattering processes that are summarised in figures \ref{fig:vbsw}, \ref{fig:vbsz}, \ref{fig:vbswz} and \ref{fig:vbszw}.  An analysis of the sensitivity of CLIC to this processes is presented in the following chapter.
 
 \iffalse
@@ -139,11 +146,54 @@ A potential source of beyond the standard model physics that could be studied at
 
 \fi
 
-\section{Generation}
+\section{Event Generation, Simulation and Reconstruction}
 \label{sec:eventgenerationandbackgrounds}
+
 The event generation software used by the CLIC experiment is Whizard \cite{0708.4233, hep-ph/0102195}.  Whizard version 1.97 was used for generating the new samples, while version 1.95 is used for the official CLIC samples. It was recommended by the Whizard authors to use version 1.97 as it contains a unitarisation scheme that ensures the probabilities remain physical up to high energies when considering the effect of anomalous gauge couplings.  
 
 The hadronic channels are the dominant decay modes of the W and the Z boson, with branching fractions of the order of 70\% for both (REFERENCE PDG), and as the vector boson scattering is the desired signal channel, the focus of this analysis will be upon the hadronic decays of the W and Z.  The vector boson scattering dominated signal final states containing hadronic decay products for the bosons are $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  
+
+For all samples considered in this analysis, the CLID\_ILD detector \cite{arXiv:1006.3396} was used.  The detector was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry in this reconstruction.
+ 
+The CLIC\_ILD is a variant of the ILD detector described in section REFERENCE.  The only significant difference between the modles is that CLIC\_ILD has a 60 layer scintillator-tugsten HCal in comparison to the 48 layers found in the default ILD detector.  The thicknesses of the layers in the HCal models are identical, so the extra layers correspond to an increase in the total thickness of the HCal.  This is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r }
+\hline
+Final State & Cross Section 1.4 TeV [fb] \\ 
+\hline
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 110.4\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 62.1\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1245.1\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 787.7\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 4309.7\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 2725.8\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 4009.5\\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 287.1\\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1160.7\\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 286.9\\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1156.3\\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 32.6\\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 136.9\\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 32.6\\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 136.4\\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 753.0\\
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 4034.8\\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4018.7\\
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2\\
+\hline
+\end{tabular}
+\caption[]{Cross sections of signal and background processes at 1.4 TeV. In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\label{table:crosssectionfull}
+\end{table}
+
+
+
+
+\section{Modelling of Anomalous Gauge Couplings}
+\label{sec:eventweights}
 
 \subsection{Cross Section Sensitivity}
 \label{sec:crosssectioncheck}
@@ -162,11 +212,11 @@ To determine which final states are sensitive to $\alpha_{4}$ and $\alpha_{5}$ a
 
 Note: In the above list q = u, d, s, c and b, l = e, $\mu$, $\tau$ and $\nu$ = $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.
 
-The cross section was found to differ when using non-zero values for the anomalous couplings in comparison to the standard model prediction for the vector boson scattering signal final states $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  The cross section comparisons for these final states can be found in table \ref{table:crosssectionsensitivity1400} and table \ref{table:crosssectionsensitivity3000} for 1.4 and 3 TeV samples respectively.  In reality, non-zero anomalous couplings would change the cross sections of all processes considered, however, the sensitivity would only arise from high order terms in the Lagrangian.  Such terms would not be dominant in determining the cross section and so are omitted from the generator making certain final states appear invariant to changes in the anomalous couplings.
+The cross section was found to differ when using non-zero values for the anomalous couplings in comparison to the standard model prediction for the vector boson scattering signal final states $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  The cross section comparisons for these final states can be found in table \ref{table:crosssectionsensitivity1400} for 1.4 TeV samples.  In reality, non-zero anomalous couplings would change the cross sections of all processes considered, however, the sensitivity would only arise from high order terms in the Lagrangian.  Such terms would not be dominant in determining the cross section and so are omitted from the generator making certain final states appear invariant to changes in the anomalous couplings.
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l l l}
+\begin{tabular}{ l r r r r }
 \hline
 Final State & Cross Section [fb] & Cross Section [fb] & Percentage & CLIC Cross Section \\ 
 & ($\alpha_{4} = \alpha_{5} = 0.00$) & ($\alpha_{4} = \alpha_{5} = 0.05$) & Change[\%] & [fb] \\ 
@@ -178,25 +228,10 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 59.7 & 68.6 & +14.9 & 62.
 \end{tabular}
 \caption{Cross section for selected processes for given value of $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV.}
 \label{table:crosssectionsensitivity1400}
-
-\begin{tabular}{ l l l l l}
-\hline
-Final State & Cross Section [fb] & Cross Section [fb] & Percentage & CLIC Cross Section \\ 
-& ($\alpha_{4} = \alpha_{5} = 0.000$) & ($\alpha_{4} = \alpha_{5} = 0.005$) & Change[\%] & [fb] \\ 
-\hline
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 51.2 & 77.7 & +51.8 & 71.5 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}{\nu}\text{qqqq}$ & 111.9 & 115.9 & +3.6 & 106.6 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 169.7 & 161.7 & -4.9 & 169.3 \\
-\hline
-\end{tabular}
-\caption{Cross section for selected processes for given value of $\alpha_{4}$ and $\alpha_{5}$ at 3 TeV.}
-\label{table:crosssectionsensitivity3000}
 \end{table}
 
 The cross section calculations show that the most sensitive final state to the anomalous gauge couplings is \nu{\nu}qqqq, therefore, this analysis will focus solely upon this final state.  Furthermore, as the l{\nu}qqqq final state has a much reduced sensitivity in comparison to the \nu{\nu}qqqq state and as the llqqqq can be easily vetoed from the analysis, as will be shown in subsequent chapters, it is only necessary to consider the sensitivity of the \nu{\nu}qqqq final state.  For the aforementioned reasons the l{\nu}qqqq and llqqqq final states will be treated as backgrounds that are invariant to changes in the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$.  
 
-\subsection{Anomalous Gauge Coupling Event Weights}
-\label{sec:eventweights}
 The sensitivity of an individual event to the anomalous gauge couplings is determined through an event weight. This weight is given by the ratio of the squares of the matrix element used in the cross section calculation, one matrix element using non-zero values of $\alpha_{4}$ and $\alpha_{5}$ and the other matrix element using the standard model values of $\alpha_{4}$ and $\alpha_{5}$, i.e. 0.  The weight varies as a function of $\alpha_{4}$ and $\alpha_{5}$ as well as varying on an event by event basis as the kinematics of the final state changes.  Examples of the event weights as a function of $\alpha_{4}$ and $\alpha_{5}$ for selected events is shown in figure \ref{fig:eventweights1400raw} for 1.4 TeV events.
 
 \begin{figure}
@@ -221,58 +256,17 @@ In order to determine the event weights it was necessary to use the anomalous ga
 
 \begin{figure}
 \centering
-\subfloat[Visible Mass, 1.4 TeV]{\label{fig:cliccomp1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/InvariantMassSystem.pdf}}
-\subfloat[Visible Mass, 3 TeV]{\label{fig:cliccomp3000_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/3000GeV/InvariantMassSystem.pdf}} \hfill
-\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event, 1.4 TeV.]{\label{fig:cliccomp1400_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/CosThetaMissing.pdf}} 
-\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event, 3 TeV.]{\label{fig:cliccomp3000_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/CosThetaMissing.pdf}} 
-\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 and 3 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 and 3 TeV.  Both samples have been normalised to the correct luminosity for CLIC running at the relevant energies TeV.}
+\subfloat[Visible Mass]{\label{fig:cliccomp1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/InvariantMassSystem.pdf}}
+\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event.]{\label{fig:cliccomp1400_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/1400GeV/CosThetaMissing.pdf}} 
+\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 1.4 TeV.  Both samples have been normalised to the correct luminosity for CLIC running at 1.4 TeV.}
 \label{fig:cliccomp}
 \end{figure}
 
-\section{Simulation and Reconstruction}
-For all samples considered in this analysis, the CLID\_ILD detector \cite{arXiv:1006.3396} was used.  The detector was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry in this reconstruction.
- 
-The CLIC\_ILD is a variant of the ILD detector described in section REFERENCE.  The only significant difference between the modles is that CLIC\_ILD has a 60 layer scintillator-tugsten HCal in comparison to the 48 layers found in the default ILD detector.  The thicknesses of the layers in the HCal models are identical, so the extra layers correspond to an increase in the total thickness of the HCal.  This is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. 
-
-\subsection{Experimental Conditions at CLIC}
-The CLIC experiment will operate in a unique environment in comparison to previous generations of lepton colliders and this must be properly accounted for to get an accourate measure of the physics potential that CLIC has to offer.  The following aspects of the CLIC experiment present the largest challenges to the physics potential for the CLIC experiment:
-
-\begin{itemize}
-\item The high bunch charge density.  The small beam size at the impact point produces very large electromagnetic fields.  These fields can interact with the opposite beam particles causing them to radiate photons in an effect known as beamstrahlung.  Beamstrahlung acts to reduce the collision energy of the $\text{e}^{+}\text{e}^{-}$ pairs.   
-\item Beam related backgrounds.  Beamstrahlung photons can subsequently interact to produce background events that must be accounted for.  Dominant backgrounds of this form that cannot be easily vetoed in the reconstruction include incoherent pair production of $\text{e}^{+}\text{e}^{-}$ and $\gamma\gamma \rightarrow \text{Hadron}$.  
-\item Fast readout technology is crucial.  The CLIC bunch train consists of 312 bunches with a repetition rate of 50 Hz.  Each bunch is separated by 0.5ns, therefore, it will be necessary to integrate over multiple bunch crossing when reading out the detectors.  This places tight constraints on all detector electrical readout speeds and time resolutions.   
-\end{itemize}
-
-\subsubsection{Beam-Related Backgrounds at CLIC}
-The primary sources of background for the CLIC experiment are as follows:
-\begin{itemize}
-\item $\text{e}^{+}\text{e}^{-}$ pair creation from the interaction of a beamstrahlung photons with the opposing beam.  The different mechanisms for pair creation are as follows:
-\begin{itemize}
-\item \textbf{Coherent pair production}.  This mechanism involves the interaction of a real beamstrahlung photon with the electromagnetic field from the opposing beam.
-\item \textbf{Trident pair production}.  This mechanism involves the interaction of a virtual beamstrahlung photon with the electromagnetic field from the opposing beam.
-\item \textbf{Incoherent pair production}.  This mechanism involves the interaction of a real or virtual beamstrahlung photon with the individual particles in the opposing beam.
-\end{itemize}
-\item $\gamma\gamma \rightarrow \text{Hadron}$ from the interaction of real or virtual beamstrahlung photons with each other.  Example Feynman diagrams for such processes is shown in figure ??. 
-\item Beam halo muons that arise from interactions of the beam particles during collimation.  The dominant mechanisms producing beam halo muons are photon conversions into muon pairs ($\gamma \text{e}^{-} \rightarrow \mu^{+}\mu^{-}\text{e}^{-}$) and annihilation of positrons with atomic $\text{e}^{-}$ into muon pairs ($\text{e}^{+}\text{e}^{-} \rightarrow \mu^{+}\mu^{-}$) \cite{Pilicer:2015ijy}.
-\end{itemize}
-
-Each of these has to be properly addressed to get a true measure of the physics potential at CLIC.  Coherent and trident pair production is not a dominant source of background as they are produced at low transverse momenta, as figure \ref{fig:backgroundangle} shows, and a simple cut would veto these backgrounds.  This is not the case for incoherent pair production of $\text{e}^{+}\text{e}^{-}$, which are dominant in the forward regions of the detector, and $\gamma\gamma \rightarrow \text{Hadron}$, which are dominant in the tracker and the calorimeters (with the exception of low radii in the calorimeter endcaps) \cite{Linssen:2012hp, Sailer:2012mfa}.  Beam halo muons are not a major source of background either as they can be easily removed during the reconstruction due to the clear signal they create in the detector.  An algorithm was developed within the PandoraPFA framework for this purpose and it was found to be highly effective at removing the beam halo muons background \cite{Linssen:2012hp}.  
-
-$\gamma\gamma \rightarrow \text{Hadron}$ events are the most dominant source of background to consider at CLIC as these events deposit more energy throughout the detector than incoherent pair production of $\text{e}^{+}\text{e}^{-}$ events \cite{Linssen:2012hp}.  The effect of the $\gamma\gamma \rightarrow \text{Hadron}$ background is incorporated into this analysis by overlaying $\gamma\gamma \rightarrow \text{Hadron}$ events onto the event samples used in this analysis.  The overlaid backgrounds are added prior to reconstruction so that their effect on the reconstruction is fully accounted for.  For a given event the exact number of background events overlaid is drawn from a Poisson distribution with a mean of 3.2 (1.3) events per bunch crossing at 3 (1.4) TeV.  While incoherent pairs are still a source of background they will produce a second order effect in comparison to the $\gamma\gamma \rightarrow \text{Hadron}$ events.
-
-The PFO choices described in section \ref{sec:optimisationjetalgo} are applied to veto the effect of PFOs that arise from the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ events.
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CDRPlots/BackgroundAngleCut.pdf}
-\caption[]{Angular distribution of number of particles for beam induced backgrounds for CLIC at $\sqrt{s} = 3$ TeV.  Taken from CLIC CDR.}
-\label{fig:backgroundangle}
-\end{figure}
-
-\section{Analysis}
-\label{sec:analysis}
+\section{Data Analysis}
+\label{sec:dataanalysis}
 The focus of this section is to describe the post reconstruction procedure applied to the signal and background events, described in \ref{sec:crosssectioncheck}, to extract the relevant information needed for this sensitivity study. 
 
-\subsection{Jet Pairing} 
+\subsection{Jet Finding} 
 \label{sec:jetpairing}
 The MarlinFastJet processor, a wrapper for the FastJet \cite{Cacciari:2011ma} processor, is used to cluster the signal and background events into four jets.  In the case of the signal final state, $\nu\nu$qqqq, it is assumed these four jets have arisen from the hadronic decays of the bosons involved in the vector scattering process.  These jets are paired up on the assumption that the correct pairing is achieved when the invariant masses of the two pairs are closest together. 
 
@@ -296,27 +290,19 @@ The second alternative jet algortihm considered was the Cambridge/Aachen jet alg
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:invariantmassalgoveto1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto.pdf}}
-\subfloat[]{\label{fig:invariantmassalgoveto3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto3000GeV.pdf}}
-\caption[Reconstructed invariant masses for different choices of jet algorithm for 1.4 TeV and 3 TeV \nu{\nu}qqqq events.]{Reconstructed masses for different choices of jet algorithm for 1.4 TeV and 3 TeV \nu{\nu}qqqq events. These masses arise by forcing the reconstructed events into 4 jets and then pairing up the jets into pairs such that the reconstructed invariant masses of the pairs are closest to each other. These samples should be dominated by vector boson scattering involving pairs of W bosons and so it is expected that a peak at the W boson true mass should be observed. As this does not occur for the Cambridge-Aachen algorithm or the ee\_kt algorithm they were deemed unsuitable for this analysis at both 1.4 and 3 TeV. In the case of the kt algorithm and the ee\_kt algorithm an R parameter of 0.7 was used.}
+\caption[Reconstructed invariant masses for different choices of jet algorithm for 1.4 TeV \nu{\nu}qqqq events.]{Reconstructed masses for different choices of jet algorithm for 1.4 TeV \nu{\nu}qqqq events. These masses arise by forcing the reconstructed events into 4 jets and then pairing up the jets into pairs such that the reconstructed invariant masses of the pairs are closest to each other. These samples should be dominated by vector boson scattering involving pairs of W bosons and so it is expected that a peak at the W boson true mass should be observed. As this does not occur for the Cambridge-Aachen algorithm or the ee\_kt algorithm they were deemed unsuitable for this analysis at both 1.4. In the case of the kt algorithm and the ee\_kt algorithm an R parameter of 0.7 was used.}
 \label{fig:invariantmassalgoveto}
 \end{figure}
 
-\subsection{Isolated Lepton Finding} 
+\subsection{Lepton Finding} 
 \label{sec:isolatedleptonfinding}
 
+Brief 
 \textcolor{red}{Unsure of details needed in this section.}
 
 An isolated lepton finder is included in the analysis chain in an attempt to reject background events containing leptons. 
 
-\subsection{Flavour Tagging} 
-\label{sec:flavourtagging}
-
-\textcolor{red}{Don't actually use in this analysis.  I assume I skip this section.}
-The LCFIPlus \cite{Suehara:2015ura} processor is also run on these events once clustered into jets to produce a value for the B and C tag likelihood for a jet.  
-
-This information is available for background rejection rather than contributing to the sensitivity of the event to the anomalous couplings. The LCFIPlus vertex processor was trained using events of $\text{e}^{+}\text{e}^{-}\rightarrow \text{Z}\nu\nu \rightarrow \text{q}\bar{\text{q}}\nu\nu$ for q = u,d,s,c,b.
-
-\subsection{Analysis Processor} 
+\subsection{Discriminant Variables} 
 \label{sec:analysisprocessor}
 \textcolor{red}{Best way to show this?}
 
@@ -369,203 +355,45 @@ Alongside these variables, for the \nu{\nu}qqqq final state a number of Monte-Ca
 \item Invariant mass of boson pair using MC pairing and reconstructed jet energy.
 \end{itemize}
 
-\section{Fitting Technique}
-The metric used to determine the optimal jet algorithm for this analysis is the sensitivity of the pure signal final state, $\nu\nu\text{qqqq}$, to the anomalous gauge couplings.  Pure signal was used in the optimisation to avoid the need to process the large number of background files for each iteration of the jet algorithm considered, while still basing the optimisation on the physics of interest.  The focus of this section in the description of the fitting technique that will be used for both jet algorithm optimisation and in the final sensitivity study.
-
-\subsection{Choice of Fitting Distribution}
-The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$.  For a given event, the jet clustering and pairing proceeds as described in section \ref{sec:analysis} and leads to the event being clustered into four jets, which are then paired up to give two candidate bosons.  $\theta^{*}_{Jets}$ is defined as the opening angle of the jets in the rest frame of these candidate bosons.  The distribution of $\text{cos}\theta^{*}_{Jets}$ proved to be highly sensitive to the anomalous gauge couplings as shown in figure \ref{fig:costhetastarjets}.
-
-The distribution of $\text{cos}\theta^{*}_{Bosons}$ was also considered for this sensitivity study, however, it proved to be less sensitive than $\text{cos}\theta^{*}_{Jets}$.  This can be seen when comparing figures \ref{fig:costhetastarjets} and \ref{fig:costhetastarbosons}.  $\theta^{*}_{Bosons}$ is defined as the opening angle between the two candidate bosons two bosons in the rest frame of the candidate boson pair.  Furthermore, it was found that the $\chi^{2}$ distribution formed from the two dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ against $\text{cos}\theta^{*}_{Bosons}$ did not significantly benefit the sensitivity in comparison using the one dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ and therefore was not considered for this analysis.
-
-\begin{figure}
-\subfloat[1.4 TeV Events]{\label{fig:costhetastarjets1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_1400GeV.pdf}}
-\subfloat[3 TeV Events]{\label{fig:costhetastarjets3000GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_3000GeV.pdf}}
-\caption[Sensitivity of $\text{cos}\theta^{8}_{Jets}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 and 3 TeV.]{Sensitivity of $\text{cos}\theta^{*}_{Jets}$ to anomalous couplings at 1.4 and 3 TeV. The jet algorithm used for this example was the longitudinally invariant kt algorithm with an R parameter of 0.7. This sample corresponds to pure signal of hadronic decays in vector boson scattering i.e. \nu{\nu}qqqq.}
-\label{fig:costhetastarjets}
-\end{figure}
-
-\begin{figure}
-\subfloat[1.4 TeV Events]{\label{fig:costhetastarbosons1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p70_1400GeV.pdf}}
-\subfloat[3 TeV Events]{\label{fig:costhetastarbosons3000GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p70_3000GeV.pdf}}
-\caption[Sensitivity of $\text{cos}\theta^{8}_{Bosons}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 and 3 TeV.]{Sensitivity of $\text{cos}\theta^{*}_{Bosons}$ to anomalous couplings at 1.4 and 3 TeV. The jet algorithm used for this example was the longitudinally invariant kt algorithm with an R parameter of 0.7. This sample corresponds to pure signal of hadronic decays in vector boson scattering i.e. \nu{\nu}qqqq.}
-\label{fig:costhetastarbosons}
-\end{figure}
-
-
-
-
-\subsection{Application Of Anomalous Gauge Coupling Event Weights}
-\label{sec:eventweightsinterpolation}
-As described in section \ref{sec:eventweights}, event weights are used to determine the sensitivity of CLIC to the anomalous gauge couplings.  These event weights are extracted on an event by event basis for the signal final state $\nu\nu\text{qqqq}$ from the generator software Whizard.  To achieve a smooth $\chi^{2}$ distribution a fine sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the $\alpha_{4}$ and $\alpha_{5}$ space is needed.  However, as extracting the event weights is highly CPU intensive, it is unfeasible to produce a finely sampled grid of event weights on an event by event basis by calling the generator.  To resolve this issue, an interpolation scheme was applied to determine the event weights within a sampled region of the $\alpha_{4}$ and $\alpha_{5}$ space.  This allows for an infinite sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the space of $\alpha_{4}$ and $\alpha_{5}$ within the sampled region, without having to call the generator an infinite number of times.
-
-A bicubic interpolation scheme, cubic interpolation along two dimensions, was applied to the event weights that were extracted from the generator.  This procedure is best illustrated by showing the interpolated surface superimposed with the raw event weights from the generator, which is shown for several $\nu\nu\text{qqqq}$ events at 1.4 TeV in figure \ref{fig:eventweights1400interpolated} (ADD 3 TEV).  This interpolation scheme produces a smooth and continuous surface that is sufficiently accurate for the fitting procedure applied in this analysis.  
-
-For reference at 1.4 TeV event weights were produced from the generator, Whizard, by stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07, as shown in figure \ref{fig:eventweights1400raw}, while at 3 TeV event weights were samples in steps of 0.00025 from -0.0045 to 0.0045.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at these energies.
-
-\begin{figure}
-\centering
-\subfloat[]{\label{fig:weight1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
-\subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}} \hfill
-\subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
-\subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
-\caption[Event weights from Whizard for 1.4TeV \nu{\nu}qqqq final state events with interpolated surface.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for 1.4TeV \nu{\nu}qqqq final state events.  The hollow circles show the event weight produced from the generator while the surface shown is found using bicubic interpolation between those points.}
-\label{fig:eventweights1400interpolated}
-\end{figure}
-
-\subsection{Determination of Sensitivity}
-The sensitivity of CLIC to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ was determined using a $\chi^{2}$ of the following form:
-
-\begin{equation}
-\chi^{2} = \Sigma_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}}
-\end{equation}
-
-Here, where $O_{i}$ is the observed, or data, bin content for bin i in the distribution of $\text{cos}\theta^{*}_{Jets}$ produced with event weights corresponding to zero $\alpha_{4}$ and $\alpha_{5}$ and $E_{i}$ is the expected, or Monte-Carlo, bin content for bin i produced with event weights corresponding to non-zero $\alpha_{4}$ and $\alpha_{5}$.  The distribution of $\text{cos}\theta^{*}_{Jets}$ was binned in a histograms containing 10 bins ranging from 0 to 1, as shown in figure \ref{fig:costhetastarjets}.  This binning was selected to maximise the sensitivity of the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
-
-Confidence limits that describe the sensitivity of CLIC to the anomalous gauge couplings, were found by examining the $\chi^{2}$ surface in $\alpha_{4}$ and $\alpha_{5}$ space.  Deviations about the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$ based on the $\text{cos}\theta^{*}_{Jets}$ distribution.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ contours of 2.28, 4.61 and 9.21 respectively.  These numbers arise from the integral of the two dimensional $\chi^{2}$ function.
-
-It proved useful to consider the sensitivities to the individual parameters $\alpha_{4}$ and $\alpha_{5}$ independently.  This was done by projecting out the $\alpha_{4} = 0$ or $\alpha_{5} = 0$ one dimensional $\chi^{2}$ distribution from the two dimensional $\chi^{2}$ previously discussed.  It was then possible to extract the sensitivity to an individual parameters using confidence limits arising from the integral of the one dimensional $\chi^{2}$ function i.e. 68\% confidence limit occurs for $\chi^{2} = 0.989$.  In subsequent chapters these are the sensitivities quoted for individual anomalous gauge coupling parameters. 
-
-HERE
-
-\section{Optimisation of Jet Reconstruction} \label{sec:optimisationjetalgo}
-The jet algorithm used in this analysis is the longitudinally invariant kt algorithm as described in section \ref{sec:jetpairing}.  The parameters considered in this optimisation were the R parameter, used in the kt algorithm definition, and the PFO selection.  
-
-In attempt to remove the effects of the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ background event a number of cuts \cite{arXiv:1209.4039} are applied to the transverse momenta and the timing information of the PFOs produced by PandoraPFA to reduce the PFOs into a subset that are believed to originate from the desired interaction.  Different values of these cuts give rise to the tight, default and loose selected PFOs that were considered in this optimisation.  
-
-
-
-\subsection{1.4 TeV Optimal Jet Reconstruction}
-
-
-At 1.4 TeV the optimal sensitivity is achieved for either loose selected PFOs with an R parameter of 0.7 or default selected PFOs with an R parameter of 0.9 as can be seen from tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV}.  As a tie breaker between these options the separation power, the fraction of events misidentified as either arising from a WW pair or a ZZ pair, was considered.  Again performance was similar, but there was a slight preference towards the use of selected PFOs and an R parameter of 0.9.  While not used in the primary analysis the separation of samples into WW and ZZ events is important for an extension analysis found in section BLAH.  
-
-The optimal contours can be found in figure \ref{fig:chi2jetalgoideal1400GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV} can be found in figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  There are minimal performance differences between the various jet algorithm configurations at 1.4 TeV.
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{l l l l}
-\hline
-PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
-R Parameter & & & \\ 
-\hline
-0.7 & $-0.00391$ $+0.00497$ & $-0.00385$ $+0.00500$ & $-0.00368$ $+0.00465$ \\
-0.9 & $-0.00405$ $+0.00508$ & $-0.00375$ $+0.00464$ & $-0.00379$ $+0.00475$ \\
-1.1 & $-0.00406$ $+0.00509$ & $-0.00392$ $+0.00502$ & $-0.00403$ $+0.00496$ \\
-\hline
-\end{tabular}
-\caption[$1\sigma$ precision on measurement of $\alpha_{4}$ for different jet reconstruction parameters considering pure signal at 1.4 TeV.]{Precision on measurement of $\alpha_{4}$ at 1.4 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
-\label{table:precisiona4signaljetalgo1400GeV}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{l l l l}
-\hline
-PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
-R Parameter & & & \\ 
-\hline
-0.7 & $-0.00267$ $+0.00313$ & $-0.00266$ $+0.00318$ & $-0.00255$ $+0.00302$ \\
-0.9 & $-0.00280$ $+0.00320$ & $-0.00259$ $+0.00302$ & $-0.00258$ $+0.00303$ \\
-1.1 & $-0.00281$ $+0.00321$ & $-0.00272$ $+0.00319$ & $-0.00282$ $+0.00315$ \\
-\hline
-\end{tabular}
-\caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal at 1.4 TeV.]{Precision on measurement of $\alpha_{5}$ at 1.4 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
-\label{table:precisiona5signaljetalgo1400GeV}
-\end{table}
-
-\begin{figure}
-\centering
-\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90.pdf}}\hfill
-\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4Optimal.pdf}}
-\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5Optimal.pdf}}
-\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.} 
-\label{fig:allchi2jetalgoideal1400GeV}
-\end{figure}
-
-\subsection{3 TeV Optimal Jet Reconstruction}
-At 3 TeV the optimal sensitivity for the reconstructions considered is achieved for tight selected PFOs with an R parameter of 1.1 as can be seen from tables \ref{table:precisiona4signaljetalgo3000GeV} and \ref{table:precisiona5signaljetalgo3000GeV}.  The optimal contours can be found in figure \ref{fig:chi2jetalgoideal3000GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo3000GeV} and \ref{table:precisiona5signaljetalgo3000GeV} can be found in figures \ref{fig:a4chi2jetalgoideal3000GeV} and \ref{fig:a5chi2jetalgoideal3000GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  
-
-The gains in optimising the jet algorithm at 3 TeV are larger than those found at 1.4 TeV.  The preference for the tight selected PFOs is to be expected as this configuration minimises the effect of beam induced backgrounds, which are more prominent at higher energies.  
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{l l l l}
-\hline
-PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
-R Parameter & & & \\ 
-\hline
-0.7 & $-0.000530$ $+0.000525$ & $-0.000502$ $+0.000507$ & $-0.000547$ $+0.000555$ \\
-0.9 & $-0.000566$ $+0.000555$ & $-0.000539$ $+0.000520$ & $-0.000568$ $+0.000553$ \\
-1.1 & $-0.000472$ $+0.000472$ & $-0.000508$ $+0.000492$ & $-0.000504$ $+0.000490$ \\
-\hline
-\end{tabular}
-\caption[$1\sigma$ precision on measurement of $\alpha_{4}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{4}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
-\label{table:precisiona4signaljetalgo3000GeV}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{l l l l}
-\hline
-PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
-R Parameter & & & \\ 
-\hline
-0.7 & $-0.000393$ $+0.000370$ & $-0.000356$ $+0.000348$ & $-0.000357$ $+0.000348$ \\
-0.9 & $-0.000394$ $+0.000365$ & $-0.000392$ $+0.000361$ & $-0.000396$ $+0.000368$ \\
-1.1 & $-0.000351$ $+0.000337$ & $-0.000374$ $+0.000354$ & $-0.000353$ $+0.000336$ \\
-\hline
-\end{tabular}
-\caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{5}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
-\label{table:precisiona5signaljetalgo3000GeV}
-\end{table}
-
-\begin{figure}
-\centering
-\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10.pdf}}\hfill
-\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha4Optimal.pdf}}
-\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha5Optimal.pdf}}
-\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.} 
-\label{fig:allchi2jetalgoideal3000GeV}
-\end{figure}
-
 \section{Event Selection}
+
 As discussed earlier the signal events for this analysis contain the \nu{\nu}qqqq final state. The processes to be considered in this analysis alongside the signal are events that would topologically look similar to signal in the detector. This includes events that could be confused with 4 jet events with missing energy, while excluding those events with large numbers of high energy leptons that could be vetoed easily during the analysis stage. In full the list includes:
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l}
+\begin{tabular}{ l r }
 \hline
-Final State & Cross Section 1.4 TeV [fb] & Cross Section 3 TeV [fb]  \\ 
+Final State & Cross Section 1.4 TeV [fb] \\ 
 \hline
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 & 71.5 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 110.4 & 106.6 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 62.1 & 169.3 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1245.1 & 546.5 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 787.7 & 1317.5 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 4309.7 & 5560.9 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 2725.8 & 3319.6 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 4009.5 & 2948.9 \\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 287.1 & 287.8 \\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1160.7 & 1268.6 \\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 286.9 & 287.8 \\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1156.3 & 1267.3 \\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 32.6 & 54.2 \\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 136.9 & 262.5 \\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 32.6 & 54.2 \\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 136.4 & 262.3 \\
-$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 753.0 & 402.7 \\
-$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 4034.8 & 2423.1 \\
-$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4018.7 & 2420.6 \\
-$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2 & 13050.3 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 110.4\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 62.1\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1245.1\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 787.7\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 4309.7\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 2725.8\\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 4009.5\\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 287.1\\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1160.7\\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 286.9\\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1156.3\\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 32.6\\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 136.9\\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 32.6\\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 136.4\\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 753.0\\
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 4034.8\\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4018.7\\
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2\\
 \hline
 \end{tabular}
-\caption[]{Cross sections of signal and background processes at 1.4 and 3 TeV. In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\caption[]{Cross sections of signal and background processes at 1.4 TeV. In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
 \label{table:crosssectionfull}
 \end{table}
 
 Equivalent Photon Approximation (EPA) processes model the electromagnetic field of a charged particle as virtual photons.  BS (beamstrahlung) processes involve photons that have been radiated from incoming charged particles due to interactions with the electromagnetic field of the opposite beam.   The energy spectrum of the incoming particles for CLIC at the relevant operating energy is used to model the energy of these incoming photons.  Included in this study are photon-photon interactions from photons appearing from the EPA and beamstrahlung processes.
 
-\subsection{Pre Selection - 1.4 TeV}
+\subsection{Pre Selection}
 \label{sec:preselection1400GeV}
 The primary selection of the \nu{\nu}qqqq signal will be done using a multivariate analysis, however, in an attempt to veto trivial backgrounds a simple cut based preselection is applied. Cuts are applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is
 shown in figure \ref{fig:preselection1400}. Based on these distributions the following cuts were applied:
@@ -581,7 +409,7 @@ The event numbers for the signal and background are shown in table \ref{table:pr
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l l l}
+\begin{tabular}{ l r r r r }
 \hline
 Final State & Raw Event  & $p_{T}$ > 100 GeV & $p_{T}$ > 100 GeV \& & $p_{T}$ > 100 GeV \& \\ 
 & Numbers & & $M_{\text{Vis}}$ > 200 GeV & $M_{\text{Vis}}$ > 200 GeV \&\\ 
@@ -622,7 +450,7 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 20,550,000 & 2,
 \label{fig:preselection1400}
 \end{figure}
 
-\subsection{MVA - 1.4 TeV}
+\subsection{MVA}
 \label{sec:mva1400GeV}
 A multivariate analysis was applied to the data set to refine the selection using the TMVA toolkit \cite{Hocker:2007ht}. The following variables were used for training the TMVA selection.  
 
@@ -659,7 +487,7 @@ The event numbers passing the BDT cut can be found in table \ref{table:postmvanu
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l}
+\begin{tabular}{ l r r }
 \hline
 Final State & Raw Event Numbers & Post MVA Selection Numbers \\ 
 \hline
@@ -693,7 +521,7 @@ The summary of the selection procedure is given in table \ref{table:selectionsum
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l l}
+\begin{tabular}{ l r r r }
 \hline
 Final State & $\epsilon_{\text{presel}}$ & $\epsilon_{\text{BDT}}$ & $N_{\text{BDT}}$ \\ 
 \hline
@@ -711,11 +539,153 @@ $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 23.4\% & 12.2\% & 
 \label{table:selectionsummary1400GeV}
 \end{table}
 
+
+
+
+
+
+
+
+\section{Effect of Anomalous Coupling/Fitting Methodology}
+The metric used to determine the optimal jet algorithm for this analysis is the sensitivity of the pure signal final state, $\nu\nu\text{qqqq}$, to the anomalous gauge couplings.  Pure signal was used in the optimisation to avoid the need to process the large number of background files for each iteration of the jet algorithm considered, while still basing the optimisation on the physics of interest.  The focus of this section in the description of the fitting technique that will be used for both jet algorithm optimisation and in the final sensitivity study.
+
+\subsection{Choice of Fitting Distribution}
+The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$.  For a given event, the jet clustering and pairing proceeds as described in section \ref{sec:analysis} and leads to the event being clustered into four jets, which are then paired up to give two candidate bosons.  $\theta^{*}_{Jets}$ is defined as the opening angle of the jets in the rest frame of these candidate bosons.  The distribution of $\text{cos}\theta^{*}_{Jets}$ proved to be highly sensitive to the anomalous gauge couplings as shown in figure \ref{fig:costhetastarjets}.
+
+The distribution of $\text{cos}\theta^{*}_{Bosons}$ was also considered for this sensitivity study, however, it proved to be less sensitive than $\text{cos}\theta^{*}_{Jets}$.  This can be seen when comparing figures \ref{fig:costhetastarjets} and \ref{fig:costhetastarbosons}.  $\theta^{*}_{Bosons}$ is defined as the opening angle between the two candidate bosons two bosons in the rest frame of the candidate boson pair.  Furthermore, it was found that the $\chi^{2}$ distribution formed from the two dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ against $\text{cos}\theta^{*}_{Bosons}$ did not significantly benefit the sensitivity in comparison using the one dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ and therefore was not considered for this analysis.
+
+\begin{figure}
+\subfloat[1.4 TeV Events]{\label{fig:costhetastarjets1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_1400GeV.pdf}}
+\subfloat[3 TeV Events]{\label{fig:costhetastarjets3000GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_3000GeV.pdf}}
+\caption[Sensitivity of $\text{cos}\theta^{8}_{Jets}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 and 3 TeV.]{Sensitivity of $\text{cos}\theta^{*}_{Jets}$ to anomalous couplings at 1.4 and 3 TeV. The jet algorithm used for this example was the longitudinally invariant kt algorithm with an R parameter of 0.7. This sample corresponds to pure signal of hadronic decays in vector boson scattering i.e. \nu{\nu}qqqq.}
+\label{fig:costhetastarjets}
+\end{figure}
+
+\begin{figure}
+\subfloat[1.4 TeV Events]{\label{fig:costhetastarbosons1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p70_1400GeV.pdf}}
+\subfloat[3 TeV Events]{\label{fig:costhetastarbosons3000GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p70_3000GeV.pdf}}
+\caption[Sensitivity of $\text{cos}\theta^{8}_{Bosons}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 and 3 TeV.]{Sensitivity of $\text{cos}\theta^{*}_{Bosons}$ to anomalous couplings at 1.4 and 3 TeV. The jet algorithm used for this example was the longitudinally invariant kt algorithm with an R parameter of 0.7. This sample corresponds to pure signal of hadronic decays in vector boson scattering i.e. \nu{\nu}qqqq.}
+\label{fig:costhetastarbosons}
+\end{figure}
+
+
+\subsection{Application Of Anomalous Gauge Coupling Event Weights}
+\label{sec:eventweightsinterpolation}
+As described in section \ref{sec:eventweights}, event weights are used to determine the sensitivity of CLIC to the anomalous gauge couplings.  These event weights are extracted on an event by event basis for the signal final state $\nu\nu\text{qqqq}$ from the generator software Whizard.  To achieve a smooth $\chi^{2}$ distribution a fine sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the $\alpha_{4}$ and $\alpha_{5}$ space is needed.  However, as extracting the event weights is highly CPU intensive, it is unfeasible to produce a finely sampled grid of event weights on an event by event basis by calling the generator.  To resolve this issue, an interpolation scheme was applied to determine the event weights within a sampled region of the $\alpha_{4}$ and $\alpha_{5}$ space.  This allows for an infinite sampling of the $\text{cos}\theta^{*}_{Jets}$ distribution in the space of $\alpha_{4}$ and $\alpha_{5}$ within the sampled region, without having to call the generator an infinite number of times.
+
+A bicubic interpolation scheme, cubic interpolation along two dimensions, was applied to the event weights that were extracted from the generator.  This procedure is best illustrated by showing the interpolated surface superimposed with the raw event weights from the generator, which is shown for several $\nu\nu\text{qqqq}$ events at 1.4 TeV in figure \ref{fig:eventweights1400interpolated} (ADD 3 TEV).  This interpolation scheme produces a smooth and continuous surface that is sufficiently accurate for the fitting procedure applied in this analysis.  
+
+For reference at 1.4 TeV event weights were produced from the generator, Whizard, by stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07, as shown in figure \ref{fig:eventweights1400raw}, while at 3 TeV event weights were samples in steps of 0.00025 from -0.0045 to 0.0045.  These ranges proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at these energies.
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:weight1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
+\subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}} \hfill
+\subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
+\subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
+\caption[Event weights from Whizard for 1.4TeV \nu{\nu}qqqq final state events with interpolated surface.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for 1.4TeV \nu{\nu}qqqq final state events.  The hollow circles show the event weight produced from the generator while the surface shown is found using bicubic interpolation between those points.}
+\label{fig:eventweights1400interpolated}
+\end{figure}
+
+\subsection{Determination of Sensitivity}
+The sensitivity of CLIC to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ was determined using a $\chi^{2}$ of the following form:
+
+\begin{equation}
+\chi^{2} = \Sigma_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}}
+\end{equation}
+
+Here, where $O_{i}$ is the observed, or data, bin content for bin i in the distribution of $\text{cos}\theta^{*}_{Jets}$ produced with event weights corresponding to zero $\alpha_{4}$ and $\alpha_{5}$ and $E_{i}$ is the expected, or Monte-Carlo, bin content for bin i produced with event weights corresponding to non-zero $\alpha_{4}$ and $\alpha_{5}$.  The distribution of $\text{cos}\theta^{*}_{Jets}$ was binned in a histograms containing 10 bins ranging from 0 to 1, as shown in figure \ref{fig:costhetastarjets}.  This binning was selected to maximise the sensitivity of the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
+
+Confidence limits that describe the sensitivity of CLIC to the anomalous gauge couplings, were found by examining the $\chi^{2}$ surface in $\alpha_{4}$ and $\alpha_{5}$ space.  Deviations about the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$ based on the $\text{cos}\theta^{*}_{Jets}$ distribution.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ contours of 2.28, 4.61 and 9.21 respectively.  These numbers arise from the integral of the two dimensional $\chi^{2}$ function.
+
+It proved useful to consider the sensitivities to the individual parameters $\alpha_{4}$ and $\alpha_{5}$ independently.  This was done by projecting out the $\alpha_{4} = 0$ or $\alpha_{5} = 0$ one dimensional $\chi^{2}$ distribution from the two dimensional $\chi^{2}$ previously discussed.  It was then possible to extract the sensitivity to an individual parameters using confidence limits arising from the integral of the one dimensional $\chi^{2}$ function i.e. 68\% confidence limit occurs for $\chi^{2} = 0.989$.  In subsequent chapters these are the sensitivities quoted for individual anomalous gauge coupling parameters. 
+
+HERE
+
+\section{Results}
+The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV is shown in figure \ref{fig:finalresult1400GeV}.  This result shows the sensitivity after the application of preselection and MVA described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV} purposed to remove the included background channels, described in section \ref{sec:eventgenerationandbackgrounds}.  These contours yield the one $\sigma$ confidence limit on the measurement of $\alpha_{4}$ to the range -0.00831, 0.0130 and similarly for the measurement of $\alpha_{5}$ the range is -0.00606, 0.00904.
+
+\begin{figure}
+\centering
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha5.pdf}}
+\caption[$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.]{$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.}
+\label{fig:allfinalresult1400GeV}
+\end{figure}
+
+
+
+\section{Sensitivity at 3 TeV}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r r }
+\hline
+Final State & Cross Section 1.4 TeV [fb] & Cross Section 3 TeV [fb]  \\ 
+\hline
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 & 71.5 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 110.4 & 106.6 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 62.1 & 169.3 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1245.1 & 546.5 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 787.7 & 1317.5 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 4309.7 & 5560.9 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 2725.8 & 3319.6 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 4009.5 & 2948.9 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 287.1 & 287.8 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1160.7 & 1268.6 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 286.9 & 287.8 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1156.3 & 1267.3 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 32.6 & 54.2 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 136.9 & 262.5 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 32.6 & 54.2 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 136.4 & 262.3 \\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 753.0 & 402.7 \\
+$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 4034.8 & 2423.1 \\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4018.7 & 2420.6 \\
+$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2 & 13050.3 \\
+\hline
+\end{tabular}
+\caption[]{Cross sections of signal and background processes at 1.4 and 3 TeV. In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\label{table:crosssectionfull}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ l r r r r }
+\hline
+Final State & Cross Section [fb] & Cross Section [fb] & Percentage & CLIC Cross Section \\ 
+& ($\alpha_{4} = \alpha_{5} = 0.000$) & ($\alpha_{4} = \alpha_{5} = 0.005$) & Change[\%] & [fb] \\ 
+\hline
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 51.2 & 77.7 & +51.8 & 71.5 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}{\nu}\text{qqqq}$ & 111.9 & 115.9 & +3.6 & 106.6 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 169.7 & 161.7 & -4.9 & 169.3 \\
+\hline
+\end{tabular}
+\caption{Cross section for selected processes for given value of $\alpha_{4}$ and $\alpha_{5}$ at 3 TeV.}
+\label{table:crosssectionsensitivity3000}
+\end{table}
+
+\begin{figure}
+\centering
+\subfloat[Visible Mass, 3 TeV]{\label{fig:cliccomp3000_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/3000GeV/InvariantMassSystem.pdf}} \hfill
+\subfloat[$\text{cos}\theta_{Missing}$ - The cosine of the polar angle of the missing momentum for an event, 3 TeV.]{\label{fig:cliccomp3000_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/CLICSampleComparison/3000GeV/CosThetaMissing.pdf}} 
+\caption[Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 3 TeV.]{Comparison of various distributions between samples used in this analysis and the official CLIC samples for the \nu{\nu}qqqq final state at 3 TeV.  Both samples have been normalised to the correct luminosity for CLIC running at 3 TeV.}
+\label{fig:cliccomp}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:invariantmassalgoveto3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto3000GeV.pdf}}
+\caption[Reconstructed invariant masses for different choices of jet algorithm for 3 TeV \nu{\nu}qqqq events.]{Reconstructed masses for different choices of jet algorithm for 3 TeV \nu{\nu}qqqq events. These masses arise by forcing the reconstructed events into 4 jets and then pairing up the jets into pairs such that the reconstructed invariant masses of the pairs are closest to each other. These samples should be dominated by vector boson scattering involving pairs of W bosons and so it is expected that a peak at the W boson true mass should be observed. As this does not occur for the Cambridge-Aachen algorithm or the ee\_kt algorithm they were deemed unsuitable for this analysis at both 3 TeV. In the case of the kt algorithm and the ee\_kt algorithm an R parameter of 0.7 was used.}
+\label{fig:invariantmassalgoveto}
+\end{figure}
+
 \subsection{Pre Selection - 3 TeV}
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l l l}
+\begin{tabular}{ l r r r r }
 \hline
 Final State & Raw Event  & $p_{T}$ > 100 GeV & $p_{T}$ > 100 GeV \& & $p_{T}$ > 100 GeV \& \\ 
 & Numbers & & $M_{\text{Vis}}$ > 200 GeV & $M_{\text{Vis}}$ > 200 GeV \&\\ 
@@ -760,7 +730,7 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 18,010,000 & 12
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l}
+\begin{tabular}{ l r r }
 \hline
 Final State & Raw Event Numbers & Post MVA Selection Numbers \\ 
 \hline
@@ -792,7 +762,7 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 18,010,000 & 2,
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l l l l}
+\begin{tabular}{ l r r r }
 \hline
 Final State & $\epsilon_{\text{presel}}$ & $\epsilon_{\text{BDT}}$ & $N_{\text{BDT}}$ \\ 
 \hline
@@ -814,17 +784,119 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3.1\% & 0.2\% 
 \label{table:selectionsummary3000GeV}
 \end{table}
 
-\section{Results}
-\subsection{1.4 TeV}
-The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV is shown in figure \ref{fig:finalresult1400GeV}.  This result shows the sensitivity after the application of preselection and MVA described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV} purposed to remove the included background channels, described in section \ref{sec:eventgenerationandbackgrounds}.  These contours yield the one $\sigma$ confidence limit on the measurement of $\alpha_{4}$ to the range -0.00831, 0.0130 and similarly for the measurement of $\alpha_{5}$ the range is -0.00606, 0.00904.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Optimisation of Jet Reconstruction} \label{sec:optimisationjetalgo}
+The jet algorithm used in this analysis is the longitudinally invariant kt algorithm as described in section \ref{sec:jetpairing}.  The parameters considered in this optimisation were the R parameter, used in the kt algorithm definition, and the PFO selection.  
+
+In attempt to remove the effects of the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ background event a number of cuts \cite{arXiv:1209.4039} are applied to the transverse momenta and the timing information of the PFOs produced by PandoraPFA to reduce the PFOs into a subset that are believed to originate from the desired interaction.  Different values of these cuts give rise to the tight, default and loose selected PFOs that were considered in this optimisation.  
+
+
+
+\subsection{1.4 TeV Optimal Jet Reconstruction}
+At 1.4 TeV the optimal sensitivity is achieved for either loose selected PFOs with an R parameter of 0.7 or default selected PFOs with an R parameter of 0.9 as can be seen from tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV}.  As a tie breaker between these options the separation power, the fraction of events misidentified as either arising from a WW pair or a ZZ pair, was considered.  Again performance was similar, but there was a slight preference towards the use of selected PFOs and an R parameter of 0.9.  While not used in the primary analysis the separation of samples into WW and ZZ events is important for an extension analysis found in section BLAH.  
+
+The optimal contours can be found in figure \ref{fig:chi2jetalgoideal1400GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo1400GeV} and \ref{table:precisiona5signaljetalgo1400GeV} can be found in figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  There are minimal performance differences between the various jet algorithm configurations at 1.4 TeV.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l }
+\hline
+PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
+R Parameter & & & \\ 
+\hline
+0.7 & $-0.00391$ $+0.00497$ & $-0.00385$ $+0.00500$ & $-0.00368$ $+0.00465$ \\
+0.9 & $-0.00405$ $+0.00508$ & $-0.00375$ $+0.00464$ & $-0.00379$ $+0.00475$ \\
+1.1 & $-0.00406$ $+0.00509$ & $-0.00392$ $+0.00502$ & $-0.00403$ $+0.00496$ \\
+\hline
+\end{tabular}
+\caption[$1\sigma$ precision on measurement of $\alpha_{4}$ for different jet reconstruction parameters considering pure signal at 1.4 TeV.]{Precision on measurement of $\alpha_{4}$ at 1.4 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
+\label{table:precisiona4signaljetalgo1400GeV}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l }
+\hline
+PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
+R Parameter & & & \\ 
+\hline
+0.7 & $-0.00267$ $+0.00313$ & $-0.00266$ $+0.00318$ & $-0.00255$ $+0.00302$ \\
+0.9 & $-0.00280$ $+0.00320$ & $-0.00259$ $+0.00302$ & $-0.00258$ $+0.00303$ \\
+1.1 & $-0.00281$ $+0.00321$ & $-0.00272$ $+0.00319$ & $-0.00282$ $+0.00315$ \\
+\hline
+\end{tabular}
+\caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal at 1.4 TeV.]{Precision on measurement of $\alpha_{5}$ at 1.4 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
+\label{table:precisiona5signaljetalgo1400GeV}
+\end{table}
 
 \begin{figure}
 \centering
-\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final.pdf}}\hfill
-\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4.pdf}}
-\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5finalresult1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha5.pdf}}
-\caption[$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.]{$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.}
-\label{fig:allfinalresult1400GeV}
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4Optimal.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5Optimal.pdf}}
+\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.} 
+\label{fig:allchi2jetalgoideal1400GeV}
+\end{figure}
+
+\subsection{3 TeV Optimal Jet Reconstruction}
+At 3 TeV the optimal sensitivity for the reconstructions considered is achieved for tight selected PFOs with an R parameter of 1.1 as can be seen from tables \ref{table:precisiona4signaljetalgo3000GeV} and \ref{table:precisiona5signaljetalgo3000GeV}.  The optimal contours can be found in figure \ref{fig:chi2jetalgoideal3000GeV} and the optimal 1D plot used to produce the errors references in the tables \ref{table:precisiona4signaljetalgo3000GeV} and \ref{table:precisiona5signaljetalgo3000GeV} can be found in figures \ref{fig:a4chi2jetalgoideal3000GeV} and \ref{fig:a5chi2jetalgoideal3000GeV} respectively.  All other contours and plots for this optimisation can be found in the appendices.  
+
+The gains in optimising the jet algorithm at 3 TeV are larger than those found at 1.4 TeV.  The preference for the tight selected PFOs is to be expected as this configuration minimises the effect of beam induced backgrounds, which are more prominent at higher energies.  
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l }
+\hline
+PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
+R Parameter & & & \\ 
+\hline
+0.7 & $-0.000530$ $+0.000525$ & $-0.000502$ $+0.000507$ & $-0.000547$ $+0.000555$ \\
+0.9 & $-0.000566$ $+0.000555$ & $-0.000539$ $+0.000520$ & $-0.000568$ $+0.000553$ \\
+1.1 & $-0.000472$ $+0.000472$ & $-0.000508$ $+0.000492$ & $-0.000504$ $+0.000490$ \\
+\hline
+\end{tabular}
+\caption[$1\sigma$ precision on measurement of $\alpha_{4}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{4}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
+\label{table:precisiona4signaljetalgo3000GeV}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l }
+\hline
+PFO Selection & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
+R Parameter & & & \\ 
+\hline
+0.7 & $-0.000393$ $+0.000370$ & $-0.000356$ $+0.000348$ & $-0.000357$ $+0.000348$ \\
+0.9 & $-0.000394$ $+0.000365$ & $-0.000392$ $+0.000361$ & $-0.000396$ $+0.000368$ \\
+1.1 & $-0.000351$ $+0.000337$ & $-0.000374$ $+0.000354$ & $-0.000353$ $+0.000336$ \\
+\hline
+\end{tabular}
+\caption[$1\sigma$ precision on measurement of $\alpha_{5}$ for different jet reconstruction parameters considering pure signal at 3 TeV.]{Precision on measurement of $\alpha_{5}$ at 3 TeV for different jet reconstruction parameters considering pure signal and applying a $\chi^{2}$ fit to $\text{cos}\theta^{*}_{Jets}$.}
+\label{table:precisiona5signaljetalgo3000GeV}
+\end{table}
+
+\begin{figure}
+\centering
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha4Optimal.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha5Optimal.pdf}}
+\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.} 
+\label{fig:allchi2jetalgoideal3000GeV}
 \end{figure}
 
 \iffalse
