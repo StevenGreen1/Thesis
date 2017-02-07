@@ -1,5 +1,6 @@
 \usepackage{xspace}
 \usepackage{tikz}
+\usepackage{tikz-feynman}
 \usepackage{morefloats,subfig,afterpage}
 \usepackage{mathrsfs} % script font
 \usepackage{verbatim}
@@ -11,8 +12,6 @@
 
 %% Citation system tweaks
 \usepackage{cite}
-% \let\@OldCite\cite
-% \renewcommand{\cite}[1]{\mbox{\!\!\!\@OldCite{#1}}}
 
 %% Maths
 % TODO: rework or eliminate maybemath
@@ -68,3 +67,5 @@
 \DeclareRobustCommand{\Xzerobar}{\HepGenAntiParticle{X}{}{0}\xspace}
 \DeclareRobustCommand{\epluseminus}{\Ppositron\!\Pelectron\xspace}
 \DeclareRobustCommand{\protonproton}{\Pproton\APantiproton\xspace}
+
+\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
