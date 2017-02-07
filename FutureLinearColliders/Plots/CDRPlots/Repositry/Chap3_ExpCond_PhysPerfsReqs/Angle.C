@@ -1,0 +1,618 @@
+{
+//=========Macro generated from canvas: cNumber/cNumber
+//=========  (Mon Jul 18 17:13:44 2011) by ROOT version5.26/00b
+   gROOT->ForceStyle();
+   TCanvas *cNumber = new TCanvas("cNumber", "cNumber",0,100,800,700);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   cNumber->SetHighLightColor(2);
+   cNumber->SetFillColor(10);
+   cNumber->SetBorderMode(0);
+   cNumber->SetBorderSize(2);
+   cNumber->SetLogx();
+   cNumber->SetLogy();
+   cNumber->SetTickx(1);
+   cNumber->SetTicky(1);
+   cNumber->SetFrameFillColor(kWhite);
+   cNumber->SetFrameLineWidth(2);
+   cNumber->SetFrameBorderMode(0);
+   Double_t xAxis25[51] = {1e-07, 1.392908e-07, 1.940192e-07, 2.702509e-07, 3.764346e-07, 5.243388e-07, 7.303556e-07, 1.017318e-06, 1.41703e-06, 1.973793e-06, 2.749312e-06, 3.829538e-06, 5.334194e-06, 7.43004e-06, 1.034936e-05, 1.441571e-05, 2.007975e-05, 2.796925e-05, 3.895858e-05, 5.426572e-05, 7.558715e-05, 0.0001052859, 0.0001466536, 0.000204275, 0.0002845362, 0.0003963327, 0.000552055, 0.0007689617, 0.001071093, 0.001491934, 0.002078126, 0.002894638, 0.004031965, 0.005616155, 0.007822787, 0.01089642, 0.01517771, 0.02114115, 0.02944768, 0.04101791, 0.05713417, 0.07958263, 0.1108513, 0.1544056, 0.2150728, 0.2995766, 0.4172826, 0.5812362, 0.8096085, 1.12771, 1.570796}; 
+   
+   TH1D *hCoherentNumber = new TH1D("hCoherentNumber","Coherent Pairs   ",50, xAxis25);
+   hCoherentNumber->SetBinContent(2,158.9744);
+   hCoherentNumber->SetBinContent(3,317.9487);
+   hCoherentNumber->SetBinContent(4,953.8462);
+   hCoherentNumber->SetBinContent(5,1589.744);
+   hCoherentNumber->SetBinContent(6,2464.103);
+   hCoherentNumber->SetBinContent(7,5961.538);
+   hCoherentNumber->SetBinContent(8,10492.31);
+   hCoherentNumber->SetBinContent(9,20746.15);
+   hCoherentNumber->SetBinContent(10,41253.85);
+   hCoherentNumber->SetBinContent(11,74876.92);
+   hCoherentNumber->SetBinContent(12,152217.9);
+   hCoherentNumber->SetBinContent(13,303561.5);
+   hCoherentNumber->SetBinContent(14,570876.9);
+   hCoherentNumber->SetBinContent(15,1108290);
+   hCoherentNumber->SetBinContent(16,2063726);
+   hCoherentNumber->SetBinContent(17,3698618);
+   hCoherentNumber->SetBinContent(18,6698385);
+   hCoherentNumber->SetBinContent(19,1.201592e+07);
+   hCoherentNumber->SetBinContent(20,2.019857e+07);
+   hCoherentNumber->SetBinContent(21,2.98813e+07);
+   hCoherentNumber->SetBinContent(22,3.846615e+07);
+   hCoherentNumber->SetBinContent(23,4.189261e+07);
+   hCoherentNumber->SetBinContent(24,4.084926e+07);
+   hCoherentNumber->SetBinContent(25,3.730627e+07);
+   hCoherentNumber->SetBinContent(26,3.206513e+07);
+   hCoherentNumber->SetBinContent(27,2.571132e+07);
+   hCoherentNumber->SetBinContent(28,1.868632e+07);
+   hCoherentNumber->SetBinContent(29,1.203015e+07);
+   hCoherentNumber->SetBinContent(30,6408177);
+   hCoherentNumber->SetBinContent(31,2683249);
+   hCoherentNumber->SetBinContent(32,840100);
+   hCoherentNumber->SetBinContent(33,149594.9);
+   hCoherentNumber->SetBinContent(34,12400);
+   hCoherentNumber->SetBinContent(35,238.4615);
+   hCoherentNumber->SetBinError(2,112.4118);
+   hCoherentNumber->SetBinError(3,158.9744);
+   hCoherentNumber->SetBinError(4,275.3517);
+   hCoherentNumber->SetBinError(5,355.4775);
+   hCoherentNumber->SetBinError(6,442.5659);
+   hCoherentNumber->SetBinError(7,688.3792);
+   hCoherentNumber->SetBinError(8,913.2382);
+   hCoherentNumber->SetBinError(9,1284.155);
+   hCoherentNumber->SetBinError(10,1810.843);
+   hCoherentNumber->SetBinError(11,2439.622);
+   hCoherentNumber->SetBinError(12,3478.416);
+   hCoherentNumber->SetBinError(13,4912.153);
+   hCoherentNumber->SetBinError(14,6736.275);
+   hCoherentNumber->SetBinError(15,9385.884);
+   hCoherentNumber->SetBinError(16,12807.8);
+   hCoherentNumber->SetBinError(17,17146.22);
+   hCoherentNumber->SetBinError(18,23074.57);
+   hCoherentNumber->SetBinError(19,30904.88);
+   hCoherentNumber->SetBinError(20,40069.03);
+   hCoherentNumber->SetBinError(21,48735.82);
+   hCoherentNumber->SetBinError(22,55295.26);
+   hCoherentNumber->SetBinError(23,57705.5);
+   hCoherentNumber->SetBinError(24,56982.38);
+   hCoherentNumber->SetBinError(25,54455.22);
+   hCoherentNumber->SetBinError(26,50485.31);
+   hCoherentNumber->SetBinError(27,45207.53);
+   hCoherentNumber->SetBinError(28,38539.89);
+   hCoherentNumber->SetBinError(29,30923.17);
+   hCoherentNumber->SetBinError(30,22569.18);
+   hCoherentNumber->SetBinError(31,14604.24);
+   hCoherentNumber->SetBinError(32,8171.731);
+   hCoherentNumber->SetBinError(33,3448.315);
+   hCoherentNumber->SetBinError(34,992.7946);
+   hCoherentNumber->SetBinError(35,137.6758);
+   hCoherentNumber->SetMinimum(9.788807e-05);
+   hCoherentNumber->SetMaximum(1.468724e+10);
+   hCoherentNumber->SetEntries(4201322);
+   hCoherentNumber->SetStats(0);
+
+   Int_t ci;   // for color index setting
+   ci = TColor::GetColor("#009900");
+   hCoherentNumber->SetLineColor(ci);
+   hCoherentNumber->SetLineWidth(2);
+
+   ci = TColor::GetColor("#009900");
+   hCoherentNumber->SetMarkerColor(ci);
+   hCoherentNumber->SetMarkerSize(1.2);
+   hCoherentNumber->GetXaxis()->SetTitle("#theta [rad]");
+   hCoherentNumber->GetXaxis()->SetRange(21,50);
+   hCoherentNumber->GetXaxis()->SetNdivisions(506);
+   hCoherentNumber->GetXaxis()->SetLabelFont(42);
+   hCoherentNumber->GetXaxis()->SetLabelOffset(-0.005);
+   hCoherentNumber->GetXaxis()->SetLabelSize(0.06);
+   hCoherentNumber->GetXaxis()->SetTitleSize(0.07);
+   hCoherentNumber->GetXaxis()->SetTitleFont(42);
+   hCoherentNumber->GetYaxis()->SetTitle("Particles [1/BX]");
+   hCoherentNumber->GetYaxis()->SetNdivisions(506);
+   hCoherentNumber->GetYaxis()->SetLabelFont(42);
+   hCoherentNumber->GetYaxis()->SetLabelSize(0.06);
+   hCoherentNumber->GetYaxis()->SetTitleSize(0.07);
+   hCoherentNumber->GetYaxis()->SetTitleOffset(1.1);
+   hCoherentNumber->GetYaxis()->SetTitleFont(42);
+   hCoherentNumber->GetZaxis()->SetLabelFont(42);
+   hCoherentNumber->GetZaxis()->SetLabelSize(0.06);
+   hCoherentNumber->GetZaxis()->SetTitleSize(0.07);
+   hCoherentNumber->GetZaxis()->SetTitleOffset(1.1);
+   hCoherentNumber->GetZaxis()->SetTitleFont(42);
+   hCoherentNumber->Draw("hist");
+   Double_t xAxis26[51] = {1e-07, 1.392908e-07, 1.940192e-07, 2.702509e-07, 3.764346e-07, 5.243388e-07, 7.303556e-07, 1.017318e-06, 1.41703e-06, 1.973793e-06, 2.749312e-06, 3.829538e-06, 5.334194e-06, 7.43004e-06, 1.034936e-05, 1.441571e-05, 2.007975e-05, 2.796925e-05, 3.895858e-05, 5.426572e-05, 7.558715e-05, 0.0001052859, 0.0001466536, 0.000204275, 0.0002845362, 0.0003963327, 0.000552055, 0.0007689617, 0.001071093, 0.001491934, 0.002078126, 0.002894638, 0.004031965, 0.005616155, 0.007822787, 0.01089642, 0.01517771, 0.02114115, 0.02944768, 0.04101791, 0.05713417, 0.07958263, 0.1108513, 0.1544056, 0.2150728, 0.2995766, 0.4172826, 0.5812362, 0.8096085, 1.12771, 1.570796}; 
+   
+   TH1D *hIncoherentNumber = new TH1D("hIncoherentNumber","Incoherent Pairs ",50, xAxis26);
+   hIncoherentNumber->SetBinContent(0,0.06089744);
+   hIncoherentNumber->SetBinContent(1,0.05448718);
+   hIncoherentNumber->SetBinContent(2,0.1634615);
+   hIncoherentNumber->SetBinContent(3,0.2403846);
+   hIncoherentNumber->SetBinContent(4,0.4807692);
+   hIncoherentNumber->SetBinContent(5,0.9775641);
+   hIncoherentNumber->SetBinContent(6,2.067308);
+   hIncoherentNumber->SetBinContent(7,3.714744);
+   hIncoherentNumber->SetBinContent(8,7.166667);
+   hIncoherentNumber->SetBinContent(9,14.02564);
+   hIncoherentNumber->SetBinContent(10,27.41667);
+   hIncoherentNumber->SetBinContent(11,53.03526);
+   hIncoherentNumber->SetBinContent(12,101.7724);
+   hIncoherentNumber->SetBinContent(13,192.6058);
+   hIncoherentNumber->SetBinContent(14,357.7532);
+   hIncoherentNumber->SetBinContent(15,644.1699);
+   hIncoherentNumber->SetBinContent(16,1107.929);
+   hIncoherentNumber->SetBinContent(17,1819.853);
+   hIncoherentNumber->SetBinContent(18,2853.667);
+   hIncoherentNumber->SetBinContent(19,4260.231);
+   hIncoherentNumber->SetBinContent(20,6026.369);
+   hIncoherentNumber->SetBinContent(21,7920.337);
+   hIncoherentNumber->SetBinContent(22,9850.478);
+   hIncoherentNumber->SetBinContent(23,11623.72);
+   hIncoherentNumber->SetBinContent(24,13174.97);
+   hIncoherentNumber->SetBinContent(25,14619.59);
+   hIncoherentNumber->SetBinContent(26,16013.41);
+   hIncoherentNumber->SetBinContent(27,17236.76);
+   hIncoherentNumber->SetBinContent(28,18085.43);
+   hIncoherentNumber->SetBinContent(29,18227.39);
+   hIncoherentNumber->SetBinContent(30,17555.88);
+   hIncoherentNumber->SetBinContent(31,16242.68);
+   hIncoherentNumber->SetBinContent(32,14760.89);
+   hIncoherentNumber->SetBinContent(33,13430.03);
+   hIncoherentNumber->SetBinContent(34,12284.21);
+   hIncoherentNumber->SetBinContent(35,11209.05);
+   hIncoherentNumber->SetBinContent(36,10153.82);
+   hIncoherentNumber->SetBinContent(37,8981.176);
+   hIncoherentNumber->SetBinContent(38,7776.054);
+   hIncoherentNumber->SetBinContent(39,6683.843);
+   hIncoherentNumber->SetBinContent(40,5912.897);
+   hIncoherentNumber->SetBinContent(41,5503.048);
+   hIncoherentNumber->SetBinContent(42,5258.189);
+   hIncoherentNumber->SetBinContent(43,5028.34);
+   hIncoherentNumber->SetBinContent(44,4803.141);
+   hIncoherentNumber->SetBinContent(45,4545.497);
+   hIncoherentNumber->SetBinContent(46,4214.308);
+   hIncoherentNumber->SetBinContent(47,3630.176);
+   hIncoherentNumber->SetBinContent(48,1740.817);
+   hIncoherentNumber->SetBinContent(49,170.3173);
+   hIncoherentNumber->SetBinContent(50,115.8686);
+   hIncoherentNumber->SetBinError(0,0.01397083);
+   hIncoherentNumber->SetBinError(1,0.01321508);
+   hIncoherentNumber->SetBinError(2,0.02288919);
+   hIncoherentNumber->SetBinError(3,0.02775722);
+   hIncoherentNumber->SetBinError(4,0.03925464);
+   hIncoherentNumber->SetBinError(5,0.05597516);
+   hIncoherentNumber->SetBinError(6,0.08140016);
+   hIncoherentNumber->SetBinError(7,0.1091157);
+   hIncoherentNumber->SetBinError(8,0.1515589);
+   hIncoherentNumber->SetBinError(9,0.2120235);
+   hIncoherentNumber->SetBinError(10,0.2964354);
+   hIncoherentNumber->SetBinError(11,0.4122921);
+   hIncoherentNumber->SetBinError(12,0.5711337);
+   hIncoherentNumber->SetBinError(13,0.7857011);
+   hIncoherentNumber->SetBinError(14,1.070815);
+   hIncoherentNumber->SetBinError(15,1.436888);
+   hIncoherentNumber->SetBinError(16,1.884425);
+   hIncoherentNumber->SetBinError(17,2.415132);
+   hIncoherentNumber->SetBinError(18,3.024296);
+   hIncoherentNumber->SetBinError(19,3.695211);
+   hIncoherentNumber->SetBinError(20,4.394916);
+   hIncoherentNumber->SetBinError(21,5.038422);
+   hIncoherentNumber->SetBinError(22,5.618901);
+   hIncoherentNumber->SetBinError(23,6.103731);
+   hIncoherentNumber->SetBinError(24,6.498267);
+   hIncoherentNumber->SetBinError(25,6.845265);
+   hIncoherentNumber->SetBinError(26,7.16415);
+   hIncoherentNumber->SetBinError(27,7.432767);
+   hIncoherentNumber->SetBinError(28,7.613548);
+   hIncoherentNumber->SetBinError(29,7.643372);
+   hIncoherentNumber->SetBinError(30,7.501255);
+   hIncoherentNumber->SetBinError(31,7.215253);
+   hIncoherentNumber->SetBinError(32,6.878266);
+   hIncoherentNumber->SetBinError(33,6.560867);
+   hIncoherentNumber->SetBinError(34,6.274749);
+   hIncoherentNumber->SetBinError(35,5.993867);
+   hIncoherentNumber->SetBinError(36,5.704762);
+   hIncoherentNumber->SetBinError(37,5.365242);
+   hIncoherentNumber->SetBinError(38,4.992319);
+   hIncoherentNumber->SetBinError(39,4.628453);
+   hIncoherentNumber->SetBinError(40,4.353343);
+   hIncoherentNumber->SetBinError(41,4.199759);
+   hIncoherentNumber->SetBinError(42,4.105261);
+   hIncoherentNumber->SetBinError(43,4.014533);
+   hIncoherentNumber->SetBinError(44,3.923606);
+   hIncoherentNumber->SetBinError(45,3.816923);
+   hIncoherentNumber->SetBinError(46,3.675241);
+   hIncoherentNumber->SetBinError(47,3.411038);
+   hIncoherentNumber->SetBinError(48,2.362106);
+   hIncoherentNumber->SetBinError(49,0.7388429);
+   hIncoherentNumber->SetBinError(50,0.6094044);
+   hIncoherentNumber->SetEntries(9.491854e+07);
+   hIncoherentNumber->SetStats(0);
+   hIncoherentNumber->SetLineWidth(2);
+   hIncoherentNumber->SetMarkerSize(1.2);
+   hIncoherentNumber->GetXaxis()->SetTitle("#theta [rad]");
+   hIncoherentNumber->GetXaxis()->SetNdivisions(506);
+   hIncoherentNumber->GetXaxis()->SetLabelFont(42);
+   hIncoherentNumber->GetXaxis()->SetLabelOffset(-0.005);
+   hIncoherentNumber->GetXaxis()->SetLabelSize(0.06);
+   hIncoherentNumber->GetXaxis()->SetTitleSize(0.07);
+   hIncoherentNumber->GetXaxis()->SetTitleFont(42);
+   hIncoherentNumber->GetYaxis()->SetTitle("Particles [1/BX]");
+   hIncoherentNumber->GetYaxis()->SetNdivisions(506);
+   hIncoherentNumber->GetYaxis()->SetLabelFont(42);
+   hIncoherentNumber->GetYaxis()->SetLabelSize(0.06);
+   hIncoherentNumber->GetYaxis()->SetTitleSize(0.07);
+   hIncoherentNumber->GetYaxis()->SetTitleOffset(1.1);
+   hIncoherentNumber->GetYaxis()->SetTitleFont(42);
+   hIncoherentNumber->GetZaxis()->SetLabelFont(42);
+   hIncoherentNumber->GetZaxis()->SetLabelSize(0.06);
+   hIncoherentNumber->GetZaxis()->SetTitleSize(0.07);
+   hIncoherentNumber->GetZaxis()->SetTitleOffset(1.1);
+   hIncoherentNumber->GetZaxis()->SetTitleFont(42);
+   hIncoherentNumber->Draw("histsame");
+   Double_t xAxis27[51] = {1e-07, 1.392908e-07, 1.940192e-07, 2.702509e-07, 3.764346e-07, 5.243388e-07, 7.303556e-07, 1.017318e-06, 1.41703e-06, 1.973793e-06, 2.749312e-06, 3.829538e-06, 5.334194e-06, 7.43004e-06, 1.034936e-05, 1.441571e-05, 2.007975e-05, 2.796925e-05, 3.895858e-05, 5.426572e-05, 7.558715e-05, 0.0001052859, 0.0001466536, 0.000204275, 0.0002845362, 0.0003963327, 0.000552055, 0.0007689617, 0.001071093, 0.001491934, 0.002078126, 0.002894638, 0.004031965, 0.005616155, 0.007822787, 0.01089642, 0.01517771, 0.02114115, 0.02944768, 0.04101791, 0.05713417, 0.07958263, 0.1108513, 0.1544056, 0.2150728, 0.2995766, 0.4172826, 0.5812362, 0.8096085, 1.12771, 1.570796}; 
+   
+   TH1D *hCoherentNumber1 = new TH1D("hCoherentNumber1","Trident Pairs",50, xAxis27);
+   hCoherentNumber1->SetBinContent(3,6.617745);
+   hCoherentNumber1->SetBinContent(4,3.308873);
+   hCoherentNumber1->SetBinContent(5,6.617745);
+   hCoherentNumber1->SetBinContent(6,23.16211);
+   hCoherentNumber1->SetBinContent(7,49.63309);
+   hCoherentNumber1->SetBinContent(8,59.55971);
+   hCoherentNumber1->SetBinContent(9,162.1348);
+   hCoherentNumber1->SetBinContent(10,264.7098);
+   hCoherentNumber1->SetBinContent(11,625.3769);
+   hCoherentNumber1->SetBinContent(12,999.2795);
+   hCoherentNumber1->SetBinContent(13,1876.131);
+   hCoherentNumber1->SetBinContent(14,3791.968);
+   hCoherentNumber1->SetBinContent(15,7117.385);
+   hCoherentNumber1->SetBinContent(16,13543.22);
+   hCoherentNumber1->SetBinContent(17,24902.58);
+   hCoherentNumber1->SetBinContent(18,45156.18);
+   hCoherentNumber1->SetBinContent(19,80964.8);
+   hCoherentNumber1->SetBinContent(20,137185.9);
+   hCoherentNumber1->SetBinContent(21,217551.8);
+   hCoherentNumber1->SetBinContent(22,332892.4);
+   hCoherentNumber1->SetBinContent(23,517871.6);
+   hCoherentNumber1->SetBinContent(24,701093.8);
+   hCoherentNumber1->SetBinContent(25,848550.4);
+   hCoherentNumber1->SetBinContent(26,933581.9);
+   hCoherentNumber1->SetBinContent(27,945351.5);
+   hCoherentNumber1->SetBinContent(28,867940.4);
+   hCoherentNumber1->SetBinContent(29,693010.3);
+   hCoherentNumber1->SetBinContent(30,455393.5);
+   hCoherentNumber1->SetBinContent(31,236319.7);
+   hCoherentNumber1->SetBinContent(32,94560.96);
+   hCoherentNumber1->SetBinContent(33,24852.94);
+   hCoherentNumber1->SetBinContent(34,3543.803);
+   hCoherentNumber1->SetBinContent(35,403.6825);
+   hCoherentNumber1->SetBinContent(36,66.17745);
+   hCoherentNumber1->SetBinContent(37,3.308873);
+   hCoherentNumber1->SetBinContent(38,3.308873);
+   hCoherentNumber1->SetBinError(3,4.679452);
+   hCoherentNumber1->SetBinError(4,3.308873);
+   hCoherentNumber1->SetBinError(5,4.679452);
+   hCoherentNumber1->SetBinError(6,8.754454);
+   hCoherentNumber1->SetBinError(7,12.81521);
+   hCoherentNumber1->SetBinError(8,14.03836);
+   hCoherentNumber1->SetBinError(9,23.16211);
+   hCoherentNumber1->SetBinError(10,29.59546);
+   hCoherentNumber1->SetBinError(11,45.48948);
+   hCoherentNumber1->SetBinError(12,57.50207);
+   hCoherentNumber1->SetBinError(13,78.79009);
+   hCoherentNumber1->SetBinError(14,112.014);
+   hCoherentNumber1->SetBinError(15,153.4618);
+   hCoherentNumber1->SetBinError(16,211.6903);
+   hCoherentNumber1->SetBinError(17,287.053);
+   hCoherentNumber1->SetBinError(18,386.5437);
+   hCoherentNumber1->SetBinError(19,517.5927);
+   hCoherentNumber1->SetBinError(20,673.7437);
+   hCoherentNumber1->SetBinError(21,848.4404);
+   hCoherentNumber1->SetBinError(22,1049.523);
+   hCoherentNumber1->SetBinError(23,1309.034);
+   hCoherentNumber1->SetBinError(24,1523.099);
+   hCoherentNumber1->SetBinError(25,1675.633);
+   hCoherentNumber1->SetBinError(26,1757.585);
+   hCoherentNumber1->SetBinError(27,1768.629);
+   hCoherentNumber1->SetBinError(28,1694.669);
+   hCoherentNumber1->SetBinError(29,1514.293);
+   hCoherentNumber1->SetBinError(30,1227.534);
+   hCoherentNumber1->SetBinError(31,884.2803);
+   hCoherentNumber1->SetBinError(32,559.3659);
+   hCoherentNumber1->SetBinError(33,286.7668);
+   hCoherentNumber1->SetBinError(34,108.2866);
+   hCoherentNumber1->SetBinError(35,36.54769);
+   hCoherentNumber1->SetBinError(36,14.79773);
+   hCoherentNumber1->SetBinError(37,3.308873);
+   hCoherentNumber1->SetBinError(38,3.308873);
+   hCoherentNumber1->SetEntries(2172864);
+   hCoherentNumber1->SetStats(0);
+
+   ci = TColor::GetColor("#ff6666");
+   hCoherentNumber1->SetLineColor(ci);
+   hCoherentNumber1->SetLineWidth(2);
+
+   ci = TColor::GetColor("#ff6666");
+   hCoherentNumber1->SetMarkerColor(ci);
+   hCoherentNumber1->SetMarkerSize(1.2);
+   hCoherentNumber1->GetXaxis()->SetTitle("#theta [rad]");
+   hCoherentNumber1->GetXaxis()->SetNdivisions(506);
+   hCoherentNumber1->GetXaxis()->SetLabelFont(42);
+   hCoherentNumber1->GetXaxis()->SetLabelOffset(-0.005);
+   hCoherentNumber1->GetXaxis()->SetLabelSize(0.06);
+   hCoherentNumber1->GetXaxis()->SetTitleSize(0.07);
+   hCoherentNumber1->GetXaxis()->SetTitleFont(42);
+   hCoherentNumber1->GetYaxis()->SetTitle("Particles [1/BX]");
+   hCoherentNumber1->GetYaxis()->SetNdivisions(506);
+   hCoherentNumber1->GetYaxis()->SetLabelFont(42);
+   hCoherentNumber1->GetYaxis()->SetLabelSize(0.06);
+   hCoherentNumber1->GetYaxis()->SetTitleSize(0.07);
+   hCoherentNumber1->GetYaxis()->SetTitleOffset(1.1);
+   hCoherentNumber1->GetYaxis()->SetTitleFont(42);
+   hCoherentNumber1->GetZaxis()->SetLabelFont(42);
+   hCoherentNumber1->GetZaxis()->SetLabelSize(0.06);
+   hCoherentNumber1->GetZaxis()->SetTitleSize(0.07);
+   hCoherentNumber1->GetZaxis()->SetTitleOffset(1.1);
+   hCoherentNumber1->GetZaxis()->SetTitleFont(42);
+   hCoherentNumber1->Draw("histsame");
+   Double_t xAxis28[51] = {1e-07, 1.392908e-07, 1.940192e-07, 2.702509e-07, 3.764346e-07, 5.243388e-07, 7.303556e-07, 1.017318e-06, 1.41703e-06, 1.973793e-06, 2.749312e-06, 3.829538e-06, 5.334194e-06, 7.43004e-06, 1.034936e-05, 1.441571e-05, 2.007975e-05, 2.796925e-05, 3.895858e-05, 5.426572e-05, 7.558715e-05, 0.0001052859, 0.0001466536, 0.000204275, 0.0002845362, 0.0003963327, 0.000552055, 0.0007689617, 0.001071093, 0.001491934, 0.002078126, 0.002894638, 0.004031965, 0.005616155, 0.007822787, 0.01089642, 0.01517771, 0.02114115, 0.02944768, 0.04101791, 0.05713417, 0.07958263, 0.1108513, 0.1544056, 0.2150728, 0.2995766, 0.4172826, 0.5812362, 0.8096085, 1.12771, 1.570796}; 
+   
+   TH1D *hIncoherentNumber1 = new TH1D("hIncoherentNumber1","#gamma#gamma #rightarrow Hadrons",50, xAxis28);
+   hIncoherentNumber1->SetBinContent(13,4.734848e-05);
+   hIncoherentNumber1->SetBinContent(15,4.734848e-05);
+   hIncoherentNumber1->SetBinContent(16,0.0001420455);
+   hIncoherentNumber1->SetBinContent(17,0.0002367424);
+   hIncoherentNumber1->SetBinContent(18,0.0007575758);
+   hIncoherentNumber1->SetBinContent(19,0.001136364);
+   hIncoherentNumber1->SetBinContent(20,0.001420455);
+   hIncoherentNumber1->SetBinContent(21,0.003172348);
+   hIncoherentNumber1->SetBinContent(22,0.006960227);
+   hIncoherentNumber1->SetBinContent(23,0.01273674);
+   hIncoherentNumber1->SetBinContent(24,0.02320076);
+   hIncoherentNumber1->SetBinContent(25,0.04848485);
+   hIncoherentNumber1->SetBinContent(26,0.08357008);
+   hIncoherentNumber1->SetBinContent(27,0.1435133);
+   hIncoherentNumber1->SetBinContent(28,0.23125);
+   hIncoherentNumber1->SetBinContent(29,0.3388258);
+   hIncoherentNumber1->SetBinContent(30,0.4767992);
+   hIncoherentNumber1->SetBinContent(31,0.6396307);
+   hIncoherentNumber1->SetBinContent(32,0.8322443);
+   hIncoherentNumber1->SetBinContent(33,1.046828);
+   hIncoherentNumber1->SetBinContent(34,1.285275);
+   hIncoherentNumber1->SetBinContent(35,1.508428);
+   hIncoherentNumber1->SetBinContent(36,1.760227);
+   hIncoherentNumber1->SetBinContent(37,1.984517);
+   hIncoherentNumber1->SetBinContent(38,2.216335);
+   hIncoherentNumber1->SetBinContent(39,2.42732);
+   hIncoherentNumber1->SetBinContent(40,2.623343);
+   hIncoherentNumber1->SetBinContent(41,2.784943);
+   hIncoherentNumber1->SetBinContent(42,2.927225);
+   hIncoherentNumber1->SetBinContent(43,3.041903);
+   hIncoherentNumber1->SetBinContent(44,3.118229);
+   hIncoherentNumber1->SetBinContent(45,3.203646);
+   hIncoherentNumber1->SetBinContent(46,3.249242);
+   hIncoherentNumber1->SetBinContent(47,3.256061);
+   hIncoherentNumber1->SetBinContent(48,3.320786);
+   hIncoherentNumber1->SetBinContent(49,3.47803);
+   hIncoherentNumber1->SetBinContent(50,3.960606);
+   hIncoherentNumber1->SetBinError(13,4.734848e-05);
+   hIncoherentNumber1->SetBinError(15,4.734848e-05);
+   hIncoherentNumber1->SetBinError(16,8.200998e-05);
+   hIncoherentNumber1->SetBinError(17,0.0001058744);
+   hIncoherentNumber1->SetBinError(18,0.0001893939);
+   hIncoherentNumber1->SetBinError(19,0.0002319593);
+   hIncoherentNumber1->SetBinError(20,0.0002593383);
+   hIncoherentNumber1->SetBinError(21,0.0003875641);
+   hIncoherentNumber1->SetBinError(22,0.0005740699);
+   hIncoherentNumber1->SetBinError(23,0.0007765729);
+   hIncoherentNumber1->SetBinError(24,0.001048103);
+   hIncoherentNumber1->SetBinError(25,0.001515152);
+   hIncoherentNumber1->SetBinError(26,0.0019892);
+   hIncoherentNumber1->SetBinError(27,0.002606748);
+   hIncoherentNumber1->SetBinError(28,0.003308978);
+   hIncoherentNumber1->SetBinError(29,0.004005357);
+   hIncoherentNumber1->SetBinError(30,0.004751392);
+   hIncoherentNumber1->SetBinError(31,0.00550323);
+   hIncoherentNumber1->SetBinError(32,0.006277381);
+   hIncoherentNumber1->SetBinError(33,0.007040291);
+   hIncoherentNumber1->SetBinError(34,0.007801013);
+   hIncoherentNumber1->SetBinError(35,0.008451141);
+   hIncoherentNumber1->SetBinError(36,0.009129299);
+   hIncoherentNumber1->SetBinError(37,0.009693497);
+   hIncoherentNumber1->SetBinError(38,0.01024403);
+   hIncoherentNumber1->SetBinError(39,0.01072054);
+   hIncoherentNumber1->SetBinError(40,0.01114501);
+   hIncoherentNumber1->SetBinError(41,0.01148315);
+   hIncoherentNumber1->SetBinError(42,0.01177284);
+   hIncoherentNumber1->SetBinError(43,0.01200123);
+   hIncoherentNumber1->SetBinError(44,0.01215086);
+   hIncoherentNumber1->SetBinError(45,0.01231616);
+   hIncoherentNumber1->SetBinError(46,0.0124035);
+   hIncoherentNumber1->SetBinError(47,0.0124165);
+   hIncoherentNumber1->SetBinError(48,0.01253931);
+   hIncoherentNumber1->SetBinError(49,0.01283275);
+   hIncoherentNumber1->SetBinError(50,0.01369411);
+   hIncoherentNumber1->SetEntries(1056784);
+   hIncoherentNumber1->SetStats(0);
+
+   ci = TColor::GetColor("#00cccc");
+   hIncoherentNumber1->SetLineColor(ci);
+   hIncoherentNumber1->SetLineWidth(2);
+
+   ci = TColor::GetColor("#00cccc");
+   hIncoherentNumber1->SetMarkerColor(ci);
+   hIncoherentNumber1->SetMarkerSize(1.2);
+   hIncoherentNumber1->GetXaxis()->SetTitle("#theta [rad]");
+   hIncoherentNumber1->GetXaxis()->SetNdivisions(506);
+   hIncoherentNumber1->GetXaxis()->SetLabelFont(42);
+   hIncoherentNumber1->GetXaxis()->SetLabelOffset(-0.005);
+   hIncoherentNumber1->GetXaxis()->SetLabelSize(0.06);
+   hIncoherentNumber1->GetXaxis()->SetTitleSize(0.07);
+   hIncoherentNumber1->GetXaxis()->SetTitleFont(42);
+   hIncoherentNumber1->GetYaxis()->SetTitle("Particles [1/BX]");
+   hIncoherentNumber1->GetYaxis()->SetNdivisions(506);
+   hIncoherentNumber1->GetYaxis()->SetLabelFont(42);
+   hIncoherentNumber1->GetYaxis()->SetLabelSize(0.06);
+   hIncoherentNumber1->GetYaxis()->SetTitleSize(0.07);
+   hIncoherentNumber1->GetYaxis()->SetTitleOffset(1.1);
+   hIncoherentNumber1->GetYaxis()->SetTitleFont(42);
+   hIncoherentNumber1->GetZaxis()->SetLabelFont(42);
+   hIncoherentNumber1->GetZaxis()->SetLabelSize(0.06);
+   hIncoherentNumber1->GetZaxis()->SetTitleSize(0.07);
+   hIncoherentNumber1->GetZaxis()->SetTitleOffset(1.1);
+   hIncoherentNumber1->GetZaxis()->SetTitleFont(42);
+   hIncoherentNumber1->Draw("histsame");
+   
+   TLegend *leg = new TLegend(0.45,0.705,0.8,0.90,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetTextFont(42);
+   leg->SetTextSize(0.06);
+   leg->SetLineColor(0);
+   leg->SetLineStyle(0);
+   leg->SetLineWidth(0);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("NULL","Coherent Pairs   ","lpf");
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#009900");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+
+   ci = TColor::GetColor("#009900");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1.2);
+   entry=leg->AddEntry("NULL","Incoherent Pairs ","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1.2);
+   entry=leg->AddEntry("NULL","Trident Pairs","lpf");
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#ff6666");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+
+   ci = TColor::GetColor("#ff6666");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1.2);
+   entry=leg->AddEntry("NULL","#gamma#gamma #rightarrow Hadrons","lpf");
+   entry->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#00cccc");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+
+   ci = TColor::GetColor("#00cccc");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1.2);
+   leg->Draw();
+   cNumber->Modified();
+   cNumber->cd();
+   cNumber->SetSelected(cNumber);
+
+
+  gROOT->SetStyle("Plain"); /*Default white background for all plots*/
+  /* set bkg color of all to kWhite: white, but not 0*/
+  gStyle->SetCanvasColor(kWhite);
+  gStyle->SetFrameFillColor(kWhite);
+  gStyle->SetStatColor(kWhite);
+  gStyle->SetPadColor(kWhite);
+  gStyle->SetFillColor(10);
+  gStyle->SetTitleFillColor(kWhite);
+  
+  
+   /* SetPaperSize wants width & height in cm: A4 is 20,26 & US is 20,24*/
+   gStyle->SetPaperSize(20, 26); 
+   /* No yellow border around histogram*/
+   gStyle->SetDrawBorder(0);
+   /* remove border of canvas*/
+   gStyle->SetCanvasBorderMode(0);
+   /* remove border of pads*/
+   gStyle->SetPadBorderMode(0);
+   gStyle->SetFrameBorderMode(0);
+   gStyle->SetLegendBorderSize(0);
+  
+   /* default text size*/
+   gStyle->SetTextSize(0.05);
+   gStyle->SetTitleSize(0.07,"xyz");
+   gStyle->SetLabelSize(0.06,"xyz");
+   /* title offset: distance between given text and axis, here x,y,z*/
+   gStyle->SetLabelOffset(0.015,"xyz");
+   //AS: I have to change this, because of the exponential values reaching into the axis title!!!
+   gStyle->SetLabelOffset(0.005,"y");
+   gStyle->SetTitleOffset(1.1,"yz");
+   gStyle->SetTitleOffset(1.0,"x");
+
+   /* Use visible font for all text*/
+   int font = 42; 
+   gStyle->SetTitleFont(font);
+   gStyle->SetTitleFontSize(0.06);
+   gStyle->SetStatFont(font);
+   gStyle->SetStatFontSize(0.07);
+   gStyle->SetTextFont(font);
+   gStyle->SetLabelFont(font,"xyz");
+   gStyle->SetTitleFont(font,"xyz");
+   gStyle->SetTitleBorderSize(0);
+   gStyle->SetStatBorderSize(1);
+
+   /* big marker points*/
+   gStyle->SetMarkerStyle(1);
+   gStyle->SetLineWidth(2);  
+   gStyle->SetMarkerSize(1.2);
+   /*set palette in 2d histogram to nice and colorful one*/
+   gStyle->SetPalette(1,0); 
+
+   /*No title for histograms*/
+   gStyle->SetOptTitle(0);
+   /* show the errors on the stat box */
+   gStyle->SetOptStat(0); 
+   /* show errors on fitted parameters*/
+   gStyle->SetOptFit(0); 
+   /* number of decimals used for errors*/
+   gStyle->SetEndErrorSize(5);   
+
+   /* set line width to 2 by default so that histograms are visible when printed small
+      idea: emphasize the data, not the frame around*/
+   gStyle->SetHistLineWidth(2);
+   gStyle->SetFrameLineWidth(2);
+   gStyle->SetFuncWidth(2);
+   gStyle->SetHistLineColor(kBlack);
+   gStyle->SetFuncColor(kRed);
+   gStyle->SetLabelColor(kBlack,"xyz");
+
+   //set the margins
+   gStyle->SetPadBottomMargin(0.18);
+   gStyle->SetPadTopMargin(0.08);
+   gStyle->SetPadRightMargin(0.08);
+   gStyle->SetPadLeftMargin(0.17);
+   
+   //set the number of divisions to show
+   gStyle->SetNdivisions(506, "xy");
+   
+   //turn off xy grids
+   gStyle->SetPadGridX(0);
+   gStyle->SetPadGridY(0);
+   
+   //set the tick mark style
+   gStyle->SetPadTickX(1);
+   gStyle->SetPadTickY(1);
+
+   gStyle->SetCanvasDefW(800);
+   gStyle->SetCanvasDefH(700);
+
+   gROOT->ForceStyle();
+   //   gPad->Update();
+
+   cNumber->SaveAs("Angle.pdf");
+}
