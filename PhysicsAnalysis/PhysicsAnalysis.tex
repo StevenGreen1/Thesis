@@ -5,14 +5,109 @@
 {Homer Simpson}
 
 \section{Motivation}
-Vector boson scattering is the interaction of the form $\text{VV} \rightarrow \text{VV}$ where V is any of the electroweak gauge bosons $\text{W}^{+}$, $\text{W}^{-}$, Z or $\gamma$.  This is an interesting process to look at because it provides insights into beyond standard model physics that impacts the electroweak sector through the probing of anomalous triple and quartic gauge couplings.  Vector boson scattering also gives a detailed understanding of how the Higgs of the standard model is able to unitarise the otherwise unbounded cross section for longitudinal gauge boson scattering.  
+Vector boson scattering is the interaction of the form $\text{VV} \rightarrow \text{VV}$ where V is any of the electroweak gauge bosons $\text{W}^{+}$, $\text{W}^{-}$, Z or $\gamma$.  This is an interesting process to look at because it gives a detailed understanding of how the Higgs of the standard model is able to unitarise the otherwise unbounded cross section for longitudinal gauge boson scattering.  Vector boson scattering also provides insights into beyond standard model physics that impacts the electroweak sector through the probing of anomalous triple and quartic gauge couplings.  Presented in this section is an analysis into the sensitivity of CLIC to two of these anomalous quartic gauge couplings through the vector boson scattering process.
 
-The anomalous triple and quartic gauge couplings are introduced as parameters in an effective field theory....
+Triple and quartic gauge couplings lead to interactions of the form $\text{V} \rightarrow \text{VV}$ and $\text{VV} \rightarrow \text{VV}$ respectively, where V is any of the electroweak gauge bosons $\text{W}^{+}$, $\text{W}^{-}$, Z or $\gamma$.  In the standard model there are five permissible  vertices, shown in figure \ref{fig:smtripleandquarticvertices}, which arise from the kinematic term in the standard model Lagrangian $\mathcal{L}_{kin} = -\frac{1}{4}B_{\mu\nu}B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}W^{\mu\nu}$.
 
+Anomalous triple and quartic gauge couplings are introduced as parameters in effective field theory models (EFTs).  These anomalous couplings can either modify the standard model triple and quartic gauge boson couplings or introduce new triple and quartic couplings that were previously forbidden.  
 
+EFT models work under the assumption than new physics exists at an energy scale, $\Lambda$, which is assumed to be much higher than the energy scales currently accessible to modern day particle physics experiments.  Furthermore, in limit $\Lambda \rightarrow \infty$ the standard model should be reproduced as the new physics becomes kinematically inaccessible.  Such models are thus, by construction, guaranteed to recover the current best model of particle physics, while still introducing a regime for new physics.  Such theories are model independent, giving them a wide span in the search for new physics.
 
+A classic example of this is the Fermi theory for beta decay whereby the weak interaction occurring when a neutron decays into a proton, electron and anto-neutrino can be, at energies much below the mass of the mediating W boson, can be treated as a four-point vetex with quartic coupling strength $\text{G}_{F}$, the Fermi Coupling constant.  (Feynamn Diagram if keep)
 
-A potential source of beyond the standard model physics that could be studied at the CLIC experiment is that of the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.  The theoretical basis for these couplings is described in section THEORY REF.  CLIC would show sensitivity to these couplings through vector boson scattering processes that are summarised in figures \ref{fig:vbsw}, \ref{fig:vbsz}, \ref{fig:vbswz} and \ref{fig:vbszw}.  An analysis of the sensitivity of CLIC to this processes is presented in the following chapter.
+This analysis examines the anomalous quartic gauge couplings $\alpha_{4}$ and $\alpha_{5}$, which are introduced as part of an EFT described in chapter THEORY CHAPTER.  They appear in the Lagrangian through the following terms  
+
+\begin{equation}
+\alpha_{4}[\text{Tr}(V^{\mu}V_{\mu})]^{2} \text{ and } \alpha_{5}\text{Tr}(V^{\mu}V_{\nu})] \text{Tr}(V^{\nu}V_{\mu})]
+\end{equation}
+
+Where $V_{\mu}$ corresponds, in the proper gauge, to a linear combination of the massive gauge bosons $\text{W}^{+}$, $\text{W}^{-}$ and Z.  These terms effect the coupling constants for the standard model vertices $\text{W}^{+}\text{W}^{-} \rightarrow \text{W}^{+}\text{W}^{-}$ and $\text{W}^{+}\text{W}^{-} \rightarrow \text{Z}\text{Z}$ as well as introducing the new vertex $\text{Z}\text{Z} \rightarrow \text{Z}\text{Z}$.  
+
+Vector boson scattering is an appropriate process to consider for a sensitivity study into the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ as quartic gauge boson self-interaction vertices will be present in the dominant channels for such interactions (FEYNMAN DIAGRAM). 
+
+As CLIC is purposefully deigned for high precision measurements it is ideal for a study into vector boson scattering.  The application of Particle Flow Calorimetry with fine granularity calorimeters gives CLIC excellent jet energy resolution, which allows CLIC to clearly characterise the multi-jet final states that will be present in a study of vector boson scattering.  When considering the invariant mass of these paired up jets, the nominal jet energy resolution for CLIC, allows for accurate separation of W and Z bosons, which will be invaluable in event selection.  Such precision also helps CLIC to characterise final states containing missing energy in the form of neutrinos, which will also be present in a vector boson scattering study.  The standard model cross sections for vector boson scattering final states at the proposed running energies for CLIC are such that there is a significant signal sample size for such an analysis.  Finally, such a study at CLIC offers the potential to be several orders of magnitude more precise than the complementary studies at the LHC due to the reduction in hadronic backgrounds and the high $\sqrt{s}$ for the interaction offered by colliding leptons instead of protons.
+
+\iffalse
+
+\begin{figure}
+  \begin{tikzpicture}[]
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[left=1cm of a1] (a2) {\(Z/$\gamma$\)};
+    \vertex[above right=1cm of a1] (a3) {\(W^{+}\)};
+    \vertex[below right=1cm of a1] (a4) {\(W^{-}\)};
+    \diagram* {
+       (a1) -- [boson] (a2) 
+       (a1) -- [boson] (a3) 
+       (a1) -- [boson] (a4) 
+    };
+  \end{feynman}
+  \end{tikzpicture}%
+  \begin{tikzpicture}[]
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[above left=1cm of a1] (a2) {\(W^{+}\)};
+    \vertex[above right=1cm of a1] (a3) {\(W^{-}\)};
+    \vertex[below left=1cm of a1] (a4) {\(W^{+}\)};
+    \vertex[below right=1cm of a1] (a5) {\(W^{-}\)};
+    \diagram* {
+       (a1) -- [boson] (a2) 
+       (a1) -- [boson] (a3) 
+       (a1) -- [boson] (a4) 
+       (a1) -- [boson] (a5) 
+    };
+  \end{feynman}
+  \end{tikzpicture}%
+  \begin{tikzpicture}[]
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[above left=1cm of a1] (a2) {\(W^{+}\)};
+    \vertex[above right=1cm of a1] (a3) {\(W^{-}\)};
+    \vertex[below left=1cm of a1] (a4) {\(Z\)};
+    \vertex[below right=1cm of a1] (a5) {\(Z\)};
+    \diagram* {
+       (a1) -- [boson] (a2) 
+       (a1) -- [boson] (a3) 
+       (a1) -- [boson] (a4) 
+       (a1) -- [boson] (a5) 
+    };
+  \end{feynman}
+  \end{tikzpicture}%
+  \begin{tikzpicture}[]
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[above left=1cm of a1] (a2) {\(W^{+}\)};
+    \vertex[above right=1cm of a1] (a3) {\(W^{-}\)};
+    \vertex[below left=1cm of a1] (a4) {\($\gamma$\)};
+    \vertex[below right=1cm of a1] (a5) {\(Z\)};
+    \diagram* {
+       (a1) -- [boson] (a2) 
+       (a1) -- [boson] (a3) 
+       (a1) -- [boson] (a4) 
+       (a1) -- [boson] (a5) 
+    };
+  \end{feynman}
+  \end{tikzpicture}%
+  \begin{tikzpicture}[]
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[above left=1cm of a1] (a2) {\(W^{+}\)};
+    \vertex[above right=1cm of a1] (a3) {\(W^{-}\)};
+    \vertex[below left=1cm of a1] (a4) {\($\gamma$\)};
+    \vertex[below right=1cm of a1] (a5) {\($\gamma$\)};
+    \diagram* {
+       (a1) -- [boson] (a2) 
+       (a1) -- [boson] (a3) 
+       (a1) -- [boson] (a4) 
+       (a1) -- [boson] (a5) 
+    };
+  \end{feynman}
+  \end{tikzpicture}
+  \caption[Gauge boson self-coupling vertices in the standard model.]{Gauge boson self-coupling vertices in the standard model.}
+  \label{fig:smtripleandquarticvertices}
+\end{figure}
+
+\fi
 
 \iffalse
 
@@ -149,11 +244,11 @@ A potential source of beyond the standard model physics that could be studied at
 \section{Event Generation, Simulation and Reconstruction}
 \label{sec:eventgenerationandbackgrounds}
 
-The event generation software used by the CLIC experiment is Whizard \cite{0708.4233, hep-ph/0102195}.  Whizard version 1.97 was used for generating the new samples, while version 1.95 is used for the official CLIC samples. It was recommended by the Whizard authors to use version 1.97 as it contains a unitarisation scheme that ensures the probabilities remain physical up to high energies when considering the effect of anomalous gauge couplings.  
+\textcolor{red}{Check this doesn't sound too close to Higgs paper.}
 
-The hadronic channels are the dominant decay modes of the W and the Z boson, with branching fractions of the order of 70\% for both (REFERENCE PDG), and as the vector boson scattering is the desired signal channel, the focus of this analysis will be upon the hadronic decays of the W and Z.  The vector boson scattering dominated signal final states containing hadronic decay products for the bosons are $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  
+Events were generated for this analysis using the Whizard \cite{0708.4233, hep-ph/0102195} 1.95 program.  Due to the presence of beamstrahlung photons in the CLIC beam events were generated from collisions of $\text{e}^{+}\text{e}^{-}$, $\text{e}^{+}\gamma$, $\gamma\text{e}^{-}$ and $\gamma\gamma$.  The energy spectra used for all particles involved in these collisions accounted for the effects of radiation in the form of beamstrahlung photons and the intrinsic energy spread of the CLIC beam.  Furthermore, events involving the interaction between the electromagnetic field of the beam particles involving quasi-real photon mediators with low momenta, described by the Weizsacker-Williams approximation (or the Equivalent Photon Approximation), were generated using Whizard and included in this analysis.  Fragmentation and hadronisation was implemented using Pythia 6.4 \cite{Sjostrand:2006za}, which was tuned for OPAL $\text{e}^{+}\text{e}^{-}$ collision data recorded at LEP (see \cite{Linssen:2012hp} for details).  The decays of tau leptons was simulated using Tauola \cite{Was:2000st}.  The full list of events simulated for this analysis, along with their standard model cross section at 1.4 TeV can be found in table \ref{table:crosssectionfull}.
 
-For all samples considered in this analysis, the CLID\_ILD detector \cite{arXiv:1006.3396} was used.  The detector was simulated using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} is used to apply particle flow calorimetry in this reconstruction.
+The samples used in this analysis were simulated with the CLID\_ILD detector model \cite{arXiv:1006.3396}.  The simulation was performed in MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter PANDORA CHAPTER.
  
 The CLIC\_ILD is a variant of the ILD detector described in section REFERENCE.  The only significant difference between the modles is that CLIC\_ILD has a 60 layer scintillator-tugsten HCal in comparison to the 48 layers found in the default ILD detector.  The thicknesses of the layers in the HCal models are identical, so the extra layers correspond to an increase in the total thickness of the HCal.  This is needed to compensate for the effects of leakage at the higher energies seen by the CLIC experiment in comparison to the ILC. 
 
@@ -189,11 +284,13 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2\\
 \label{table:crosssectionfull}
 \end{table}
 
-
-
-
 \section{Modelling of Anomalous Gauge Couplings}
 \label{sec:eventweights}
+
+Whizard version 1.95 was used for generating the new samples, while version 1.95 is used for the official CLIC samples. It was recommended by the Whizard authors to use version 1.97 as it contains a unitarisation scheme that ensures the probabilities remain physical up to high energies when considering the effect of anomalous gauge couplings.  
+
+The hadronic channels are the dominant decay modes of the W and the Z boson, with branching fractions of the order of 70\% for both (REFERENCE PDG), and as the vector boson scattering is the desired signal channel, the focus of this analysis will be upon the hadronic decays of the W and Z.  The vector boson scattering dominated signal final states containing hadronic decay products for the bosons are $\nu\nu\text{qqqq}$, $\text{l}\nu\text{qqqq}$ and llqqqq.  
+
 
 \subsection{Cross Section Sensitivity}
 \label{sec:crosssectioncheck}
