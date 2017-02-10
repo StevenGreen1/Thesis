@@ -403,8 +403,7 @@ Confidence limits on the individual parameters $\alpha_{4}$ and $\alpha_{5}$ wer
 
 \subsection{Lepton Finding} 
 \label{sec:isolatedleptonfinding}
-
-An isolated lepton finder is included in the analysis chain in an attempt to reject background events containing leptons.  The isolated lepton finder attempts to find whether a PFO is an electron or muon based on the calorimetric energy deposits before then placing cuts on the tracks associated to the PFOs to determine whether the tracks originate from the impact point.  Finally isolation cuts restricting the energy in a cone surrounding the PFO are applied to ensure the particles does not belong to a jet.  The efficiency of the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.  
+An isolated lepton finder was included in the analysis chain in an attempt to reject background events containing leptons.  The isolated lepton finder attempts to find whether a PFO is an electron or muon based on the calorimetric energy deposits before then placing cuts on the tracks associated to the PFOs to determine whether the tracks originate from the impact point.  Finally isolation cuts restricting the energy in a cone surrounding the PFO are applied to ensure the particles does not belong to a jet.  The efficiency of the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.  
 
 \begin{table}[h!]
 \centering
@@ -424,57 +423,53 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 48.9 \\
 
 \subsection{Discriminant Variables} 
 \label{sec:analysisprocessor}
-The next step in the analysis chain was to calculate a number of event-based variables that are useful for the downstream analysis.  These variables can be divided into three categories:
+The next stage of the analysis involved the calculation of a number of event-based variables that were found to be useful for this analysis.  The variables can be divided into four categories:
+
 \begin{itemize}
-\item \texfbf{Particle level}.  This includes all variables related to the individual PFOs and includes:
-\item \texfbf{Candidate boson}.  
-\item \texfbf{Event based}.  
+\item \textbf{Particle level} variables:
+
+\begin{itemize}
+\item Number of PFOs.
+\item Particle type and energy of the highest energy PFO.
+\item Energy of the highest energy electron.
+\item Cosine of the polar angle of the highest energy track.
 \end{itemize}
 
+\item \textbf{Candidate boson} variables:
 
-Finally, an analysis processor is run, which calculates a number of variables used downstream in the analysis. Included in these are:
 \begin{itemize}
-\item Number of PFOs in the jets and the paired up bosons.
-\item Number of charged PFOs in the jets and paired up bosons.
-\item Highest energy PFO: energy, momentum, transverse momentum, $cos\theta$.
-\item Highest energy electron PFO: energy, momentum, transverse momentum, $cos\theta$.
-\item Highest energy muon PFO: energy, momentum, transverse momentum, $cos\theta$.
-\item Highest energy photon PFO: energy, momentum, transverse momentum, $cos\theta$.
-\item (If in existence) Highest and second highest energy isolated lepton: energy, momentum, transverse momentum, $cos\theta$.
-\item Bosons: energy, momentum, transverse momentum, $cos\theta$.
-\item Invariant mass of the boson pair.
-\item Jets: energy, momentum, transverse momentum, $cos\theta$.
-\item $Cos\theta$ Of the missing 3-momentum vector.
-\item Recoil mass.
-\item Invariant mass of the visible system.
-\item $y_{i}$, $y_{i+1}$. Jet clustering parameters ranging from i = 0 to 6.
-\item $Cos\theta^{*}_{Jet}$.  This is the opening angle of a pair of jets, assumed to be from a signle boson, in the rest frame of the boson.
-\item $Cos\theta^{*}_{Boson}$.  This is the opening angle of a pair of bosons, assumed to be from vector boson scattering, in the rest frame of the di-boson pair.
-\item Transverse momentum and energy of the event.
-\item Acolinearity of the jet pairs forming the bosons and the acoilinearity of the boson pair.
-\item Principle thrust $T$ and the thrust axes $\bar{\textbf{n}}$. Note $\bar{\textbf{n}}$ is a unit vector. These are defined by the following equation
+\item Energy of candidate bosons.
+\item Invariant mass of the bosons.
+\item Acolinearity of the boson pair, which is defined as 180 degrees minus the opening angle of the pair of bosons in the rest frame of the detector.
+\item Acolinearities of the pair of jets forming each the two candidate boson.
+\item $\text{Cos}(\theta^{*}_{Bosons})$.  Cosine of the opening of the bosons in the rest frame of the boson pair.
+\item $\text{Cos}(\theta^{*}_{Jets})$.  Cosine of the opening of the jets forming each candidate in the rest frame of the candidate boson.
+\end{itemize}
+
+\item \textbf{Event based} variables:  
+
+\begin{itemize}
+\item The invariant mass of the visible system.
+\item The vector sum of the transverse momentum of all PFOs in the event. 
+\item The cosine of the polar angle of the missing 3-momentum assuming a collision at the nominal centre of mass energy.
+\item Principle thrust $T$, defined through the following equation
 \begin{equation}
 T = \text{max}_{\bar{\textbf{n}}} (\frac{\Sigma_{i} \textbf{p}_{i}.\bar{\textbf{n}}}{\Sigma_{i} |\textbf{p}_{i}|^{2}})
 \end{equation}
-\item The major and minor thrust values. These are defined with respect to the thrust axes $\bar{\textbf{n}}$ in the following way:
-\begin{equation}
-T = \text{max}_{\bar{\textbf{n}}_{major}} (\frac{\Sigma_{i} \textbf{p}_{i}.\bar{\textbf{n}}_{major}}{\Sigma_{i} |\textbf{p}_{i}|^{2}})
-\end{equation}
-where $\bar{\textbf{n}}_{major}.\bar{\textbf{n}} = \textbf{0}$. Similarly the minor thrust value is defined as 
-\begin{equation}
-T = \frac{\Sigma_{i} \textbf{p}_{i}.\bar{\textbf{n}}_{minor}}{\Sigma_{i} |\textbf{p}_{i}|^{2}}
-\end{equation}
-where $\bar{\textbf{n}}_{minor}.\bar{\textbf{n}} = \bar{\textbf{n}}_{minor}.\bar{\textbf{n}}_{major} =\textbf{0}$
-\item Sphericity. This is defined using the sphericity tensor $S^{ab}$ defined as:
+Where $p_{i}$ are the components of the momenta of PFO i in the rest frame of the detector, $\bar{\textbf{n}}$ is unit vector and the sum $\Sigma_{i}$ runs over all particles in the event.
+\item Sphericity, defined through the sphericity tensor $S^{ab}$:
 \begin{equation}
 S^{ab} = \frac{\Sigma_{i}p^{\alpha}_{i}p^{\alpha}_{j}}{\Sigma_{i,\alpha=1,2,3}|p^{\alpha}_{i|^{2}}}
 \end{equation}
-Where $p_{i}$ are the components of the momenta of particle i in the frame of the detector and the sum runs over all particles in the event. Sphericity is defined as $\text{S} = \frac{3}{2}(\lambda_{2} + \lambda_{3})$, where $\lambda_{i}$ are the eigenvalues of the sphericity tensor defined such $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3}$.  This provides a measure of how spherical the reconstructed event topology is with isotropic events having $S \approx 1$, while two jet events have $S \approx 0$.  (Also $\lambda_{1} + \lambda_{2} + \lambda_{3} = 1$.)
-\item Aplanarity. Aplanarity is defined as $\frac{3}{2} \lambda_{3}$ where $\lambda_{3}$ is an eigenvalue of the sphericity tensor.  This provides a measure of whether an event is linear or planar.
-\item B and C tag values for the jets, the min and max B and C tag values for the bosons.
+Where $p_{i}$ are the components of the momenta of PFO i in the rest frame of the detector and the sum $\Sigma_{i}$ runs over all particles in the event.  Sphericity is defined as $\text{S} = \frac{3}{2}(\lambda_{2} + \lambda_{3})$, where $\lambda_{i}$ are the eigenvalues of the sphericity tensor defined such $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3}$.  This provides a measure of how spherical the reconstructed event topology is with isotropic events having $S \approx 1$, while two jet events have $S \approx 0$.
+\item Aplanarity defined as $\frac{3}{2} \lambda_{3}$ where $\lambda_{3}$ is an eigenvalue of the sphericity tensor.  This provides a measure of whether an event is linear or planar in shape.
 \end{itemize}
 
+\item \textbf{Jet clustering parameters} $y_{ij}$.
 
+\end{itemize}
+
+%========================================================================================
 %========================================================================================
 
 \section{Event Selection}
@@ -514,6 +509,8 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2\\
 \end{table}
 
 Equivalent Photon Approximation (EPA) processes model the electromagnetic field of a charged particle as virtual photons.  BS (beamstrahlung) processes involve photons that have been radiated from incoming charged particles due to interactions with the electromagnetic field of the opposite beam.   The energy spectrum of the incoming particles for CLIC at the relevant operating energy is used to model the energy of these incoming photons.  Included in this study are photon-photon interactions from photons appearing from the EPA and beamstrahlung processes.
+
+%========================================================================================
 
 \subsection{Pre Selection}
 \label{sec:preselection1400GeV}
