@@ -423,7 +423,7 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 48.9 \\
 
 \subsection{Discriminant Variables} 
 \label{sec:analysisprocessor}
-The next stage of the analysis involved the calculation of a number of event-based variables that were found to be useful for this analysis.  The variables can be divided into four categories:
+The next stage of the analysis involved the calculation of a number of event-based variables that were found to be useful for this analysis.  The variables that were calculated are as follows:
 
 \begin{itemize}
 \item \textbf{Particle level} variables:
@@ -441,7 +441,7 @@ The next stage of the analysis involved the calculation of a number of event-bas
 \item Energy of candidate bosons.
 \item Invariant mass of the bosons.
 \item Acolinearity of the boson pair, which is defined as 180 degrees minus the opening angle of the pair of bosons in the rest frame of the detector.
-\item Acolinearities of the pair of jets forming each the two candidate boson.
+\item Acolinearities of the jets forming each of the candidate bosons.
 \item $\text{Cos}(\theta^{*}_{Bosons})$.  Cosine of the opening of the bosons in the rest frame of the boson pair.
 \item $\text{Cos}(\theta^{*}_{Jets})$.  Cosine of the opening of the jets forming each candidate in the rest frame of the candidate boson.
 \end{itemize}
@@ -465,7 +465,7 @@ Where $p_{i}$ are the components of the momenta of PFO i in the rest frame of th
 \item Aplanarity defined as $\frac{3}{2} \lambda_{3}$ where $\lambda_{3}$ is an eigenvalue of the sphericity tensor.  This provides a measure of whether an event is linear or planar in shape.
 \end{itemize}
 
-\item \textbf{Jet clustering parameters} $y_{ij}$.
+\item \textbf{Jet clustering parameter} variables, $y_{ij}$ where $i = 1,2,3,4,5,6$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  Note: -log10 yij cut on.
 
 \end{itemize}
 
@@ -473,93 +473,23 @@ Where $p_{i}$ are the components of the momenta of PFO i in the rest frame of th
 %========================================================================================
 
 \section{Event Selection}
-
-As discussed earlier the signal events for this analysis contain the \nu{\nu}qqqq final state. The processes to be considered in this analysis alongside the signal are events that would topologically look similar to signal in the detector. This includes events that could be confused with 4 jet events with missing energy, while excluding those events with large numbers of high energy leptons that could be vetoed easily during the analysis stage. In full the list includes:
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{ l r }
-\hline
-Final State & Cross Section 1.4 TeV [fb] \\ 
-\hline
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 110.4\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 62.1\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1245.1\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 787.7\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 4309.7\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 2725.8\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 4009.5\\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 287.1\\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1160.7\\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 286.9\\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1156.3\\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 32.6\\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 136.9\\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 32.6\\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 136.4\\
-$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 753.0\\
-$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 4034.8\\
-$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4018.7\\
-$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2\\
-\hline
-\end{tabular}
-\caption[]{Cross sections of signal and background processes at 1.4 TeV. In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
-\label{table:crosssectionfull}
-\end{table}
-
-Equivalent Photon Approximation (EPA) processes model the electromagnetic field of a charged particle as virtual photons.  BS (beamstrahlung) processes involve photons that have been radiated from incoming charged particles due to interactions with the electromagnetic field of the opposite beam.   The energy spectrum of the incoming particles for CLIC at the relevant operating energy is used to model the energy of these incoming photons.  Included in this study are photon-photon interactions from photons appearing from the EPA and beamstrahlung processes.
+As described in section \ref{sec:modellingofanomalouscouplings} the signal final state in this analysis is the \nu{\nu}qqqq final state, while the backgrounds consist of all 2 and 4 jet final stats that could be confused for the signal state in the reconstruction.  A complete list of signal and background final states used for this analysis, alongside their standard model cross sections, can be found in table \ref{table:crosssection1400GeV}.  In an attempt to isolate signal from background an event selection procedure consisting of a set of preselection cuts followed by the application of a multivariate analysis (MVA) was applied to this data set and the full details of those are given in the following section.
 
 %========================================================================================
 
 \subsection{Pre Selection}
 \label{sec:preselection1400GeV}
-The primary selection of the \nu{\nu}qqqq signal will be done using a multivariate analysis, however, in an attempt to veto trivial backgrounds a simple cut based preselection is applied. Cuts are applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is
-shown in figure \ref{fig:preselection1400}. Based on these distributions the following cuts were applied:
+A refined selection of the \nu{\nu}qqqq signal final state is achieved using MVA.  However, to ensure efficiency in the training and application of that MVA a number of simple preselection cuts were developed that veto obvious background final states prior to the application of the MVA.  These cuts were developed such that as much background as possible would be rejected, while retaining enough signal to make the analysis viable.  Preselection cuts were applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is.shown in figure \ref{fig:preselection1400} and based on these distributions the following cuts were applied:
 
 \begin{itemize}
 \item Transverse momentum > 100 GeV. This cut is effective due to the presence of missing energy in the form of neutrinos in the signal final state.
-\item Visible mass of the system > 200 GeV. This cut is effective for accounting for the missing energy of the neutrinos in the final state along the longitudinal direction of the detector instead.
-\item Number of isolated leptons = 0. This cut vetoes a large number of events with leptons in the final state.
-The effect of these preselection cuts can be found in table 1.3. While a large fraction of the signal events are lost through these cuts, particularly the transverse momentum cuts, a much large fraction of background events are removed justifying the cut.
+\item Visible mass of the system > 200 GeV.  This cut was effective against the $\nu\nu\text{qq}$ and $\nu\text{lqq}$ final states.  These states would be dominated by the channels involving a single W or Z boson propagator decaying hadronically, as shown in figure \ref{fig:backgroundresonancefd} and therefore the invariant mass of the visible system peaks around the W and Z mass.  This is not the case for the \nu{\nu}qqqq signal final state, which typically has a much larger visible mass.
+\item Number of isolated leptons = 0. This cut vetoes events with leptons in the final state.
 \end{itemize}
 
-The event numbers for the signal and background are shown in table \ref{table:preselectionnumbers1400GeV} as these cuts are cumulatively applied.  These numbers are normalised to the correct luminosity for CLIC running at 1.4 TeV.  As is expected the large transverse momentum cut removes practically all backgrounds containing no missing energy.  The invariant mass cut removes significant fractions of two quark and missing energy events.  Finally, the isolated lepton finder cut removes backgrounds containing visible leptonic final states.  
+The impact of these preselection cuts can be found in table FINAL SUMMARY TABLE REF \ref{}.
 
-\begin{table}[h!]
-\centering
-\begin{tabular}{ l r r r r }
-\hline
-Final State & Raw Event  & $p_{T}$ > 100 GeV & $p_{T}$ > 100 GeV \& & $p_{T}$ > 100 GeV \& \\ 
-& Numbers & & $M_{\text{Vis}}$ > 200 GeV & $M_{\text{Vis}}$ > 200 GeV \&\\ 
-& & & & $N_{\text{Isolated Leptons}}$ = 0\\ 
-\hline
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 37,050 & 23,800 & 21,080 & 21,020\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 165,600 & 81,620 & 80,840 & 42,410\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 93,150 & 1,151 & 1,140 & 700\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 1,868,000 & 6,487 & 6,467 & 6,445\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 1,181,000 & 514,100 & 50,260 & 50,150\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 6,464,000 & 2,003,000 & 1,259,000 & 567,600\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 4,088,000 & 7,754 & 7,351 & 5,643\\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 6,011,000 & 34,610 & 34,130 & 34,070\\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 430,600 & 2,463 & 2,446 & 865\\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 1,306,000 & 1,382 & 1,340 & 1,002\\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 430,300 & 2,846 & 2,823 & 1,121\\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & 1,301,000 & 654 & 643 & 469\\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 48,890 & 17,450 & 13,490 & 8,852\\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 154,000 & 56,380 & 36,350 & 35,900\\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 48,890 & 17,520 & 13,550 & 8,928\\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 153,400 & 56,280 & 36,340 & 35,900\\
-$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 1,129,000 & 3,160 & 3,079 & 1,563\\
-$\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 4,539,000 & 5,325 & 5,270 & 3,987\\
-$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4,521,000 & 3,810 & 3,730 & 2,318\\
-$\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 20,550,000 & 2,445 & 2,445 & 1,673\\
-\hline
-\end{tabular}
-\caption[Number of events passing the various cuts applied in the preselection at 1.4TeV.]{Number of events passing the various cuts applied in the preselection at 1.4TeV.  Event numbers are normalised to the correct luminosity for CLIC at 1.4 TeV.  $p_{T}$ is the transverse momentum of the event,  $M_{\text{Vis}}$ is the visible mass and $N_{\text{Isolated Leptons}}$ is the number of isolated leptons in the event.  In the above table q $\in$ u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$ while l $\in$ $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$ and $\nu$ $\in$ $\nu_{e}$, $\nu_{\mu}$ and $\nu_{\tau}$.  The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
-\label{table:preselectionnumbers1400GeV}
-\end{table}
-
+\iffalse
 \begin{figure}
 \centering
 \subfloat[Transverse momentum of system.]{\label{fig:preselection1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}}\hfill
@@ -569,29 +499,118 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 20,550,000 & 2,
 \label{fig:preselection1400}
 \end{figure}
 
+\begin{figure}
+\begin{tikzpicture}[]
+\begin{feynman}
+\vertex (a1);
+\vertex[above left=2cm of a1] (a2);
+\vertex[right=2cm of a1] (a3) {\(Z\)};
+\vertex[below left=2cm of a1] (a4);
+\vertex[above left=1cm of a2] (i1) {\(e^{-}\)};
+\vertex[below left=1cm of a4] (i2) {\(e^{+}\)};
+\vertex[above right=1cm and 3cm of a3] (i3) {\(q\)};
+\vertex[below right=1cm and 3cm of a3] (i4) {\(\bar{q}\)};
+\vertex[above=2cm of a3] (v1) {\(\nu_{e}\)};
+\vertex[below=2cm of a3] (v2) {\(\bar{\nu_{e}}\)};
+\diagram* {
+   (a1) -- [boson, edge label'=\(W^{-}\)] (a2)
+   (a1) -- [boson] (a3)
+   (a1) -- [boson, edge label=\(W^{+}\)] (a4)
+   (i1) -- [fermion] (a2) -- [fermion] (v1)
+   (v2) -- [fermion] (a4) -- [fermion] (i2)
+   (i4) -- [fermion] (a3) -- [fermion] (i3)
+};
+\end{feynman}
+\end{tikzpicture}
+
+\begin{tikzpicture}[]
+\begin{feynman}
+\vertex (a1);
+\vertex[above left=2cm of a1] (a2);
+\vertex[right=2cm of a1] (a3) {\(W^{+}\)};
+\vertex[below left=2cm of a1] (a4);
+\vertex[above left=1cm of a2] (i1) {\(e^{-}\)};
+\vertex[below left=1cm of a4] (i2) {\(e^{+}\)};
+\vertex[above right=1cm and 3cm of a3] (i3) {\(q\)};
+\vertex[below right=1cm and 3cm of a3] (i4) {\(\bar{q}\)};
+\vertex[above=2cm of a3] (v1) {\(e^{-}\)};
+\vertex[below=2cm of a3] (v2) {\(\bar{\nu_{e}}\)};
+\diagram* {
+   (a1) -- [boson, edge label'=\(Z\)] (a2)
+   (a1) -- [boson] (a3)
+   (a1) -- [boson, edge label=\(W^{+}\)] (a4)
+   (i1) -- [fermion] (a2) -- [fermion] (v1)
+   (v2) -- [fermion] (a4) -- [fermion] (i2)
+   (i4) -- [fermion] (a3) -- [fermion] (i3)
+};
+\end{feynman}
+\end{tikzpicture}
+
+\begin{tikzpicture}[]
+\begin{feynman}
+\vertex (a1);
+\vertex[above left=2cm of a1] (a2);
+\vertex[right=2cm of a1] (a3) {\(W^{-}\)};
+\vertex[below left=2cm of a1] (a4);
+\vertex[above left=1cm of a2] (i1) {\(e^{-}\)};
+\vertex[below left=1cm of a4] (i2) {\(e^{+}\)};
+\vertex[above right=1cm and 3cm of a3] (i3) {\(q\)};
+\vertex[below right=1cm and 3cm of a3] (i4) {\(\bar{q}\)};
+\vertex[above=2cm of a3] (v1)  {\(\nu_{e}\)};
+\vertex[below=2cm of a3] (v2) {\(e^{+}\)};
+\diagram* {
+   (a1) -- [boson, edge label'=\(W^{-}\)] (a2)
+   (a1) -- [boson] (a3)
+   (a1) -- [boson, edge label=\(Z\)] (a4)
+   (i1) -- [fermion] (a2) -- [fermion] (v1)
+   (v2) -- [fermion] (a4) -- [fermion] (i2)
+   (i4) -- [fermion] (a3) -- [fermion] (i3)
+};
+\end{feynman}
+\end{tikzpicture}
+
+\caption[Feynman diagram dominant in the $\nu\nu\text{qq}$ and $\nu\text{lqq}$ final states at CLIC.]{Feynman diagram dominant in the $\nu\nu\text{qq}$ and $\nu\text{lqq}$ final states at CLIC.  $q = \text{u, d, s, b, c}$}
+\label{fig:backgroundresonancefd}
+\end{figure}
+\fi
+
+%========================================================================================
+
 \subsection{MVA}
 \label{sec:mva1400GeV}
-A multivariate analysis was applied to the data set to refine the selection using the TMVA toolkit \cite{Hocker:2007ht}. The following variables were used for training the TMVA selection.  
+Having established the preselection cuts a MVA was applied, using the TMVA toolkit \cite{Hocker:2007ht}, to refine the event selection.  The signal and background final state samples were halved and one of those halves was used to train the MVA.  The trained MVA was applied to the remaining half sample and this half sample was used in the subsequent analysis.  The halving of the signal and background sample had minimal impact on the analysis as all event numbers are normalised to the correct luminosity for CLIC running at 1.4 TeV.
+
+The following variables were used for training of the MVA:
 
 \begin{itemize}
 \item Number of PFOs in the event.
-\item Highest energy PFO type.
-\item Transverse momentum of the event.
-\item $\text{cos}\theta_{Missing}$.  The cosine of the polar angle of the missing momentum.
-\item $\text{cos}\theta_{\text{Highest Energy Track}}$.  The cosine of the polar angle of the track with the largest momentum.
-\item $y_{i}$, $y_{i+1}$. Jet clustering parameters ranging from i = 0 to 6.
-\item Principle thrust, sphericity and aplanarity as defined in section BLAH.
+\item Particle type and energy of the highest energy PFO in the event.
 \item Energy of the highest energy electron in the event.
-\item Energy of the highest energy PFO in the event.
-\item Energy of the reconstructed bosons.
-\item Acolinearity of the reconstructed boson pair.
-\item Invariant mass of the reconstructed bosons.
-\item Acolinearity of the jets forming the reconstructed bosons. 
+\item Cosine of the polar angle of the highest energy track in the event.
+\item Energy and invariant mass of the candidate bosons.
+\item Acolinearity of the boson pair.
+\item Acolinearities of the jets forming each of the candidate bosons.
+\item The vector sum of the transverse momentum of all PFOs in the event. 
+\item The cosine of the polar angle of the missing 3-momentum assuming a collision at the nominal centre of mass energy.
+\item Principle thrust.
+\item Sphericity and aplanarity.
+\item The jet clustering parameter $y_{ij}$ where $i = 1,2,3,4,5,6$ and $j=i+1$.
 \end{itemize}
 
-It was found that the best MVA algorithm for both performance and speed was the booted decision tree (BDT) when comparing different methods using the default settings.  Add plot here.
+A variety of MVA options were considered, however, it was found that the optimal algorithm for performance was the booted decision tree (BDT) as shown in figure \ref{ig:mvaalternatives1400GeV}.  
 
-The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied.  The results shown in the rest of this section use the optimal configuration.  For the optimal BDT configuration a significance of S/$\sqrt(\text{S + B}) = 53.6$ was obtained.  
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV.pdf}
+\caption[Background rejection as a function of signal efficiency for a variety of MVA options at 1.4 TeV.]{Background rejection as a function of signal efficiency for a variety of MVA options at 1.4 TeV.} 
+\label{fig:mvaalternatives1400GeV}
+\end{figure}
+
+The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied.  The results shown in the rest of this section use the optimal configuration.  For the optimal BDT configuration a significance of S/$\sqrt(\text{S + B}) = 53.6$ was obtained.
+
+
+HERE.  
+
 
 The event numbers passing the BDT cut can be found in table \ref{table:postmvanumbers1400GeV}.  The performance of the BDT is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact}, which shows the change in the distribution of the the invariant mass of the reconstructed bosons as the MVA is applied. As expected the dominant background processes after the MVA is applied are those that will look identical to the visible signal process i.e. qqqq and missing energy.  Two smaller sources of background that pass the MVA exists, those where two jets and missing energy are confused as four jets and missing energy and those where a lepton is not properly reconstructed and the events look like four jets and missing energy.  
 
@@ -663,10 +682,14 @@ $\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 23.4\% & 12.2\% & 
 
 
 
+%========================================================================================
+%========================================================================================
 
 
 \section{Effect of Anomalous Coupling/Fitting Methodology}
 The metric used to determine the optimal jet algorithm for this analysis is the sensitivity of the pure signal final state, $\nu\nu\text{qqqq}$, to the anomalous gauge couplings.  Pure signal was used in the optimisation to avoid the need to process the large number of background files for each iteration of the jet algorithm considered, while still basing the optimisation on the physics of interest.  The focus of this section in the description of the fitting technique that will be used for both jet algorithm optimisation and in the final sensitivity study.
+
+%========================================================================================
 
 \subsection{Choice of Fitting Distribution}
 The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$.  For a given event, the jet clustering and pairing proceeds as described in section \ref{sec:analysis} and leads to the event being clustered into four jets, which are then paired up to give two candidate bosons.  $\theta^{*}_{Jets}$ is defined as the opening angle of the jets in the rest frame of these candidate bosons.  The distribution of $\text{cos}\theta^{*}_{Jets}$ proved to be highly sensitive to the anomalous gauge couplings as shown in figure \ref{fig:costhetastarjets}.
@@ -687,6 +710,7 @@ The distribution of $\text{cos}\theta^{*}_{Bosons}$ was also considered for this
 \label{fig:costhetastarbosons}
 \end{figure}
 
+%========================================================================================
 
 \subsection{Application Of Anomalous Gauge Coupling Event Weights}
 \label{sec:eventweightsinterpolation}
@@ -706,6 +730,8 @@ For reference at 1.4 TeV event weights were produced from the generator, Whizard
 \label{fig:eventweights1400interpolated}
 \end{figure}
 
+%========================================================================================
+
 \subsection{Determination of Sensitivity}
 The sensitivity of CLIC to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ was determined using a $\chi^{2}$ of the following form:
 
@@ -721,6 +747,9 @@ It proved useful to consider the sensitivities to the individual parameters $\al
 
 HERE
 
+%========================================================================================
+%========================================================================================
+
 \section{Results}
 The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV is shown in figure \ref{fig:finalresult1400GeV}.  This result shows the sensitivity after the application of preselection and MVA described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV} purposed to remove the included background channels, described in section \ref{sec:eventgenerationandbackgrounds}.  These contours yield the one $\sigma$ confidence limit on the measurement of $\alpha_{4}$ to the range -0.00831, 0.0130 and similarly for the measurement of $\alpha_{5}$ the range is -0.00606, 0.00904.
 
@@ -732,6 +761,9 @@ The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_
 \caption[$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.]{$\chi^{2}$ sensitivity distributions at 1.4 TeV arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$.  Results include the effect of backgrounds after the application of preselection and MVA.}
 \label{fig:allfinalresult1400GeV}
 \end{figure}
+
+%========================================================================================
+%========================================================================================
 
 
 
