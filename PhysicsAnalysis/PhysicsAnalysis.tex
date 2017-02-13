@@ -774,7 +774,11 @@ Based on these contours it is clear that knowledge of the cross section for the 
 
 The anomalous gauge coupling sensitivity study described in this chapter was reproduced for CLIC operating at 3 TeV.  The procedure for the 3 TeV analysis largely mirrors that of the 1.4 TeV analysis, therefore in this section only the differences between the analyses are highlighted.  
 
-Identical signal and background processes were considered at 3 TeV as were done for 1.4 TeV as were described in section \ref{sec:eventgenerationandbackgrounds}.  The cross sections at 3 TeV for these signal and background final states can be found in table \ref{table:crosssection3000GeV}.  
+The signal and background final states for the 3 TeV analysis were identical to those used for the 1.4 TeV analysis as described in section \ref{sec:eventgenerationandbackgrounds}.  The cross sections at 3 TeV for those signal and background final states can be found in table \ref{table:crosssection3000GeV}.  The data analysis and event selection procedures used at 3 TeV mirrored those used at 1.4 TeV.  Detailed descriptions of both can be found in sections \ref{sec:dataanalysis} and \ref{sec:eventselection} respectively.  
+
+Jet finding was performed using the longitudinally invariant $k_{t}$ algorithm as described in section \label{sec:jetpairing}.  Optimisation of the jet algorithm configuration, which uses pure signal only as described in section \ref{sec:optimaljetalgorithm}, found the optimal configuration at 3 TeV to use tight selected PFOs and an R parameter of 1.1.  The sensitivity contours and the one dimensional $\chi^{2}$ distributions for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the optimal jet configuration at 3 TeV using the {\nu}{\nu}qqqq signal final state are shown in figure \ref{fig:allchi2jetalgoideal3000GeV}.  Using these distributions the one sigma confidence limits on $\alpha_{4}$ is -0.00047 to 0.00048 and on $\alpha_{5}$ is -0.00036 to 0.00034.
+
+The event selection for the 3 TeV analysis is summarised in table \ref{table:selectionsummary3000GeV}.
 
 \begin{table}[h!]
 \centering
@@ -808,10 +812,6 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 13050.3 \\
 \label{table:crosssection3000GeV}
 \end{table}
 
-The data analysis and event selection procedures used at 3 TeV mirrored those used at 1.4 TeV.  Detailed descriptions of both can be found in sections \ref{sec:dataanalysis} and \ref{sec:eventselection} respectively.  
-
-Jet finding was performed using the longitudinally invariant $k_{t}$ algorithm as described in section \label{sec:jetpairing}.  Optimisation of the jet algorithm configuration, which uses pure signal only as described in section \ref{sec:optimaljetalgorithm}, found the optimal configuration at 3 TeV to use tight selected PFOs and an R parameter of 1.1.  The sensitivity contours and the one dimensional $\chi^{2}$ distributions for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the optimal jet configuration at 3 TeV using the {\nu}{\nu}qqqq signal final state are shown in figure \ref{fig:allchi2jetalgoideal3000GeV}.  Using these distributions the one sigma confidence limits on $\alpha_{4}$ is -0.00047 to 0.00048 and on $\alpha_{5}$ is -0.00036 to 0.00034.
-
 \begin{figure}
 \centering
 \subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10.pdf}}\hfill
@@ -820,8 +820,6 @@ Jet finding was performed using the longitudinally invariant $k_{t}$ algorithm a
 \caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.} 
 \label{fig:allchi2jetalgoideal3000GeV}
 \end{figure}
-
-The event selection for the 3 TeV analysis is summarised in table \ref{table:selectionsummary3000GeV}.
 
 \begin{table}[h!]
 \centering
@@ -855,7 +853,7 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 0.6\% & - & 2,2
 \label{table:selectionsummary3000GeV}
 \end{table}
 
-Due to the increased sensitivity of the signal sample at 3 TeV, the stepping along $\alpha_{4}$ and $\alpha_{5}$ to extract the event weights from the generator was much finer than that used for 1.4 TeV.  At 3 TeV event weights were taken from the generator in steps of 0.0025 ranging from 0.0045 to -0.0045.  Bicubic interpolation was again used to make a continuous surface for the event weights.  These event weight surfaces were then used to construct the $\text{cos}\theta^{*}_{Jets}$ distribution and the $\chi^{2}$ surface used to determine the reported sensitivities.
+Due to the increased sensitivity of the signal sample at 3 TeV, the stepping along $\alpha_{4}$ and $\alpha_{5}$ to extract the event weights from the generator was much finer than was used for the 1.4 TeV analysis.  At 3 TeV event weights were taken from the generator in steps of 0.0025 ranging from 0.0045 to -0.0045.  Bicubic interpolation was again used to make a continuous surface for the event weights.  These event weight surfaces were then used to construct the $\text{cos}\theta^{*}_{Jets}$ distribution and the $\chi^{2}$ surface used to determine the reported sensitivities.
 
 The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 3 TeV is shown in figure \ref{fig:finalresult3000GeV}.  This result shows the sensitivity after the application of preselection and MVA described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV} purposed to remove the included background channels, described in section \ref{sec:eventgenerationandbackgrounds}.  These contours yield the one $\sigma$ confidence limit on the measurement of $\alpha_{4}$ to the range -FILL IN, FILL IN and similarly for the measurement of $\alpha_{5}$ the range is -FILL IN, FILL IN.
 

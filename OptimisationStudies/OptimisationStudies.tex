@@ -4,6 +4,9 @@
 \chapterquote{There, sir! that is the perfection of vessels!}
 {Jules Verne, 1828--1905}
 
+%========================================================================================
+%========================================================================================
+
 \section{Calorimeter Optimisation Studies}
 If the future linear collider is to reach it's maximum potential in terms of energy resolution then, optimisation of the detector will be essential.  The energy resolution in the particle flow paradigm is dependant upon several detector components.  The momentum of charged particles arises from the shape of the tracks deposited within the detector while the energy of uncharged particles arise from calorimetric measurements.  Application of sophisticated pattern recognition algorithms allows the particle type to be inferred for the charged particles.  In tern this allows for the conversion of the track momentum into an energy measure for the charged particles.  The particle identification algorithms use the topological information acquired from the calorimetric energy deposited to infer particle type for a subset of charged particles.  
 
@@ -11,9 +14,18 @@ The calorimetric energy deposits are therefore used in a twofold manner: (i) as 
 
 This chapter concludes with an optimisation of several global parameters for the detector.  These parameters are not calorimeter specific, but the optimisation procedure developed for the calorimeters is appropriate to use.  These parameters relate to the global detector size and the magnetic field applied throughout solenoid in the detector.
 
+%========================================================================================
+%========================================================================================
+
 \section{Metric}
 
+%========================================================================================
+%========================================================================================
+
 \section{Simulation and Reconstruction}
+
+%========================================================================================
+%========================================================================================
 
 \section{Calibration}
 
@@ -27,6 +39,9 @@ The energy resolution for single photon events as a function of photon energy, f
 \caption[Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.]{Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.}
 \label{fig:ecalnominalres}
 \end{figure}
+
+%========================================================================================
+%========================================================================================
 
 \section{Electromagnetic Calorimeter Optimisation}
 \label{sec:ecal}
@@ -56,6 +71,8 @@ The parameters being optimised in this study are:
 \item Longitudinal granularity or cell depth.  This parameter dictates the intrinsic energy resolution of the detector as smaller cell depths mean more sampling is done of the particle shower and so, due to the Poissonian statistics governing the measurement of particle showers, the better the resolution.
 \item Active material choice.  This is a choice between silicon or scintillator.  As well as providing different intrinsic energy resolutions the readout mechanics of these two options are significantly different.  There is no clear prior knowledge as to which should provide better performance. 
 \end{itemize}
+
+%========================================================================================
 
 \subsection{ECal Transverse Granularity}
 \label{sec:ecalcells}
@@ -96,6 +113,8 @@ By examining the breakdown of the jet energy resolution into intrinsic resolutio
 A more targeted test of the intrinsic energy resolution of the ECal is presented in figure \ref{fig:ecalcellsizegamma}, which examines the energy resolution of single photon samples at 100 GeV.  For the silicon option the intrinsic energy resolution was found to not vary significantly across the transverse granularities under consideration, however, there is a degradation in energy resolution with increasing cell size for the scintillator option.  This originates from an inactive region of material in the simulation that represents the multi pixel photon counter (MPPC).  The MPPC occupies a fixed area of the cell irrespective of cell size and so fractionally the "dead" region of the cell increases as cell size is reduced (cite this somehow).  These trends will be present in the jet energy resolution studies, however, as only a small fraction, $\approx 10$\%, of the jet energy arises from the ECal these trends will be washed out when looking purely at jets.
 
 In conclusion smaller transverse granularities in the ECal significantly improve the jet energy resolution for both the silicon and scintillator options.  The intrinsic energy resolution of the ECal is largely invariant to changes in the transverse granularity for the silicon option, while larger transverse granularities are beneficial to the scintillator option as they reduce the impact of "dead" regions of the detector.  
+
+%========================================================================================
 
 \subsection{ECal Longitudinal Granularity}
 \label{sec:ecalnlayers}
@@ -164,6 +183,9 @@ In sections \ref{sec:ecalcells} and \ref{sec:ecalnlayers} the performance of the
 
 The lack of this "dead" region of the detector and the beneficial intrinsic energy resolution at large energies indicates a preference for a silicon detector, however, there is no clear preference based on these studies.  
 
+%========================================================================================
+%========================================================================================
+
 \section{Hadronic Calorimeter Optimisation}
 The HCal is designed to measure the energy deposits from hadrons.  The default ILD detector model HCal, summarised in table \ref{table:defaultildhcal}, contains $\approx 6$ nuclear interaction lengths ($\lambda_{I}$).  The ECal contributes approximately one $\lambda_{I}$ giving a total of $\approx 7 \lambda_{I}$, which is sufficient to confine the bulk of jets up to 1 TeV events, which is the maximum running energy for the ILC.  The longitudinal structure of this model consists of 48 readout layers each containing a 3 mm active layer of scintillator and a 20 mm absorber layer of iron.  There are several readout technology options under consideration for the HCal, which are analogue, digital and semi-digital, however, for this study only the analogue HCal is considered.  
 
@@ -199,6 +221,21 @@ The parameters being optimised in this study are:
 \item Absorber material choice.  This is a choice between steel or tungsten.  While this does not change the active medium choice it does dictate the growth and propagation of showers and so plays a crucial role in calorimetry.  While tungsten is more expensive than steel for the raw material the larger number of interaction lengths per length scale for tungsten mean that it is possible to create a smaller detector with the same number of interaction lengths within it.  This reduces the size of the solenoid needed to generate the magnetic field and so lowers the price of the detector.  As both of these materials are viable as absorber medium choices it is crucial to determine if either is more advantageous from a physics perspective.  
 \end{itemize}
 
+%========================================================================================
+
+\subsection{HCal Absorber Material}
+\label{sec:hcalabsorbermaterial}
+The nominal choice of absorber material is steel, tungsten provides a feasible alternative material.  While more expensive than steel, tungsten contains more radiation lengths per unit length than steel and so the overall size of the detector would reduce meaning the solenoid could be smaller, which would to first order offset the additional cost of the tungsten.  This section aims to determine whether either of these options is beneficial when considering the jet energy resolution of the detector.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial.pdf}
+\caption[Jet energy resolution as a function of absorber material in the HCal and physics list.]{Jet energy resolution as a function of absorber material in the HCal and physics list.}
+\label{fig:hcalcellsize}
+\end{figure} 
+
+%========================================================================================
+
 \subsection{HCal Transverse Granularity}
 \label{sec:hcalcells}
 For this study a number of different detector models were considered where the transverse granularity in the HCal had been varied about the nominal value of $30 \times 30 \text{mm}^{2}$ square cells.  The granularities considered were $10 \times 10 \text{mm}^{2}$, $20 \times 20 \text{mm}^{2}$, $30 \times 30 \text{mm}^{2}$, $40 \times 40 \text{mm}^{2}$, $50 \times 50 \text{mm}^{2}$ and $100 \times 100 \text{mm}^{2}$ square cells.  The jet energy resolution as a function of transverse granularity in the HCal is shown in figure \ref{fig:hcalcellsize}.
@@ -233,9 +270,24 @@ The energy resolution of single long lived neutral kaons, $\text{K}^{0}_{L}$, at
 
 The transverse granularity of the HCal acts to determine the impact of confusion from charged and neutral hadron energy deposits.  It does not vary the intrinsic energy resolution of the detector, nor does it impact the reconstruction of photons.  As confusion is dominant at high jet energies the HCal transverse granularity gains an increasing role in determining detector performance as the energy in an event increases. 
 
+%========================================================================================
+
 \subsection{HCal Longitudinal Granularity}
 \label{sec:hcalnlayers}
-A number of different detector models were examined where the longitudinal granularity of the HCal had been varied about the nominal value.  In all cases the absorber material was steel while the active material was scintillator.  Each HCal configuration had the same total number of nuclear interaction lengths, 5.72 $\lambda_{I}$ in the absorber material and 0.19 $\lambda_{I}$ in the active material, however, the thickness of the layers was varied depending on the total number of layers being considered.  The ratio of the active material layers to the absorber material layers, the sampling fraction, was also kept constant in this study.  A summary of the detector models considered in this study can be found in table \ref{table:nlayershcaloption}.  
+
+MAKE THIS SECTIONS ABOUT ADDING LAYERS TO HCAL
+
+%========================================================================================
+
+\subsection{HCal Sampling Fraction}
+\label{sec:hcalsamplingfraction}
+
+
+%========================================================================================
+
+\subsection{HCal Sampling Frequency}
+\label{sec:hcalsamplingfrequency}
+A number of detector models were examined where the longitudinal segmentation of the HCal, of fixed total thickness, had been varied about the nominal value.  In all cases the absorber material was steel while the active material was scintillator.  Each HCal configuration had the same total number of nuclear interaction lengths, 5.72 $\lambda_{I}$ in the absorber material and 0.19 $\lambda_{I}$ in the active material, however, the thickness of the layers was varied depending on the total number of layers being considered.  The ratio of the active material layers to the absorber material layers, the sampling fraction, was also kept constant in this study.  A summary of the detector models considered in this study can be found in table \ref{table:nlayershcaloption}.  
 
 \begin{table}[h!]
 \centering
@@ -288,49 +340,10 @@ The change in the intrinsic energy resolution of the HCal when varying the longi
 
 The increasing the HCal longitudinal granularity has a twofold effect on the detector performance: an increase in sampling rate of particle showers and an improvement to the intrinsic energy resolution and a reduction in the confusion arising from associating energy deposits from hadrons.  
 
-\subsection{HCal Depth}
-\label{sec:hcaldepth}
-In this section the total depth of the HCal is varied about the nominal value of 5.72 $\lambda_{I}$ keeping the total number of readout layers fixed at 48, the active material as scintillator, the absorber material as iron and ratio of the thicknesses of the active to absorber layers fixed.  The details of the detector models considered in this study can be found in table \ref{table:hcaldepthoptions}
+%========================================================================================
+%========================================================================================
 
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{ l l l }
-\hline
-HCal Depth & Absorber Thickness & Active Thickness \\
-$[\lambda_{I}]$ & [mm] & [mm] \\
-\hline
-4.58 & 16 & 2.4 \\
-5.15 & 18 & 2.7 \\
-5.72 & 20 & 3.0 \\
-6.29 & 22 & 3.3 \\
-6.86 & 24 & 3.6 \\
-\hline
-\end{tabular}
-\caption[Depth and layout of various HCal models considered.]{Depth and layout of various HCal models considered.}
-\label{table:hcaldepthoptions}
-\end{table}
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf}
-\caption[Jet energy resolution as a function of the number of nuclear interaction lengths in the HCal.]{Jet energy resolution is shown for several fixed energy jets as a function of the number of nuclear interaction lengths in the HCal.}
-\label{fig:hcaldepth}
-\end{figure}
-
-The jet energy resolution as a function of the total depth in the HCal is shown in figure \ref{fig:hcaldepth}.  There is little variation in the detector performance as a function of the total depth of the HCal for all but the highest energy jets.  At high jet energies there is a slight degradation in detector performance as the total thickness of the HCal is reduced.  
-
-\begin{figure}
-\centering
-\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal_91GeV_DiJet_Breakdown.pdf}}
-\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of nuclear interaction lengths in the HCal for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of nuclear interaction lengths in the HCal for 45 and 250 GeV jets.}
-\label{fig:hcaldepthbreak}
-\end{figure}
-
-Examining the breakdown of these trends at high energies, shown in figure \ref{fig:hcaldepthbreak}, it becomes clear that the degradation in performance is due to confusion in associating energy deposits from hadrons.  This is somewhat unexpected as it would be neutral to assume any improvements with a deeper HCal would be due to a reduction in the impact of leakage out of the back of the detector.  This may be partially masked by the definition of RMS90 (PLOT?), however, it is clear that leakage is not a significant problem across the depth of HCals considered here for a typical event at these energies.  
-
-INTRINSIC ENERGY RESOLUTION FOR HIGH ENERGIES?
-HERE
+\section{Global Detector Parameters}
 
 
 \iffalse
