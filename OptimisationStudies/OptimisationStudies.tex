@@ -227,12 +227,26 @@ The parameters being optimised in this study are:
 \label{sec:hcalabsorbermaterial}
 The nominal choice of absorber material is steel, tungsten provides a feasible alternative material.  While more expensive than steel, tungsten contains more radiation lengths per unit length than steel and so the overall size of the detector would reduce meaning the solenoid could be smaller, which would to first order offset the additional cost of the tungsten.  This section aims to determine whether either of these options is beneficial when considering the jet energy resolution of the detector.
 
+In this study the total depth of absorber material, in nuclear interaction lengths, was held constant for both models.  This was to ensure any performance changes were not due to additional material as opposed to the intrinsic energy resolutions of the absorber materials.  The interaction of hadrons with the absorber material within the detector is simulated by GEANT4.  The model for these interactions is dependent upon the choice of physics list, which by default is the QGSP\_BERT physics list.  This list is recommended by the GEANT4 authors to use for high energy physics calorimetry as it gives good agreement between experiment.  For this study both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists are tested.  The QGSP\_BERT\_HP list uses the high precision neutron package (NeutronHP) to deal with the transportation of neutrons from below 20 MeV to thermal energies.  This added detail was thought to be necessary for a study involving tungsten due to the increased time of shower development.    
+
+The jet energy resolution for the steel and the tungsten HCal options, for using both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists, are shown in figure \ref{fig:hcalabsmaterial}.  These results indicate that steel outperforms tungsten as an absorber material, particularly for high energy jets.  At low energies the performance is similar, indicating that the intrinsic energy resolution of the two options is comparable.  The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, has a minimal impact on these results.
+
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial.pdf}
 \caption[Jet energy resolution as a function of absorber material in the HCal and physics list.]{Jet energy resolution as a function of absorber material in the HCal and physics list.}
-\label{fig:hcalcellsize}
+\label{fig:hcalabsmaterial}
 \end{figure} 
+
+Expanding upon this further by examining the jet energy resolution breakdowns as shown in figure \ref{fig:hcalabsmaterialbreak}, it can be seen that the change in performance when changing the HCal absorber material from steel to tungsten is due to changes in the confusion.  The change in confusion is most likely due to the fact that the PandoraPFA algorithms are tuned for HCal cell dimensions based on the steel HCal option, while the HCal cells for the tungsten option HCal will be smaller by a factor of approximately 1.7 ($\approx 16.77/9.946$).  The jet energy resolution breakdowns also indicate that the intrinsic energy resolution of the tungsten HCal is marginally worse, particularly for high energy jets, than that of a steel HCal.  Therefor, even if the algorithms were fully optimised for the tungsten option such that the confusion terms for the two options were comparable the performance of the steel HCal would still be preferred over the tungsten option making the steel option the more preferred of the two.  
+
+\begin{figure}
+\centering
+\subfloat[45 GeV Jets.]{\label{fig:hcalabsmaterial45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalabsmaterial250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial_500GeV_DiJet_Breakdown.pdf}}
+\caption[Jet energy resolution breakdown as a function of HCal absorber material and physics list for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal absorber material and physics list for 45 and 250 GeV jets.}
+\label{fig:hcalabsmaterialbreak}
+\end{figure}
 
 %========================================================================================
 
