@@ -19,10 +19,19 @@ This chapter concludes with an optimisation of several global parameters for the
 
 \section{Metric}
 
+The primary metric used to determine detector performance in this optimisation study is the jet energy resolution, which is defined as the root mean square divided by the mean reconstructed jet energy within the smallest range of reconstructed energies containing 90\% of the data.  BLAH
+
+
 %========================================================================================
 %========================================================================================
 
-\section{Simulation and Reconstruction}
+\section{Event Generation, Simulation and Reconstruction}
+
+The jet fragmentation and hadronisation for the Z \rightarrow uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these trivial samples. 
+
+Detector model simulation was performed using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Event reconstruction was performed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter PANDORA CHAPTER.
+
+
 
 %========================================================================================
 %========================================================================================
