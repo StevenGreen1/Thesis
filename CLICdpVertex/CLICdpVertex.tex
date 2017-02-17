@@ -5,7 +5,39 @@
 {Jules Verne, 1828--1905}
 
 \section{Introduction}
-Explain why capcitivly coupled pixel detectors are a good thing and worth looking at for the CLIC vertex detectors.  Lots of good references i.e. both the HV-CMOS papers.
+
+Successful identification of heavy-flavour quarks and tau-leptons relies upon precise reconstruction of the secondary displaced vertices produced in the decay of these particles as well as accurate association of the daughter tracks to those vertices.  To achieve this for the CLIC experiment very high spatial resolution, of approximately 3 {\mu}m and good geometric coverage extending to low $\theta$ values are essential.  The vertex detector must also have a low material budget, less than 0.2 $\text{X}_{0}$ per layer, as to not impact the performance of the other sub detectors and a low occupancy, aided by time-tagging to an accuracy of 10 ns, to counteract the high beam-induced backgrounds found near the impact point.  
+
+There are no commercially available technology options that fulfil all the criteria for the vertex detector, which had led the CLIC experiment to consider a variety of new technology options.  The focus of this chapter is the use of high voltage complementary metal-oxide-semiconductor (HV-CMOS) active sensors coupled to a separate readout ASIC for the CLIC vertex detector.  
+
+% Active sensor does something to signal when recorded, passive just records signel.  HV-CMOS is active as there's an amplification of signal step.
+
+\subsection{HC-CMOS}
+There are two classifications for pixel detectors; hybrid detectors where a passive sensor is bump-bonded to a separate readout chip and fully integrated where the collection diode is built upon the same wafer as the readout circuitry.  Both of these technology options find the CLIC experimental conditions extremely challenging.  Hybrid technologies struggle to achieved both the radiation tolerance and the functionality in the readout circuitry, while fully integrated circuits have too slow readout times due to limitations on the applied bias voltage.  
+
+HV-CMOS is adapted to the CLIC experimental conditions as the n-MOS and p-MOS transistors forming the integrated amplifier (or generic in-pixel logic operations) for collecting the signal are embedded within a deep n-well, as shown in figure \ref{fig:hvcmos}.  This acts as both the collection diode as well as providing shielding to the circuitry from the beam induced radiation.  With the integrated circuitry shielded from the p-substrate it becomes possible to apply a large bias voltage to the substrate to widen the depletion region meaning that the main part of any signal deposited in the detector will be transferred via drift as opposed to diffusion, which provides the fast readout times required by the CLIC experiment.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOSDiagram.pdf}
+\caption[HV-CMOS diagram.]{HV-CMOS diagram.}
+\label{fig:hvcmos}
+\end{figure}
+
+HV-CMOS devices are strong candidates for the CLIC vertex detector, however, they do have limitations such as noise from interference between the n and p doped wells of the n-MOS and p-MOS transistors that sit within the deep n well.  This noise will grow with the number of n-MOS and p-MOS devices on the wafer and so ultimately restricts the complexity of the in-pixel operations that can be performed.  There are also topological difficulties such as the difficulty of applying the CMOS process to all sizes and the fact that the deep n well does not occupy the full space of the pixel.  
+
+To minimise the material budget for the vertex detector, the pixels used are designed to be as thin as possible.  This means the signal from the HV-CMOS will be small as the depletion region will be thin.  To counter this, in-pixel signal amplification was applied to the HV-CMOS devices, as shown in figure \ref{fig:ccpdandclicpix}.  This increases the signal going to the readout ASIC, which also counteracts the intrinsically small capacitance between the HV-CMOS and readout ASIC.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/schematic.pdf}
+\caption[Schematic of CCPDv3 and CLICpix pixels.]{Schematic of CCPDv3 and CLICpix pixels.}
+\label{fig:ccpdandclicpix}
+\end{figure}
+
+\subsection{CLICpix}
+
+The readout ASIC in this study is the CLICpix, which is a charge integrating amplifier connected to a discriminator as shown in figure \ref{fig:ccpdandclicpix}.  The output to this discriminator is then used as the input for further logic operations that record the magnitude, using a Time over Threshold (ToT) measurement, and time of arrival of the collected charge.
 
 \section{Construction}
 Description of construction information based on fabrication note.
