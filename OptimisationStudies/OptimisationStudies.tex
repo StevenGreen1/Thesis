@@ -27,7 +27,7 @@ The primary metric used to determine detector performance in this optimisation s
 
 \section{Event Generation, Simulation and Reconstruction}
 
-The jet fragmentation and hadronisation for the Z \rightarrow uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these trivial samples. 
+The jet fragmentation and hadronisation for the Z $\rightarrow$ uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these trivial samples. 
 
 Detector model simulation was performed using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Event reconstruction was performed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter PANDORA CHAPTER.
 
@@ -113,8 +113,8 @@ By examining the breakdown of the jet energy resolution into intrinsic resolutio
 \centering
 %\subfloat[Silicon active material, 10 GeV $\gamma$.]{\label{fig:ecalsicellsize10gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/SiECal10GeVPhotonResVsCellSize.pdf}} // Bit too messy to draw good conclusions
 %\subfloat[Scintillator active material, 10 GeV $\gamma$.]{\label{fig:ecalsccellsize10gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ScECal10GeVPhotonResVsCellSize.pdf}} \hfil // Bit too messy to draw good conclusions
-\subfloat[Silicon active material, 100 GeV $\gamma$.]{\label{fig:ecalsicellsize100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/SiECal100GeVPhotonResVsCellSize.pdf}}
-\subfloat[Scintillator active material, 100 GeV $\gamma$.]{\label{fig:ecalsccellsize100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ScECal100GeVPhotonResVsCellSize.pdf}}
+\subfloat[Silicon active material, 100 GeV $\gamma$.]{\label{fig:ecalsicellsize100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalCellSize_100GeVPhoton.pdf}}
+\subfloat[Scintillator active material, 100 GeV $\gamma$.]{\label{fig:ecalsccellsize100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalCellSize_100GeVPhoton.pdf}}
 \caption[Energy resolution as a function of ECal transverse granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.]{Energy resolution as a function of ECal transverse granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.}
 \label{fig:ecalcellsizegamma}
 \end{figure}
@@ -172,8 +172,8 @@ The strong dependancy of the jet energy resolution on the ECal longitudinal gran
 
 \begin{figure}
 \centering
-\subfloat[Silicon active material, 100 GeV $\gamma$.]{\label{fig:ecalsinlayers100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/SiECal100GeVPhotonResVsLayerNumber.pdf}}
-\subfloat[Scintillator active material, 100 GeV $\gamma$.]{\label{fig:ecalscnlayers100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ScECal100GeVPhotonResVsLayerNumber.pdf}}
+\subfloat[Silicon active material, 100 GeV $\gamma$.]{\label{fig:ecalsinlayers100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalNLayers_100GeVPhoton.pdf}}
+\subfloat[Scintillator active material, 100 GeV $\gamma$.]{\label{fig:ecalscnlayers100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalNLayers_100GeVPhoton.pdf}}
 \caption[Energy resolution as a function of ECal longitudinal granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.]{Energy resolution as a function of function of ECal longitudinal granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.}
 \label{fig:ecalnlayersgamma}
 \end{figure}
@@ -238,12 +238,12 @@ The nominal choice of absorber material is steel, tungsten provides a feasible a
 
 In this study the total depth of absorber material, in nuclear interaction lengths, was held constant for both models.  This was to ensure any performance changes were not due to additional material as opposed to the intrinsic energy resolutions of the absorber materials.  The interaction of hadrons with the absorber material within the detector is simulated by GEANT4.  The model for these interactions is dependent upon the choice of physics list, which by default is the QGSP\_BERT physics list.  This list is recommended by the GEANT4 authors to use for high energy physics calorimetry as it gives good agreement between experiment.  For this study both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists are tested.  The QGSP\_BERT\_HP list uses the high precision neutron package (NeutronHP) to deal with the transportation of neutrons from below 20 MeV to thermal energies.  This added detail was thought to be necessary for a study involving tungsten due to the increased time of shower development.    
 
-The jet energy resolution for the steel and the tungsten HCal options, for using both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists, are shown in figure \ref{fig:hcalabsmaterial}.  These results indicate that steel outperforms tungsten as an absorber material, particularly for high energy jets.  At low energies the performance is similar, indicating that the intrinsic energy resolution of the two options is comparable.  The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, has a minimal impact on these results.
+The jet energy resolution for the steel and the tungsten HCal options, for using both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists, are shown in figure \ref{fig:hcalabsmaterial} as a function of jet energy.  These results indicate that steel outperforms tungsten as an absorber material, particularly for high energy jets.  At low energies the performance is similar, indicating that the intrinsic energy resolution of the two options is comparable.  The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, has a minimal impact on these results.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial.pdf}
-\caption[Jet energy resolution as a function of absorber material in the HCal and physics list.]{Jet energy resolution as a function of absorber material in the HCal and physics list.}
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_HCalAbsorberMaterial.pdf}
+\caption[Jet energy resolution as a function of jet energy for various absorber materials in the HCal and physics lists.]{Jet energy resolution as a function of jet energy for various absorber materials in the HCal and physics lists.}
 \label{fig:hcalabsmaterial}
 \end{figure} 
 

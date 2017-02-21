@@ -13,29 +13,29 @@
 
     float xAxisVairableError[4] = {0,0,0,0};
 
-    float Pandora_Settings_Default_JER[4] = {3.6469,3.67166,3.66999,3.68914};
+    float Pandora_Settings_Default_JER[4] = {2.84624,2.86234,3.35563,3.38325};
 
-    float Pandora_Settings_PerfectPFA_JER[4] = {2.93851,2.975,2.93693,2.88623};
+    float Pandora_Settings_PerfectPFA_JER[4] = {1.79003,1.71837,1.86062,1.86124};
 
-    float Pandora_Settings_TotalConfusion_JER[4] = {2.15987004005,2.15185086742,2.20074277806,2.29770109603};
+    float Pandora_Settings_TotalConfusion_JER[4] = {2.2128883245,2.28914718153,2.79255186389,2.82527277};
 
-    float Pandora_Settings_PhotonConfusion_JER[4] = {0.642371540154,0.608535275231,0.570415592354,0.573120421116};
+    float Pandora_Settings_PhotonConfusion_JER[4] = {1.01562417296,0.886746392832,1.03606538138,0.955805773994};
 
-    float Pandora_Settings_NeutralHadronConfusion_JER[4] = {1.19578154255,1.36589956347,1.23503348963,1.31867062392};
+    float Pandora_Settings_NeutralHadronConfusion_JER[4] = {1.61270117331,1.72553070836,1.91449322524,2.01655038987};
 
-    float Pandora_Settings_OtherConfusion_JER[4] = {1.68003092138,1.54740600907,1.72990956605,1.79222517983};
+    float Pandora_Settings_OtherConfusion_JER[4] = {1.1245342154,1.21508000889,1.74917984453,1.7326644431};
 
-    float Pandora_Settings_Default_JERError[4] = {0.0464093,0.0497581,0.0471637,0.0474098};
+    float Pandora_Settings_Default_JERError[4] = {0.0363619,0.0364577,0.0427408,0.0430926};
 
-    float Pandora_Settings_PerfectPFA_JERError[4] = {0.0373946,0.0403169,0.037743,0.0370914};
+    float Pandora_Settings_PerfectPFA_JERError[4] = {0.0228684,0.021887,0.0236988,0.0237067};
 
-    float Pandora_Settings_TotalConfusion_JERError[4] = {0.0596000757346,0.0640417552607,0.0604065532115,0.0601952861648};
+    float Pandora_Settings_TotalConfusion_JERError[4] = {0.0429552070939,0.0425229285753,0.0488713490751,0.0491831206667};
 
-    float Pandora_Settings_PhotonConfusion_JERError[4] = {0.0651211866296,0.0698844793884,0.066293718659,0.0666416884349};
+    float Pandora_Settings_PhotonConfusion_JERError[4] = {0.0497590592529,0.0503064951629,0.0589862478999,0.0597136194875};
 
-    float Pandora_Settings_NeutralHadronConfusion_JERError[4] = {0.0627883325016,0.0668806950858,0.063949489583,0.0640285928531};
+    float Pandora_Settings_NeutralHadronConfusion_JERError[4] = {0.0433959252777,0.0438196245499,0.0520639084041,0.0525149343743};
 
-    float Pandora_Settings_OtherConfusion_JERError[4] = {0.0570422465453,0.0607513752531,0.0578211680237,0.0572893547688};
+    float Pandora_Settings_OtherConfusion_JERError[4] = {0.0353883731911,0.0346063047626,0.0402445893371,0.0401379163963};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
     TGraphErrors *pTGraphErrors_Pandora_SettingsDefault = new TGraphErrors(4,xAxisVairable,Pandora_Settings_Default_JER,xAxisVairableError,Pandora_Settings_Default_JERError);
@@ -88,5 +88,5 @@
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
-    pCanvasEj->SaveAs("JER_vs_HCalAbsorberMaterial_91GeV_DiJet_Breakdown.pdf");
+    pCanvasEj->SaveAs("JER_vs_HCalAbsorberMaterial_360GeV_DiJet_Breakdown.pdf");
 }

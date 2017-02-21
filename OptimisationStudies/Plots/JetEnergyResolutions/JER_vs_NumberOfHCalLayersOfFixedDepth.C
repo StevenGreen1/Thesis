@@ -13,21 +13,21 @@
 
     float xAxisVairableError[5] = {0,0,0,0,0};
 
-    float Jet_Energy_91GeV_JER[5] = {3.744,3.6974,3.68144,3.71188,3.55531};
+    float Jet_Energy_91GeV_JER[5] = {3.74875,3.6974,3.6469,3.71188,3.55531};
 
-    float Jet_Energy_200GeV_JER[5] = {3.07079,2.91977,2.90164,2.79668,2.84442};
+    float Jet_Energy_200GeV_JER[5] = {3.07079,2.91977,2.88127,2.79668,2.84442};
 
-    float Jet_Energy_360GeV_JER[5] = {3.13096,3.01579,2.8942,2.83286,2.78186};
+    float Jet_Energy_360GeV_JER[5] = {3.13096,3.01579,2.84624,2.83286,2.78186};
 
-    float Jet_Energy_500GeV_JER[5] = {3.42127,3.14647,2.9751,2.99137,2.92701};
+    float Jet_Energy_500GeV_JER[5] = {3.4203,3.14647,2.97436,2.99137,2.92701};
 
-    float Jet_Energy_91GeV_JERError[5] = {0.0520251,0.0498738,0.0473109,0.0519564,0.0501794};
+    float Jet_Energy_91GeV_JERError[5] = {0.0517574,0.0498738,0.0464093,0.0519564,0.0501794};
 
-    float Jet_Energy_200GeV_JERError[5] = {0.0418269,0.039667,0.0371913,0.0385539,0.0401901};
+    float Jet_Energy_200GeV_JERError[5] = {0.0418269,0.039667,0.0368969,0.0385539,0.0401901};
 
-    float Jet_Energy_360GeV_JERError[5] = {0.0438379,0.042069,0.0368636,0.038872,0.039468};
+    float Jet_Energy_360GeV_JERError[5] = {0.0438379,0.042069,0.0363619,0.038872,0.039468};
 
-    float Jet_Energy_500GeV_JERError[5] = {0.0465705,0.0428259,0.0381957,0.041708,0.0397544};
+    float Jet_Energy_500GeV_JERError[5] = {0.0463091,0.0428259,0.0453691,0.041708,0.0397544};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
     TGraphErrors *pTGraphErrors_Jet_Energy_91 = new TGraphErrors(5,xAxisVairable,Jet_Energy_91GeV_JER,xAxisVairableError,Jet_Energy_91GeV_JERError);
@@ -64,5 +64,5 @@
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
-    pCanvasEj->SaveAs("JER_vs_HCalCellDepth.pdf");
+    pCanvasEj->SaveAs("JER_vs_NumberOfHCalLayersOfFixedDepth.pdf");
 }
