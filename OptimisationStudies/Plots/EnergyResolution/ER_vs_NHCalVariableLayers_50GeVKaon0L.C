@@ -1,16 +1,16 @@
 {
-//=========Macro generated from canvas: c1/c1
-//=========  (Mon Feb 20 15:25:08 2017) by ROOT version5.34/30
-   TCanvas *c1 = new TCanvas("c1", "c1",12,51,700,500);
+//=========Macro generated from canvas: c1_n4/c1_n4
+//=========  (Tue Feb 21 10:43:08 2017) by ROOT version5.34/30
+   TCanvas *c1_n4 = new TCanvas("c1_n4", "c1_n4",12,51,700,500);
    gStyle->SetOptStat(0);
-   c1->Range(0,0,1,1);
-   c1->SetFillColor(0);
-   c1->SetBorderMode(0);
-   c1->SetBorderSize(2);
-   c1->SetTickx(1);
-   c1->SetTicky(1);
-   c1->SetFrameLineWidth(2);
-   c1->SetFrameBorderMode(0);
+   c1_n4->Range(0,0,1,1);
+   c1_n4->SetFillColor(0);
+   c1_n4->SetBorderMode(0);
+   c1_n4->SetBorderSize(2);
+   c1_n4->SetTickx(1);
+   c1_n4->SetTicky(1);
+   c1_n4->SetFrameLineWidth(2);
+   c1_n4->SetFrameBorderMode(0);
    
    TH2F *axesEj = new TH2F("axesEj","50 GeV Kaon0L Energy Resolution vs HCal Number Variable Layers",100,14,64,1000,0,20);
    axesEj->SetStats(0);
@@ -50,13 +50,13 @@
    gre->SetPoint(4,42,10.82878);
    gre->SetPointError(4,0,0.1240853);
    gre->SetPoint(5,48,10.7208);
-   gre->SetPointError(5,0,0.08949378);
+   gre->SetPointError(5,0,0.1265632);
    gre->SetPoint(6,54,9.990491);
    gre->SetPointError(6,0,0.124178);
    gre->SetPoint(7,60,9.808668);
    gre->SetPointError(7,0,0.1268551);
    gre->Draw(" pl");
-   c1->Modified();
-   c1->cd();
-   c1->SetSelected(c1);
+   c1_n4->Modified();
+   c1_n4->cd();
+   c1_n4->SetSelected(c1_n4);
 }

@@ -1,18 +1,18 @@
 {
-//=========Macro generated from canvas: c1/c1
-//=========  (Sat May 28 11:11:32 2016) by ROOT version5.34/30
-   TCanvas *c1 = new TCanvas("c1", "c1",10,32,700,500);
+//=========Macro generated from canvas: c1_n2/c1_n2
+//=========  (Tue Feb 21 11:39:37 2017) by ROOT version5.34/30
+   TCanvas *c1_n2 = new TCanvas("c1_n2", "c1_n2",12,51,700,500);
    gStyle->SetOptStat(0);
-   c1->Range(0,0,1,1);
-   c1->SetFillColor(0);
-   c1->SetBorderMode(0);
-   c1->SetBorderSize(2);
-   c1->SetTickx(1);
-   c1->SetTicky(1);
-   c1->SetFrameLineWidth(2);
-   c1->SetFrameBorderMode(0);
+   c1_n2->Range(0,0,1,1);
+   c1_n2->SetFillColor(0);
+   c1_n2->SetBorderMode(0);
+   c1_n2->SetBorderSize(2);
+   c1_n2->SetTickx(1);
+   c1_n2->SetTicky(1);
+   c1_n2->SetFrameLineWidth(2);
+   c1_n2->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","10 GeV Photon Energy Resolution vs Number of Layers in ECal (Sc)",100,14,32,1000,5.4,8.2);
+   TH2F *axesEj = new TH2F("axesEj","100 GeV Photon Energy Resolution vs Number of Layers in ECal (Sc)",100,14,32,1000,2.4,3.8);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);
@@ -39,16 +39,16 @@
    gre->SetFillColor(1);
    gre->SetLineWidth(2);
    gre->SetMarkerStyle(20);
-   gre->SetPoint(0,30,5.631621);
-   gre->SetPointError(0,0,0.0638466);
-   gre->SetPoint(1,26,5.908011);
-   gre->SetPointError(1,0,0.06430803);
-   gre->SetPoint(2,20,6.898712);
-   gre->SetPointError(2,0,0.0719096);
-   gre->SetPoint(3,16,7.845701);
-   gre->SetPointError(3,0,0.08262583);
+   gre->SetPoint(0,30,2.870869);
+   gre->SetPointError(0,0,0.08241485);
+   gre->SetPoint(1,26,2.936696);
+   gre->SetPointError(1,0,0.08618624);
+   gre->SetPoint(2,20,3.207647);
+   gre->SetPointError(2,0,0.1478414);
+   gre->SetPoint(3,16,3.486066);
+   gre->SetPointError(3,0,0.1686523);
    gre->Draw(" pl");
-   c1->Modified();
-   c1->cd();
-   c1->SetSelected(c1);
+   c1_n2->Modified();
+   c1_n2->cd();
+   c1_n2->SetSelected(c1_n2);
 }
