@@ -4,32 +4,30 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,12,36,12000,2.5,4.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,12,36,12000,0,6.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("N_{Layers ECal}");
-    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
-    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetXaxis()->SetTitle("Silicon ECal Number of Layers");
     pAxesEj->Draw();
 
     float xAxisVairable[4] = {16,20,26,30};
 
     float xAxisVairableError[4] = {0,0,0,0};
 
-    float Jet_Energy_91GeV_JER[4] = {4.31608,3.98219,3.76152,3.70895};
+    float Jet_Energy_91GeV_JER[4] = {4.31608,3.98219,3.76152,3.6469};
 
-    float Jet_Energy_200GeV_JER[4] = {3.39826,3.1375,2.92602,2.92036};
+    float Jet_Energy_200GeV_JER[4] = {3.39826,3.1375,2.92602,2.88127};
 
-    float Jet_Energy_360GeV_JER[4] = {3.06449,3.00139,2.85047,2.88585};
+    float Jet_Energy_360GeV_JER[4] = {3.0584,3.00611,2.86635,2.84624};
 
-    float Jet_Energy_500GeV_JER[4] = {3.25736,3.13994,3.12352,2.97279};
+    float Jet_Energy_500GeV_JER[4] = {3.25736,3.13994,3.12352,2.97436};
 
-    float Jet_Energy_91GeV_JERError[4] = {0.0549252,0.0506762,0.047868,0.047199};
+    float Jet_Energy_91GeV_JERError[4] = {0.0549252,0.0506762,0.047868,0.0464093};
 
-    float Jet_Energy_200GeV_JERError[4] = {0.0435174,0.0401781,0.03747,0.0373974};
+    float Jet_Energy_200GeV_JERError[4] = {0.0435174,0.0401781,0.03747,0.0368969};
 
-    float Jet_Energy_360GeV_JERError[4] = {0.0391502,0.0404781,0.03838,0.0368681};
+    float Jet_Energy_360GeV_JERError[4] = {0.0411684,0.0384044,0.0366189,0.0363619};
 
-    float Jet_Energy_500GeV_JERError[4] = {0.0415973,0.0400978,0.039888,0.0379632};
+    float Jet_Energy_500GeV_JERError[4] = {0.0415973,0.0400978,0.039888,0.0453691};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
     TGraphErrors *pTGraphErrors_Jet_Energy_91 = new TGraphErrors(4,xAxisVairable,Jet_Energy_91GeV_JER,xAxisVairableError,Jet_Energy_91GeV_JERError);

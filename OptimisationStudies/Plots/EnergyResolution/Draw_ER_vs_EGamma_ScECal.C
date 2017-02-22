@@ -1,0 +1,91 @@
+#include <utility>
+
+
+void Draw_ER_vs_EGamma_ScECal() 
+{
+    int detModel(91);
+    int recoVar(71);
+    std::string rootFile("EnergyResolution_PandoraSettingsDefault_DetectorModel_" + NumberToString(detModel) + "_ReconstructionVariant_" + NumberToString(recoVar) + "_Photon.root");
+
+    TCanvas *pTCanvas = new TCanvas();
+    pTCanvas->SetBottomMargin(0.15);
+    pTCanvas->SetLeftMargin(0.15);
+
+    TGraphErrors *pTGraphErrors = new TGraphErrors("ER_vs_EGamma","ER_vs_EGamma");
+
+    std::map<int, int> numberToEnergy;
+    numberToEnergy.insert(std::make_pair(1,10));
+    numberToEnergy.insert(std::make_pair(2,20));
+    numberToEnergy.insert(std::make_pair(3,50));
+    numberToEnergy.insert(std::make_pair(4,100));
+    numberToEnergy.insert(std::make_pair(5,200));
+    numberToEnergy.insert(std::make_pair(6,500));
+
+    TFile *pTFile = new TFile(rootFile.c_str());
+
+    for (std::map<int, int>::iterator it = numberToEnergy.begin(); it != numberToEnergy.end(); it++) 
+    {
+        int number(it->first);
+        int energy(it->second);
+
+        std::string histogramName("Resolution_DetectorModel_" + NumberToString(detModel) + "_ReconstructionVariant_" + NumberToString(recoVar) + "/PFOEnergyHistogram_DetectorModel_" + NumberToString(detModel) + "_ReconstructionVariant_" + NumberToString(recoVar) + ";" + NumberToString(number));
+
+        std::cout << histogramName << std::endl;
+ 
+        TH1F *pTH1F = (TH1F*)pTFile->Get(histogramName.c_str());
+
+        std::string fitTitle = "PFOEnergyHistogramGaussianFit_DetectorModel_" + NumberToString(detModel) + "_ReconstructionVariant_" + NumberToString(recoVar) + "_Energy" + NumberToString(energy) + "GeV";
+        TF1 *pGaussianFit = new TF1(fitTitle.c_str(),"gaus",0,1000);
+
+        pTH1F->Fit(fitTitle.c_str());
+        const float fitAmplitude(pGaussianFit->GetParameter(0));
+        const float fitMean(pGaussianFit->GetParameter(1));
+        const float fitStdDev(pGaussianFit->GetParameter(2));
+        const float energyResolution(fitStdDev/fitMean);
+
+        const float meanError(pGaussianFit->GetParError(1));
+        const float meanFracError(meanError / fitMean);
+        const float stdDevError(pGaussianFit->GetParError(2));
+        const float stdDevFracError(stdDevError / fitStdDev);
+
+        const float energyResolutionError = energyResolution * std::pow( (meanFracError*meanFracError) + (stdDevFracError*stdDevFracError) ,0.5);
+
+        pTGraphErrors->SetPoint(pTGraphErrors->GetN(),energy,energyResolution*100.f);
+        pTGraphErrors->SetPointError(pTGraphErrors->GetN()-1,0,energyResolutionError*100.f);
+
+        std::cout << "For energy : " << energy << std::endl;
+        std::cout << "Amplitude          : " << fitAmplitude << std::endl;
+        std::cout << "Mean               : " << fitMean << std::endl;
+        std::cout << "Standard Deviation : " << fitStdDev << std::endl;
+        std::cout << "Det model " << detModel << std::endl;
+        std::cout << "Energy Resolution  : " << energyResolution*100 << std::endl;
+    }
+
+    TH2F *pAxes = new TH2F("axesEj","",100,0,525,1000,1,6);
+    //pAxes->SetTitle("100 GeV Photon Energy Resolution vs Cell Size in ECal (Si)");
+    pAxes->GetYaxis()->SetTitle("#sigma_{Reco} / E_{Reco} [%]");
+    pAxes->GetXaxis()->SetTitle("E_{#gamma} [GeV]");
+    pAxes->GetYaxis()->SetTitleSize(0.05);
+    pAxes->GetYaxis()->SetLabelSize(0.05);
+    pAxes->GetYaxis()->SetTitleOffset(1.0);
+    pAxes->GetXaxis()->SetTitleSize(0.05);
+    pAxes->GetXaxis()->SetLabelSize(0.05);
+    pAxes->GetXaxis()->SetTitleOffset(0.95);
+    pAxes->Draw();
+
+    pTGraphErrors->Draw("same PL");
+    const std::string name("ER_vs_EGamma_ScECal.C");
+    const std::string name2("ER_vs_EGamma_ScECal.pdf");
+    pTCanvas->SaveAs(name.c_str());
+    pTCanvas->SaveAs(name2.c_str());
+
+}
+
+template <class T>
+std::string NumberToString(T Number)
+{
+    std::ostringstream ss;
+    ss << Number;
+    return ss.str();
+}
+
