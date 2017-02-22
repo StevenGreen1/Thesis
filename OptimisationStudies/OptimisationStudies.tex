@@ -43,8 +43,8 @@ The energy resolution for single photon events as a function of photon energy, f
 
 \begin{figure}
 \centering
-\subfloat[Silicon active material, $5 \times 5 \text{mm}^{2}$ ECal transverse granularity.]{\label{fig:ecalsinominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_SiliconECal.pdf}}
-\subfloat[Scintillator active material, $5 \times 5 \text{mm}^{2}$ ECal transverse granularity.]{\label{fig:ecalscnominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_ScintillatorECal.pdf}}
+\subfloat[Silicon active material, $5 \times 5 \text{mm}^{2}$ ECal transverse granularity.]{\label{fig:ecalsinominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_SiECal.pdf}}
+\subfloat[Scintillator active material, $5 \times 5 \text{mm}^{2}$ ECal transverse granularity.]{\label{fig:ecalscnominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_ScECal.pdf}}
 \caption[Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.]{Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.}
 \label{fig:ecalnominalres}
 \end{figure}
@@ -129,7 +129,7 @@ In conclusion smaller transverse granularities in the ECal significantly improve
 \label{sec:ecalnlayers}
 The performance of a number of detector configurations was examined where the longitudinal granularity of the ECal absorber material had been varied about the nominal value.  This study was performed for both the silicon and scintillator active material options.  In all cases considered tungsten was used as the absorber material in the ECal and the active layer thicknesses were not changed, that is 0.5 mm for the silicon option and 2 mm for the scintillator option.  The layout of the ECal for detector models considered are summarised in table \ref{table:nlayersecaloption}.  For each detector model considered in this study the total number of radiation lengths in the ECal is kept approximately constant.  This is done by varying the thickness of the absorber material when modifying the number of layers in the ECal. 
 
- \begin{table}[h!]
+\begin{table}[h!]
 \centering
 \begin{tabular}{ l l l l l l}
 \hline
@@ -144,7 +144,7 @@ $N_{\text{Layers ECal}}$ & & Region 1 [mm] & &  Region 2 [mm] &  [$\text{X}_{0}$
 16 & 10 & 4.00 & 5 & 8.00 & 22.31\\
 \hline
 \end{tabular}
-\caption[Transverse granularity layout of various ECal models considered in this study.]{Transverse granularity layout of various ECal models considered in this study.  Radiation length of tungsten absorber is 3.504mm \cite{Olive:2016xmw}.  Note that the presampler layer contributes one layer to the cumulative number of layers value for all detector models considered.}
+\caption[Transverse granularity layout of the ECal models considered.]{Transverse granularity layout of the ECal models considered.  Radiation length of tungsten absorber is 3.504mm \cite{Olive:2016xmw}.  Note that the presampler layer contributes one layer to the cumulative number of layers value for all detector models considered.}
 \label{table:nlayersecaloption}
 \end{table}
 
@@ -247,7 +247,7 @@ The jet energy resolution for the steel and the tungsten HCal options, for using
 \label{fig:hcalabsmaterial}
 \end{figure} 
 
-Expanding upon this further by examining the jet energy resolution breakdowns as shown in figure \ref{fig:hcalabsmaterialbreak}, it can be seen that the change in performance when changing the HCal absorber material from steel to tungsten is due to changes in the confusion.  The change in confusion is most likely due to the fact that the PandoraPFA algorithms are tuned for HCal cell dimensions based on the steel HCal option, while the HCal cells for the tungsten option HCal will be smaller by a factor of approximately 1.7 ($\approx 16.77/9.946$).  The jet energy resolution breakdowns also indicate that the intrinsic energy resolution of the tungsten HCal is marginally worse, particularly for high energy jets, than that of a steel HCal.  Therefor, even if the algorithms were fully optimised for the tungsten option such that the confusion terms for the two options were comparable the performance of the steel HCal would still be preferred over the tungsten option making the steel option the more preferred of the two.  
+Expanding upon this further by examining the jet energy resolution breakdowns as shown in figure \ref{fig:hcalabsmaterialbreak}, it can be seen that the change in performance when changing the HCal absorber material from steel to tungsten is due to changes in the confusion.  The change in confusion is most likely due to the fact that the PandoraPFA algorithms are tuned for HCal cell dimensions based on the steel HCal option, while the HCal cells for the tungsten option HCal will be smaller by a factor of approximately 1.7 ($\approx 16.77/9.946$).  The jet energy resolution breakdowns also indicate that the intrinsic energy resolution of the tungsten HCal is marginally worse, particularly for high energy jets, than that of a steel HCal.  Therefore, even if the algorithms were fully optimised for the tungsten option such that the confusion terms for the two options were comparable the performance of the steel HCal would still be preferred over the tungsten option making the steel option the more preferred of the two.  
 
 \begin{figure}
 \centering
@@ -297,6 +297,28 @@ The transverse granularity of the HCal acts to determine the impact of confusion
 
 \subsection{HCal Longitudinal Granularity}
 \label{sec:hcalnlayers}
+
+This section focuses upon change in detector performance when varying the number of layers in the HCal.  For this study, the absorber and active layer thicknesses are not varied when adding or subtracting layers from the HCal, so both the total depth of the HCal as well as the number of sampling points of the hadronic showers varies simultaneously, this is in comparison to the study described in section \ref{sec:hcalsamplingfrequency} where the total depth of the HCal is fixed.  The detector models considered had 36, 42, 48, 54 and 60 layered HCals.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth.pdf}
+\caption[Jet energy resolution as a function of number of layers in the HCal.]{Jet energy resolution as a function of number of layers in the HCal.}
+\label{fig:hcalnfixedlayers}
+\end{figure}
+
+The jet energy resolution for the various detector models considered is shown in figure \ref{fig:hcalnlayers} and it was found that increasing the number of layers in the HCal improved the jet energy resolution for all jet energies considered.  The largest gain in performance occurred for the higher energy jets, indicating an improvement to both intrinsic energy resolution as well as pattern recognition performance.  
+
+The jet energy resolution breakdowns as a function number of layers in the HCal, for the lowest and highest energy jets considered, can be found in figure \ref{ig:hcalnfixedlayersbreak}.   
+
+\begin{figure}
+\centering
+\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth_500GeV_DiJet_Breakdown.pdf}}
+\caption[Jet energy resolution breakdown as a function of number of layers in the HCal for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of number of layers in the HCal for 45 and 250 GeV jets.}
+\label{fig:hcalnfixedlayersbreak}
+\end{figure}
+
 
 MAKE THIS SECTIONS ABOUT ADDING LAYERS TO HCAL
 

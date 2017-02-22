@@ -4,9 +4,11 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,0.0,0.3,12000,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,0.0,0.3,12000,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("Sampling Fraction In The HCal");
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetXaxis()->SetTitle("#frac{HCal Active Layer Thickness}{HCal Absorber Layer Thickness}");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
     pAxesEj->Draw();
 
     float xAxisVairable[5] = {0.05,0.1,0.15,0.2,0.25};

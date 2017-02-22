@@ -4,9 +4,11 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,4.004,7.436,12000,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,4.004,7.436,12000,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("Number Of Nuclear Interation Lengths In The HCal [#lambda_{I}]");
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetXaxis()->SetTitle("Nuclear Interation Lengths In The HCal [#lambda_{I}]");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
     pAxesEj->Draw();
 
     float xAxisVairable[5] = {4.576,5.148,5.72,6.292,6.864};

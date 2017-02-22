@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1_n4/c1_n4
-//=========  (Wed Feb 22 11:56:18 2017) by ROOT version5.34/30
+//=========  (Wed Feb 22 13:30:44 2017) by ROOT version5.34/30
    TCanvas *c1_n4 = new TCanvas("c1_n4", "c1_n4",12,51,700,500);
    gStyle->SetOptStat(0);
    c1_n4->Range(0,0,1,1);
@@ -25,7 +25,7 @@
    axesEj->GetXaxis()->SetTitleSize(0.05);
    axesEj->GetXaxis()->SetTitleOffset(0.95);
    axesEj->GetXaxis()->SetTitleFont(132);
-   axesEj->GetYaxis()->SetTitle("#sigma_{Reco} / E_{Reco}");
+   axesEj->GetYaxis()->SetTitle("#sigma_{Reco} / E_{Reco} [%]");
    axesEj->GetYaxis()->SetLabelFont(132);
    axesEj->GetYaxis()->SetLabelSize(0.05);
    axesEj->GetYaxis()->SetTitleSize(0.05);

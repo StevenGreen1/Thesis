@@ -4,9 +4,9 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,30,66,12000,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,30,66,12000,0,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("Number Of HCal Layers Of Fixed Depth");
+    pAxesEj->GetXaxis()->SetTitle("N_{Layers HCal}");
     pAxesEj->Draw();
 
     float xAxisVairable[5] = {36,42,48,54,60};
@@ -21,10 +21,6 @@
 
     float Pandora_Settings_PhotonConfusion_JER[5] = {0.846608561084,0.627879543623,0.582085005218,0.656102084664,0.726488217386};
 
-    float Pandora_Settings_NeutralHadronConfusion_JER[5] = {1.48828505133,1.5156351941,1.49392151691,1.39801667372,1.37158595411};
-
-    float Pandora_Settings_OtherConfusion_JER[5] = {1.37592473715,1.19597222455,1.08243784233,1.02907161772,1.15944064415};
-
     float Pandora_Settings_Default_JERError[5] = {0.0418269,0.039667,0.0368969,0.0385539,0.0401901};
 
     float Pandora_Settings_PerfectPFA_JERError[5] = {0.0292289,0.0285083,0.0273439,0.0288429,0.0294265};
@@ -32,10 +28,6 @@
     float Pandora_Settings_TotalConfusion_JERError[5] = {0.0510276625812,0.04884866481,0.0459246378909,0.0481489123254,0.0498113569339};
 
     float Pandora_Settings_PhotonConfusion_JERError[5] = {0.0580170687231,0.0554447478558,0.0516450825859,0.0537684185966,0.0559040456075};
-
-    float Pandora_Settings_NeutralHadronConfusion_JERError[5] = {0.0531233034763,0.0507685569755,0.0473883220578,0.0493737973077,0.0514211590706};
-
-    float Pandora_Settings_OtherConfusion_JERError[5] = {0.0453861924987,0.0434675723239,0.0410793164926,0.0431861942259,0.0447240360576};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
     TGraphErrors *pTGraphErrors_Pandora_SettingsDefault = new TGraphErrors(5,xAxisVairable,Pandora_Settings_Default_JER,xAxisVairableError,Pandora_Settings_Default_JERError);
@@ -64,27 +56,11 @@
 
     TGraphErrors *pTGraphErrors_Pandora_SettingsPhotonConfusion = new TGraphErrors(5,xAxisVairable,Pandora_Settings_PhotonConfusion_JER,xAxisVairableError,Pandora_Settings_PhotonConfusion_JERError);
 
-    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetLineColor(kOrange);
-    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetMarkerColor(kOrange);
+    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetLineColor(kMagenta);
+    pTGraphErrors_Pandora_SettingsPhotonConfusion->SetMarkerColor(kMagenta);
     pTGraphErrors_Pandora_SettingsPhotonConfusion->Draw("lp,same");
 
     pLegend->AddEntry(pTGraphErrors_Pandora_SettingsPhotonConfusion, "PhotonConfusion", "lp");
-
-    TGraphErrors *pTGraphErrors_Pandora_SettingsNeutralHadronConfusion = new TGraphErrors(5,xAxisVairable,Pandora_Settings_NeutralHadronConfusion_JER,xAxisVairableError,Pandora_Settings_NeutralHadronConfusion_JERError);
-
-    pTGraphErrors_Pandora_SettingsNeutralHadronConfusion->SetLineColor(kGreen-2);
-    pTGraphErrors_Pandora_SettingsNeutralHadronConfusion->SetMarkerColor(kGreen-2);
-    pTGraphErrors_Pandora_SettingsNeutralHadronConfusion->Draw("lp,same");
-
-    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsNeutralHadronConfusion, "NeutralHadronConfusion", "lp");
-
-    TGraphErrors *pTGraphErrors_Pandora_SettingsOtherConfusion = new TGraphErrors(5,xAxisVairable,Pandora_Settings_OtherConfusion_JER,xAxisVairableError,Pandora_Settings_OtherConfusion_JERError);
-
-    pTGraphErrors_Pandora_SettingsOtherConfusion->SetLineColor(kMagenta);
-    pTGraphErrors_Pandora_SettingsOtherConfusion->SetMarkerColor(kMagenta);
-    pTGraphErrors_Pandora_SettingsOtherConfusion->Draw("lp,same");
-
-    pLegend->AddEntry(pTGraphErrors_Pandora_SettingsOtherConfusion, "OtherConfusion", "lp");
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");

@@ -4,7 +4,7 @@
     TCanvas *pCanvasEj = new TCanvas();
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",300,0,300,650,0,6.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",300,0,300,650,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetXaxis()->SetTitle("E_{j} [GeV]");
     pAxesEj->Draw();
