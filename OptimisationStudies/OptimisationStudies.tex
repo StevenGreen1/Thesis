@@ -38,6 +38,9 @@ Detector model simulation was performed using MOKKA \cite{MoradeFreitas:2002kj},
 
 \section{Calibration}
 
+%========================================================================================
+%========================================================================================
+
 \section{Nominal Detector Performance}
 The energy resolution for single photon events as a function of photon energy, for the nominal ILD detector, is shown in figure \ref{fig:ecalnominalres}.  The nominal jet energy resolution can be found in section BLAH.
 
@@ -238,8 +241,6 @@ The nominal choice of absorber material is steel, tungsten provides a feasible a
 
 In this study the total depth of absorber material, in nuclear interaction lengths, was held constant for both models.  This was to ensure any performance changes were not due to additional material as opposed to the intrinsic energy resolutions of the absorber materials.  The interaction of hadrons with the absorber material within the detector is simulated by GEANT4.  The model for these interactions is dependent upon the choice of physics list, which by default is the QGSP\_BERT physics list.  This list is recommended by the GEANT4 authors to use for high energy physics calorimetry as it gives good agreement between experiment.  For this study both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists are tested.  The QGSP\_BERT\_HP list uses the high precision neutron package (NeutronHP) to deal with the transportation of neutrons from below 20 MeV to thermal energies.  This added detail was thought to be necessary for a study involving tungsten due to the increased time of shower development.    
 
-The jet energy resolution for the steel and the tungsten HCal options, for using both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists, are shown in figure \ref{fig:hcalabsmaterial} as a function of jet energy.  These results indicate that steel outperforms tungsten as an absorber material, particularly for high energy jets.  At low energies the performance is similar, indicating that the intrinsic energy resolution of the two options is comparable.  The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, has a minimal impact on these results.
-
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_HCalAbsorberMaterial.pdf}
@@ -247,7 +248,7 @@ The jet energy resolution for the steel and the tungsten HCal options, for using
 \label{fig:hcalabsmaterial}
 \end{figure} 
 
-Expanding upon this further by examining the jet energy resolution breakdowns as shown in figure \ref{fig:hcalabsmaterialbreak}, it can be seen that the change in performance when changing the HCal absorber material from steel to tungsten is due to changes in the confusion.  The change in confusion is most likely due to the fact that the PandoraPFA algorithms are tuned for HCal cell dimensions based on the steel HCal option, while the HCal cells for the tungsten option HCal will be smaller by a factor of approximately 1.7 ($\approx 16.77/9.946$).  The jet energy resolution breakdowns also indicate that the intrinsic energy resolution of the tungsten HCal is marginally worse, particularly for high energy jets, than that of a steel HCal.  Therefore, even if the algorithms were fully optimised for the tungsten option such that the confusion terms for the two options were comparable the performance of the steel HCal would still be preferred over the tungsten option making the steel option the more preferred of the two.  
+The jet energy resolution for the steel and the tungsten HCal options, for using both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists, are shown in figure \ref{fig:hcalabsmaterial} as a function of jet energy.  These results indicate that steel outperforms tungsten as an absorber material, particularly for high energy jets.  At low energies the performance is similar, indicating that the intrinsic energy resolution of the two options is comparable.  The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, has a minimal impact on these results.
 
 \begin{figure}
 \centering
@@ -256,6 +257,10 @@ Expanding upon this further by examining the jet energy resolution breakdowns as
 \caption[Jet energy resolution breakdown as a function of HCal absorber material and physics list for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal absorber material and physics list for 45 and 250 GeV jets.}
 \label{fig:hcalabsmaterialbreak}
 \end{figure}
+
+Expanding upon this further by examining the jet energy resolution breakdowns as shown in figure \ref{fig:hcalabsmaterialbreak}, it can be seen that the change in performance when changing the HCal absorber material from steel to tungsten is due to changes in the confusion.  The change in confusion is most likely due to the fact that the PandoraPFA algorithms are tuned for HCal cell dimensions based on the steel HCal option, while the HCal cells for the tungsten option HCal will be smaller by a factor of approximately 1.7 ($\approx 16.77/9.946$).  The jet energy resolution breakdowns also indicate that the intrinsic energy resolution of the tungsten HCal is marginally worse, particularly for high energy jets, than that of a steel HCal.  
+
+In conclusion, the steel option HCal outperforms the tungsten option in terms of intrinsic energy resolution and pattern recognition confusion making it the more preferred option of the two.
 
 %========================================================================================
 
@@ -307,9 +312,7 @@ This section focuses upon change in detector performance when varying the number
 \label{fig:hcalnfixedlayers}
 \end{figure}
 
-The jet energy resolution for the various detector models considered is shown in figure \ref{fig:hcalnlayers} and it was found that increasing the number of layers in the HCal improved the jet energy resolution for all jet energies considered.  The largest gain in performance occurred for the higher energy jets, indicating an improvement to both intrinsic energy resolution as well as pattern recognition performance.  
-
-The jet energy resolution breakdowns as a function number of layers in the HCal, for the lowest and highest energy jets considered, can be found in figure \ref{ig:hcalnfixedlayersbreak}.   
+The jet energy resolution for the various detector models considered is shown in figure \ref{fig:hcalnlayers}.  It was found that increasing the number of layers in the HCal improved the jet energy resolution for high energy jets, while for low energy jets no the performance change was observed.  The breakdown of the jet energy resolution for the high energy jets, shown in figure \ref{ig:hcalnfixedlayersbreak}, indicates a reduction in the confusion term is driving the change in performance when increasing the number of layers in the HCal.  
 
 \begin{figure}
 \centering
@@ -319,20 +322,55 @@ The jet energy resolution breakdowns as a function number of layers in the HCal,
 \label{fig:hcalnfixedlayersbreak}
 \end{figure}
 
+While the intrinsic energy resolution for jets appeared largely invariant to changes in the number of layers in the HCal, it can be seen that there is an associated improvement in the energy resolution for neutral hadrons, which can be seen in figure \ref{fig:hcalnfixedlayerser}.  This change in neutral hadron energy resolution will be masked in the jet energy resolution study as only $\approx 10\%$ of the energy of a jet arises from neutral hadrons and the energy resolution change is minimal.   
 
-MAKE THIS SECTIONS ABOUT ADDING LAYERS TO HCAL
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalNFixedLayers_50GeVKaon0L.pdf}
+\caption[Energy resolution as a function of number of layers in the HCal for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of number of layers in the HCal  for 50 GeV $\text{K}^{0}_{L}$.}
+\label{fig:hcalnfixedlayerser}
+\end{figure}
+
+In conclusion, a larger number of layers in the HCal is beneficial to detector performance both in terms of a reduction in pattern recognition confusion as well as an improvement in the energy resolution of neutral hadrons.  These performance changes at the energies considered are relatively small and so it would be feasible to consider changes to the nominal number of HCal layers.  However, at higher energies these conclusions could be significantly modified as leakage dominates.  
 
 %========================================================================================
 
 \subsection{HCal Sampling Fraction}
 \label{sec:hcalsamplingfraction}
+In this section the sampling fraction, the ratio of the active to absorber layer thicknesses were considered.  For all detector models considered in this section the total number of nuclear interaction lengths in the HCal was held constant, as was the number of layers in the HCal and the transverse granularity.  The detector models considered are summarised in table \ref{table:hcalsamplingfraction}. 
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{ r r r }
+\hline
+Sampling Fraction & Absorber Thickness & Active Thickness \\
+ & [mm] & [mm] \\
+\hline
+0.05 & 20.430 & 1.022 \\ 
+0.10 & 20.213 & 2.021 \\
+0.15 & 20.000 & 3.000 \\
+0.20 & 19.792 & 3.958 \\
+0.25 & 19.587 & 4.897 \\
+\hline
+\end{tabular}
+\caption[Sampling fraction of HCal models considered.]{Sampling fraction of HCal models considered.}
+\label{table:hcalsamplingfraction}
+\end{table}
+
+The jet energy resolution for these detector models is shown in figure \ref{fig:hcalnlayers}.  It was found that there is no significant change in performance when varying the sampling fraction.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SamplingFractionInTheHCal.pdf}
+\caption[Jet energy resolution as a function of sampling frequency in the HCal.]{Jet energy resolution as a function of sampling frequency in the HCal.  Label needs fixing.}
+\label{fig:hcalsamplingfraction}
+\end{figure}
 
 %========================================================================================
 
 \subsection{HCal Sampling Frequency}
 \label{sec:hcalsamplingfrequency}
-A number of detector models were examined where the longitudinal segmentation of the HCal, of fixed total thickness, had been varied about the nominal value.  In all cases the absorber material was steel while the active material was scintillator.  Each HCal configuration had the same total number of nuclear interaction lengths, 5.72 $\lambda_{I}$ in the absorber material and 0.19 $\lambda_{I}$ in the active material, however, the thickness of the layers was varied depending on the total number of layers being considered.  The ratio of the active material layers to the absorber material layers, the sampling fraction, was also kept constant in this study.  A summary of the detector models considered in this study can be found in table \ref{table:nlayershcaloption}.  
+This section aims to determine the change in performance when the sampling frequency, the number of times a particle shower is sampled per unit length, in the HCal is varied.  This was done by varying the number of readout layers, while maintaining the total number of nuclear interaction lengths contained within the HCal.  In all cases the absorber material was steel while the active material was scintillator.  Each HCal configuration had the same total number of nuclear interaction lengths, 5.72 $\lambda_{I}$ in the absorber material and 0.19 $\lambda_{I}$ in the active material, however, the thickness of the layers was varied depending on the total number of layers being considered.  The ratio of the active material layers to the absorber material layers, the sampling fraction, was also kept constant in this study.  A summary of the detector models considered in this study can be found in table \ref{table:nlayershcaloption}.  
 
 \begin{table}[h!]
 \centering
@@ -358,17 +396,17 @@ Number $N_{\text{Layers HCal}}$& Absorber Thickness & Active Thickness \\
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal.pdf}
-\caption[Jet energy resolution as a function of longitudinal granularity in the HCal.]{Jet energy resolution as a function of longitudinal granularity in the HCal.}
+\caption[Jet energy resolution as a function of sampling frequency in the HCal.]{Jet energy resolution as a function of sampling frequency in the HCal.}
 \label{fig:hcalnlayers}
 \end{figure}
 
-The jet energy resolution for the various detector models considered is shown in figure \ref{fig:hcalnlayers}.  It was found that increasing the number of layers in the HCal, for the same total thickness, improved the jet energy resolution for all jet energies considered.  Based on the increase in the frequency of sampling of particle showers in the HCal, it is expected that the intrinsic energy resolution of the detector should improve.  However, the improvement observed in jet energy resolution for high energy jets indicates that longitudinal granularity is also affecting the confusion terms.
+The jet energy resolution for the various detector models considered is shown in figure \ref{fig:hcalnlayers}.  It was found that increasing the number of layers in the HCal, for the same total thickness, improved the jet energy resolution for all jet energies considered.  Based on the increase in the frequency of sampling of particle showers in the HCal, it is expected that the intrinsic energy resolution of the detector should improve.  However, the improvement observed in jet energy resolution for high energy jets indicates that sampling frequency is also affecting the confusion terms.
 
 \begin{figure}
 \centering
 \subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_91GeV_DiJet_Breakdown.pdf}}
 \subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of HCal longitudinal granularity for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal longitudinal granularity for 45 and 250 GeV jets.}
+\caption[Jet energy resolution breakdown as a function of HCal sampling frequency for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal sampling frequency for 45 and 250 GeV jets.}
 \label{fig:hcalnlayersbreak}
 \end{figure}
 
@@ -377,82 +415,80 @@ These trends are further explored by considering the breakdown of jet energy res
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalLayerNumber_50GeVKaon0L.pdf}
-\caption[Energy resolution as a function of HCal longitudinal granularity for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal longitudinal granularity for 50 GeV $\text{K}^{0}_{L}$.}
+\caption[Energy resolution as a function of HCal sampling frequency for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal sampling frequency for 50 GeV $\text{K}^{0}_{L}$.}
 \label{fig:hcalnlayers}
 \end{figure}
 
-The change in the intrinsic energy resolution of the HCal when varying the longitudinal granularity is best summarised by looking at the energy resolution of neutral hadrons as in the particle flow paradigm the energy of neutral hadrons is primarily measured in the HCal.  A plot of energy resolution against the number of layers in the HCal for 50 GeV $\text{K}^{0}_{L}$ can be found in figure \ref{fig:hcalnlayers}.  This data shows that a reduction in sampling frequency of a particle shower that accompanies a reduction in the number of readout layers results in a broadening of energy distributions and a degradation in the resolution.  It should again be emphasised that these results are for the full ILD detector model and so include the effect of the $\approx 1 \lambda_{I}$ in the ECal.  
+The change in the intrinsic energy resolution of the HCal when varying the sampling frequency is best summarised by looking at the energy resolution of neutral hadrons.  A plot of energy resolution against the number of readout layers in the HCal for 50 GeV $\text{K}^{0}_{L}$ can be found in figure \ref{fig:hcalnlayers}.  This data shows that a reduction in sampling frequency of a particle shower that accompanies a reduction in the number of readout layers results in a broadening of energy distributions and a degradation in the resolution.  It should again be emphasised that these results are for the full ILD detector model and so include the effect of the $\approx 1 \lambda_{I}$ in the ECal.  
 
-The increasing the HCal longitudinal granularity has a twofold effect on the detector performance: an increase in sampling rate of particle showers and an improvement to the intrinsic energy resolution and a reduction in the confusion arising from associating energy deposits from hadrons.  
+The increasing the HCal sampling frequency has a twofold effect on the detector performance: an increase in sampling rate of particle showers and an improvement to the intrinsic energy resolution and a reduction in the confusion arising from associating energy deposits from hadrons.  
 
 %========================================================================================
 %========================================================================================
 
 \section{Global Detector Parameters}
+This section focuses upon optimisation of two global detector parameters; the magnetic field strength and the ECal inner radius.  While these are not directly related to the calorimeter they will both effect detector performance and so were deemed worthy of study alongside the calorimeter parameters. 
 
+%========================================================================================
 
-\iffalse
-\label{optstud:sec:hcal:nlayers}
-
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf}
-  \caption[Jet energy resolution as a function of the number of nuclear interaction lengths in the HCal for the scintillator steel HCal option.]{Jet energy resolution is shown for several fixed energy jets as a function of the number of nuclear interation lenghts in the HCal for the scintillator steel HCal option.}
-  \label{optstud:fig:hcaldepth}
-\end{figure}
+\subsection{The Magnetic Field Strength}
+\label{sec:bfield}
+The magnetic field is vital to the successful application of particle flow calorimetry.  Any charged particles passing through the detector transverse helices that, once reconstructed, can be fitted to give the momentum and so energy of said particle in the particle flow paradigm.  The magnetic field also created a separation between charged and neutral hadrons energy deposits in the calorimeters.  The larger the magnetic field, the greater this separation and the easier to avoid confusion associate tracks to the correct energy deposits in the calorimeters, which is crucial for particle flow.
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SamplingFractionInTheHCal.pdf}
-  \caption[Jet energy resolution as a function of the sampling fraction in the HCal for the scintillator steel HCal option.]{Jet energy resolution is shown for several fixed energy jets as a function of the sampling fraction in the HCal for the scintillator steel HCal option.}
-  \label{optstud:fig:hcalsampfrac}
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStrength.pdf}
+\caption[Jet energy resolution as a function of magnetic field strength.]{Jet energy resolution is shown for several fixed energy jets as a function of magnetic field strength.}
+\label{fig:bfield}
 \end{figure}
 
-\subsection{HCal Absorber Material}
-\label{optstud:sec:hcal:absmat}
+The magnetic field strengths considered in this study ranged from 1 to 5 T in steps of 0.5 T.  The jet energy resolutions as a function of magnetic field strength, shown in figure \ref{fig:bfield}, shows that the jet energy resolution decreases with increasing magnetic field strength for high energy jets.  At low energies the performance is largely invariant to magnetic field strength.  
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial.pdf}
-  \caption[Jet energy resolution as a function of the absorber matieral in the HCal.]{Jet energy resolution is shown for several fixed energy jets as a function of the absorber material in the HCal.}
-  \label{optstud:fig:hcalabsmat}
+\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStrength_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStrength_500GeV_DiJet_Breakdown.pdf}}
+\caption[Jet energy resolution breakdown as a function of magnetic field strength for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of magnetic field strength for 45 and 250 GeV jets.}
+\label{fig:bfieldbreak}
 \end{figure}
 
-\section{Global Detector Parameter Optimisation}
-\label{optstud:sec:global}
+Examination of the decompositions of the jet energy resolution, found in figure \ref{fig:bfieldbreak}, highlights a number of effects.  
 
-\subsection{Magnetic Field Strength}
-\label{optstud:sec:glob:bfield}
+The first is a clear reduction in confusion with increasing magnetic field strength.  This is due to a larger separation between charged and neutral hadron energy deposits in the calorimeter as was expected.  
 
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticField.pdf}
-  \caption[Jet energy resolution as a function of magnetic field strength.]{Jet energy resolution is shown for several fixed energy jets as a function of magetic field strength.}
-  \label{optstud:fig:bfield}
-\end{figure}
+Secondly there is a reduction in intrinsic energy resolution with increasing magnetic field strength for low energy jets, while for high energy jets this trend is reversed.  At low energies the momenta of the charged particles will be low and so the radii of curvature of the helix these particles transverse will be small.  If the radius for a given particle is small enough it will not make it into the calorimeters.  In this case only if the track produced from this particle passes tight selection cuts designed to ensure the track originates from the impact point will the track be used to create a PFO.  Therefor, energy can and will be lost in from events where PFOs are stuck within the tracker.  Given the radii of curvature is inversely proportional to the magnetic field strength, the larger the magnetic field strength the more tracks will be confined to the tracker.  The more tracks that are confined to the tracker, the worse the intrinsic energy resolution becomes as inevitably some tracks fail the quality cuts to form PFOs.  At high jet energies the transverse momentum of the particles will be sufficiently large that the radii of curvatures of the helices formed by charged particles will be enough so that they reach the calorimeters on average.  However, for low magnetic field strengths more particles deposit energy within the same calorimeter cells.  The intrinsic energy resolution plot is determined by associating a single MC particle to each calorimeter cell.  At high jet energies and low magnetic field strengths many of the cells will have energy deposits split between multiple cells and so associating a single MC particle per cell is inaccurate.  This explains why the intrinsic energy resolution degrades slightly in this scenario.  These results are still of interest, however, because the driving term in the jet energy resolution as a function of magnetic field strength is the confusion.
+
+In summary, increasing the magnetic field strength is beneficial to detector performance as it reduces confusion from associating tracks to calorimetric energy deposits from charged particles.  While there is a reduction in the intrinsic energy resolution for low transverse momentum jets with increasing magnetic field strength, this effect is largely offset by the change in confusion.  While the nominal field of 3.5 T gives good performance increasing the field strength is a clear way of making large gains in detector performance.
+
+%========================================================================================
 
 \subsection{Inner ECal Radius}
-\label{optstud:sec:glob:ecalinnerrad}
+This section focuses on optimising the inner ECal radius, or the outer tracker radius.  The nominal detector model has an ECal inner radius of 1808 mm and for this optimisation detector models were considered where the ECal inner radii was set to 1208, 1408, 1608 and 2008 mm.  All other detector parameters identical to those of the nominal ILD detector model.
 
 \begin{figure}
-  \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius.pdf}
-  \caption[Jet energy resolution as a function of the ECal inner radius.]{Jet energy resolution is shown for several fixed energy jets as a function of the inner ECal radius.}
-  \label{optstud:fig:ecalinnerrad}
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius.pdf}
+\caption[Jet energy resolution as a function of ECal inner radius.]{Jet energy resolution is shown for several fixed energy jets as a function of ECal inner radius.}
+\label{fig:ecalinnerr}
 \end{figure}
 
-\fi
+The jet energy resolution as a function of ECal inner radius is shown in figure \ref{fig:ecalinnerr} and these results show that a large ECal inner radius was highly beneficial to detector performance.  This is due to the fact that a large tracker gives more time for charged particles to bend due to the magnetic field, which creates a larger separation between calorimetric energy deposits from charged and neutral particles.  This larger separation reduces the confusion when associating calorimetric energy deposits to tracks and so improves the detector performance.  This conclusion is backed up by the decomposition of the jet energy resolution for the low and high energy jets, shown in figure \ref{ig:ecalinnerrbreak}, which explicitly show a reduction in confusion with increasing ECal inner radius.  
 
-\iffalse
-JER_vs_BothECalCellSize.C                                   JER_vs_MagneticFieldStrength.C                              JER_vs_ScintillatorECalCellSize_91GeV_DiJet_Breakdown.pdf
-JER_vs_BothECalNumberofLayers.C                             JER_vs_MagneticFieldStrength.pdf                            JER_vs_ScintillatorECalNumberofLayers.C
-JER_vs_ECalInnerRadius.C                                    JER_vs_NumberOfLayersInTheHCal.C                            JER_vs_ScintillatorECalNumberofLayers.pdf
-JER_vs_ECalInnerRadius.pdf                                  JER_vs_NumberOfLayersInTheHCal.pdf                          JER_vs_SiliconECalCellSize.C
-JER_vs_HCalAbsorberMaterial.C                               JER_vs_NumberOfNuclearInterationLengthsInTheHCal.C          JER_vs_SiliconECalCellSize.pdf
-JER_vs_HCalAbsorberMaterial.pdf                             JER_vs_NumberOfNuclearInterationLengthsInTheHCal.pdf        JER_vs_SiliconECalCellSize_500GeV_DiJet_Breakdown.C
-JER_vs_HCalCellSize.C                                       JER_vs_SamplingFractionInTheHCal.C                          JER_vs_SiliconECalCellSize_500GeV_DiJet_Breakdown.pdf
-JER_vs_HCalCellSize.pdf                                     JER_vs_SamplingFractionInTheHCal.pdf                        JER_vs_SiliconECalCellSize_91GeV_DiJet_Breakdown.C
-JER_vs_HCalCellSize1000000GeVMHHHE.C                        JER_vs_ScintillatorECalCellSize.C                           JER_vs_SiliconECalCellSize_91GeV_DiJet_Breakdown.pdf
-JER_vs_HCalCellSize1000000GeVMHHHE.pdf                      JER_vs_ScintillatorECalCellSize.pdf                         JER_vs_SiliconECalNumberofLayers.C
-JER_vs_HCalCellSize1GeVMHHHE.C                              JER_vs_ScintillatorECalCellSize_500GeV_DiJet_Breakdown.C    JER_vs_SiliconECalNumberofLayers.pdf
-JER_vs_HCalCellSize1GeVMHHHE.pdf                            JER_vs_ScintillatorECalCellSize_500GeV_DiJet_Breakdown.pdf  
-JER_vs_MagneticField.pdf                                    JER_vs_ScintillatorECalCellSize_91GeV_DiJet_Breakdown.C 
-\fi
+The intrinsic energy resolution of the detectors follows the same pattern as was observed in the magnetic field study.  For low energy jets the larger ECal radius means fewer particles make it to the calorimeters and so some PFOs are not reconstructed giving a worse energy resolution.  While at larger jet energies the radii of curvature of the charged particles is sufficiently large as the particles have higher momenta, meaning very few are confined to the tracker and so the intrinsic energy resolution is largely invariant.  There is a small degradation in intrinsic energy resolution at low ECal inner radii due to the association of a single MC particle per calorimeter cell when running the cheated pattern recognition as explained in section \ref{sec:bfield}.  Again, this effect has little bearing on the final conclusions as the change in intrinsic energy resolution across the detector models is a second order effect.  
+
+\begin{figure}
+\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius_500GeV_DiJet_Breakdown.pdf}}
+\caption[Jet energy resolution breakdown as a function of ECal inner radius for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of ECal inner radius for 45 and 250 GeV jets.}
+\label{fig:ecalinnerrbreak}
+\end{figure}
+
+In conclusion, increasing the ECal inner radius benefits the jet energy resolution significantly.  This trend is driven by changes to the confusion in associating tracks to calorimetric energy deposits, with a larger ECal inner radius producing a reduction in the confusion as separation of charged and neutral particle energy deposits increases.  
+
+%========================================================================================
+%========================================================================================
+
+\section{Conclusions}
+
+
+
+
 
 
