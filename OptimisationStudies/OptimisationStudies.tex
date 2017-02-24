@@ -8,7 +8,7 @@
 %========================================================================================
 
 \section{Calorimeter Optimisation Studies}
-If the future linear collider is to reach it's maximum potential in terms of energy resolution then, optimisation of the detector will be essential.  The energy resolution in the particle flow paradigm is dependant upon several detector components.  The momentum of charged particles arises from the shape of the tracks deposited within the detector while the energy of uncharged particles arise from calorimetric measurements.  Application of sophisticated pattern recognition algorithms allows the particle type to be inferred for the charged particles.  In tern this allows for the conversion of the track momentum into an energy measure for the charged particles.  The particle identification algorithms use the topological information acquired from the calorimetric energy deposited to infer particle type for a subset of charged particles.  
+If the future linear collider is to reach its maximum potential in terms of energy resolution then, optimisation of the detector will be essential.  The energy resolution in the particle flow paradigm is dependant upon several detector components.  The momentum of charged particles arises from the shape of the tracks deposited within the detector while the energy of uncharged particles arise from calorimetric measurements.  Application of sophisticated pattern recognition algorithms allows the particle type to be inferred for the charged particles.  In tern this allows for the conversion of the track momentum into an energy measure for the charged particles.  The particle identification algorithms use the topological information acquired from the calorimetric energy deposited to infer particle type for a subset of charged particles.  
 
 The calorimetric energy deposits are therefore used in a twofold manner: (i) as energy measurements for neutral particles and (ii) as input for particle identification algorithms.  There is potential for significant gains to be made in physics performance by optimising the calorimeters due to their dominant role in energy measurements.  In this chapter the optimisation of the calorimeters is considered.  Parameters such as the longitudinal granularity, transverse granularity and material choices for the calorimeters are considered.  
 
@@ -18,8 +18,54 @@ This chapter concludes with an optimisation of several global parameters for the
 %========================================================================================
 
 \section{Metric}
+This section describes the various metrics used in these detector optimisation studies.
 
-The primary metric used to determine detector performance in this optimisation study is the jet energy resolution, which is defined as the root mean square divided by the mean reconstructed jet energy within the smallest range of reconstructed energies containing 90\% of the data.  BLAH
+\subsection{Jet Energy Resolution}
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/MethodDescription/500GeVEvent.png}
+\caption[500 GeV di-jet Z$\rightarrow$uds event display for nominal ILD detector.]{500 GeV di-jet Z$\rightarrow$uds event display for nominal ILD detector.}
+\label{fig:500GeVzudsevtdisplay}
+\end{figure} 
+
+The primary metric used to determine detector performance was the jet energy resolution.  This was found through the simulation of off-shell mass Z boson (Z') events decaying to light quarks (u, d, s).  In these events the Z' boson is produced at rest, which means the typical decays form two mono-energetic jets that are produced back to back as shown in figure \ref{fig:500GeVzudsevtdisplay}.  Only events where $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the quarks from the Z' decay, are used in the metric calculation.  Using these events the jet energy resolution is calculated as follows: 
+
+\begin{equation} 
+\frac{\text{RMS}_{90}(E_{i})}{\text{Mean}_{90}(E_{i})} = \frac{\text{RMS}_{90}(E_{jj})}{\text{Mean}_{90}(E_{jj})} \times \sqrt{2}
+\end{equation}
+
+where $\text{RMS}_{90}(E_{jj})$ and $\text{Mean}_{90}(E_{jj})$ are the root mean squared (RMS) and the mean of the reconstructed energy distribution respectively.  A detailed description of this metric and why it is used can be found here \cite{arXiv:0907.3577}, however, it is sufficient for this study to note that the reduced range is designed to remove the effect of outliers on the overall detector performance.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/MethodDescription/RMS90Plot.pdf}
+\caption[Definition of jet energy resolution.   Reconstructed jet energy for 200 GeV di-jet Z$\rightarrow$uds events for nominal ILD detector.]{Definition of jet energy resolution.   Reconstructed jet energy for 200 GeV di-jet Z$\rightarrow$uds events for nominal ILD detector.}
+\label{fig:rms90defintion}
+\end{figure} 
+
+An example of the application of this metric can be be found in figure \ref{fig:rms90defintion}.  Using the full range the mean and RMS are 198.5 and 5.8 GeV respectively while using the smallest range containing 90\% of the data the mean and RMS are 199.1 and 4.1 GeV respectively.  This example indicates that the jet energy resolution is strongly influenced by the outliers in the distribution.  Removing these events from the jet energy resolution calculation makes this metric more robust as well as making it more representative of the bulk of the data.
+
+In the subsequent analysis four di-jet/Z' energies are considered: 91 GeV, approximately the top mass; 200 GeV, is the point at which intrinsic energy resolution and pattern recognition confusion are of comparable size for the nominal ILD detector; 360 GeV, this gives 180 GeV energy jets, which is approximately the top quark mass; and 500 GeV is the nominal running energy for the ILC.  Each sample contained 10,000 events generated isotropically so that, given the polar angle cut, approximately 7,000 events contribute to the jet energy resolution metric. 
+
+\subsection{Jet Energy Resolution Decompositions}
+In several optimisation studies it proved useful to decompose the jet energy resolution into terms describing the intrinsic energy resolution of the detector and the pattern recognition confusion arising from incorrect associations of tracks to calorimetric energy deposits.  Pattern recognition confusion manifests itself on energy measurements in two ways:
+
+\begin{itemize}
+\item If a calorimetric energy deposit from a charged particle is incorrectly associated to its track that energy deposit is double counted.
+\item If a calorimetric energy deposit from a neutral particle is incorrectly associated to a track the energy deposit is not counted at all.
+\end{itemize}
+
+Both of these lead to inaccurate measurements of the jet energy and thus degrade the resolution.   
+
+The decomposition of the jet energy resolution was achieved by cheating various aspects of the reconstruction.  The intrinsic energy resolution contribution to the jet energy resolution was determined by fully cheating the pattern recognition as in this case all confusion is negated.  The total confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and this fully cheated reconstruction.  
+
+Furthermore, it is possible to cheat the pattern recognition associated with individual types of particles.  This is particularly useful for studies related to the ECal as, by cheating the photon pattern recognition, it is possible to isolate the confusion associated with photons.  The photon confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and the reconstruction where photons pattern recognition is cheated.    
+
+The intrinsic energy resolution, total confusion and photon confusion described here are used extensively throughout this chapter.
+
+\subsection{Single Particle Energy Resolution}
+As approximately $70\%$ of jet energy arise from charged particle, whose energy measurements are taken from tracks, changes to the intrinsic energy resolution of the calorimeters can be washed out when examining the intrinsic energy resolution using jets.  Therefore, it occasionally proved useful to consider the single particle energy resolutions as a function of the detector parameter of interest.  For ECal related studies $\gamma$s were used as the single particle as their energy deposit arise from calorimetric energy deposits that are almost entirely confined to the ECal and similarly $K^{0}_{L}$s were used for HCal related studies.
+
 
 
 %========================================================================================
@@ -27,16 +73,22 @@ The primary metric used to determine detector performance in this optimisation s
 
 \section{Event Generation, Simulation and Reconstruction}
 
-The jet fragmentation and hadronisation for the Z $\rightarrow$ uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these trivial samples. 
+The jet fragmentation and hadronisation for the Z $\rightarrow$ uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these samples. 
 
 Detector model simulation was performed using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Event reconstruction was performed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter PANDORA CHAPTER.
-
-
 
 %========================================================================================
 %========================================================================================
 
 \section{Calibration}
+Calibration of the simulated detector models considered in these optimisation studies was critical.  Proper calibration allows an unbiased comparison between detector models to be made and the correct conclusions drawn.  To that end the calibration procedure described in chapter CALIBRATION CHAPTER \ref{} was applied to all detector models considered.  A brief summary of the purpose of this procedure is given here:
+
+\begin{itemize}
+\item Digitisation calibration for the ECal and HCal.  This ensured an accurate estimation of the energy deposited in the absorber layers in these sampling calorimeters.    
+\item Minimum ionising particle (MIP) scale calibration in the digitser and PandoraPFA.  This ensures that the MIP response was properly set in the digitser and in PandoraPFA.  The digitser uses this information to place electronic dynamic ranges into the readout technology simulated, while PandoraPFA uses the MIP scale to place cuts to veto noise from the detector.
+\item Electromagnetic and hadronic scale setting.  This ensures that the electromagnetic scale and the hadronic energy scales are properly set within PandoraPFA and hence the output PFOs.  The scales differ due to the different shower dynamics governing the growth of electromagnetic and hadronic showers.  One key difference is the presence of a missing energy component in hadronic showers.  
+\item Retraining photon likelihood data in PandoraPFA.  This ensures that the likelihood data used to identify photons in PandoraPFA was retrained for each detector model.   
+\end{itemize}
 
 %========================================================================================
 %========================================================================================
@@ -51,6 +103,13 @@ The energy resolution for single photon events as a function of photon energy, f
 \caption[Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.]{Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.}
 \label{fig:ecalnominalres}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EKaon0L_SiECal.pdf}
+\caption[Energy resolution as a function of $K^{0}_{L}$ energy for the nominal ILD detector.]{Energy resolution as a function of $K^{0}_{L}$ energy for the nominal ILD detector.}
+\label{fig:hcalnominalres}
+\end{figure} 
 
 %========================================================================================
 %========================================================================================
