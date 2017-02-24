@@ -1,18 +1,18 @@
 {
-//=========Macro generated from canvas: c1_n3/c1_n3
-//=========  (Wed Feb 22 13:28:39 2017) by ROOT version5.34/37
-   TCanvas *c1_n3 = new TCanvas("c1_n3", "c1_n3",10,45,700,500);
+//=========Macro generated from canvas: c1/c1
+//=========  (Fri Feb 24 09:08:45 2017) by ROOT version5.34/37
+   TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
    gStyle->SetOptStat(0);
-   c1_n3->Range(0,0,1,1);
-   c1_n3->SetFillColor(0);
-   c1_n3->SetBorderMode(0);
-   c1_n3->SetBorderSize(2);
-   c1_n3->SetTickx(1);
-   c1_n3->SetTicky(1);
-   c1_n3->SetLeftMargin(0.15);
-   c1_n3->SetBottomMargin(0.15);
-   c1_n3->SetFrameLineWidth(2);
-   c1_n3->SetFrameBorderMode(0);
+   c1->Range(0,0,1,1);
+   c1->SetFillColor(0);
+   c1->SetBorderMode(0);
+   c1->SetBorderSize(2);
+   c1->SetTickx(1);
+   c1->SetTicky(1);
+   c1->SetLeftMargin(0.15);
+   c1->SetBottomMargin(0.15);
+   c1->SetFrameLineWidth(2);
+   c1->SetFrameBorderMode(0);
    
    TH2F *axesEj = new TH2F("axesEj","",100,0,105,1000,8,22);
    axesEj->SetStats(0);
@@ -35,21 +35,33 @@
    axesEj->GetZaxis()->SetTitleFont(132);
    axesEj->Draw("");
    
-   TGraphErrors *gre = new TGraphErrors(4);
+   TGraphErrors *gre = new TGraphErrors(10);
    gre->SetName("Graph0");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
    gre->SetLineWidth(2);
-   gre->SetPoint(0,10,19.79298);
-   gre->SetPointError(0,0,0.2318128);
-   gre->SetPoint(1,20,14.28412);
-   gre->SetPointError(1,0,0.155713);
-   gre->SetPoint(2,50,10.16821);
-   gre->SetPointError(2,0,0.120704);
-   gre->SetPoint(3,100,12.83111);
-   gre->SetPointError(3,0,0.1631183);
+   gre->SetPoint(0,10,19.19687);
+   gre->SetPointError(0,0,0.1954119);
+   gre->SetPoint(1,20,14.06828);
+   gre->SetPointError(1,0,0.1382851);
+   gre->SetPoint(2,30,11.09014);
+   gre->SetPointError(2,0,0.106341);
+   gre->SetPoint(3,40,9.880795);
+   gre->SetPointError(3,0,0.09891648);
+   gre->SetPoint(4,50,9.665278);
+   gre->SetPointError(4,0,0.09991535);
+   gre->SetPoint(5,60,9.581345);
+   gre->SetPointError(5,0,0.09889371);
+   gre->SetPoint(6,70,9.849673);
+   gre->SetPointError(6,0,0.1006607);
+   gre->SetPoint(7,80,10.48809);
+   gre->SetPointError(7,0,0.1224119);
+   gre->SetPoint(8,90,10.53687);
+   gre->SetPointError(8,0,0.1257219);
+   gre->SetPoint(9,100,10.79195);
+   gre->SetPointError(9,0,0.1330811);
    gre->Draw(" pl");
-   c1_n3->Modified();
-   c1_n3->cd();
-   c1_n3->SetSelected(c1_n3);
+   c1->Modified();
+   c1->cd();
+   c1->SetSelected(c1);
 }

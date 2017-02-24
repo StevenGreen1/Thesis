@@ -1,8 +1,8 @@
 \chapter{Calorimeter Optimisation Studies}
 \label{chap:detopt}
 
-\chapterquote{There, sir! that is the perfection of vessels!}
-{Jules Verne, 1828--1905}
+\chapterquote{The simple believes everything, but the prudent gives thought to his steps.}
+{Proverbs 14:15}
 
 %========================================================================================
 %========================================================================================
@@ -28,7 +28,7 @@ This section describes the various metrics used in these detector optimisation s
 \label{fig:500GeVzudsevtdisplay}
 \end{figure} 
 
-The primary metric used to determine detector performance was the jet energy resolution.  This was found through the simulation of off-shell mass Z boson (Z') events decaying to light quarks (u, d, s).  In these events the Z' boson is produced at rest, which means the typical decays form two mono-energetic jets that are produced back to back as shown in figure \ref{fig:500GeVzudsevtdisplay}.  Only events where $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the quarks from the Z' decay, are used in the metric calculation.  Using these events the jet energy resolution is calculated as follows: 
+The primary metric used to determine detector performance was the jet energy resolution.  This was found through the simulation of off-shell mass Z boson (Z') events decaying to light quarks (u, d, s).  In these events the Z' boson is produced at rest, which means the typical decays form two mono-energetic jets that are produced back to back as shown in figure \ref{fig:500GeVzudsevtdisplay}.  Only events where $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the quarks from the Z' decay, are used in the metric calculation to ensure little energy is lost down the beam axis.  Using these events the jet energy resolution is calculated as follows: 
 
 \begin{equation} 
 \frac{\text{RMS}_{90}(E_{i})}{\text{Mean}_{90}(E_{i})} = \frac{\text{RMS}_{90}(E_{jj})}{\text{Mean}_{90}(E_{jj})} \times \sqrt{2}
@@ -64,9 +64,17 @@ Furthermore, it is possible to cheat the pattern recognition associated with ind
 The intrinsic energy resolution, total confusion and photon confusion described here are used extensively throughout this chapter.
 
 \subsection{Single Particle Energy Resolution}
-As approximately $70\%$ of jet energy arise from charged particle, whose energy measurements are taken from tracks, changes to the intrinsic energy resolution of the calorimeters can be washed out when examining the intrinsic energy resolution using jets.  Therefore, it occasionally proved useful to consider the single particle energy resolutions as a function of the detector parameter of interest.  For ECal related studies $\gamma$s were used as the single particle as their energy deposit arise from calorimetric energy deposits that are almost entirely confined to the ECal and similarly $K^{0}_{L}$s were used for HCal related studies.
+As approximately $70\%$ of jet energy arise from charged particle, whose energy measurements are taken from tracks, changes to the intrinsic energy resolution of the calorimeters can be washed out when examining the intrinsic energy resolution using jets.  Therefore, it occasionally proved useful to consider the single particle energy resolutions as a function of the detector parameter of interest.  For ECal related studies $\gamma$s were used as the single particle as their energy deposit arise from calorimetric energy deposits that are almost entirely confined to the ECal and similarly $K^{0}_{L}$s were used for HCal related studies.  
 
+For these single particle samples the energy resolution is defined using a Gaussian fit to the reconstructed energy distributions.  The resolution is defined as the standard deviation divided by the mean of that reconstructed Gaussian.  A total of 10,000 events are used to calculate the energy resolution at each fixed energy point.  A cut of $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the single particle, is applied to ensure events avoid the barrel/endcap overlap region.  Examples of the single particle energy distributions for 100 GeV $\gamma$s and 50 GeV $K^{0}_{L}$s alongside the Gaussian fit used to determine their energy resolution are shown in figure \ref{fig:singleparticleenergyhists}.
 
+\begin{figure}
+\centering
+\subfloat[50 GeV $K^{0}_{L}$.]{\label{fig:kaonsingleparticleenergyhist}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/EKaon0L_50GeV.pdf}}
+\subfloat[100 GeV $\gamma$.]{\label{fig:photonsingleparticleenergyhist}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/EPhoton_100GeV.pdf}}
+\caption[Reconstructed energy distribution using nominal ILD detector model.]{Reconstructed energy distribution using nominal ILD detector model.}
+\label{fig:singleparticleenergyhists}
+\end{figure}
 
 %========================================================================================
 %========================================================================================
@@ -94,7 +102,16 @@ Calibration of the simulated detector models considered in these optimisation st
 %========================================================================================
 
 \section{Nominal Detector Performance}
-The energy resolution for single photon events as a function of photon energy, for the nominal ILD detector, is shown in figure \ref{fig:ecalnominalres}.  The nominal jet energy resolution can be found in section BLAH.
+\textcolor{red}{This sections needs more details on nominal ILD configuration.}
+
+The energy resolution for single $\gamma$ and $K^{0}_{L}$ events as a function of the single particle MC energy, for the nominal ILD detector, is shown in figures \ref{fig:ecalnominalres} and \ref{fig:hcalnominalres} respectively.  The jet energy resolution for the nominal ILD detector model can be found in figure \ref{fig:jernominalres}. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolution/JER_vs_JetEnergy_NominalDetectorPerformance.pdf}
+\caption[Jet energy resolution as a function of jet energy for the nominal ILD detector.]{Jet energy resolution as a function of jet energy for the nominal ILD detector.}
+\label{fig:jernominalres}
+\end{figure} 
 
 \begin{figure}
 \centering

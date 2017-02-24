@@ -6,7 +6,7 @@
 
     TH2F *pAxesEj = new TH2F("axesEj","",1200,0.5,5.5,12000,0,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
-    pAxesEj->GetXaxis()->SetTitle("Magentic Field Strength [T]");
+    pAxesEj->GetXaxis()->SetTitle("Magnetic Field Strength [T]");
     pAxesEj->Draw();
 
     float xAxisVairable[9] = {1,1.5,2,2.5,3,3.5,4,4.5,5};

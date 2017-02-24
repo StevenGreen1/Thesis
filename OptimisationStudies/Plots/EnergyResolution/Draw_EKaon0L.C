@@ -1,6 +1,6 @@
 #include <utility>
 
-void Draw_ER_vs_EKaon0L_HCal() 
+void Draw_EKaon0L() 
 {
     int detModel(85);
     int recoVar(71);
@@ -10,21 +10,15 @@ void Draw_ER_vs_EKaon0L_HCal()
     pTCanvas->SetBottomMargin(0.15);
     pTCanvas->SetLeftMargin(0.15);
 
-    TGraphErrors *pTGraphErrors = new TGraphErrors("ER_vs_EKaon0L","ER_vs_EKaon0L");
+//    TGraphErrors *pTGraphErrors = new TGraphErrors("ER_vs_EKaon0L","ER_vs_EKaon0L");
 
     std::map<int, int> numberToEnergy;
-    numberToEnergy.insert(std::make_pair(1,10));
-    numberToEnergy.insert(std::make_pair(2,20));
-    numberToEnergy.insert(std::make_pair(3,30));
-    numberToEnergy.insert(std::make_pair(4,40));
     numberToEnergy.insert(std::make_pair(5,50));
-    numberToEnergy.insert(std::make_pair(6,60));
-    numberToEnergy.insert(std::make_pair(7,70));
-    numberToEnergy.insert(std::make_pair(8,80));
-    numberToEnergy.insert(std::make_pair(9,90));
-    numberToEnergy.insert(std::make_pair(10,100));
 
     TFile *pTFile = new TFile(rootFile.c_str());
+
+    TH1F *pTH1F;
+    TF1 *pGaussianFit;
 
     for (std::map<int, int>::iterator it = numberToEnergy.begin(); it != numberToEnergy.end(); it++) 
     {
@@ -35,10 +29,10 @@ void Draw_ER_vs_EKaon0L_HCal()
 
         std::cout << histogramName << std::endl;
  
-        TH1F *pTH1F = (TH1F*)pTFile->Get(histogramName.c_str());
+        pTH1F = (TH1F*)pTFile->Get(histogramName.c_str());
 
         std::string fitTitle = "PFOEnergyHistogramGaussianFit_DetectorModel_" + NumberToString(detModel) + "_ReconstructionVariant_" + NumberToString(recoVar) + "_Energy" + NumberToString(energy) + "GeV";
-        TF1 *pGaussianFit = new TF1(fitTitle.c_str(),"gaus",0,1000);
+        pGaussianFit = new TF1(fitTitle.c_str(),"gaus",0,1000);
 
         pTH1F->Fit(fitTitle.c_str());
         const float fitAmplitude(pGaussianFit->GetParameter(0));
@@ -53,8 +47,8 @@ void Draw_ER_vs_EKaon0L_HCal()
 
         const float energyResolutionError = energyResolution * std::pow( (meanFracError*meanFracError) + (stdDevFracError*stdDevFracError) ,0.5);
 
-        pTGraphErrors->SetPoint(pTGraphErrors->GetN(),energy,energyResolution*100.f);
-        pTGraphErrors->SetPointError(pTGraphErrors->GetN()-1,0,energyResolutionError*100.f);
+//        pTGraphErrors->SetPoint(pTGraphErrors->GetN(),energy,energyResolution*100.f);
+//        pTGraphErrors->SetPointError(pTGraphErrors->GetN()-1,0,energyResolutionError*100.f);
 
         std::cout << "For energy : " << energy << std::endl;
         std::cout << "Amplitude          : " << fitAmplitude << std::endl;
@@ -64,24 +58,24 @@ void Draw_ER_vs_EKaon0L_HCal()
         std::cout << "Energy Resolution  : " << energyResolution*100 << std::endl;
     }
 
-    TH2F *pAxes = new TH2F("axesEj","",100,0,105,1000,8,22);
-    //pAxes->SetTitle("100 GeV Photon Energy Resolution vs Cell Size in ECal (Si)");
-    pAxes->GetYaxis()->SetTitle("#sigma_{Reco} / E_{Reco} [%]");
-    pAxes->GetXaxis()->SetTitle("E_{K^{0}_{L}} [GeV]");
-    pAxes->GetYaxis()->SetTitleSize(0.05);
-    pAxes->GetYaxis()->SetLabelSize(0.05);
-    pAxes->GetYaxis()->SetTitleOffset(1.0);
-    pAxes->GetXaxis()->SetTitleSize(0.05);
-    pAxes->GetXaxis()->SetLabelSize(0.05);
-    pAxes->GetXaxis()->SetTitleOffset(0.95);
-    pAxes->Draw();
+    pTH1F->SetTitle("");
+    pTH1F->GetYaxis()->SetTitle("Entries");
+    pTH1F->GetXaxis()->SetTitle("Reconstructed PFO Energy [GeV]");
+    pTH1F->GetYaxis()->SetTitleSize(0.05);
+    pTH1F->GetYaxis()->SetLabelSize(0.05);
+    pTH1F->GetYaxis()->SetTitleOffset(1.0);
+    pTH1F->GetXaxis()->SetTitleSize(0.05);
+    pTH1F->GetXaxis()->SetLabelSize(0.05);
+    pTH1F->GetXaxis()->SetTitleOffset(0.95);
+    pTH1F->GetXaxis()->SetRangeUser(30,70);
+    pTH1F->Draw();
+    pGaussianFit->SetLineColor(kRed);
+    pGaussianFit->Draw("same");
 
-    pTGraphErrors->Draw("same PL");
-    const std::string name("ER_vs_EKaon0L_SiECal.C");
-    const std::string name2("ER_vs_EKaon0L_SiECal.pdf");
+    const std::string name("EKaon0L_50GeV.C");
+    const std::string name2("EKaon0L_50GeV.pdf");
     pTCanvas->SaveAs(name.c_str());
     pTCanvas->SaveAs(name2.c_str());
-
 }
 
 template <class T>
