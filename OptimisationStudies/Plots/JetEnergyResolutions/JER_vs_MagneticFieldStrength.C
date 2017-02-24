@@ -7,8 +7,14 @@
     TH2F *pAxesEj = new TH2F("axesEj","",1200,0.5,5.5,12000,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetYaxis()->SetDecimals();
+    pAxesEj->GetYaxis()->SetTitleSize(0.05);
+    pAxesEj->GetYaxis()->SetLabelSize(0.05);
     pAxesEj->GetXaxis()->SetTitle("Magnetic Field Strength [T]");
     pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetXaxis()->SetDecimals();
+    pAxesEj->GetXaxis()->SetTitleSize(0.05);
+    pAxesEj->GetXaxis()->SetLabelSize(0.05);
     pAxesEj->Draw();
 
     float xAxisVairable[9] = {1,1.5,2,2.5,3,3.5,4,4.5,5};
@@ -32,6 +38,7 @@
     float Jet_Energy_500GeV_JERError[9] = {0.0525323,0.0460174,0.0444234,0.0417959,0.0405606,0.0453691,0.0375471,0.0367101,0.0364576};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Jet_Energy_91 = new TGraphErrors(9,xAxisVairable,Jet_Energy_91GeV_JER,xAxisVairableError,Jet_Energy_91GeV_JERError);
 
     pTGraphErrors_Jet_Energy_91->SetLineColor(4);

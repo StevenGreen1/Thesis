@@ -6,7 +6,15 @@
 
     TH2F *pAxesEj = new TH2F("axesEj","",1200,4.004,7.436,12000,0,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetYaxis()->SetDecimals();
+    pAxesEj->GetYaxis()->SetTitleSize(0.05);
+    pAxesEj->GetYaxis()->SetLabelSize(0.05);
     pAxesEj->GetXaxis()->SetTitle("Nuclear Interation Lengths In The HCal [#lambda_{I}]");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetXaxis()->SetDecimals();
+    pAxesEj->GetXaxis()->SetTitleSize(0.05);
+    pAxesEj->GetXaxis()->SetLabelSize(0.05);
     pAxesEj->Draw();
 
     float xAxisVairable[5] = {4.576,5.148,5.72,6.292,6.864};
@@ -30,6 +38,7 @@
     float Pandora_Settings_PhotonConfusion_JERError[5] = {0.0539698709427,0.0520879985187,0.0516450825859,0.0517017922813,0.0506454758032};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Pandora_SettingsDefault = new TGraphErrors(5,xAxisVairable,Pandora_Settings_Default_JER,xAxisVairableError,Pandora_Settings_Default_JERError);
 
     pTGraphErrors_Pandora_SettingsDefault->SetLineColor(1);

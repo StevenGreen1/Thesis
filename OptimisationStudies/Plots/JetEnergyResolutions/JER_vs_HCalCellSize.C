@@ -7,8 +7,14 @@
     TH2F *pAxesEj = new TH2F("axesEj","",1200,0,110,12000,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetYaxis()->SetDecimals();
+    pAxesEj->GetYaxis()->SetTitleSize(0.05);
+    pAxesEj->GetYaxis()->SetLabelSize(0.05);
     pAxesEj->GetXaxis()->SetTitle("HCal Cell Size [mm]");
     pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetXaxis()->SetDecimals();
+    pAxesEj->GetXaxis()->SetTitleSize(0.05);
+    pAxesEj->GetXaxis()->SetLabelSize(0.05);
     pAxesEj->Draw();
 
     float xAxisVairable[6] = {10,20,30,40,50,100};
@@ -32,6 +38,7 @@
     float Jet_Energy_500GeV_JERError[6] = {0.0354884,0.0370281,0.0453691,0.0394732,0.039587,0.0449774};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Jet_Energy_91 = new TGraphErrors(6,xAxisVairable,Jet_Energy_91GeV_JER,xAxisVairableError,Jet_Energy_91GeV_JERError);
 
     pTGraphErrors_Jet_Energy_91->SetLineColor(4);

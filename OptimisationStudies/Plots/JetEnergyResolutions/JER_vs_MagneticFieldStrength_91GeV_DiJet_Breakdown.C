@@ -6,7 +6,15 @@
 
     TH2F *pAxesEj = new TH2F("axesEj","",1200,0.5,5.5,12000,0,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetYaxis()->SetDecimals();
+    pAxesEj->GetYaxis()->SetTitleSize(0.05);
+    pAxesEj->GetYaxis()->SetLabelSize(0.05);
     pAxesEj->GetXaxis()->SetTitle("Magnetic Field Strength [T]");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetXaxis()->SetDecimals();
+    pAxesEj->GetXaxis()->SetTitleSize(0.05);
+    pAxesEj->GetXaxis()->SetLabelSize(0.05);
     pAxesEj->Draw();
 
     float xAxisVairable[9] = {1,1.5,2,2.5,3,3.5,4,4.5,5};
@@ -30,6 +38,7 @@
     float Pandora_Settings_PhotonConfusion_JERError[9] = {0.0688360004471,0.0674409313054,0.0717348029012,0.0667910324136,0.0664221295563,0.0651211866296,0.0657722396808,0.0680749948635,0.068067380688};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Pandora_SettingsDefault = new TGraphErrors(9,xAxisVairable,Pandora_Settings_Default_JER,xAxisVairableError,Pandora_Settings_Default_JERError);
 
     pTGraphErrors_Pandora_SettingsDefault->SetLineColor(1);

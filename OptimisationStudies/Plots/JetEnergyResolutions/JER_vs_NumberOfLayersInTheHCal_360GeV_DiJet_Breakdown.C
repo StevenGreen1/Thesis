@@ -6,7 +6,15 @@
 
     TH2F *pAxesEj = new TH2F("axesEj","",1200,12,66,12000,0,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
+    pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetYaxis()->SetDecimals();
+    pAxesEj->GetYaxis()->SetTitleSize(0.05);
+    pAxesEj->GetYaxis()->SetLabelSize(0.05);
     pAxesEj->GetXaxis()->SetTitle("N_{Readout Layers HCal}");
+    pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetXaxis()->SetDecimals();
+    pAxesEj->GetXaxis()->SetTitleSize(0.05);
+    pAxesEj->GetXaxis()->SetLabelSize(0.05);
     pAxesEj->Draw();
 
     float xAxisVairable[8] = {18,24,30,36,42,48,54,60};
@@ -30,6 +38,7 @@
     float Pandora_Settings_PhotonConfusion_JERError[8] = {0.0592536673728,0.0540962618398,0.0519555487313,0.0515416857305,0.0506298094406,0.0497590592529,0.0509333580848,0.0505694880832};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Pandora_SettingsDefault = new TGraphErrors(8,xAxisVairable,Pandora_Settings_Default_JER,xAxisVairableError,Pandora_Settings_Default_JERError);
 
     pTGraphErrors_Pandora_SettingsDefault->SetLineColor(1);

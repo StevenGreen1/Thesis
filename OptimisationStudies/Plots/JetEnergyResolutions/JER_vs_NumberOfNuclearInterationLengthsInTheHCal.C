@@ -7,8 +7,14 @@
     TH2F *pAxesEj = new TH2F("axesEj","",1200,4.004,7.436,12000,2.5,4.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetYaxis()->SetTitleOffset(0.8);
+    pAxesEj->GetYaxis()->SetDecimals();
+    pAxesEj->GetYaxis()->SetTitleSize(0.05);
+    pAxesEj->GetYaxis()->SetLabelSize(0.05);
     pAxesEj->GetXaxis()->SetTitle("Nuclear Interation Lengths In The HCal [#lambda_{I}]");
     pAxesEj->GetXaxis()->SetTitleOffset(0.95);
+    pAxesEj->GetXaxis()->SetDecimals();
+    pAxesEj->GetXaxis()->SetTitleSize(0.05);
+    pAxesEj->GetXaxis()->SetLabelSize(0.05);
     pAxesEj->Draw();
 
     float xAxisVairable[5] = {4.576,5.148,5.72,6.292,6.864};
@@ -32,6 +38,7 @@
     float Jet_Energy_500GeV_JERError[5] = {0.0440535,0.0400605,0.0453691,0.0380595,0.0381981};
 
     TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Jet_Energy_91 = new TGraphErrors(5,xAxisVairable,Jet_Energy_91GeV_JER,xAxisVairableError,Jet_Energy_91GeV_JERError);
 
     pTGraphErrors_Jet_Energy_91->SetLineColor(4);
