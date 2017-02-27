@@ -18,7 +18,7 @@ HV-CMOS is adapted to the CLIC experimental conditions as the n-MOS and p-MOS tr
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOSDiagram.pdf}
+\includegraphics[width=0.75\textwidth]{CLICdpVertex/Plots/HV-CMOSDiagram.pdf}
 \caption[HV-CMOS diagram.]{HV-CMOS diagram.}
 \label{fig:hvcmos}
 \end{figure}
@@ -29,7 +29,7 @@ To minimise the material budget for the vertex detector, the pixels used are des
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/schematic.pdf}
+\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/schematic.pdf}
 \caption[Schematic of CCPDv3 and CLICpix pixels.]{Schematic of CCPDv3 and CLICpix pixels.}
 \label{fig:ccpdandclicpix}
 \end{figure}
@@ -77,38 +77,67 @@ The pitch of the pixels produced was 25 {\mu}m and the matrix size was 64$\times
 This section describes the electrical tests that were performed on the sensor designed to determine the properties of the HV-CMOS and CLICpix.  
 
 \subsection{CLICPix Calibration}
-The first analysis was a radioactive source calibration.  This test involved using a strontium 90 source 
 
-Compare the HV-CMOS pulse height to the ToT recorded on the CLICPix using strontium 90 sources.  Gives indication of gluing layer and CLICPix capacitances.  
+\subsubsection{Experimental Setup}
+A radioactive source, $\text{Sr}^{90}$, calibration that was applied to the sensors is presented here.  In this procedure the unstable $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$.  The $\text{Y}^{90}$, as it too is unstable, undergoes $\beta^{-}$ decay to form $\text{Z}^{90}$, which is stable.  Each $\beta^{-}$ decays produce an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and it is the $\text{e}^{-}$ that are used to test the sensitivity of the sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  
+
+This radioactive source was positioned directly on top of the sensors and measurements were made of both the ToT output from the CLICpix and the HV-CMOS analogue signal for individual pixels on the sensor.  The on-pixel event counter was used to veto all events where multiple hits occurred within the time window for a given event.  
 
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:pulseshape1}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000.pdf}}
-\subfloat[]{\label{fig:pulseshape2}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005.pdf}}\hfill
-\subfloat[]{\label{fig:pulseshape3}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01006.pdf}}
-\subfloat[]{\label{fig:pulseshape4}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01008.pdf}}
-\caption[HV-CMOS voltage as a function of time for pulses created by radioactive strontium 90 source.]{HV-CMOS voltage as a function of time for pulses created by radioactive strontium 90 source.}
+\subfloat[]{\label{fig:pulseshape1}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000NoOffset.pdf}}
+\subfloat[]{\label{fig:pulseshape2}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005NoOffset.pdf}}\hfill
+\subfloat[]{\label{fig:pulseshape3}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01006NoOffset.pdf}}
+\subfloat[]{\label{fig:pulseshape4}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01008NoOffset.pdf}}
+\caption[HV-CMOS voltage as a function of time for pulses created by radioactive strontium 90 source.]{HV-CMOS voltage as a function of time for pulses created by radioactive $\text{Sr}^{90}$ source.}
 \label{fig:pulseshapes}
 \end{figure}
 
-\begin{itemize}
-\item ToT vs pulse heights.  
-\item ToT vs rise times.  
-\end{itemize}
+The HV-CMOS analogue output has a DC output of $\approx 1.15$ V and saturation occurs around a signal height of 700 mV.  Examples of the HV-CMOS output can be found in figure \ref{fig:pulseshapes}.
+
+\subsubsection{Analysis}
+The quantities of interest related to the HV-CMOS output are the pulse height and a rise time.  The offset voltage was subtracted from the HV-CMOS analogue output and the pulse height inverted before the following analysis was applied.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TargetToT_vs_PulseHeight.pdf}
-\caption[Average ToT vs pulse height.]{Average ToT vs pulse height.}
-\label{fig:avgtotvspulseheight}
+\subfloat[\textbf{Rise time.}  The arrows show the change in time and voltage as the pulse goes from 10\% to 90\% of the raw pulse height.  This time is used as the definition of the rise time in the subsequent analysis.]{\label{fig:pulseshapeanalysistime}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf}}
+\subfloat[\textbf{Pulse height.} The red dotted line is a Gaussian fit to the peak of the pulse.  The peak is defined as data points where the voltage is in excess of 90\% of the raw pulse height.]{\label{fig:pulseshapeanalysisvoltage}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf}}\hfill
+\caption[Analysis of HV-CMOS voltage as a function of time for pulses created by radioactive strontium 90 source.]{Analysis of HV-CMOS voltage as a function of time for pulses created by radioactive $\text{Sr}^{90}$ source.}
+\label{fig:pulseshapeanalysis}
+\end{figure}
+
+The pulse height was taken as the mean of a Gaussian fit to the peak of the HV-CMOS output voltage distribution.  Such peaks were defined as the data points set that were at or above 90\% of the raw peak height, the maximum voltage change recorded.  The application of a Gaussian fit provides a more robust metric for categorising the pulse height that is not dependant on minor fluctuations in the voltage.  The rise time was calculated as the time taken for the voltage to go from 10\% to 90\% of the raw peak height.  This definition also makes the rise time metric more robust against fluctuations changing the absolute peak height.  Examples of the calculation of these metrics for a given pulse are shown in figure \ref{fig:pulseshapeanalysis}.
+
+For each device the HV-CMOS pulse output was recorded for 15 pixels running along one edge of the 64 $\times$ 64 matrix.  In the subsequent section the mean ToT and pulse height are plotted by first binning the distribution, from all pixels considered, of either ToT or rise time against pulse height using bins of 0.25 mV.  Then the mean of the variable of interest is plotted for each bin.  The error bars shown in the following section correspond to the standard deviation of the bin contents for each bin.   
+
+\subsubsection{Results}
+
+
+\begin{figure}
+\centering
+\subfloat[Mean rise time for all samples.]{\label{fig:risetime1}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight.pdf}}\hfill
+\subfloat[Mean rise time with error bars corresponding to standard deviation of binned rise time distribution for selected sample.]{\label{fig:risetime2}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight_Width.pdf}}
+\caption[HV-CMOS voltage rise time as a function of pulse height.]{HV-CMOS voltage rise time as a function of pulse height.}
+\label{fig:risetime}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/RiseTime_vs_PulseHeight.pdf}
-\caption[Rise time vs pulse height.]{Rise time vs pulse height.}
-\label{fig:risetimevspulseheight}
+\subfloat[Mean ToT for all samples.]{\label{fig:tot1}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight.pdf}}\hfill
+\subfloat[Mean ToT with error bars corresponding to standard deviation of binned ToT distribution for selected sample.]{\label{fig:tot2}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight_Width.pdf}}
+\caption[CLICpix ToT as a function of HV-CMOS voltage pulse height.]{CLICpix ToT as a function of HV-CMOS voltage pulse height.}
+\label{fig:tot}
 \end{figure}
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Cross Couplings}
 ToT on adjacent cells vs pulse heights.  No charge sharing apparent except for SET16.  Possible issues with manufacturing other offset samples as some charge sharing is expcted.
