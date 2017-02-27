@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: Name/Name
-//=========  (Mon Feb 27 09:53:16 2017) by ROOT version5.34/37
+//=========  (Mon Feb 27 12:10:42 2017) by ROOT version5.34/37
    TCanvas *Name = new TCanvas("Name", "Name",10,45,700,500);
    gStyle->SetOptStat(0);
-   Name->Range(-1.373625,-87.50001,12.36263,787.5);
+   Name->Range(2.499781,-87.50001,7.500718,787.5);
    Name->SetFillColor(0);
    Name->SetBorderMode(0);
    Name->SetBorderSize(2);
@@ -31999,6 +31999,7 @@
    Graph_Graph1->SetStats(0);
    Graph_Graph1->SetLineWidth(2);
    Graph_Graph1->GetXaxis()->SetTitle("Time [#mus]");
+   Graph_Graph1->GetXaxis()->SetRange(4365,10184);
    Graph_Graph1->GetXaxis()->SetNdivisions(505);
    Graph_Graph1->GetXaxis()->SetLabelFont(132);
    Graph_Graph1->GetXaxis()->SetLabelSize(0.05);
@@ -32015,7 +32016,93 @@
    Graph_Graph1->GetZaxis()->SetTitleFont(132);
    gre->SetHistogram(Graph_Graph1);
    
+   
+   TF1 *fit = new TF1("fit","gaus",3.9781,5.0463);
+   fit->SetBit(TF1::kNotDraw);
+   fit->SetFillColor(1);
+   fit->SetFillStyle(0);
+   fit->SetLineWidth(2);
+   fit->SetChisquare(63444.04);
+   fit->SetNDF(1707);
+   fit->GetXaxis()->SetNdivisions(505);
+   fit->GetXaxis()->SetLabelFont(132);
+   fit->GetXaxis()->SetLabelSize(0.05);
+   fit->GetXaxis()->SetTitleSize(0.05);
+   fit->GetXaxis()->SetTitleFont(132);
+   fit->GetYaxis()->SetLabelFont(132);
+   fit->GetYaxis()->SetLabelSize(0.05);
+   fit->GetYaxis()->SetTitleSize(0.05);
+   fit->GetYaxis()->SetTitleFont(132);
+   fit->SetParameter(0,563.8712);
+   fit->SetParError(0,0.2175854);
+   fit->SetParLimits(0,0,0);
+   fit->SetParameter(1,4.419729);
+   fit->SetParError(1,0.00207831);
+   fit->SetParLimits(1,0,0);
+   fit->SetParameter(2,1.408018);
+   fit->SetParError(2,0.008898249);
+   fit->SetParLimits(2,0,3.05548);
+   gre->GetListOfFunctions()->Add(fit);
    gre->Draw("alp");
+   TLine *line = new TLine(5.0463,0,5.0463,700);
+   line->SetLineStyle(2);
+   line->SetLineWidth(2);
+   line->Draw();
+   line = new TLine(3.9781,0,3.9781,700);
+   line->SetLineStyle(2);
+   line->SetLineWidth(2);
+   line->Draw();
+   TArrow *arrow = new TArrow(3.9781,595,5.0463,595,0.01,"<|>");
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#ff0000");
+   arrow->SetFillColor(ci);
+   arrow->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#ff0000");
+   arrow->SetLineColor(ci);
+   arrow->SetLineWidth(2);
+   arrow->Draw();
+   
+   TF1 *fit = new TF1("fit","gaus",0,10);
+   fit->SetFillColor(1);
+   fit->SetFillStyle(0);
+
+   ci = TColor::GetColor("#ff0000");
+   fit->SetLineColor(ci);
+   fit->SetLineWidth(3);
+   fit->SetLineStyle(2);
+   fit->SetChisquare(63444.04);
+   fit->SetNDF(1707);
+   fit->GetXaxis()->SetNdivisions(505);
+   fit->GetXaxis()->SetLabelFont(132);
+   fit->GetXaxis()->SetLabelSize(0.05);
+   fit->GetXaxis()->SetTitleSize(0.05);
+   fit->GetXaxis()->SetTitleFont(132);
+   fit->GetYaxis()->SetLabelFont(132);
+   fit->GetYaxis()->SetLabelSize(0.05);
+   fit->GetYaxis()->SetTitleSize(0.05);
+   fit->GetYaxis()->SetTitleFont(132);
+   fit->SetParameter(0,563.8712);
+   fit->SetParError(0,0.2175854);
+   fit->SetParLimits(0,0,0);
+   fit->SetParameter(1,4.419729);
+   fit->SetParError(1,0.00207831);
+   fit->SetParLimits(1,0,0);
+   fit->SetParameter(2,1.408018);
+   fit->SetParError(2,0.008898249);
+   fit->SetParLimits(2,0,3.05548);
+   fit->Draw("same");
+   
+   TPaveText *pt = new TPaveText(0.01,0.945,0.08730659,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(1);
+   pt->SetFillColor(0);
+   pt->SetLineWidth(2);
+   pt->SetTextFont(132);
+   TText *text = pt->AddText("gaus");
+   pt->Draw();
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);

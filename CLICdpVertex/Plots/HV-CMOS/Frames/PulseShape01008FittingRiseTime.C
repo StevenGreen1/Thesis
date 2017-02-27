@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: Name/Name
-//=========  (Mon Feb 27 09:53:17 2017) by ROOT version5.34/37
+//=========  (Mon Feb 27 12:09:14 2017) by ROOT version5.34/37
    TCanvas *Name = new TCanvas("Name", "Name",10,45,700,500);
    gStyle->SetOptStat(0);
-   Name->Range(-1.373625,-87.50001,12.36263,787.5);
+   Name->Range(2.499781,-87.50001,7.500718,787.5);
    Name->SetFillColor(0);
    Name->SetBorderMode(0);
    Name->SetBorderSize(2);
@@ -31999,6 +31999,7 @@
    Graph_Graph4->SetStats(0);
    Graph_Graph4->SetLineWidth(2);
    Graph_Graph4->GetXaxis()->SetTitle("Time [#mus]");
+   Graph_Graph4->GetXaxis()->SetRange(4365,10184);
    Graph_Graph4->GetXaxis()->SetNdivisions(505);
    Graph_Graph4->GetXaxis()->SetLabelFont(132);
    Graph_Graph4->GetXaxis()->SetLabelSize(0.05);
@@ -32015,7 +32016,73 @@
    Graph_Graph4->GetZaxis()->SetTitleFont(132);
    gre->SetHistogram(Graph_Graph4);
    
+   
+   TF1 *fit = new TF1("fit","gaus",4.0631,5.005);
+   fit->SetBit(TF1::kNotDraw);
+   fit->SetFillColor(1);
+   fit->SetFillStyle(0);
+   fit->SetLineWidth(2);
+   fit->SetChisquare(41816.1);
+   fit->SetNDF(1505);
+   fit->GetXaxis()->SetNdivisions(505);
+   fit->GetXaxis()->SetLabelFont(132);
+   fit->GetXaxis()->SetLabelSize(0.05);
+   fit->GetXaxis()->SetTitleSize(0.05);
+   fit->GetXaxis()->SetTitleFont(132);
+   fit->GetYaxis()->SetLabelFont(132);
+   fit->GetYaxis()->SetLabelSize(0.05);
+   fit->GetYaxis()->SetTitleSize(0.05);
+   fit->GetYaxis()->SetTitleFont(132);
+   fit->SetParameter(0,427.5931);
+   fit->SetParError(0,0.1966713);
+   fit->SetParLimits(0,0,0);
+   fit->SetParameter(1,4.429293);
+   fit->SetParError(1,0.003091012);
+   fit->SetParLimits(1,0,0);
+   fit->SetParameter(2,1.405459);
+   fit->SetParError(2,0.01369797);
+   fit->SetParLimits(2,0,2.700259);
+   gre->GetListOfFunctions()->Add(fit);
    gre->Draw("alp");
+   TLine *line = new TLine(3.665,0,3.665,700);
+   line->SetLineStyle(2);
+   line->SetLineWidth(2);
+   line->Draw();
+   line = new TLine(4.0631,0,4.0631,700);
+   line->SetLineStyle(2);
+   line->SetLineWidth(2);
+   line->Draw();
+   TArrow *arrow = new TArrow(3.665,595,4.0631,595,0.01,"<|>");
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#0000ff");
+   arrow->SetFillColor(ci);
+   arrow->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#0000ff");
+   arrow->SetLineColor(ci);
+   arrow->SetLineWidth(2);
+   arrow->Draw();
+   arrow = new TArrow(3.5,43.89874,3.5,395.0887,0.01,"<|>");
+
+   ci = TColor::GetColor("#0000ff");
+   arrow->SetFillColor(ci);
+   arrow->SetFillStyle(1001);
+
+   ci = TColor::GetColor("#0000ff");
+   arrow->SetLineColor(ci);
+   arrow->SetLineWidth(2);
+   arrow->Draw();
+   
+   TPaveText *pt = new TPaveText(0.01,0.945,0.08730659,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(1);
+   pt->SetFillColor(0);
+   pt->SetLineWidth(2);
+   pt->SetTextFont(132);
+   TText *text = pt->AddText("gaus");
+   pt->Draw();
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);
