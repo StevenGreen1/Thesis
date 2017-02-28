@@ -1,22 +1,27 @@
 {
 //=========Macro generated from canvas: Name/Title
-//=========  (Tue Feb 28 13:21:05 2017) by ROOT version5.34/30
-   TCanvas *Name = new TCanvas("Name", "Title",0,0,3000,2500);
+//=========  (Tue Feb 28 13:48:07 2017) by ROOT version5.34/37
+   TCanvas *Name = new TCanvas("Name", "Title",0,45,1440,785);
    gStyle->SetOptStat(0);
    Name->SetHighLightColor(2);
-   Name->Range(-127.2727,-4,1145.455,22.66667);
+   Name->Range(-127.2727,-2.4,1145.455,13.6);
    Name->SetFillColor(0);
    Name->SetBorderMode(0);
    Name->SetBorderSize(2);
+   Name->SetTickx(1);
+   Name->SetTicky(1);
    Name->SetRightMargin(0.35);
    Name->SetBottomMargin(0.15);
+   Name->SetFrameLineWidth(2);
    Name->SetFrameBorderMode(0);
+   Name->SetFrameLineWidth(2);
    Name->SetFrameBorderMode(0);
    
    TGraphErrors *gre = new TGraphErrors(153);
    gre->SetName("Graph0");
    gre->SetTitle("");
    gre->SetFillColor(1);
+   gre->SetLineWidth(2);
    gre->SetPoint(0,62,8.692307);
    gre->SetPointError(0,0,1.204981);
    gre->SetPoint(1,66,8.694525);
@@ -324,32 +329,34 @@
    gre->SetPoint(152,670,7.154545);
    gre->SetPointError(152,0,0.6440043);
    
-   TH1F *Graph_Graph8 = new TH1F("Graph_Graph8","",153,0,700);
-   Graph_Graph8->SetMinimum(0);
-   Graph_Graph8->SetMaximum(20);
-   Graph_Graph8->SetDirectory(0);
-   Graph_Graph8->SetStats(0);
+   TH1F *Graph_Graph_Graph81 = new TH1F("Graph_Graph_Graph81","",153,0,700);
+   Graph_Graph_Graph81->SetMinimum(0);
+   Graph_Graph_Graph81->SetMaximum(12);
+   Graph_Graph_Graph81->SetDirectory(0);
+   Graph_Graph_Graph81->SetStats(0);
 
    Int_t ci;      // for color index setting
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
-   Graph_Graph8->SetLineColor(ci);
-   Graph_Graph8->GetXaxis()->SetTitle("Pulse Height [mV]");
-   Graph_Graph8->GetXaxis()->SetRange(1,153);
-   Graph_Graph8->GetXaxis()->SetLabelFont(42);
-   Graph_Graph8->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph8->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph8->GetXaxis()->SetTitleFont(42);
-   Graph_Graph8->GetYaxis()->SetTitle("ToT");
-   Graph_Graph8->GetYaxis()->SetLabelFont(42);
-   Graph_Graph8->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph8->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph8->GetYaxis()->SetTitleFont(42);
-   Graph_Graph8->GetZaxis()->SetLabelFont(42);
-   Graph_Graph8->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph8->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph8->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph8);
+   Graph_Graph_Graph81->SetLineColor(ci);
+   Graph_Graph_Graph81->SetLineWidth(2);
+   Graph_Graph_Graph81->GetXaxis()->SetTitle("Pulse Height [mV]");
+   Graph_Graph_Graph81->GetXaxis()->SetRange(1,153);
+   Graph_Graph_Graph81->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph81->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph81->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph81->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph81->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph81->GetYaxis()->SetTitle("ToT");
+   Graph_Graph_Graph81->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph81->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph81->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph81->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph81->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph81->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph81->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph81->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_Graph81);
    
    gre->Draw("ap");
    
@@ -357,8 +364,15 @@
    gre->SetName("Graph1");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(2);
-   gre->SetMarkerColor(2);
+
+   ci = 10009;
+   color = new TColor(ci, 1, 0, 0, " ", 0);
+   gre->SetLineColor(ci);
+   gre->SetLineWidth(2);
+
+   ci = 10010;
+   color = new TColor(ci, 1, 0, 0, " ", 0);
+   gre->SetMarkerColor(ci);
    gre->SetPoint(0,42,1.194444);
    gre->SetPointError(0,0,0.5469041);
    gre->SetPoint(1,46,0.3333333);
@@ -607,9 +621,9 @@
    gre->SetPointError(122,0,0.2228355);
    gre->SetPoint(123,534,5.100935);
    gre->SetPointError(123,0,0.2073044);
-   gre->SetPoint(124,538,4.919929);
+   gre->SetPoint(124,537.4131,4.926316);
    gre->SetPointError(124,0,0.2031386);
-   gre->SetPoint(125,542,5.022089);
+   gre->SetPoint(125,541.8384,5.031579);
    gre->SetPointError(125,0,0.2202872);
    gre->SetPoint(126,546,4.813008);
    gre->SetPointError(126,0,0.2133352);
@@ -680,30 +694,32 @@
    gre->SetPoint(159,678,6.928571);
    gre->SetPointError(159,0,0.4555697);
    
-   TH1F *Graph_Graph9 = new TH1F("Graph_Graph9","",160,0,700);
-   Graph_Graph9->SetMinimum(0);
-   Graph_Graph9->SetMaximum(20);
-   Graph_Graph9->SetDirectory(0);
-   Graph_Graph9->SetStats(0);
+   TH1F *Graph_Graph_Graph92 = new TH1F("Graph_Graph_Graph92","",160,0,700);
+   Graph_Graph_Graph92->SetMinimum(0);
+   Graph_Graph_Graph92->SetMaximum(20);
+   Graph_Graph_Graph92->SetDirectory(0);
+   Graph_Graph_Graph92->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Graph9->SetLineColor(ci);
-   Graph_Graph9->GetXaxis()->SetTitle("Pulse Height [mV]");
-   Graph_Graph9->GetXaxis()->SetRange(1,160);
-   Graph_Graph9->GetXaxis()->SetLabelFont(42);
-   Graph_Graph9->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph9->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph9->GetXaxis()->SetTitleFont(42);
-   Graph_Graph9->GetYaxis()->SetTitle("ToT");
-   Graph_Graph9->GetYaxis()->SetLabelFont(42);
-   Graph_Graph9->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph9->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph9->GetYaxis()->SetTitleFont(42);
-   Graph_Graph9->GetZaxis()->SetLabelFont(42);
-   Graph_Graph9->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph9->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph9->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph9);
+   Graph_Graph_Graph92->SetLineColor(ci);
+   Graph_Graph_Graph92->SetLineWidth(2);
+   Graph_Graph_Graph92->GetXaxis()->SetTitle("Pulse Height [mV]");
+   Graph_Graph_Graph92->GetXaxis()->SetRange(1,160);
+   Graph_Graph_Graph92->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph92->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph92->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph92->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph92->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph92->GetYaxis()->SetTitle("ToT");
+   Graph_Graph_Graph92->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph92->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph92->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph92->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph92->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph92->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph92->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph92->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_Graph92);
    
    gre->Draw(" p");
    
@@ -712,6 +728,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(3);
+   gre->SetLineWidth(2);
    gre->SetMarkerColor(3);
    gre->SetPoint(0,34,8.086957);
    gre->SetPointError(0,0,1.224996);
@@ -1034,30 +1051,32 @@
    gre->SetPoint(159,670,8.990909);
    gre->SetPointError(159,0,0.3615275);
    
-   TH1F *Graph_Graph10 = new TH1F("Graph_Graph10","",160,0,700);
-   Graph_Graph10->SetMinimum(0);
-   Graph_Graph10->SetMaximum(20);
-   Graph_Graph10->SetDirectory(0);
-   Graph_Graph10->SetStats(0);
+   TH1F *Graph_Graph_Graph103 = new TH1F("Graph_Graph_Graph103","",160,0,700);
+   Graph_Graph_Graph103->SetMinimum(0);
+   Graph_Graph_Graph103->SetMaximum(20);
+   Graph_Graph_Graph103->SetDirectory(0);
+   Graph_Graph_Graph103->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Graph10->SetLineColor(ci);
-   Graph_Graph10->GetXaxis()->SetTitle("Pulse Height [mV]");
-   Graph_Graph10->GetXaxis()->SetRange(1,160);
-   Graph_Graph10->GetXaxis()->SetLabelFont(42);
-   Graph_Graph10->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph10->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph10->GetXaxis()->SetTitleFont(42);
-   Graph_Graph10->GetYaxis()->SetTitle("ToT");
-   Graph_Graph10->GetYaxis()->SetLabelFont(42);
-   Graph_Graph10->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph10->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph10->GetYaxis()->SetTitleFont(42);
-   Graph_Graph10->GetZaxis()->SetLabelFont(42);
-   Graph_Graph10->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph10->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph10->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph10);
+   Graph_Graph_Graph103->SetLineColor(ci);
+   Graph_Graph_Graph103->SetLineWidth(2);
+   Graph_Graph_Graph103->GetXaxis()->SetTitle("Pulse Height [mV]");
+   Graph_Graph_Graph103->GetXaxis()->SetRange(1,160);
+   Graph_Graph_Graph103->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph103->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph103->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph103->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph103->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph103->GetYaxis()->SetTitle("ToT");
+   Graph_Graph_Graph103->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph103->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph103->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph103->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph103->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph103->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph103->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph103->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_Graph103);
    
    gre->Draw(" p");
    
@@ -1066,6 +1085,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(4);
+   gre->SetLineWidth(2);
    gre->SetMarkerColor(4);
    gre->SetPoint(0,50,6.911765);
    gre->SetPointError(0,0,0.9304236);
@@ -1380,30 +1400,32 @@
    gre->SetPoint(155,670,8.670588);
    gre->SetPointError(155,0,0.5625912);
    
-   TH1F *Graph_Graph11 = new TH1F("Graph_Graph11","",156,0,700);
-   Graph_Graph11->SetMinimum(0);
-   Graph_Graph11->SetMaximum(20);
-   Graph_Graph11->SetDirectory(0);
-   Graph_Graph11->SetStats(0);
+   TH1F *Graph_Graph_Graph114 = new TH1F("Graph_Graph_Graph114","",156,0,700);
+   Graph_Graph_Graph114->SetMinimum(0);
+   Graph_Graph_Graph114->SetMaximum(20);
+   Graph_Graph_Graph114->SetDirectory(0);
+   Graph_Graph_Graph114->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Graph11->SetLineColor(ci);
-   Graph_Graph11->GetXaxis()->SetTitle("Pulse Height [mV]");
-   Graph_Graph11->GetXaxis()->SetRange(1,156);
-   Graph_Graph11->GetXaxis()->SetLabelFont(42);
-   Graph_Graph11->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph11->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph11->GetXaxis()->SetTitleFont(42);
-   Graph_Graph11->GetYaxis()->SetTitle("ToT");
-   Graph_Graph11->GetYaxis()->SetLabelFont(42);
-   Graph_Graph11->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph11->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph11->GetYaxis()->SetTitleFont(42);
-   Graph_Graph11->GetZaxis()->SetLabelFont(42);
-   Graph_Graph11->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph11->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph11->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph11);
+   Graph_Graph_Graph114->SetLineColor(ci);
+   Graph_Graph_Graph114->SetLineWidth(2);
+   Graph_Graph_Graph114->GetXaxis()->SetTitle("Pulse Height [mV]");
+   Graph_Graph_Graph114->GetXaxis()->SetRange(1,156);
+   Graph_Graph_Graph114->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph114->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph114->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph114->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph114->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph114->GetYaxis()->SetTitle("ToT");
+   Graph_Graph_Graph114->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph114->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph114->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph114->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph114->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph114->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph114->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph114->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_Graph114);
    
    gre->Draw(" p");
    
@@ -1412,6 +1434,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(6);
+   gre->SetLineWidth(2);
    gre->SetMarkerColor(6);
    gre->SetPoint(0,42,4.758621);
    gre->SetPointError(0,0,0.920961);
@@ -1724,30 +1747,32 @@
    gre->SetPoint(154,658,7.492857);
    gre->SetPointError(154,0,0.3713594);
    
-   TH1F *Graph_Graph12 = new TH1F("Graph_Graph12","",155,0,700);
-   Graph_Graph12->SetMinimum(0);
-   Graph_Graph12->SetMaximum(20);
-   Graph_Graph12->SetDirectory(0);
-   Graph_Graph12->SetStats(0);
+   TH1F *Graph_Graph_Graph125 = new TH1F("Graph_Graph_Graph125","",155,0,700);
+   Graph_Graph_Graph125->SetMinimum(0);
+   Graph_Graph_Graph125->SetMaximum(20);
+   Graph_Graph_Graph125->SetDirectory(0);
+   Graph_Graph_Graph125->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Graph12->SetLineColor(ci);
-   Graph_Graph12->GetXaxis()->SetTitle("Pulse Height [mV]");
-   Graph_Graph12->GetXaxis()->SetRange(1,155);
-   Graph_Graph12->GetXaxis()->SetLabelFont(42);
-   Graph_Graph12->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph12->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph12->GetXaxis()->SetTitleFont(42);
-   Graph_Graph12->GetYaxis()->SetTitle("ToT");
-   Graph_Graph12->GetYaxis()->SetLabelFont(42);
-   Graph_Graph12->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph12->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph12->GetYaxis()->SetTitleFont(42);
-   Graph_Graph12->GetZaxis()->SetLabelFont(42);
-   Graph_Graph12->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph12->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph12->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph12);
+   Graph_Graph_Graph125->SetLineColor(ci);
+   Graph_Graph_Graph125->SetLineWidth(2);
+   Graph_Graph_Graph125->GetXaxis()->SetTitle("Pulse Height [mV]");
+   Graph_Graph_Graph125->GetXaxis()->SetRange(1,155);
+   Graph_Graph_Graph125->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph125->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph125->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph125->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph125->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph125->GetYaxis()->SetTitle("ToT");
+   Graph_Graph_Graph125->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph125->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph125->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph125->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph125->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph125->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph125->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph125->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_Graph125);
    
    gre->Draw(" p");
    
@@ -1756,6 +1781,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(7);
+   gre->SetLineWidth(2);
    gre->SetMarkerColor(7);
    gre->SetPoint(0,30,3.088235);
    gre->SetPointError(0,0,0.7874092);
@@ -2078,39 +2104,51 @@
    gre->SetPoint(159,666,9.417112);
    gre->SetPointError(159,0,0.4076629);
    
-   TH1F *Graph_Graph13 = new TH1F("Graph_Graph13","",160,0,700);
-   Graph_Graph13->SetMinimum(0);
-   Graph_Graph13->SetMaximum(20);
-   Graph_Graph13->SetDirectory(0);
-   Graph_Graph13->SetStats(0);
+   TH1F *Graph_Graph_Graph136 = new TH1F("Graph_Graph_Graph136","",160,0,700);
+   Graph_Graph_Graph136->SetMinimum(0);
+   Graph_Graph_Graph136->SetMaximum(20);
+   Graph_Graph_Graph136->SetDirectory(0);
+   Graph_Graph_Graph136->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Graph13->SetLineColor(ci);
-   Graph_Graph13->GetXaxis()->SetTitle("Pulse Height [mV]");
-   Graph_Graph13->GetXaxis()->SetRange(1,160);
-   Graph_Graph13->GetXaxis()->SetLabelFont(42);
-   Graph_Graph13->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph13->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph13->GetXaxis()->SetTitleFont(42);
-   Graph_Graph13->GetYaxis()->SetTitle("ToT");
-   Graph_Graph13->GetYaxis()->SetLabelFont(42);
-   Graph_Graph13->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph13->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph13->GetYaxis()->SetTitleFont(42);
-   Graph_Graph13->GetZaxis()->SetLabelFont(42);
-   Graph_Graph13->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph13->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph13->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph13);
+   Graph_Graph_Graph136->SetLineColor(ci);
+   Graph_Graph_Graph136->SetLineWidth(2);
+   Graph_Graph_Graph136->GetXaxis()->SetTitle("Pulse Height [mV]");
+   Graph_Graph_Graph136->GetXaxis()->SetRange(1,160);
+   Graph_Graph_Graph136->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph136->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph136->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph136->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph136->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph136->GetYaxis()->SetTitle("ToT");
+   Graph_Graph_Graph136->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph136->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph136->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph136->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph136->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph136->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph136->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph136->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_Graph136);
    
    gre->Draw(" p");
    
    gre = new TGraphErrors(162);
    gre->SetName("Graph6");
    gre->SetTitle("");
-   gre->SetFillColor(1);
-   gre->SetLineColor(8);
-   gre->SetMarkerColor(8);
+
+   ci = 10007;
+   color = new TColor(ci, 0, 0, 0, " ", 0);
+   gre->SetFillColor(ci);
+
+   ci = 10006;
+   color = new TColor(ci, 0.35, 0.83, 0.33, " ", 0);
+   gre->SetLineColor(ci);
+   gre->SetLineWidth(2);
+
+   ci = 10008;
+   color = new TColor(ci, 0.35, 0.83, 0.33, " ", 0);
+   gre->SetMarkerColor(ci);
    gre->SetPoint(0,38,1.121951);
    gre->SetPointError(0,0,0.4706687);
    gre->SetPoint(1,42,0.3968254);
@@ -2436,35 +2474,38 @@
    gre->SetPoint(161,682,10.15741);
    gre->SetPointError(161,0,0.3253051);
    
-   TH1F *Graph_Graph14 = new TH1F("Graph_Graph14","",162,0,700);
-   Graph_Graph14->SetMinimum(0);
-   Graph_Graph14->SetMaximum(20);
-   Graph_Graph14->SetDirectory(0);
-   Graph_Graph14->SetStats(0);
+   TH1F *Graph_Graph_Graph147 = new TH1F("Graph_Graph_Graph147","",162,0,700);
+   Graph_Graph_Graph147->SetMinimum(0);
+   Graph_Graph_Graph147->SetMaximum(20);
+   Graph_Graph_Graph147->SetDirectory(0);
+   Graph_Graph_Graph147->SetStats(0);
 
    ci = TColor::GetColor("#000099");
-   Graph_Graph14->SetLineColor(ci);
-   Graph_Graph14->GetXaxis()->SetTitle("Pulse Height [mV]");
-   Graph_Graph14->GetXaxis()->SetRange(1,162);
-   Graph_Graph14->GetXaxis()->SetLabelFont(42);
-   Graph_Graph14->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph14->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph14->GetXaxis()->SetTitleFont(42);
-   Graph_Graph14->GetYaxis()->SetTitle("ToT");
-   Graph_Graph14->GetYaxis()->SetLabelFont(42);
-   Graph_Graph14->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph14->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph14->GetYaxis()->SetTitleFont(42);
-   Graph_Graph14->GetZaxis()->SetLabelFont(42);
-   Graph_Graph14->GetZaxis()->SetLabelSize(0.035);
-   Graph_Graph14->GetZaxis()->SetTitleSize(0.035);
-   Graph_Graph14->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph14);
+   Graph_Graph_Graph147->SetLineColor(ci);
+   Graph_Graph_Graph147->SetLineWidth(2);
+   Graph_Graph_Graph147->GetXaxis()->SetTitle("Pulse Height [mV]");
+   Graph_Graph_Graph147->GetXaxis()->SetRange(1,162);
+   Graph_Graph_Graph147->GetXaxis()->SetNdivisions(505);
+   Graph_Graph_Graph147->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_Graph147->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph147->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph147->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_Graph147->GetYaxis()->SetTitle("ToT");
+   Graph_Graph_Graph147->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_Graph147->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_Graph147->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_Graph147->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_Graph147->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_Graph147->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph_Graph147->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph_Graph147->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_Graph147);
    
    gre->Draw(" p");
    
    TLegend *leg = new TLegend(0.7,0.1,0.95,0.9,NULL,"brNDC");
    leg->SetBorderSize(1);
+   leg->SetTextFont(132);
    leg->SetTextSize(0.05);
    leg->SetLineColor(0);
    leg->SetLineStyle(1);
@@ -2474,15 +2515,7 @@
    TLegendEntry *entry=leg->AddEntry("Graph0","Set 9, Centred","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph1","Set 10, #frac{1}{4} Offset","l");
-   entry->SetLineColor(2);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2490,7 +2523,7 @@
    entry=leg->AddEntry("Graph2","Set 12, Centred","l");
    entry->SetLineColor(3);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2498,7 +2531,7 @@
    entry=leg->AddEntry("Graph3","Set 13, Centred","l");
    entry->SetLineColor(4);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2506,7 +2539,7 @@
    entry=leg->AddEntry("Graph4","Set 14, #frac{1}{2} Offset","l");
    entry->SetLineColor(6);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2514,15 +2547,7 @@
    entry=leg->AddEntry("Graph5","Set 15, Centred","l");
    entry->SetLineColor(7);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph6","Set 16, #frac{1}{2} Offset","l");
-   entry->SetLineColor(8);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2531,5 +2556,4 @@
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);
-   Name->SaveAs("AllSETs_Tot_X_PulseHeight.pdf");
 }
