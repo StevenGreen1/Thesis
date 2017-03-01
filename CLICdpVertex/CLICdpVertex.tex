@@ -183,17 +183,104 @@ Cross coupling was observed in one of the $\frac{1}{2}$ offset samples and, assu
 \subsection{Test Pulse Calibration}
 The next test that was performed involved directly injecting a voltage pulse of fixed height directly into the CLICpix ASIC, which gives a measure of the performance of the CLICpix independently of the HV-CMOS sensor.  Due to the construction of the sensor it was not possible to access the HV-CMOS to perform a similar test to isolate its performance.  
 
-\subsection{Experimental Setup}
-In this study a voltage pulse of fixed height was injected into 1 out of every 16 pixels from the matrix, while masking the others, and the ToT from the CLICpix recorded.  This repeated 15 more times using different mask configurations until the entire matrix had been samples.  The masking of pixels was done as to not overload the matrix by running all pixels at ones.  This procedure was repeated 100 times so that average ToTs could be recorded.  The pulse height injected into the CLICpix varied from 2 to 180 mV in steps of 2 mV.
+%========================================================================================
 
+\subsubsection{Experimental Setup}
+In this study a voltage pulse of fixed height was injected into 1 out of every 16 pixels from the matrix, while masking the others, and the ToT from the CLICpix recorded.  This repeated 15 more times using different mask configurations until the entire matrix had been samples.  The masking of pixels was done as to not overload the matrix by running all pixels at ones.  This procedure was repeated 100 times so that average ToTs could be recorded.  The pulse height injected into the CLICpix varied from 2 to 180 mV in steps of 2 mV.  An example of the mean ToT plotted against the injected pulse height is shown in figure \ref{fig:testpulseexamplenofit}.  
 
-
-TODO: Describe surrogate function fit and column structure.  
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/Fits/Set9/ToT_PulseHeight_Set_9_ChipID_001ec0db94b1_Pixel_x0_y0_NoFit.pdf}
+\caption[CLICpix ToT as a function of injected pulse height.]{CLICpix ToT as a function of injected pulse height for a single pixel from a centred sample, Set 9.  The black markers are the mean ToT and the error bars are the standard error in the mean.  The solid red line shows the surrogate function fit and the dotted red lines show the range where the fit was applied.}
+\label{fig:testpulseexamplenofit}
+\end{figure}
 
 %========================================================================================
 
+\subsubsection{Analysis}
+
+The functional form of the ToT against pulse height plot is described using the surrogate function \cite{AlipourTehrani:2054922}, which is defined as
+
+\begin{equation}
+y  = ax + b  - \frac{c}{x-t}
+\end{equation}
+
+where $y$ is the ToT, $x$ is the pulse height and $a$, $b$, $c$ and $d$ are fit parameters.  For large pulse heights the linear relationship dominated and for low pulse heights the inversely proportional term dominates.  $c$ describes the curvature of the graph, while $t$ determines the asymptote below which no signal is detected.  Figure \ref{fig:testpulseexamplefit} shows and example of the application of this fit.  As this function does not describe saturation of the ToT or the no signal region the fit is only applied on data points where the mean ToT is greater than 1 and less than 14.75.  
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/Fits/Set9/ToT_PulseHeight_Set_9_ChipID_001ec0db94b1_Pixel_x0_y0_Fit.pdf}
+\caption[CLICpix ToT as a function of injected pulse height.]{CLICpix ToT as a function of injected pulse height for a single pixel from a centred sample, Set 9.  The black markers are the mean ToT and the error bars are the standard error in the mean.  The solid red line shows the surrogate function fit and the dotted red lines show the range where the fit was applied.}
+\label{fig:testpulseexamplefit}
+\end{figure}
+
+The application of this fit condenses the information for individual pixels down to four parameters.  These parameters were then averaged to categorise the CLICpix response across the whole matrix.  Certain pixels were omitted from this analysis as, based on test beam data, they were deemed to be noisy.  Details of this masking of pixels can be found in section \ref{sec:testbeam}.
+
+%========================================================================================
+
+\subsubsection{Results }
+
+The average of the surrogate function fitted parameters for all devices considered can be found in table \ref{table:clicpixfitparams} and the surrogate functions, using these mean values as parameters, are shown in figure \ref{fig:testpulsemeanfit}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r r r r}
+\hline
+Assembly & $a$ & $b$ & $c$ & $t$ \\ 
+\hline
+SET9 & $0.0855 \pm 0.0003$ & $2.01 \pm 0.02$ & $33.0 \pm 0.5$ & $6.5 \pm 0.1$ \\
+SET 10 & $0.0764 \pm 0.0003$ & $2.10 \pm 0.02$ & $25.3 \pm 0.3$ & $4.1 \pm 0.1$ \\
+SET 12 & $0.0728 \pm 0.0003$ & $2.40 \pm 0.02$ & $31.8 \pm 0.4$ & $4.1 \pm 0.1$ \\
+SET 13 & $0.0711 \pm 0.0003$ & $2.20 \pm 0.02$ & $34.4 \pm 0.4$ & $3.4 \pm 0.1$ \\
+SET 14 & $0.0751 \pm 0.0003$ & $2.12 \pm 0.02$ & $36.6 \pm 0.7$ & $5.0 \pm 0.2$ \\
+SET 15 & $0.0846 \pm 0.0003$ & $1.93 \pm 0.02$ & $28.9 \pm 0.4$ & $6.5 \pm 0.1$\\
+SET16  & & & &\\
+\hline
+\end{tabular}
+\caption[Description of alignment of sensors.]{Description of alignment of sensors.}
+\label{table:clicpixfitparams}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/AverageToT_vs_InjectedPulseHeight.pdf}
+\caption[Fitted CLICpix ToT as a function of injected pulse height averaged across the device matrix.]{Fitted CLICpix ToT as a function of injected pulse height averaged across the device matrix.}
+\label{fig:testpulsemeanfit}
+\end{figure}
+
+As figure \ref{fig:testpulsemeanfit} shows the response of the CLICpix to the injected pulse height is rather uniform across all samples considered, with a turn on pulse height of $\approx$ 15 mV and saturation occurring at $\approx$ 150 mV.  This is a strong indication that the behaviour of the CLICpix ASIC is not affected by the presence of the HV-CMOS device either with or without an offset.  Therefore, performance changes between these samples is entirely due to the HV-CMOS and the transmission of that signal to the CLICpix.  
+
+A known issue withe the design of the CLICpix ASIC is that there is a different bias on alternate rows of the matrix, which leads to a different shape for the ToT as a function of the injected pulse height.  This can be observed in this data set by looking at the distribution of the fit parameters, which is shown for sensor Set 9 in figure \ref{fig:fitparams}.  While the bulk of the parameters are centred around a single value the $c$ fit parameter is either $\approx$ 60 or $\approx$ 5.  When examining the distribution of the $c$ fit parameter as a function of position on the matrix, shown in figure \ref{fig:columnstruct} for Set 9, it can be seen that the structure is related to the column a given pixel is in.  This feature is present in all devices considered, but is understood and will be removed for the next generation of the CLICpix ASIC.
+
+\begin{figure}
+\centering
+\subfloat[$a$ parameter.]{\label{fig:fitparams1}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamA_Set9.pdf}}
+\subfloat[$b$ parameter.]{\label{fig:fitparams2}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamB_Set9.pdf}}\hfill
+\subfloat[$c$ parameter.]{\label{fig:fitparams3}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamC_Set9.pdf}}
+\subfloat[$t$ parameter.]{\label{fig:fitparams4}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamT_Set9.pdf}}
+\label{fig:fitparams}
+\caption[Distribution of surrogate function fit parameters for Set 9.]{Distribution of surrogate function fit parameters for Set 9.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf}
+\caption[Distribution as a function of matrix position of surrogate function fit parameter $c$ for Set 9.]{Distribution of surrogate function fit parameter $c$ for Set 9.}
+\end{figure}
+
+%========================================================================================
+%========================================================================================
+
 \section{Test Beam Analysis}
+\label{sec:testbeam}
+This sections describes the performance of the devices when placed under real experimental conditions at the CERN test beam area.  
+
+%========================================================================================
+
 \subsection{Test Beam Area}
+
+\subsubsection{Test Beam}
+
 Description of test beam, site and telescope.
 
 \subsection{Efficiency}
