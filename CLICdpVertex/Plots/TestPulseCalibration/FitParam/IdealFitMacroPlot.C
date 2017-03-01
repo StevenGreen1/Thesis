@@ -6,14 +6,14 @@ void IdealFitMacroPlot()
     TF1 *pTF1_Set13 = (TF1*)(GetFunction(0.0711, 2.20, 34.4, 3.4)->Clone());
     TF1 *pTF1_Set14 = (TF1*)(GetFunction(0.0751, 2.12, 36.6, 5)->Clone());
     TF1 *pTF1_Set15 = (TF1*)(GetFunction(0.0846, 1.93, 28.9, 6.5)->Clone());
-//    TF1 *pTF1_Set16 = (TF1*)(GetFunction(0.0855, 2.01, 33, 6.5)->Clone());
+    TF1 *pTF1_Set16 = (TF1*)(GetFunction(0.0736, 1.90, 32.2, 3.4)->Clone());
     pTF1_Set9->SetLineColor(1);
     pTF1_Set10->SetLineColor(2);
     pTF1_Set12->SetLineColor(3);
     pTF1_Set13->SetLineColor(4);
     pTF1_Set14->SetLineColor(6);
     pTF1_Set15->SetLineColor(7);
-//    pTF1_Set16->SetLineColor(7);
+    pTF1_Set16->SetLineColor(8);
 
     TCanvas *pTCanvas = new TCanvas("Name", "",0,0,3000,2500);
     pTCanvas->SetRightMargin(0.35);
@@ -28,7 +28,7 @@ void IdealFitMacroPlot()
     pTLegend->AddEntry(pTF1_Set13, "Set 13, Centred", "l");
     pTLegend->AddEntry(pTF1_Set14, "Set 14, #frac{1}{2} Offset", "l");
     pTLegend->AddEntry(pTF1_Set15, "Set 15, Centred", "l");
-//    pTLegend->AddEntry(pTF1_Set16, "Set 16, #frac{1}{2} Offset", "l");
+    pTLegend->AddEntry(pTF1_Set16, "Set 16, #frac{1}{2} Offset", "l");
 
     TH2F *pAxes = new TH2F("Axes","",180,0,180,200,0,20);
     pAxes->Draw();
@@ -46,7 +46,7 @@ void IdealFitMacroPlot()
     pTF1_Set13->Draw("same");
     pTF1_Set14->Draw("same");
     pTF1_Set15->Draw("same");
-//    pTF1_Set16->Draw("same");
+    pTF1_Set16->Draw("same");
     pTLegend->Draw();
     pTCanvas->SaveAs("AverageToT_vs_InjectedPulseHeight.pdf");
     pTCanvas->SaveAs("AverageToT_vs_InjectedPulseHeight.C");

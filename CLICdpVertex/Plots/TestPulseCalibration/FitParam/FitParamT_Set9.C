@@ -10,8 +10,10 @@
    c1_n12->SetBorderSize(2);
    c1_n12->SetFrameBorderMode(0);
    c1_n12->SetFrameBorderMode(0);
+   c1_n12->SetRightMargin(0.2);
+   c1_n12->SetBottomMargin(0.15);
    
-   TH2F *TH2FFitParamT = new TH2F("TH2FFitParamT","Fit Param T - CLICpix HV-CMOS Set 9",64,0,64,64,0,64);
+   TH2F *TH2FFitParamT = new TH2F("TH2FFitParamT","",64,0,64,64,0,64);
    TH2FFitParamT->SetBinContent(67,1.467953e-07);
    TH2FFitParamT->SetBinContent(68,16.22748);
    TH2FFitParamT->SetBinContent(69,1.523902e-06);
@@ -4136,9 +4138,9 @@
 palette->SetLabelColor(1);
 palette->SetLabelFont(42);
 palette->SetLabelOffset(0.005);
-palette->SetLabelSize(0.035);
+palette->SetLabelSize(0.05);
 palette->SetTitleOffset(1);
-palette->SetTitleSize(0.035);
+palette->SetTitleSize(0.05);
    palette->SetFillColor(100);
    palette->SetFillStyle(1001);
    TH2FFitParamT->GetListOfFunctions()->Add(palette,"br");
@@ -4147,17 +4149,19 @@ palette->SetTitleSize(0.035);
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    TH2FFitParamT->SetLineColor(ci);
+   TH2FFitParamT->GetXaxis()->SetTitle("Column");
    TH2FFitParamT->GetXaxis()->SetLabelFont(42);
-   TH2FFitParamT->GetXaxis()->SetLabelSize(0.035);
-   TH2FFitParamT->GetXaxis()->SetTitleSize(0.035);
+   TH2FFitParamT->GetXaxis()->SetLabelSize(0.05);
+   TH2FFitParamT->GetXaxis()->SetTitleSize(0.05);
+   TH2FFitParamT->GetYaxis()->SetTitle("Row");
    TH2FFitParamT->GetXaxis()->SetTitleFont(42);
    TH2FFitParamT->GetYaxis()->SetLabelFont(42);
-   TH2FFitParamT->GetYaxis()->SetLabelSize(0.035);
-   TH2FFitParamT->GetYaxis()->SetTitleSize(0.035);
+   TH2FFitParamT->GetYaxis()->SetLabelSize(0.05);
+   TH2FFitParamT->GetYaxis()->SetTitleSize(0.05);
    TH2FFitParamT->GetYaxis()->SetTitleFont(42);
    TH2FFitParamT->GetZaxis()->SetLabelFont(42);
-   TH2FFitParamT->GetZaxis()->SetLabelSize(0.035);
-   TH2FFitParamT->GetZaxis()->SetTitleSize(0.035);
+   TH2FFitParamT->GetZaxis()->SetLabelSize(0.05);
+   TH2FFitParamT->GetZaxis()->SetTitleSize(0.05);
    TH2FFitParamT->GetZaxis()->SetTitleFont(42);
    TH2FFitParamT->Draw("COLZ");
    
@@ -4167,7 +4171,7 @@ palette->SetTitleSize(0.035);
    pt->SetFillColor(0);
    pt->SetFillStyle(0);
    pt->SetTextFont(42);
-   TText *text = pt->AddText("Fit Param T - CLICpix HV-CMOS Set 9");
+   TText *text = pt->AddText("");
    pt->Draw();
    c1_n12->Modified();
    c1_n12->cd();

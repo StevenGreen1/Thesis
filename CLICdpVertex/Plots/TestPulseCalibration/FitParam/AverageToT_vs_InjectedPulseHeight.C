@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: Name/
-//=========  (Wed Mar  1 13:30:04 2017) by ROOT version5.34/37
-   TCanvas *Name = new TCanvas("Name", "",0,45,1920,1035);
+//=========  (Wed Mar  1 16:28:01 2017) by ROOT version5.34/37
+   TCanvas *Name = new TCanvas("Name", "",0,45,1440,785);
    gStyle->SetOptStat(0);
    Name->Range(-32.90909,-4,296.1818,22.66667);
    Name->SetFillColor(0);
@@ -205,6 +205,34 @@
    Set->SetParLimits(3,0,0);
    Set->Draw("same");
    
+   TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",3.4,180);
+   Set->SetFillColor(1);
+   Set->SetFillStyle(0);
+   Set->SetLineColor(8);
+   Set->SetLineWidth(2);
+   Set->GetXaxis()->SetNdivisions(505);
+   Set->GetXaxis()->SetLabelFont(132);
+   Set->GetXaxis()->SetLabelSize(0.05);
+   Set->GetXaxis()->SetTitleSize(0.05);
+   Set->GetXaxis()->SetTitleFont(132);
+   Set->GetYaxis()->SetLabelFont(132);
+   Set->GetYaxis()->SetLabelSize(0.05);
+   Set->GetYaxis()->SetTitleSize(0.05);
+   Set->GetYaxis()->SetTitleFont(132);
+   Set->SetParameter(0,0.0736);
+   Set->SetParError(0,0);
+   Set->SetParLimits(0,0,0);
+   Set->SetParameter(1,1.9);
+   Set->SetParError(1,0);
+   Set->SetParLimits(1,0,0);
+   Set->SetParameter(2,32.2);
+   Set->SetParError(2,0);
+   Set->SetParLimits(2,0,0);
+   Set->SetParameter(3,3.4);
+   Set->SetParError(3,0);
+   Set->SetParLimits(3,0,0);
+   Set->Draw("same");
+   
    TLegend *leg = new TLegend(0.7,0.1,0.95,0.9,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(132);
@@ -256,6 +284,14 @@
    entry->SetTextFont(132);
    entry=leg->AddEntry("Set","Set 15, Centred","l");
    entry->SetLineColor(7);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(2);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(132);
+   entry=leg->AddEntry("Set","Set 16, #frac{1}{2} Offset","l");
+   entry->SetLineColor(8);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);

@@ -28,6 +28,10 @@ void Macro()
     GetMean("15","B");
     GetMean("15","C");
     GetMean("15","T");
+    GetMean("16","A");
+    GetMean("16","B");
+    GetMean("16","C");
+    GetMean("16","T");
 }
 
 void GetMean(TString setNumber, TString parameter)
