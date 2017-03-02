@@ -42,7 +42,7 @@ To minimise the material budget for the vertex detector, the pixels used are des
 %========================================================================================
 
 \subsection{CLICpix}
-The readout ASIC in this study is the CLICpix, which is a charge integrating amplifier connected to a discriminator as shown in figure \ref{fig:ccpdandclicpix}.  The output to this discriminator is then used as the input for further logic operations that record the magnitude, using a Time over Threshold (ToT) measurement, and time of arrival of the collected charge.
+The readout ASIC in this study is the CLICpix, which is a charge integrating amplifier connected to a discriminator as shown in figure \ref{fig:ccpdandclicpix}.  The discriminator produces an output signal when the input signal is over a given threshold.  The discriminator output is then used as the input for further logic operations that record the magnitude, using a Time over Threshold (ToT) measurement, and time of arrival of the collected charge.  The ToT uses a four-bit readout and so is confined to the range 0 to 15 units.  It is envisaged that the CLICpix ASIC will be run using shutter-based operations where the entire matrix is kept active while the shutter is open and when closed the matrix is readout is at once.  This would be viable for the CLIC experiment which runs with pulses containing 312 bunches, each bunch is 156 ns long followed by 0.5 ns separation, and between pulses there is 20 ms of readout time.  
 
 %========================================================================================
 
@@ -81,7 +81,7 @@ SET16 & $\frac{1}{2}$ Offset \\
 \label{table:alignment}
 \end{table}
 
-The pitch of the pixels produced was 25 {\mu}m and the matrix size was 64$\times$64.  The full details of the gluing process can be found here (CERN NOTE CITE) along with a study into the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1 {\mu}m and the precision on the pixel positioning was less than 0.5 {\mu}m.  
+The pitch of the pixels, HV-CMOS sensor and CLICpix ASIC, on the prototype sensors produced for this study was 25 {\mu}m and the matrix size was 64$\times$64.  The full details of the gluing process can be found here (CERN NOTE CITE) along with a study into the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1 {\mu}m and the precision on the pixel positioning was less than 0.5 {\mu}m.  
 
 %========================================================================================
 %========================================================================================
@@ -97,7 +97,7 @@ This section describes the electrical tests that were performed on the sensor de
 \subsubsection{Experimental Setup}
 A radioactive source, $\text{Sr}^{90}$, calibration that was applied to the sensors is presented here.  In this procedure the unstable $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$.  The $\text{Y}^{90}$, as it too is unstable, undergoes $\beta^{-}$ decay to form $\text{Z}^{90}$, which is stable.  Each $\beta^{-}$ decays produce an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and it is the $\text{e}^{-}$ that are used to test the sensitivity of the sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  
 
-This radioactive source was positioned directly on top of the sensors and measurements were made of both the ToT output from the CLICpix and the HV-CMOS analogue signal for individual pixels on the sensor.  The on-pixel event counter was used to veto all events where multiple hits occurred within the time window for a given event.  
+This radioactive source was positioned directly on top of the sensors and measurements were made of both the ToT output from the CLICpix and the HV-CMOS analogue signal for individual pixels on the sensor.  The HV-CMOS pulse shape was recorded on a fast sampling oscilloscope that was used to tigger the data taking for the CLICpix readout.  The on-pixel event counter was used to veto all events where multiple hits occurred within the time window for a given event.  
 
 \begin{figure}
 \centering
@@ -141,11 +141,12 @@ The mean rise time as function of pulse height is shown in figure \ref{fig:riset
 \label{fig:risetime}
 \end{figure}
 
-The data in figure \ref{fig:risetime} indicates that the rise time is approximately 300 ns across all samples considered and that this is largely independent of pulse height for all but the largest and smallest values.  For large pulse heights the rise time is reduced while for low pulse heights the rise time is much larger.  This is to be expected as the pulse heights is proportional to the signal from the $\text{e}^{-}$ and the larger this signal the larger the rate of change of output voltage from the HV-CMOS and so the lower the rise time.  As all HV-CMOS devices in this analysis were constructed in the same manor it is expected that all devices behave similarly, which is what we observe.
+The data in figure \ref{fig:risetime} indicates that the rise time is approximately 300 ns across all samples considered and that this is largely independent of pulse height for all but the largest and smallest values.  For large pulse heights the rise time is reduced while for low pulse heights the rise time is much larger.  This is to be expected as the pulse heights is proportional to the signal from the $\text{e}^{-}$ and the larger this signal the larger the rate of change of output voltage from the HV-CMOS and so the lower the rise time.  It is encouraging that all HV-CMOS devices have similar characteristics as it makes comparison of samples having different offsets between the HV-CMOS and the CLICpix ASIC possible.  This assumes the CLICpix sensors also behave in a similar manor across all samples considered, which is the case as the results in section \ref{testpulsecalibrationresults} show.  
 
 %========================================================================================
 
 \subsubsection{Results -  ToT vs Pulse Height}
+\label{sec:totvspulseheight}
 Figure \ref{fig:tot} shows the mean ToT as a function of pulse height.  The determination of the mean and error bars for the ToT measurement is identical to that described in section \ref{sec:resultsrisetimepulseheight} for the rise time measurement. 
 
 \begin{figure}
@@ -155,7 +156,7 @@ Figure \ref{fig:tot} shows the mean ToT as a function of pulse height.  The dete
 \label{fig:tot}
 \end{figure}
 
-The distribution of mean ToT against pulse height show that for centred samples the ToT increases with pulse height up to pulse heights of approximately 300 mV upon which the mean ToT saturates at $\approx 13$.  The ToT uses a four-bit readout and so is confined to the range 0 to 15.  It is expected that the $\frac{1}{4}$ and $\frac{1}{2}$ offset samples should have a lower ToT than the centred samples.  This is due to the splitting of the HV-CMOS signal between adjacent CLICpix ASICs.  The greater the offset the smaller the signal to the target CLICpix and the lower the ToT.  This is what is observed when comparing the centred samples to the $\frac{1}{4}$ offset sample and one, Set 16, of the $\frac{1}{2}$ offset samples.  The other $\frac{1}{2}$ offset sample, Set 14, appears to behave as a centred sample indicating that this sample may have been manufactured with no offset.  
+The distribution of mean ToT against pulse height shows that for centred samples the ToT increases with pulse height up to pulse heights of approximately 300 mV upon and that the mean ToT saturates at $\approx 13$ units.  It is expected that the $\frac{1}{4}$ and $\frac{1}{2}$ offset samples should have a lower ToT than the centred samples due to the lower effective capacitance between the HV-CMOS and the target CLICpix ASIC.  The greater the offset the smaller the effective capacitance to the target CLICpix and so the lower the recorded ToT.  This is what is observed when comparing the centred samples to the $\frac{1}{4}$ offset sample and one, Set 16, of the $\frac{1}{2}$ offset samples.  The other $\frac{1}{2}$ offset sample, Set 14, appears to behave as a centred sample indicating that this sample may have been manufactured with no offset.  
 
 %========================================================================================
 
@@ -198,7 +199,6 @@ In this study a voltage pulse of fixed height was injected into 1 out of every 1
 %========================================================================================
 
 \subsubsection{Analysis}
-
 The functional form of the ToT against pulse height plot is described using the surrogate function \cite{AlipourTehrani:2054922}, which is defined as
 
 \begin{equation}
@@ -214,43 +214,13 @@ where $y$ is the ToT, $x$ is the pulse height and $a$, $b$, $c$ and $d$ are fit 
 \label{fig:testpulseexamplefit}
 \end{figure}
 
-The application of this fit condenses the information for individual pixels down to four parameters.  These parameters were then averaged to categorise the CLICpix response across the whole matrix.  Certain pixels were omitted from this analysis as, based on test beam data, they were deemed to be noisy.  Details of this masking of pixels can be found in section \ref{sec:testbeam}.
+The application of this fit condenses the information for individual pixels down to four parameters.  These parameters can be averaged to categorise the CLICpix response across the matrix.  
 
 %========================================================================================
 
-\subsubsection{Results }
-
-The average of the surrogate function fitted parameters for all devices considered can be found in table \ref{table:clicpixfitparams} and the surrogate functions, using these mean values as parameters, are shown in figure \ref{fig:testpulsemeanfit}.
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{ l r r r r}
-\hline
-Assembly & $a$ & $b$ & $c$ & $t$ \\ 
-\hline
-SET9 & $0.0855 \pm 0.0003$ & $2.01 \pm 0.02$ & $33.0 \pm 0.5$ & $6.5 \pm 0.1$ \\
-SET 10 & $0.0764 \pm 0.0003$ & $2.10 \pm 0.02$ & $25.3 \pm 0.3$ & $4.1 \pm 0.1$ \\
-SET 12 & $0.0728 \pm 0.0003$ & $2.40 \pm 0.02$ & $31.8 \pm 0.4$ & $4.1 \pm 0.1$ \\
-SET 13 & $0.0711 \pm 0.0003$ & $2.20 \pm 0.02$ & $34.4 \pm 0.4$ & $3.4 \pm 0.1$ \\
-SET 14 & $0.0751 \pm 0.0003$ & $2.12 \pm 0.02$ & $36.6 \pm 0.7$ & $5.0 \pm 0.2$ \\
-SET 15 & $0.0846 \pm 0.0003$ & $1.93 \pm 0.02$ & $28.9 \pm 0.4$ & $6.5 \pm 0.1$\\
-SET16  & & & &\\
-\hline
-\end{tabular}
-\caption[Description of alignment of sensors.]{Description of alignment of sensors.}
-\label{table:clicpixfitparams}
-\end{table}
-
-\begin{figure}
-\centering
-\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/AverageToT_vs_InjectedPulseHeight.pdf}
-\caption[Fitted CLICpix ToT as a function of injected pulse height averaged across the device matrix.]{Fitted CLICpix ToT as a function of injected pulse height averaged across the device matrix.}
-\label{fig:testpulsemeanfit}
-\end{figure}
-
-As figure \ref{fig:testpulsemeanfit} shows the response of the CLICpix to the injected pulse height is rather uniform across all samples considered, with a turn on pulse height of $\approx$ 15 mV and saturation occurring at $\approx$ 150 mV.  This is a strong indication that the behaviour of the CLICpix ASIC is not affected by the presence of the HV-CMOS device either with or without an offset.  Therefore, performance changes between these samples is entirely due to the HV-CMOS and the transmission of that signal to the CLICpix.  
-
-A known issue withe the design of the CLICpix ASIC is that there is a different bias on alternate rows of the matrix, which leads to a different shape for the ToT as a function of the injected pulse height.  This can be observed in this data set by looking at the distribution of the fit parameters, which is shown for sensor Set 9 in figure \ref{fig:fitparams}.  While the bulk of the parameters are centred around a single value the $c$ fit parameter is either $\approx$ 60 or $\approx$ 5.  When examining the distribution of the $c$ fit parameter as a function of position on the matrix, shown in figure \ref{fig:columnstruct} for Set 9, it can be seen that the structure is related to the column a given pixel is in.  This feature is present in all devices considered, but is understood and will be removed for the next generation of the CLICpix ASIC.
+\subsubsection{Results}
+\label{sec:testpulsecalibrationresults}
+A known issue withe the design of the CLICpix ASIC is that there is a different bias on alternate columns of the matrix, which alters the shape of the ToT as a function of the injected pulse height.  In particular the different bias affects the minimum pulse height to get a response for the CLICpix, which is determined by parameters $c$ and $t$ in the surrogate function.  This feature can be observed by examining the distribution of the fit parameters.  These distributions are shown for sensor Set 9 in figure \ref{fig:fitparams}.  The peak at zero in the distribution of the $a$ and $b$ parameter, $\approx$ 150 in total, correspond to dead pixels in the sensor.  While the $a$ and $b$ parameters are centred around a single value indicating a similar response in the linear region of the surrogate function, the $c$ and $t$ parameters are centred around one of two values.  When examining the distribution of these parameters as a function of position on the matrix, shown in figure \ref{fig:fitparams2d} for Set 9, it can be seen that the structure is related to the column a given pixel is in.  This feature is present in all devices considered and will be removed for the next generation of the CLICpix ASIC.
 
 \begin{figure}
 \centering
@@ -264,9 +234,60 @@ A known issue withe the design of the CLICpix ASIC is that there is a different 
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf}
-\caption[Distribution as a function of matrix position of surrogate function fit parameter $c$ for Set 9.]{Distribution of surrogate function fit parameter $c$ for Set 9.}
+\subfloat[$c$ parameter.]{\label{fig:fitparams2dc}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf}}
+\subfloat[$t$ parameter.]{\label{fig:fitparams2dt}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamT_Set9.pdf}}
+\label{fig:fitparams2d}
+\caption[Distribution as a function of matrix position of surrogate function fit parameter $c$ for Set 9.]{Distribution of surrogate function fit parameters $c$ and $t$ for Set 9.}
 \end{figure}
+
+The average of the surrogate function fit parameters for all devices considered can be found in table \ref{table:clicpixfitparamseven} and  \ref{table:clicpixfitparamsodd} for the even and odd columns respectively.  The surrogate function using these average parameters as input is shown in figure \ref{fig:testpulsemeanfit}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r r r r}
+\hline
+Assembly & $a$ & $b$ & $c$ & $t$ \\ 
+\hline
+SET 9   & $0.0875 \pm 0.0005$ & $2.41 \pm 0.03$ & $5.1 \pm 0.1$ & $12.79 \pm 0.15$ \\
+SET 10 & $0.0769 \pm 0.0005$ & $2.58 \pm 0.03$ & $7.5 \pm 0.2$ & $8.02 \pm 0.14$ \\
+SET 12 & $0.0725 \pm 0.0005$ & $2.87 \pm 0.04$ & $12.1 \pm 0.3$ & $7.86 \pm 0.22$  \\
+SET 13 & $0.0708 \pm 0.0005$ & $2.69 \pm 0.03$ & $16.2 \pm 0.3$ & $6.65 \pm 0.18$ \\
+SET 14 & $0.0748 \pm 0.0005$ & $2.57 \pm 0.04$ & $16.0 \pm 1.3$ & $9.89 \pm 0.28$ \\
+SET 15 & $0.0856 \pm 0.0005$ & $2.34 \pm 0.03$ & $5.1 \pm 0.2$ & $12.51 \pm 0.13$ \\
+SET 16 & $0.0746 \pm 0.0004$ & $2.32 \pm 0.02$ & $13.7 \pm 0.3$ & $6.65\pm 0.16$ \\
+\hline
+\end{tabular}
+\caption[Average fit parameters for even columns of CLICpix sensor.]{Average fit parameters for even columns of CLICpix sensor.}
+\label{table:clicpixfitparamseven}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r r r r}
+\hline
+Assembly & $a$ & $b$ & $c$ & $t$ \\ 
+\hline
+SET 9   & $0.0834 \pm 0.0003$ & $1.72 \pm 0.01$ & $61.0 \pm 0.3$ & $0.25 \pm 0.09$ \\
+SET 10 & $0.0759 \pm 0.0002$ & $1.63 \pm 0.01$ & $43.2 \pm 0.2$ & $0.10 \pm 0.02$ \\
+SET 12 & $0.0731 \pm 0.0003$ & $1.92 \pm 0.02$ & $51.5 \pm 0.3$ & $0.36 \pm 0.12$ \\
+SET 13 & $0.0713 \pm 0.0002$ & $1.72 \pm 0.01$ & $52.5 \pm 0.3$ & $0.18 \pm 0.07$ \\
+SET 14 & $0.0754 \pm 0.0002$ & $1.68 \pm 0.01$ & $57.3 \pm 0.3$ & $0.16 \pm 0.03$ \\
+SET 15 & $0.0836 \pm 0.0003$ & $1.52 \pm 0.02$ & $52.7 \pm 0.3$ & $0.42 \pm 0.08$ \\
+SET16  & $0.0727 \pm 0.0002$ & $1.49 \pm 0.01$ & $50.7 \pm 0.2$ & $0.10 \pm 0.03$ \\
+\hline
+\end{tabular}
+\caption[Average fit parameters for odd columns of CLICpix sensor.]{Average fit parameters for odd columns of CLICpix sensor.}
+\label{table:clicpixfitparamsodd}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/AverageToT_vs_InjectedPulseHeight.pdf}
+\caption[Fitted CLICpix ToT as a function of injected pulse height averaged across the device matrix.]{Fitted CLICpix ToT as a function of injected pulse height averaged across the device matrix.}
+\label{fig:testpulsemeanfit}
+\end{figure}
+
+As figure \ref{fig:testpulsemeanfit} shows the response of the CLICpix to the injected pulse height is rather uniform across all samples considered.  In general, the turn on pulse height is $\approx$ 10 mV and saturation (i.e. ToT of 15 units) occurs at $\approx$ 150 mV.  For even numbered columns there is a sharper rise in ToT than for odd numbered columns due to the different effective threshold effect that is present in the CLICpix sensor.  This effect was observed across all devices considered.  In summary, this data presents a strong indication that the behaviour of the CLICpix ASIC is not affected by the presence of the HV-CMOS device either with or without an offset.  Therefore, performance changes between these sensors is entirely due to the HV-CMOS and the transmission of the signal it produces to the CLICpix.  
 
 %========================================================================================
 %========================================================================================
@@ -277,26 +298,46 @@ This sections describes the performance of the devices when placed under real ex
 
 %========================================================================================
 
-\subsection{Test Beam Area}
+\subsection{Test Beam Setup}
+The overall goal of this experiment was to determine the tracking performance of the capacitively coupled pixel sensors and to see whether the misalignment of the HV-CMOS and the CLICpix changes the performance.  To that end the samples were mounted on a telescope and placed in a test beam to determine the efficiency, defined as the ratio of number of recorded tracks passing through device to the actual number of tracks passing through device, of the samples.  
 
-\subsubsection{Test Beam}
+These test beam experiments were carried out in August and September 2015 on the H6 beam line in the CERN SPS North Area.  The beam consisted of positively charged hadrons of momenta 120 GeV/c.  Mean particle rates of 500 kHz/cm$^{2}$ were observed during the 4.8 s spills at intervals of 25 s.  \textcolor{red}{Is this data correct?}.
 
-Description of test beam, site and telescope.
+During this experiment the samples mounted on an EUDET/AIDA telescope \cite{Rubinskiy:2000287}, which consists of six planes sensors using the Mimosa pixel technology.  This telescope provides a resolution of 1.6 $\mu$m on the intercept position between tracks passing through the device and the device under test (DUT) mounted on it.  
+
+%========================================================================================
+
+\subsection{Analysis}
+The track position on the DUT was estimated by extrapolation based on the telescope sensor data.  This was followed by a search around the intercept position on the DUT to find clusters of hits.  The scan covered a region of 75 $\mu$m, or 3 pixels, about the intercept position.  For any multi-pixel clusters the ToT weighted centre of gravity was used to determine the position.  Several tracks during this experiment undergo scattering making them unsuitable for this analysis and these tracks were vetoed using a $\chi^{2}$ cut.  Some pixels on the device were deemed to be noisy and so were vetoed from the analysis along with any tracks occurring within half a pixel of them.  A pixel was deemed noisy if it responded at a mean rate \textcolor{red}{Clarify} greater than 5 $\sigma$ in comparison to the average rate.  Finally all tracks occurring within 125 $\mu$m of each other were vetoed.  \textcolor{red}{Is this data correct, taken from previous cern note?}
+
+\textcolor{red}{Alignment?}
+\textcolor{red}{Equalisation?}
+
+%========================================================================================
 
 \subsection{Efficiency}
-
-\begin{itemize}
-\item Description of masks and why they need to be applied.
-\item Alignment description.
-\item Efficiency calculations and conclusions. 
-\end{itemize}
+The efficiency, $\epsilon$, is defined as the number of tracks recorded by the CLICpix sensor, $n$, divided by the number of tracks passing through the device according the the telescope data, $m$.  This experiment is governed by binomial statistics as every track that passes through the telescope either is or is not recorded by the CLICpix.  The errors shown on the efficiency measurements are given by $\sqrt{\frac{\epsilon (1 - \epsilon)}{m}}$, which follows from the variance of $n$ given binomial statistics with mean $\epsilon$.  
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/ZoomedEfficiency.pdf}
-\caption[Efficiency vs threshold.]{Efficiency vs threshold.}
+\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/TestBeamData/EfficiencyThresholdPlot.pdf}
+\caption[Efficiency as a function of threshold.]{Efficiency as a function of threshold.}
 \label{fig:efficiency}
 \end{figure}
+
+The efficiency as a function of threshold used for the ToT calculation is shown in figure \ref{fig:efficiency}.  This data indicates that, as expected, for all sensors the efficiency of the sensor registering tracks decreases when increasing the number of electrons required to generate the signal.  However, it is clear that for the $\frac{1}{2}$ offset sample, Set 16, the efficiency is significantly lower in comparison to the other samples.  Again, the remaining $\frac{1}{2}$ offset sample, Set 14, behaves as a centred sample indicating a mistake in the manufacturing procedure.  There is a minor degradation in performance when considering the $\frac{1}{4}$ offset sample, but these results are still comparable to several of the centred samples.  Overall, it can be concluded that manufacturing tolerances up to $\frac{1}{4}$ of a pixel width would not significantly affect performance.    
+
+%========================================================================================
+
+\subsection{Conclusions}
+
+%========================================================================================
+
+\begin{itemize}
+\item Alignment description.
+\end{itemize}
+
+
 
 
 

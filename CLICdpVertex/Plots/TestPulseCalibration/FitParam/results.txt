@@ -1,84 +1,504 @@
+==================================================
 Device : SET : 9
-Parameter : A
-$0.0855 \pm 0.0003$
+Parameter Even : A
+$0.0875 \pm 0.0005$
+Parameter Odd : A
+$0.0834 \pm 0.0003$
+==================================================
 Device : SET : 9
-Parameter : B
-$2.0664 \pm 0.0155$
+Parameter Even : B
+$2.4117 \pm 0.0271$
+Parameter Odd : B
+$1.7212 \pm 0.0107$
+==================================================
 Device : SET : 9
-Parameter : C
-$33.0322 \pm 0.4671$
+Parameter Even : C
+$5.0811 \pm 0.1456$
+Parameter Odd : C
+$60.9832 \pm 0.2975$
+==================================================
 Device : SET : 9
-Parameter : T
-$6.5171 \pm 0.1306$
+Parameter Even : T
+$12.7853 \pm 0.1480$
+Parameter Odd : T
+$0.2490 \pm 0.0891$
+==================================================
 Device : SET : 10
-Parameter : A
-$0.0764 \pm 0.0003$
+Parameter Even : A
+$0.0769 \pm 0.0005$
+Parameter Odd : A
+$0.0759 \pm 0.0002$
+==================================================
 Device : SET : 10
-Parameter : B
-$2.1067 \pm 0.0180$
+Parameter Even : B
+$2.5812 \pm 0.0308$
+Parameter Odd : B
+$1.6321 \pm 0.0110$
+==================================================
 Device : SET : 10
-Parameter : C
-$25.3411 \pm 0.3174$
+Parameter Even : C
+$7.5142 \pm 0.2129$
+Parameter Odd : C
+$43.1680 \pm 0.2172$
+==================================================
 Device : SET : 10
-Parameter : T
-$4.0626 \pm 0.0926$
+Parameter Even : T
+$8.0226 \pm 0.1360$
+Parameter Odd : T
+$0.1027 \pm 0.0226$
+==================================================
 Device : SET : 12
-Parameter : A
-$0.0728 \pm 0.0003$
+Parameter Even : A
+$0.0725 \pm 0.0005$
+Parameter Odd : A
+$0.0731 \pm 0.0003$
+==================================================
 Device : SET : 12
-Parameter : B
-$2.3981 \pm 0.0220$
+Parameter Even : B
+$2.8732 \pm 0.0362$
+Parameter Odd : B
+$1.9230 \pm 0.0201$
+==================================================
 Device : SET : 12
-Parameter : C
-$31.8112 \pm 0.3686$
+Parameter Even : C
+$12.1313 \pm 0.2884$
+Parameter Odd : C
+$51.4912 \pm 0.2863$
+==================================================
 Device : SET : 12
-Parameter : T
-$4.1093 \pm 0.1377$
+Parameter Even : T
+$7.8593 \pm 0.2190$
+Parameter Odd : T
+$0.3592 \pm 0.1188$
+==================================================
 Device : SET : 13
-Parameter : A
-$0.0711 \pm 0.0003$
+Parameter Even : A
+$0.0708 \pm 0.0005$
+Parameter Odd : A
+$0.0713 \pm 0.0002$
+==================================================
 Device : SET : 13
-Parameter : B
-$2.2038 \pm 0.0191$
+Parameter Even : B
+$2.6850 \pm 0.0331$
+Parameter Odd : B
+$1.7225 \pm 0.0117$
+==================================================
 Device : SET : 13
-Parameter : C
-$34.3651 \pm 0.3530$
+Parameter Even : C
+$16.2396 \pm 0.3199$
+Parameter Odd : C
+$52.4905 \pm 0.2741$
+==================================================
 Device : SET : 13
-Parameter : T
-$3.4134 \pm 0.1106$
+Parameter Even : T
+$6.6480 \pm 0.1838$
+Parameter Odd : T
+$0.1788 \pm 0.0703$
+==================================================
 Device : SET : 14
-Parameter : A
-$0.0751 \pm 0.0003$
+Parameter Even : A
+$0.0748 \pm 0.0005$
+Parameter Odd : A
+$0.0754 \pm 0.0002$
+==================================================
 Device : SET : 14
-Parameter : B
-$2.1249 \pm 0.0221$
+Parameter Even : B
+$2.5737 \pm 0.0395$
+Parameter Odd : B
+$1.6761 \pm 0.0138$
+==================================================
 Device : SET : 14
-Parameter : C
-$36.6279 \pm 0.7459$
+Parameter Even : C
+$15.9669 \pm 1.3124$
+Parameter Odd : C
+$57.2890 \pm 0.2935$
+==================================================
 Device : SET : 14
-Parameter : T
-$5.0218 \pm 0.1613$
+Parameter Even : T
+$9.8875 \pm 0.2828$
+Parameter Odd : T
+$0.1561 \pm 0.0313$
+==================================================
 Device : SET : 15
-Parameter : A
-$0.0846 \pm 0.0003$
+Parameter Even : A
+$0.0856 \pm 0.0005$
+Parameter Odd : A
+$0.0836 \pm 0.0003$
+==================================================
 Device : SET : 15
-Parameter : B
-$1.9338 \pm 0.0188$
+Parameter Even : B
+$2.3439 \pm 0.0311$
+Parameter Odd : B
+$1.5237 \pm 0.0167$
+==================================================
 Device : SET : 15
-Parameter : C
-$28.8990 \pm 0.4095$
+Parameter Even : C
+$5.0620 \pm 0.2235$
+Parameter Odd : C
+$52.7360 \pm 0.2569$
+==================================================
 Device : SET : 15
-Parameter : T
-$6.4664 \pm 0.1213$
+Parameter Even : T
+$12.5138 \pm 0.1292$
+Parameter Odd : T
+$0.4189 \pm 0.0804$
+==================================================
 Device : SET : 16
-Parameter : A
-$0.0736 \pm 0.0002$
+Parameter Even : A
+$0.0746 \pm 0.0004$
+Parameter Odd : A
+$0.0727 \pm 0.0002$
+==================================================
 Device : SET : 16
-Parameter : B
-$1.9016 \pm 0.0115$
+Parameter Even : B
+$2.3169 \pm 0.0173$
+Parameter Odd : B
+$1.4863 \pm 0.0078$
+==================================================
 Device : SET : 16
-Parameter : C
-$32.1888 \pm 0.3414$
+Parameter Even : C
+$13.6673 \pm 0.2761$
+Parameter Odd : C
+$50.7104 \pm 0.2347$
+==================================================
 Device : SET : 16
-Parameter : T
-$3.3772 \pm 0.0950$
+Parameter Even : T
+$6.6544 \pm 0.1579$
+Parameter Odd : T
+$0.0999 \pm 0.0265$
+==================================================
+Device : SET : 9
+Parameter Even : A
+$0.0875 \pm 0.0005$
+Parameter Odd : A
+$0.0834 \pm 0.0003$
+==================================================
+Device : SET : 9
+Parameter Even : B
+$2.4117 \pm 0.0271$
+Parameter Odd : B
+$1.7212 \pm 0.0107$
+==================================================
+Device : SET : 9
+Parameter Even : C
+$5.0811 \pm 0.1456$
+Parameter Odd : C
+$60.9832 \pm 0.2975$
+==================================================
+Device : SET : 9
+Parameter Even : T
+$12.7853 \pm 0.1480$
+Parameter Odd : T
+$0.2490 \pm 0.0891$
+==================================================
+Device : SET : 10
+Parameter Even : A
+$0.0769 \pm 0.0005$
+Parameter Odd : A
+$0.0759 \pm 0.0002$
+==================================================
+Device : SET : 10
+Parameter Even : B
+$2.5812 \pm 0.0308$
+Parameter Odd : B
+$1.6321 \pm 0.0110$
+==================================================
+Device : SET : 10
+Parameter Even : C
+$7.5142 \pm 0.2129$
+Parameter Odd : C
+$43.1680 \pm 0.2172$
+==================================================
+Device : SET : 10
+Parameter Even : T
+$8.0226 \pm 0.1360$
+Parameter Odd : T
+$0.1027 \pm 0.0226$
+==================================================
+Device : SET : 12
+Parameter Even : A
+$0.0725 \pm 0.0005$
+Parameter Odd : A
+$0.0731 \pm 0.0003$
+==================================================
+Device : SET : 12
+Parameter Even : B
+$2.8732 \pm 0.0362$
+Parameter Odd : B
+$1.9230 \pm 0.0201$
+==================================================
+Device : SET : 12
+Parameter Even : C
+$12.1313 \pm 0.2884$
+Parameter Odd : C
+$51.4912 \pm 0.2863$
+==================================================
+Device : SET : 12
+Parameter Even : T
+$7.8593 \pm 0.2190$
+Parameter Odd : T
+$0.3592 \pm 0.1188$
+==================================================
+Device : SET : 13
+Parameter Even : A
+$0.0708 \pm 0.0005$
+Parameter Odd : A
+$0.0713 \pm 0.0002$
+==================================================
+Device : SET : 13
+Parameter Even : B
+$2.6850 \pm 0.0331$
+Parameter Odd : B
+$1.7225 \pm 0.0117$
+==================================================
+Device : SET : 13
+Parameter Even : C
+$16.2396 \pm 0.3199$
+Parameter Odd : C
+$52.4905 \pm 0.2741$
+==================================================
+Device : SET : 13
+Parameter Even : T
+$6.6480 \pm 0.1838$
+Parameter Odd : T
+$0.1788 \pm 0.0703$
+==================================================
+Device : SET : 14
+Parameter Even : A
+$0.0748 \pm 0.0005$
+Parameter Odd : A
+$0.0754 \pm 0.0002$
+==================================================
+Device : SET : 14
+Parameter Even : B
+$2.5737 \pm 0.0395$
+Parameter Odd : B
+$1.6761 \pm 0.0138$
+==================================================
+Device : SET : 14
+Parameter Even : C
+$15.9669 \pm 1.3124$
+Parameter Odd : C
+$57.2890 \pm 0.2935$
+==================================================
+Device : SET : 14
+Parameter Even : T
+$9.8875 \pm 0.2828$
+Parameter Odd : T
+$0.1561 \pm 0.0313$
+==================================================
+Device : SET : 15
+Parameter Even : A
+$0.0856 \pm 0.0005$
+Parameter Odd : A
+$0.0836 \pm 0.0003$
+==================================================
+Device : SET : 15
+Parameter Even : B
+$2.3439 \pm 0.0311$
+Parameter Odd : B
+$1.5237 \pm 0.0167$
+==================================================
+Device : SET : 15
+Parameter Even : C
+$5.0620 \pm 0.2235$
+Parameter Odd : C
+$52.7360 \pm 0.2569$
+==================================================
+Device : SET : 15
+Parameter Even : T
+$12.5138 \pm 0.1292$
+Parameter Odd : T
+$0.4189 \pm 0.0804$
+==================================================
+Device : SET : 16
+Parameter Even : A
+$0.0746 \pm 0.0004$
+Parameter Odd : A
+$0.0727 \pm 0.0002$
+==================================================
+Device : SET : 16
+Parameter Even : B
+$2.3169 \pm 0.0173$
+Parameter Odd : B
+$1.4863 \pm 0.0078$
+==================================================
+Device : SET : 16
+Parameter Even : C
+$13.6673 \pm 0.2761$
+Parameter Odd : C
+$50.7104 \pm 0.2347$
+==================================================
+Device : SET : 16
+Parameter Even : T
+$6.6544 \pm 0.1579$
+Parameter Odd : T
+$0.0999 \pm 0.0265$
+==================================================
+Device : SET : 9
+Parameter Even : A
+$0.0875 \pm 0.0005$
+Parameter Odd : A
+$0.0834 \pm 0.0003$
+==================================================
+Device : SET : 9
+Parameter Even : B
+$2.4117 \pm 0.0271$
+Parameter Odd : B
+$1.7212 \pm 0.0107$
+==================================================
+Device : SET : 9
+Parameter Even : C
+$5.0811 \pm 0.1456$
+Parameter Odd : C
+$60.9832 \pm 0.2975$
+==================================================
+Device : SET : 9
+Parameter Even : T
+$12.7853 \pm 0.1480$
+Parameter Odd : T
+$0.2490 \pm 0.0891$
+==================================================
+Device : SET : 10
+Parameter Even : A
+$0.0769 \pm 0.0005$
+Parameter Odd : A
+$0.0759 \pm 0.0002$
+==================================================
+Device : SET : 10
+Parameter Even : B
+$2.5812 \pm 0.0308$
+Parameter Odd : B
+$1.6321 \pm 0.0110$
+==================================================
+Device : SET : 10
+Parameter Even : C
+$7.5142 \pm 0.2129$
+Parameter Odd : C
+$43.1680 \pm 0.2172$
+==================================================
+Device : SET : 10
+Parameter Even : T
+$8.0226 \pm 0.1360$
+Parameter Odd : T
+$0.1027 \pm 0.0226$
+==================================================
+Device : SET : 12
+Parameter Even : A
+$0.0725 \pm 0.0005$
+Parameter Odd : A
+$0.0731 \pm 0.0003$
+==================================================
+Device : SET : 12
+Parameter Even : B
+$2.8732 \pm 0.0362$
+Parameter Odd : B
+$1.9230 \pm 0.0201$
+==================================================
+Device : SET : 12
+Parameter Even : C
+$12.1313 \pm 0.2884$
+Parameter Odd : C
+$51.4912 \pm 0.2863$
+==================================================
+Device : SET : 12
+Parameter Even : T
+$7.8593 \pm 0.2190$
+Parameter Odd : T
+$0.3592 \pm 0.1188$
+==================================================
+Device : SET : 13
+Parameter Even : A
+$0.0708 \pm 0.0005$
+Parameter Odd : A
+$0.0713 \pm 0.0002$
+==================================================
+Device : SET : 13
+Parameter Even : B
+$2.6850 \pm 0.0331$
+Parameter Odd : B
+$1.7225 \pm 0.0117$
+==================================================
+Device : SET : 13
+Parameter Even : C
+$16.2396 \pm 0.3199$
+Parameter Odd : C
+$52.4905 \pm 0.2741$
+==================================================
+Device : SET : 13
+Parameter Even : T
+$6.6480 \pm 0.1838$
+Parameter Odd : T
+$0.1788 \pm 0.0703$
+==================================================
+Device : SET : 14
+Parameter Even : A
+$0.0748 \pm 0.0005$
+Parameter Odd : A
+$0.0754 \pm 0.0002$
+==================================================
+Device : SET : 14
+Parameter Even : B
+$2.5737 \pm 0.0395$
+Parameter Odd : B
+$1.6761 \pm 0.0138$
+==================================================
+Device : SET : 14
+Parameter Even : C
+$15.9669 \pm 1.3124$
+Parameter Odd : C
+$57.2890 \pm 0.2935$
+==================================================
+Device : SET : 14
+Parameter Even : T
+$9.8875 \pm 0.2828$
+Parameter Odd : T
+$0.1561 \pm 0.0313$
+==================================================
+Device : SET : 15
+Parameter Even : A
+$0.0856 \pm 0.0005$
+Parameter Odd : A
+$0.0836 \pm 0.0003$
+==================================================
+Device : SET : 15
+Parameter Even : B
+$2.3439 \pm 0.0311$
+Parameter Odd : B
+$1.5237 \pm 0.0167$
+==================================================
+Device : SET : 15
+Parameter Even : C
+$5.0620 \pm 0.2235$
+Parameter Odd : C
+$52.7360 \pm 0.2569$
+==================================================
+Device : SET : 15
+Parameter Even : T
+$12.5138 \pm 0.1292$
+Parameter Odd : T
+$0.4189 \pm 0.0804$
+==================================================
+Device : SET : 16
+Parameter Even : A
+$0.0746 \pm 0.0004$
+Parameter Odd : A
+$0.0727 \pm 0.0002$
+==================================================
+Device : SET : 16
+Parameter Even : B
+$2.3169 \pm 0.0173$
+Parameter Odd : B
+$1.4863 \pm 0.0078$
+==================================================
+Device : SET : 16
+Parameter Even : C
+$13.6673 \pm 0.2761$
+Parameter Odd : C
+$50.7104 \pm 0.2347$
+==================================================
+Device : SET : 16
+Parameter Even : T
+$6.6544 \pm 0.1579$
+Parameter Odd : T
+$0.0999 \pm 0.0265$

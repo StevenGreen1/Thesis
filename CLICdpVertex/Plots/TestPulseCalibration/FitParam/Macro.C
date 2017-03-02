@@ -66,33 +66,57 @@ void GetMean(TString setNumber, TString parameter)
     int nXBins = pTH2F->GetXaxis()->GetNbins();
     int nYBins = pTH2F->GetYaxis()->GetNbins();
 
-    double sum(0.0);
+    double sumEven(0.0);
+    double sumOdd(0.0);
     int nBins(0);
+
+    bool isEvenRow(true);
 
     for (unsigned int xBin = 0; xBin < nXBins; xBin++)
     {
+        if (xBin % 2 == 0)
+            isEvenRow = true;
+        else
+            isEvenRow = false;
+
         for (unsigned int yBin = 0; yBin < nYBins; yBin++)
         {
-            sum += pTH2F->GetBinContent(xBin, yBin);
+            if (isEvenRow)
+                sumEven += pTH2F->GetBinContent(xBin, yBin);
+            else
+                sumOdd += pTH2F->GetBinContent(xBin, yBin);
+
             pTH1F->Fill(pTH2F->GetBinContent(xBin, yBin));
             nBins++;
 //            std::cout << "Bin contend " << pTH2F->GetBinContent(xBin, yBin) << std::endl;
         }
     }
 
-    double mean(sum/(double)(nBins));
-    double varianceSum(0.0);
+    double meanEven(sumEven/(double)(nBins * 0.5));
+    double meanOdd(sumOdd/(double)(nBins * 0.5));
+    double varianceSumEven(0.0);
+    double varianceSumOdd(0.0);
 
     for (unsigned int xBin = 0; xBin < nXBins; xBin++)
     {
+        if (xBin % 2 == 0)
+            isEvenRow = true;
+        else
+            isEvenRow = false;
+
         for (unsigned int yBin = 0; yBin < nYBins; yBin++)
         {
-            varianceSum += TMath::Power(pTH2F->GetBinContent(xBin, yBin) - mean, 2);
+            if (isEvenRow)
+                varianceSumEven += TMath::Power(pTH2F->GetBinContent(xBin, yBin) - meanEven, 2);
+            else
+                varianceSumOdd += TMath::Power(pTH2F->GetBinContent(xBin, yBin) - meanOdd, 2);
         }
     }
 
-    double variance(varianceSum/(double)(nBins));
-    double stdDev = TMath::Power(variance,0.5);
+    double varianceEven(varianceSumEven/(double)(nBins * 0.5));
+    double varianceOdd(varianceSumOdd/(double)(nBins * 0.5));
+    double stdDevEven = TMath::Power(varianceEven,0.5);
+    double stdDevOdd = TMath::Power(varianceOdd,0.5);
 
     TCanvas *pTCanvas = new TCanvas("Canvas","",600,500);
     pTCanvas->SetBottomMargin(0.15);
@@ -104,8 +128,22 @@ void GetMean(TString setNumber, TString parameter)
 
     ofstream myfile;
     myfile.open("results.txt", ios::app);
+    myfile << "==================================================" << std::endl;
     myfile << "Device : SET : " << setNumber << std::endl;
-    myfile << "Parameter : " << parameter << std::endl;
-    myfile << std::setprecision(4) << fixed << "$" << mean << " \\pm " << stdDev/(TMath::Power((double)(nBins),0.5)) << "$" << std::endl;
+    myfile << "Parameter Even : " << parameter << std::endl;
+    myfile << std::setprecision(4) << fixed << "$" << meanEven << " \\pm " << stdDevEven/(TMath::Power((double)(nBins * 0.5),0.5)) << "$" << std::endl;
+    myfile << "Parameter Odd : " << parameter << std::endl;
+    myfile << std::setprecision(4) << fixed << "$" << meanOdd << " \\pm " << stdDevOdd/(TMath::Power((double)(nBins * 0.5),0.5)) << "$" << std::endl;
     myfile.close();
+
+    ofstream myfileLatexEven;
+    myfileLatexEven.open("resultsLatexEven.txt", ios::app);
+    myfileLatexEven << std::setprecision(4) << fixed << "$" << meanEven << " \\pm " << stdDevEven/(TMath::Power((double)(nBins * 0.5),0.5)) << "$ & ";
+    myfileLatexEven.close();
+
+    ofstream myfileLatexOdd;
+    myfileLatexOdd.open("resultsLatexOdd.txt", ios::app);
+    myfileLatexOdd << std::setprecision(4) << fixed << "$" << meanOdd << " \\pm " << stdDevOdd/(TMath::Power((double)(nBins * 0.5),0.5)) << "$ & ";
+    myfileLatexOdd.close();
+
 }
