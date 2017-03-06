@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/
-//=========  (Fri Mar  3 14:55:44 2017) by ROOT version5.34/30
+//=========  (Mon Mar  6 08:57:24 2017) by ROOT version5.34/30
    TCanvas *c1 = new TCanvas("c1", "",268,1103,800,600);
    gStyle->SetOptStat(0);
    c1->Range(-4.615385,-0.4,26.15385,2.266667);
@@ -438,12 +438,13 @@ palette->SetTitleSize(0.05);
    Split->SetLineWidth(2);
    Split->SetMarkerStyle(20);
    Split->GetXaxis()->SetTitle("ECal Calorimeter Hit Energy [GeV]");
-   Split->GetXaxis()->SetNdivisions(505);
+   Split->GetXaxis()->SetNdivisions(5);
    Split->GetXaxis()->SetLabelFont(132);
    Split->GetXaxis()->SetLabelSize(0.05);
    Split->GetXaxis()->SetTitleSize(0.05);
    Split->GetXaxis()->SetTitleFont(132);
    Split->GetYaxis()->SetTitle("HCal Calorimeter Hit Energy [GeV]");
+   Split->GetYaxis()->SetNdivisions(5);
    Split->GetYaxis()->SetLabelFont(132);
    Split->GetYaxis()->SetLabelSize(0.05);
    Split->GetYaxis()->SetTitleSize(0.05);
