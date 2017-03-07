@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Wed Feb 22 13:28:38 2017) by ROOT version5.34/37
+//=========  (Tue Mar  7 14:58:07 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
    gStyle->SetOptStat(0);
    c1->Range(0,0,1,1);
@@ -40,18 +40,18 @@
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
    gre->SetLineWidth(2);
-   gre->SetPoint(0,10,5.426454);
-   gre->SetPointError(0,0,0.05102529);
-   gre->SetPoint(1,20,3.998963);
-   gre->SetPointError(1,0,0.0380551);
-   gre->SetPoint(2,50,2.997968);
-   gre->SetPointError(2,0,0.03001999);
-   gre->SetPoint(3,100,2.502239);
-   gre->SetPointError(3,0,0.02773612);
-   gre->SetPoint(4,200,2.302405);
-   gre->SetPointError(4,0,0.02642165);
-   gre->SetPoint(5,500,2.326854);
-   gre->SetPointError(5,0,0.02817706);
+   gre->SetPoint(0,10,4.914656);
+   gre->SetPointError(0,0,0.1478568);
+   gre->SetPoint(1,20,3.680626);
+   gre->SetPointError(1,0,0.116599);
+   gre->SetPoint(2,50,2.941952);
+   gre->SetPointError(2,0,0.09755539);
+   gre->SetPoint(3,100,2.226226);
+   gre->SetPointError(3,0,0.05814728);
+   gre->SetPoint(4,200,2.089389);
+   gre->SetPointError(4,0,0.05652142);
+   gre->SetPoint(5,500,2.04355);
+   gre->SetPointError(5,0,0.05434568);
    gre->Draw(" pl");
    c1->Modified();
    c1->cd();

@@ -1,18 +1,18 @@
 {
-//=========Macro generated from canvas: c1/c1
-//=========  (Fri Feb 24 15:30:05 2017) by ROOT version5.34/37
-   TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
+//=========Macro generated from canvas: c1_n2/c1_n2
+//=========  (Tue Mar  7 15:08:14 2017) by ROOT version5.34/37
+   TCanvas *c1_n2 = new TCanvas("c1_n2", "c1_n2",10,45,700,500);
    gStyle->SetOptStat(0);
-   c1->Range(0,0,1,1);
-   c1->SetFillColor(0);
-   c1->SetBorderMode(0);
-   c1->SetBorderSize(2);
-   c1->SetTickx(1);
-   c1->SetTicky(1);
-   c1->SetLeftMargin(0.15);
-   c1->SetBottomMargin(0.15);
-   c1->SetFrameLineWidth(2);
-   c1->SetFrameBorderMode(0);
+   c1_n2->Range(0,0,1,1);
+   c1_n2->SetFillColor(0);
+   c1_n2->SetBorderMode(0);
+   c1_n2->SetBorderSize(2);
+   c1_n2->SetTickx(1);
+   c1_n2->SetTicky(1);
+   c1_n2->SetLeftMargin(0.15);
+   c1_n2->SetBottomMargin(0.15);
+   c1_n2->SetFrameLineWidth(2);
+   c1_n2->SetFrameBorderMode(0);
    
    TH1F *PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71 = new TH1F("PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71","",400,0,100);
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->SetBinContent(1,25);
@@ -208,12 +208,12 @@
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->SetEntries(7004);
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->SetStats(0);
    
-   TF1 *PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV = new TF1("PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV","gaus",0,100);
+   TF1 *PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV = new TF1("PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV","gaus",44.625,56.125);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetFillColor(1);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetFillStyle(0);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetLineWidth(2);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetChisquare(269.6759);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetNDF(187);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetChisquare(30.28314);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetNDF(44);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetXaxis()->SetNdivisions(505);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetXaxis()->SetLabelFont(132);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetXaxis()->SetLabelSize(0.05);
@@ -223,15 +223,15 @@
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetYaxis()->SetLabelSize(0.05);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetYaxis()->SetTitleSize(0.05);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetYaxis()->SetTitleFont(132);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(0,138.5894);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(0,2.205155);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(0,147.3615);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(0,2.822608);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(0,0,0);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(1,50.15899);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(1,0.05933839);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(1,50.18531);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(1,0.08739772);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(1,0,0);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(2,4.848006);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(2,0.04978729);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(2,0,64.5148);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(2,4.35447);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(2,0.1229283);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(2,0,29.95259);
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->GetListOfFunctions()->Add(PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV);
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->SetLineWidth(2);
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->GetXaxis()->SetTitle("Reconstructed PFO Energy [GeV]");
@@ -253,7 +253,7 @@
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->GetZaxis()->SetTitleFont(132);
    PFOEnergyHistogram_DetectorModel_85_ReconstructionVariant_71->Draw("");
    
-   TF1 *PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV = new TF1("PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV","gaus",0,1000);
+   TF1 *PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV = new TF1("PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV","gaus",44.625,56.125);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetFillColor(1);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetFillStyle(0);
 
@@ -262,8 +262,8 @@
    ci = TColor::GetColor("#ff0000");
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetLineColor(ci);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetLineWidth(2);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetChisquare(269.6759);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetNDF(187);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetChisquare(30.28314);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetNDF(44);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetXaxis()->SetNdivisions(505);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetXaxis()->SetLabelFont(132);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetXaxis()->SetLabelSize(0.05);
@@ -273,15 +273,15 @@
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetYaxis()->SetLabelSize(0.05);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetYaxis()->SetTitleSize(0.05);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->GetYaxis()->SetTitleFont(132);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(0,138.5894);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(0,2.205155);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(0,147.3615);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(0,2.822608);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(0,0,0);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(1,50.15899);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(1,0.05933839);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(1,50.18531);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(1,0.08739772);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(1,0,0);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(2,4.848006);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(2,0.04978729);
-   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(2,0,64.5148);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParameter(2,4.35447);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParError(2,0.1229283);
+   PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->SetParLimits(2,0,29.95259);
    PFOEnergyHistogramGaussianFit_DetectorModel_85_ReconstructionVariant_71_Energy50GeV->Draw("same");
    
    TPaveText *pt = new TPaveText(0.01,0.945,0.08730659,0.995,"blNDC");
@@ -292,7 +292,7 @@
    pt->SetTextFont(132);
    TText *text = pt->AddText("gaus");
    pt->Draw();
-   c1->Modified();
-   c1->cd();
-   c1->SetSelected(c1);
+   c1_n2->Modified();
+   c1_n2->cd();
+   c1_n2->SetSelected(c1_n2);
 }

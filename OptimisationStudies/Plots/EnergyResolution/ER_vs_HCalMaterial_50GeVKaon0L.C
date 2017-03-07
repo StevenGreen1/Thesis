@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1_n2/c1_n2
-//=========  (Wed Feb 22 13:30:44 2017) by ROOT version5.34/30
+//=========  (Tue Mar  7 15:02:56 2017) by ROOT version5.34/30
    TCanvas *c1_n2 = new TCanvas("c1_n2", "c1_n2",12,51,700,500);
    gStyle->SetOptStat(0);
    c1_n2->Range(0,0,1,1);
@@ -14,7 +14,7 @@
    c1_n2->SetFrameLineWidth(2);
    c1_n2->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","",100,0,5,1000,9,12);
+   TH2F *axesEj = new TH2F("axesEj","",100,0,5,1000,0,12);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);
@@ -41,15 +41,14 @@
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
    gre->SetLineWidth(2);
-   gre->SetMarkerStyle(20);
-   gre->SetPoint(0,1,10.16821);
-   gre->SetPointError(0,0,0.120704);
-   gre->SetPoint(1,2,9.802804);
-   gre->SetPointError(1,0,0.1002155);
-   gre->SetPoint(2,3,11.07174);
-   gre->SetPointError(2,0,0.1553617);
-   gre->SetPoint(3,4,11.07263);
-   gre->SetPointError(3,0,0.1593389);
+   gre->SetPoint(0,1,8.807201);
+   gre->SetPointError(0,0,0.2497936);
+   gre->SetPoint(1,2,8.957012);
+   gre->SetPointError(1,0,0.2544656);
+   gre->SetPoint(2,3,9.103692);
+   gre->SetPointError(2,0,0.1854029);
+   gre->SetPoint(3,4,9.034551);
+   gre->SetPointError(3,0,0.1761612);
    gre->Draw(" pl");
    c1_n2->Modified();
    c1_n2->cd();

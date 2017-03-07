@@ -1,5 +1,5 @@
+#include "Helper.C"
 #include <utility>
-
 
 void Draw_ER_vs_EGamma_ScECal() 
 {
@@ -33,11 +33,15 @@ void Draw_ER_vs_EGamma_ScECal()
         std::cout << histogramName << std::endl;
  
         TH1F *pTH1F = (TH1F*)pTFile->Get(histogramName.c_str());
+        double fitRangeLow(0.0), fitRangeHigh(0.0), fitPercentage(75.f);
+        GetRMSFitPercentageRange(pTH1F, fitPercentage, fitRangeLow, fitRangeHigh);
+        std::cout << "fitRangeLow " << fitRangeLow << std::endl;
+        std::cout << "fitRangeHigh " << fitRangeHigh << std::endl;
 
         std::string fitTitle = "PFOEnergyHistogramGaussianFit_DetectorModel_" + NumberToString(detModel) + "_ReconstructionVariant_" + NumberToString(recoVar) + "_Energy" + NumberToString(energy) + "GeV";
-        TF1 *pGaussianFit = new TF1(fitTitle.c_str(),"gaus",0,1000);
+        TF1 *pGaussianFit = new TF1(fitTitle.c_str(),"gaus", fitRangeLow, fitRangeHigh);
 
-        pTH1F->Fit(fitTitle.c_str());
+        pTH1F->Fit(fitTitle.c_str(), "MRL");
         const float fitAmplitude(pGaussianFit->GetParameter(0));
         const float fitMean(pGaussianFit->GetParameter(1));
         const float fitStdDev(pGaussianFit->GetParameter(2));
@@ -59,6 +63,16 @@ void Draw_ER_vs_EGamma_ScECal()
         std::cout << "Standard Deviation : " << fitStdDev << std::endl;
         std::cout << "Det model " << detModel << std::endl;
         std::cout << "Energy Resolution  : " << energyResolution*100 << std::endl;
+/*
+TCanvas *pTCanvas = new TCanvas("name","");
+pTCanvas->Draw();
+pTCanvas->cd();
+pTH1F->Draw();
+pGaussianFit->SetLineColor(kRed);
+pGaussianFit->Draw("same");
+pTCanvas->Update();
+cin.get();
+*/
     }
 
     TH2F *pAxes = new TH2F("axesEj","",100,0,525,1000,1,6);
