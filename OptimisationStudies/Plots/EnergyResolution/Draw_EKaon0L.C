@@ -31,6 +31,7 @@ void Draw_EKaon0L()
         std::cout << histogramName << std::endl;
  
         pTH1F = (TH1F*)pTFile->Get(histogramName.c_str());
+        pTH1F->Rebin(4);
         double fitRangeLow(0.0), fitRangeHigh(0.0), fitPercentage(75.f);
         GetRMSFitPercentageRange(pTH1F, fitPercentage, fitRangeLow, fitRangeHigh);
         std::cout << "fitRangeLow " << fitRangeLow << std::endl;
