@@ -8,6 +8,7 @@
 %========================================================================================
 
 \section{Calorimeter Optimisation Studies}
+\label{sec:optimisationstudies}
 If the future linear collider is to reach its maximum potential in terms of energy resolution then, optimisation of the detector will be essential.  The energy resolution in the particle flow paradigm is dependant upon several detector components.  The momentum of charged particles arises from the shape of the tracks deposited within the detector while the energy of uncharged particles arise from calorimetric measurements.  Application of sophisticated pattern recognition algorithms allows the particle type to be inferred for the charged particles.  In tern this allows for the conversion of the track momentum into an energy measure for the charged particles.  The particle identification algorithms use the topological information acquired from the calorimetric energy deposited to infer particle type for a subset of charged particles.  
 
 The calorimetric energy deposits are therefore used in a twofold manner: (i) as energy measurements for neutral particles and (ii) as input for particle identification algorithms.  There is potential for significant gains to be made in physics performance by optimising the calorimeters due to their dominant role in energy measurements.  In this chapter the optimisation of the calorimeters is considered.  Parameters such as the longitudinal granularity, transverse granularity and material choices for the calorimeters are considered.  
@@ -19,6 +20,8 @@ This chapter concludes with an optimisation of several global parameters for the
 
 \section{Metric}
 This section describes the various metrics used in these detector optimisation studies.
+
+%========================================================================================
 
 \subsection{Jet Energy Resolution}
 \begin{figure}
@@ -47,6 +50,8 @@ An example of the application of this metric can be be found in figure \ref{fig:
 
 In the subsequent analysis four di-jet/Z' energies are considered: 91 GeV, approximately the top mass; 200 GeV, is the point at which intrinsic energy resolution and pattern recognition confusion are of comparable size for the nominal ILD detector; 360 GeV, this gives 180 GeV energy jets, which is approximately the top quark mass; and 500 GeV is the nominal running energy for the ILC.  Each sample contained 10,000 events generated isotropically so that, given the polar angle cut, approximately 7,000 events contribute to the jet energy resolution metric. 
 
+%========================================================================================
+
 \subsection{Jet Energy Resolution Decompositions}
 In several optimisation studies it proved useful to decompose the jet energy resolution into terms describing the intrinsic energy resolution of the detector and the pattern recognition confusion arising from incorrect associations of tracks to calorimetric energy deposits.  Pattern recognition confusion manifests itself on energy measurements in two ways:
 
@@ -63,10 +68,12 @@ Furthermore, it is possible to cheat the pattern recognition associated with ind
 
 The intrinsic energy resolution, total confusion and photon confusion described here are used extensively throughout this chapter.
 
+%========================================================================================
+
 \subsection{Single Particle Energy Resolution}
 As approximately $70\%$ of jet energy arise from charged particle, whose energy measurements are taken from tracks, changes to the intrinsic energy resolution of the calorimeters can be washed out when examining the intrinsic energy resolution using jets.  Therefore, it occasionally proved useful to consider the single particle energy resolutions as a function of the detector parameter of interest.  For ECal related studies $\gamma$s were used as the single particle as their energy deposit arise from calorimetric energy deposits that are almost entirely confined to the ECal and similarly $K^{0}_{L}$s were used for HCal related studies.  
 
-For these single particle samples the energy resolution is defined using a Gaussian fit to the reconstructed energy distributions.  The resolution is defined as the standard deviation divided by the mean of that reconstructed Gaussian.  A total of 10,000 events are used to calculate the energy resolution at each fixed energy point.  A cut of $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the single particle, is applied to ensure events avoid the barrel/endcap overlap region.  Examples of the single particle energy distributions for 100 GeV $\gamma$s and 50 GeV $K^{0}_{L}$s alongside the Gaussian fit used to determine their energy resolution are shown in figure \ref{fig:singleparticleenergyhists}.
+For these single particle samples the energy resolution is defined using a Gaussian fit to the reconstructed energy distributions.  The fit was applied to the narrowest region of the reconstructed PFO energy distribution that contained at least 75\% of the data.  This increases the likelihood that the fit converges and ensures a better parameterisation of the bulk of the data set.  The resolution is defined as the standard deviation divided by the mean of that reconstructed Gaussian.  A total of 10,000 events are used to calculate the energy resolution at each fixed energy point.  A cut of $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the single particle, is applied to ensure events avoid the Barrel/EndCap overlap region.  Examples of the single particle energy distributions for 100 GeV $\gamma$s and 50 GeV $K^{0}_{L}$s alongside the Gaussian fit used to determine their energy resolution are shown in figure \ref{fig:singleparticleenergyhists}.
 
 \begin{figure}
 \centering
@@ -93,7 +100,7 @@ Calibration of the simulated detector models considered in these optimisation st
 
 \begin{itemize}
 \item Digitisation calibration for the ECal and HCal.  This ensured an accurate estimation of the energy deposited in the absorber layers in these sampling calorimeters.    
-\item Minimum ionising particle (MIP) scale calibration in the digitser and PandoraPFA.  This ensures that the MIP response was properly set in the digitser and in PandoraPFA.  The digitser uses this information to place electronic dynamic ranges into the readout technology simulated, while PandoraPFA uses the MIP scale to place cuts to veto noise from the detector.
+\item Minimum ionising particle (MIP) scale calibration in the digitiser and PandoraPFA.  This ensures that the MIP response was properly set in the digitiser and in PandoraPFA.  The digitiser uses this information to place electronic dynamic ranges into the readout technology simulated, while PandoraPFA uses the MIP scale to place cuts to veto noise from the detector.
 \item Electromagnetic and hadronic scale setting.  This ensures that the electromagnetic scale and the hadronic energy scales are properly set within PandoraPFA and hence the output PFOs.  The scales differ due to the different shower dynamics governing the growth of electromagnetic and hadronic showers.  One key difference is the presence of a missing energy component in hadronic showers.  
 \item Retraining photon likelihood data in PandoraPFA.  This ensures that the likelihood data used to identify photons in PandoraPFA was retrained for each detector model.   
 \end{itemize}
@@ -108,7 +115,7 @@ The energy resolution for single $\gamma$ and $K^{0}_{L}$ events as a function o
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolution/JER_vs_JetEnergy_NominalDetectorPerformance.pdf}
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_NominalDetectorPerformance.pdf}
 \caption[Jet energy resolution as a function of jet energy for the nominal ILD detector.]{Jet energy resolution as a function of jet energy for the nominal ILD detector.}
 \label{fig:jernominalres}
 \end{figure} 
@@ -490,7 +497,7 @@ These trends are further explored by considering the breakdown of jet energy res
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalLayerNumber_50GeVKaon0L.pdf}
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_NHCalVariableLayers_50GeVKaon0L.pdf}
 \caption[Energy resolution as a function of HCal sampling frequency for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal sampling frequency for 50 GeV $\text{K}^{0}_{L}$.}
 \label{fig:hcalnlayers}
 \end{figure}
