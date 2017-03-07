@@ -166,10 +166,12 @@ A similar procedure was employed for calculation of the MIP peak in PandoraPFA. 
 The electromagnetic and hadronic scales have to be independently set in the simulation to account for the different mechanisms governing the propagation of electromagnetic and hadronic showers.  As referenced earlier, one crucial difference the setting of these scales accounts for is the invisible energy component of hadronic showers, however, in this simulation it also accounts for the effect of energy loss due to the threshold cuts that are applied in the reconstruction.  The setting of the scales involves tuning four parameters in PandoraPFA, which correspond to the scaling factors that are applied to PFO energies arising from electromagnetic and hadronic showering particles in the ECal and HCal.  
 
 %========================================================================================
+
 \subsubsection{Electromagnetic scale setting}
+\label{sec:emscalesetting}
 The electromagnetic scale in the ECal, $\beta^{EM}_{ECal}$, is set in the detector using $\gamma$ events at $E_{MC} = 10$ GeV.  $\gamma$ events are ideal for the setting of the electromagnetic scale as they procedure electromagnetic showers and are primarily confined to the ECal at the energy considered as was shown in figure \ref{fig:ecaldigiphotonsplit}.  
 
-Cuts are applied to ensure that only events where the bulk of the energy is deposited within the ECal are applied.  In detail the cuts require a single $\gamma$ be reconstructed, excluding conversions, and that less than 1\% of the reconstructed energy is outside the ECal.  The impact of these cuts on the electromagnetic energy measured in the ECal for these 10 GeV $\gamma$ events is shown in figure \ref{fig:ecalemscaleselection}.
+Cuts are applied to ensure that only events where the bulk of the energy is deposited within the ECal are applied.  The cuts require a single $\gamma$ be reconstructed, excluding conversions, and that less than 1\% of the reconstructed energy is outside the ECal.  The impact of these cuts on the electromagnetic energy measured in the ECal for these 10 GeV $\gamma$ events is shown in figure \ref{fig:ecalemscaleselection}.
 
 \begin{figure}
 \includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleECalSelection.pdf}
@@ -177,20 +179,30 @@ Cuts are applied to ensure that only events where the bulk of the energy is depo
 \label{fig:ecalemscaleselection}
 \end{figure}
 
-% Here
+\begin{figure}
+\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleSettingECalFit.pdf}
+\caption[Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.]{Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.}
+\label{fig:ecalemscalefit}
+\end{figure}
 
-In a similar manor to as was done for the digitisation of the ECal the distribution, this time, of PFO energies is created with these selection cuts and a Gaussian fitted.  The mean of this fitted distribution, $E_{\text{Fit}}$, is extracted and $\beta^{EM}_{ECal}$ modified.
+The fitting procedure proceeds in a similar manor to that described in section \ref{sec:ecaldigi} whereby a trial calibration for the electromagnetic energy scale in the ECal, $\beta^{EM0}_{ECal}$, is assumed and the single $\gamma$ events simulated.  The distribution of the PFO electromagnetic energy in the ECal is produced and a Gaussian fit applied to the range of data with the smallest root mean square that contains at least 90 \% of the data.  The mean of this fit, $E_{\text{Fit}}$, is then used to scale $\beta^{EM0}_{ECal}$ in the following way
 
+\begin{equation}
+$\beta^{EM0}_{ECal}$ \rightarrow $\beta^{EM}_{ECal}$ = $\beta^{EM0}_{ECal}$ \times \frac{E_{MC}}{E_{Fit}}
+\end{equation}
 
-are calibrated in the simulation through carefully tuning of four constants in PandoraPFA.  These constants, the ECal/HCal response to electromagnetic/hadronic energy measurements, are set by considering the PFO energies of $\gamma$ and $K^{0}_{L}$ in much the same way as was done for the calibration of the digitisation.
-
-
-
-
+An example distribution and fit used for calibration of the nominal ILD detector model can be found in figure \ref{fig:ecalemscalefit}.  The procedure is then repeated using the updated $\beta^{EM}_{ECal}$ until $E_{\text{Fit}}$ falls within a chosen tolerance, which in this case is that $|E_{\text{Fit}} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \%$.  The binning for the fitted histogram is chosen such that the bin width is equal to the desired tolerance on $E_{\text{Fit}}$ e.g. $E_{\text{MC}} \times 0.5 \% = 0.05$ GeV.  This tolerance is tighter than that applied for the digitisation as it is the PFO energies that are used in downstream analyses and therefore require high precision. 
+ 
+The electromagnetic scale in the HCal, $\beta^{EM}_{HCal}$, is chosen to be equal to the hadronic scale in the HCal, $\beta^{Had}_{HCal}$.  The details of the determination of $\beta^{Had}_{HCal}$ can be found in section \ref{sec:hadscalesetting}.  For ILC like energies, $\beta^{EM}_{HCal}$ is not a critical parameter in the reconstruction as photons are largely contained within the ECal meaning little to no electromagnetic energy is measured in the HCal.  
 
 %========================================================================================
 
+\subsubsection{Hadronic scale setting}
+\label{sec:hadscalesetting}
+The hadronic scale setting procedure differs from those presented for the calibration of other parameters as the hadronic scale has to be set simultaneously in the ECal and HCal.  This is because...
 
+
+%========================================================================================
 
 \begin{figure}
   \includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Validation/AngularDistributionPhotonPlot.pdf}
