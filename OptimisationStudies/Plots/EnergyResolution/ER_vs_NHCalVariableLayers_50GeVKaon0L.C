@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1_n4/c1_n4
-//=========  (Tue Mar  7 15:02:57 2017) by ROOT version5.34/30
+//=========  (Tue Mar  7 15:19:28 2017) by ROOT version5.34/30
    TCanvas *c1_n4 = new TCanvas("c1_n4", "c1_n4",12,51,700,500);
    gStyle->SetOptStat(0);
    c1_n4->Range(0,0,1,1);
@@ -14,7 +14,7 @@
    c1_n4->SetFrameLineWidth(2);
    c1_n4->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","",100,14,64,1000,0,14);
+   TH2F *axesEj = new TH2F("axesEj","",100,14,64,1000,0,12);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);

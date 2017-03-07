@@ -1,18 +1,18 @@
 {
-//=========Macro generated from canvas: c1_n8/c1_n8
-//=========  (Tue Mar  7 15:02:59 2017) by ROOT version5.34/30
-   TCanvas *c1_n8 = new TCanvas("c1_n8", "c1_n8",12,51,700,500);
+//=========Macro generated from canvas: c1_n4/c1_n4
+//=========  (Tue Mar  7 15:18:20 2017) by ROOT version5.34/30
+   TCanvas *c1_n4 = new TCanvas("c1_n4", "c1_n4",12,51,700,500);
    gStyle->SetOptStat(0);
-   c1_n8->Range(0,0,1,1);
-   c1_n8->SetFillColor(0);
-   c1_n8->SetBorderMode(0);
-   c1_n8->SetBorderSize(2);
-   c1_n8->SetTickx(1);
-   c1_n8->SetTicky(1);
-   c1_n8->SetLeftMargin(0.15);
-   c1_n8->SetBottomMargin(0.15);
-   c1_n8->SetFrameLineWidth(2);
-   c1_n8->SetFrameBorderMode(0);
+   c1_n4->Range(0,0,1,1);
+   c1_n4->SetFillColor(0);
+   c1_n4->SetBorderMode(0);
+   c1_n4->SetBorderSize(2);
+   c1_n4->SetTickx(1);
+   c1_n4->SetTicky(1);
+   c1_n4->SetLeftMargin(0.15);
+   c1_n4->SetBottomMargin(0.15);
+   c1_n4->SetFrameLineWidth(2);
+   c1_n4->SetFrameBorderMode(0);
    
    TH2F *axesEj = new TH2F("axesEj","",100,14,32,1000,0,3.2);
    axesEj->SetStats(0);
@@ -50,7 +50,7 @@
    gre->SetPoint(3,16,2.65051);
    gre->SetPointError(3,0,0.07159729);
    gre->Draw(" pl");
-   c1_n8->Modified();
-   c1_n8->cd();
-   c1_n8->SetSelected(c1_n8);
+   c1_n4->Modified();
+   c1_n4->cd();
+   c1_n4->SetSelected(c1_n4);
 }

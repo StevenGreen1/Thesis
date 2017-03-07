@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1_n2/c1_n2
-//=========  (Tue Mar  7 15:02:56 2017) by ROOT version5.34/30
+//=========  (Tue Mar  7 15:19:27 2017) by ROOT version5.34/30
    TCanvas *c1_n2 = new TCanvas("c1_n2", "c1_n2",12,51,700,500);
    gStyle->SetOptStat(0);
    c1_n2->Range(0,0,1,1);
