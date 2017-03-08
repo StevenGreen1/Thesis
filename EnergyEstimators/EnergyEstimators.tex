@@ -59,7 +59,7 @@ The digitisation constants depend upon several aspects of the detector including
 The procedure for determining the digitisation constants in the ECal involved the simulation of single $\gamma$ events at $E_{MC} = 10$ GeV.  $\gamma$ events are ideal for calibration of the ECal as in the particle flow paradigm $\gamma$ energy measurements are made primarily within the ECal.  Also at this energy $\gamma$s are largely contained within the ECal, as shown in figure \ref{fig:ecaldigiphotonsplit}, making them ideal for isolating the ECal digitisation calibration from that of the HCal digitisation calibration.   
 
 \begin{figure}
-\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/ECalHCalPhotonSplit.pdf}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/ECalHCalPhotonSplit.pdf}
 \caption[Sum of calorimeter hit energies in ECal and HCal for 10 GeV $\gamma$ events.]{Sum of calorimeter hit energies in ECal and HCal for 10 GeV $\gamma$ events.}
 \label{fig:ecaldigiphotonsplit}
 \end{figure}
@@ -67,13 +67,13 @@ The procedure for determining the digitisation constants in the ECal involved th
 Events are only considered in this analysis if they are confined to the ECal and to that extent cuts are applied ensuring that the sum of any reconstructed energy found outside the ECal is less than 1\% of $E_{MC}$ and that the $\text{cos}(\theta) < 0.95$ where $\theta$ is the polar angle of the $\gamma$.  $\gamma$ conversions are also vetoed from this event sample at this stage by requiring the reconstruction to give a single photon PFO.  The impact of these cuts on the sum of ECal calorimeter hit energies for the $E_{MC} = 10$ GeV $\gamma$ events is shown in figure \ref{fig:ecaldigiselection}.
 
 \begin{figure}
-\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalSelection.pdf}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalSelection.pdf}
 \caption[Sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with and without the selection cuts.]{Sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with and without the selection cuts.}
 \label{fig:ecaldigiselection}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalFit.pdf}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalFit.pdf}
 \caption[Gaussian fit to sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with selection cuts.]{Gaussian fit to sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with selection cuts.}
 \label{fig:ecaldigifit}
 \end{figure}
@@ -95,7 +95,7 @@ The calibration for the digitisation in the HCal proceeds in a similar manor to 
 As the $K^{0}_{L}$ samples have to pass through the ECal before arriving at the HCal and as the ECal contains $\approx 1 \lambda_{I}$, some of the particles begin showering in the ECal, as shown by figure \ref{fig:hcaldigikaonsplit}.  These events are unsuitable for calibration as rescaling $\alpha^{0}_{\text{HCal}}$ does not lead to a linear rescaling in the mean of $E_{\text{Fit}}$.  This issue is resolve by applying selection cuts to select events that deposit the bulk of their energy in the HCal.  
 
 \begin{figure}
-\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/ECalHCalKaon0LSplit.pdf}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/ECalHCalKaon0LSplit.pdf}
 \caption[Sum of calorimeter hit energies in ECal and HCal for 20 GeV $K^{0}_{L}$ events.]{Sum of calorimeter hit energies in ECal and HCal for 20 GeV $K^{0}_{L}$ events.}
 \label{fig:hcaldigikaonsplit}
 \end{figure}
@@ -103,7 +103,7 @@ As the $K^{0}_{L}$ samples have to pass through the ECal before arriving at the 
 Events are only considered in this analysis if a single neutral hadron PFO is reconstruction, the sum of any reconstructed energy found outside the HCal is less than 5\% of $E_{MC}$ and the last layer of the HCal where energy is deposited is in the first 90\% of the HCal.  The cut on the last HCal layer where energy is deposited is applied to veto events that shower late in the HCal and deposit a significant amount of energy in the uninstrumented coil region of the detector.  The impact of these cuts on the sum of HCal calorimeter hit energies for the $E_{MC} = 20$ GeV $K^{0}_{L}$ events is shown in figure \ref{fig:hcaldigiselection}.
 
 \begin{figure}
-\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalSelection.pdf}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalSelection.pdf}
 \caption[Sum of the HCal calorimeter hit energies for a 20 GeV $K^{0}_{L}$ events with and without the selection cuts.]{Sum of the HCal calorimeter hit energies for a 20 GeV $K^{0}_{L}$ events with and without the selection cuts.}
 \label{fig:hcaldigiselection}
 \end{figure}
@@ -174,13 +174,13 @@ The electromagnetic scale in the ECal, $\beta^{EM}_{ECal}$, is set in the detect
 Cuts are applied to ensure that only events where the bulk of the energy is deposited within the ECal are applied.  The cuts require a single $\gamma$ be reconstructed, excluding conversions, and that less than 1\% of the reconstructed energy is outside the ECal.  The impact of these cuts on the electromagnetic energy measured in the ECal for these 10 GeV $\gamma$ events is shown in figure \ref{fig:ecalemscaleselection}.
 
 \begin{figure}
-\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleECalSelection.pdf}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleECalSelection.pdf}
 \caption[Sum of the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events with and without the selection cuts.]{Sum of the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events with and without the selection cuts.}
 \label{fig:ecalemscaleselection}
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleSettingECalFit.pdf}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleSettingECalFit.pdf}
 \caption[Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.]{Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.}
 \label{fig:ecalemscalefit}
 \end{figure}
@@ -188,7 +188,7 @@ Cuts are applied to ensure that only events where the bulk of the energy is depo
 The fitting procedure proceeds in a similar manor to that described in section \ref{sec:ecaldigi} whereby a trial calibration for the electromagnetic energy scale in the ECal, $\beta^{EM0}_{ECal}$, is assumed and the single $\gamma$ events simulated.  The distribution of the PFO electromagnetic energy in the ECal is produced and a Gaussian fit applied to the range of data with the smallest root mean square that contains at least 90 \% of the data.  The mean of this fit, $E_{\text{Fit}}$, is then used to scale $\beta^{EM0}_{ECal}$ in the following way
 
 \begin{equation}
-$\beta^{EM0}_{ECal}$ \rightarrow $\beta^{EM}_{ECal}$ = $\beta^{EM0}_{ECal}$ \times \frac{E_{MC}}{E_{Fit}}
+\beta^{EM0}_{ECal} \rightarrow \beta^{EM}_{ECal} = \beta^{EM0}_{ECal} \times \frac{E_{MC}}{E_{Fit}}
 \end{equation}
 
 An example distribution and fit used for calibration of the nominal ILD detector model can be found in figure \ref{fig:ecalemscalefit}.  The procedure is then repeated using the updated $\beta^{EM}_{ECal}$ until $E_{\text{Fit}}$ falls within a chosen tolerance, which in this case is that $|E_{\text{Fit}} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \%$.  The binning for the fitted histogram is chosen such that the bin width is equal to the desired tolerance on $E_{\text{Fit}}$ e.g. $E_{\text{MC}} \times 0.5 \% = 0.05$ GeV.  This tolerance is tighter than that applied for the digitisation as it is the PFO energies that are used in downstream analyses and therefore require high precision. 
@@ -199,24 +199,73 @@ The electromagnetic scale in the HCal, $\beta^{EM}_{HCal}$, is chosen to be equa
 
 \subsubsection{Hadronic scale setting}
 \label{sec:hadscalesetting}
-The hadronic scale setting procedure differs from those presented for the calibration of other parameters as the hadronic scale has to be set simultaneously in the ECal and HCal.  This is because...
+$\beta^{Had}_{ECal}$ is important to detector performance as a non-negligible amount of hadronic energy is recorded in the ECal.  However, as the ECal contains $\approx 1 \lambda_{I}$, the hadronic scale in the ECal cannot be independently as it is unfeasible to create a large sample of 20 GeV $K^{0}_{L}$ events that are fully contained within it.  Therefore, the hadronic scale is set in the ECal and HCal simultaneously.  
+
+Cuts applied to select $K^{0}_{L}$ that are appropriate to use for the hadronic scale calibration.  The last layer in which energy is deposited in the HCal must not occur in the back 10 \% of the HCal to ensure the event will not suffer from leakage.  A single neutral hadron must be reconstructed to veto events with reconstruction failures.  Finally, the total hadronic energy measured in ECal and HCal, $E^{Had}_{ECal} + E^{Had}_{HCal}$, must fall within 3 $\sigma$ of the desired hadronic energy distribution, $E^{Had}_{ECal} + E^{Had}_{HCal} = 20 \text {GeV} - m_{K^{0}_{L}} = E_{MC}$.  $\sigma$ is defined to be $55\% \times \sqrt{E} = 2.46 \text{GeV}$ for 20 GeV $K^{0}_{L}$.  This definition of sigma is the nominal energy resolution for neutral hadrons in the ILD HCal.  This cut ensures that when fitting the two dimensional distribution of hadronic energy measured in the ECal and HCal the outliers do not skew the fit.  These cuts are illustrated in in figure \ref{fig:hadscaleselection}.
+
+\begin{figure}
+\subfloat[]{\label{fig:hadscaleselectionnocuts}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionNoCuts.pdf}}
+\subfloat[]{\label{fig:hadscaleselectioncuts}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionCuts.pdf}}
+\caption[The distribution of hadronic energy measured in the ECal and HCal for 20 GeV $K^{0}_{L}$ events with and without selection cuts.]{The distribution of hadronic energy measured in the ECal and HCal for 20 GeV $K^{0}_{L}$ events \protect\subref{fig:hadscaleselectionnocuts} without selection cuts and \protect\subref{fig:hadscaleselectioncuts} with selection cuts.}
+\label{fig:hadscaleselection}
+\end{figure}
+
+The calibration procedure is iterative and begins by assuming trial values, $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$, for the hadronic scale calibration factors $\beta^{Had}_{ECal}$ and $\beta^{Had}_{ECal}$.  The 20 GeV $K^{0}_{L}$ events are then simulated and reconstructed.  Following this a linear fit to the distribution of $E^{Had}_{ECal}$ against $E^{Had}_{HCal}$ for 20 GeV $K^{0}_{L}$ events passing the selection cuts is applied.  The fit is performed by minimising $\chi^{2}$, which is defined as
+
+\begin{equation}
+\chi^{2}(\delta^{Had}_{ECal}, \delta^{Had}_{HCal}) = \sum_{i} \frac{x_{i}}{\sigma_{x_{i}}}
+\end{equation}
+
+where $x_{i}$ is the perpendicular distance from $E^{Had}_{ECal}$ and $E^{Had}_{HCal}$ for event $i$ to the line $E^{Had}_{HCal} = \delta^{Had}_{HCal} - E^{Had}_{ECal} \frac{\delta^{Had}_{HCal}}{\delta^{Had}_{ECal}}$.   The definition of $x_{i}$ is given in equation \ref{equ:xicalc}, but best illustrated by considering figure \ref{fig:hadscalechi2calc}.  $\sigma_{x_{i}}$ is the uncertainty on $x_{i}$, which is calculated by propagating the uncertainties on $E^{Had}_{ECal}$ and $E^{Had}_{HCal}$, which are assumed to be $\sigma_{E^{Had}_{E/HCal}} = 55\% \times \sqrt{E^{Had}_{E/HCal}}$, into the expression for $x_{i}$.  The result of this propagation of errors is given in equation \ref{equ:sigmaxicalc}.  The sum runs over all events, $i$, passing the selection cuts.  
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionExample.pdf}
+\caption[An example showing the definition of $x_{i}$, the variable used for the calculation of $\chi^{2}(\delta^{Had}_{ECal}, \delta^{Had}_{HCal})$ for the setting of the hadronic energy scale.]{An example showing the definition of $x_{i}$, the variable used for the calculation of $\chi^{2}$ for the setting of the hadronic energy scale.  For an event that has been measured with hadronic energy $E^{Had}_{ECal}$ in the ECal and $E^{Had}_{HCal}$ in the HCal, the geometric interpretation of $x_{i}$ is shown.  The blue dotted line is defined as $E^{Had}_{HCal} = \delta^{Had}_{HCal} - E^{Had}_{ECal} \frac{\delta^{Had}_{HCal}}{\delta^{Had}_{ECal}}$.}
+\label{fig:hadscalechi2calc}
+\end{figure}
+
+\begin{equation}
+x_{i} = \frac{E^{Had}_{HCal} \delta^{Had}_{ECal} + E^{Had}_{ECal} \delta^{Had}_{HCal} - \delta^{Had}_{ECal} \delta^{Had}_{HCal}}{\sqrt{(\delta^{Had}_{ECal})^{2} + (\delta^{Had}_{HCal})^{2}}}
+\label{equ:xicalc}
+\end{equation}
+
+\begin{equation}
+\sigma_{i} = \frac{(\sigma_{E^{Had}_{HCal}}  \delta^{Had}_{ECal})^{2} + (\sigma_{E^{Had}_{ECal}} \delta^{Had}_{HCal})^{2}}{\sqrt{(\delta^{Had}_{ECal})^{2} + (\delta^{Had}_{HCal})^{2}}}
+\label{equ:sigmaxicalc}
+\end{equation}
+
+The minimisation steps across a range of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{HCal}$ centred about the ideal value of $20 \text { GeV} - m_{K^{0}_{L}}$ in search for the minimum $\chi^{2}$.  Once the minima in $\chi^{2}$ is found the trial calibration factors $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$ are rescaled to correct for any deviation from the desired fit as follows
+
+\begin{equation}
+\beta^{Had0}_{ECal} \rightarrow \beta^{Had}_{ECal} = \beta^{Had0}_{ECal} \times \frac{E_{MC}}{\Delta^{Had}_{ECal}} \\
+\beta^{Had0}_{HCal} \rightarrow \beta^{Had}_{HCal} = \beta^{Had0}_{HCal} \times \frac{E_{MC}}{\Delta^{Had}_{HCal}}
+\end{equation}
+
+where $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ are the values of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ giving the minimum $\chi^{2}$.  The step sizes used for minimising $\chi^{2}$ with respect to $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ is chosen such that a single step corresponds to the target final tolerance on $\delta^{Had}$ i.e. $|\delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.  
+
+This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ both fall within a given tolerance, which in this case it taken to be $|\Delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$
+
+%========================================================================================
+
 
 
 %========================================================================================
 
+
+
+\iffalse
+
 \begin{figure}
-  \includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Validation/AngularDistributionPhotonPlot.pdf}
+  \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Validation/AngularDistributionPhotonPlot.pdf}
   \caption[Mean reconstructed photon energy as a function of the polar angle of the photon.]{Mean reconstructed photon energy as a function of the polar angle of the photon.}
   \label{engest:fig:photonangle}
 \end{figure}
 
 \begin{figure}
-  \includegraphics[width=\largefigwidth]{EnergyEstimators/Plots/Calibration/Validation/AngularDistributionKaon0LPlot.pdf}  \caption[Mean reconstructed kaon0L energy as a function of the polar angle of the kaon0L.]{Mean reconstructed kaon0L energy as a function of the polar angle of the kaon0L.}
+  \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Validation/AngularDistributionKaon0LPlot.pdf}  \caption[Mean reconstructed kaon0L energy as a function of the polar angle of the kaon0L.]{Mean reconstructed kaon0L energy as a function of the polar angle of the kaon0L.}
     \label{engest:fig:photonangle}
     \end{figure}
-
-
-\iffalse
+    
 Validation 
 /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Validation
 207:Validation stevengreen
