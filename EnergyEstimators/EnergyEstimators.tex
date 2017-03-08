@@ -90,6 +90,9 @@ This procedure is then repeated until the $E_{\text{Fit}}$ falls within a chosen
 
 \subsubsection{HCal Digitisation}
 \label{sec:hcaldigi}
+
+Kinetic energy discussion.
+
 The calibration for the digitisation in the HCal proceeds in a similar manor to that described for the ECal with a few key differences.  This calibration uses $K^{0}_{L}$ events at $E_{MC} = 20$ GeV as these neutral hadrons will deposit the bulk of their energy in the HCal.  The higher energy is used to create larger particle showers and sample deeper into the calorimeters.  
 
 As the $K^{0}_{L}$ samples have to pass through the ECal before arriving at the HCal and as the ECal contains $\approx 1 \lambda_{I}$, some of the particles begin showering in the ECal, as shown by figure \ref{fig:hcaldigikaonsplit}.  These events are unsuitable for calibration as rescaling $\alpha^{0}_{\text{HCal}}$ does not lead to a linear rescaling in the mean of $E_{\text{Fit}}$.  This issue is resolve by applying selection cuts to select events that deposit the bulk of their energy in the HCal.  
@@ -247,35 +250,17 @@ This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{E
 
 %========================================================================================
 
+\subsection{Retraining photon likelihood data}
 
 
 %========================================================================================
+%========================================================================================
 
+\section{Timing Cuts}
 
+%========================================================================================
+%========================================================================================
 
-\iffalse
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Validation/AngularDistributionPhotonPlot.pdf}
-  \caption[Mean reconstructed photon energy as a function of the polar angle of the photon.]{Mean reconstructed photon energy as a function of the polar angle of the photon.}
-  \label{engest:fig:photonangle}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Validation/AngularDistributionKaon0LPlot.pdf}  \caption[Mean reconstructed kaon0L energy as a function of the polar angle of the kaon0L.]{Mean reconstructed kaon0L energy as a function of the polar angle of the kaon0L.}
-    \label{engest:fig:photonangle}
-    \end{figure}
-    
-Validation 
-/Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Validation
-207:Validation stevengreen
-AngularDistributionKaon0LPlot.pdf AngularDistributionPhotonPlot.pdf
-
-SoftComp
-/Users/stevengreen/Thesis/EnergyEstimators/Plots/SoftComp/DrawWeights.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/SoftComp/MakePlots.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/SoftComp/PfoEnergyKaon0L.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/SoftComp/PFOEnergySoftComp.pdf /Users/stevengreen/Thesis/EnergyEstimators/Plots/SoftComp/Weights.C 
-
-Calibration
-/Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Calorimeter_Hit_Energies_ECal_Digitisation.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Calorimeter_Hit_Energies_HCal_Barrel_Digitisation.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Calorimeter_Hit_Energies_HCal_EndCap_Digitisation.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Direction_Corrected_SimCalorimeterHit_Energy_Distribution_ECal_10_GeV_Muons.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Direction_Corrected_SimCalorimeterHit_Energy_Distribution_HCal_10_GeV_Muons.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/Direction_Correction_Distribution_HCal_20_GeV_KaonL.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/ECalDigitsation.pdf /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/EMPandora.pdf /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/GeVToMIP_Calibration_10_GeV_Muons_ECal.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/GeVToMIP_Calibration_10_GeV_Muons_HCal.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/GeVToMIP_Calibration_10_GeV_Muons_Muon_Chamber.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/HadPandora.pdf /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/HCalDigi.pdf /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/MIPResponseECalDigi.pdf /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/MIPScalePandora.pdf /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/PandoraPFA_Calibration_Electromagnetic_Energy_Scale_10_GeV_Photons.C /Users/stevengreen/Thesis/EnergyEstimators/Plots/Calibration/PandoraPFA_Calibration_Hadronic_Energy_Scale_Chi_Sqaured_Method_20_GeV_KaonL.C 
-\fi
+\section{Software Compensation}
 
 
