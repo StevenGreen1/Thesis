@@ -8,18 +8,16 @@
 %========================================================================================
 
 \section{Introduction}
-Successful identification of heavy-flavour quarks and tau-leptons relies upon precise reconstruction of the secondary displaced vertices produced in the decay of these particles as well as accurate association of the daughter tracks to those vertices.  To achieve this for the CLIC experiment very high spatial resolution, of approximately 3 {\mu}m and good geometric coverage extending to low $\theta$ values are essential.  The vertex detector must also have a low material budget, less than 0.2 $\text{X}_{0}$ per layer, as to not impact the performance of the other sub detectors and a low occupancy, aided by time-tagging to an accuracy of 10 ns, to counteract the high beam-induced backgrounds found near the impact point.  
+Identification of heavy-flavour quarks and tau-leptons relies upon precise reconstruction of the secondary displaced vertices produced in the decay of these particles as well as accurate association of daughter tracks to those vertices.  For the CLIC vertex detector very high spatial resolution, of approximately 3 {\mu}m, and good geometric coverage extending to low $\theta$ values are essential for achieving the precision on the reconstructed vertices necessary for identification of heavy-flavour quarks and tau-leptons.  The vertex detector must have a low material budget, less than 0.2 $\text{X}_{0}$ per layer, as to not impact the performance of the other sub detectors and have a low occupancy, which will be aided by time-tagging to an accuracy of 10 ns, to counter the high numbers of beam-induced background particles found near the impact point.  
 
-There are no commercially available technology options that fulfil all the criteria for the vertex detector, which had led the CLIC experiment to consider a variety of new technology options.  The focus of this chapter is the use of high voltage complementary metal-oxide-semiconductor (HV-CMOS) active sensors coupled to a separate readout ASIC for the CLIC vertex detector.  
-
-% Active sensor does something to signal when recorded, passive just records signel.  HV-CMOS is active as there's an amplification of signal step.
+As there are no commercially available technology options that fulfil all the criteria for the CLIC vertex detector, the CLIC experiment has developed a wide R\&D program in search for new technology options that could be used in the vertex detector.  High voltage complementary metal-oxide-semiconductor (HV-CMOS) active sensors coupled to a separate readout ASIC are one such option.  The performance of this option and the impact of mechanical tolerances that are present in the manufacturing process are presented.  
 
 %========================================================================================
 
-\subsection{HV-CMOS}
-There are two classifications for pixel detectors; hybrid detectors where a passive sensor is bump-bonded to a separate readout chip and fully integrated where the collection diode is built upon the same wafer as the readout circuitry.  Both of these technology options find the CLIC experimental conditions extremely challenging.  Hybrid technologies struggle to achieved both the radiation tolerance and the functionality in the readout circuitry, while fully integrated circuits have too slow readout times due to limitations on the applied bias voltage.  
+\subsection{Active Pixel Sensor, HV-CMOS}
+There are two classifications for pixel detectors; hybrid detectors where a passive sensor is bump-bonded to a separate readout chip and fully integrated where a collection diode is built upon the same wafer as the readout circuitry.  Both of these technology options find the CLIC experimental conditions extremely challenging.  Hybrid technologies struggle to achieved both the radiation tolerance and the functionality in the readout circuitry, while fully integrated circuits typically have too slow readout times due to limitations on the bias voltage that can be applied.  
 
-HV-CMOS is adapted to the CLIC experimental conditions as the n-MOS and p-MOS transistors forming the integrated amplifier (or generic in-pixel logic operations in general) for collecting the signal are embedded within a deep n-well, as shown in figure \ref{fig:hvcmos}.  This acts as both the collection diode as well as providing shielding to the circuitry from the beam induced radiation.  With the integrated circuitry shielded from the p-substrate it becomes possible to apply a large bias voltage to the substrate to widen the depletion region meaning that the main part of any signal deposited in the detector will be transferred via drift as opposed to diffusion, which provides the fast readout times required by the CLIC experiment.  
+HV-CMOS is adapted to the CLIC experimental conditions as the n-MOS and p-MOS transistors forming the integrated amplifier (or generic in-pixel logic operations in general) for collecting the signal are embedded within a deep n-well, as shown in figure \ref{fig:hvcmos}.  This acts as both the collection diode as well as providing shielding to the circuitry from the beam induced radiation.  With the integrated circuitry shielded from the p-substrate it becomes possible to apply a large bias voltage to the substrate to widen the depletion region.  A wide depletion region causes more single charge to move via drift instead of diffusion, which provides the fast readout times required by the CLIC experiment.  
 
 \begin{figure}
 \centering
@@ -28,9 +26,7 @@ HV-CMOS is adapted to the CLIC experimental conditions as the n-MOS and p-MOS tr
 \label{fig:hvcmos}
 \end{figure}
 
-HV-CMOS devices are strong candidates for the CLIC vertex detector, however, they do have limitations such as noise from interference between the n and p doped wells of the n-MOS and p-MOS transistors that sit within the deep n well.  This noise will grow with the number of n-MOS and p-MOS devices on the wafer and so ultimately restricts the complexity of the in-pixel operations that can be performed.  There are also topological difficulties such as the difficulty of applying the CMOS process to all sizes and the fact that the deep n well does not occupy the full space of the pixel.  
-
-To minimise the material budget for the vertex detector, the pixels used are designed to be as thin as possible.  This means the signal from the HV-CMOS will be small as the depletion region will be thin.  To counter this, in-pixel signal amplification was applied to the HV-CMOS devices, as shown in figure \ref{fig:ccpdandclicpix}.  This increases the signal going to the readout ASIC, which also counteracts the intrinsically small capacitance between the HV-CMOS and readout ASIC.
+HV-CMOS devices are strong candidates for the CLIC vertex detector, however, they do have limitations, such as noise from interference between the n and p doped wells of the n-MOS and p-MOS transistors that sit within the deep n well.  This noise will grow with the number of n-MOS and p-MOS devices on the wafer and so ultimately restricts the complexity of the in-pixel operations that can be performed.  Not only that, but the CMOS process cannot be trivially applied at all length scales, so manufacturing small sensors becomes increasingly more challenging.  Another drawback is the deep n well does not occupy the full space of the pixel, which means some signal charge can be lost in the sensor.  The CLIC conditions also induce drawbacks on the HV-CMOS performance as, to minimise the material budget, the sensor will be as thin as possible leading to a narrow depletion region and a small collected charge.  To counter this, in-pixel signal amplification was applied to the HV-CMOS devices, as shown in figure \ref{fig:ccpdandclicpix}.  This increases the signal going to the readout ASIC, which counteracts both the small collected charge and the intrinsically small capacitance between the HV-CMOS and readout ASIC.
 
 \begin{figure}
 \centering
@@ -41,18 +37,20 @@ To minimise the material budget for the vertex detector, the pixels used are des
 
 %========================================================================================
 
-\subsection{CLICpix}
-The readout ASIC in this study is the CLICpix, which is a charge integrating amplifier connected to a discriminator as shown in figure \ref{fig:ccpdandclicpix}.  The discriminator produces an output signal when the input signal is over a given threshold.  The discriminator output is then used as the input for further logic operations that record the magnitude, using a Time over Threshold (ToT) measurement, and time of arrival of the collected charge.  The ToT uses a four-bit readout and so is confined to the range 0 to 15 units.  It is envisaged that the CLICpix ASIC will be run using shutter-based operations where the entire matrix is kept active while the shutter is open and when closed the matrix is readout is at once.  This would be viable for the CLIC experiment which runs with pulses containing 312 bunches, each bunch is 156 ns long followed by 0.5 ns separation, and between pulses there is 20 ms of readout time.  
+\subsection{Readout ASIC, CLICpix}
+The readout ASIC used in this study is the CLICpix, which is a charge integrating amplifier connected to a discriminator as shown in figure \ref{fig:ccpdandclicpix}.  The discriminator produces an output signal when the input signal is over a given threshold.  The discriminator output is then used as the input for further logic operations to record the magnitude, using a Time over Threshold (ToT) measurement, and time of arrival of the collected charge.  The ToT uses a four-bit readout and so is confined to the range 0 to 15 units.  It is envisaged that the CLICpix ASIC will be run using shutter-based operations where the entire matrix is kept active while the shutter is open and when closed the matrix is readout at once.  This would be appropriate for the CLIC experiment as it will run using pulses, containing bunches of $e^{+}$ and $e^{-}$, that are separated by 20 ms for readout time.  Each pulse contains 312 bunches, each bunch is 156 ns long and the bunch separation is 0.5 ns.  
+
+Fluctuations will exist between individual pixels on the CLICpix sensor due to the manufacturing process, which if not accounted for would degrade the vertex detector performance.  To suppress these fluctuations, the CLICpix sensors have a 4-bit adjustment build into their front end that can be tuned on a per pixel basis to unify the response of the matrix.  The equalisation of the matrix response is achieved by first setting the four bits to 0000 for all pixels and then scanning over the input signal to the CLICpix, or DAC, to determine the point at which more than half the pixels are responding.  The same procedure is repeated using the 1111 setting to bound each pixels response.  By applying linear interpolation between the measurements of the half pixel turn on DAC value for these extreme bin adjustment settings it is possible to tune the response of each pixel.  Each pixel in the matrix is tuned to be as close as possible to the mean of all responses measured across the matrix in both the 0000 and 1111 settings.  
 
 %========================================================================================
 
 \subsection{Capacitive Coupling}
-Solder bump-bonding is the typical method that is used for connecting active pixel sensors to the readout ASIC, however, the solder adds to the thickness of the sensor significantly as well as raising the cost.  A viable alternative to this procedure is the replacement of the bump-bonding with a thin uniform layer of glue that forms a capacitive connection between the active pixel and readout ASIC.  The mechanical tolerances on the alignment of the active pixel sensor and readout ASIC when applying this glueing procedure are the focus of this study.  
+Solder bump-bonding is the typical method that is used for connecting active pixel sensors to the readout ASIC, however, the solder adds to the thickness of the sensor significantly and raises the cost.  A viable alternative to this involves using a thin uniform layer of glue to form a capacitive connection between the active pixel sensor and the readout ASIC.  While this procedure reduces cost and material budget for the sensor in comparison to bump-bonding, the gluing process introduces previously unseen complications that have to be considered.  
 
 %========================================================================================
 
 \section{Construction}
-While replacing solder bump-bonding with a thin layer of glue in the construction of the sensors for the vertex detector offers benefits, such as reductions in the material budget and cost, the manufacturing procedure could lead to misalignments between the active pixel sensor and the readout ASIC.  To determine the impact of these misalignments a number of sensors were constructed using the gluing procedure that contained offsets between the HV-CMOS and CLICpix, as shown in figure \ref{fig:alignment}.  A table \ref{table:alignment} contains a summary of all the samples used in this study.
+In the construction of pixel detectors that use a layer of glue to form a capacitive connection between the active pixel sensor and the readout ASIC it is possible to introduce misalignments between the sensor and ASIC.  The goal of this study it to categorise the effect such misalignments would have on the detector performance.  The sensitivity of the performance of the detector to these misalignments could determine whether capacitively coupled pixel detectors constructed in this way are a viable option for the CLIC vertex detector.  To quantify the impact of misalignments such as these a number of pixel detectors were constructed that contained misalignments between the HV-CMOS and CLICpix, as shown in figure \ref{fig:alignment}.  A table \ref{table:alignment} contains a summary of all the samples considered in this study.
 
 \begin{figure}
 \centering
@@ -69,7 +67,7 @@ Assembly & Alignment \\
 \hline
 SET9 & Centred \\
 SET10 & $\frac{1}{4}$ Offset \\
-SET11 & $\frac{1}{2}$ Offset \\
+%SET11 & $\frac{1}{2}$ Offset \\
 SET12 & Centred \\
 SET13 & Centred \\
 SET14 & $\frac{1}{2}$ Offset \\
@@ -77,27 +75,25 @@ SET15 & Centred \\
 SET16 & $\frac{1}{2}$ Offset \\
 \hline
 \end{tabular}
-\caption[Description of alignment of sensors.]{Description of alignment of sensors.}
+\caption[A description of the alignment of the HV-CMOS active pixel sensor and the CLICpix readout ASIC for the pixel detectors considered in this study.]{A description of the alignment of the HV-CMOS active pixel sensor and the CLICpix readout ASIC for the pixel detectors considered in this study.}
 \label{table:alignment}
 \end{table}
 
-The pitch of the pixels, HV-CMOS sensor and CLICpix ASIC, on the prototype sensors produced for this study was 25 {\mu}m and the matrix size was 64$\times$64.  The full details of the gluing process can be found here (CERN NOTE CITE) along with a study into the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1 {\mu}m and the precision on the pixel positioning was less than 0.5 {\mu}m.  
+The pitch of the sensors, both the HV-CMOS active pixel sensor and CLICpix readout ASIC, produced for this study was 25 {\mu}m and the matrix size was 64$\times$64.  The full details of the gluing process can be found here (CERN NOTE CITE) along with a study into the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1 {\mu}m and the precision on the pixel positioning was less than 0.5 {\mu}m.  
 
 %========================================================================================
 %========================================================================================
 
 \section{Device Characterisation}
 
-This section describes the electrical tests that were performed on the sensor designed to determine the properties of the HV-CMOS and CLICpix.  
-
 %========================================================================================
 
 \subsection{CLICPix Calibration}
 
 \subsubsection{Experimental Setup}
-A radioactive source, $\text{Sr}^{90}$, calibration that was applied to the sensors is presented here.  In this procedure the unstable $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$.  The $\text{Y}^{90}$, as it too is unstable, undergoes $\beta^{-}$ decay to form $\text{Z}^{90}$, which is stable.  Each $\beta^{-}$ decays produce an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and it is the $\text{e}^{-}$ that are used to test the sensitivity of the sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  
+In this experiment the CLICpix device was calibrated using a radioactive source, $\text{Sr}^{90}$, to generate the single in the active pixel sensor.  The unstable $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$.  The $\text{Y}^{90}$, as it too is unstable, undergoes $\beta^{-}$ decay to form $\text{Z}^{90}$, which is stable.  Each $\beta^{-}$ decays produce an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and it is the $\text{e}^{-}$ that are used to generate the signal in the pixel detector.  The $\text{Sr}^{90}$ source used for this experiment had an activity of 29.6 MBq.  
 
-This radioactive source was positioned directly on top of the sensors and measurements were made of both the ToT output from the CLICpix and the HV-CMOS analogue signal for individual pixels on the sensor.  The HV-CMOS pulse shape was recorded on a fast sampling oscilloscope that was used to tigger the data taking for the CLICpix readout.  The on-pixel event counter was used to veto all events where multiple hits occurred within the time window for a given event.  
+This radioactive source was positioned directly on top of the pixel detector and measurements were made of both the ToT output from the CLICpix and the HV-CMOS analogue signal for individual pixels on the sensor.  The HV-CMOS pulse shape was recorded on a fast sampling oscilloscope that was also used to tigger the data taking for the CLICpix readout.  The on-pixel event counter was used to veto all events where multiple hits occurred within the time window for a given event.  
 
 \begin{figure}
 \centering
@@ -118,13 +114,13 @@ The quantities of interest related to the HV-CMOS output are the pulse height an
 
 \begin{figure}
 \centering
-\subfloat[\textbf{Rise time.}  The arrows show the change in time and voltage as the pulse goes from 10\% to 90\% of the raw pulse height.  This time is used as the definition of the rise time in the subsequent analysis.]{\label{fig:pulseshapeanalysistime}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf}}
+\subfloat[\textbf{Rise time.}  The blue arrows show the change in time and voltage as the pulse goes from 10\% to 90\% of the raw pulse height.  This time is used as the definition of the rise time in the subsequent analysis.]{\label{fig:pulseshapeanalysistime}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf}}
 \subfloat[\textbf{Pulse height.} The red dotted line is a Gaussian fit to the peak of the pulse.  The peak is defined as data points where the voltage is in excess of 90\% of the raw pulse height.]{\label{fig:pulseshapeanalysisvoltage}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf}}\hfill
 \caption[Analysis of HV-CMOS voltage as a function of time for pulses created by radioactive strontium 90 source.]{Analysis of HV-CMOS voltage as a function of time for pulses created by radioactive $\text{Sr}^{90}$ source.}
 \label{fig:pulseshapeanalysis}
 \end{figure}
 
-The pulse height was taken as the mean of a Gaussian fit to the peak of the HV-CMOS output voltage distribution.  Such peaks were defined as the data points set that were at or above 90\% of the raw peak height, the maximum voltage change recorded.  The application of a Gaussian fit provides a more robust metric for categorising the pulse height that is not dependant on minor fluctuations in the voltage.  The rise time was calculated as the time taken for the voltage to go from 10\% to 90\% of the raw peak height.  This definition also makes the rise time metric more robust against fluctuations changing the absolute peak height.  Examples of the calculation of these metrics for a given pulse are shown in figure \ref{fig:pulseshapeanalysis}.
+The pulse height was taken as the mean of a Gaussian fit to the peak of the HV-CMOS output voltage distribution.  The peak was defined as having a voltage change greater than 90\% of the maximum recorded voltage change.  The application of a Gaussian fit provides a more robust metric for categorising the pulse height, which is less dependant on fluctuations in the voltage.  The rise time was calculated as the time taken for the voltage to go from 10\% to 90\% of the maximum recorded voltage change.  This definition makes the rise time metric more robust against fluctuations in the voltage.  Examples of the calculation of these metrics for a given pulse are shown in figure \ref{fig:pulseshapeanalysis}.
 
 For each device the HV-CMOS pulse output was recorded for 15 pixels running along one edge of the 64 $\times$ 64 matrix and in the subsequent analysis the data for all 15 pixels was combined.
 
@@ -141,7 +137,7 @@ The mean rise time as function of pulse height is shown in figure \ref{fig:riset
 \label{fig:risetime}
 \end{figure}
 
-The data in figure \ref{fig:risetime} indicates that the rise time is approximately 300 ns across all samples considered and that this is largely independent of pulse height for all but the largest and smallest values.  For large pulse heights the rise time is reduced while for low pulse heights the rise time is much larger.  This is to be expected as the pulse heights is proportional to the signal from the $\text{e}^{-}$ and the larger this signal the larger the rate of change of output voltage from the HV-CMOS and so the lower the rise time.  It is encouraging that all HV-CMOS devices have similar characteristics as it makes comparison of samples having different offsets between the HV-CMOS and the CLICpix ASIC possible.  This assumes the CLICpix sensors also behave in a similar manor across all samples considered, which is the case as the results in section \ref{testpulsecalibrationresults} show.  
+The data in figure \ref{fig:risetime} indicates that the rise time is approximately 300 ns across all samples considered and that this is largely independent of pulse height for all but the largest and smallest values.  As the pulse height increase the rise time decreases, which is to be expected as the pulse heights are proportional to the signal from the $\text{e}^{-}$ and the larger this signal the larger the rate of change of output voltage from the HV-CMOS and so the lower the rise time.  For very small pulse heights, $< 100$ mV, the rise times are significantly larger indicating that the collected signal charge is taking a long time to be collected.  This is likely to be due to the signal charge travelling via diffusion rather than drift, which increases the time for the signal charge to be collected.  It is encouraging that all HV-CMOS devices have similar characteristics as it makes comparison of samples having different offsets between the HV-CMOS and the CLICpix ASIC possible.  This assumes the CLICpix sensors also behave in a similar manor across all samples considered, which is the case as the results in section \ref{testpulsecalibrationresults} show.  
 
 %========================================================================================
 
@@ -163,9 +159,9 @@ The distribution of mean ToT against pulse height shows that for centred samples
 \subsubsection{Results -  Cross Couplings}
 It is possible to further understand the splitting of the HV-CMOS signal between multiple CLICpix ASICs by examining the ToT on adjacent pixels, along the direction of the offset, as a function of the HV-CMOS pulse height.  This is shown in figure \ref{fig:totcrosscoupling1} for all devices that are centred and Set 14, which behaves as a centred device, and in figure \ref{fig:totcrosscoupling2} for the $\frac{1}{4}$ offset sample and the remaining $\frac{1}{2}$ offset sample, Set 16.  
 
-No correlation between the adjacent pixel ToT and the HV-CMOS pulse height is observed for the samples shown in figure \ref{fig:totcrosscoupling1} for all but the lowest values of pulse height.  The correlation observed at low pulse heights may arise due to the signal $\text{e}^{-}$, which is primarily recorded in the target pixel, depositing a small amount of charge in the adjacent adjacent pixel as the $\text{e}^{-}$ may not be traveling normal to the pixel surface.  However, as this is not present in all samples this could also indicate a small offset in the samples showing the correlation that may fall within the manufacturing tolerances.  
+No correlation between the adjacent pixel ToT and the HV-CMOS pulse height is observed for the samples shown in figure \ref{fig:totcrosscoupling1} for all but the lowest values of pulse height.  The correlation observed at low pulse heights may arise due to the signal $\text{e}^{-}$, which is primarily recorded in the target pixel, depositing a small amount of charge in the adjacent adjacent pixel.  This can happen as the $\text{e}^{-}$ may not be traveling normal to the pixel surface.  However, as this feature is not present in all samples it could indicate a small misalignment exists in the samples showing the correlation.  
 
-There is, however, a strong correlation, shown in figure \ref{fig:totcrosscoupling2}, between adjacent pixel ToT and the HV-CMOS pulse height for Set 16, which is one of the $\frac{1}{2}$ offset samples.  This distribution is almost identical to the the target pixel ToT distribution as a function of HV-CMOS pulse height, which is what would be expected given an equal signal charge sharing between the two readout ASICs.  This indicates the charge sharing is well understood for this $\frac{1}{2}$ offset sample.   
+There is, however, a strong correlation between adjacent pixel ToT and the HV-CMOS pulse height, shown in figure \ref{fig:totcrosscoupling2}, for Set 16, which is one of the $\frac{1}{2}$ offset samples.  This distribution is almost identical to the the target pixel ToT distribution as a function of HV-CMOS pulse height, which is what would be expected given an equal signal charge sharing between the two readout ASICs.  This indicates the charge sharing is well understood for this $\frac{1}{2}$ offset sample.   
 
 For the $\frac{1}{4}$ offset sample correlation is present only for low pulse heights as was the case for the centred samples.  However, the mean ToT within the uncorrelated region is centred around $\approx$ 5 units of ToT, which is lower than was observed for the centred samples.  This is due to the offset reducing the total capacitance between the HV-CMOS and CLICpix in comparison to the centred samples and thus reducing the ToT recorded.
 
@@ -310,8 +306,7 @@ During this experiment the samples mounted on an EUDET/AIDA telescope \cite{Rubi
 \subsection{Analysis}
 The track position on the DUT was estimated by extrapolation based on the telescope sensor data.  This was followed by a search around the intercept position on the DUT to find clusters of hits.  The scan covered a region of 75 $\mu$m, or 3 pixels, about the intercept position.  For any multi-pixel clusters the ToT weighted centre of gravity was used to determine the position.  Several tracks during this experiment undergo scattering making them unsuitable for this analysis and these tracks were vetoed using a $\chi^{2}$ cut.  Some pixels on the device were deemed to be noisy and so were vetoed from the analysis along with any tracks occurring within half a pixel of them.  A pixel was deemed noisy if it responded at a mean rate \textcolor{red}{Clarify} greater than 5 $\sigma$ in comparison to the average rate.  Finally all tracks occurring within 125 $\mu$m of each other were vetoed.  \textcolor{red}{Is this data correct, taken from previous cern note?}
 
-\textcolor{red}{Alignment?}
-\textcolor{red}{Equalisation?}
+An alignment procedure is applied to both the telescope sensor planes as well as the DUT.  The six telescope sensor planes were aligned sequentially by minimising $\chi^{2}$, the distance between a cluster in a given plane and the intercept of an associated track divided by the \textcolor{red}{Error?}, as a function of the orientation of a given plane.  After the sensor planes were aligned the DUT was aligned by minimising the quadrature sum of the residuals, the difference between the cluster centre on the DUT and the associated track intercept.  
 
 %========================================================================================
 
@@ -329,17 +324,9 @@ The efficiency as a function of threshold used for the ToT calculation is shown 
 
 %========================================================================================
 
-\subsection{Conclusions}
+\section{Conclusions}
+
 
 %========================================================================================
-
-\begin{itemize}
-\item Alignment description.
-\end{itemize}
-
-
-
-
-
 
   
