@@ -252,15 +252,98 @@ This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{E
 
 \subsection{Retraining photon likelihood data}
 
+Likelihood data recalibrated wheneve ECal changes.  Ok for changes in HCal as only trained on MC photons from Z->uds jets that are in ECal.  ECalToEM calibrated only on photons so won't change when HCal changes.  For reconstruction setting changes photon showers develop very quickly so event timing cut changes won't affect these studies.
 
 %========================================================================================
 %========================================================================================
 
 \section{Timing Cuts}
+The ILC and CLIC will operate using a trigger-less readout approach whereby the recorded data for each sub-detector is readout between bunches.  The train structure for the ILC and CLIC at maximum operating energy is shown in table \ref{table:trainstructure}.  Event selection proceeds through the application of a software trigger.  This involves the identification of hard interactions, prior to full event reconstruction, and only putting data into the event reconstruction if it is measured within a chosen time window about this interaction.  Timing cuts placed on the calorimeter hits are corrected for straight time-of-flight to the IP.  This ensures that the amount of time particle showers have to develop in the calorimeters is independent of their position in the calorimeters.  As the size of the time window around the identified hard interaction changes the amount of time particle showers have to develop within the calorimeter, the choice of time window will affect the performance of the detector. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{l r r}
+\hline
+& ILC 500 GeV & CLIC 3 TeV \\
+\hline
+Electrons per bunch & 2.0 & 0.37 \\
+Bunches per train & 2810 & 312 \\
+Train repetition rate [Hz] & 5 & 50 \\
+Bunch separation [ns] & 308 & 0.5 \\
+\end{tabular}
+\caption[The train structure for 500 GeV ILC and 3 TeV CLIC.]{The train structure for 500 GeV ILC and 3 TeV CLIC.  CITE}
+\label{table:trainstructure}
+\end{table}
+
+For all detector models considered in this analysis the calibration procedure was reapplied.  This means that the mean of the reconstructed energy distribution is invariant to changes in the calorimeter timing window as the calibration procedure fixes the relevant distributions to the MC energy of the calibration sample.  
+
+The energy resolution for 100 GeV $\gamma$ and 50 GeV $K^{0}_{L}$ events using the nominal ILD detector model as a function of the timing window used for the calorimeter hits is shown in figure \ref{fig:ertimingcuts}.  The timing cuts make little difference in the case of the $\gamma$ events as they produce electromagnetic showers that propagate rapidly.  However, there is a significant decrease in the energy resolution for the neutral hadrons as these showers propagate much more slowly.  Truncating the measurement of the hadronic showers by having a small time window means a reduction in sampling of the overall shower, as those hits passing the time window are no longer counted, leading to a broadening of the energy resolution.  
+
+\begin{figure}
+\subfloat[]{\label{fig:ertimingcutsphotons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/TimingCuts/ER_vs_PhotonTiming_100GeVPhoton.pdf}}
+\subfloat[]{\label{fig:ertimingcutskaons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/TimingCuts/ER_vs_Kaon0LTiming_50GeVKaon0L.pdf}}
+\caption[The energy resolution as a function of calorimeter timing window for \protect\subref{fig:ertimingcutsphotons} 100 GeV $\gamma$ events and \protect\subref{fig:ertimingcutskaons} 50 GeV $K^{0}_{L}$ events for the nominal ILD detector model.]{The energy resolution as a function of calorimeter timing window for \protect\subref{fig:ertimingcutsphotons} 100 GeV $\gamma$ events and \protect\subref{fig:ertimingcutskaons} 50 GeV $K^{0}_{L}$ events for the nominal ILD detector model.}
+\label{fig:ertimingcuts}
+\end{figure}
+
+The trends observed for single particles propagate into the jet energy resolution also, which can be see in figure \ref{ig:jertimingcuts}.  Continue from HERE.
+
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/TimingCuts/JER_vs_JetEnergy_TimingCutStudies.pdf}
+\caption[The jet energy resolution as a function of jet energy for various calorimeter timing cuts.  The results shown use the nominal ILD detector model.]{The jet energy resolution as a function of jet energy for various calorimeter timing cuts.  The results shown use the nominal ILD detector model.}
+\label{fig:jertimingcuts}
+\end{figure}
+
+%========================================================================================
+%========================================================================================
+
+\section{Cell Truncation}
+
+Plot of jet energy resolution vs jet energy for 0.5, 0.75, 1, 1.5, 2, 5, 10 and $10^{6}$ GeV cuts.  Possibly plots for the single particle energy resolutions as a function of timing cuts also.
+
+Plot of jet energy resolution vs cell size for various jets using 1 and $10^{6}$ GeV truncation to emphasise importance of result.
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/JER_vs_JetEnergy_HCalCellTruncation.pdf}
+\caption[The jet energy resolution as a function of jet energy for various hadronic cell truncations.  The results shown use the nominal ILD detector model.]{The jet energy resolution as a function of jet energy for various hadronic cell truncations.  The results shown use the nominal ILD detector model.}
+\label{fig:jertimingcuts}
+\end{figure}
 
 %========================================================================================
 %========================================================================================
 
 \section{Software Compensation}
+\label{sec:softcomp}
+As discussed in chapter CALORIMETERS CHAPTER, the response of a calorimeter to a hadronic shower is different to that of an electromagnetic showers.  The particle shower produced by a hadron when passing through a calorimeter has two components; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$, and a hadronic shower component originating from all other interacting and decaying hadrons.  Hadronic showers have an "invisible" energy component, due to various factors such as neutrons stopping within the calorimeter and nuclear binding energy losses.  This component leads to a reduced response from a calorimeter to a hadronic shower in comparison to an electromagnetic shower of the same initial energy.  This different calorimetric response will lead to a degradation in the energy resolution of a detector if not properly compensated for. 
 
+This compensation can be applied either at the hardware level, whereby a calorimeter is made to be intrinsically compensating, or at the software level, whereby hadronic showers are identified and their energy estimators modified.  
 
+An example of hardware compensation would be the ZEUS calorimeter \cite{Derrick:1991tq} that was constructed using uranium as the absorber material.  In response to neutral hadrons the uranium underwent fission producing extra energy, which raises the hadronic response of the calorimeter.  The amount of uranium was carefully chosen to achieve a fully compensating calorimeter response i.e. identical calorimeter response to electromagnetic and hadronic showers.  While hardware compensation is possible for the linear collider calorimeters, restrictions on calorimeter construction and the use of a large amount of radioactive material are highly undesirable.  
+
+The high granularity calorimeters and sophisticated pattern recognition software used at the linear collider give excellent resolution on individual particle showers.  This resolution means that software compensation can be applied at the linear collider to a greater level of detail that has ever been considered for previous experiments.  
+
+\subsection{Technique}
+The software compensation technique applied in this study involves reweighing HCal hits based on their energy density and the energy of the cluster those hits belong to.  This is employed in the PandoraPFA algorithm in the form of an energy correction function, which in effect means whenever the energy of a cluster of hits is considered in PandoraPFA the software compensated energy is used.  Applying software compensation in this way improves not only the intrinsic energy resolution of the detector, but also the reconstruction.  
+
+Software compensation is applied to clusters of calorimeter hits, as opposed to being applied directly to PFOs, so that these more precise energy estimators can be used during the reconstruction, which occurs before PFO creation.  If a cluster has an initial energy estimators of $E_{\text{raw}}$ formed of the sum of the calorimeter hit energies in the ECal and HCal, the software compensated cluster energy, $E_{cluster}$, is given by 
+
+\begin{equation}
+E_{cluster} = E_{ECal} + \sum_{i} E_{i} \times \omega_{i}(E_{\text{raw}}, E_{i}) + E_{\text{Muon Chamber}}
+\label{equ:softcomp}
+\end{equation}
+
+where $E_{ECal}$ is the sum of the ECal hit energies in the cluster, $E_{i}$ is the energy of HCal hit $i$, $\omega_{i}$ is the software compensation weight applied to hit $i$, $E_{\text{Muon Chamber}}$ is the cluster energy recorded in the muon chamber and the sum runs over all hits $i$ in the HCal.  The weight function $\omega_{i}$ is defined as follows
+
+\begin{equation}
+\omega_{i}(E_{\text{raw}}, E_{i}) = p_{1}exp(p_{2}\rho) + p_{3} \\
+p_{1} = p_{10} + p_{11} \times E_{\text{raw}} + p_{12} \times E_{\text{raw}}^{2} \\
+p_{2} = p_{20} + p_{21} \times E_{\text{raw}} + p_{22} \times E_{\text{raw}}^{2} \\
+p_{3} = \frac{p_{30}}{p_{31} + exp(p_{32} \times E_{\text{raw}})}
+\label{equ:softcompweight}
+\end{equation}
+
+where $\rho$ is the energy density of the cell for hit $i$ and $p_{ij}$ are trained parameters.
+
+%========================================================================================
+%========================================================================================
