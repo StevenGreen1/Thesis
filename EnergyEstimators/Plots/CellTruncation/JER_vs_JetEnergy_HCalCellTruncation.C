@@ -28,7 +28,9 @@
 
     float Variable_3_JER[4] = {3.74834,2.94927,2.83825,2.96877};
 
-    float Variable_4_JER[4] = {3.77195,3.03212,3.03374,3.18196};
+    float Variable_4_JER[4] = {3.77309,3.02386,2.98467,3.07305};
+
+    float Variable_5_JER[4] = {3.77308,3.02768,3.03721,3.16584};
 
     float Variable_1_JERError[4] = {0.045388,0.0364392,0.0379025,0.0419333};
 
@@ -36,9 +38,11 @@
 
     float Variable_3_JERError[4] = {0.0477003,0.0377677,0.0362599,0.0379118};
 
-    float Variable_4_JERError[4] = {0.0480007,0.0388286,0.0387574,0.0406344};
+    float Variable_4_JERError[4] = {0.0480152,0.0387229,0.0381304,0.0392436};
 
-    TLegend *pLegend = new TLegend(0.65, 0.55, 0.85, 0.85);
+    float Variable_5_JERError[4] = {0.0480151,0.0387718,0.0388017,0.0404285};
+
+    TLegend *pLegend = new TLegend(0.5, 0.55, 0.85, 0.85);
     pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Variable_1 = new TGraphErrors(4,jetEnergy,Variable_1_JER,jetEnergyError,Variable_1_JERError);
 
@@ -69,12 +73,21 @@
 
     TGraphErrors *pTGraphErrors_Variable_4 = new TGraphErrors(4,jetEnergy,Variable_4_JER,jetEnergyError,Variable_4_JERError);
 
-    pTGraphErrors_Variable_4->SetLineColor(kRed);
-    pTGraphErrors_Variable_4->SetMarkerColor(kRed);
+    pTGraphErrors_Variable_4->SetLineColor(kGreen+2);
+    pTGraphErrors_Variable_4->SetMarkerColor(kGreen+2);
     pTGraphErrors_Variable_4->SetMarkerStyle(1);
     pTGraphErrors_Variable_4->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_4, "10^{6} GeV", "lp");
+    pLegend->AddEntry(pTGraphErrors_Variable_4, "5 GeV", "lp");
+
+    TGraphErrors *pTGraphErrors_Variable_5 = new TGraphErrors(4,jetEnergy,Variable_5_JER,jetEnergyError,Variable_5_JERError);
+
+    pTGraphErrors_Variable_5->SetLineColor(kRed);
+    pTGraphErrors_Variable_5->SetMarkerColor(kRed);
+    pTGraphErrors_Variable_5->SetMarkerStyle(1);
+    pTGraphErrors_Variable_5->Draw("lp,same");
+
+    pLegend->AddEntry(pTGraphErrors_Variable_5, "10GeV", "lp");
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");

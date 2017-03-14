@@ -22,25 +22,25 @@
 
     float jetEnergyError[4] = {0,0,0,0};
 
-    float Variable_1_JER[4] = {2.85703,2.05991,1.74787,1.70591};
+    float Variable_1_JER[4] = {2.1350176741,1.96311277638,2.39729654236,2.80578427793};
 
-    float Variable_2_JER[4] = {2.93851,2.13528,1.79003,1.69254};
+    float Variable_2_JER[4] = {2.15987004005,1.93450152094,2.2128883245,2.44583845705};
 
-    float Variable_3_JER[4] = {3.01616,2.1816,1.80456,1.72038};
+    float Variable_3_JER[4] = {2.22549581217,1.98464479767,2.19071364375,2.41948092956};
 
-    float Variable_4_JER[4] = {3.03737,2.22257,1.89888,1.80951};
+    float Variable_4_JER[4] = {2.23843508532,2.05034433564,2.30271790598,2.48380954632};
 
-    float Variable_5_JER[4] = {3.02899,2.22051,1.90881,1.84038};
+    float Variable_5_JER[4] = {2.24974493361,2.05819861099,2.36243284942,2.57595503866};
 
-    float Variable_1_JERError[4] = {0.0363577,0.0263787,0.0223299,0.0217849};
+    float Variable_1_JERError[4] = {0.058154585092,0.0449850489206,0.0439910821099,0.0472544156464};
 
-    float Variable_2_JERError[4] = {0.0373946,0.0273439,0.0228684,0.0241841};
+    float Variable_2_JERError[4] = {0.0596000757346,0.0459246378909,0.0429552070939,0.0525734765383};
 
-    float Variable_3_JERError[4] = {0.0383827,0.0279371,0.023054,0.0219697};
+    float Variable_3_JERError[4] = {0.0612255607124,0.0469774327586,0.0429682597336,0.0438174163271};
 
-    float Variable_4_JERError[4] = {0.0386527,0.0284617,0.024259,0.0231079};
+    float Variable_4_JERError[4] = {0.0616399198157,0.0480576517302,0.0451931960293,0.0455415649364};
 
-    float Variable_5_JERError[4] = {0.038546,0.0284353,0.024386,0.0235021};
+    float Variable_5_JERError[4] = {0.061573132245,0.0480814527505,0.0458283772132,0.0467633446273};
 
     TLegend *pLegend = new TLegend(0.5, 0.55, 0.85, 0.85);
     pLegend->SetTextSize(0.05);
@@ -91,5 +91,5 @@
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
-    pCanvasEj->SaveAs("JER_vs_JetEnergy_HCalCellTruncation_PandoraPerfectPFA.pdf");
+    pCanvasEj->SaveAs("JER_vs_JetEnergy_HCalCellTruncation_PandoraTotalConfusion.pdf");
 }
