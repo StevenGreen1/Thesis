@@ -26,6 +26,8 @@ Calibration of the linear collider simulation extends beyond the raw calorimeter
 
 Two treatments designed to achieve a compensating response from the calorimeters are discussed.  The both involve rescaling the energies, the first rescaling is applied using a series of fixed energy independent constants, while the second uses the energy density of the calorimeter hits in the shower to determine the energy rescaling factor.
 
+Details regarding how the detector performance metrics used in this chapter are calculated can be found in section \ref{sec:optstudiesmetric}.
+
 %========================================================================================
 
 \subsection{Calibration and detector optimisation}
@@ -48,6 +50,7 @@ Each of these aspects needs separately addressing for each new detector model co
 %========================================================================================
 
 \subsection{Digitisation}
+\label{sec:digi}
 Calibration of the digitisation of the calorimeter hits involves accurately estimating the energy deposited in a calorimeter cell, in both the active and absorber layers, based on the energy deposited in the sensitive element of the calorimeter, the active layer.  The relationship between the energy deposited in the active layers and the absorber layers of a calorimeter is linear as the energy deposited in both layers are proportional to the number of charged tracks passing through them.  The ratio of the calorimeter cell energy to the energy deposited in the active layers is hereby called the digitisation constant.  
 .
 The digitisation constants depend upon several aspects of the detector including the material properties of the calorimeters, the magnetic field strength and energy losses occurring within the gaps between the active and absorber layers.  To account the effect of instrumented read out technology that would exist in a completed calorimeter some material is included in the simulation around the active and absorber layer.  In comparison to the absorber layer this extra material adds little to the detector, but energy losses here are accounted for in digitisation.  
@@ -90,9 +93,6 @@ This procedure is then repeated until the $E_{\text{Fit}}$ falls within a chosen
 
 \subsubsection{HCal Digitisation}
 \label{sec:hcaldigi}
-
-Kinetic energy discussion.
-
 The calibration for the digitisation in the HCal proceeds in a similar manor to that described for the ECal with a few key differences.  This calibration uses $K^{0}_{L}$ events at $E_{MC} = 20$ GeV as these neutral hadrons will deposit the bulk of their energy in the HCal.  The higher energy is used to create larger particle showers and sample deeper into the calorimeters.  
 
 As the $K^{0}_{L}$ samples have to pass through the ECal before arriving at the HCal and as the ECal contains $\approx 1 \lambda_{I}$, some of the particles begin showering in the ECal, as shown by figure \ref{fig:hcaldigikaonsplit}.  These events are unsuitable for calibration as rescaling $\alpha^{0}_{\text{HCal}}$ does not lead to a linear rescaling in the mean of $E_{\text{Fit}}$.  This issue is resolve by applying selection cuts to select events that deposit the bulk of their energy in the HCal.  
@@ -111,9 +111,11 @@ Events are only considered in this analysis if a single neutral hadron PFO is re
 \label{fig:hcaldigiselection}
 \end{figure}
 
-There are two HCal digitisation constants used in the detector simulation, one applied for the HCal barrel and another for the HCal EndCap.  This is to account for differences in hadronic shower dynamics that exist due to a variety of reasons such as differing magnetic field configurations in the Barrel and EndCap.  Both parameters are calibrated in the same manor, but have different cuts on $\theta$, the polar angle of the $K^{0}_{L}$.  For the Barrel region of the HCal $0.2 < \text{cos}(\theta) < 0.6$, while for the EndCap $0.8 < \text{cos}(\theta) < 0.9$.  These angular cuts are conservative to account for the transverse profile of the hadronic showers and ensure that they are confined to the relevant sub-detector.
+There are two HCal digitisation constants used in the detector simulation, one applied for the HCal barrel and another for the HCal EndCap.  This is to account for differences in hadronic shower dynamics that exist for a variety of reasons such as differing magnetic field configurations in the Barrel and EndCap.  Both parameters are calibrated in the same manor, but have different cuts on $\theta$, the polar angle of the $K^{0}_{L}$.  For the Barrel region of the HCal $0.2 < \text{cos}(\theta) < 0.6$, while for the EndCap $0.8 < \text{cos}(\theta) < 0.9$.  These angular cuts are conservative to account for the transverse profile of the hadronic showers and ensure that they are confined to the relevant sub-detector.
 
-Using these cuts the calibration procedure for the digitisation of the HCal Barrel and EndCap proceeds in the same manor as was described for the ECal, the details of which can be found in section \ref{sec:ecaldigi}, and examples of the Gaussian fits applied to the sum of the calorimeter hit energies in the HCal Barrel and EndCap can be found in figure \ref{fig:hcaldigifit}. 
+Using these cuts the calibration procedure for the digitisation of the HCal Barrel and EndCap proceeds in the same manor as was described for the ECal, the details of which can be found in section \ref{sec:ecaldigi}, and examples of the Gaussian fits applied to the sum of the calorimeter hit energies in the HCal Barrel and EndCap can be found in figure \ref{fig:hcaldigifit}.  
+
+A noteworthy difference to the ECal digitisation procedure is that the target reconstructed energy for the $K^{0}_{L}$ samples is the kinetic energy as opposed to the total energy.  This decision was made as the majority of the neutral hadrons appearing in jets are neutrons and their accessible energy, what they can deposit in the detector, is their kinetic energy and not their rest mass energy.  This is the case as neutrons will come to a halt rather than decaying in the detector.  Therefore, calibrating to the kinetic energy should give the best overall performance for jet reconstruction.  
 
 \begin{figure}
 \subfloat[HCal Barrel.]{\label{fig:hcaldigibarrel}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalBarrelFit.pdf}}
@@ -166,6 +168,7 @@ A similar procedure was employed for calculation of the MIP peak in PandoraPFA. 
 %========================================================================================
 
 \subsection{Electromagnetic and hadronic scale setting}
+\label{sec:scalesetting}
 The electromagnetic and hadronic scales have to be independently set in the simulation to account for the different mechanisms governing the propagation of electromagnetic and hadronic showers.  As referenced earlier, one crucial difference the setting of these scales accounts for is the invisible energy component of hadronic showers, however, in this simulation it also accounts for the effect of energy loss due to the threshold cuts that are applied in the reconstruction.  The setting of the scales involves tuning four parameters in PandoraPFA, which correspond to the scaling factors that are applied to PFO energies arising from electromagnetic and hadronic showering particles in the ECal and HCal.  
 
 %========================================================================================
@@ -204,7 +207,7 @@ The electromagnetic scale in the HCal, $\beta^{EM}_{HCal}$, is chosen to be equa
 \label{sec:hadscalesetting}
 $\beta^{Had}_{ECal}$ is important to detector performance as a non-negligible amount of hadronic energy is recorded in the ECal.  However, as the ECal contains $\approx 1 \lambda_{I}$, the hadronic scale in the ECal cannot be independently as it is unfeasible to create a large sample of 20 GeV $K^{0}_{L}$ events that are fully contained within it.  Therefore, the hadronic scale is set in the ECal and HCal simultaneously.  
 
-Cuts applied to select $K^{0}_{L}$ that are appropriate to use for the hadronic scale calibration.  The last layer in which energy is deposited in the HCal must not occur in the back 10 \% of the HCal to ensure the event will not suffer from leakage.  A single neutral hadron must be reconstructed to veto events with reconstruction failures.  Finally, the total hadronic energy measured in ECal and HCal, $E^{Had}_{ECal} + E^{Had}_{HCal}$, must fall within 3 $\sigma$ of the desired hadronic energy distribution, $E^{Had}_{ECal} + E^{Had}_{HCal} = 20 \text {GeV} - m_{K^{0}_{L}} = E_{MC}$.  $\sigma$ is defined to be $55\% \times \sqrt{E} = 2.46 \text{GeV}$ for 20 GeV $K^{0}_{L}$.  This definition of sigma is the nominal energy resolution for neutral hadrons in the ILD HCal.  This cut ensures that when fitting the two dimensional distribution of hadronic energy measured in the ECal and HCal the outliers do not skew the fit.  These cuts are illustrated in in figure \ref{fig:hadscaleselection}.
+Cuts are applied to select $K^{0}_{L}$ that are appropriate to use for the hadronic scale calibration.  The last layer in which energy is deposited in the HCal must not occur in the back 10 \% of the HCal to ensure that the event does not suffer from leakage of energy out of the calorimeter.  A single neutral hadron must be reconstructed to veto events with reconstruction failures.  Finally, the total hadronic energy measured in ECal and HCal, $E^{Had}_{ECal} + E^{Had}_{HCal}$, must fall within 3 $\sigma$ of the desired hadronic energy distribution, $E^{Had}_{ECal} + E^{Had}_{HCal} = 20 \text {GeV} - m_{K^{0}_{L}} = E_{K}$.  $\sigma$ is defined to be $55\% \times \sqrt{E} = 2.46 \text{GeV}$ for 20 GeV $K^{0}_{L}$.  This definition of sigma is the nominal energy resolution for neutral hadrons in the ILD HCal.  This cut ensures that when fitting the two dimensional distribution of hadronic energy measured in the ECal and HCal the outliers do not skew the fit.  Once again the target reconstructed energy for this sample is the kinetic energy and not the total energy of the $K^{0}_{L}$ for the reasons outlines in section \ref{sec:hcaldigi}.  The impact of cuts are illustrated in figure \ref{fig:hadscaleselection}.
 
 \begin{figure}
 \subfloat[]{\label{fig:hadscaleselectionnocuts}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionNoCuts.pdf}}
@@ -240,8 +243,8 @@ x_{i} = \frac{E^{Had}_{HCal} \delta^{Had}_{ECal} + E^{Had}_{ECal} \delta^{Had}_{
 The minimisation steps across a range of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{HCal}$ centred about the ideal value of $20 \text { GeV} - m_{K^{0}_{L}}$ in search for the minimum $\chi^{2}$.  Once the minima in $\chi^{2}$ is found the trial calibration factors $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$ are rescaled to correct for any deviation from the desired fit as follows
 
 \begin{equation}
-\beta^{Had0}_{ECal} \rightarrow \beta^{Had}_{ECal} = \beta^{Had0}_{ECal} \times \frac{E_{MC}}{\Delta^{Had}_{ECal}} \\
-\beta^{Had0}_{HCal} \rightarrow \beta^{Had}_{HCal} = \beta^{Had0}_{HCal} \times \frac{E_{MC}}{\Delta^{Had}_{HCal}}
+\beta^{Had0}_{ECal} \rightarrow \beta^{Had}_{ECal} = \beta^{Had0}_{ECal} \times \frac{E_{K}}{\Delta^{Had}_{ECal}} \\
+\beta^{Had0}_{HCal} \rightarrow \beta^{Had}_{HCal} = \beta^{Had0}_{HCal} \times \frac{E_{K}}{\Delta^{Had}_{HCal}}
 \end{equation}
 
 where $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ are the values of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ giving the minimum $\chi^{2}$.  The step sizes used for minimising $\chi^{2}$ with respect to $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ is chosen such that a single step corresponds to the target final tolerance on $\delta^{Had}$ i.e. $|\delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.  
@@ -250,9 +253,26 @@ This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{E
 
 %========================================================================================
 
-\subsection{Retraining photon likelihood data}
+\subsection{Calibration step ordering}
+\label{sec:orderingcalib}
 
-Likelihood data recalibrated wheneve ECal changes.  Ok for changes in HCal as only trained on MC photons from Z->uds jets that are in ECal.  ECalToEM calibrated only on photons so won't change when HCal changes.  For reconstruction setting changes photon showers develop very quickly so event timing cut changes won't affect these studies.
+The calibration procedure has to be run in the following order so that the building blocks used for each stage of the calibration procedure can be assumed to be correctly calibrated:
+
+\begin{itemize}
+\item MIP Scale setting in the digitiser as described in section \ref{sec:mipresponse}.
+\item Calibration of digitisation of calorimeter hits in the ECal and HCal as described in section \ref{sec:digi}.
+\item MIP Scale setting in PandoraPFA as described in section \ref{sec:mipresponse}.
+\item Electromagnetic and hadronic scale settings in PandoraPFA as described in section \ref{sec:scalesetting}.
+\end{itemize}
+
+%========================================================================================
+
+\subsection{Retraining photon likelihood data}
+PandoraPFA uses likelihood data in the identification of $\gamma$s.  Data related to the topology and energy of electromagnetic showers and the wider event environment is used to determine whether a given shower is likely to be a $\gamma$.  The likelihood data is trained using off-shell mass Z boson (Z') events at 500 GeV that decay into light quarks (u, d, s).  To ensure correct calibration for these simulations it is necessary to retrain this data when varying the ECal.  As photons are contained largely within the ECal at the energies being considered and the likelihood data only uses measurements made in the ECal, it is only necessary to retrain this data when varying the ECal.  
+
+As this data uses post digitisation hits it is important to ensure that a well calibrated detector is used to retrain this information.  To ensure accurate calibration it is necessary to run the calibration procedure, as described in section \ref{sec:orderingcalib}, before retaining the data.  However, as the reconstruction uses likelihood data the calibration procedure has to be run twice.  Initially the calibration procedure is performed where PandoraPFA is run without the inclusion of this likelihood data, using PandoraSettingsMuon.xml.  Then the likelihood data is retrained using the first set of calibration factors and then this likelihood data is used in the second run of the calibration procedure.  
+
+In the optimisation studies presented in chapter OPTIMISATION STUDIES this procedure was followed whenever the ECal was modified so that optimal detector performance was achieved.  
 
 %========================================================================================
 %========================================================================================
@@ -302,6 +322,7 @@ For the optimisation studies presented in section OPT STUDIES a 100 ns timing wi
 %========================================================================================
 
 \section{HCal Cell Truncation}
+\label{sec:hcalcelltruncation}
 A powerful tool that was used by PandoraPFA in performing the reconstruction was the application of a truncation of the maximum amount of energy that can be recorded in a calorimeter cell in the HCal.  The purpose of this truncation is to eliminate the effect of spuriously high energy calorimeter cells that would skew the reconstruction.  The origin of these high energy cells is twofold: showering particles may be moving within the plane of the active material, which can lead to an overestimation of the deposited energy if the shower is not sufficiently uniform across a calorimeter cell, and Landau fluctuations \cite{Landau:1944if}, which originate from high energy knock-on electrons appearing within particle showers \cite{Bichsel:2004ej}.  These effects are only relevant in hadronic showers as electromagnetic showers begin showering almost immediately within the ECal, meaning they are unlikely to be directed within the plane of the active material of the calorimeter, and the Landau distribution describes the energy loss for charged particles meaning showering photons do not have Landau fluctuations.  While $e^{-}$ and $e^{+}$ do have from Landau fluctuations their energy, in the particle flow paradigm, arises from the curvature of the track and not the calorimeter hits, so correcting calorimeter hits to correct for Landau fluctuations is not key.  The truncation applied to counter these effects is only applied in the HCal as, at the energies being considered, it primarily measures hadronic showers.  
 
 A great deal of care has to be given to choice of the truncation applied to the HCal cell energy as to not truncate cell energies that are from typical hadronic shower development i.e. particle showers without spuriously high energy calorimeter cells.  This can be illustrated by considering the single particle energy resolutions as a function of the HCal cell truncation that are shown in figure \ref{fig:ercelltrunc}.  The photon energy resolution is invariant to changes in the cell truncation as no photon energy is recorded in the HCal, while the energy resolution for the neutral hadrons improves has a minima around 1 GeV.  This indicates that a 1 GeV truncation is sufficient for dealing with the Landau fluctuations and showering particles travelling within the active material of the calorimeter cell.  For cell truncations greater than 1 GeV the resolution degrades as the spuriously high energy cells are not accounted, while truncations below 1 GeV truncate the calorimeter cells from typical hadronic shower development leading to inaccurate sampling of the shower and a degradation in the energy resolution.  
@@ -335,7 +356,14 @@ While it is challenging to determine the optimal performance for a given detecto
 
 \section{Software Compensation}
 \label{sec:softcomp}
-As discussed in chapter CALORIMETERS CHAPTER, the response of a calorimeter to a hadronic shower is different to that of an electromagnetic showers.  The particle shower produced by a hadron when passing through a calorimeter has two components; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$, and a hadronic shower component originating from all other interacting and decaying hadrons.  Hadronic showers have an "invisible" energy component, due to various factors such as neutrons stopping within the calorimeter and nuclear binding energy losses.  This component leads to a reduced response from a calorimeter to a hadronic shower in comparison to an electromagnetic shower of the same initial energy.  This different calorimetric response will lead to a degradation in the energy resolution of a detector if not properly compensated for. 
+As discussed in chapter CALORIMETERS CHAPTER, the response of a calorimeter to a hadronic shower is different to that of an electromagnetic showers.  The particle shower produced by a hadron when passing through a calorimeter has two components; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$, and a hadronic shower component originating from all other interacting and decaying hadrons.  Hadronic showers have an "invisible" energy component, due to various factors such as neutrons stopping within the calorimeter and nuclear binding energy losses.  This component leads to a reduced response from a calorimeter to a hadronic shower in comparison to an electromagnetic shower of the same initial energy.  An event display showing the high energy density electromagnetic core of a hadronic cluster for a 500 GeV Z$\rightarrow$uds di-jet event can be found in figure \ref{fig:softcompeventdisplay}.  This different calorimetric response will lead to a degradation in the energy resolution of a detector if not properly compensated for.  
+
+\begin{figure}
+\subfloat[]{\label{fig:softcompfulleventdisplay}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp1.png}}
+\subfloat[]{\label{fig:softcompclustereventdisplay}\includegraphics[width=0.3\textwidth]{EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp3.png}}
+\caption[An event display for a 500 GeV Z$\rightarrow$uds di-jet event reconstructed using the nominal ILD detector.  \protect\subref{fig:softcompfulleventdisplay} shows the full event environment.  \protect\subref{fig:softcompclustereventdisplay} shows a single hadronic cluster from the same event where shading indicates the energy density in the HCal.  High energy density cells are coloured red, while lower energy density cells are coloured blue.  All ECal hits are shaded black.  The high energy density electromagnetic core of the selected hadronic cluster is clearly visible.]{An event display for a 500 GeV Z$\rightarrow$uds di-jet event reconstructed using the nominal ILD detector.  \protect\subref{fig:softcompfulleventdisplay} shows the full event environment.  \protect\subref{fig:softcompclustereventdisplay} shows a single hadronic cluster from the same event where shading indicates the energy density in the HCal.  High energy density cells are coloured red, while lower energy density cells are coloured blue.  All ECal hits are shaded black.  The high energy density electromagnetic core of the selected hadronic cluster is clearly visible.}
+\label{fig:softcompeventdisplay}
+\end{figure}
 
 This compensation can be applied either at the hardware level, whereby a calorimeter is made to be intrinsically compensating, or at the software level, whereby hadronic showers are identified and their energy estimators modified.  
 
@@ -343,27 +371,111 @@ An example of hardware compensation would be the ZEUS calorimeter \cite{Derrick:
 
 The high granularity calorimeters and sophisticated pattern recognition software used at the linear collider give excellent resolution on individual particle showers.  This resolution means that software compensation can be applied at the linear collider to a greater level of detail that has ever been considered for previous experiments.  
 
-\subsection{Technique}
-The software compensation technique applied in this study involves reweighing HCal hits based on their energy density and the energy of the cluster those hits belong to.  This is employed in the PandoraPFA algorithm in the form of an energy correction function, which in effect means whenever the energy of a cluster of hits is considered in PandoraPFA the software compensated energy is used.  Applying software compensation in this way improves not only the intrinsic energy resolution of the detector, but also the reconstruction.  
+%========================================================================================
 
-Software compensation is applied to clusters of calorimeter hits, as opposed to being applied directly to PFOs, so that these more precise energy estimators can be used during the reconstruction, which occurs before PFO creation.  If a cluster has an initial energy estimators of $E_{\text{raw}}$ formed of the sum of the calorimeter hit energies in the ECal and HCal, the software compensated cluster energy, $E_{cluster}$, is given by 
+\subsection{Application}
+The software compensation technique applied in this study involves reweighing HCal hits based on their energy density and the energy of the cluster those hits belong to.  This is employed in the PandoraPFA algorithm in the form of an energy correction function, which in effect means whenever the energy of a cluster of hits is considered in PandoraPFA the software compensated energy is used.  Applying software compensation in this way benefits the detector energy resolution in two ways; firstly the intrinsic energy resolution of the detector improves and secondly the confusion from incorrect association of track to calorimeter hits is reduced.  Lowering the confusion benefits the energy resolution as it decreases the number calorimeter hits where the energy of the hit is effectively double counted, if charged particle hits are not associated to a track, or not counted at all, if neutral hadron hits are associated to a track.   
+
+Software compensation is applied to clusters of calorimeter hits, as opposed to being applied directly to PFOs, so that the more precise energy estimators can be used during the reconstruction.  For a cluster of calorimeter hits, with an initial energy of $E_{\text{Raw}}$ calculated by summing the calorimeter hit energies, the software compensated cluster energy, $E_{SoftComp}$, is given by 
 
 \begin{equation}
-E_{cluster} = E_{ECal} + \sum_{i} E_{i} \times \omega_{i}(E_{\text{raw}}, E_{i}) + E_{\text{Muon Chamber}}
+E_{SoftComp} = E_{ECal} + \sum_{i} E_{i} \times \omega_{i}(E_{\text{Raw}}, \rho_{i}) + E_{\text{Muon Chamber}}
 \label{equ:softcomp}
 \end{equation}
 
-where $E_{ECal}$ is the sum of the ECal hit energies in the cluster, $E_{i}$ is the energy of HCal hit $i$, $\omega_{i}$ is the software compensation weight applied to hit $i$, $E_{\text{Muon Chamber}}$ is the cluster energy recorded in the muon chamber and the sum runs over all hits $i$ in the HCal.  The weight function $\omega_{i}$ is defined as follows
+where $E_{ECal}$ is the sum of the calorimeter hit energies measured in the ECal, $E_{i}$ and $\rho_{i}$ are the energy and energy density of HCal hit $i$ respectively, $\omega_{i}$ is the software compensation weight applied to hit $i$, $E_{\text{Muon Chamber}}$ is the cluster energy recorded in the muon chamber and the sum runs over all hits, $i$, in the HCal.  The weight function $\omega_{i}(E_{\text{Raw}}, \rho_{i})$ is defined as
 
 \begin{equation}
-\omega_{i}(E_{\text{raw}}, E_{i}) = p_{1}exp(p_{2}\rho) + p_{3} \\
-p_{1} = p_{10} + p_{11} \times E_{\text{raw}} + p_{12} \times E_{\text{raw}}^{2} \\
-p_{2} = p_{20} + p_{21} \times E_{\text{raw}} + p_{22} \times E_{\text{raw}}^{2} \\
-p_{3} = \frac{p_{30}}{p_{31} + exp(p_{32} \times E_{\text{raw}})}
+\omega_{i}(E_{\text{Raw}}, \rho_{i}) = p_{1}(E_{\text{Raw}}) \times exp(p_{2}(E_{\text{Raw}}) \times \rho_{i}) + p_{3}(E_{\text{Raw}}) \\
+p_{1} = p_{11} + p_{12} \times E_{\text{Raw}} + p_{13} \times E_{\text{Raw}}^{2} \\
+p_{2} = p_{21} + p_{22} \times E_{\text{Raw}} + p_{23} \times E_{\text{Raw}}^{2} \\
+p_{3} = \frac{p_{31}}{p_{32} + exp(p_{33} \times E_{\text{Raw}})}
 \label{equ:softcompweight}
 \end{equation}
 
-where $\rho$ is the energy density of the cell for hit $i$ and $p_{ij}$ are trained parameters.
+where $\rho_{i}$ is the energy density of the cell for hit $i$ and $p_{ij}$ are trained parameters.  The parameters $p_{ij}$ are determined by performing a $\chi^{2}$ fit of $E_{SoftComp}$ to the MC energy for samples of $K^{0}_{L}$ ranging from 10 to 100 GeV in steps of 10 GeV.  Using the fitted parameters, $p_{1}$,  $p_{2}$ and $p_{3}$ as a function of $E_{\text{Raw}}$ and $\omega(E_{\text{Raw}}, \rho)$ as a function of $\rho$ for various $E_{\text{Raw}}$ are shown in figure \ref{fig:softcompparams} and \ref{fig:softcompweights} respectively.  
 
+\begin{figure}
+\subfloat[]{\label{fig:softcompparam1}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam1.pdf}}
+\subfloat[]{\label{fig:softcompparam2}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam2.pdf}}
+\subfloat[]{\label{fig:softcompparam3}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam3.pdf}}
+\caption[]{}
+\label{fig:softcompparams}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationWeights.pdf}
+\caption[The software compensation weight applied to a calorimeter hit as a function of calorimeter hit energy density for various cluster energies.]{The software compensation weight applied to a calorimeter hit as a function of calorimeter hit energy density for various cluster energies.}
+\label{fig:softcompweights}
+\end{figure}
+
+As software compensation only modifies the energy of HCal hits there is freedom to apply further energy corrections to the ECal hits.  Application of the Clean Clusters energy correction logic, described in section \ref{ec:legacycorrections}, to the ECal hits alongside software compensation gave further improvements to the jet energy resolution.  Therefore, as standard the application of software compensation within PandoraPFA implicitly involves the application of the Clean Clusters logic to the ECal hits.  
+
+As software compensation is trained using a maximum $K^{0}_{L}$ energy of 100 GeV, software compensation is not applied to clusters where $E_{\text{Raw}} > 100$ GeV.  While it would be possible to modify the energy range of the training sample to go to higher energies, hadronic clusters with energy greater than 100 GeV will be rare at the ILC as the maximum running energy of 500 GeV.  
+
+%========================================================================================
+
+\subsection{Results}
+
+%========================================================================================
+
+\subsubsection{Legacy Energy Corrections}
+\label{sec:legacycorrections}
+Before examining the impact of software compensation on detector performance is it necessary to address the 'legacy' energy corrections that are used as default in PandoraPFA.  There are three energy correction that PandoraPFA has used prior to the development of software compensation, which are:
+
+\begin{itemize}
+\item \textbf{HCal cell truncation}, the details of which can be found in section \ref{sec:hcalcelltruncation}.
+\item \textbf{Clean Clusters}.  This algorithm checks to see whether the energy measured within a calorimeter hit is anomalously high.  This is defined as a cell where the energy in that cell is more than 10\% of the energy of the cluster that the cell has been associated to.  If a cell is deemed to have anomalously high energy and this energy is above a threshold, 0.5 GeV, the cell energy used by PandoraPFA is modified.  The updated cell energy is taken as the average cell energy in the calorimeter layers immediately before and after the layer containing the high energy cell.    
+\item \textbf{Scale Hot Hadrons}.  This algorithm calculates the average number of MIP equivalent particles passing through each calorimeter cell in a cluster.  If this number is larger than a given value, default 15 MIPs per hit, the cluster energy is rescaled to give a lower average number of MIPs per hit, default low value is 5 MIPs per hit.  
+\end{itemize}
+
+Each of these energy corrections help to deal with the effects of spuriously high energy cells the origin of which is described in section \ref{sec:hcalcelltruncation}.  However, the algorithms are simplistic and software compensation is expected to give far better results than these 'legacy' options.  
+
+The optimisation studies presented in section OPTIMISATION STUDIES use all three of these legacy options simultaneously, which was the default behaviour for PandoraPFA when the studies were undertaken.  The new default behaviour in PandoraPFA is to use software compensation.
+
+%========================================================================================
+
+\subsubsection{Energy Resolution}
+\ref{sec:softcomper}
+The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events is shown in figure \ref{ig:ersoftcomp} using various energy correction settings.  
+
+When comparing the energy resolution given by software compensation to that obtained using no energy corrections it can be seen that software compensation offers a gain of $\approx 2 \%$ in energy resolution across all energies considered in comparison.  The uniformity of this improvement is encouraging, indicating software compensation has been successfully trained across this energy range.   
+
+Comparing the performance of software compensation to the legacy corrections it can be seen that software compensation gives a better energy resolution across almost the entire range of energies considered.  The only exception to this is around $E_{K^{0}_{L}} \approx 50$ where the performance of software compensation and the legacy corrections are comparable.  By removing the cell truncation from the legacy options it is clear that the changes in energy resolution when using the legacy options are being driven by the cell truncation.  This makes clear the trend observed using the legacy corrections as at low $K^{0}_{L}$ energies very few cells are affected by the truncation so the performance is comparable to not using any energy corrections.  While at high $K^{0}_{L}$ the truncation is too aggressive and removes energy from cells that are not spuriously high leading to a worsening energy resolution.  Between these two extremes, $E_{K^{0}_{L}} \approx 50$, the truncation works ideally and improvement in energy resolution using the legacy corrections is the largest.  
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/EnergyResolution/ER_vs_Kaon0LSoftComp_Kaon0L.pdf}
+\caption[The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events using various energy correction settings.  The detector model used was the nominal ILD detector model.]{The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events using various energy correction settings.  The detector model used was the nominal ILD detector model.}
+\label{fig:ersoftcomp}
+\end{figure}
+
+%========================================================================================
+
+\subsubsection{Jet Energy Resolution}
+
+The improvements in the intrinsic energy resolution of the detector that have been observed when using software compensation will propagate into the reconstruction of jets.  These effects are illustrated by examining the jet energy resolution as a function of jet energy, which is shown in figure \ref{fig:jersoftcomp}.  Again it is clear that software compensation is extremely beneficial to the detector performance.  
+
+\begin{figure}
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_Default.pdf}
+\caption[The jet energy resolution as a function of the jet energy for a variety of different energy correction options.  These results were produced for the nominal ILD detector model.]{The jet energy resolution as a function of the jet energy for a variety of different energy correction options.  These results were produced for the nominal ILD detector model.}
+\label{fig:jersoftcomp}
+\end{figure}
+
+Software compensation gives a significant reduction in the jet energy resolution in comparison to using no energy corrections.  It also reduces the jet energy resolution in comparison to using the legacy corrections.  
+
+Further light can be shed on these trends by examining the contribution to the jet energy resolutions from the intrinsic energy resolution and the pattern recognition confusion, which are shown in figure \ref{fig:jerbreakdownsoftcomp}.  The intrinsic energy resolution contribution that software compensation is significantly better than all other energy corrections options, which is to be expected from the energy resolution studies presented in section \ref{sec:softcomper}.  Unlike the single particle study there is no jet energy where the cell truncation matches the performance obtained using software compensation.  This is due to the fact that the energy resolution when using the cell truncation is only comparable to the energy resolution using software compensation for a narrow range of hadronic cluster energies.  As the jet contains a broad spectrum of hadronic cluster energies the performance obtained when using the cell truncation will always be worse than when using software compensation.  When comparing the jet energy resolution for the legacy corrections is again apparent that the term driving the jet energy resolution is the cell truncation.
+
+The change in the confusion contribution to the jet energy resolution when using software compensation and the legacy corrections is almost identical.  This indicates that the improvement seen in the jet energy resolution in figure \ref{fig:jersoftcomp} when using software compensation instead of the legacy corrections is being driven by improvements to the intrinsic energy resolution.  
+
+It was observed that at low jet energies the Clean Clusters and Scale Hot Hadrons energy corrections are beneficial at reducing the confusion contribution and the cell truncation is largely redundant while for high energy jets the reverse is true.  As the use of the Clean Clusters and Scale Hot Hadrons energy corrections does not change the intrinsic energy resolution of the detector it is apparently that these energy corrections are purposed to account for failures in the pattern recognition that occurs largely at low jet energies.  On the other had the cell truncation and software compensation techniques aim to improve the energy resolution of the hadronic clusters, which has a further knock-on effect of improving the track cluster associations made in the pattern recognition.  These corrections work across all energy ranges, but have a greater impact at high energies.  
+
+By extracting the Clean Clusters logic, which is the driving term reducing the confusion contribution to the jet energy resolution for low energy jets, and embedding it within the software compensation technique it is possible to achieve exceptional jet energy resolution that will extend the physics reach of the linear collider detector.  
+
+\begin{figure}
+\subfloat[]{\label{fig:jerbreakdownsoftcomp1}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_PerfectPFA.pdf}}
+\subfloat[]{\label{fig:jerbreakdownsoftcomp2}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_TotalConfusion.pdf}}
+\caption[The contributions to the jet energy resolution as a function of the jet energy for a variety of different energy correction options.  \protect\subref{fig:jerbreakdownsoftcomp1} is the intrinsic energy resolution of the detector and \protect\subref{fig:jerbreakdownsoftcomp2} is the total confusion term.  The quadrature sum of both yields the standard reconstruction performance.  These results were produced for the nominal ILD detector model.]{The contributions to the jet energy resolution as a function of the jet energy for a variety of different energy correction options.  \protect\subref{fig:jerbreakdownsoftcomp1} is the intrinsic energy resolution of the detector and \protect\subref{fig:jerbreakdownsoftcomp2} is the total confusion term.  The quadrature sum of both yields the standard reconstruction performance.  These results were produced for the nominal ILD detector model.}
+\label{fig:jerbreakdownsoftcomp}
+\end{figure}
 %========================================================================================
 %========================================================================================
