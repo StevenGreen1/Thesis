@@ -9,21 +9,28 @@
 
 \section{Calorimeter Optimisation Studies}
 \label{sec:optimisationstudies}
-If the future linear collider is to reach its maximum potential in terms of energy resolution then, optimisation of the detector will be essential.  The energy resolution in the particle flow paradigm is dependant upon several detector components.  The momentum of charged particles arises from the shape of the tracks deposited within the detector while the energy of uncharged particles arise from calorimetric measurements.  Application of sophisticated pattern recognition algorithms allows the particle type to be inferred for the charged particles.  In tern this allows for the conversion of the track momentum into an energy measure for the charged particles.  The particle identification algorithms use the topological information acquired from the calorimetric energy deposited to infer particle type for a subset of charged particles.  
+The fundamental principle of particle flow calorimetry is to measure the energy of a particle passing through a detector in whichever sub-detector offers the best energy resolution.  For particle colliders experiments, this involves measuring the momenta of charged particles using the curvature of the track they create in the detector.  This offers extremely good energy resolution in comparison to calorimetric energy measurements and is the source of the excellent energy resolution particle flow calorimetry can produce.  As neutral particles produce no tracks, their energies must be measured using calorimetric energy deposits.  
 
-The calorimetric energy deposits are therefore used in a twofold manner: (i) as energy measurements for neutral particles and (ii) as input for particle identification algorithms.  There is potential for significant gains to be made in physics performance by optimising the calorimeters due to their dominant role in energy measurements.  In this chapter the optimisation of the calorimeters is considered.  Parameters such as the longitudinal granularity, transverse granularity and material choices for the calorimeters are considered.  
+The application of particle flow calorimetry is extremely challenging as it is possible, by using incorrect associations of charged particle tracks to calorimetric energy deposits, to both double count and omit energy measurements.  For example, if a charged particle calorimetric energy deposit is not associated to a track that energy deposit will be double counted, while if a neutral particle calorimetric energy deposit is associated to a track that energy deposit will be neglected.  Therefore, making the correct associations between charged particle tracks and calorimetric energy deposits is essential.  
 
-This chapter concludes with an optimisation of several global parameters for the detector.  These parameters are not calorimeter specific, but the optimisation procedure developed for the calorimeters is appropriate to use.  These parameters relate to the global detector size and the magnetic field applied throughout solenoid in the detector.
+These associations can only be successfully made if the calorimeters in use have fine segmentation, such as those found at the linear collider experiment, so that it becomes possible to separate the energy deposits from nearby showering particles.  Even with this segmentation making the association of charged particle tracks to the calorimetric energy deposits is highly non-trivial.  At the linear collider experiment, these associations are made using sophisticated pattern recognition algorithms, provided by PandoraPFA.  The fine segmentation of the calorimeters allows PandoraPFA to reconstruct the four-momenta of all particles passing through the detector and to use the energy measurement from the optimal sub-detector in each case. 
 
-%========================================================================================
-%========================================================================================
+In this chapter optimisation of the calorimeters used at the linear collider, with focus placed on obtaining the best energy resolution for jets, is considered.  Parameters such as the number of layers, transverse segmentation and material choices for the calorimeters are considered.  
 
-\section{Metric}
-This section describes the various metrics used in these detector optimisation studies.
+This chapter concludes with an optimisation of several global parameters for the detector such as the magnetic field strength used for the detector and the inner radius of the ECal.  These parameters are not calorimeter specific, but affect the jet energy resolution obtained from particle flow. 
 
 %========================================================================================
+%========================================================================================
 
-\subsection{Jet Energy Resolution}
+\section{Jet Energy Resolution}
+\label{sec:optstudiesmetric}
+As many physics processes of interest at the linear collider involve multi-jet final states, good jet energy resolution is a crucial a aspect of detector performance.  As shown in chapter PHYSICS ANALYSIS, parameters derived from the energy measurements of jets, such as invariant mass, are extremely useful for identification of physics channels of interest as well as determining the sensitivity of the linear collider experiments to areas of new physics.  Therefore, the primary metric used in this study is the jet energy resolution.
+
+Jet energy resolution in particular can benefit from the application of particle flow calorimetry as $\approx 70 \%$ of the energy of jets are carried in the from of charged particles.  As particle flow aims to measure the energy of charged particles using the tracker, it has the potential to offers extremely large benefits when measuring jet energies in comparison to the traditional calorimetric approach.  
+
+%========================================================================================
+
+\subsection{Jet Energy Resolution Metrics}
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/MethodDescription/500GeVEvent.png}
@@ -31,13 +38,18 @@ This section describes the various metrics used in these detector optimisation s
 \label{fig:500GeVzudsevtdisplay}
 \end{figure} 
 
-The primary metric used to determine detector performance was the jet energy resolution.  This was found through the simulation of off-shell mass Z boson (Z') events decaying to light quarks (u, d, s).  In these events the Z' boson is produced at rest, which means the typical decays form two mono-energetic jets that are produced back to back as shown in figure \ref{fig:500GeVzudsevtdisplay}.  Only events where $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the quarks from the Z' decay, are used in the metric calculation to ensure little energy is lost down the beam axis.  Using these events the jet energy resolution is calculated as follows: 
+The primary metric used to optimise detector performance is the jet energy resolution.  This was found through the simulation of off-shell mass Z boson events decaying to light quarks (u, d, s).  In these events the Z boson is produced at rest, which means the typical decays form two mono-energetic jets that are produced back to back as shown in figure \ref{fig:500GeVzudsevtdisplay}.  Only events where $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the quarks from the Z decay, are used in the metric calculation to ensure little energy is lost down the beam axis.  Using these events the jet energy resolution is calculated as follows: 
 
 \begin{equation} 
-\frac{\text{RMS}_{90}(E_{i})}{\text{Mean}_{90}(E_{i})} = \frac{\text{RMS}_{90}(E_{jj})}{\text{Mean}_{90}(E_{jj})} \times \sqrt{2}
+\frac{\text{RMS}_{90}(E_{i})}{\text{Mean}_{90}(E_{i})} = \frac{\text{RMS}_{90}(E_{jj})}{\text{Mean}_{90}(E_{jj})} \times \sqrt{2} \text{,}
 \end{equation}
 
-where $\text{RMS}_{90}(E_{jj})$ and $\text{Mean}_{90}(E_{jj})$ are the root mean squared (RMS) and the mean of the reconstructed energy distribution respectively.  A detailed description of this metric and why it is used can be found here \cite{arXiv:0907.3577}, however, it is sufficient for this study to note that the reduced range is designed to remove the effect of outliers on the overall detector performance.  
+\begin{flushleft}
+where $\text{RMS}_{90}(E_{jj})$ and $\text{Mean}_{90}(E_{jj})$ are the root mean squared (RMS) and the mean of the reconstructed energy distribution calculated within the range of with the smallest RMS containing at least 90\% of the data.
+respectively.
+\end{flushleft}
+
+SQRT2 explain.
 
 \begin{figure}
 \centering
@@ -46,64 +58,40 @@ where $\text{RMS}_{90}(E_{jj})$ and $\text{Mean}_{90}(E_{jj})$ are the root mean
 \label{fig:rms90defintion}
 \end{figure} 
 
-An example of the application of this metric can be be found in figure \ref{fig:rms90defintion}.  Using the full range the mean and RMS are 198.5 and 5.8 GeV respectively while using the smallest range containing 90\% of the data the mean and RMS are 199.1 and 4.1 GeV respectively.  This example indicates that the jet energy resolution is strongly influenced by the outliers in the distribution.  Removing these events from the jet energy resolution calculation makes this metric more robust as well as making it more representative of the bulk of the data.
+This definition is used to remove the effect of outliers in the distribution \cite{arXiv:0907.3577}.  Although the correct combination of charged particle tracks and calorimetric energy measurements would give a Gaussian reconstructed jet energy distribution, the effect of confusion on certain events will distort this distribution and broaden the tails significantly.  If the full range were to be used in the jet energy resolution calculation, the effect of these tails is overinflated.  If the distribution of reconstructed jet energies is truncated to the narrowest range of the data containing at least $90\%$ of the data, the effect of these tails can be negated.  This removes events where confusion is dominant, which makes the jet energy resolution metric far more robust and representative of the bulk of the data.  
 
-In the subsequent analysis four di-jet/Z' energies are considered: 91 GeV, approximately the top mass; 200 GeV, is the point at which intrinsic energy resolution and pattern recognition confusion are of comparable size for the nominal ILD detector; 360 GeV, this gives 180 GeV energy jets, which is approximately the top quark mass; and 500 GeV is the nominal running energy for the ILC.  Each sample contained 10,000 events generated isotropically so that, given the polar angle cut, approximately 7,000 events contribute to the jet energy resolution metric. 
+An example of the application of this metric can be found in figure \ref{fig:rms90defintion}.  The RMS calculated using the full range 5.8 GeV, while the RMS using the reduced range is 4.1 GeV.  This corresponds to a reduction in the jet energy resolution from $4.1\%$ to $2.9\%$, which clearly shows an overemphasis of the tails of the distribution if the full range is used in the calculation.
+
+In the subsequent analysis a range of di-jet energies were considered ranging from the Z mass, 91 GeV, to the nominal running energy of the ILC, 500 GeV.  Each event sample contained 10,000 events generated spatially isotropically so that, given the polar angle cut, approximately 7,000 events contribute to the jet energy resolution metric. 
 
 %========================================================================================
 
 \subsection{Jet Energy Resolution Decompositions}
-In several optimisation studies it proved useful to decompose the jet energy resolution into terms describing the intrinsic energy resolution of the detector and the pattern recognition confusion arising from incorrect associations of tracks to calorimetric energy deposits.  Pattern recognition confusion manifests itself on energy measurements in two ways:
+The pattern recognition performed for the linear collider experiments is full described in section PANDORA SECTION, however, it is possible to gain further insight into the detector performance by cheating various parts of the pattern recognition using the MC information.  Pattern recognition confusion manifests itself on energy measurements in two ways:
 
 \begin{itemize}
-\item If a calorimetric energy deposit from a charged particle is incorrectly associated to its track that energy deposit is double counted.
-\item If a calorimetric energy deposit from a neutral particle is incorrectly associated to a track the energy deposit is not counted at all.
+\item If part of the calorimetric energy deposit from a charged particle is not associated to the track that energy deposit is double counted.
+\item If part of the calorimetric energy deposit from a neutral particle is incorrectly associated to a track, the energy deposit is not accounted for.
 \end{itemize}
 
-Both of these lead to inaccurate measurements of the jet energy and thus degrade the resolution.   
+\begin{flushleft}
+Both of these sources of confusion lead to inaccurate measurements of the jet energy and thus degrade the resolution.  Cheating the pattern recognition, therefore, removes the effects of confusion and improves the detector performance.  
+\end{flushleft}
 
-The decomposition of the jet energy resolution was achieved by cheating various aspects of the reconstruction.  The intrinsic energy resolution contribution to the jet energy resolution was determined by fully cheating the pattern recognition as in this case all confusion is negated.  The total confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and this fully cheated reconstruction.  
-
-Furthermore, it is possible to cheat the pattern recognition associated with individual types of particles.  This is particularly useful for studies related to the ECal as, by cheating the photon pattern recognition, it is possible to isolate the confusion associated with photons.  The photon confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and the reconstruction where photons pattern recognition is cheated.    
-
-The intrinsic energy resolution, total confusion and photon confusion described here are used extensively throughout this chapter.
+The intrinsic energy resolution contribution to the jet energy resolution was determined by fully cheating the pattern recognition; in this case all confusion is negated.  The total confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and this fully cheated reconstruction.  Furthermore, it is possible to cheat the pattern recognition associated with individual types of particles.  This is particularly useful for studies related to the ECal as, by cheating the photon pattern recognition, it is possible to isolate the confusion associated with photons.  The photon confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and the reconstruction where photons pattern recognition is cheated.    
 
 %========================================================================================
 
 \subsection{Single Particle Energy Resolution}
-As approximately $70\%$ of jet energy arise from charged particle, whose energy measurements are taken from tracks, changes to the intrinsic energy resolution of the calorimeters can be washed out when examining the intrinsic energy resolution using jets.  Therefore, it occasionally proved useful to consider the single particle energy resolutions as a function of the detector parameter of interest.  For ECal related studies $\gamma$s were used as the single particle as their energy deposit arise from calorimetric energy deposits that are almost entirely confined to the ECal and similarly $K^{0}_{L}$s were used for HCal related studies.  
-
-For these single particle samples the energy resolution is defined using a Gaussian fit to the reconstructed energy distributions.  The fit was applied to the narrowest region of the reconstructed PFO energy distribution that contained at least 75\% of the data.  This increases the likelihood that the fit converges and ensures a better parameterisation of the bulk of the data set.  The resolution is defined as the standard deviation divided by the mean of that reconstructed Gaussian.  A total of 10,000 events are used to calculate the energy resolution at each fixed energy point.  A cut of $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the single particle, is applied to ensure events avoid the Barrel/EndCap overlap region.  Examples of the single particle energy distributions for 100 GeV $\gamma$s and 50 GeV $K^{0}_{L}$s alongside the Gaussian fit used to determine their energy resolution are shown in figure \ref{fig:singleparticleenergyhists}.
+Several physics studies rely on the identification of single particles, such as $\gamma$ in anomalous triple gauge coupling studies CITE, and as such the energy resolution of individual particles is presented alongside the jet energy resolution metric.  As only uncharged particle energies are measured in the calorimeters in the particle flow paradigm, the single particle energy resolution is shown using $\gamma$s and for $K^{0}_{L}$s.  $\gamma$s are particularly relevant for several physics studies and, as they are largely contained within the ECal, they provide insight into detector changes related purely to the ECal.  This makes $\gamma$s a natural choice of particle to consider for this study.  $K^{0}_{L}$s were used as, analogously to $\gamma$s and the ECal, their energies are primarily measured using the HCal.  Although in general neutral hadron energy resolutions are less crucial to physics studies, the energy resolution is still a crucial contribution to the jet energy resolution, which should not be overlooked.  For these single particle samples the energy resolution is defined using a Gaussian fit to the reconstructed energy distributions.  The fit was applied to the narrowest region of the reconstructed PFO energy distribution that contained at least 75\% of the data.  This increases the likelihood that the fit converges and ensures a better parameterisation of the bulk of the data set.  The resolution is defined as the standard deviation divided by the mean of that reconstructed Gaussian.  A total of 10,000 events are used to calculate the energy resolution at each fixed energy point.  A cut of $|\text{cos}(\theta)| < 0.7$ is applied to ensure events avoid the Barrel/EndCap overlap region.  Examples of the single particle energy distributions for 100 GeV $\gamma$s and 50 GeV $K^{0}_{L}$s alongside the Gaussian fit used to determine their energy resolution are shown in figure \ref{fig:singleparticleenergyhists}.  The errors quoted on single particle energy resolutions are determined by propagating the errors reported from the Gaussian fit into the resolution calculation.  
 
 \begin{figure}
 \centering
 \subfloat[50 GeV $K^{0}_{L}$.]{\label{fig:kaonsingleparticleenergyhist}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/EKaon0L_50GeV.pdf}}
 \subfloat[100 GeV $\gamma$.]{\label{fig:photonsingleparticleenergyhist}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/EPhoton_100GeV.pdf}}
-\caption[Reconstructed energy distribution using nominal ILD detector model.]{Reconstructed energy distribution using nominal ILD detector model.}
+\caption[The reconstructed energy distribution for \protect\subref{fig:kaonsingleparticleenergyhist} 50 GeV $K^{0}_{L}$ and \protect\subref{fig:photonsingleparticleenergyhist} 100 GeV $\gamma$ events.  The red line shows a Gaussian fit used to parameterise the detector performance.  The fit was applied to the truncated range of the reconstructed PFO energy distribution containing at least 75\% of the data with the narrowest RMS.  The nominal ILD model was used in this simulation.]{The reconstructed energy distribution for \protect\subref{fig:kaonsingleparticleenergyhist} 50 GeV $K^{0}_{L}$ and \protect\subref{fig:photonsingleparticleenergyhist} 100 GeV $\gamma$ events.  The red line shows a Gaussian fit used to parameterise the detector performance.  The fit was applied to the truncated range of the reconstructed PFO energy distribution containing at least 75\% of the data with the narrowest RMS.  The nominal ILD model was used in this simulation.}
 \label{fig:singleparticleenergyhists}
 \end{figure}
-
-%========================================================================================
-%========================================================================================
-
-\section{Event Generation, Simulation and Reconstruction}
-
-The jet fragmentation and hadronisation for the Z $\rightarrow$ uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these samples. 
-
-Detector model simulation was performed using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Event reconstruction was performed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter PANDORA CHAPTER.
-
-%========================================================================================
-%========================================================================================
-
-\section{Calibration}
-Calibration of the simulated detector models considered in these optimisation studies was critical.  Proper calibration allows an unbiased comparison between detector models to be made and the correct conclusions drawn.  To that end the calibration procedure described in chapter CALIBRATION CHAPTER \ref{} was applied to all detector models considered.  A brief summary of the purpose of this procedure is given here:
-
-\begin{itemize}
-\item Digitisation calibration for the ECal and HCal.  This ensured an accurate estimation of the energy deposited in the absorber layers in these sampling calorimeters.    
-\item Minimum ionising particle (MIP) scale calibration in the digitiser and PandoraPFA.  This ensures that the MIP response was properly set in the digitiser and in PandoraPFA.  The digitiser uses this information to place electronic dynamic ranges into the readout technology simulated, while PandoraPFA uses the MIP scale to place cuts to veto noise from the detector.
-\item Electromagnetic and hadronic scale setting.  This ensures that the electromagnetic scale and the hadronic energy scales are properly set within PandoraPFA and hence the output PFOs.  The scales differ due to the different shower dynamics governing the growth of electromagnetic and hadronic showers.  One key difference is the presence of a missing energy component in hadronic showers.  
-\item Retraining photon likelihood data in PandoraPFA.  This ensures that the likelihood data used to identify photons in PandoraPFA was retrained for each detector model.   
-\end{itemize}
 
 %========================================================================================
 %========================================================================================
@@ -115,25 +103,14 @@ The energy resolution for single $\gamma$ and $K^{0}_{L}$ events as a function o
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_NominalDetectorPerformance.pdf}
-\caption[Jet energy resolution as a function of jet energy for the nominal ILD detector.]{Jet energy resolution as a function of jet energy for the nominal ILD detector.}
-\label{fig:jernominalres}
-\end{figure} 
-
-\begin{figure}
-\centering
-\subfloat[Silicon active material, $5 \times 5 \text{mm}^{2}$ ECal transverse granularity.]{\label{fig:ecalsinominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_SiECal.pdf}}
-\subfloat[Scintillator active material, $5 \times 5 \text{mm}^{2}$ ECal transverse granularity.]{\label{fig:ecalscnominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_ScECal.pdf}}
-\caption[Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.]{Energy resolution as a function of photon energy for the nominal ILD detector for both the silicon and scintillator options.}
-\label{fig:ecalnominalres}
+\subfloat[]{\label{fig:ecalsinominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_SiECal.pdf}}
+\subfloat[]{\label{fig:ecalscnominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_ScECal.pdf}}\\
+\subfloat[]{\label{fig:hcalnominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EKaon0L_SiECal.pdf}}
+\subfloat[]{\label{fig:jernominalres}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_NominalDetectorPerformance.pdf}}
+\caption[\protect\subref{fig:ecalsinominalres} The energy resolution as a function of $\gamma$ energy using the nominal ILD model for the silicon ECal option.  \protect\subref{fig:ecalscnominalres} The energy resolution as a function of $\gamma$ energy using the nominal ILD model for the scintillator ECal option.  \protect\subref{fig:hcalnominalres} The energy resolution as a function of $K^{0}_{L}$ energy using the nominal ILD model with the silicon ECal option.  \protect\subref{fig:jernominalres} The jet energy resolution ($\text{RMS}_{90}$) as a function of jet energy using the nominal ILD model with the silicon ECal option.]{\protect\subref{fig:ecalsinominalres} The energy resolution as a function of $\gamma$ energy using the nominal ILD model for the silicon ECal option.  \protect\subref{fig:ecalscnominalres} The energy resolution as a function of $\gamma$ energy using the nominal ILD model for the scintillator ECal option.  \protect\subref{fig:hcalnominalres} The energy resolution as a function of $K^{0}_{L}$ energy using the nominal ILD model with the silicon ECal option.  \protect\subref{fig:jernominalres} The jet energy resolution ($\text{RMS}_{90}$) as a function of jet energy using the nominal ILD model with the silicon ECal option.}
+\label{fig:nominalres}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_EKaon0L_SiECal.pdf}
-\caption[Energy resolution as a function of $K^{0}_{L}$ energy for the nominal ILD detector.]{Energy resolution as a function of $K^{0}_{L}$ energy for the nominal ILD detector.}
-\label{fig:hcalnominalres}
-\end{figure} 
 
 %========================================================================================
 %========================================================================================
@@ -148,8 +125,8 @@ The ECal primarily measures the energy deposits of electromagnetic showers.  The
 \hline
 Parameter & Default Value \\
 \hline
-Transverse Granularity & $5 \times 5 \text{mm}^{2}$ square cells \\
-Longitudinal Granularity & 29 Readout Layers, 1 Presampling Layers \\
+Transverse Segmentation & $5 \times 5 \text{mm}^{2}$ square cells \\
+Number of Layers & 29 Readout Layers, 1 Presampling Layers \\
 Active Material Choice & Silicon or Scintillator  \\
 Active Material Thickness & 0.5 mm (Silicon) or 2 mm (Scintillator)  \\
 Absorber Material Choice & Tungsten \\
@@ -162,16 +139,16 @@ Absorber Material Thickness & 20 Layers of 2.1 mm followed by 9 Layers of 4.2 mm
 
 The parameters being optimised in this study are:
 \begin{itemize}
-\item Transverse granularity or cell size.  This is a vital aspect of the detector in the particle flow paradigm as smaller cell sizes give greater potential for being able to separate energy deposits from charged and neutral particles.  This transverse granularity should have little to no effect on the intrinsic energy resolution of the detector.  
-\item Longitudinal granularity or cell depth.  This parameter dictates the intrinsic energy resolution of the detector as smaller cell depths mean more sampling is done of the particle shower and so, due to the Poissonian statistics governing the measurement of particle showers, the better the resolution.
+\item Transverse segmentation or cell size.  This is a vital aspect of the detector in the particle flow paradigm as smaller cell sizes give greater potential for being able to separate energy deposits from charged and neutral particles.  This transverse segmentation should have little to no effect on the intrinsic energy resolution of the detector.  
+\item Number of Layers or cell depth.  This parameter dictates the intrinsic energy resolution of the detector as smaller cell depths mean more sampling is done of the particle shower and so, due to the Poissonian statistics governing the measurement of particle showers, the better the resolution.
 \item Active material choice.  This is a choice between silicon or scintillator.  As well as providing different intrinsic energy resolutions the readout mechanics of these two options are significantly different.  There is no clear prior knowledge as to which should provide better performance. 
 \end{itemize}
 
 %========================================================================================
 
-\subsection{ECal Transverse Granularity}
+\subsection{ECal Transverse Segmentation}
 \label{sec:ecalcells}
-For this study a number of different detector models were considered where the transverse granularity in the ECal had been varied about the nominal value of $5 \times 5 \text{mm}^{2}$ square cells.  The granularities considered were $3 \times 3 \text{mm}^{2}$, $5 \times 5 \text{mm}^{2}$, $7 \times 7 \text{mm}^{2}$, $10 \times 10 \text{mm}^{2}$, $15 \times 15 \text{mm}^{2}$ and $20 \times 20 \text{mm}^{2}$ square cells for both the silicon and scintillator active material options.  The jet energy resolution as a function of transverse granularity in the ECal is shown in figure \ref{fig:ecalcellsize}.
+For this study a number of different detector models were considered where the transverse segmentation in the ECal had been varied about the nominal value of $5 \times 5 \text{mm}^{2}$ square cells.  The granularities considered were $3 \times 3 \text{mm}^{2}$, $5 \times 5 \text{mm}^{2}$, $7 \times 7 \text{mm}^{2}$, $10 \times 10 \text{mm}^{2}$, $15 \times 15 \text{mm}^{2}$ and $20 \times 20 \text{mm}^{2}$ square cells for both the silicon and scintillator active material options.  The jet energy resolution as a function of transverse segmentation in the ECal is shown in figure \ref{fig:ecalcellsize}.
 
 \begin{figure}
 \centering
@@ -189,11 +166,11 @@ The jet energy resolution was found to improve with decreasing cell size.  This 
 \subfloat[Scintillator active material, 45 GeV Jets.]{\label{fig:ecalsccellsize45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCellSize_91GeV_DiJet_Breakdown.pdf}} \hfill
 \subfloat[Silicon active material, 250 GeV Jets.]{\label{fig:ecalsicellsize250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize_500GeV_DiJet_Breakdown.pdf}}
 \subfloat[Scintillator active material, 250 GeV Jets.]{\label{fig:ecalsccellsize250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCellSize_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of ECal transverse granularity for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.]{Jet energy resolution breakdown as a function of ECal transverse granularity for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.}
+\caption[Jet energy resolution breakdown as a function of ECal transverse segmentation for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.]{Jet energy resolution breakdown as a function of ECal transverse segmentation for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.}
 \label{fig:ecalcellsizebreak}
 \end{figure}
 
-By examining the breakdown of the jet energy resolution into intrinsic resolution and confusion terms, as explained in chapter BLAH, it is possible to conclude that the dominant factor affecting the jet energy resolution when the transverse granularity of the ECal is varied is the confusion arising from photon energy deposits.  Examples of jet energy resolution breakdowns are shown for 45 and 250 GeV jets for both the silicon and scintillator ECal options in figure \ref{fig:ecalcellsizebreak}.  As expected in the intrinsic energy resolution does not change significantly with the transverse granularity.  
+By examining the breakdown of the jet energy resolution into intrinsic resolution and confusion terms, as explained in chapter BLAH, it is possible to conclude that the dominant factor affecting the jet energy resolution when the transverse segmentation of the ECal is varied is the confusion arising from photon energy deposits.  Examples of jet energy resolution breakdowns are shown for 45 and 250 GeV jets for both the silicon and scintillator ECal options in figure \ref{fig:ecalcellsizebreak}.  As expected in the intrinsic energy resolution does not change significantly with the transverse segmentation.  
 
 \begin{figure}
 \centering
@@ -201,19 +178,19 @@ By examining the breakdown of the jet energy resolution into intrinsic resolutio
 %\subfloat[Scintillator active material, 10 GeV $\gamma$.]{\label{fig:ecalsccellsize10gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ScECal10GeVPhotonResVsCellSize.pdf}} \hfil // Bit too messy to draw good conclusions
 \subfloat[Silicon active material, 100 GeV $\gamma$.]{\label{fig:ecalsicellsize100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalCellSize_100GeVPhoton.pdf}}
 \subfloat[Scintillator active material, 100 GeV $\gamma$.]{\label{fig:ecalsccellsize100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalCellSize_100GeVPhoton.pdf}}
-\caption[Energy resolution as a function of ECal transverse granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.]{Energy resolution as a function of ECal transverse granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.}
+\caption[Energy resolution as a function of ECal transverse segmentation for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.]{Energy resolution as a function of ECal transverse segmentation for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.}
 \label{fig:ecalcellsizegamma}
 \end{figure}
 
-A more targeted test of the intrinsic energy resolution of the ECal is presented in figure \ref{fig:ecalcellsizegamma}, which examines the energy resolution of single photon samples at 100 GeV.  For the silicon option the intrinsic energy resolution was found to not vary significantly across the transverse granularities under consideration, however, there is a degradation in energy resolution with increasing cell size for the scintillator option.  This originates from an inactive region of material in the simulation that represents the multi pixel photon counter (MPPC).  The MPPC occupies a fixed area of the cell irrespective of cell size and so fractionally the "dead" region of the cell increases as cell size is reduced (cite this somehow).  These trends will be present in the jet energy resolution studies, however, as only a small fraction, $\approx 10$\%, of the jet energy arises from the ECal these trends will be washed out when looking purely at jets.
+A more targeted test of the intrinsic energy resolution of the ECal is presented in figure \ref{fig:ecalcellsizegamma}, which examines the energy resolution of single photon samples at 100 GeV.  For the silicon option the intrinsic energy resolution was found to not vary significantly across the transverse granularities under consideration, however, there is a degradation in energy resolution with increasing cell size for the scintillator option.  This originates from an inactive region of material in the simulation that represents the multi pixel photon counter (MPPC).  The MPPC occupies a fixed area of the cell irrespective of cell size and so fractionally the "dead" region of the cell increases as cell size is reduced (cite this somehow).  These trends will be present in the jet energy resolution studies, however, as only a small fraction, $\approx 10$\%, of the jet energy is measured in the ECal these trends will be washed out when looking purely at jets.
 
-In conclusion smaller transverse granularities in the ECal significantly improve the jet energy resolution for both the silicon and scintillator options.  The intrinsic energy resolution of the ECal is largely invariant to changes in the transverse granularity for the silicon option, while larger transverse granularities are beneficial to the scintillator option as they reduce the impact of "dead" regions of the detector.  
+In conclusion smaller transverse granularities in the ECal significantly improve the jet energy resolution for both the silicon and scintillator options.  The intrinsic energy resolution of the ECal is largely invariant to changes in the transverse segmentation for the silicon option, while larger transverse granularities are beneficial to the scintillator option as they reduce the impact of "dead" regions of the detector.  
 
 %========================================================================================
 
-\subsection{ECal Longitudinal Granularity}
+\subsection{ECal Number of Layers}
 \label{sec:ecalnlayers}
-The performance of a number of detector configurations was examined where the longitudinal granularity of the ECal absorber material had been varied about the nominal value.  This study was performed for both the silicon and scintillator active material options.  In all cases considered tungsten was used as the absorber material in the ECal and the active layer thicknesses were not changed, that is 0.5 mm for the silicon option and 2 mm for the scintillator option.  The layout of the ECal for detector models considered are summarised in table \ref{table:nlayersecaloption}.  For each detector model considered in this study the total number of radiation lengths in the ECal is kept approximately constant.  This is done by varying the thickness of the absorber material when modifying the number of layers in the ECal. 
+The performance of a number of detector configurations was examined where the number of layers of the ECal absorber material had been varied about the nominal value.  This study was performed for both the silicon and scintillator active material options.  In all cases considered tungsten was used as the absorber material in the ECal and the active layer thicknesses were not changed, that is 0.5 mm for the silicon option and 2 mm for the scintillator option.  The layout of the ECal for detector models considered are summarised in table \ref{table:nlayersecaloption}.  For each detector model considered in this study the total number of radiation lengths in the ECal is kept approximately constant.  This is done by varying the thickness of the absorber material when modifying the number of layers in the ECal. 
 
 \begin{table}[h!]
 \centering
@@ -230,7 +207,7 @@ $N_{\text{Layers ECal}}$ & & Region 1 [mm] & &  Region 2 [mm] &  [$\text{X}_{0}$
 16 & 10 & 4.00 & 5 & 8.00 & 22.31\\
 \hline
 \end{tabular}
-\caption[Transverse granularity layout of the ECal models considered.]{Transverse granularity layout of the ECal models considered.  Radiation length of tungsten absorber is 3.504mm \cite{Olive:2016xmw}.  Note that the presampler layer contributes one layer to the cumulative number of layers value for all detector models considered.}
+\caption[Transverse segmentation layout of the ECal models considered.]{Transverse segmentation layout of the ECal models considered.  Radiation length of tungsten absorber is 3.504mm \cite{Olive:2016xmw}.  Note that the presampler layer contributes one layer to the cumulative number of layers value for all detector models considered.}
 \label{table:nlayersecaloption}
 \end{table}
 
@@ -238,11 +215,11 @@ $N_{\text{Layers ECal}}$ & & Region 1 [mm] & &  Region 2 [mm] &  [$\text{X}_{0}$
 \centering
 \subfloat[Silicon active material.]{\label{fig:ecalsinlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers.pdf}}
 \subfloat[Scintillator active material.]{\label{fig:ecalscnlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers.pdf}} \hfill
-\caption[Jet energy resolution as a function of longitudinal granularity in the ECal.]{Jet energy resolution as a function of longitudinal granularity in the ECal for the silicon and scintillator ECal options.}
+\caption[Jet energy resolution as a function of number of layers in the ECal.]{Jet energy resolution as a function of number of layers in the ECal for the silicon and scintillator ECal options.}
 \label{fig:ecalnlayers}
 \end{figure}
 
-The jet energy resolution was found to improve with increasing longitudinal granularity.  This is expected as a more layers in the calorimeter, for the same total thickness, implies greater sampling of the particle shower and so, as the energy resolution obeys Poissonian statistics, an improvement in the intrinsic energy resolution is observed.  A particularly strong dependancy on ECal longitudinal granularity is noted at low energies, but this reduces significantly as energies rise. 
+The jet energy resolution was found to improve with increasing number of layers.  This is expected as a more layers in the calorimeter, for the same total thickness, implies greater sampling of the particle shower and so, as the energy resolution obeys Poissonian statistics, an improvement in the intrinsic energy resolution is observed.  A particularly strong dependancy on ECal number of layers is noted at low energies, but this reduces significantly as energies rise. 
 
 \begin{figure}
 \centering
@@ -250,23 +227,23 @@ The jet energy resolution was found to improve with increasing longitudinal gran
 \subfloat[Scintillator active material, 45 GeV Jets.]{\label{fig:ecalscnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers_91GeV_DiJet_Breakdown.pdf}} \hfill
 \subfloat[Silicon active material, 250 GeV Jets.]{\label{fig:ecalsinlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers_500GeV_DiJet_Breakdown.pdf}}
 \subfloat[Scintillator active material, 250 GeV Jets.]{\label{fig:ecalscnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of ECal longitudinal granularity for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.]{Jet energy resolution breakdown as a function of ECal longitudinal granularity for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.}
+\caption[Jet energy resolution breakdown as a function of ECal number of layers for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.]{Jet energy resolution breakdown as a function of ECal number of layers for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.}
 \label{fig:ecalnlayersbreak}
 \end{figure}
 
-The strong dependancy of the jet energy resolution on the ECal longitudinal granularity can be expanded upon by looking at the decomposition of the jet energy resolution, which is shown in figure \ref{fig:ecalnlayersbreak} for the 45 and 250 GeV energy jets.  At low energies the trend is twofold: an improvement to the intrinsic energy resolution with more sampling of particle showers and a reduction in the impact of confusion.  For high energy jets, where confusion dominates, there is little to no change in the intrinsic energy resolution and confusion as a function of ECal transverse granularity.  
+The strong dependancy of the jet energy resolution on the ECal number of layers can be expanded upon by looking at the decomposition of the jet energy resolution, which is shown in figure \ref{fig:ecalnlayersbreak} for the 45 and 250 GeV energy jets.  At low energies the trend is twofold: an improvement to the intrinsic energy resolution with more sampling of particle showers and a reduction in the impact of confusion.  For high energy jets, where confusion dominates, there is little to no change in the intrinsic energy resolution and confusion as a function of ECal transverse segmentation.  
 
 \begin{figure}
 \centering
 \subfloat[Silicon active material, 100 GeV $\gamma$.]{\label{fig:ecalsinlayers100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalNLayers_100GeVPhoton.pdf}}
 \subfloat[Scintillator active material, 100 GeV $\gamma$.]{\label{fig:ecalscnlayers100gamma}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalNLayers_100GeVPhoton.pdf}}
-\caption[Energy resolution as a function of ECal longitudinal granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.]{Energy resolution as a function of function of ECal longitudinal granularity for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.}
+\caption[Energy resolution as a function of ECal number of layers for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.]{Energy resolution as a function of function of ECal number of layers for 100 GeV photons.  Results are given for both the silicon and scintillator ECal options.}
 \label{fig:ecalnlayersgamma}
 \end{figure}
 
-Further understanding is gained by considering the energy resolution of single photon samples at 100 GeV as a function of the longitudinal granularity in the ECal, which is shown in figure \ref{fig:ecalnlayersgamma}.  At these large photon energies it is clear that the intrinsic energy resolution of the ECal is improved by having finer longitudinal segmentation in the ECal.  This trend will be present in the jet energy resolution study, but as only $\approx 10\%$ of the jet energy is measured in the ECal in comparison to $\approx 100\%$ of the photons energy, it will be obscured by the energy resolution of the rest of the detector, which is invariant to the ECal longitudinal segmentation.    
+Further understanding is gained by considering the energy resolution of single photon samples at 100 GeV as a function of the number of layers in the ECal, which is shown in figure \ref{fig:ecalnlayersgamma}.  At these large photon energies it is clear that the intrinsic energy resolution of the ECal is improved by having finer longitudinal segmentation in the ECal.  This trend will be present in the jet energy resolution study, but as only $\approx 10\%$ of the jet energy is measured in the ECal in comparison to $\approx 100\%$ of the photons energy, it will be obscured by the energy resolution of the rest of the detector, which is invariant to the ECal longitudinal segmentation.    
 
-The intrinsic energy resolution of the ECal is improved by having a finer transverse granularity.  This is evident when looking at the energy resolution of photons whose energy deposits are localised within the ECal.  This trend is again clear when considering the energy resolution of low energy jets, however, at higher energies the longitudinal granularity in the ECal is not a significant factor in determining detector performance.
+The intrinsic energy resolution of the ECal is improved by having a finer transverse segmentation.  This is evident when looking at the energy resolution of photons whose energy deposits are localised within the ECal.  This trend is again clear when considering the energy resolution of low energy jets, however, at higher energies the number of layers in the ECal is not a significant factor in determining detector performance.
 
 \subsection{ECal Active Material}
 In sections \ref{sec:ecalcells} and \ref{sec:ecalnlayers} the performance of the ECal was reported for both the silicon and scintillator options and to a large extent the performance of the two options was the same.  There were a few differences, which attention should be brought to:
@@ -290,8 +267,8 @@ The HCal is designed to measure the energy deposits from hadrons.  The default I
 \hline
 Parameter & Default Value \\
 \hline
-Transverse Granularity & $30 \times 30 \text{mm}^{2}$ square cells \\
-Longitudinal Granularity & 48 Readout Layers \\
+Transverse Segmentation & $30 \times 30 \text{mm}^{2}$ square cells \\
+Number of Layers & 48 Readout Layers \\
 Active Material Choice & Scintillator Tiles  \\
 Active Material Thickness & 3 mm  \\
 Absorber Material Choice & Steel \\
@@ -309,8 +286,8 @@ Absorber Material Thickness & 20 mm \\
 
 The parameters being optimised in this study are:
 \begin{itemize}
-\item Transverse granularity or cell size.  This is key to successful application of pattern recognition in the particle flow paradigm, but should not change intrinsic energy resolution.   
-\item Longitudinal granularity or cell depth.  This governs the intrinsic energy resolution of a calorimeter.
+\item Transverse segmentation or cell size.  This is key to successful application of pattern recognition in the particle flow paradigm, but should not change intrinsic energy resolution.   
+\item Number of Layers or cell depth.  This governs the intrinsic energy resolution of a calorimeter.
 \item Depth of calorimeter.  This is important in determining the impact of leakage of energy out of the detector.  
 \item Sampling fraction.  This is the ratio of the active medium thickness to the absorber medium thickness.  As sampling calorimetry is based on sampling of particle showers it is expected that this is an important parameter.  However, above a given sampling fraction there should be little difference between performance if showers are sampled at a high enough rate to get a good estimate of the incoming particles energy.
 \item Absorber material choice.  This is a choice between steel or tungsten.  While this does not change the active medium choice it does dictate the growth and propagation of showers and so plays a crucial role in calorimetry.  While tungsten is more expensive than steel for the raw material the larger number of interaction lengths per length scale for tungsten mean that it is possible to create a smaller detector with the same number of interaction lengths within it.  This reduces the size of the solenoid needed to generate the magnetic field and so lowers the price of the detector.  As both of these materials are viable as absorber medium choices it is crucial to determine if either is more advantageous from a physics perspective.  
@@ -347,9 +324,9 @@ In conclusion, the steel option HCal outperforms the tungsten option in terms of
 
 %========================================================================================
 
-\subsection{HCal Transverse Granularity}
+\subsection{HCal Transverse Segmentation}
 \label{sec:hcalcells}
-For this study a number of different detector models were considered where the transverse granularity in the HCal had been varied about the nominal value of $30 \times 30 \text{mm}^{2}$ square cells.  The granularities considered were $10 \times 10 \text{mm}^{2}$, $20 \times 20 \text{mm}^{2}$, $30 \times 30 \text{mm}^{2}$, $40 \times 40 \text{mm}^{2}$, $50 \times 50 \text{mm}^{2}$ and $100 \times 100 \text{mm}^{2}$ square cells.  The jet energy resolution as a function of transverse granularity in the HCal is shown in figure \ref{fig:hcalcellsize}.
+For this study a number of different detector models were considered where the transverse segmentation in the HCal had been varied about the nominal value of $30 \times 30 \text{mm}^{2}$ square cells.  The granularities considered were $10 \times 10 \text{mm}^{2}$, $20 \times 20 \text{mm}^{2}$, $30 \times 30 \text{mm}^{2}$, $40 \times 40 \text{mm}^{2}$, $50 \times 50 \text{mm}^{2}$ and $100 \times 100 \text{mm}^{2}$ square cells.  The jet energy resolution as a function of transverse segmentation in the HCal is shown in figure \ref{fig:hcalcellsize}.
 
 \begin{figure}
 \centering
@@ -364,26 +341,26 @@ As with the case for the ECal, the jet energy resolution was found to improve wi
 \centering
 \subfloat[45 GeV Jets.]{\label{fig:hcalcellsize45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_91GeV_DiJet_Breakdown.pdf}}
 \subfloat[250 GeV Jets.]{\label{fig:hcalcellsize250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of HCal transverse granularity for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal transverse granularity for 45 and 250 GeV jets.}
+\caption[Jet energy resolution breakdown as a function of HCal transverse segmentation for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal transverse segmentation for 45 and 250 GeV jets.}
 \label{fig:hcalcellsizebreak}
 \end{figure}
 
-The jet energy resolution breakdowns, shown in figure, \ref{fig:hcalcellsizebreak}, show that the confusion term varies when changing the HCal transverse granularity, but the intrinsic energy resolution does not.  Furthermore, the photon confusion is invariant to changes in HCal transverse granularity, indicating that the observed overall performance changes are due to the effects of confusion arising from energy deposits from charged and neutral hadrons.  Once again for 45 GeV jets the detector performance is dominated by intrinsic energy resolution and so HCal transverse granularity has little effect, while for 250 GeV jets the performance is dominated by confusion and HCal transverse granularity becomes more significant.  
+The jet energy resolution breakdowns, shown in figure, \ref{fig:hcalcellsizebreak}, show that the confusion term varies when changing the HCal transverse segmentation, but the intrinsic energy resolution does not.  Furthermore, the photon confusion is invariant to changes in HCal transverse segmentation, indicating that the observed overall performance changes are due to the effects of confusion arising from energy deposits from charged and neutral hadrons.  Once again for 45 GeV jets the detector performance is dominated by intrinsic energy resolution and so HCal transverse segmentation has little effect, while for 250 GeV jets the performance is dominated by confusion and HCal transverse segmentation becomes more significant.  
 
 \begin{figure}
 \centering
 \includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L.pdf}
-\caption[Energy resolution as a function of HCal transverse granularity for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal transverse granularity for 50 GeV $\text{K}^{0}_{L}$.}
+\caption[Energy resolution as a function of HCal transverse segmentation for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal transverse segmentation for 50 GeV $\text{K}^{0}_{L}$.}
 \label{fig:hcalcellskaon}
 \end{figure}
 
-The energy resolution of single long lived neutral kaons, $\text{K}^{0}_{L}$, at 50 GeV is considered as a function of transverse granularity in the HCal.  This is shown in figure \ref{fig:hcalcellskaon} and, as expected, the energy resolution of the detector is largely invariant to changes in the transverse granularity in the HCal.  As these $\text{K}^{0}_{L}$ samples may deposit energy in the ECal, this figure represents the intrinsic energy resolution of the ILD detector as a whole and not purely that of the HCal.  However, it expected that the bulk of the energy deposited by these samples occurs within the HCal and so such plots are a useful representation of the HCal performance.  
+The energy resolution of single long lived neutral kaons, $\text{K}^{0}_{L}$, at 50 GeV is considered as a function of transverse segmentation in the HCal.  This is shown in figure \ref{fig:hcalcellskaon} and, as expected, the energy resolution of the detector is largely invariant to changes in the transverse segmentation in the HCal.  As these $\text{K}^{0}_{L}$ samples may deposit energy in the ECal, this figure represents the intrinsic energy resolution of the ILD detector as a whole and not purely that of the HCal.  However, it expected that the bulk of the energy deposited by these samples occurs within the HCal and so such plots are a useful representation of the HCal performance.  
 
-The transverse granularity of the HCal acts to determine the impact of confusion from charged and neutral hadron energy deposits.  It does not vary the intrinsic energy resolution of the detector, nor does it impact the reconstruction of photons.  As confusion is dominant at high jet energies the HCal transverse granularity gains an increasing role in determining detector performance as the energy in an event increases. 
+The transverse segmentation of the HCal acts to determine the impact of confusion from charged and neutral hadron energy deposits.  It does not vary the intrinsic energy resolution of the detector, nor does it impact the reconstruction of photons.  As confusion is dominant at high jet energies the HCal transverse segmentation gains an increasing role in determining detector performance as the energy in an event increases. 
 
 %========================================================================================
 
-\subsection{HCal Longitudinal Granularity}
+\subsection{HCal Number of Layers}
 \label{sec:hcalnlayers}
 
 This section focuses upon change in detector performance when varying the number of layers in the HCal.  For this study, the absorber and active layer thicknesses are not varied when adding or subtracting layers from the HCal, so both the total depth of the HCal as well as the number of sampling points of the hadronic showers varies simultaneously, this is in comparison to the study described in section \ref{sec:hcalsamplingfrequency} where the total depth of the HCal is fixed.  The detector models considered had 36, 42, 48, 54 and 60 layered HCals.  
@@ -405,7 +382,7 @@ The jet energy resolution for the various detector models considered is shown in
 \label{fig:hcalnfixedlayersbreak}
 \end{figure}
 
-While the intrinsic energy resolution for jets appeared largely invariant to changes in the number of layers in the HCal, it can be seen that there is an associated improvement in the energy resolution for neutral hadrons, which can be seen in figure \ref{fig:hcalnfixedlayerser}.  This change in neutral hadron energy resolution will be masked in the jet energy resolution study as only $\approx 10\%$ of the energy of a jet arises from neutral hadrons and the energy resolution change is minimal.   
+While the intrinsic energy resolution for jets appeared largely invariant to changes in the number of layers in the HCal, it can be seen that there is an associated improvement in the energy resolution for neutral hadrons, which can be seen in figure \ref{fig:hcalnfixedlayerser}.  This change in neutral hadron energy resolution will be masked in the jet energy resolution study as only $\approx 10\%$ of the energy of a jet is carried in the form of neutral hadrons and the energy resolution change is minimal.   
 
 \begin{figure}
 \centering
@@ -420,7 +397,7 @@ In conclusion, a larger number of layers in the HCal is beneficial to detector p
 
 \subsection{HCal Sampling Fraction}
 \label{sec:hcalsamplingfraction}
-In this section the sampling fraction, the ratio of the active to absorber layer thicknesses were considered.  For all detector models considered in this section the total number of nuclear interaction lengths in the HCal was held constant, as was the number of layers in the HCal and the transverse granularity.  The detector models considered are summarised in table \ref{table:hcalsamplingfraction}. 
+In this section the sampling fraction, the ratio of the active to absorber layer thicknesses were considered.  For all detector models considered in this section the total number of nuclear interaction lengths in the HCal was held constant, as was the number of layers in the HCal and the transverse segmentation.  The detector models considered are summarised in table \ref{table:hcalsamplingfraction}. 
 
 \begin{table}[h!]
 \centering
@@ -472,7 +449,7 @@ Number $N_{\text{Layers HCal}}$& Absorber Thickness & Active Thickness \\
 18 & 53.33 & 8.00 \\
 \hline
 \end{tabular}
-\caption[Transverse granularity layout of various HCal models considered.]{Transverse granularity layout of various HCal models considered.}
+\caption[Transverse segmentation layout of various HCal models considered.]{Transverse segmentation layout of various HCal models considered.}
 \label{table:nlayershcaloption}
 \end{table}
 

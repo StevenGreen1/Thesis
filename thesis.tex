@@ -32,13 +32,12 @@
 \makeatletter
 \@ifpackageloaded{hyperref}{%
 \hypersetup{%
-  pdftitle = {Something something something physics},
+  pdftitle = {Calorimetry at a Future Linear Collider},
   pdfsubject = {Steven Green's PhD thesis},
   pdfkeywords = {Linear Collider, CLIC, ILC, ILD},
   pdfauthor = {\textcopyright\ Steven Green}
 }}{}
 \makeatother
-
 
 %% Start the document
 \begin{document}
@@ -50,23 +49,22 @@
 
 %% Start the content body of the thesis
 \begin{mainmatter}
-  %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
-  %% Introudction - Linear Collider in General
-  %% Theory - CLIC/ILC interesting physics and VSB details
-  %% Detector
-  %% Energy Estimators
-  %% Optimisation Studies
-  %% CLIC Vertex Work
+  %% Introudction 
 % \input{FutureLinearColliders/FutureLinearColliders.tex}
-% \input{CLICdpVertex/CLICdpVertex.tex}
-% \input{OptimisationStudies/OptimisationStudies.tex}
-% \input{PhysicsAnalysis/PhysicsAnalysis.tex}
+  %% Theory - Higgs and EFT 
 % \input{Theory/Theory.tex}
 % \input{AnomalousCouplingsTheory/AnomalousCouplingsTheory.tex}
- \input{EnergyEstimators/EnergyEstimators.tex}
-
-  %% To ignore a specific chapter while working on another, making the build faster, comment it out:
-  %\input{chap4}
+  %% Linear Collider Detectors and Particle Flow
+  %% Reconstruction Chain
+ \input{ReconstructionChain/ReconstructionChain.tex}
+  %% Energy Estimators
+% \input{EnergyEstimators/EnergyEstimators.tex}
+  %% Optimisation Studies
+ \input{OptimisationStudies/OptimisationStudies.tex}
+  %% CLIC Vertex Work
+% \input{CLICdpVertex/CLICdpVertex.tex}
+  %% Physics Analysis
+% \input{PhysicsAnalysis/PhysicsAnalysis.tex}
 \end{mainmatter}
 
 %\begin{appendices}
