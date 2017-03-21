@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Tue Mar  7 14:59:51 2017) by ROOT version5.34/37
+//=========  (Tue Mar 21 10:37:22 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
    gStyle->SetOptStat(0);
    c1->Range(0,0,1,1);
@@ -35,6 +35,33 @@
    axesEj->GetZaxis()->SetTitleFont(132);
    axesEj->Draw("");
    
+   TF1 *Reported = new TF1("Reported","TMath::Sqrt(([0]*[0]/x)+[1]*[1])",10,500);
+   Reported->SetFillColor(1);
+   Reported->SetFillStyle(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#ff0000");
+   Reported->SetLineColor(ci);
+   Reported->SetLineWidth(2);
+   Reported->SetLineStyle(2);
+   Reported->GetXaxis()->SetNdivisions(505);
+   Reported->GetXaxis()->SetLabelFont(132);
+   Reported->GetXaxis()->SetLabelSize(0.05);
+   Reported->GetXaxis()->SetTitleSize(0.05);
+   Reported->GetXaxis()->SetTitleFont(132);
+   Reported->GetYaxis()->SetLabelFont(132);
+   Reported->GetYaxis()->SetLabelSize(0.05);
+   Reported->GetYaxis()->SetTitleSize(0.05);
+   Reported->GetYaxis()->SetTitleFont(132);
+   Reported->SetParameter(0,16.6);
+   Reported->SetParError(0,0);
+   Reported->SetParLimits(0,0,0);
+   Reported->SetParameter(1,1.1);
+   Reported->SetParError(1,0);
+   Reported->SetParLimits(1,0,0);
+   Reported->Draw("same");
+   
    TGraphErrors *gre = new TGraphErrors(6);
    gre->SetName("Graph0");
    gre->SetTitle("Graph");
@@ -53,6 +80,48 @@
    gre->SetPoint(5,500,1.56621);
    gre->SetPointError(5,0,0.03443829);
    gre->Draw(" pl");
+   
+   TLegend *leg = new TLegend(-2.353437e-185,-2.353437e-185,-2.353437e-185,-2.353437e-185,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetTextFont(132);
+   leg->SetTextSize(0.05);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(2);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("NULL","Parameterisation : #frac{#it{a}}{#sqrt{E_{#gamma}}} #oplus #it{b}","h");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(132);
+   entry=leg->AddEntry("Reported","#it{a} = 16.6%, #it{b} = 1.1%","l");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("Graph0","Full ILD Simulation","l");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   leg->Draw();
+   
+   TPaveText *pt = new TPaveText(0.01,0.9444737,0.4483381,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(1);
+   pt->SetFillColor(0);
+   pt->SetLineWidth(2);
+   pt->SetTextFont(132);
+   TText *text = pt->AddText("TMath::Sqrt(([0]*[0]/x)+[1]*[1])");
+   pt->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);

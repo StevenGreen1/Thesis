@@ -87,7 +87,22 @@ cin.get();
     pAxes->GetXaxis()->SetTitleOffset(0.95);
     pAxes->Draw();
 
+    TF1 *pTF1 = new TF1("Reported","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",10,500);
+    pTF1->SetParameter(0,12.9);
+    pTF1->SetParameter(1,1.2);
+    pTF1->SetLineColor(kRed);
+    pTF1->SetLineStyle(2);
+
+    pTF1->Draw("same");
     pTGraphErrors->Draw("same PL");
+
+    TLegend *pTLegend = new TLegend(0.4,0.6,0.85,0.85);
+    pTLegend->SetTextSize(0.05);
+    pTLegend->SetHeader("Parameterisation : #frac{#it{a}}{#sqrt{E_{#gamma}}} #oplus #it{b}");
+    pTLegend->AddEntry(pTF1,"#it{a} = 12.9\%, #it{b} = 1.2\%","l");
+    pTLegend->AddEntry(pTGraphErrors,"Full ILD Simulation","l");
+    pTLegend->Draw();
+
     const std::string name("ER_vs_EGamma_ScECal.C");
     const std::string name2("ER_vs_EGamma_ScECal.pdf");
     pTCanvas->SaveAs(name.c_str());

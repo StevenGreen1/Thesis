@@ -80,7 +80,7 @@ cin.get();
 */
     }
 
-    TH2F *pAxes = new TH2F("axesEj","",100,0,105,1000,8,22);
+    TH2F *pAxes = new TH2F("axesEj","",100,0,105,1000,6,22);
     //pAxes->SetTitle("100 GeV Photon Energy Resolution vs Cell Size in ECal (Si)");
     pAxes->GetYaxis()->SetTitle("#sigma_{Reco} / E_{Reco} [%]");
     pAxes->GetXaxis()->SetTitle("E_{K^{0}_{L}} [GeV]");
@@ -92,7 +92,22 @@ cin.get();
     pAxes->GetXaxis()->SetTitleOffset(0.95);
     pAxes->Draw();
 
+    TF1 *pTF1 = new TF1("Reported","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",10,100);
+    pTF1->SetParameter(0,57.6);
+    pTF1->SetParameter(1,1.6);
+    pTF1->SetLineColor(kRed);
+    pTF1->SetLineStyle(2);
+
+    pTF1->Draw("same");
     pTGraphErrors->Draw("same PL");
+
+    TLegend *pTLegend = new TLegend(0.4,0.6,0.85,0.85);
+    pTLegend->SetTextSize(0.05);
+    pTLegend->SetHeader("Parameterisation : #frac{#it{a}}{#sqrt{E_{K^{0}_{L}}}} #oplus #it{b}");
+    pTLegend->AddEntry(pTF1,"#it{a} = 57.6\%, #it{b} = 1.6\%","l");
+    pTLegend->AddEntry(pTGraphErrors,"Full ILD Simulation","l");
+    pTLegend->Draw();
+
     const std::string name("ER_vs_EKaon0L_SiECal.C");
     const std::string name2("ER_vs_EKaon0L_SiECal.pdf");
     pTCanvas->SaveAs(name.c_str());
