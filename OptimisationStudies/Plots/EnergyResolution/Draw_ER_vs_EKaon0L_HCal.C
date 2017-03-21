@@ -101,12 +101,17 @@ cin.get();
     pTF1->Draw("same");
     pTGraphErrors->Draw("same PL");
 
-    TLegend *pTLegend = new TLegend(0.4,0.6,0.85,0.85);
+    TLegend *pTLegend = new TLegend(0.3,0.55,0.85,0.85);
     pTLegend->SetTextSize(0.05);
     pTLegend->SetHeader("Parameterisation : #frac{#it{a}}{#sqrt{E_{K^{0}_{L}}}} #oplus #it{b}");
     pTLegend->AddEntry(pTF1,"#it{a} = 57.6\%, #it{b} = 1.6\%","l");
     pTLegend->AddEntry(pTGraphErrors,"Full ILD Simulation","l");
     pTLegend->Draw();
+
+    pTCanvas->Update();
+    TLine *pTLine = new TLine(80,6,80,22);
+    pTLine->SetLineStyle(2);
+    pTLine->Draw();
 
     const std::string name("ER_vs_EKaon0L_SiECal.C");
     const std::string name2("ER_vs_EKaon0L_SiECal.pdf");

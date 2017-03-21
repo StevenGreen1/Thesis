@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Tue Mar 21 10:35:29 2017) by ROOT version5.34/37
+//=========  (Tue Mar 21 13:30:02 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
    gStyle->SetOptStat(0);
-   c1->Range(0,0,1,1);
+   c1->Range(-21,2.8,119,24.13333);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
@@ -11,6 +11,8 @@
    c1->SetTicky(1);
    c1->SetLeftMargin(0.15);
    c1->SetBottomMargin(0.15);
+   c1->SetFrameLineWidth(2);
+   c1->SetFrameBorderMode(0);
    c1->SetFrameLineWidth(2);
    c1->SetFrameBorderMode(0);
    
@@ -87,9 +89,31 @@
    gre->SetPointError(8,0,0.1157765);
    gre->SetPoint(9,100,11.0044);
    gre->SetPointError(9,0,0.1305194);
+   
+   TH1F *Graph_Graph1 = new TH1F("Graph_Graph1","Graph",100,1,109);
+   Graph_Graph1->SetMinimum(8.612229);
+   Graph_Graph1->SetMaximum(21.11431);
+   Graph_Graph1->SetDirectory(0);
+   Graph_Graph1->SetStats(0);
+   Graph_Graph1->SetLineWidth(2);
+   Graph_Graph1->GetXaxis()->SetNdivisions(505);
+   Graph_Graph1->GetXaxis()->SetLabelFont(132);
+   Graph_Graph1->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph1->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph1->GetXaxis()->SetTitleFont(132);
+   Graph_Graph1->GetYaxis()->SetLabelFont(132);
+   Graph_Graph1->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph1->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph1->GetYaxis()->SetTitleFont(132);
+   Graph_Graph1->GetZaxis()->SetLabelFont(132);
+   Graph_Graph1->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph1->GetZaxis()->SetTitleSize(0.05);
+   Graph_Graph1->GetZaxis()->SetTitleFont(132);
+   gre->SetHistogram(Graph_Graph1);
+   
    gre->Draw(" pl");
    
-   TLegend *leg = new TLegend(-2.353437e-185,-2.353437e-185,-2.353437e-185,-2.353437e-185,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.3,0.55,0.85,0.85,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
@@ -107,29 +131,28 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
    entry=leg->AddEntry("Reported","#it{a} = 57.6%, #it{b} = 1.6%","l");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+
+   ci = TColor::GetColor("#ff0000");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(2);
+   entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
+   entry->SetTextFont(132);
    entry=leg->AddEntry("Graph0","Full ILD Simulation","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
+   entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
+   entry->SetTextFont(132);
    leg->Draw();
-   
-   TPaveText *pt = new TPaveText(0.01,0.9444737,0.4483381,0.995,"blNDC");
-   pt->SetName("title");
-   pt->SetBorderSize(1);
-   pt->SetFillColor(0);
-   pt->SetLineWidth(2);
-   pt->SetTextFont(132);
-   TText *text = pt->AddText("TMath::Sqrt(([0]*[0]/x)+[1]*[1])");
-   pt->Draw();
+   TLine *line = new TLine(80,6,80,22);
+   line->SetLineStyle(2);
+   line->SetLineWidth(2);
+   line->Draw();
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);

@@ -103,6 +103,11 @@ cin.get();
     pTLegend->AddEntry(pTGraphErrors,"Full ILD Simulation","l");
     pTLegend->Draw();
 
+    pTCanvas->Update();
+    TLine *pTLine = new TLine(32,1,32,6);
+    pTLine->SetLineStyle(2);
+    pTLine->Draw();
+
     const std::string name("ER_vs_EGamma_ScECal.C");
     const std::string name2("ER_vs_EGamma_ScECal.pdf");
     pTCanvas->SaveAs(name.c_str());
