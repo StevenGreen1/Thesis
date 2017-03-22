@@ -2,9 +2,11 @@
     gStyle->SetOptStat(0);
 
     TCanvas *pCanvasEj = new TCanvas();
+    pCanvasEj->SetTopMargin(0.05);
+    pCanvasEj->SetRightMargin(0.05);
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,0.5,5.5,12000,2.5,4.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,0.5,5.5,12000,2.5,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetYaxis()->SetTitleOffset(0.8);
     pAxesEj->GetYaxis()->SetDecimals();
@@ -37,7 +39,8 @@
 
     float Jet_Energy_500GeV_JERError[9] = {0.0525323,0.0460174,0.0444234,0.0417959,0.0405606,0.0453691,0.0375471,0.0367101,0.0364576};
 
-    TLegend *pLegend = new TLegend(0.6, 0.6, 0.9, 0.9);
+    TLegend *pLegend = new TLegend(0.2, 0.75, 0.85, 0.9);
+    pLegend->SetNColumns(2);
     pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Jet_Energy_91 = new TGraphErrors(9,xAxisVairable,Jet_Energy_91GeV_JER,xAxisVairableError,Jet_Energy_91GeV_JERError);
 

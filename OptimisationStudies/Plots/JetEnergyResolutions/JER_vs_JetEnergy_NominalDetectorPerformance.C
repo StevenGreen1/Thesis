@@ -2,6 +2,8 @@
     gStyle->SetOptStat(0);
 
     TCanvas *pCanvasEj = new TCanvas();
+    pCanvasEj->SetTopMargin(0.05);
+    pCanvasEj->SetRightMargin(0.05);
     pCanvasEj->cd();
 
     TH2F *pAxesEj = new TH2F("axesEj","",300,0,300,650,1.5,4.5);
