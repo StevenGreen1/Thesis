@@ -347,12 +347,19 @@ Active Material Thickness [mm] & 3.0 & 1.8 \\
 \hline
 \end{tabular}
 \caption[The configuration of the stainless steel and tungsten HCal options.]{The configuration of the stainless steel and tungsten HCal options.}
-\label{table:defaultildhcal}
+\label{table:hcalabsmaterial}
 \end{table}
 
-The configuration for the stainless steel and tungsten HCal options that were used in the full ILD simulation can be found in table \ref{table:defaultildhcal}.  To isolate the effects of changing the absorber material, the total depth, in nuclear interaction lengths, was kept constant when comparing these two options.  Furthermore, the sampling fraction, the ratio of active to absorber layer thickness, was also held constants.  The interaction of hadrons with the absorber material within the detector is simulated by GEANT4.  A number of different physics lists exist within GEANT4 for the modelling of hadronic showers.  The default model for high energy physics calorimetry is the QGSP\_BERT physics list, which uses the quark-gluon string model \cite{Folger:2003sb} with the precompound model of nuclear evaporation \cite{geantStringModel} (QGSP) for high energy interactions and the Bertini (BERT) cascade model \cite{Guthrie:1968ue} for intermediation energy interactions.  For this study both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists are tested.  The QGSP\_BERT\_HP list uses the high precision neutron package (NeutronHP) to deal with the transportation of neutrons from below 20 MeV to thermal energies.  This added detail was thought to be necessary for a study involving tungsten due to the expected increase in shower development.    
+The configuration for the stainless steel and tungsten HCal options that were used in the full ILD simulation can be found in table \ref{table:hcalabsmaterial}.  To isolate the effects of changing the absorber material, the total depth, in nuclear interaction lengths, was kept constant when comparing these two options.  Furthermore, the sampling fraction, the ratio of active to absorber layer thickness, was also held constants.  The interaction of hadrons with the absorber material within the detector is simulated by GEANT4.  A number of different physics lists exist within GEANT4 for the modelling of hadronic showers.  The default model for high energy physics calorimetry is the QGSP\_BERT physics list, which uses the quark-gluon string model \cite{Folger:2003sb} with the precompound model of nuclear evaporation \cite{geantStringModel} (QGSP) for high energy interactions and the Bertini (BERT) cascade model \cite{Guthrie:1968ue} for intermediation energy interactions.  For this study both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists are tested.  The QGSP\_BERT\_HP list uses the high precision neutron package (NeutronHP) to deal with the transportation of neutrons from below 20 MeV to thermal energies.  This added detail was thought to be necessary for a study involving tungsten due to the expected increase in shower development.    
 
 % ASIDE WITH TIMING PLOT HERE 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/Description/HCalAbsorberMaterialTimings.pdf}
+\caption[]{Write about this awesome plot!}
+\label{fig:hcalabsmaterialtiming}
+\end{figure} 
 
 %SP
 
