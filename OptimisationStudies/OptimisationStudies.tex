@@ -242,8 +242,8 @@ Increasing the number of layers in the ECal is beneficial to the intrinsic energ
 % JER
 \begin{figure}
 \centering
-\subfloat[Silicon active material.]{\label{fig:ecalsinlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers.pdf}}
-\subfloat[Scintillator active material.]{\label{fig:ecalscnlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers.pdf}} \hfill
+\subfloat[]{\label{fig:ecalsinlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers.pdf}}
+\subfloat[]{\label{fig:ecalscnlayers}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers.pdf}} \hfill
 \caption[The jet energy resolution as a function of number of layers in the ECal for various jet energies using the nominal ILD detector model with \protect\subref{fig:ecalsinlayers} the silicon and \protect\subref{fig:ecalscnlayers} the scintillator ECal option.]{The jet energy resolution as a function of number of layers in the ECal for various jet energies using the nominal ILD detector model with \protect\subref{fig:ecalsinlayers} the silicon and \protect\subref{fig:ecalscnlayers} the scintillator ECal option.}
 \label{fig:ecalnlayers}
 \end{figure}
@@ -256,27 +256,33 @@ Increasing the number of layers in the ECal is beneficial to the intrinsic energ
 \subfloat[Scintillator active material, 45 GeV Jets.]{\label{fig:ecalscnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers_91GeV_DiJet_Breakdown.pdf}} \hfill
 \subfloat[Silicon active material, 250 GeV Jets.]{\label{fig:ecalsinlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayers_500GeV_DiJet_Breakdown.pdf}}
 \subfloat[Scintillator active material, 250 GeV Jets.]{\label{fig:ecalscnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberofLayers_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of ECal number of layers for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.]{Jet energy resolution breakdown as a function of ECal number of layers for 45 and 250 GeV jets.  Results are given for both the silicon and scintillator ECal options.}
+\caption[The contributions to the jet energy resolution as a function of number of layers in the ECal using the nominal ILD detector model for \protect\subref{fig:ecalsinlayers45break} the silicon ECal option and 45 GeV jets, \protect\subref{fig:ecalscnlayers45break} the scintillator ECal option and 45 GeV jets, \protect\subref{fig:ecalsinlayers250break} the silicon ECal option and 250 GeV jets and \protect\subref{fig:ecalscnlayers250break} the scintillator ECal option and 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.]{The contributions to the jet energy resolution as a function of number of layers in the ECal using the nominal ILD detector model for \protect\subref{fig:ecalsinlayers45break} the silicon ECal option and 45 GeV jets, \protect\subref{fig:ecalscnlayers45break} the scintillator ECal option and 45 GeV jets, \protect\subref{fig:ecalsinlayers250break} the silicon ECal option and 250 GeV jets and \protect\subref{fig:ecalscnlayers250break} the scintillator ECal option and 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.}
 \label{fig:ecalnlayersbreak}
 \end{figure}
 
 %========================================================================================
 
 \subsection{ECal Active Material}
-In sections \ref{sec:ecalcells} and \ref{sec:ecalnlayers} the performance of the ECal was reported for both the silicon and scintillator options and to a large extent the performance of the two options was the same.  There were a few differences, which attention should be brought to:
+In sections \ref{sec:ecalcells} and \ref{sec:ecalnlayers} the performance of the ECal was reported for both the silicon and scintillator options and to a large extent the performance of the two options was the similar, but not identical:
 
 \begin{itemize}
-\item The intrinsic energy resolution of a silicon ECal is worse than that of a scintillator ECal for low energies, while the trend is reversed at high energies.  The cross over point in performance occurs between 20 and 50 GeV.  This trend is shown in figure \ref{fig:ecalnominalres}.    
-\item The "dead" region due to the presence of the MPPC in the scintillator option degrades performance of the detector for small transverse granularities.  No such effect is seen for the silicon option.  This effect is shown in figure \ref{fig:ecalcellsizegamma}.
+\item The intrinsic energy resolution of the silicon ECal option is better than that of a scintillator option for high energies, see figures \ref{fig:ecalsinominalres} and \ref{fig:ecalscnominalres}.  This is most likely due to the implementation of Birks' law \cite{BirksLaw} for scintillator active materials.  Birks' law states:
+\begin{equation}
+\frac{d\mathcal{L}}{dx} \propto \times \frac{dE/dx}{1+k_{B}dE/dx}
+\end{equation}
+where $\frac{d\mathcal{L}}{dx}$ is the light yield per unit path length, $dE/dx$ is the energy deposited per unit path length and $k_{B}$ is a material property constant.  For large energy deposits per unit length, such as those found in high energy $\gamma$ events, the light yield saturates causing a degradation in the energy resolution.  Based on a comparison with the silicon ECal option performance, this effect starts to degrade the energy resolution for the scintillator option around ~50 GeV.  However, the degradation in energy resolution up to 100 GeV is relatively small.
+\item The "dead" region due to the presence of the MPPC in the simulation of the scintillator ECal option degrades performance of the detector for small transverse granularities, see figure \ref{fig:ecalcellsizegamma}.
 \end{itemize}
 
-The lack of this "dead" region of the detector and the beneficial intrinsic energy resolution at large energies indicates a preference for a silicon detector, however, there is no clear preference based on these studies.  
+In summary, the performance of the two options in terms of energy and jet energy resolution are similar meaning no clear option is preferred.  However, the silicon option is preferred when manufacture and implementation of the two models is compared.  While constructing silicon wafers to fit the $5 \times 5 \text{mm}^{2}$ square cell size of the ECal is achievable, this would be extremely challenging for scintillator tiles.  To resolve this in reality the scintillator ECal option would have to use $5 \times 45 \text{mm}^{2}$ scintillator strips that are arranged in alternating directions in each ECal layer.  By combining information from neighbouring layers it becomes possible to effectively achieve a $5 \times 5 \text{mm}^{2}$ square cell size.  This further challenges to the reconstruction means that the silicon option is the more preferred ECal model.  
 
 %========================================================================================
 %========================================================================================
 
 \section{Hadronic Calorimeter Optimisation}
-The HCal is designed to measure the energy deposits from hadrons.  The default ILD detector model HCal, summarised in table \ref{table:defaultildhcal}, contains $\approx 6$ nuclear interaction lengths ($\lambda_{I}$).  The ECal contributes approximately one $\lambda_{I}$ giving a total of $\approx 7 \lambda_{I}$, which is sufficient to confine the bulk of jets up to 1 TeV events, which is the maximum running energy for the ILC.  The longitudinal structure of this model consists of 48 readout layers each containing a 3 mm active layer of scintillator and a 20 mm absorber layer of iron.  There are several readout technology options under consideration for the HCal, which are analogue, digital and semi-digital, however, for this study only the analogue HCal is considered.  
+The HCal primarily measures energy deposits from hadronic showers.  The HCal in the default ILD detector model, summarised in table \ref{table:defaultildhcal}, and is approximately 6 nuclear interaction lengths ($\lambda_{I}$) deep.  The ECal contributes approximately one $\lambda_{I}$ giving a total of $\approx 7 \lambda_{I}$, which is sufficient to confine the bulk of jets up to 1 TeV events.  The longitudinal structure of this model consists of 48 readout layers each containing a 3 mm active layer of scintillator and a 20 mm absorber layer of iron.  
+
+There are several readout approaches under consideration for the HCal including fully analogue, fully digital and semi-digital.  The analogue readout measures the energy within each HCal cell using a continuous spectrum of possible values, while the digital readout only produces a response if the energy deposited within a calorimeter cell is above a given threshold.  The semi-digital approach mirrors that of the digital approach, but has three responses each with a different energy threshold.  While the energy resolution for digital calorimeters is not as good as that of analogue calorimeters the advantage they have is that it is possible to construct smaller calorimeter cells using a digital readout.  In traditional calorimetry, a digital readout would only lead to a worsening energy resolution, however, in the particle flow paradigm pattern recognition is as important, if not more important, than energy resolution.  As the calorimeter cell size governs the confusion contribution to the jet energy resolution, it is envisaged that the use of a digital readout would involve a trade off where intrinsic energy resolution is sacrificed for a reduction in the pattern recognition confusion.  In the following studies only the analogue HCal is considered.
 
 \begin{table}[h!]
 \centering
@@ -285,14 +291,14 @@ The HCal is designed to measure the energy deposits from hadrons.  The default I
 Parameter & Default Value \\
 \hline
 Cell Size & $30 \times 30 \text{mm}^{2}$ square cells \\
-Number of Layers & 48 Readout Layers \\
-Active Material Choice & Scintillator Tiles  \\
+Number of Layers & 48 readout layers \\
+Active Material Choice & Scintillator \\
 Active Material Thickness & 3 mm  \\
 Absorber Material Choice & Steel \\
 Absorber Material Thickness & 20 mm \\
 \hline
 \end{tabular}
-\caption[Nominal ILD detector model HCal configuration.]{Nominal ILD detector model HCal configuration.}
+\caption[The configuration of the HCal in the nominal ILD detector model.]{The configuration of the HCal in the nominal ILD detector model.}
 \label{table:defaultildhcal}
 \end{table}
 
@@ -301,41 +307,125 @@ Absorber Material Thickness & 20 mm \\
 % Nuclear interaction length silicon 465.2mm 
 % Nuclear interaction length polystyrene 770.7mm
 
-The parameters being optimised in this study are:
+The HCal performance for single hadrons and the overall jet energy resolution will depend on the details of the HCal design.  A number of options were simulated where the following parameters were varied:
 \begin{itemize}
-\item Cell size or cell size.  This is key to successful application of pattern recognition in the particle flow paradigm, but should not change intrinsic energy resolution.   
-\item Number of Layers or cell depth.  This governs the intrinsic energy resolution of a calorimeter.
+\item Cell size.  This is key to successful application of pattern recognition in the particle flow paradigm, but should not change the intrinsic energy resolution.   
+\item Number of layers .  This governs the intrinsic energy resolution of a sampling calorimeter.
 \item Depth of calorimeter.  This is important in determining the impact of leakage of energy out of the detector.  
-\item Sampling fraction.  This is the ratio of the active medium thickness to the absorber medium thickness.  As sampling calorimetry is based on sampling of particle showers it is expected that this is an important parameter.  However, above a given sampling fraction there should be little difference between performance if showers are sampled at a high enough rate to get a good estimate of the incoming particles energy.
-\item Absorber material choice.  This is a choice between steel or tungsten.  While this does not change the active medium choice it does dictate the growth and propagation of showers and so plays a crucial role in calorimetry.  While tungsten is more expensive than steel for the raw material the larger number of interaction lengths per length scale for tungsten mean that it is possible to create a smaller detector with the same number of interaction lengths within it.  This reduces the size of the solenoid needed to generate the magnetic field and so lowers the price of the detector.  As both of these materials are viable as absorber medium choices it is crucial to determine if either is more advantageous from a physics perspective.  
+\item Sampling fraction.  This is the ratio of the active medium thickness to the absorber medium thickness.  This controls how particle showers within the calorimeter are sampled.
+\item Absorber material choice.  Two options have been considered: steel and tungsten.  This choice dictates the growth and propagation of hadronic showers and so plays a crucial role in calorimetry.  
 \end{itemize}
 
 %========================================================================================
 
+% MOVE TO FIT ORDER OF BULLET POINTS
 \subsection{HCal Absorber Material}
 \label{sec:hcalabsorbermaterial}
-The nominal choice of absorber material is steel, tungsten provides a feasible alternative material.  While more expensive than steel, tungsten contains more radiation lengths per unit length than steel and so the overall size of the detector would reduce meaning the solenoid could be smaller, which would to first order offset the additional cost of the tungsten.  This section aims to determine whether either of these options is beneficial when considering the jet energy resolution of the detector.
 
-In this study the total depth of absorber material, in nuclear interaction lengths, was held constant for both models.  This was to ensure any performance changes were not due to additional material as opposed to the intrinsic energy resolutions of the absorber materials.  The interaction of hadrons with the absorber material within the detector is simulated by GEANT4.  The model for these interactions is dependent upon the choice of physics list, which by default is the QGSP\_BERT physics list.  This list is recommended by the GEANT4 authors to use for high energy physics calorimetry as it gives good agreement between experiment.  For this study both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists are tested.  The QGSP\_BERT\_HP list uses the high precision neutron package (NeutronHP) to deal with the transportation of neutrons from below 20 MeV to thermal energies.  This added detail was thought to be necessary for a study involving tungsten due to the increased time of shower development.    
+The nominal choice of absorber material is steel, tungsten provides a feasible alternative material.  While more expensive than steel, tungsten contains more radiation lengths per unit length, which means that the overall size of the detector could be reduced, while maintaining the number of interaction lengths within the HCal.  This would allow for a reduction in the size of the solenoid, which would to first order offset the additional cost of the tungsten. 
+
+One component of energy loss for hadronic showers is spallation, which involves interactions of showering particles with the atomic nuclei of the absorber material.  After the initial spallation interaction any remaining excited nuclei produce evaporation neutrons as the nucleus returns to a stable state.  These neutrons then go on to deposit further energy within the calorimeter.  As the majority of the other energy deposition mechanisms for hadronic showers, e.g. ionisation, do not involve intermediate states, the evaporation neutrons are typically the slowest mechanism through which hadronic showers develop.  This can be seen in figure \ref{fig:calohittiming}, which shows that the fraction of calorimeter hits arising from neutrons grows over time.  
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_HCalAbsorberMaterial.pdf}
-\caption[Jet energy resolution as a function of jet energy for various absorber materials in the HCal and physics lists.]{Jet energy resolution as a function of jet energy for various absorber materials in the HCal and physics lists.}
-\label{fig:hcalabsmaterial}
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/Description/CalorimeterHitTimes_91GeV_Z_uds_Steel.pdf}
+\caption[The distribution of the time of the calorimeter hits, corrected for time of flight to the impact point, for 91 GeV Z$\rightarrow$uds di-jet events.]{The distribution of the time of the calorimeter hits, corrected for time of flight to the impact point, for 91 GeV Z$\rightarrow$uds di-jet events.}
+\label{fig:calohittiming}
 \end{figure} 
 
-The jet energy resolution for the steel and the tungsten HCal options, for using both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists, are shown in figure \ref{fig:hcalabsmaterial} as a function of jet energy.  These results indicate that steel outperforms tungsten as an absorber material, particularly for high energy jets.  At low energies the performance is similar, indicating that the intrinsic energy resolution of the two options is comparable.  The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, has a minimal impact on these results.
-
-\begin{figure}
+\begin{table}[h!]
 \centering
-\subfloat[45 GeV Jets.]{\label{fig:hcalabsmaterial45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial_91GeV_DiJet_Breakdown.pdf}}
-\subfloat[250 GeV Jets.]{\label{fig:hcalabsmaterial250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalAbsorberMaterial_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of HCal absorber material and physics list for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal absorber material and physics list for 45 and 250 GeV jets.}
-\label{fig:hcalabsmaterialbreak}
-\end{figure}
+\begin{tabular}{ l l l }
+\hline
+Parameter & Steel HCal Option & Tungsten HCal Option \\
+\hline
+Cell Size & $30 \times 30 \text{mm}^{2}$ square cells & $30 \times 30 \text{mm}^{2}$ square cells\\
+Number of Layers & 48 readout layers & 48 readout layers\\
+Absorber Material Thickness [mm] & 20.0 & 12.0 \\
+Active Material Choice & Scintillator & Scintillator \\
+Active Material Thickness [mm] & 3.0 & 1.8 \\
+\hline
+\end{tabular}
+\caption[The configuration of the stainless steel and tungsten HCal options.]{The configuration of the stainless steel and tungsten HCal options.}
+\label{table:defaultildhcal}
+\end{table}
 
-Expanding upon this further by examining the jet energy resolution breakdowns as shown in figure \ref{fig:hcalabsmaterialbreak}, it can be seen that the change in performance when changing the HCal absorber material from steel to tungsten is due to changes in the confusion.  The change in confusion is most likely due to the fact that the PandoraPFA algorithms are tuned for HCal cell dimensions based on the steel HCal option, while the HCal cells for the tungsten option HCal will be smaller by a factor of approximately 1.7 ($\approx 16.77/9.946$).  The jet energy resolution breakdowns also indicate that the intrinsic energy resolution of the tungsten HCal is marginally worse, particularly for high energy jets, than that of a steel HCal.  
+The configuration for the stainless steel and tungsten HCal options that were used in the full ILD simulation can be found in table \ref{table:defaultildhcal}.  To isolate the effects of changing the absorber material, the total depth, in nuclear interaction lengths, was kept constant when comparing these two options.  Furthermore, the sampling fraction, the ratio of active to absorber layer thickness, was also held constants.  The interaction of hadrons with the absorber material within the detector is simulated by GEANT4.  A number of different physics lists exist within GEANT4 for the modelling of hadronic showers.  The default model for high energy physics calorimetry is the QGSP\_BERT physics list, which uses the quark-gluon string model \cite{Folger:2003sb} with the precompound model of nuclear evaporation \cite{geantStringModel} (QGSP) for high energy interactions and the Bertini (BERT) cascade model \cite{Guthrie:1968ue} for intermediation energy interactions.  For this study both the QGSP\_BERT and the QGSP\_BERT\_HP physics lists are tested.  The QGSP\_BERT\_HP list uses the high precision neutron package (NeutronHP) to deal with the transportation of neutrons from below 20 MeV to thermal energies.  This added detail was thought to be necessary for a study involving tungsten due to the expected increase in shower development.    
+
+% ASIDE WITH TIMING PLOT HERE 
+
+%SP
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l }
+\hline
+HCal Option & Energy Resolution [\%] \\
+\hline
+Stainless Steel, QGSP\_BERT & $8.8\pm0.2$ \\
+Stainless Steel, QGSP\_BERT\_HP & $9.0\pm0.3$ \\
+Tungsten, QGSP\_BERT & $9.1\pm0.2$ \\
+Tungsten, QGSP\_BERT\_HP & $9.0\pm0.2$ \\
+\hline
+\end{tabular}
+\caption[The energy resolution using the nominal ILD detector with various HCal options determined using 50 GeV $\text{K}^{0}_{L}$ events.]{The energy resolution using the nominal ILD detector with various HCal options determined using 50 GeV $\text{K}^{0}_{L}$ events.}
+\label{table:erhcalabsmaterial}
+\end{table}
+
+The energy resolution for 50 GeV $\text{K}^{0}_{L}$ events using the nominal ILD detector model with a stainless steel and tungsten HCal absorber material can be found in table \ref{table:erhcalabsmaterial}.  No significant differences were seen in the energy resolution when changing the absorber material.  Furthermore, the addition of the high precision neutron package did not alter the detector performance significantly.    
+
+%JER
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l l }
+\hline
+HCal Option & Jet Energy & & & \\
+ & Resolution & & & \\
+ & [\%] & & & \\
+ & 45 GeV & 100 GeV & 180 GeV & 250 GeV \\
+\hline
+Stainless Steel, QGSP\_BERT & $3.65 \pm 0.05$ &$2.88 \pm 0.04$ &$2.85 \pm 0.04$ &$2.97 \pm 0.05$ \\
+Stainless Steel, QGSP\_BERT\_HP & $3.67 \pm 0.05$ &$2.92 \pm 0.04$ &$2.86 \pm 0.04$ &$3.03 \pm 0.04$ \\
+Tungsten, QGSP\_BERT & $3.67 \pm 0.05$ &$3.12 \pm 0.04$ &$3.36 \pm 0.04$ &$3.76 \pm 0.05$ \\
+Tungsten, QGSP\_BERT\_HP & $3.69 \pm 0.05$ &$3.03 \pm 0.04$ &$3.38 \pm 0.04$ &$3.80 \pm 0.05$ \\
+\hline
+\end{tabular}
+\caption[The jet energy resolution using the nominal ILD detector with various HCal options for various jet energies.]{The jet energy resolution using the nominal ILD detector with various HCal options for various jet energies.}
+\label{table:jerhcalabsmaterial}
+\end{table}
+
+The jet energy resolutions for various jet energies are shown in table \ref{table:jerhcalabsmaterial} for the various HCal options considered.  These results indicate that steel outperforms tungsten as an absorber material for high energy jets, while at low jet energies the performance is similar.  This indicates that the intrinsic energy resolution of the detecotr, which is the dominant contribution to the jet energy resolution at low jet energies, is similar for the steel and tungsten options.  This is to be expected given the energy resolution for 50 GeV $\text{K}^{0}_{L}$ was similar between these options.  At high jet energies the performance of the two models diverges, with the steel option giving the best performance.  This has to be due to changes to the confusion contribution to the jet energy resolution, which can be seen to be the case when examining the contributions to the jet energy resolution for the 45 and 250 GeV jets found in table \ref{table:jerbdhcalabsmaterial}.  The change in confusion is most likely due to the fact that the PandoraPFA algorithms are tuned for HCal cell dimensions using the steel HCal option, while the cells for the tungsten option are thinner by a factor of approximately $\frac{\lambda_{I}^{Steel}}{\lambda_{I}^{Tungsten}} \approx 1.7$, where $\lambda_{I}^{x}$ is the distance of one radiation length in material $x$.  
+
+%%%While maybe make pandora more effective, not needed as tungsten ER worse marginally at high energies so only ever worse.
+
+% START HERE
+
+The jet energy resolution breakdowns also indicate that the intrinsic energy resolution of the tungsten HCal is marginally worse, particularly for high energy jets, than that of a steel HCal.
+
+The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, made a minimal impact on these results.
+
+%JER BD
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l l l }
+\hline
+HCal Option & Jet Energy & & & \\
+ & Resolution & & & \\
+ & [\%] & & & \\
+ & 45 GeV & & 250 GeV & \\
+ & Intrinsic & Confusion & Intrinsic & Confusion \\
+\hline
+Stainless Steel, QGSP\_BERT & $2.93 \pm 0.04$ & $2.16 \pm 0.06$ & $1.69 \pm 0.02$ &$2.45 \pm 0.05$ \\
+Stainless Steel, QGSP\_BERT\_HP & $2.98 \pm 0.04$ &$2.15 \pm 0.06$ &$1.65 \pm 0.02$ &$2.53 \pm 0.04$ \\
+Tungsten, QGSP\_BERT & $2.94 \pm 0.04$ &$2.20 \pm 0.06$ &$1.80 \pm 0.02$ &$3.30 \pm 0.05$ \\
+Tungsten, QGSP\_BERT\_HP & $2.89 \pm 0.04$ &$2.29 \pm 0.64$ &$1.75 \pm 0.02$ &$3.37 \pm 0.05$ \\
+\hline
+\end{tabular}
+\caption[The contributions to the jet energy resolution using the nominal ILD detector with various HCal options for 45 and 250 GeV jet energies.]{The contributions to the jet energy resolution using the nominal ILD detector with various HCal options for 45 and 250 GeV jet energies.}
+\label{table:jerbdhcalabsmaterial}
+\end{table}
 
 In conclusion, the steel option HCal outperforms the tungsten option in terms of intrinsic energy resolution and pattern recognition confusion making it the more preferred option of the two.
 

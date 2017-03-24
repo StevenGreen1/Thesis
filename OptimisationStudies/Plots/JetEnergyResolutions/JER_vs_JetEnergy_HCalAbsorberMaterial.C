@@ -71,6 +71,32 @@
 
     float Variable_4_TotalConfusion_JERError[4] = {0.0601952861648,0.0469832096568,0.0491831206667,0.053439495985};
 
+    for (int i = 0; i < 4; i++)
+    {
+        std::cout << fixed << std::setprecision(2) << "$" << Variable_1_Default_JER[i] << " \\pm " << Variable_1_Default_JERError[i] << "$ &";
+    }
+    std::cout << std::endl;
+
+    for (int i = 0; i < 4; i++)
+    {
+        std::cout << fixed << std::setprecision(2) << "$" << Variable_2_Default_JER[i] << " \\pm " << Variable_2_Default_JERError[i] << "$ &";
+    }
+    std::cout << std::endl;
+
+    for (int i = 0; i < 4; i++)
+    {
+        std::cout << fixed << std::setprecision(2) << "$" << Variable_3_Default_JER[i] << " \\pm " << Variable_3_Default_JERError[i] << "$ &";
+    }
+    std::cout << std::endl;
+
+    for (int i = 0; i < 4; i++)
+    {
+        std::cout << fixed << std::setprecision(2) << "$" << Variable_4_Default_JER[i] << " \\pm " << Variable_4_Default_JERError[i] << "$ &";
+    }
+    std::cout << std::endl;
+
+
+
     TLegend *pLegend = new TLegend(0.2, 0.75, 0.85, 0.9);
     pLegend->SetNColumns(2);
     pLegend->SetTextSize(0.05);
@@ -172,5 +198,5 @@
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
-    pCanvasEj->SaveAs("JER_vs_JetEnergy_HCalAbsorberMaterial.pdf");
+//    pCanvasEj->SaveAs("JER_vs_JetEnergy_HCalAbsorberMaterial.pdf");
 }
