@@ -372,8 +372,8 @@ HCal Option & Energy Resolution [\%] \\
 \hline
 Stainless Steel, QGSP\_BERT & $8.8\pm0.2$ \\
 Stainless Steel, QGSP\_BERT\_HP & $9.0\pm0.3$ \\
-Tungsten, QGSP\_BERT & $9.1\pm0.2$ \\
-Tungsten, QGSP\_BERT\_HP & $9.0\pm0.2$ \\
+Tungsten, QGSP\_BERT & $9.1\pm0.2$ Change this\\
+Tungsten, QGSP\_BERT\_HP & $9.0\pm0.2$  Change this\\
 \hline
 \end{tabular}
 \caption[The energy resolution using the nominal ILD detector with various HCal options determined using 50 GeV $\text{K}^{0}_{L}$ events.]{The energy resolution using the nominal ILD detector with various HCal options determined using 50 GeV $\text{K}^{0}_{L}$ events.}
@@ -395,23 +395,21 @@ HCal Option & Jet Energy & & & \\
 \hline
 Stainless Steel, QGSP\_BERT & $3.65 \pm 0.05$ &$2.88 \pm 0.04$ &$2.85 \pm 0.04$ &$2.97 \pm 0.05$ \\
 Stainless Steel, QGSP\_BERT\_HP & $3.67 \pm 0.05$ &$2.92 \pm 0.04$ &$2.86 \pm 0.04$ &$3.03 \pm 0.04$ \\
-Tungsten, QGSP\_BERT & $3.67 \pm 0.05$ &$3.12 \pm 0.04$ &$3.36 \pm 0.04$ &$3.76 \pm 0.05$ \\
-Tungsten, QGSP\_BERT\_HP & $3.69 \pm 0.05$ &$3.03 \pm 0.04$ &$3.38 \pm 0.04$ &$3.80 \pm 0.05$ \\
+Tungsten, QGSP\_BERT & $3.78 \pm 0.05$ & $3.12 \pm 0.04$ & $3.15 \pm 0.04$ & $3.43 \pm 0.04 |$ \\
+Tungsten, QGSP\_BERT\_HP & $3.80 \pm 0.05$ & $3.08 \pm 0.04$ & $3.24 \pm 0.04$ & $3.41 \pm 0.04$ \\
+%Tungsten, QGSP\_BERT & $3.67 \pm 0.05$ &$3.12 \pm 0.04$ &$3.36 \pm 0.04$ &$3.76 \pm 0.05$ \\ 1 GeV Truncation 
+%Tungsten, QGSP\_BERT\_HP & $3.69 \pm 0.05$ &$3.03 \pm 0.04$ &$3.38 \pm 0.04$ &$3.80 \pm 0.05$ \\ 1 GeV Truncation
 \hline
 \end{tabular}
 \caption[The jet energy resolution using the nominal ILD detector with various HCal options for various jet energies.]{The jet energy resolution using the nominal ILD detector with various HCal options for various jet energies.}
 \label{table:jerhcalabsmaterial}
 \end{table}
 
-The jet energy resolutions for various jet energies are shown in table \ref{table:jerhcalabsmaterial} for the various HCal options considered.  These results indicate that steel outperforms tungsten as an absorber material for high energy jets, while at low jet energies the performance is similar.  This indicates that the intrinsic energy resolution of the detector, which is the dominant contribution to the jet energy resolution at low jet energies, is similar for the steel and tungsten options, which is in agreement with the single $\text{K}^{0}_{L}$ energy resolution study.  At high jet energies the performance of the two models diverges, with the steel option giving the better performance.  The performance at high energies will be controlled by the confusion contribution to the jet energy resolution, which are shown for 45 and 250 GeV jets in table \ref{table:jerbdhcalabsmaterial}.  The confusion contribution is also larger for the tungsten option at low jet energies, however, as the intrinsic energy resolution of the detector dominates at these energies the effect of confusion is less prominent.  The change in confusion will be due to the PandoraPFA algorithms being tuned for HCal cell dimensions for the steel HCal option, while the cells for the tungsten option are thinner by a factor of approximately $\frac{\lambda_{I}^{Steel}}{\lambda_{I}^{Tungsten}} \approx 1.7$, where $\lambda_{I}^{x}$ is the distance of one radiation length in material $x$.  It is unfeasible to tune all of the PandoraPFA algorithms to each detector geometry, however, the breakdowns of the jet energy resolution indicate that even if it were possible to obtain the same confusion contributions to the jet energy resolution the intrinsic energy resolution of the tungsten option is marginally worse than that of steel.  
+The jet energy resolutions for various jet energies are shown in table \ref{table:jerhcalabsmaterial} for the various HCal options considered.  These results indicate that steel outperforms tungsten as the absorber material for the HCal.  Furthermore, as the jet energy increases the magnitude of the difference in jet energy resolutions between the two options increases.  This indicates the differences in jet energy resolution between the two options is being driven by the confusion contribution to the jet energy resolution as contribution rises with increasing jet energy, while the intrinsic energy resolution contribution falls.  Furthermore, as the $\text{K}^{0}_{L}$ energy resolution does not strongly depend on the HCal absorber material, it is expected that neither will the intrinsic energy resolution contribution to the jet energy resolution.  
 
-The energy resolution is marginally worse for the tungsten option at high energies in comparison to the steel option as... TRUNCATION MAYBE NEEDS CHANGING 
+The intrinsic energy resolution and confusion contributions to the jet energy resolution for 45 and 250 GeV jets are shown in table \ref{table:jerbdhcalabsmaterial}.  As expected the intrinsic energy resolution contribution to the jet energy resolution are nearly identical between the various options.  It should be emphasised that this is only the case as the HCal cell truncation, as described in section \ref{}, was separately tuned for the tungsten option.  This has to be modified as the average cell energy is greater when using tungsten, as opposed to steel, for the HCal absorber material.  As the HCal primarily measures hadronic showers one may naively expect the number of radiation lengths in the HCal to be irrelevant to performance, given both options have the same number of nuclear interaction lengths, but this is not the case as all hadronic showers have an electromagnetic component, from the decays of $\pi^{0}\rightarrow \gamma \gamma$.  Therefore, these shower components deposit more energy per unit length in the HCal, which raises the average cell energy.  
 
-Therefore, tungsten offers no advantage to steel based on jet energy resolution.  
-
-%%%While maybe make pandora more effective, not needed as tungsten ER worse marginally at high energies so only ever worse.
-
-The use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, made a minimal impact on these results.
+The confusion contribution to the jet energy resolution is larger for the tungsten HCal option than for the steel HCal option.  This will be due to the PandoraPFA algorithms being tuned for HCal cell dimensions for the steel HCal option, while the cells for the tungsten option are thinner by a factor of approximately $\frac{\lambda_{I}^{Steel}}{\lambda_{I}^{Tungsten}} \approx 1.7$, where $\lambda_{I}^{x}$ is the distance of one radiation length in material $x$.  It is unfeasible to tune all of the PandoraPFA algorithms to each detector geometry, however, the breakdowns of the jet energy resolution indicate that even if it were possible to obtain the same confusion contributions for both options, the tungsten option would offer no advantage to the steel option in terms of the intrinsic energy resolution.  Finally it was noted that the use of the QGSP\_BERT\_HP physics list, as opposed to QGSP\_BERT, made a minimal impact on any of the results presented here.
 
 %JER BD
 
@@ -427,21 +425,38 @@ HCal Option & Jet Energy & & & \\
 \hline
 Stainless Steel, QGSP\_BERT & $2.93 \pm 0.04$ & $2.16 \pm 0.06$ & $1.69 \pm 0.02$ &$2.45 \pm 0.05$ \\
 Stainless Steel, QGSP\_BERT\_HP & $2.98 \pm 0.04$ &$2.15 \pm 0.06$ &$1.65 \pm 0.02$ &$2.53 \pm 0.04$ \\
-Tungsten, QGSP\_BERT & $2.94 \pm 0.04$ &$2.20 \pm 0.06$ &$1.80 \pm 0.02$ &$3.30 \pm 0.05$ \\
-Tungsten, QGSP\_BERT\_HP & $2.89 \pm 0.04$ &$2.29 \pm 0.64$ &$1.75 \pm 0.02$ &$3.37 \pm 0.05$ \\
+Tungsten, QGSP\_BERT & $2.97 \pm 0.04$ & $2.34 \pm 0.06$ & $1.65 \pm 0.02$ & $3.01 \pm 0.05$ \\
+Tungsten, QGSP\_BERT\_HP & $2.92 \pm 0.04$ & $2.42 \pm 0.06$ & $1.65 \pm 0.02$ & $2.99 \pm 0.05$ \\
 \hline
 \end{tabular}
 \caption[The contributions to the jet energy resolution using the nominal ILD detector with various HCal options for 45 and 250 GeV jet energies.]{The contributions to the jet energy resolution using the nominal ILD detector with various HCal options for 45 and 250 GeV jet energies.}
 \label{table:jerbdhcalabsmaterial}
 \end{table}
 
-In conclusion, the steel option HCal outperforms the tungsten option in terms of intrinsic energy resolution and pattern recognition confusion making it the more preferred option of the two.
+In conclusion, there are no significant differences in the energy resolution when changing the HCal absorber material from steel to tungsten.  The steel option HCal outperforms the tungsten option in terms of pattern recognition confusion, when using the default PandoraPFA settings, making it the more preferred option of the two.
 
 %========================================================================================
 
 \subsection{HCal Cell Size}
 \label{sec:hcalcells}
-For this study a number of different detector models were considered where the cell size in the HCal had been varied about the nominal value of $30 \times 30 \text{mm}^{2}$ square cells.  The granularities considered were $10 \times 10 \text{mm}^{2}$, $20 \times 20 \text{mm}^{2}$, $30 \times 30 \text{mm}^{2}$, $40 \times 40 \text{mm}^{2}$, $50 \times 50 \text{mm}^{2}$ and $100 \times 100 \text{mm}^{2}$ square cells.  The jet energy resolution as a function of cell size in the HCal is shown in figure \ref{fig:hcalcellsize}.
+The HCal cell size is an important detector parameter in the application of particle flow calorimetry.  Smaller HCal cell sizes will lead to a finer spatial resolution that can be used to better separate charged and neutral particle calorimetric energy deposits, however, this will also lead to an increase in the number of readout channels, which will raise the cost of the calorimeter.  Therefore, it is highly desirable to achieve the optimal physics performance using the largest cell size possible.  The nominal ILD HCal has a 30 mm square cell size and in this study the following square cell sizes were considered; 10 mm, 20 mm, 30 mm, 40 mm, 50 mm and 100 mm.  
+
+% SP
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L.pdf}
+\caption[Energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$.}
+\label{fig:hcalcellskaon}
+\end{figure}
+
+The energy resolution for 50 GeV $\text{K}^{0}_{L}$ events as a function of cell size in the HCal is shown in figure \ref{fig:hcalcellskaon}.  These $\text{K}^{0}_{L}$ samples will deposit energy primarily within the HCal making them appropriate events to consider when determining the performance of the HCal, however, a non-neglibile amount of energy will also be deposited within the ECal.  Therefore, these energy resolutions represents the intrinsic energy resolution of the ILD detector as a whole and not purely that of the HCal.  It is clear that there is no strong dependency on the energy resolution of the $\text{K}^{0}_{L}$ as a function of the HCal cell size.  There are small fluctuations in the energy resolution, but are most likely due to fluctuations from the calibration procedure and the precision in determining the optimal HCal cell truncation, described in section \ref{}.  The precision of the optimal cell truncation is worse for large HCal cell sizes as the range of truncations considered for the optimisation is focused around the optimal truncation for the nominal ILD HCal truncation.  
+
+%JER
+
+As a smaller HCal cell size will lead to better separation of charged and neutral hadron calorimetric energy deposits, it is expected that the confusion contribution to the jet energy resolution will be reduced by using smaller HCal cell sizes.  The jet energy resolution as a function of cell size in the HCal shown in figure \ref{fig:hcalcellsize}.  At low jet energies there is no strong dependency of the jet energy resolution on the HCal cell size, which is as expected from the $\text{K}^{0}_{L}$ energy resolution study.  For high energy jets there is a clear dependence, with lower HCal cell sizes leading to better jet energy resolutions.  Examining the different contributions to the jet energy resolution, shown in figure \ref{fig:hcalcellsizebreak} it can be seen that the intrinsic energy resolution contribution is largely invariant to changes in the HCal cell size, modulo small fluctuations due to calibration, while the confusion contribution drives the overall trend in the jet energy resolution at high energies.  The confusion contribution does fluctuate for small HCal cell sizes when considering low jet energies, but this will be due to tuning of the PandoraPFA algorithms to the nominal ILD HCal cell size.  As the confusion contribution is not dominant at low energies, this effect is masked when considering the jet energy resolution metric.  Furthermore, as the photon confusion is largely invariant to changes in the HCal cell size it indicates that the confusion contribution is changing due to pattern recognition improvements related to charged and neutral hadrons.
+
+The jet energy resolution dependence on the HCal cell size is less strong than that observed in the ECal cell size, but that is to be expected as the ECal cell size determines the position of the start of showering particles in the calorimeters.  If the start of a particle shower is well reconstructed in the ECal it becomes easier to associate the relevant calorimetric energy deposits in the HCal to it and vice verse.  Therefore, a comparison of these studies indicates that ECal cell size is more crucial in the successful application of particle flow calorimetry than the HCal cell size is.
 
 \begin{figure}
 \centering
@@ -450,7 +465,7 @@ For this study a number of different detector models were considered where the c
 \label{fig:hcalcellsize}
 \end{figure}
 
-As with the case for the ECal, the jet energy resolution was found to improve with decreasing cell size as smaller cell size lead to better separation of energy deposits from neutral and charged particle showers.
+%JER BD
 
 \begin{figure}
 \centering
@@ -460,25 +475,15 @@ As with the case for the ECal, the jet energy resolution was found to improve wi
 \label{fig:hcalcellsizebreak}
 \end{figure}
 
-The jet energy resolution breakdowns, shown in figure, \ref{fig:hcalcellsizebreak}, show that the confusion term varies when changing the HCal cell size, but the intrinsic energy resolution does not.  Furthermore, the photon confusion is invariant to changes in HCal cell size, indicating that the observed overall performance changes are due to the effects of confusion arising from energy deposits from charged and neutral hadrons.  Once again for 45 GeV jets the detector performance is dominated by intrinsic energy resolution and so HCal cell size has little effect, while for 250 GeV jets the performance is dominated by confusion and HCal cell size becomes more significant.  
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L.pdf}
-\caption[Energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$.}
-\label{fig:hcalcellskaon}
-\end{figure}
-
-The energy resolution of single long lived neutral kaons, $\text{K}^{0}_{L}$, at 50 GeV is considered as a function of cell size in the HCal.  This is shown in figure \ref{fig:hcalcellskaon} and, as expected, the energy resolution of the detector is largely invariant to changes in the cell size in the HCal.  As these $\text{K}^{0}_{L}$ samples may deposit energy in the ECal, this figure represents the intrinsic energy resolution of the ILD detector as a whole and not purely that of the HCal.  However, it expected that the bulk of the energy deposited by these samples occurs within the HCal and so such plots are a useful representation of the HCal performance.  
-
-The cell size of the HCal acts to determine the impact of confusion from charged and neutral hadron energy deposits.  It does not vary the intrinsic energy resolution of the detector, nor does it impact the reconstruction of photons.  As confusion is dominant at high jet energies the HCal cell size gains an increasing role in determining detector performance as the energy in an event increases. 
+The confusion contribution to the jet energy resolution decreases by reducing the HCal cell size, while the intrinsic energy resolution of the detector is largely invariant to changes in the HCal cell size.  As this dependancy is relatively weak such even using 100 mm square HCal cell sizes would be enough to allow for separation of the hadronic decays of W and Z bosons at ILC like energies.  However, as jet energy resolution does improve with decreasing cell sizes it is desirable to have as small a HCal cell size as possible.
 
 %========================================================================================
 
 \subsection{HCal Number of Layers}
 \label{sec:hcalnlayers}
+In this study the active and absorber layers in the HCal are held constant and the total number of these layers varied.  This means that the total thickness of the calorimeter changes, while the sampling of particle showers in the calorimeter does not.  It is expected that this study will determine the effects of leakage of energy out of the back of the calorimeter, with a larger number of layers giving a smaller effect from leakage.  This is an important feature of the calorimeter design as the cost of the HCal will scale with the number of readout channels and so minimising the number of layers, while maintaining high quality physics performance is critical.  For this study detector models were simulated with a HCal containing 36, 42, 48, 54 and 60 layers.  The nominal ILD detector contains 48 layers.
 
-This section focuses upon change in detector performance when varying the number of layers in the HCal.  For this study, the absorber and active layer thicknesses are not varied when adding or subtracting layers from the HCal, so both the total depth of the HCal as well as the number of sampling points of the hadronic showers varies simultaneously, this is in comparison to the study described in section \ref{sec:hcalsamplingfrequency} where the total depth of the HCal is fixed.  The detector models considered had 36, 42, 48, 54 and 60 layered HCals.  
+
 
 \begin{figure}
 \centering
