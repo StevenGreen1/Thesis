@@ -235,7 +235,7 @@ $N_{\text{Layers ECal}}$ & & Region 1 [mm] & &  Region 2 [mm] &  [$\text{X}_{0}$
 
 The energy resolution, using 100 GeV $\gamma$ events, as a function of the number of layers in the ECal is shown in figure \ref{fig:ecalsinlayers100gamma} for the silicon option and figure \ref{fig:ecalscnlayers100gamma} for the scintillator option.  As the number of layers is reduced the energy resolution increases, which is expected as more layers means greater the sampling of the electromagnetic particle showers and a reduction in the stochastic contribution to the energy resolution.  The trend observed for the scintillator option is less smooth than that observed for the silicon option.  This will be due to the minor fluctuations appearing in the energy resolutions from the calibration of the simulation.   
 
-The confusion contribution to the jet energy resolution is lowered when the intrinsic energy resolution of the calorimeters improves.  The better the energy resolution the more accurate the energy comparisons between clusters of calorimeter hits and charged particle tracks leading to fewer calorimetric energy deposits where the energy is either double counted or not counted at all.  When the number of layers in the ECal is increased the intrinsic energy resolution of the ECal improves, which has the knock on effect of reducing the confusion contribution to the jet energy resolution, which can be seen in figure \ref{fig:ecalsinlayers} for the silicon ECal option and figure \ref{fig:ecalscnlayers} scintillator ECal option.  In both cases the jet energy resolution was found to improve when the number of layers in the ECal is increased.  The magnitude of the change in jet energy resolution was, however, dependent upon the jet energy, with a stronger dependancy being observed for low energy jets.  The origin of this trend will be the stochastic term in the energy resolution for a sampling calorimeter, which is $\propto \frac{1}{\sqrt{E \times N_{Layers}}}$ where $E$ is the reconstructed energy and $N_{Layers}$ is the number of layers in the calorimeter.  At high jet energies the energy resolution in the ECal is small and changes to the stochastic term that occur when varying the number of layers are too fine to be resolved using jet energy resolution.  While at low jet energies the stochastic term is larger making it possible to resolve the changes to it when varying the number of layers in the ECal.  The jet energy resolution is less sensitive then the single $\gamma$ energy resolution to changes in the number of ECal layers as only $\approx 30\%$ of jet energy is carried in the form of $\gamma$s.  The decomposition of the jet energy resolution into the intrinsic energy resolution and confusion contributions for 45 and 250 GeV jets using both the silicon and scintillator ECal options are shown in figure \ref{fig:ecalnlayersbreak}.  As expected, the twofold reduction in both the intrinsic energy resolution and the confusion contributions to the jet energy resolution is observed when increasing the number of layers in the ECal.  Furthermore, changes to both jet energy resolution contributions when varying the number of layers in the ECal are comparable in size indicating that they are both crucial for determining the overall detector performance.  
+The confusion contribution to the jet energy resolution is lowered when the intrinsic energy resolution of the calorimeters improves.  Improving the energy resolution of the ECal leads to more accurate the energy comparisons between the energy of clusters of calorimeter hits and the momentum of charged particle tracks leading to fewer calorimetric energy deposits where the energy is either double counted or not counted at all.  When the number of layers in the ECal is increased the intrinsic energy resolution of the ECal improves, which has the knock on effect of reducing the confusion contribution to the jet energy resolution, which can be seen in figure \ref{fig:ecalsinlayers} for the silicon ECal option and figure \ref{fig:ecalscnlayers} scintillator ECal option.  In both cases the jet energy resolution was found to improve when the number of layers in the ECal is increased.  The magnitude of the change in jet energy resolution was, however, dependent upon the jet energy, with a stronger dependancy being observed for low energy jets.  The origin of this trend will be the stochastic term in the energy resolution for a sampling calorimeter, which is $\propto \frac{1}{\sqrt{E \times N_{Layers}}}$ where $E$ is the reconstructed energy and $N_{Layers}$ is the number of layers in the calorimeter.  At high jet energies the energy resolution in the ECal is small and changes to the stochastic term that occur when varying the number of layers are too fine to be resolved using jet energy resolution.  While at low jet energies the stochastic term is larger making it possible to resolve the changes to it when varying the number of layers in the ECal.  The jet energy resolution is less sensitive then the single $\gamma$ energy resolution to changes in the number of ECal layers as only $\approx 30\%$ of jet energy is carried in the form of $\gamma$s.  The decomposition of the jet energy resolution into the intrinsic energy resolution and confusion contributions for 45 and 250 GeV jets using both the silicon and scintillator ECal options are shown in figure \ref{fig:ecalnlayersbreak}.  As expected, the twofold reduction in both the intrinsic energy resolution and the confusion contributions to the jet energy resolution is observed when increasing the number of layers in the ECal.  Furthermore, changes to both jet energy resolution contributions when varying the number of layers in the ECal are comparable in size indicating that they are both crucial for determining the overall detector performance.  
 
 Increasing the number of layers in the ECal is beneficial to the intrinsic energy resolution of the ECal as well as the jet energy resolution, particularly for low jet energies.  Separation of the W and Z hadronic decays should be possible for ILC like energies given there are at least 26 layers in the ECal, however, it is desirable to have as large a number of layers as possible to benefit single $\gamma$ energy resolution also.  
 
@@ -310,15 +310,185 @@ Absorber Material Thickness & 20 mm \\
 The HCal performance for single hadrons and the overall jet energy resolution will depend on the details of the HCal design.  A number of options were simulated where the following parameters were varied:
 \begin{itemize}
 \item Cell size.  This is key to successful application of pattern recognition in the particle flow paradigm, but should not change the intrinsic energy resolution.   
-\item Number of layers .  This governs the intrinsic energy resolution of a sampling calorimeter.
-\item Depth of calorimeter.  This is important in determining the impact of leakage of energy out of the detector.  
+\item Number of layers leaving the absorber and active layers thicknesses unchanged.  This changes the total depth of the HCal and so will determine the effect of leakage of energy out of the back of the HCal.
+\item The sampling frequency.  This study involves changing the number of readout layers in the HCal but modifying the thicknesses of the active and absorber layers thicknesses to keep the total number of nuclear interaction lengths constant.  As this modifies the sampling of particle showers in the calorimeter it will effect the intrinsic energy resolution of this sampling calorimeter.
 \item Sampling fraction.  This is the ratio of the active medium thickness to the absorber medium thickness.  This controls how particle showers within the calorimeter are sampled.
 \item Absorber material choice.  Two options have been considered: steel and tungsten.  This choice dictates the growth and propagation of hadronic showers and so plays a crucial role in calorimetry.  
 \end{itemize}
 
+% MOVE TO FIT ORDER OF BULLET POINTS
+
 %========================================================================================
 
-% MOVE TO FIT ORDER OF BULLET POINTS
+\subsection{HCal Cell Size}
+\label{sec:hcalcells}
+The HCal cell size is an important detector parameter in the application of particle flow calorimetry.  Smaller HCal cell sizes will lead to a finer spatial resolution that can be used to better separate charged and neutral particle calorimetric energy deposits, however, this will also lead to an increase in the number of readout channels, which will raise the cost of the calorimeter.  Therefore, it is highly desirable to achieve the optimal physics performance using the largest cell size possible.  The nominal ILD HCal has a 30 mm square cell size and in this study the following square cell sizes were considered; 10 mm, 20 mm, 30 mm, 40 mm, 50 mm and 100 mm.  
+
+% SP
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L.pdf}
+\caption[The energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$ events using the nominal ILD detector model.]{The energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$ events using the nominal ILD detector model.}
+\label{fig:hcalcellser}
+\end{figure}
+
+The energy resolution for 50 GeV $\text{K}^{0}_{L}$ events as a function of cell size in the HCal is shown in figure \ref{fig:hcalcellser}.  These $\text{K}^{0}_{L}$ samples will deposit energy primarily within the HCal making them appropriate events to consider when determining the performance of the HCal, however, a non-neglibile amount of energy will also be deposited within the ECal.  Therefore, these energy resolutions represents the intrinsic energy resolution of the ILD detector as a whole and not purely that of the HCal.  It is clear that there is no strong dependency on the energy resolution of the $\text{K}^{0}_{L}$ as a function of the HCal cell size.  There are small fluctuations in the energy resolution, but are most likely due to fluctuations from the calibration procedure and the precision in determining the optimal HCal cell truncation, described in section \ref{}.  The precision of the optimal cell truncation is worse for large HCal cell sizes as the range of truncations considered for the optimisation is focused around the optimal truncation for the nominal ILD HCal truncation.  
+
+%JER
+As a smaller HCal cell size will lead to better separation of charged and neutral hadron calorimetric energy deposits, it is expected that the confusion contribution to the jet energy resolution will be reduced by using smaller HCal cell sizes.  The jet energy resolution as a function of cell size in the HCal shown in figure \ref{fig:hcalcellsize}.  At low jet energies there is no strong dependency of the jet energy resolution on the HCal cell size, which is as expected from the $\text{K}^{0}_{L}$ energy resolution study.  For high energy jets there is a clear dependence, with lower HCal cell sizes leading to better jet energy resolutions.  Examining the different contributions to the jet energy resolution, shown in figure \ref{fig:hcalcellsizebreak} it can be seen that the intrinsic energy resolution contribution is largely invariant to changes in the HCal cell size, modulo small fluctuations due to calibration, while the confusion contribution drives the overall trend in the jet energy resolution at high energies.  The confusion contribution does fluctuate for small HCal cell sizes when considering low jet energies, but this will be due to tuning of the PandoraPFA algorithms to the nominal ILD HCal cell size.  As the confusion contribution is not dominant at low energies, this effect is masked when considering the jet energy resolution metric.  Furthermore, as the photon confusion is largely invariant to changes in the HCal cell size it indicates that the confusion contribution is changing due to pattern recognition improvements related to charged and neutral hadrons.
+
+The jet energy resolution dependence on the HCal cell size is less strong than that observed in the ECal cell size, but that is to be expected as the ECal cell size determines the position of the start of showering particles in the calorimeters.  If the start of a particle shower is well reconstructed in the ECal it becomes easier to associate the relevant calorimetric energy deposits in the HCal to it and vice verse.  Therefore, a comparison of these studies indicates that ECal cell size is more crucial in the successful application of particle flow calorimetry than the HCal cell size is.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf}
+\caption[The jet energy resolution as a function of HCal cell size for various jet energies using the nominal ILD detector model.]{The jet energy resolution as a function of HCal cell size for various jet energies using the nominal ILD detector model.}
+\label{fig:hcalcellsize}
+\end{figure}
+
+%JER BD
+\begin{figure}
+\centering
+\subfloat[45 GeV Jets.]{\label{fig:hcalcellsize45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalcellsize250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_500GeV_DiJet_Breakdown.pdf}}
+\caption[The contributions to the jet energy resolution as a function of HCal cell size using the nominal ILD detector model for \protect\subref{fig:hcalcellsize45break} 45 GeV jets and \protect\subref{fig:hcalcellsize250break} 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.]{The contributions to the jet energy resolution as a function of HCal cell size using the nominal ILD detector model for \protect\subref{fig:hcalcellsize45break} 45 GeV jets and \protect\subref{fig:hcalcellsize250break} 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.}
+\label{fig:hcalcellsizebreak}
+\end{figure}
+
+The confusion contribution to the jet energy resolution decreases by reducing the HCal cell size, while the intrinsic energy resolution of the detector is largely invariant to changes in the HCal cell size.  As this dependancy is relatively weak such even using 100 mm square HCal cell sizes would be enough to allow for separation of the hadronic decays of W and Z bosons at ILC like energies.  However, as jet energy resolution does improve with decreasing cell sizes it is desirable to have as small a HCal cell size as possible.
+
+%========================================================================================
+
+\subsection{HCal Number of Layers}
+\label{sec:hcalnlayers}
+For this study the total number of layers in the HCal will be varied while leaving the active and absorber layer thicknesses unchanged.  This means that the total thickness of the calorimeter is being modified, but the sampling frequency of particle showers within it does not.  It is expected that this study will determine the effects of leakage of energy out of the back of the calorimeter, with a larger number of layers giving a smaller effect from leakage.  As the cost of the HCal is proportional to the number of readout channels minimising the number of layers, while maintaining high quality physics performance is vital.  For this study detector models were simulated with a HCal containing 36, 42, 48, 54 and 60 layers.  The nominal ILD detector contains 48 layers.
+
+% SP
+It is expected that the energy resolution of the detector will improve with an increasing number of layers in the HCal up to a point as fewer events will suffer from the effects of leakage in a HCal with more layers.  The improvement is only expected up to a point as beyond this point almost all hadronic showers will be fully contained and so additional layers do not impact the energy measurements.  The energy resolution as a function of number of layers in the HCal for 50 GeV $\text{K}^{0}_{L}$ is shown in figure \ref{fig:hcalnfixedlayerser}.  As expected the energy resolution degrades when the number layers is reduced below 48 layers, while above this additional layers do not yield better energy resolutions.  However, even reducing the number of layers to 36 only causes a degradation in the energy resolution of the order of $1\%$.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalNFixedLayers_50GeVKaon0L.pdf}
+\caption[The energy resolution as a function of number of layers in the HCal for 50 GeV $\text{K}^{0}_{L}$ events using the nominal ILD detector model.]{The energy resolution as a function of number of layers in the HCal for 50 GeV $\text{K}^{0}_{L}$ events using the nominal ILD detector model.}
+\label{fig:hcalnfixedlayerser}
+\end{figure}
+
+% JER
+The trend in the 50 GeV $\text{K}^{0}_{L}$ energy resolution when varying the number of layers in the HCal is unlikely to be seen in the jet energy resolution as it is a weak trend and only a small fraction of jet energy is measured within the HCal.  However, the confusion contribution to the jet energy resolution is expected to change as, during the charged particle track to calorimeter cell cluster association, errors will be introduced if energy has leaked from the back of the calorimeter.  For example, if a particle shower from a charged particle suffers heavily from leakage there will be a large disparity between the track momentum and the energy it deposits within the calorimeter.  In that case, PandoraPFA will be overly aggressive in associating other calorimeter energy deposits to this track to account for the energy that has leaked out of the calorimeter, which will introduce errors.  The jet energy resolution as a function of the number of layers in the HCal is shown in figure \ref{fig:hcalnfixedlayers}.  As expected for low energy jets, where intrinsic energy resolution dominates, the jet energy resolution is invariant to the number of layers, while for high jet energies, where confusion dominates, a larger number of layers benefits the jet energy resolution.  When examining the different contributions to the jet energy resolution, shown in figure \ref{ig:hcalnfixedlayersbreak}, it becomes clear that it is the confusion that drives the observed trends, while the intrinsic energy resolution is largely invariant to changes to the number of HCal layers as only a small fraction of jet energy is recorded in the HCal.  Furthermore, the photon confusion is invariant to changes in the number of HCal layers, indicating that the change in the confusion contribution are originating from pattern recognition involving hadrons.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth.pdf}
+\caption[The jet energy resolution as a function of number of layers in the HCal for various jet energies using the nominal ILD detector model.]{The jet energy resolution as a function of number of layers in the HCal for various jet energies using the nominal ILD detector model.}
+\label{fig:hcalnfixedlayers}
+\end{figure}
+
+% JER BD
+\begin{figure}
+\centering
+\subfloat[45 GeV Jets.]{\label{fig:hcalnfixedlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalnfixedlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth_500GeV_DiJet_Breakdown.pdf}}
+\caption[The contributions to the jet energy resolution as a function of number of layers in the HCal using the nominal ILD detector model for \protect\subref{fig:hcalnfixedlayers45break} 45 GeV jets and \protect\subref{fig:hcalnfixedlayers250break} 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.]{The contributions to the jet energy resolution as a function of number of layers in the HCal using the nominal ILD detector model for \protect\subref{fig:hcalnfixedlayers45break} 45 GeV jets and \protect\subref{fig:hcalnfixedlayers250break} 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.}
+\label{fig:hcalnfixedlayersbreak}
+\end{figure}
+
+In summary, even if the number of layers in the HCal were reduced by a factor of 25\% the jet energy resolution would be sufficient for separating the hadronic decays of the W and Z bosons at ILC energies.  However, it is clear that leakage of energy from the back of the HCal would negatively affect events at ILC like energies should the number of layers be reduced from the nominal value of 48 layers, therefore it is desirable to have a minimum of 48 layers in the HCal.
+  
+%========================================================================================
+
+\subsection{HCal Sampling Frequency}
+\label{sec:hcalsamplingfrequency}
+In this study the sampling frequency in the HCal is examined.  This is done by considering varying the number of readout layers in the HCal, while simultaneously varying the active and absorber layer thicknesses such that the total number of nuclear interaction lengths in the HCal is fixed.  For each model considered the absorber material was steel, containing a total of 5.72 $\lambda_{I}$, while the active material was scintillator, containing a total of 0.19 $\lambda_{I}$.  Furthermore, the ratio of the active to absorber layers thicknesses, the sampling fraction, was not changed.  A summary of the detector models considered in this study can be found in table \ref{table:nlayershcaloption}.  
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l l l }
+\hline
+Number $N_{\text{Layers HCal}}$& Absorber Thickness & Active Thickness \\
+ & [mm] & [mm] \\
+\hline
+60 & 16.00 & 2.40 \\ 
+54 & 17.78 & 2.67 \\
+48 & 20.00 & 3.00 \\
+42 & 22.86 & 3.43 \\
+36 & 26.67 & 4.00 \\
+30 & 32.00 & 4.80 \\
+24 & 40.00 & 6.00 \\
+18 & 53.33 & 8.00 \\
+\hline
+\end{tabular}
+\caption[Cell size layout of various HCal models considered.]{Cell size layout of various HCal models considered.}
+\label{table:nlayershcaloption}
+\end{table}
+
+% SP
+Increasing the number of layers in the HCal will increase the number of times a showering particle is sampled, which in turn will reduce the stochastic term in the energy resolution for a sampling calorimeter.  Therefore, it is expected that the energy resolution will improve with increasing number of layers in the HCal.  This is shown for 50 GeV $\text{K}^{0}_{L}$ in figure \ref{fig:hcalnlayerser}.  Although there are fluctuations in the energy resolution, due to both fitting the Gaussian to extract the energy resolution and in the calibration of the detector, there is a clear trend showing that the energy resolution of the calorimeter is strongly dependent upon the sampling frequency in the HCal.   The energy resolutions observed do not exactly follow a $\frac{1}{\sqrt{N_{\text{Readout Layers HCal}}}}$ relationship as these results are for the whole ILD detector, including the $\approx 1 \lambda_{I}$ in the ECal, and not purely the HCal and this functional form neglects the constant term in the energy resolution.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_NHCalVariableLayers_50GeVKaon0L.pdf}
+\caption[The energy resolution as a function of sampling frequency in the HCal for 50 GeV $\text{K}^{0}_{L}$ events using the nominal ILD detector model.]{The energy resolution as a function of sampling frequency in the HCal for 50 GeV $\text{K}^{0}_{L}$ events using the nominal ILD detector model.}
+\label{fig:hcalnlayerser}
+\end{figure}
+
+% JER
+As changing the sampling frequency of a calorimeter alters the intrinsic energy resolution, it is expected that this will produce a twofold effect on the jet energy resolution whereby the intrinsic energy improvements have the knock on effect of lowering confusion, as described in section \ref{sec:ecalnlayers} for changes to the number of layers in the ECal.  The jet energy resolution as a function of sampling frequency in the HCal is shown in figure \ref{ig:hcalnlayers}.  As expected there is an improvement in jet energy resolution at all energies due as both the intrinsic energy resolution and confusion are reduced with increasing sampling frequency, which can be seen when examining the different contributions to the jet energy resolution, shown in figure \ref{fig:hcalnlayersbreak}.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal.pdf}
+\caption[The jet energy resolution as a function of sampling frequency in the HCal for various jet energies using the nominal ILD detector model.]{The jet energy resolution as a function of sampling frequency in the HCal for various jet energies using the nominal ILD detector model.}
+\label{fig:hcalnlayers}
+\end{figure}
+
+% JER BD
+\begin{figure}
+\centering
+\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_91GeV_DiJet_Breakdown.pdf}}
+\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_500GeV_DiJet_Breakdown.pdf}}
+\caption[The contributions to the jet energy resolution as a function of sampling frequency in the HCal using the nominal ILD detector model for \protect\subref{fig:hcalnlayers45break} 45 GeV jets and \protect\subref{fig:hcalnlayers250break} 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.]{The contributions to the jet energy resolution as a function of sampling frequency in the HCal using the nominal ILD detector model for \protect\subref{fig:hcalnlayers45break} 45 GeV jets and \protect\subref{fig:hcalnlayers250break} 250 GeV jets.  The black curve correspond to the standard reconstruction, the blue curve to the intrinsic energy resolution contribution to the jet energy resolution, the red curve to the confusion contribution to the jet energy resolution and the magenta curve to the confusion contribution to the jet energy resolution related solely to $\gamma$ reconstruction.}
+\label{fig:hcalnlayersbreak}
+\end{figure}
+
+It is clear that a larger number of layers in the HCal benefits both the intrinsic energy resolution of the ILD detector as well as reducing the confusion contribution to the jet energy resolution.  As there are few physics analyses that rely on the identification and categorisation of individual neutral hadrons, but there are many that rely on identification and categorisation of $\gamma$s, the intrinsic energy resolution of the HCal is less crucial from a physics perspective than that of the ECal.  However, these studies show the HCal still has a crucial role to play in jet reconstruction in the particle flow paradigm so cannot be neglected.  To achieve a jet energy resolution of $\frac{\sigma_{E}}{E} \lesssim 3.8\%$, which is required to separate the W and Z hadronic decays, the ILD detector will require a minimum of 42 layers in the HCal.  This sampling frequency is required in particular for lower energy jets where the energy resolution is dominated by the intrinsic energy resolution of the detector, while at higher energies the resolution is more than good enough to achieve the separation of the decay channels.  
+
+%========================================================================================
+
+%HERE
+
+\subsection{HCal Sampling Fraction}
+\label{sec:hcalsamplingfraction}
+In this section the sampling fraction, the ratio of the active to absorber layer thicknesses were considered.  For all detector models considered in this section the total number of nuclear interaction lengths in the HCal was held constant, as was the number of layers in the HCal and the cell size.  The detector models considered are summarised in table \ref{table:hcalsamplingfraction}. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ r r r }
+\hline
+Sampling Fraction & Absorber Thickness & Active Thickness \\
+ & [mm] & [mm] \\
+\hline
+0.05 & 20.430 & 1.022 \\ 
+0.10 & 20.213 & 2.021 \\
+0.15 & 20.000 & 3.000 \\
+0.20 & 19.792 & 3.958 \\
+0.25 & 19.587 & 4.897 \\
+\hline
+\end{tabular}
+\caption[Sampling fraction of HCal models considered.]{Sampling fraction of HCal models considered.}
+\label{table:hcalsamplingfraction}
+\end{table}
+
+The jet energy resolution for these detector models is shown in figure \ref{fig:hcalnlayers}.  It was found that there is no significant change in performance when varying the sampling fraction.  
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SamplingFractionInTheHCal.pdf}
+\caption[Jet energy resolution as a function of sampling frequency in the HCal.]{Jet energy resolution as a function of sampling frequency in the HCal.  Label needs fixing.}
+\label{fig:hcalsamplingfraction}
+\end{figure}
+
+%========================================================================================
+
 \subsection{HCal Absorber Material}
 \label{sec:hcalabsorbermaterial}
 
@@ -434,174 +604,6 @@ Tungsten, QGSP\_BERT\_HP & $2.92 \pm 0.04$ & $2.42 \pm 0.06$ & $1.65 \pm 0.02$ &
 \end{table}
 
 In conclusion, there are no significant differences in the energy resolution when changing the HCal absorber material from steel to tungsten.  The steel option HCal outperforms the tungsten option in terms of pattern recognition confusion, when using the default PandoraPFA settings, making it the more preferred option of the two.
-
-%========================================================================================
-
-\subsection{HCal Cell Size}
-\label{sec:hcalcells}
-The HCal cell size is an important detector parameter in the application of particle flow calorimetry.  Smaller HCal cell sizes will lead to a finer spatial resolution that can be used to better separate charged and neutral particle calorimetric energy deposits, however, this will also lead to an increase in the number of readout channels, which will raise the cost of the calorimeter.  Therefore, it is highly desirable to achieve the optimal physics performance using the largest cell size possible.  The nominal ILD HCal has a 30 mm square cell size and in this study the following square cell sizes were considered; 10 mm, 20 mm, 30 mm, 40 mm, 50 mm and 100 mm.  
-
-% SP
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L.pdf}
-\caption[Energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal cell size for 50 GeV $\text{K}^{0}_{L}$.}
-\label{fig:hcalcellskaon}
-\end{figure}
-
-The energy resolution for 50 GeV $\text{K}^{0}_{L}$ events as a function of cell size in the HCal is shown in figure \ref{fig:hcalcellskaon}.  These $\text{K}^{0}_{L}$ samples will deposit energy primarily within the HCal making them appropriate events to consider when determining the performance of the HCal, however, a non-neglibile amount of energy will also be deposited within the ECal.  Therefore, these energy resolutions represents the intrinsic energy resolution of the ILD detector as a whole and not purely that of the HCal.  It is clear that there is no strong dependency on the energy resolution of the $\text{K}^{0}_{L}$ as a function of the HCal cell size.  There are small fluctuations in the energy resolution, but are most likely due to fluctuations from the calibration procedure and the precision in determining the optimal HCal cell truncation, described in section \ref{}.  The precision of the optimal cell truncation is worse for large HCal cell sizes as the range of truncations considered for the optimisation is focused around the optimal truncation for the nominal ILD HCal truncation.  
-
-%JER
-
-As a smaller HCal cell size will lead to better separation of charged and neutral hadron calorimetric energy deposits, it is expected that the confusion contribution to the jet energy resolution will be reduced by using smaller HCal cell sizes.  The jet energy resolution as a function of cell size in the HCal shown in figure \ref{fig:hcalcellsize}.  At low jet energies there is no strong dependency of the jet energy resolution on the HCal cell size, which is as expected from the $\text{K}^{0}_{L}$ energy resolution study.  For high energy jets there is a clear dependence, with lower HCal cell sizes leading to better jet energy resolutions.  Examining the different contributions to the jet energy resolution, shown in figure \ref{fig:hcalcellsizebreak} it can be seen that the intrinsic energy resolution contribution is largely invariant to changes in the HCal cell size, modulo small fluctuations due to calibration, while the confusion contribution drives the overall trend in the jet energy resolution at high energies.  The confusion contribution does fluctuate for small HCal cell sizes when considering low jet energies, but this will be due to tuning of the PandoraPFA algorithms to the nominal ILD HCal cell size.  As the confusion contribution is not dominant at low energies, this effect is masked when considering the jet energy resolution metric.  Furthermore, as the photon confusion is largely invariant to changes in the HCal cell size it indicates that the confusion contribution is changing due to pattern recognition improvements related to charged and neutral hadrons.
-
-The jet energy resolution dependence on the HCal cell size is less strong than that observed in the ECal cell size, but that is to be expected as the ECal cell size determines the position of the start of showering particles in the calorimeters.  If the start of a particle shower is well reconstructed in the ECal it becomes easier to associate the relevant calorimetric energy deposits in the HCal to it and vice verse.  Therefore, a comparison of these studies indicates that ECal cell size is more crucial in the successful application of particle flow calorimetry than the HCal cell size is.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf}
-\caption[Jet energy resolution as a function of HCal cell size.]{Jet energy resolution as a function of HCal cell size.}
-\label{fig:hcalcellsize}
-\end{figure}
-
-%JER BD
-
-\begin{figure}
-\centering
-\subfloat[45 GeV Jets.]{\label{fig:hcalcellsize45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_91GeV_DiJet_Breakdown.pdf}}
-\subfloat[250 GeV Jets.]{\label{fig:hcalcellsize250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of HCal cell size for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal cell size for 45 and 250 GeV jets.}
-\label{fig:hcalcellsizebreak}
-\end{figure}
-
-The confusion contribution to the jet energy resolution decreases by reducing the HCal cell size, while the intrinsic energy resolution of the detector is largely invariant to changes in the HCal cell size.  As this dependancy is relatively weak such even using 100 mm square HCal cell sizes would be enough to allow for separation of the hadronic decays of W and Z bosons at ILC like energies.  However, as jet energy resolution does improve with decreasing cell sizes it is desirable to have as small a HCal cell size as possible.
-
-%========================================================================================
-
-\subsection{HCal Number of Layers}
-\label{sec:hcalnlayers}
-In this study the active and absorber layers in the HCal are held constant and the total number of these layers varied.  This means that the total thickness of the calorimeter changes, while the sampling of particle showers in the calorimeter does not.  It is expected that this study will determine the effects of leakage of energy out of the back of the calorimeter, with a larger number of layers giving a smaller effect from leakage.  This is an important feature of the calorimeter design as the cost of the HCal will scale with the number of readout channels and so minimising the number of layers, while maintaining high quality physics performance is critical.  For this study detector models were simulated with a HCal containing 36, 42, 48, 54 and 60 layers.  The nominal ILD detector contains 48 layers.
-
-
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth.pdf}
-\caption[Jet energy resolution as a function of number of layers in the HCal.]{Jet energy resolution as a function of number of layers in the HCal.}
-\label{fig:hcalnfixedlayers}
-\end{figure}
-
-The jet energy resolution for the various detector models considered is shown in figure \ref{fig:hcalnlayers}.  It was found that increasing the number of layers in the HCal improved the jet energy resolution for high energy jets, while for low energy jets no the performance change was observed.  The breakdown of the jet energy resolution for the high energy jets, shown in figure \ref{ig:hcalnfixedlayersbreak}, indicates a reduction in the confusion term is driving the change in performance when increasing the number of layers in the HCal.  
-
-\begin{figure}
-\centering
-\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth_91GeV_DiJet_Breakdown.pdf}}
-\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of number of layers in the HCal for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of number of layers in the HCal for 45 and 250 GeV jets.}
-\label{fig:hcalnfixedlayersbreak}
-\end{figure}
-
-While the intrinsic energy resolution for jets appeared largely invariant to changes in the number of layers in the HCal, it can be seen that there is an associated improvement in the energy resolution for neutral hadrons, which can be seen in figure \ref{fig:hcalnfixedlayerser}.  This change in neutral hadron energy resolution will be masked in the jet energy resolution study as only $\approx 10\%$ of the energy of a jet is carried in the form of neutral hadrons and the energy resolution change is minimal.   
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalNFixedLayers_50GeVKaon0L.pdf}
-\caption[Energy resolution as a function of number of layers in the HCal for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of number of layers in the HCal  for 50 GeV $\text{K}^{0}_{L}$.}
-\label{fig:hcalnfixedlayerser}
-\end{figure}
-
-In conclusion, a larger number of layers in the HCal is beneficial to detector performance both in terms of a reduction in pattern recognition confusion as well as an improvement in the energy resolution of neutral hadrons.  These performance changes at the energies considered are relatively small and so it would be feasible to consider changes to the nominal number of HCal layers.  However, at higher energies these conclusions could be significantly modified as leakage dominates.  
-
-%========================================================================================
-
-\subsection{HCal Sampling Fraction}
-\label{sec:hcalsamplingfraction}
-In this section the sampling fraction, the ratio of the active to absorber layer thicknesses were considered.  For all detector models considered in this section the total number of nuclear interaction lengths in the HCal was held constant, as was the number of layers in the HCal and the cell size.  The detector models considered are summarised in table \ref{table:hcalsamplingfraction}. 
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{ r r r }
-\hline
-Sampling Fraction & Absorber Thickness & Active Thickness \\
- & [mm] & [mm] \\
-\hline
-0.05 & 20.430 & 1.022 \\ 
-0.10 & 20.213 & 2.021 \\
-0.15 & 20.000 & 3.000 \\
-0.20 & 19.792 & 3.958 \\
-0.25 & 19.587 & 4.897 \\
-\hline
-\end{tabular}
-\caption[Sampling fraction of HCal models considered.]{Sampling fraction of HCal models considered.}
-\label{table:hcalsamplingfraction}
-\end{table}
-
-The jet energy resolution for these detector models is shown in figure \ref{fig:hcalnlayers}.  It was found that there is no significant change in performance when varying the sampling fraction.  
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SamplingFractionInTheHCal.pdf}
-\caption[Jet energy resolution as a function of sampling frequency in the HCal.]{Jet energy resolution as a function of sampling frequency in the HCal.  Label needs fixing.}
-\label{fig:hcalsamplingfraction}
-\end{figure}
-
-%========================================================================================
-
-\subsection{HCal Sampling Frequency}
-\label{sec:hcalsamplingfrequency}
-This section aims to determine the change in performance when the sampling frequency, the number of times a particle shower is sampled per unit length, in the HCal is varied.  This was done by varying the number of readout layers, while maintaining the total number of nuclear interaction lengths contained within the HCal.  In all cases the absorber material was steel while the active material was scintillator.  Each HCal configuration had the same total number of nuclear interaction lengths, 5.72 $\lambda_{I}$ in the absorber material and 0.19 $\lambda_{I}$ in the active material, however, the thickness of the layers was varied depending on the total number of layers being considered.  The ratio of the active material layers to the absorber material layers, the sampling fraction, was also kept constant in this study.  A summary of the detector models considered in this study can be found in table \ref{table:nlayershcaloption}.  
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{ l l l }
-\hline
-Number $N_{\text{Layers HCal}}$& Absorber Thickness & Active Thickness \\
- & [mm] & [mm] \\
-\hline
-60 & 16.00 & 2.40 \\ 
-54 & 17.78 & 2.67 \\
-48 & 20.00 & 3.00 \\
-42 & 22.86 & 3.43 \\
-36 & 26.67 & 4.00 \\
-30 & 32.00 & 4.80 \\
-24 & 40.00 & 6.00 \\
-18 & 53.33 & 8.00 \\
-\hline
-\end{tabular}
-\caption[Cell size layout of various HCal models considered.]{Cell size layout of various HCal models considered.}
-\label{table:nlayershcaloption}
-\end{table}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal.pdf}
-\caption[Jet energy resolution as a function of sampling frequency in the HCal.]{Jet energy resolution as a function of sampling frequency in the HCal.}
-\label{fig:hcalnlayers}
-\end{figure}
-
-The jet energy resolution for the various detector models considered is shown in figure \ref{fig:hcalnlayers}.  It was found that increasing the number of layers in the HCal, for the same total thickness, improved the jet energy resolution for all jet energies considered.  Based on the increase in the frequency of sampling of particle showers in the HCal, it is expected that the intrinsic energy resolution of the detector should improve.  However, the improvement observed in jet energy resolution for high energy jets indicates that sampling frequency is also affecting the confusion terms.
-
-\begin{figure}
-\centering
-\subfloat[45 GeV Jets.]{\label{fig:hcalnlayers45break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_91GeV_DiJet_Breakdown.pdf}}
-\subfloat[250 GeV Jets.]{\label{fig:hcalnlayers250break}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_500GeV_DiJet_Breakdown.pdf}}
-\caption[Jet energy resolution breakdown as a function of HCal sampling frequency for 45 and 250 GeV jets.]{Jet energy resolution breakdown as a function of HCal sampling frequency for 45 and 250 GeV jets.}
-\label{fig:hcalnlayersbreak}
-\end{figure}
-
-These trends are further explored by considering the breakdown of jet energy resolution, which are shown in figure \ref{fig:hcalnlayersbreak}.  As expected from the standard performance reconstruction trends as a function of jet energy, there is an improvement in both the intrinsic energy resolution and a reduction in the impact of confusion when the number of layers in the HCal is increased.  The dominant trend driving the overall detector performance is that associated with the confusion of separating energy deposits from charged and neutral particles.  This emphasises the importance of pattern recognition to detector performance in the particle flow paradigm.    
-
-\begin{figure}
-\centering
-\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/EnergyResolution/ER_vs_NHCalVariableLayers_50GeVKaon0L.pdf}
-\caption[Energy resolution as a function of HCal sampling frequency for 50 GeV $\text{K}^{0}_{L}$.]{Energy resolution as a function of HCal sampling frequency for 50 GeV $\text{K}^{0}_{L}$.}
-\label{fig:hcalnlayers}
-\end{figure}
-
-The change in the intrinsic energy resolution of the HCal when varying the sampling frequency is best summarised by looking at the energy resolution of neutral hadrons.  A plot of energy resolution against the number of readout layers in the HCal for 50 GeV $\text{K}^{0}_{L}$ can be found in figure \ref{fig:hcalnlayers}.  This data shows that a reduction in sampling frequency of a particle shower that accompanies a reduction in the number of readout layers results in a broadening of energy distributions and a degradation in the resolution.  It should again be emphasised that these results are for the full ILD detector model and so include the effect of the $\approx 1 \lambda_{I}$ in the ECal.  
-
-The increasing the HCal sampling frequency has a twofold effect on the detector performance: an increase in sampling rate of particle showers and an improvement to the intrinsic energy resolution and a reduction in the confusion arising from associating energy deposits from hadrons.  
 
 %========================================================================================
 %========================================================================================
