@@ -39,7 +39,7 @@ Hadrons ($X^{0}$) & & & & \\
 The magnitude of the improvements offered by particle flow calorimetry can be explicitly seen when considering the different contributions to the measurement of jet energies, which is summarised in table \ref{table:pflowjet}.  After the decay of short lived particles approximately 60\% of the energy of a jet is carried in the form of charged particles, 30\% in the form of $\gamma$s and 10\% in the form of neutral hadrons.  A negligible amount of energy is also carried in the form of invisible energy i.e. neutrinos.  In the traditional calorimetric approach $\gamma$s are measured within the ECal, with an energy resolution of $\sim 0.15 \times \sqrt{E_{\gamma}}$, and the remaining particles are measured in the HCal, with an energy resolution of $\sim 0.55 \times \sqrt{E_{X}}$.  This gives contributions to the jet energy, $E_{j}$, resolution of $\frac{0.08}{\sqrt{E_{j}}}$ and $\frac{0.46}{\sqrt{E_{j}}}$ from $\gamma$s and other particles respectively.  These add in quadrature to give a total jet energy resolution of $\frac{0.47}{\sqrt{E_{j}}}$.  In the particle flow paradigm the energy of charged particles is measured in the tracker, which has such a good energy resolution that its contribution to the jet energy resolution is negligible.  Therefore, contributions to the jet energy resolutions only come from $\gamma$s and from neutral hadrons, which when added in quadrature give a total jet energy resolution of $\frac{0.19}{\sqrt{E_{j}}}$.  This jet energy resolution is significantly better than that offered by the traditional calorimetric approach, however, it must be emphasised that this is an upper limit on the performance as the effect of confusion will degrade the jet energy resolution.  By applying sophisticated pattern recognition algorithms this confusion can be minimised and exceptional performance achieved.  While numerous approximations have been made in the above calculation it is clear that particle flow calorimetry has the potential to revolutionise detector deign for high energy physics experiments.
 
 \section{Linear Collider Detectors}
-
+\label{sec:ild}
 All detector concepts for the linear collider have been purposely built to make particle flow calorimetry possible.  While there are a number of different concepts that are under consideration for both the ILC and CLIC one of the most prominent, and the focus of this work, is the International Large Detector (ILD).  The ILD detector, shown in figure \ref{fig:ild} realises very high spatial resolution for all sub-detector systems thanks to its highly granular calorimeters and central tracking system, all of which is encompassed within a 3.5 T magnetic field.  When combined with sophisticated pattern recognition software provided by PandoraPFA, particle flow calorimetry can be realised and the jet energy resolution can reach the goal of $3.8 \%$ which is required to allow separation of hadronic decays from W and Z bosons.  Details on each of the various sub-detector systems for ILD will now be discussed.
 
 \begin{figure}
@@ -168,11 +168,35 @@ It is inappropriate to use the nominal ILD detector for simulations of the CLIC 
 
 \begin{figure}
 \centering
-\subfloat[]{\label{fig:clicild1}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png}}
-\subfloat[]{\label{fig:clicild2}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD_2.png}}
+\subfloat[]{\label{fig:clicild1}\includegraphics[width=0.4\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png}}
+\hspace{1cm}
+\subfloat[]{\label{fig:clicild2}\includegraphics[width=0.4\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD_2.png}}
 \caption[\protect\subref{fig:ild1} Longitudinal (top quadrant) and \protect\subref{fig:ild2} transverse cross section of the CLIC\_ILD detector.  Figures taken from \cite{Linssen:2012hp}.]{\protect\subref{fig:ild1} Longitudinal (top quadrant) and \protect\subref{fig:ild2} transverse cross section of the CLIC\_ILD detector.  Figures taken from \cite{Linssen:2012hp}.}
 \label{fig:clicild}
 \end{figure} 
 
 \section{PandoraPFA}
+Particle flow calorimetry relies upon correct associations being made between calorimetric energy deposits and charged particle tracks.  Even with a finely segmented detector, such as the ILD detector described in section \ref{sec:ild}, correctly making these associations is highly a non-trivial task and must be done using advanced pattern recognition software.  This is provided by the PandoraPFA particle flow algorithm \cite{arXiv:0907.3577, arXiv:1209.4039}.
+
+PandoraPFA applies the pattern recognition logic in eight main stages:
+\being{enumerate}
+\item Track selection.  The input track collections are examined to determine whether $V^{0}$ decays, two charged tracks originating from a point displaced from the IP, or kinks, where a charged particle has decayed into a single charged particle and a number of neutral ones, are present.  Such information will be propagated in the reconstruction to final PFO creation.  
+\item Calorimeter hit selection.  The various collection of, post digitisation, calorimeter hits are passed into the Pandora framework and converted into Pandora calorimeter hits.  These objects are self describing so that the Pandora pattern recognition logic has no dependancy on the external software framework.  A minimum ionising particle equivalent energy cut is applied to the calorimeter hits at this stage.  If a calorimeter hit contains less than 0.5 (0.3) of the energy of a normally incident MIP passing through the ECal (HCal) calorimeter cell it is not used in the reconstruction.  
+\item Clustering.
+\item Topological cluster merging.
+\item Statistical re-clustering.
+\item Photon identification and recovery.
+\item Fragment removal.
+\item Formation of particle flow objects.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
 
