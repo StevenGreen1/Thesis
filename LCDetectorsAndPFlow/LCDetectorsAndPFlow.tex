@@ -159,13 +159,6 @@ The yoke uses scintillator strip readout technology and in the simulations a squ
 \subsection{CLIC ILD}
 It is inappropriate to use the nominal ILD detector for simulations of the CLIC experiment due to the increased collision energy.  Therefore, the CLIC experiment has modified the nominal detector model to create a new detector model, CLIC\_ILD \cite{Linssen:2012hp} shown in figure \ref{fig:clicild}, which is more suited to CLIC like conditions.  The key differences between the nominal ILD detector and CLIC\_ILD  are:
 
-\begin{itemize}
-\item The higher energies found at the CLIC experiment lead to more intense beam induced backgrounds, which is especially problematic for detectors close to the IP where the occupancies will be extremely high.  To attempt to compensate for these effects the inner vertex detector in CLIC\_ILD is moved 15 mm further out from the IP.    
-\item The HCal thickness is increased from 6 $\lambda_{I}$ to 7.5 $\lambda_{I}$.  This helps to contain the high energy particle showers found in the CLIC experiment to the calorimeters.
-\item The HCal absorber material in the barrel is tungsten as opposed to iron.  This reduces the overall thickness of the HCal and keeps the coil size, one of the driving cost factors for the detectors, similar for the nominal ILD and CLIC\_ILD detectors.  In the endcaps iron is again used as the absorber material as there are no spatial requirements and it will lower the detector cost.  Furthermore, the shower development time in steel is faster than in tungsten making effective time stamping of energy deposits easier, which is crucial for the CLIC experiment for vetoing beam induced backgrounds.  
-\item The magnetic field strength in the CLIC\_ILD detector is increased to 4 T.  This was found to benefit the reconstruction, particularly at high energies, as it leads to greater separation of charged particle tracks.  Furthermore, it was possible to achieve this increase in field strength using the nominal ILD coil design.   
-\end{itemize}   
-
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:clicild1}\includegraphics[width=0.4\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png}}
@@ -175,27 +168,68 @@ It is inappropriate to use the nominal ILD detector for simulations of the CLIC 
 \label{fig:clicild}
 \end{figure} 
 
+\begin{itemize}
+\item The higher energies found at the CLIC experiment lead to more intense beam induced backgrounds, which is especially problematic for detectors close to the IP where the occupancies will be extremely high.  To attempt to compensate for these effects the inner vertex detector in CLIC\_ILD is moved 15 mm further out from the IP.    
+\item The HCal thickness is increased from 6 $\lambda_{I}$ to 7.5 $\lambda_{I}$.  This helps to contain the high energy particle showers found in the CLIC experiment to the calorimeters.
+\item The HCal absorber material in the barrel is tungsten as opposed to iron.  This reduces the overall thickness of the HCal and keeps the coil size, one of the driving cost factors for the detectors, similar for the nominal ILD and CLIC\_ILD detectors.  In the endcaps iron is again used as the absorber material as there are no spatial requirements and it will lower the detector cost.  Furthermore, the shower development time in steel is faster than in tungsten making effective time stamping of energy deposits easier, which is crucial for the CLIC experiment for vetoing beam induced backgrounds.  
+\item The magnetic field strength in the CLIC\_ILD detector is increased to 4 T.  This was found to benefit the reconstruction, particularly at high energies, as it leads to greater separation of charged particle tracks.  Furthermore, it was possible to achieve this increase in field strength using the nominal ILD coil design.   
+\end{itemize}   
+
 \section{PandoraPFA}
 Particle flow calorimetry relies upon correct associations being made between calorimetric energy deposits and charged particle tracks.  Even with a finely segmented detector, such as the ILD detector described in section \ref{sec:ild}, correctly making these associations is highly a non-trivial task and must be done using advanced pattern recognition software.  This is provided by the PandoraPFA particle flow algorithm \cite{arXiv:0907.3577, arXiv:1209.4039}.
 
 PandoraPFA applies the pattern recognition logic in eight main stages:
-\being{enumerate}
+\begin{enumerate}
 \item Track selection.  The input track collections are examined to determine whether $V^{0}$ decays, two charged tracks originating from a point displaced from the IP, or kinks, where a charged particle has decayed into a single charged particle and a number of neutral ones, are present.  Such information will be propagated in the reconstruction to final PFO creation.  
-\item Calorimeter hit selection.  The various collection of, post digitisation, calorimeter hits are passed into the Pandora framework and converted into Pandora calorimeter hits.  These objects are self describing so that the Pandora pattern recognition logic has no dependancy on the external software framework.  A minimum ionising particle equivalent energy cut is applied to the calorimeter hits at this stage.  If a calorimeter hit contains less than 0.5 (0.3) of the energy of a normally incident MIP passing through the ECal (HCal) calorimeter cell it is not used in the reconstruction.  
-\item Clustering.
-\item Topological cluster merging.
-\item Statistical re-clustering.
-\item Photon identification and recovery.
-\item Fragment removal.
-\item Formation of particle flow objects.
+\item Calorimeter hit selection.  This stage is broken down into several steps:
+\begin{itemize}
+\item The various collection of, post digitisation, calorimeter hits are passed into the Pandora framework and converted into Pandora calorimeter hits.  These objects are self describing so that the Pandora pattern recognition logic has no dependancy on the external software framework.  
+\item A minimum ionising particle equivalent energy cut is applied to the calorimeter hits.  If a calorimeter hit contains less than 0.5 (0.3) of the energy of a normally incident MIP passing through the ECal (HCal) calorimeter cell is not used in the reconstruction.  
+\item Calibration of the energy contained within the calorimeter hits is flagged up at this point, however, it is not directly applied at this stage as the energy contribution for each calorimeter cell ultimately depends on whether the associated cluster of calorimeter hits is deemed to originate from an electromagnetic or hadronic showers.  Different scale factors are applied to the energy for electromagnetic and hadronic showers to account for effects such as the invisible energy component in hadronic showers.  These energy factors are used throughout the reconstruction and for the final reconstructed particle energy once the particle shower type has been identified.  For energy comparisons prior to this identification the uncorrected calorimeter hit energy is used.  Further details on how these calibration constants are determined can be found in section \ref{sec:calibration}.  
+\item To minimise any dependancy on the detector geometry each calorimeter hit is assigned to a pseudo-layer, which is representative of the calorimeter stave layer.  All further topological association algorithms work using the pseudo-layer definition, illustrated in figure \ref{fig:pseudolayer}.  
+\item If a calorimeter hit is sufficiently far away from other hits, it is flagged as an isolated hit.  Such hits are most likely due to low energy neutrons produced in hadronic showers, which can travel a significant distance from the original shower before depositing energy.  These hits are very difficult to associate to the correct cluster of hits and as they do not form the basis of their own shower, they are not used by the initial clustering algorithm.  
+\item Any calorimeter hit that contains an energy consistent with a MIP signal and where, at most, one of the surrounding neighbouring cells in the same layer is above threshold is flagged as a MIP consistent hit.  This information is used in the identification of MIPs in the reconstruction.
+\end{itemize}
+\item Clustering.  This begins by using the projection of the charged particle tracks onto the front face of the ECal as seeds for the initial clustering phase.  Calorimeter hits are looped over on a per layer basis, working from the inner to the outer pseudo-layer, and if they fall within a cone of fixed dimensions surrounding a cluster direction they are associated to the cluster.  If no association can be made to any preexisting calorimeter hit clusters then the calorimeter hit is used to seed a new cluster.  
+\item Topological cluster merging.  The initial clustering algorithm is designed to be conservative to avoid mixing together energy deposits from several particles.  The fragments produced by the initial clustering are then merged together by various algorithms whose logic is motivated by a number of well-motivated topological rules, such as those shown figure \ref{fig:associations}.  
+\item Statistical re-clustering.  Comparisons between the cluster energy and any associated track momenta are made to determine whether they are consistent.  If a large discrepancy is observed then statistical reclustering is initiated.  This involves running a number of differently configured algorithms to change the cluster configuration to determine the optimal configuration of tracks and clusters.  
+\item Photon identification and recovery.  Topological likelihood data is used to then identify clusters of calorimeter hits that are consistent with $\gamma$s.  This is possible due to the clear transverse and longitudinal profiles observed for electromagnetic showers.  
+\item Fragment removal.  This step aims to remove neutral clusters that have been created that actually originate from a nearby charged particle cluster.  These algorithms take into account the changes in the compatibility of the track and cluster association when merging any neutral clusters into charged clusters.  
+\item Formation of particle flow objects.  Finally, reconstructed particles are produced.  The energy for charged particles is taken from the track momenta while neutral particle energies are taken from the calorimeter cluster measurements.  Furthermore, the different electromagnetic and hadronic scales are applied to the output neutral particle energies depending on whether the neutral cluster is consistent with a $\gamma$.  
 \end{enumerate}
 
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:pseudolayer1}\includegraphics[width=0.4\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer1.png}}
+\hspace{1cm}
+\subfloat[]{\label{fig:pseudolayer2}\includegraphics[width=0.4\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer2.png}}
+\caption[Schematic showing the definition of the pseudo-layer assignment for calorimeter hits.  The solid lines indicate the positions of the physics ECal layers and the dashed lines show the definition of the virtual pseudo-layers.  \protect\subref{fig:pseudolayer1} The $xy$-view showing the ILD ECal stave structure.  \protect\subref{fig:pseudolayer2} The $xz$ view showing a possible layout for the ECal barrel/endcap overlap region.  The pseudo-layers are defined using projection back to the IP.  Figures taken from \cite{arXiv:0907.3577}.]{Schematic showing the definition of the pseudo-layer assignment for calorimeter hits.  The solid lines indicate the positions of the physics ECal layers and the dashed lines show the definition of the virtual pseudo-layers.  \protect\subref{fig:pseudolayer1} The $xy$-view showing the ILD ECal stave structure.  \protect\subref{fig:pseudolayer2} The $xz$ view showing a possible layout for the ECal barrel/endcap overlap region.  The pseudo-layers are defined using projection back to the IP.  Figures taken from \cite{arXiv:0907.3577}.}
+\label{fig:pseudolayer}
+\end{figure} 
 
+\begin{figure}
+\centering
+\subfloat[]{\label{fig:association1}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association1.png}}
+\hspace{5mm}
+\subfloat[]{\label{fig:association2}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association2.png}}
+\hspace{5mm}
+\subfloat[]{\label{fig:association3}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association3.png}}
+\hspace{5mm}
+\subfloat[]{\label{fig:association4}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association4.png}} \\
+\subfloat[]{\label{fig:association5}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association5.png}}
+\hspace{5mm}
+\subfloat[]{\label{fig:association6}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association6.png}}
+\hspace{5mm}
+\subfloat[]{\label{fig:association7}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association7.png}}
+\hspace{5mm}
+\subfloat[]{\label{fig:association8}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association8.png}}
+\hspace{5mm}
+\subfloat[]{\label{fig:association9}\includegraphics[width=0.2\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Association9.png}}
+\caption[The main topological rules for cluster merging: \protect\subref{fig:association1} looping track segments; \protect\subref{fig:association2} track segments with gaps; \protect\subref{fig:association3} track segments pointing to hadronic showers; \protect\subref{fig:association4} track-like neutral clusters pointing back to a hadronic shower; \protect\subref{fig:association5} back-scattered tracks from hadronic showers; \protect\subref{fig:association6} neutral clusters which are close to a charged cluster; \protect\subref{fig:association7} a neutral cluster near a charged cluster; \protect\subref{fig:association8} cone association; and \protect\subref{fig:association9} recover of photons which overlap with a track segment.  In each case the arrow indicates the track, the filled points represent the hits in the associated cluster and the open points represent hits in the neutral cluster.  Figures taken from \cite{arXiv:0907.3577}.]{The main topological rules for cluster merging: \protect\subref{fig:association1} looping track segments; \protect\subref{fig:association2} track segments with gaps; \protect\subref{fig:association3} track segments pointing to hadronic showers; \protect\subref{fig:association4} track-like neutral clusters pointing back to a hadronic shower; \protect\subref{fig:association5} back-scattered tracks from hadronic showers; \protect\subref{fig:association6} neutral clusters which are close to a charged cluster; \protect\subref{fig:association7} a neutral cluster near a charged cluster; \protect\subref{fig:association8} cone association; and \protect\subref{fig:association9} recover of photons which overlap with a track segment.  In each case the arrow indicates the track, the filled points represent the hits in the associated cluster and the open points represent hits in the neutral cluster.  Figures taken from \cite{arXiv:0907.3577}.}
+\label{fig:associations}
+\end{figure} 
 
-
-
-
-
+The application of the pattern recognition algorithms in PandoraPFA when combined with a highly segmented detector, such as the ILD detector, make particle flow calorimetry a reality, which in turn provides excellent jet energy resolution for studying many interesting physics processes at the future linear collider.
 
 
 
