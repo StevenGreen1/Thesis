@@ -4,6 +4,9 @@
 \chapterquote{There, sir! that is the perfection of vessels!}
 {Jules Verne, 1828--1905}
 
+%========================================================================================
+%========================================================================================
+
 \section{Physics Theory}
 Quantum field theory is the best model that currently exists for the behaviour of fundamental particles in the universe.  It is based upon fundamental symmetries that are obeyed by the Lagrangian, which dictates how particles behave.  The standard model is a non-abelian gauge theory of the $\text{SU}(3) \times \text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry.  This symmetry acts to describe the electromagnetic, weak nuclear and strong nuclear forces observed in the universe.  This occurs via force mediating boson particles, 12 gauge bosons in total,1 photon, 3 weak bosons and 8 gluons.  
 
@@ -46,6 +49,8 @@ This procedure is the origin of the gauge boson mass terms when considering loca
 \end{equation}
 
 If there is a non zero minima in the potential, v, then a gauge boson mass term appears of the form $+\frac{e^{2}v^{2}}{2} A^{\mu} A_{\mu}$.
+
+%========================================================================================
 
 \subsection{Electroweak Interactions}
 The electroweak sector of the standard model is that related to the $\text{SU}(2)_{\text{L}} \times \text{U}1$ symmetry.  In this sector spontaneous symmetry breaking must occur in such a way as to leave three massive gauge bosons,  $\text{W}^{\pm}$ and Z, and one massless gauge bosons, the photon.  This can be achieved by considering a Higgs field H that is a doublet of the $\text{SU}(2)_{\text{L}}$ symmetry, with weak hypercharge $\frac{1}{2}$, in the following potential.
@@ -92,18 +97,22 @@ This model yields a massless photon, $m_{A} = 0$, as well as producing massive e
 
 This is ratio is constant, which occurs due to the custodial symmetry that exists after the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry has been broken to $\text{U}_{Q}(1)$.
 
+%========================================================================================
+
 \subsection{Effective Field Theory}
-There are a number of features in the observable universe that cannot be accounted for using the standard model of particle physics.  However, the standard model is a very good description of the interactions between particles over the energy range being probed at modern particle collider experiments.  Therefore, any underlying theory governing the interactions of particles must behave like the standard model over the energy range, or distance scale, that modern particle collider experiments have covered and then will deviate to account for the true underlying theory.  Effective field theories (EFTs) work from this premise by assuming that an underlying theory has a momentum scale, $\Lambda$, below which standard model behaviour is replicated.  
+There are a number of features in the observable universe that cannot be accounted for using the standard model of particle physics.  However, the standard model is a very good description of the interactions between particles over the energy range being probed at modern particle collider experiments.  Therefore, any underlying theory governing the interactions of particles must behave like the standard model over the energy range, or distance scale, that modern particle collider experiments have covered and above this will deviate to account for the true underlying theory.  Effective field theories (EFTs) work from this premise by assuming that an underlying theory has a momentum scale, $\Lambda$, below which standard model behaviour is replicated.  
 
-Quantum field theories must be renormalizable to ensure that non-infinite predictions of the coefficients in the Lagrangian can be made and tested.  Infinities arise from non-renormalizable theories due to divergent integrals from loop diagrams that assume the theory being applied is valid at all energy and length scales.  Effective field theories act to avoid such problems by only integrating up to the momentum scale $\Lambda$ and not above it.  This avoids assumptions that the theory is applicable across all energy scales and allows the theory to make measurable predictions.  
+Quantum field theories must be renormalizable to ensure that non-infinite predictions of the coefficients in the Lagrangian can be made and tested.  Infinities arise from non-renormalizable theories due to divergent integrals from loop diagrams that assume the theory being applied is valid at all energy and length scales.  Effective field theories act to avoid such problems by only integrating up to the momentum (mass) scale $\Lambda$ ($\Delta$) and not above it.  At the energy scale being considered for the EFT any infinities arising from the loop calculations can be absorbed into a finite number of parameters.  This methodology avoids the assumption that the theory in question is applicable to all energy scales and allows measurable predictions to be made.  
 
-In the EFT framework it is no longer necessary to enforce renormalization in the choice of operators appearing in the Lagrangian.  As the standard model should be replicated at the low energy scale it is appropriate when creating the EFT Lagrangian to append new operators, which may violate some or all the gauge symmetries of the standard model, to the standard model Lagrangian.
+In the EFT framework it is no longer necessary to enforce renormalization in the choice of operators appearing in the Lagrangian.  As the standard model should be replicated at the low energy scale it is appropriate when creating the EFT Lagrangian to append new operators to the standard model Lagrangian, which account for new physics.  These new terms do not necessarily have to obey the same gauge symmetries of the standard model, but can contain a variety of new terms.  The general form for an EFT Lagrangian is:
 
 \begin{equation}
 \mathcal{L}_{EFT} = \mathcal{L}_{SM} + \sum_{\text{dimension d}} \sum_{i} \frac{c_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
 \end{equation}
 
-$c_{i}^{(d)}$ are the coefficient of the operators $\mathcal{O}_{i}^{(d)}$ and the summations run over all the dimensions, d, of the operator and all unique operators, i, of dimension, d.  The presence of the $\Lambda^{d-4}$ in the denominator is needed to ensure correct dimensionality of the new terms being added to the Lagrangian, but it also sets the scale of  new physics being modelled, $\Lambda$.  At energies below this scale it is possible to find the dominant terms for the EFT and consider these as corrections to the standard model, while above this scale the EFT breaks down as each term in the Lagrangian has a non-negligible coefficient.  In the extremal limit, $\Lambda \rightarrow \infty$, the standard model is recovered as new physics is too far out of reach to have any impact on observables.
+where $c_{i}^{(d)}$ are the coefficient of the operators $\mathcal{O}_{i}^{(d)}$ and the summations run over all the dimensions, d, of the operator and all unique operators, i, of dimension, d.  The presence of the $\Lambda^{d-4}$ in the denominator is needed to ensure correct dimensionality of the new terms being added to the Lagrangian, but it also sets the scale of  new physics being modelled, $\Lambda$.  At energies below this scale it is possible to find the dominant terms for the EFT and consider these as corrections to the standard model, while above this scale the EFT breaks down as each term in the Lagrangian has a non-negligible coefficient.  In the extremal limit, $\Lambda \rightarrow \infty$, the standard model is recovered as new physics is too far out of reach to have any impact on observables.
+
+%========================================================================================
 
 \subsection{Electroweak Chiral Lagrangian}
 While the introduction of a Higgs field transforming appropriately under the relevant gauge transformations is able to produce mass terms in the Lagrangian for the $\text{W}^{\pm}$ and Z bosons it is possible to introduce these terms via an effective field theory approach.  In this approach the effective field theory considered is that of the electroweak chiral Lagrangian, which takes the place of the Higgs field in the standard model.  
@@ -142,12 +151,14 @@ This term yields the following mass terms for the gauge bosons, which match thos
 m_{W} = \frac{gv}{2}, m_{Z} = \frac{v\sqrt{g^{2} + g'^{2}}}{2} = \frac{m_{W}}{\text{cos}{\theta_{W}}}
 \end{equation}
 
-The full parameterisation of the gauge boson interactions is found in \cite{Herrero:1994tj}.  It is sufficient for this study to note that the origin of these terms is the parameterisation of the Higgs field through $\Sigma$ that replicates the low energy behaviour of the standard model.  It was shown by Longhitano that there are several relevant operators that are $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ and CP invariant up to dimension 4 that should be considered in this theory \cite{Longhitano:1980tm}.  Of those operators only two involve quartic massive gauge boson vertices.  They are:
+The full parameterisation of the gauge boson interactions is found in \cite{Herrero:1994tj}.  It is sufficient to note that the origin of these terms is the parameterisation of the Higgs field through $\Sigma$ that replicates the low energy behaviour of the standard model.  It was shown by Longhitano that there are several relevant operators that are $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ and CP invariant up to dimension 4 that should be considered in this theory \cite{Longhitano:1980tm}.  Of those operators only two involve quartic massive gauge boson vertices.  They are:
 
 \begin{equation}
 \alpha_{4}\text{Tr}[V^{\mu}V_{\nu}]\text{Tr}[V^{\nu}V_{\mu}] \text{ and } \alpha_{5}\text{Tr}[V^{\mu}V_{\mu}]^{2}
 \end{equation}
 
-The full expansion of these terms in terms of the massive gauge bosons $\text{W}^{\pm}$ and Z is given in the appendices \ref{sec:expansionalpha4alpha5}.  These terms contribute to the vector boson scattering processes involving $\text{W}^{\pm}$ and Z bosons.  A study into the sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ is presented in section BLAH.
+The full expansion of these terms in terms of the massive gauge bosons $\text{W}^{\pm}$ and Z is given in the appendices \ref{sec:expansionalpha4alpha5}.  These terms contribute to the vector boson scattering processes involving $\text{W}^{\pm}$ and Z bosons.  A study into the sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ is presented in section \ref{chap:PhysicsAnalysis}.
+
+%========================================================================================
 
 
