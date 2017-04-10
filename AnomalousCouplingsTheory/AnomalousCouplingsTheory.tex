@@ -7,117 +7,115 @@
 %========================================================================================
 %========================================================================================
 
-\section{Physics Theory}
-Quantum field theory is the best model that currently exists for the behaviour of fundamental particles in the universe.  It is based upon fundamental symmetries that are obeyed by the Lagrangian, which dictates how particles behave.  The standard model is a non-abelian gauge theory of the $\text{SU}(3) \times \text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry.  This symmetry acts to describe the electromagnetic, weak nuclear and strong nuclear forces observed in the universe.  This occurs via force mediating boson particles, 12 gauge bosons in total,1 photon, 3 weak bosons and 8 gluons.  
-
-The gauge symmetry forbids a mass term for any of these bosons, however, the electroweak gauge bosons have been measured to be massive indicating a piece is missing from this theory.  This problem is solved via the introduction of the Higgs field that undergoes spontaneous symmetry breaking.
+\section{Higgs Physics}
+Quantum field theory is the best model that currently exists for describing the behaviour of fundamental particles in the universe.  Particle interactions in this model originate from symmetries that exist within the Lagrangian.  The standard model is a non-abelian gauge theory of the $\text{SU}(3) \times \text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry.  This symmetry acts to describe the electromagnetic, weak nuclear and strong nuclear forces observed in the universe.  These interactions proceed via force mediating gauge boson particles of which there are 12 in total: 1 photon, 3 weak bosons and 8 gluons.  The gauge symmetries present in the standard model forbid a mass term for these bosons, however, the electroweak gauge bosons have been measured to be massive indicating that the theory as it stands is incomplete.  This problem can be solved via the introduction of the Higgs field that undergoes spontaneous symmetry breaking.
 
 \subsection{Spontaneous Symmetry Breaking}
 \label{sec:ssb}
-To begin with consider a complex scalar field \phi with the Klein-Gordon Lagrangian
+To illustrate spontaneous symmetry breaking consider a complex scalar field \phi with the Klein-Gordon Lagrangian:
 
 \begin{equation}
-\mathcal{L} = \partial^{\mu} \phi^{*} \partial_{\mu} \phi - \text{m}^{2} |\phi|^{2} = \partial^{\mu} \phi^{*} \partial_{\mu} \phi - \text{V}(\phi)
+\mathcal{L} = \partial^{\mu} \phi^{*} \partial_{\mu} \phi -m^{2} |\phi|^{2} = \partial^{\mu} \phi^{*} \partial_{\mu} \phi - V(\phi)
 \end{equation}
 
-$\partial^{\mu}$ is the partial derivate of the scalar field $\phi$ with respect to the position 4-vector.  $\mathcal{L}$ is Lorentz invariant.
-
-This Lagrangian is invariant under the global symmetry $\phi \rightarrow e^{i\alpha} \phi$.  By adding extra terms to the Lagrangian that retain the invariance to the global symmetry it is possible to modify interactions of this scalar field.  This can be interpreted as modifying the potential, all terms in the Lagrangian without derivatives, of the scalar field.  For example consider a fourth order potential of the following form.
+where $\mathcal{L}$ the is Lorentz invariant Lagrangian density, $\partial^{\mu}$ is the partial derivate of the scalar field $\phi$ with respect to the position 4-vector, $m$ is a mass term and $V(\phi)$ is the potential the felt by the field $\phi$.  This Lagrangian density is invariant under the global symmetry $\phi \rightarrow e^{i\alpha} \phi$.  By adding extra terms to the Lagrangian that retain the invariance to the global symmetry it is possible to modify interactions of this scalar field.  This can be interpreted as modifying the potential, all terms in the Lagrangian without derivatives, of the scalar field.  For example consider a fourth order potential of the following form:
 
 \begin{equation}
-\text{V}(\phi) = \text{m}^{2}|\phi|^{2} + \lambda |\phi|^{4}
+\text{V}(\phi) = m^{2}|\phi|^{2} + \lambda |\phi|^{4}
 \end{equation}
 
-The potential has a minima at zero, however, if $\text{m}^{2} < 0$ then the minima exists on a circle in the complex $\phi$ plane.  This complex circle is centred at $(0,0)$ and has radius $\sqrt{\frac{-\text{m}^{2}}{\lambda}}$.  To quantise this theory it is necessary to expand about the minima of the potential, however, in the case of $\text{m}^{2} < 0$ there are an infinite number of choices of minima to expand about.  Irrespective of the choice of minima for this configuration the symmetry $\phi \rightarrow e^{i\alpha} \phi$ is broken.  Fluctuations about the minima along the degenerate direction leave the potential unchanged, which is a consequence of the breaking of the $\phi \rightarrow e^{i\alpha} \phi$ symmetry; this is known as spontaneous symmetry breaking.
+The potential has a minima at zero, however, if $\text{m}^{2} < 0$ then the minima exists on a circle in the complex $\phi$ plane.  This complex circle is centred at $(0,0)$ and has radius $v = \sqrt{\frac{-m^{2}}{\lambda}}$.  To quantise this theory it is necessary to expand about the minima of the potential, however, in the case of $m^{2} < 0$ there are an infinite number of choices of minima to expand about.  Irrespective of the choice of minima for this configuration the symmetry $\phi \rightarrow e^{i\alpha} \phi$ is broken.  Fluctuations about the minima along the degenerate direction leave the potential unchanged, which is a consequence of the breaking of the $\phi \rightarrow e^{i\alpha} \phi$ symmetry; this is known as spontaneous symmetry breaking.
 
-Goldstone's theorem implies that for Lorentz-invariant theories spontaneous symmetry breaking always leads to the existence a massless particle and this can be seen when expanding the complex scalar theory example about the minima.
+Goldstone's theorem \cite{Goldstone:1962es} implies that for Lorentz-invariant theories spontaneous symmetry breaking always leads to the existence a massless particle.  This can be seen in this example when expanding the complex scalar theory example about the minima.
 
 \begin{equation}
 \phi = \frac{1}{\sqrt{2}}(v + \phi_{1} + i \phi_{2})
 \end{equation}
 
-Where $\phi_{1/2}$ are real fields.  Applying this parameterisation to the Lagrangian shows yields a mass term of $\sqrt{-\text{m}^{2}}$ for the $\phi_{1}$ field while the mass of the $\phi_{2}$ field yields a massless particle.  
+where $\phi_{1/2}$ are real fields and $v = \sqrt{\frac{-m^{2}}{\lambda}}$.  Applying this parameterisation to the Lagrangian yields a mass term of $\sqrt{-\text{m}^{2}}$ for the $\phi_{1}$ field while the mass of the $\phi_{2}$ field yields a massless particle:
 
 \begin{equation}
-\mathcal{L} = \frac{1}{2}\partial^{\mu} \phi_{1} \partial_{\mu} \phi_{1} + \frac{1}{2}\partial^{\mu} \phi_{2} \partial_{\mu} \phi_{2} - \text{m}^{2}|\phi_{1}|^{2} + 0.|\phi_{2}|^{2} + ...
+\mathcal{L} = \frac{1}{2}\partial^{\mu} \phi_{1} \partial_{\mu} \phi_{1} + \frac{1}{2}\partial^{\mu} \phi_{2} \partial_{\mu} \phi_{2} - m^{2}|\phi_{1}|^{2} + 0.|\phi_{2}|^{2} + ...
 \end{equation}
 
-This procedure is the origin of the gauge boson mass terms when considering local symmetries instead of global ones.  This can be see in the example under consideration by promoting the global to local symmetry let $\alpha \rightarrow \alpha(x)$ and $\partial^{\mu} \rightarrow D^{\mu} = \partial^{\mu} + ieA^{\mu}$ where $A^{\mu}$ a the gauge field that transforms as $A^{\mu} \rightarrow A^{\mu} - \partial^{\mu}\alpha(x)$.  The new Lagrangian becomes
+This procedure is the origin of the gauge boson mass terms when applied to local symmetries instead of global ones.  This can be see in the example by promoting the global symmetry to a to local symmetry by letting $\alpha \rightarrow \alpha(x)$ and $\partial^{\mu} \rightarrow D^{\mu} = \partial^{\mu} + ieA^{\mu}$ where $A^{\mu}$ a the gauge field, which transforms as $A^{\mu} \rightarrow A^{\mu} - \partial^{\mu}\alpha(x)$.  The new Lagrangian becomes:
 
 \begin{equation}
 \mathcal{L} = (D^{\mu} \phi)^{*} (D_{\mu} \phi) - \text{m}^{2} |\phi|^{2} - \lambda |\phi|^{4}
 \end{equation}
 
-If there is a non zero minima in the potential, v, then a gauge boson mass term appears of the form $+\frac{e^{2}v^{2}}{2} A^{\mu} A_{\mu}$.
+If there is a non zero minima in the potential, $v$, then a gauge boson mass term appears of the form $+\frac{e^{2}v^{2}}{2} A^{\mu} A_{\mu}$.
 
 %========================================================================================
 
 \subsection{Electroweak Interactions}
-The electroweak sector of the standard model is that related to the $\text{SU}(2)_{\text{L}} \times \text{U}1$ symmetry.  In this sector spontaneous symmetry breaking must occur in such a way as to leave three massive gauge bosons,  $\text{W}^{\pm}$ and Z, and one massless gauge bosons, the photon.  This can be achieved by considering a Higgs field H that is a doublet of the $\text{SU}(2)_{\text{L}}$ symmetry, with weak hypercharge $\frac{1}{2}$, in the following potential.
+The electroweak sector of the standard model is that related to the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry.  In this sector spontaneous symmetry breaking must occur in such a way as to give three massive gauge bosons,  $\text{W}^{\pm}$ and Z, and one massless gauge bosons, the photon.  This can be achieved through a Higgs field, H, that is a doublet of the $\text{SU}(2)_{\text{L}}$ symmetry, with weak hypercharge $\frac{1}{2}$, in the potential $\text{V}(\text{H})$ defined as:
 
 \begin{equation}
-\text{V}(\phi) = -\text{\mu}^{2}\text{H}^{\dagger}\text{H} + \lambda (\text{H}^{\dagger}\text{H})^{2}
+\text{V}(\text{H}) = -\mu^{2}\text{H}^{\dagger}\text{H} + \lambda (\text{H}^{\dagger}\text{H})^{2}
 \end{equation}
 
-The minima of this field is at 
+where $\mu$ and $\lambda$ are constants.  The minima of this field is at:
 
 \begin{equation}
 \sqrt{\text{H}^{\dagger}\text{H}} = \frac{v}{\sqrt{2}} = \sqrt{\frac{\mu^{2}}{2\lambda}}
 \end{equation}
 
-without loss of generality we may choose to expand this field around the point
+and without loss of generality we may choose to expand this field around the point:
 
 \begin{equation}
 \langle \text{H} \rangle = \binom{0}{\frac{v}{\sqrt{2}}}
 \end{equation}
 
-where v is real.  Consider the kinematic term in the Lagrangian, $\partial^{\mu} \text{H}^{\dagger} \partial_{\mu} \text{H}$.  The covariant derivative of this Higgs field must satisfy the $\text{SU}(2)_{\text{L}} \times \text{U}1$ gauge symmetry and so takes the form
+where $v$ is real.  Consider the kinematic term in the Lagrangian, $\partial^{\mu} \text{H}^{\dagger} \partial_{\mu} \text{H}$.  The covariant derivative of this Higgs field must satisfy the $\text{SU}(2)_{\text{L}} \times \text{U}1$ gauge symmetry and so it takes the form
 
 \begin{equation}
 D_{\mu} \text{H} = (\partial_{\mu} + ig\frac{\sigma^{i}}{2}W^{i}_{\mu} + i\frac{g'}{2}B_{\mu})H
 \end{equation}
 
-If there is mixing of the $\text{SU}(2)_{\text{L}}$ and U(1) fields of the form $W^{3}_{\mu} = \text{cos}{\theta_{W}}Z_{\mu} + \text{sin}{\theta_{W}}Z_{\mu}$ and $B_{\mu} = -\text{sin}{\theta_{W}}Z_{\mu} + \text{cos}{\theta_{W}}Z_{\mu}$ and the unmixed $\text{SU}(2)_{\text{L}}$ fields transform in the following way $W^{\pm}_{\mu} = \frac{1}{\sqrt{2}}(W^{1}_{\mu} \mp i W^{2}_{\mu})$, then non zero mass terms for the electroweak bosons arise.  $\theta_{W}$ is known as the Weinberg angle.
+If there is mixing of the $\text{SU}(2)_{\text{L}}$ and U(1) fields of the form:
+
+\begin{equation}
+Z_{\mu} = \text{cos}{\theta_{W}} W^{3}_{\mu} - \text{sin}{\theta_{W}} B_{\mu} \\
+A_{\mu} = \text{sin}{\theta_{W}} W^{3}_{\mu} + \text{cos}{\theta_{W}} B_{\mu} \\
+W^{\pm}_{\mu} = \frac{1}{\sqrt{2}}(W^{1}_{\mu} \mp i W^{2}_{\mu})
+\end{equation}
+
+then non-zero mass terms for the electroweak bosons arise:
 
 \begin{equation}
 \frac{(gv)^{2}}{4} W^{+}_{\mu} W^{-\mu} + \frac{(g^{2} + g'^{2})v^{2}}{8} Z_{\mu} Z^{\mu}
-\end{equation}
-
-The boson mass terms are as follows
-
-\begin{equation}
 m_{W} = \frac{gv}{2}, m_{Z} = \frac{v\sqrt{g^{2} + g'^{2}}}{2} = \frac{m_{W}}{\text{cos}{\theta_{W}}}, m_{A} = 0
 \end{equation}
 
-This model yields a massless photon, $m_{A} = 0$, as well as producing massive electroweak gauge bosons in a ratio that match the measured values of $m_{W} = 80.385 \pm 0.015$ and $m_{Z} = 91.1876 \pm 0.0021$ \cite{Beringer:1900zz}.  These masses predicate that $\rho = 1$ where $\rho$ is defined as:
+where $\theta_{W}$ is known as the Weinberg angle.  This model yields a massless photon, $m_{A} = 0$, as well as producing massive electroweak gauge bosons in a ratio that match the measured values of $m_{W} = 80.385 \pm 0.015$ and $m_{Z} = 91.1876 \pm 0.0021$ \cite{Beringer:1900zz}.  These masses predicate that $\rho = 1$ where $\rho$ is defined as:
 
 \begin{equation}
 \rho = \frac{m_{W}^{2}}{m_{Z}^{2}\text{cos}{\theta_{W}}^{2}}
+\label{equ:custodialsymmetry}
 \end{equation}
 
-This is ratio is constant, which occurs due to the custodial symmetry that exists after the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry has been broken to $\text{U}_{Q}(1)$.
+This is ratio is constant, which is due to the custodial symmetry that exists after the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry has been broken to $\text{U}_{Q}(1)$.
 
 %========================================================================================
 
-\subsection{Effective Field Theory}
-There are a number of features in the observable universe that cannot be accounted for using the standard model of particle physics.  However, the standard model is a very good description of the interactions between particles over the energy range being probed at modern particle collider experiments.  Therefore, any underlying theory governing the interactions of particles must behave like the standard model over the energy range, or distance scale, that modern particle collider experiments have covered and above this will deviate to account for the true underlying theory.  Effective field theories (EFTs) work from this premise by assuming that an underlying theory has a momentum scale, $\Lambda$, below which standard model behaviour is replicated.  
+\section{Effective Field Theory}
+There are a number of features in the observable universe that cannot be accounted for using the standard model of particle physics.  However, the standard model is a very good description of the interactions between particles at the energies being probed at modern particle collider experiments.  Any underlying theory governing the interactions of particles must, therefore, behave like the standard model over these energies, or distance scales.  Above such energies the theory will deviate from the standard model to account for the full underlying theory.  Effective field theories (EFTs) work from this premise by assuming that the complete theory  has a momentum scale, $\Lambda$, below which standard model behaviour is replicated.  
 
-Quantum field theories must be renormalizable to ensure that non-infinite predictions of the coefficients in the Lagrangian can be made and tested.  Infinities arise from non-renormalizable theories due to divergent integrals from loop diagrams that assume the theory being applied is valid at all energy and length scales.  Effective field theories act to avoid such problems by only integrating up to the momentum (mass) scale $\Lambda$ ($\Delta$) and not above it.  At the energy scale being considered for the EFT any infinities arising from the loop calculations can be absorbed into a finite number of parameters.  This methodology avoids the assumption that the theory in question is applicable to all energy scales and allows measurable predictions to be made.  
+Quantum field theories must be renormalizable to ensure that non-infinite predictions of the coefficients in the Lagrangian can be made and tested.  Infinities arise from non-renormalizable theories due to divergent integrals from loop diagrams that assume the theory being applied is valid at all energy and length scales.  Effective field theories act to avoid such problems by only integrating up to the momentum (mass) scale $\Lambda$ ($\Delta$) and not above it.  At the energy scale being considered, any infinities arising from the loop calculations in the EFT can be absorbed into a finite number of parameters.  This methodology avoids the assumption that the theory in question is applicable to all energy scales and allows measurable predictions to be made.  
 
-In the EFT framework it is no longer necessary to enforce renormalization in the choice of operators appearing in the Lagrangian.  As the standard model should be replicated at the low energy scale it is appropriate when creating the EFT Lagrangian to append new operators to the standard model Lagrangian, which account for new physics.  These new terms do not necessarily have to obey the same gauge symmetries of the standard model, but can contain a variety of new terms.  The general form for an EFT Lagrangian is:
+In the EFT framework, it is no longer necessary to enforce renormalization in the choice of operators appearing in the Lagrangian.  As the standard model should be replicated at the low energy scale it is appropriate when creating the EFT Lagrangian to append new operators to the standard model Lagrangian that account for new physics.  These new terms do not necessarily have to obey the same gauge symmetries as those found in the standard model.  This gives the general form for an EFT Lagrangian as:
 
 \begin{equation}
 \mathcal{L}_{EFT} = \mathcal{L}_{SM} + \sum_{\text{dimension d}} \sum_{i} \frac{c_{i}^{(d)}}{\Lambda^{d-4}} \mathcal{O}_{i}^{(d)}
 \end{equation}
 
-where $c_{i}^{(d)}$ are the coefficient of the operators $\mathcal{O}_{i}^{(d)}$ and the summations run over all the dimensions, d, of the operator and all unique operators, i, of dimension, d.  The presence of the $\Lambda^{d-4}$ in the denominator is needed to ensure correct dimensionality of the new terms being added to the Lagrangian, but it also sets the scale of  new physics being modelled, $\Lambda$.  At energies below this scale it is possible to find the dominant terms for the EFT and consider these as corrections to the standard model, while above this scale the EFT breaks down as each term in the Lagrangian has a non-negligible coefficient.  In the extremal limit, $\Lambda \rightarrow \infty$, the standard model is recovered as new physics is too far out of reach to have any impact on observables.
+where $c_{i}^{(d)}$ are the coefficient of the operators $\mathcal{O}_{i}^{(d)}$ and the summations run over all the dimensions, $d$, of the operator and all unique operators, $i$, of dimension, $d$.  The presence of the $\Lambda^{d-4}$ in the denominator is needed to ensure correct dimensionality of the new terms being added to the Lagrangian, but it also sets the scale, $\Lambda$, of new physics being added.  At energies below this scale it is possible to find the dominant terms for the EFT and consider these as corrections to the standard model, while above this scale the EFT breaks down as each term in the Lagrangian has a non-negligible coefficient.  In the extremal limit, $\Lambda \rightarrow \infty$, the standard model is recovered as new physics is too far out of reach to have any impact on observables.
 
 %========================================================================================
 
-\subsection{Electroweak Chiral Lagrangian}
-While the introduction of a Higgs field transforming appropriately under the relevant gauge transformations is able to produce mass terms in the Lagrangian for the $\text{W}^{\pm}$ and Z bosons it is possible to introduce these terms via an effective field theory approach.  In this approach the effective field theory considered is that of the electroweak chiral Lagrangian, which takes the place of the Higgs field in the standard model.  
-
-In this model the symmetry breaking is achieved by introducing a field $\Sigma(x)$ that transforms under the $\text{SU}(2)_{\text{L}}$ transformations U($x$) and $\text{U}(1)$ transformations V($x$) as
+\section{Electroweak Chiral Lagrangian}
+The introduction of a Higgs field transforming appropriately under the relevant gauge transformations is able to produce mass terms in the Lagrangian for the $\text{W}^{\pm}$ and Z bosons.  However, it is possible to introduce these terms via an EFT approach.  In such an approach the EFT considered is that of the electroweak chiral Lagrangian, which takes the place of the Higgs field in the standard model.  In this model the symmetry breaking is achieved by introducing a field $\Sigma(x)$ that transforms under the $\text{SU}(2)_{\text{L}}$ transformations U($x$) and the $\text{U}(1)$ transformations V($x$) as
 
 \begin{equation}
 \Sigma(x) \rightarrow U(x) \Sigma(x) V^{\dagger}(x)
@@ -129,29 +127,26 @@ $\Sigma(x)$ is parameterised as follows
 \Sigma(x) = \text{exp} (\frac{-i}{v} \Sigma^{3}_{a=1} w^{a}\tau^{a})
 \end{equation}
 
-where $w^{a}$ are the Goldstone bosons generated from the spontaneous symmetry breaking of the electroweak symmetry.  The following term if added to the Lagrangian generate the mass terms for the $\text{W}^{\pm}$ and Z gauge bosons.
+where $w^{a}$ are the Goldstone bosons generated from the spontaneous symmetry breaking of the electroweak symmetry.  The following term if added to the Lagrangian generate the mass terms for the $\text{W}^{\pm}$ and Z gauge bosons:
 
 \begin{equation}
 \mathcal{L}_{M} = \frac{v^{2}}{4} \text{Tr} (\mathcal{D}^{\mu} \Sigma^{\dagger} \mathcal{D}_{\mu} \Sigma) = -\frac{v^{2}}{4}\text{Tr}(V_{\mu} V^{\mu})
 \end{equation}
 
-Where $V_{\mu} = (\mathcal{D}_{\mu}\Sigma) \Sigma^{\dagger}$ and $m_{W} = \frac{gv}{2}$.  The covariant derivate of the $\Sigma(x)$ is defined as
+where $V_{\mu} = (\mathcal{D}_{\mu}\Sigma) \Sigma^{\dagger}$ and $m_{W} = \frac{gv}{2}$.  The covariant derivate of the $\Sigma(x)$ is defined as:
 
 \begin{equation}
 \mathcal{D}_{\mu} \Sigma(x) = \partial_{\mu} \Sigma(x) + \frac{ig}{2}\text{W}_{\mu}^{a}\tau^{a}\Sigma(x) - \frac{ig'}{2}\text{B}_{\mu}\tau^{3}\Sigma(x)
 \end{equation}
 
-This term yields the following mass terms for the gauge bosons, which match those expected from the introduction of a Higgs field as was done in section \ref{sec:ssb}.
+where $\mathcal{D}_{\mu}$ is the covariant derivative of the $\Sigma$ field, $g$ and $g'$ are coupling constants for the U(1) and SU$(2)_\text{L}$ symmetries respectively and $\tau^{a}$ are the Pauli spin matrices, which are the generators for the SU(2) symmetry.  $\mathcal{L}_{M}$ contains mass terms for the gauge bosons, which match those produced from the introduction of a Higgs field as shown in section \ref{sec:ssb}.  The mass terms are as follows:
 
 \begin{equation}
-\frac{v^{2}}{4}\text{Tr}[V^{\mu}V_{\mu}] = - \frac{(gv)^{2}}{4} W^{+}_{\mu} W^{-\mu} - \frac{(g^{2} + g'^{2})v^{2}}{8} Z_{\mu} Z^{\mu}
-\end{equation}
-
-\begin{equation}
+\frac{v^{2}}{4}\text{Tr}[V^{\mu}V_{\mu}] = - \frac{(gv)^{2}}{4} W^{+}_{\mu} W^{-\mu} - \frac{(g^{2} + g'^{2})v^{2}}{8} Z_{\mu} Z^{\mu} \\
 m_{W} = \frac{gv}{2}, m_{Z} = \frac{v\sqrt{g^{2} + g'^{2}}}{2} = \frac{m_{W}}{\text{cos}{\theta_{W}}}
 \end{equation}
 
-The full parameterisation of the gauge boson interactions is found in \cite{Herrero:1994tj}.  It is sufficient to note that the origin of these terms is the parameterisation of the Higgs field through $\Sigma$ that replicates the low energy behaviour of the standard model.  It was shown by Longhitano that there are several relevant operators that are $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ and CP invariant up to dimension 4 that should be considered in this theory \cite{Longhitano:1980tm}.  Of those operators only two involve quartic massive gauge boson vertices.  They are:
+The full parameterisation of the gauge boson interactions is found in \cite{Herrero:1994tj}.  The origin of these terms is the parameterisation of the Higgs field through $\Sigma$ that replicates the low energy behaviour of the standard model.  It was shown by Longhitano \cite{Longhitano:1980tm} that there are several relevant operators that are $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ and CP invariant up to dimension 4 that should be considered in this theory.  Of those operators only two involve quartic massive gauge boson vertices and that preserve the custodial symmetry \cite{Belyaev:354051} shown in equation \ref{equ:custodialsymmetry}, which are:
 
 \begin{equation}
 \alpha_{4}\text{Tr}[V^{\mu}V_{\nu}]\text{Tr}[V^{\nu}V_{\mu}] \text{ and } \alpha_{5}\text{Tr}[V^{\mu}V_{\mu}]^{2}
