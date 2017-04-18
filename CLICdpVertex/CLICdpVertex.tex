@@ -100,19 +100,21 @@ The full details of the glueing process can be found in [CERN NOTE CITE], along 
 
 %========================================================================================
 
-%~~~
+The assemblies were characterised using a series of lab experiments as well as in realistic experimental conditions using the CERN SPS test beam.  Due to the complexities of testing assemblies in a test beam, extensive lab test were performed first to characterise as many properties of the assemblies as possible.  The lab experiments performed were as follows:
 
-In the process of characterising the properties of these devices it is highly desirable perform as many lab based experiments as possible as this negate the additional complexities that come from testing the devices using a test beam.  To that extend two lab based tests have been performed: a radioactive source measurements and a test pulse calibration of the CLICpix ASIC.  
+\begin{itemize}
+\item \textbf{Radioactive source measurements}.  The goal of this measurement is to examine both the output of the HV-CMOS voltage and the response of the CLICpix readout chip when a radioactive source is used to deposit charge within the HV-CMOS sensor.  
+\item \textbf{Test pulse calibration of the CLICpix chip}.  The goal of this measurement is to calibrate the response of the CLICpix sensor.  This is achieved by injecting a voltage pulse of fixed height directly into the input of the chip and examining the output response.  
+\end{itemize} 
 
-The goal of the radioactive source measurement is to characterise the properties of the device as a whole... A charge is injected into the device by the radioactive particles, which in turn is converted into a voltage by the HV-CMOS and then the CLICPix converts this into a readout ToT.  
-The test pulse calibration is used for characterising the behaviour of the CLICPix as a fixed voltage can be injected directly into the CLICPix and its response characterised.
-
-%~~~
+%========================================================================================
 
 \subsection{Source Measurements}
+A radioactive source was used to deposit charge within the HV-CMOS sensor and used to characterise the response of the whole assembly.  The HV-CMOS sensor converts the deposited charge into a voltage, which in turn passes through the capacitively coupled glue layer and into the CLICpix chip.  Measurements were made of the output voltage produced by the HV-CMOS and the response of the CLICpix readout chip, in units of ToT.  As the exact amount of charge deposited by the radioactive sources is unknown, this experiment focuses on examining the form of the voltage signal produced by the HV-CMOS and determining the response of the CLICpix chip as a function of this voltage.  As the HV-CMOS signal must pass through the capacitively coupled glue layer before being measured by the CLICpix chip, this experiment characterises the behaviour of the gluing layer as well as the sensor and readout chips.
+
+%========================================================================================
 
 \subsubsection{Experimental Setup}
-
 In order to characterise the samples, a $\text{Sr}^{90}$ radioactive source was used to deposit charge in the HV-CMOS sensor. $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, with the $\text{e}^{-}$ used to deposit charge in the HV-CMOS sensing layer.  The $\text{Sr}^{90}$ source used for this experiment had an activity of 29.6 MBq.  
 
 The radioactive source was positioned directly above the back-side of the HV-CMOS sensor, and measurements were made of both the ToT output from the CLICpix and the HV-CMOS analogue signal for individual pixels on the sensor.  The HV-CMOS pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter was used to veto events where multiple hits occurred within the active shutter period.  
@@ -180,7 +182,7 @@ Figure \ref{fig:tot} shows the mean ToT measured in the CLICpix as a function of
 \label{fig:tot}
 \end{figure}
 
-The distribution of mean ToT versus pulse height shows that for samples where the corresponding coupling pads are centred, the ToT increases with pulse height up to values of approximately 300~mV, and that the mean ToT saturates at $\approx 13$.  It is expected that the $\frac{1}{4}-$ and $\frac{1}{2}-$offset samples should have a lower ToT than the centred samples due to the lower effective capacitance between the HV-CMOS and CLICpix pads.  The greater the offset is, the smaller the effective capacitance to the target CLICpix pad will be, and so the lower the recorded ToT.  This is can be seen when comparing the centred samples to the $\frac{1}{4}-$offset sample and Set 16, the $\frac{1}{2}-$offset sample.  
+The distribution of mean ToT versus pulse height shows that for samples where the corresponding coupling pads are centred, the ToT increases with pulse height up to values of approximately 300~mV, and that the mean ToT saturates at $\approx 13$.  It is expected that the $\frac{1}{4}-$ and $\frac{1}{2}-$offset samples should have a lower ToT than the centred samples due to the lower effective capacitance between the HV-CMOS and CLICpix pads.  The greater the offset is, the smaller the effective capacitance to the target CLICpix pad will be, and so the lower the recorded ToT.  This is can be seen when comparing the centred samples to the $\frac{1}{4}-$offset sample and SET 16, the $\frac{1}{2}-$offset sample.  
 
 %========================================================================================
 IN GENERAL YOU KEEP FORGETTING TO PUT THINGS IN CONTEXT - WHY CROSS-COUPLING?
@@ -189,7 +191,7 @@ IN GENERAL YOU KEEP FORGETTING TO PUT THINGS IN CONTEXT - WHY CROSS-COUPLING?
 
 Due to the capacitive transfer of signal from the HV-CMOS sensor to the readout ASIC, it can be expected that any capacitance between the HV-CMOS pixel pads and the readout pads of neighbouring pixels may give rise to additional unwanted hits. Such cross-capacitancies can be observed in the same manner as the previous measurements, but by considering instead the ToT of the neighbouring CLICpix pixel. This is shown in figure \ref{fig:totcrosscoupling1} for all devices where the pixel pads are centred on each other, and in figure \ref{fig:totcrosscoupling2} for the $\frac{1}{4}-$offset sample and the $\frac{1}{2}-$offset sample, SET 16.  
 
-IN GENERAL USE "SET" INSTEAD OF "Set"
+IN GENERAL USE "SET" INSTEAD OF "SET"
 
 DO YOU HAVE A PLOT SHOWING THE NUMBER OF HITS IN THE NEIGHBOUR? RELATIVE TO THE NUMBER OF HITS IN THE ALIGNED PIXEL? THIS PSEUDO-EFFICIENCY MIGHT BE A BETTER INDICATOR? FOLLOWED BY THESE PLOTS
 
@@ -199,7 +201,7 @@ REMOVE REFERENCES TO SET14!
 
 No correlation between the adjacent pixel ToT and the HV-CMOS pulse height is observed for the samples shown in figure \ref{fig:totcrosscoupling1} for all but the lowest values of pulse height.  The correlation observed at low pulse heights may arise due to the signal $\text{e}^{-}$, which is primarily recorded in the target pixel, depositing a small amount of charge in the adjacent adjacent pixel.  This can happen as the $\text{e}^{-}$ may not be traveling normal to the pixel surface.  However, as this feature is not present in all samples it could indicate a small misalignment exists in the samples showing the correlation.  
 
-There is, however, a strong correlation between adjacent pixel ToT and the HV-CMOS pulse height, shown in figure \ref{fig:totcrosscoupling2}, for Set 16, which is one of the $\frac{1}{2}$ offset samples.  This distribution is almost identical to the the target pixel ToT distribution as a function of HV-CMOS pulse height, which is what would be expected given an equal signal charge sharing between the two readout ASICs.  This indicates the charge sharing is well understood for this $\frac{1}{2}$ offset sample.   
+There is, however, a strong correlation between adjacent pixel ToT and the HV-CMOS pulse height, shown in figure \ref{fig:totcrosscoupling2}, for SET 16, which is one of the $\frac{1}{2}$ offset samples.  This distribution is almost identical to the the target pixel ToT distribution as a function of HV-CMOS pulse height, which is what would be expected given an equal signal charge sharing between the two readout ASICs.  This indicates the charge sharing is well understood for this $\frac{1}{2}$ offset sample.   
 
 For the $\frac{1}{4}$ offset sample correlation is present only for low pulse heights as was the case for the centred samples.  However, the mean ToT within the uncorrelated region is centred around $\approx$ 5 units of ToT, which is lower than was observed for the centred samples.  This is due to the offset reducing the total capacitance between the HV-CMOS and CLICpix in comparison to the centred samples and thus reducing the ToT recorded.
 
@@ -221,7 +223,7 @@ THE RESULTS OF THIS SECTION SHOULD BE DISCUSSED AND I SHOULD TAKE A LOOK ONCE YO
 
 %~~~
 
-The lab based measurements have helped to describe many of the characteristics of the devices considered here, however, their use is limited as little information can be deduced about the incoming particles using lab based measurements.  Therefore, to record device efficiencies it is necessary to place the device in a telescope to track the incoming and outgoing particles passing through the device.  Furthermore, the radioactive source calibration cannot be used here as the particles produced by the source would not be of high enough energy to pass through the entire telescope.  This means that it is necessary to use a test beam in conjunction with the telescope to be able to full quantify the device characteristics.
+This measurement focuses upon determining the response of the CLICpix readout chip as a function of the input voltage entering the chip.  The CLICpix readout chip allows for a fixed height voltage pulse to be directly applied at the input of the chip meaning a full calibration of the chip can be performed.  This experiment extends the characterisation of the CLICpix chip beyond what was found using the radioactive source measurements as applying the voltage directly to the CLICpix fully isolates the response of the chip from effects relating to the glue layer.  
 
 %~~~
 
@@ -277,7 +279,7 @@ A known issue withe the design of the CLICpix ASIC is an unwanted feedback capac
 \subfloat[$c$ parameter.]{\label{fig:fitparams3}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamC_Set9.pdf}}
 \subfloat[$t$ parameter.]{\label{fig:fitparams4}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamT_Set9.pdf}}
 \label{fig:fitparams}
-\caption[Distribution of surrogate function fit parameters for Set 9.]{Distribution of surrogate function fit parameters for device SET9.}
+\caption[Distribution of surrogate function fit parameters for SET 9.]{Distribution of surrogate function fit parameters for device SET 9.}
 \end{figure}
 
 \begin{figure}
@@ -285,7 +287,7 @@ A known issue withe the design of the CLICpix ASIC is an unwanted feedback capac
 \subfloat[$c$ parameter.]{\label{fig:fitparams2dc}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf}}
 \subfloat[$t$ parameter.]{\label{fig:fitparams2dt}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamT_Set9.pdf}}
 \label{fig:fitparams2d}
-\caption[Distribution as a function of matrix position of surrogate function fit parameter $c$ for Set 9.]{Distribution of surrogate function fit parameters $c$ and $t$ for device SET9.}
+\caption[Distribution as a function of matrix position of surrogate function fit parameter $c$ for SET 9.]{Distribution of surrogate function fit parameters $c$ and $t$ for device SET 9.}
 \end{figure}
 
 I DONT KNOW WHAT THE FIRST PART OF THE CAPTION IS, BUT IF I HAVE CORRECTED THE SECOND PART (THAT APPEARS IN THE TEXT) PLEASE UPDATE THE FIRST PART IF IT IS RELEVANT AND SHOWN SOMEWHERE!
@@ -349,6 +351,12 @@ As figure \ref{fig:testpulsemeanfit} shows, the response of the CLICpix to the i
 \section{Test Beam Analysis}
 \label{sec:testbeam}
 
+%~~~
+
+The lab based measurements have helped to describe many of the characteristics of the devices considered here, however, their use is limited as little information can be deduced about the incoming particles using lab based measurements.  Therefore, to record device efficiencies it is necessary to place the device in a telescope to track the incoming and outgoing particles passing through the device.  Furthermore, the radioactive source calibration cannot be used here as the particles produced by the source would not be of high enough energy to pass through the entire telescope.  This means that it is necessary to use a test beam in conjunction with the telescope to be able to full quantify the device characteristics.
+
+%~~~
+
 AGAIN, BETTER INTRO? Describe a bit why we have to do testbeams, efficiency measurements, etc. Try not to present it in this detached "we have performed an experiment" - there is some reasoning behind this! 
 
 This sections describes the performance of the devices when placed under real experimental conditions at the CERN test beam area.  
@@ -393,7 +401,7 @@ CONTEXT
 
 CONTEXT (just in case you missed that ;-))
 
-The efficiency as a function of threshold is shown in figure \ref{fig:efficiency}.  The data indicates that, as expected, for all assemblies the single hit efficiency of the detector decreases when a higher amount of charge is required to generate a signal.  However, it is clear that for the $\frac{1}{2}$ offset sample, Set 16, the efficiency is significantly lower in comparison to the other samples. There is a minor degradation in performance when considering the $\frac{1}{4}$ offset sample, but these results are still comparable to several of the centred samples.  Overall, it can be concluded that manufacturing tolerances up to $\frac{1}{4}$ of a pixel width would not significantly affect performance.    
+The efficiency as a function of threshold is shown in figure \ref{fig:efficiency}.  The data indicates that, as expected, for all assemblies the single hit efficiency of the detector decreases when a higher amount of charge is required to generate a signal.  However, it is clear that for the $\frac{1}{2}$ offset sample, SET 16, the efficiency is significantly lower in comparison to the other samples. There is a minor degradation in performance when considering the $\frac{1}{4}$ offset sample, but these results are still comparable to several of the centred samples.  Overall, it can be concluded that manufacturing tolerances up to $\frac{1}{4}$ of a pixel width would not significantly affect performance.    
 
 AGAIN THIS NEEDS EXPANSION. You spent so much time on the earlier section, but now on the results you just say "see figure 1. end.". You can talk a bit more about the lower signal expected by reduced capacitance, etc.
 
