@@ -8,26 +8,32 @@
 %========================================================================================
 
 \section{Introduction}
-Identification of heavy-flavour quarks and tau-leptons relies upon precise reconstruction of the secondary displaced vertices produced in the decay of these particles, in addition to the accurate association of daughter tracks to those vertices.  For the CLIC vertex detector a very high spatial resolution of approximately 3 {\mu}m, as well as good geometric coverage extending to low $\theta$ values, are essential for achieving the precision on the reconstructed vertices necessary for identification of heavy-flavour quarks and tau-leptons.  The vertex detector must also have a low material budget (less than 0.2 $\text{X}_{0}$ per layer) in order to prevent additional decay vertices due to material interactions (CONFIRM!), and maintain a low occupancy, despite the high presence of beam-induced background particles. This will be achieved by the use of time-tagging, to an accuracy of 10 ns, to identify particles produced around the physics event of interest.  
 
-As there are currently no technology options that have fulfilled all of the criteria for the CLIC vertex detector, the CLIC experiment has developed a wide R\&D program to consider  new technologies that could be of use in the vertex detector. High-voltage complementary metal-oxide-semiconductor (HV-CMOS) sensors, capacitively coupled to a separate readout ASIC are one such option. The performance of prototype detectors for CLIC, and the impact of mechanical tolerances that are present in their manufacture, are presented.  
 
-WILL YOU DISCUSS CAPACITIVE COUPLING IN YOUR THEORY CHAPTER? SOMETHING LIKE TRADITIONAL BUMP-BONDED DEVICES, ETC.? OTHERWISE LOTS OF CONCEPTS ARE ABSENT HERE. OK, JUST SAW THE NEXT SECTION... 
+
+Identification of heavy-flavour quarks and tau-leptons relies at the linear collider experiment will rely upon precise reconstruction of secondary displaced vertices that are produced when these particles decay.  Furthermore, the ability to accurately associate any daughter tracks, which are produced from such decays, to the secondary vertices is essential.  At the CLIC experiment this can only be realised using a vertex detector with a very high spatial resolution, of approximately 3 {\mu}m, and good geometric coverage, extending to low $\theta$ values.  The vertex detector must also have a low material budget (less than 0.2 $\text{X}_{0}$ per layer) in order to prevent additional decay vertices from material interactions (CONFIRM!), and maintain a low occupancy, despite the high presence of beam-induced background particles.  Low occupancy for the vertex detector will be achieved through the use of time-tagging, to an accuracy of 10 ns, to identify particles produced from the physics event of interest.  
+
+As there are currently no technology options that fulfil all of the criteria for the CLIC vertex detector, the CLIC experiment has developed an extensive R\&D program where new technologies for the vertex detector are considered.  High-voltage complementary metal-oxide-semiconductor (HV-CMOS) sensors, which are capacitively coupled to a separate readout ASIC are one such option. The performance of prototype detectors based upon this technology and the impact of mechanical tolerances present in their manufacture are presented.  
 
 %========================================================================================
 
 \subsection{HV-CMOS}
 
-Pixel detectors can be broadly classified in two distinct groups: hybrid detectors, where a separate sensor and readout chip are bonded together; and fully-integrated devices, where the collection diode is implanted in the same piece of silicon as the readout circuitry. This latter approach has traditionally not been suitable for applications with high timing requirements, due to the relatively slow charge collection time and limited on-pixel functionality. Developments in CMOS technologies in recent years have, however, led to many new detector designs which may overcome some of these issues. 
+Pixel detectors can be broadly classified in two distinct groups: hybrid detectors, where a separate sensor and readout chip are bonded together; and fully-integrated devices, where the collection diode is implanted in the same piece of silicon as the readout circuitry.  Fully-integrated devices have traditionally not been suitable for applications with tight timing requirements, due to relatively slow charge collection time and limited on-pixel functionality.  However, recent developments in CMOS technologies have led to new assembly designs that may overcome some of these issues. 
 
-ACTUALLY, DO YOU PLAN IN YOUR THEORY SECTION TO DISCUSS SILICON TECHNOLOGY? SHOULD YOU EXPLAIN COLLECTION DIODE, PN JUNCTION, ETC?
+%ACTUALLY, DO YOU PLAN IN YOUR THEORY SECTION TO DISCUSS SILICON TECHNOLOGY? SHOULD YOU EXPLAIN COLLECTION DIODE, PN JUNCTION, ETC?
 
-HV-CMOS is a processing technology whereby the n-MOS and p-MOS transistors forming the on-pixel electronics are placed entirely within a deep n-well (shown in  \ref{fig:hvcmos}), which acts as the charge collection diode as well as shielding the circuitry from the p-substrate. This shielding allows the application of a moderate bias voltage to the sensor bulk, producing a depletion region that facilitates fast charge collection (unlike conventional MAPS). This has the additional benefit of preventing competition for the charge collection, as is the case for conventional MAPS where n-wells from both the collection diode and PMOS transistors may collect deposited charge.
+HV-CMOS is a processing technology whereby n-MOS and p-MOS transistors forming the on-pixel electronics are placed entirely within a deep n-well, as shown in \ref{fig:hvcmos}.  In this case the deep n-well acts the charge collection diode as well as shielding the circuitry from the p-substrate.  This shielding allows the application of a moderate bias voltage to the sensor bulk, which produces a depletion region that facilitates fast charge collection via a drift current.  In contrast, traditional monolithic active pixel sensors (MAPS) have a much smaller depletion region meaning charge collection occurs primarily through the slower mechanism of diffusion.  
+
+% Check wording
+Furthermore, in conventional MAPS there is competition for charge collection between the collection diode and the p-MOS transistors as the p-MOS is embedded within an n-well, which acts like the collection diode.  This competition can be avoided when using the HV-CMOS technology as the deep n-well in the HV-CMOS shields the p-MOS circuitry and allows full CMOS logic to be implemented.
+
+%This has the additional benefit of preventing competition for the charge collection, as is the case for conventional MAPS where n-wells from both the collection diode and p-MOS transistors may collect deposited charge.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{CLICdpVertex/Plots/HV-CMOSDiagram.pdf}
-\caption[HV-CMOS diagram.]{I NEED A BETTER DIAGRAM!}
+\includegraphics[width=0.75\textwidth]{CLICdpVertex/Plots/HV-CMOSDiagram.png}
+\caption[Schematic cross section of an HV-CMOS sensor: the deep n-well is the charge-collecting electrode and also contains additional CMOS circuits such as a preamplifier.  Image taken from \cite{Benoit:2016vup}.]{Schematic cross section of an HV-CMOS sensor: the deep n-well is the charge-collecting electrode and also contains additional CMOS circuits such as a preamplifier.  Image taken from \cite{Benoit:2016vup}.}
 \label{fig:hvcmos}
 \end{figure}
 
@@ -80,7 +86,7 @@ SET10 & $\frac{1}{4}$ Offset \\
 %SET11 & $\frac{1}{2}$ Offset \\
 SET12 & Centred \\
 SET13 & Centred \\
-SET14 & $\frac{1}{2}$ Offset REMOVED, NO?\\
+%SET14 & $\frac{1}{2}$ Offset REMOVED, NO?\\
 SET15 & Centred \\
 SET16 & $\frac{1}{2}$ Offset \\
 \hline
@@ -306,7 +312,7 @@ SET 9   & $0.0875 \pm 0.0005$ & $2.41 \pm 0.03$ & $5.1 \pm 0.1$ & $12.79 \pm 0.1
 SET 10 & $0.0769 \pm 0.0005$ & $2.58 \pm 0.03$ & $7.5 \pm 0.2$ & $8.02 \pm 0.14$ \\
 SET 12 & $0.0725 \pm 0.0005$ & $2.87 \pm 0.04$ & $12.1 \pm 0.3$ & $7.86 \pm 0.22$  \\
 SET 13 & $0.0708 \pm 0.0005$ & $2.69 \pm 0.03$ & $16.2 \pm 0.3$ & $6.65 \pm 0.18$ \\
-SET 14 & $0.0748 \pm 0.0005$ & $2.57 \pm 0.04$ & $16.0 \pm 1.3$ & $9.89 \pm 0.28$ \\
+%SET 14 & $0.0748 \pm 0.0005$ & $2.57 \pm 0.04$ & $16.0 \pm 1.3$ & $9.89 \pm 0.28$ \\
 SET 15 & $0.0856 \pm 0.0005$ & $2.34 \pm 0.03$ & $5.1 \pm 0.2$ & $12.51 \pm 0.13$ \\
 SET 16 & $0.0746 \pm 0.0004$ & $2.32 \pm 0.02$ & $13.7 \pm 0.3$ & $6.65\pm 0.16$ \\
 \hline
@@ -325,7 +331,7 @@ SET 9   & $0.0834 \pm 0.0003$ & $1.72 \pm 0.01$ & $61.0 \pm 0.3$ & $0.25 \pm 0.0
 SET 10 & $0.0759 \pm 0.0002$ & $1.63 \pm 0.01$ & $43.2 \pm 0.2$ & $0.10 \pm 0.02$ \\
 SET 12 & $0.0731 \pm 0.0003$ & $1.92 \pm 0.02$ & $51.5 \pm 0.3$ & $0.36 \pm 0.12$ \\
 SET 13 & $0.0713 \pm 0.0002$ & $1.72 \pm 0.01$ & $52.5 \pm 0.3$ & $0.18 \pm 0.07$ \\
-SET 14 & $0.0754 \pm 0.0002$ & $1.68 \pm 0.01$ & $57.3 \pm 0.3$ & $0.16 \pm 0.03$ \\
+%SET 14 & $0.0754 \pm 0.0002$ & $1.68 \pm 0.01$ & $57.3 \pm 0.3$ & $0.16 \pm 0.03$ \\
 SET 15 & $0.0836 \pm 0.0003$ & $1.52 \pm 0.02$ & $52.7 \pm 0.3$ & $0.42 \pm 0.08$ \\
 SET16  & $0.0727 \pm 0.0002$ & $1.49 \pm 0.01$ & $50.7 \pm 0.2$ & $0.10 \pm 0.03$ \\
 \hline
