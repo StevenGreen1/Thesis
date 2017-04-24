@@ -23,12 +23,16 @@ Pixel detectors can be broadly classified in two distinct groups: hybrid detecto
 
 %ACTUALLY, DO YOU PLAN IN YOUR THEORY SECTION TO DISCUSS SILICON TECHNOLOGY? SHOULD YOU EXPLAIN COLLECTION DIODE, PN JUNCTION, ETC?
 
-HV-CMOS is a processing technology whereby n-MOS and p-MOS transistors forming the on-pixel electronics are placed entirely within a deep n-well, as shown in \ref{fig:hvcmos}.  In this case the deep n-well acts the charge collection diode as well as shielding the circuitry from the p-substrate.  This shielding allows the application of a moderate bias voltage to the sensor bulk, which produces a depletion region that facilitates fast charge collection via a drift current.  In contrast, traditional monolithic active pixel sensors (MAPS) have a much smaller depletion region meaning charge collection occurs primarily through the slower mechanism of diffusion.  
+On-pixel logic operations are performed using various configurations of n-MOS and p-MOS transistors.  By varying the voltage applied to the gate terminal, n-MOS and p-MOS transistors are able to control the currently flowing between the source and drain terminals.  The gate voltage produces an inversion layer between the source and drain terminals that acts as a conduit for current to flow as shown in figure \ref{fig:nmos}.  The magnitude of the gate voltage, with respect to the body voltage, controls the width of the inversion layer and the current flow between the source and drain terminals.  The initial input for the logic operations in the case of the HV-CMOS is  the voltage measured at the collecting diode. 
 
-% Check wording
-Furthermore, in conventional MAPS there is competition for charge collection between the collection diode and the p-MOS transistors as the p-MOS is embedded within an n-well, which acts like the collection diode.  This competition can be avoided when using the HV-CMOS technology as the deep n-well in the HV-CMOS shields the p-MOS circuitry and allows full CMOS logic to be implemented.
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{CLICdpVertex/Plots/FETDiagram.pdf}
+\caption[Schematic cross section of an n-MOS transistor.  p-MOS transistors have a similar cross section where the n and p doped regions are switched.]{Schematic cross section of an n-MOS transistor.  p-MOS transistors have a similar cross section where the n and p doped regions are switched.}
+\label{fig:nmos}
+\end{figure}
 
-%This has the additional benefit of preventing competition for the charge collection, as is the case for conventional MAPS where n-wells from both the collection diode and p-MOS transistors may collect deposited charge.
+HV-CMOS is a processing technology whereby n-MOS and p-MOS transistors, forming the on-pixel electronics, are placed entirely within a deep n-well, as shown in \ref{fig:hvcmos}.  The deep n-well acts as the charge collection diode as well as shielding the circuitry from the p-substrate.  This shielding allows the application of a moderate bias voltage to the sensor bulk, which produces a depletion region that facilitates fast charge collection via a drift current.  In contrast, traditional monolithic active pixel sensors (MAPS) have a much smaller depletion region meaning charge collection occurs primarily through the slower mechanism of diffusion.  HV-CMOS has an additional advantage over conventional MAPS in that there is no competition for charge collection between the collection diode, which is a n-well, and the p-MOS transistors present in the logic operations, which are embedded within a n-well.  
 
 \begin{figure}
 \centering
@@ -36,6 +40,8 @@ Furthermore, in conventional MAPS there is competition for charge collection bet
 \caption[Schematic cross section of an HV-CMOS sensor: the deep n-well is the charge-collecting electrode and also contains additional CMOS circuits such as a preamplifier.  Image taken from \cite{Benoit:2016vup}.]{Schematic cross section of an HV-CMOS sensor: the deep n-well is the charge-collecting electrode and also contains additional CMOS circuits such as a preamplifier.  Image taken from \cite{Benoit:2016vup}.}
 \label{fig:hvcmos}
 \end{figure}
+
+% HERE
 
 While HV-CMOS offer the possibility of fast charge collection with integrated on-pixel functionality, several limitations still exist for this technology. Due to the requirement for all electronics to be placed inside the deep n-well, and the separation required between n-wells, only a limited physical area of the pixel is available for transistor layout. Additionally, due to the limited availability of quadruple-well technology, it is not possible to implement full CMOS logic inside the deep n-well without coupling the p-MOS transistors to the collection node, leading to noise injection. A relatively simple pixel architecture has thus been implemented, with a focus on producing a small-pitch device that can reach the requirements of the CLIC vertex detector. Given the issues involved in bump-bonding a hybrid pixel detector (detailed below), capacitive coupling of the HV-CMOS sensor to a dedicated readout ASIC has been pursued. This is only made possible by the implementation of an amplifier in the HV-CMOS pixel, allowing the small pixel capacitance to be overcome. A schematic approach of this can be see in figure \ref{fig:ccpdandclicpix}.
  
