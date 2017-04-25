@@ -1,0 +1,23 @@
+No Cuts
+Process & NEvts & PreSelection NEvts & PreSelection Normalised NEvts \\
+ee_nunuqqqq 2696000 2695997 3.705e+04
+ee_lnuqqqq 741312 741312 1.656e+05
+ee_llqqqq 1268586 1268584 9.315e+04
+ee_qqqq 585060 585054 1.868e+06
+ee_nunuqq 584065 583889 1.181e+06
+ee_lnuqq 2093679 2093473 6.464e+06
+ee_qqll 2099649 2099378 4.088e+06
+ee_qq 486513 486219 6.011e+06
+egamma_qqqqe_EPA 126423 126422 4.306e+05
+egamma_qqqqe_BS 123750 123749 1.306e+06
+gammae_qqqqe_EPA 136719 136717 4.303e+05
+gammae_qqqqe_BS 119394 119393 1.301e+06
+egamma_qqqqnu_EPA 176715 176693 4.889e+04
+egamma_qqqqnu_BS 174141 174125 1.54e+05
+gammae_qqqqnu_EPA 176715 176691 4.889e+04
+gammae_qqqqnu_BS 172755 172737 1.534e+05
+gammagamma_qqqq_EPA_EPA 166914 166909 1.129e+06
+gammagamma_qqqq_EPA_BS 166221 166221 4.539e+06
+gammagamma_qqqq_BS_EPA 169686 169684 4.521e+06
+gammagamma_qqqq_BS_BS 159687 159687 2.055e+07
+
