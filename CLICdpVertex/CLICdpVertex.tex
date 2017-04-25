@@ -9,43 +9,42 @@
 
 \section{Introduction}
 
+Identification of heavy-flavour quarks and tau-leptons relies at the linear collider experiment will rely upon precise reconstruction of secondary displaced vertices that are produced when these particles decay.  Furthermore, the ability to accurately associate any daughter tracks, which are produced from such decays, to the secondary vertices is essential.  At the CLIC experiment this can only be realised using a vertex detector with a very high spatial resolution, of approximately 3 {\mu}m, and good geometric coverage, extending to low $\theta$ values.  The vertex detector must also have a low material budget (less than 0.2 $\text{X}_{0}$ per layer) in order to prevent additional decay vertices from material interactions (CONFIRM!), and maintain a low occupancy, despite the high presence of beam-induced background particles.  Low occupancy for the vertex detector will be achieved through the use of time-tagging, to an accuracy of 10~ns, to identify particles produced from the physics event of interest.  
 
-
-Identification of heavy-flavour quarks and tau-leptons relies at the linear collider experiment will rely upon precise reconstruction of secondary displaced vertices that are produced when these particles decay.  Furthermore, the ability to accurately associate any daughter tracks, which are produced from such decays, to the secondary vertices is essential.  At the CLIC experiment this can only be realised using a vertex detector with a very high spatial resolution, of approximately 3 {\mu}m, and good geometric coverage, extending to low $\theta$ values.  The vertex detector must also have a low material budget (less than 0.2 $\text{X}_{0}$ per layer) in order to prevent additional decay vertices from material interactions (CONFIRM!), and maintain a low occupancy, despite the high presence of beam-induced background particles.  Low occupancy for the vertex detector will be achieved through the use of time-tagging, to an accuracy of 10 ns, to identify particles produced from the physics event of interest.  
-
-As there are currently no technology options that fulfil all of the criteria for the CLIC vertex detector, the CLIC experiment has developed an extensive R\&D program where new technologies for the vertex detector are considered.  High-voltage complementary metal-oxide-semiconductor (HV-CMOS) sensors, which are capacitively coupled to a separate readout ASIC are one such option. The performance of prototype detectors based upon this technology and the impact of mechanical tolerances present in their manufacture are presented.  
+As there are currently no technology options that fulfil all of the criteria for the CLIC vertex detector, the CLIC experiment has developed an extensive R\&D program where new technologies for the vertex detector are considered.  High-voltage complementary metal-oxide-semiconductor (HV-CMOS) sensors, which are capacitively coupled to a separate readout application-specific integrated circuit (ASIC) are one such option. The performance of prototype detectors based upon this technology and the impact of mechanical tolerances present in their manufacture are presented.  
 
 %========================================================================================
 
 \subsection{HV-CMOS}
 
-Pixel detectors can be broadly classified in two distinct groups: hybrid detectors, where a separate sensor and readout chip are bonded together; and fully-integrated devices, where the collection diode is implanted in the same piece of silicon as the readout circuitry.  Fully-integrated devices have traditionally not been suitable for applications with tight timing requirements, due to relatively slow charge collection time and limited on-pixel functionality.  However, recent developments in CMOS technologies have led to new assembly designs that may overcome some of these issues. 
+Pixel detectors can be broadly classified in two distinct groups: hybrid detectors, where a separate sensor and readout chip are bonded together; and fully-integrated devices, where the collection diode is implanted in the same piece of silicon as the readout circuitry.  Fully-integrated devices have traditionally not been suitable for applications with tight timing requirements, due to relatively slow charge collection time and limited on-pixel functionality.  However, recent developments in CMOS technologies, a method for constructing integrated circuits, have led to new assembly designs that may overcome some of these issues. 
 
-%ACTUALLY, DO YOU PLAN IN YOUR THEORY SECTION TO DISCUSS SILICON TECHNOLOGY? SHOULD YOU EXPLAIN COLLECTION DIODE, PN JUNCTION, ETC?
+HV-CMOS is a processing technology whereby the n-MOS and p-MOS transistors forming the on-pixel electronics, are placed entirely within a deep n-well, as shown in \ref{fig:hvcmos}.  By varying the voltage applied at the gate terminal, n-MOS and p-MOS transistors are able to control the currently flowing between the source and drain terminals.  The gate voltage produces an inversion layer between the source and drain terminals that acts as a conduit allowing current to flow between the source and drain, as shown in figure \ref{fig:nmos}.  The magnitude of the voltage at the gate, with respect to the body, controls the width of the inversion layer and henceforth the magnitude of this current.  Logic operations can be performed directly on-pixel using various configurations of the n-MOS and p-MOS transistors.
 
-On-pixel logic operations are performed using various configurations of n-MOS and p-MOS transistors.  By varying the voltage applied to the gate terminal, n-MOS and p-MOS transistors are able to control the currently flowing between the source and drain terminals.  The gate voltage produces an inversion layer between the source and drain terminals that acts as a conduit for current to flow as shown in figure \ref{fig:nmos}.  The magnitude of the gate voltage, with respect to the body voltage, controls the width of the inversion layer and the current flow between the source and drain terminals.  The initial input for the logic operations in the case of the HV-CMOS is  the voltage measured at the collecting diode. 
-
-\begin{figure}
-\centering
-\includegraphics[width=0.75\textwidth]{CLICdpVertex/Plots/FETDiagram.pdf}
-\caption[Schematic cross section of an n-MOS transistor.  p-MOS transistors have a similar cross section where the n and p doped regions are switched.]{Schematic cross section of an n-MOS transistor.  p-MOS transistors have a similar cross section where the n and p doped regions are switched.}
-\label{fig:nmos}
-\end{figure}
-
-HV-CMOS is a processing technology whereby n-MOS and p-MOS transistors, forming the on-pixel electronics, are placed entirely within a deep n-well, as shown in \ref{fig:hvcmos}.  The deep n-well acts as the charge collection diode as well as shielding the circuitry from the p-substrate.  This shielding allows the application of a moderate bias voltage to the sensor bulk, which produces a depletion region that facilitates fast charge collection via a drift current.  In contrast, traditional monolithic active pixel sensors (MAPS) have a much smaller depletion region meaning charge collection occurs primarily through the slower mechanism of diffusion.  HV-CMOS has an additional advantage over conventional MAPS in that there is no competition for charge collection between the collection diode, which is a n-well, and the p-MOS transistors present in the logic operations, which are embedded within a n-well.  
-
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.75\textwidth]{CLICdpVertex/Plots/HV-CMOSDiagram.png}
 \caption[Schematic cross section of an HV-CMOS sensor: the deep n-well is the charge-collecting electrode and also contains additional CMOS circuits such as a preamplifier.  Image taken from \cite{Benoit:2016vup}.]{Schematic cross section of an HV-CMOS sensor: the deep n-well is the charge-collecting electrode and also contains additional CMOS circuits such as a preamplifier.  Image taken from \cite{Benoit:2016vup}.}
 \label{fig:hvcmos}
 \end{figure}
 
-% HERE
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.375\textwidth]{CLICdpVertex/Plots/FETDiagram.pdf}
+\caption[Schematic cross section of an n-MOS transistor.  p-MOS transistors have a similar cross section where the n and p doped regions are switched.]{Schematic cross section of an n-MOS transistor.  p-MOS transistors have a similar cross section where the n and p doped regions are switched.}
+\label{fig:nmos}
+\end{figure}
 
-While HV-CMOS offer the possibility of fast charge collection with integrated on-pixel functionality, several limitations still exist for this technology. Due to the requirement for all electronics to be placed inside the deep n-well, and the separation required between n-wells, only a limited physical area of the pixel is available for transistor layout. Additionally, due to the limited availability of quadruple-well technology, it is not possible to implement full CMOS logic inside the deep n-well without coupling the p-MOS transistors to the collection node, leading to noise injection. A relatively simple pixel architecture has thus been implemented, with a focus on producing a small-pitch device that can reach the requirements of the CLIC vertex detector. Given the issues involved in bump-bonding a hybrid pixel detector (detailed below), capacitive coupling of the HV-CMOS sensor to a dedicated readout ASIC has been pursued. This is only made possible by the implementation of an amplifier in the HV-CMOS pixel, allowing the small pixel capacitance to be overcome. A schematic approach of this can be see in figure \ref{fig:ccpdandclicpix}.
+For the HV-CMOS, the deep n-well housing the on-pixel electronics acts as the charge collection diode as well as shielding the circuitry from the p-substrate.  This shielding allows for the application of a moderate bias voltage to the sensor bulk that produces a depletion region, which facilitates fast charge collection via a drift current.  In contrast, traditional monolithic active pixel sensors (MAPS) have a much smaller depletion region meaning charge collection occurs primarily through the slower mechanism of diffusion.  Furthermore, in conventional MAPS there is potential for competition for charge collection between the n-well collecting diode and the p-MOS transistors used to perform logic operations as the p-MOS transistors are embedded within an n-well.  The HV-CMOS technology does not suffer from this effect as the deep n-well collecting diode houses the p-MOS transistors.
+
+The HV-CMOS technology offers the possibility of fast charge collection with integrated on-pixel functionality, however, several limitations still exist.  As the on-pixel electronics have to be placed inside the deep n-well and the n-wells have to be separated from each other, there is a limited physical area of the pixel that can be used for the transistor layout, which limits the available on-pixel functionality.  In addition to this, it is not possible to implement full CMOS logic inside the deep n-well as coupling between p-MOS transistors and the collection diode will lead to noise injection.  While it is possible to embed p-MOS transistors within a p-well to shield them from the deep n-well, quadruple-well technology, and give access to full CMOS logic this option is not readily available for prototyping.  By restricting the complexity of on-pixel electronics and using a separate readout ASIC, it is possible to overcome many of these issues.  When coupled with the fast charge collection time and removal of competition in charge collection this makes the HV-CMOS technology option highly desirable for use in the CLIC vertex detector.
+
+%========================================================================================
+
+\subsection{CLIC ASICs}
+As the HV-CMOS technology is such a promising option for use at the CLIC vertex detector, prototype devices based on this technology have been developed for testing.  Two ASICs have been developed: the charge coupled pixel device version 3 (CCPDv3), a sensor chip based on the HV-CMOS technology, and the CLICpix, a readout chip providing additional on-pixel logic operations.  The pitch of the sensors, both the CCPDv3 and the CLICpix, produced for this study is 25 {\mu}m, which should be sufficient to meet the requirements for the CLIC vertex detector and the matrix size is 64$\times$64.  A schematic of these devices can be found in figure \ref{fig:ccpdandclicpix}.
  
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/schematic.pdf}
 \caption[Schematic of CCPDv3 and CLICpix pixels.]{Schematic of CCPDv3 and CLICpix pixels.}
@@ -54,21 +53,26 @@ While HV-CMOS offer the possibility of fast charge collection with integrated on
 
 %========================================================================================
 
-\subsection{The CLICpix Readout ASIC}
+\subsubsection{CCPDv3}
 
-The readout ASIC used in this study (REPHRASE? DEVELOPED FOR CLIC?) is the CLICpix, a hybrid pixel readout chip with pixels containing a charge-integrating amplifier connected to a discriminator, as shown in figure \ref{fig:ccpdandclicpix}.  The discriminator fires for as long as the input signal is over a given threshold, and is used as the input for further logic operations to record the time of arrival and magnitude of the collected charge, using a Time over Threshold (ToT) measurement. The ToT is stored in a 4-bit on-pixel counter.  The CLICpix ASIC operates using a shutter-based readout, where the entire matrix is kept active while the shutter is open and when closed the matrix is readout in its entirety.  This is designed in order to match the expected beam structure for the CLIC experiment, as the accelerator will deliver bunch trains of $e^{+}$ and $e^{-}$ that are separated by 20~ms.  Each bunch train contains 312~bunches with a spacing of 0.5~ns, giving a total train length of 156~ns.  
+The construction of the CCPDv3 was done using a 65nm CMOS process, which is the smallest size building blocks that can be used for creating the integrated circuits on a silicon wafer.  This pushes the boundaries of semiconductor device fabrication for particle collider pixel detectors as current LHC experiments typically use 130 and/or 250~nm CMOS processes in the pixel detectors \cite{Aaij:2244311, Dominguez:1481838}.  This makes it possible to have more complex on-pixel circuitry incorporated into the CLIC vertex detector than would be possible in previous generations of pixel detectors.  
 
-Due to variations in the manufacturing process, the threshold voltage seen by each CLICpix pixel is slightly different, which if not accounted for results in a threshold dispersion across the matrix. To suppress these fluctuations, each CLICpix pixel contains a 4-bit local adjustment to the threshold voltage, to unify the response of the detector. The threshold equalisation is achieved by performing two threshold scans of the matrix, once with all four bits set to 0 (no local threshold adjustment), and a second time with all four bits set to 1 (maximum local threshold adjustment). For each scan, the baseline voltage of each pixel is determined. By applying a linear interpolation between the 0000 and 1111 cases, each pixel can be tuned to a common point, such that all pixels respond at the same global threshold.
+%========================================================================================
 
-COULD CHANGE THIS SECTION TO "CLIC ASICS" AND THEN ADD SOME DESCRIPTION OF THE CCPDv3, AND ADDING SOME GENERAL FEATURES LIKE 25 UM PITCH AND 64*64 PIXELS, WHICH DON'T FIT IN WELL BELOW.
+\subsubsection{CLICpix}
+
+The CLICpix is a hybrid pixel readout chip that has been developed for the CLIC vertex detector.  Each CLICpix pixel contains a charge-integrating amplifier connected to a discriminator, as shown in figure \ref{fig:ccpdandclicpix}.  The discriminator fires for as long as the input signal is over a given threshold and this output is then used as the input for further logic operations.  The additional logic operations record the time of arrival and magnitude of the collected charge, using a Time over Threshold (ToT) measurement.  The ToT is stored in a 4-bit on-pixel counter.  The CLICpix operates using a shutter-based readout, where the entire matrix is kept active while the shutter is open and when closed the matrix is readout in its entirety.  This is designed in order to match the expected beam structure for the CLIC experiment, as the accelerator will deliver bunch trains of $e^{+}$ and $e^{-}$ that are separated by 20~ms.  Each bunch train contains 312~bunches with a spacing of 0.5~ns, giving a total train length of 156~ns.  Furthermore, the shutter-based readout is well suited to power-pulsing, whereby, the power to front-end electronics is turned off between bunch crossings.  This helps to significantly reduce the power consumption of the pixel detector.
+
+The threshold voltage seen by each CLICpix pixel is slightly different, due to variations in the manufacturing process.  If these variations are not accounted for then the behaviour of the device across the matrix will not be uniform.  To minimise the impact of these fluctuations each CLICpix pixel contains a 4-bit local adjustment to the threshold voltage, which is calibrated to unify the response across the matrix.  The threshold 'equalisation' is achieved by performing two threshold scans across the matrix, once with all four bits set to 0 (no local threshold adjustment), and a second time with all four bits set to 1 (maximum local threshold adjustment).  For each scan, the baseline voltage of each pixel is determined. By applying a linear interpolation between the 0000 and 1111 cases, each pixel can be tuned to a common point, such that all pixels respond at the same global threshold.
 
 %========================================================================================
 
 \subsection{Capacitive Coupling}
 
-Solder bump-bonding is the typical method that is used for hybrid pixel detectors to connect the sensor to the readout ASIC, however bump-bonding is both expensive and sets limits on the thickness of both objects for mechanical stability.  An alternative to this involves using a thin layer of glue to form a capacitive connection between the active sensor and the readout ASIC.  While this procedure reduces the cost and material budget with respect to bump-bonding, it has only recently been used to produce prototype detectors and as such, detailed studies must be carried out. (REPHRASE A LITTLE THOUGH...)
+Solder bump-bonding is the typical method used to connect sensor and readout ASICs in hybrid pixel detectors, however, it is expensive and sets limits on the thickness of both ASICs that is required for mechanical stability.  An alternative procedure for connecting the ASICs involves using a thin layer of glue to form a capacitive connection between the two.  This procedure reduces the cost and material budget with respect to bump-bonding making it highly desirable for use at the CLIC vertex detector.  However, as this procedure has only recently been used to produce prototype devices extensive tests have to be performed to determine whether this option is feasible.  In order to make this procedure viable it is necessary to implement an amplifier in the CCPDv3 on-pixel logic, shown in figure \ref{fig:ccpdandclicpix}, to boost the signal to overcome the intrinsically small capacitance of the gluing layer.
 
 %========================================================================================
+%HERE
 
 \section{Construction}
 
@@ -100,8 +104,6 @@ SET16 & $\frac{1}{2}$ Offset \\
 \caption[A list of the detectors considered in this study, showing the misalignment of the HV-CMOS and CLICpix coupling pads.]{A list of the detectors considered in this study, showing the misalignment of the HV-CMOS and CLICpix coupling pads.}
 \label{table:alignment}
 \end{table}
-
-%The pitch of the sensors, both the HV-CMOS active pixel sensor and CLICpix readout ASIC, produced for this study was 25 {\mu}m and the matrix size was 64$\times$64. 
 
 The full details of the glueing process can be found in [CERN NOTE CITE], along with a study of the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1~{\mu}m and the precision on the pad positioning was less than 0.5~{\mu}m.  
 
