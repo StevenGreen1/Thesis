@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: Name/Name
-//=========  (Mon Feb 27 12:10:43 2017) by ROOT version5.34/37
+//=========  (Tue Apr 25 15:52:36 2017) by ROOT version5.34/37
    TCanvas *Name = new TCanvas("Name", "Name",10,45,700,500);
    gStyle->SetOptStat(0);
    Name->Range(2.499781,-87.50001,7.500718,787.5);
@@ -32065,7 +32065,7 @@
    arrow->SetLineWidth(2);
    arrow->Draw();
    
-   TF1 *fit = new TF1("fit","gaus",0,10);
+   TF1 *fit = new TF1("fit","gaus",3.9713,4.6388);
    fit->SetFillColor(1);
    fit->SetFillStyle(0);
 
