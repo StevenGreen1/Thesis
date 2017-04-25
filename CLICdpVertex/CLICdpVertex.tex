@@ -72,13 +72,13 @@ The threshold voltage seen by each CLICpix pixel is slightly different, due to v
 Solder bump-bonding is the typical method used to connect sensor and readout ASICs in hybrid pixel detectors, however, it is expensive and sets limits on the thickness of both ASICs that is required for mechanical stability.  An alternative procedure for connecting the ASICs involves using a thin layer of glue to form a capacitive connection between the two.  This procedure reduces the cost and material budget with respect to bump-bonding making it highly desirable for use at the CLIC vertex detector.  However, as this procedure has only recently been used to produce prototype devices extensive tests have to be performed to determine whether this option is feasible.  In order to make this procedure viable it is necessary to implement an amplifier in the CCPDv3 on-pixel logic, shown in figure \ref{fig:ccpdandclicpix}, to boost the signal to overcome the intrinsically small capacitance of the gluing layer.
 
 %========================================================================================
-%HERE
+%========================================================================================
 
-\section{Construction}
+\section{Device Fabrication}
 
-Two of the main issues involved in constructing capacitively coupled pixel detectors are the uniformity of the glue layer achieved and the physical alignment between the pads on the active sensor and the readout ASIC. While the former has been investigated in another study (CITE STUDY), the latter will be presented below. For this work, a number of pixel detectors were constructed that contained misalignments between the HV-CMOS and CLICpix coupling pads (as shown in figure \ref{fig:alignment}), in order to quantify the impact on the detector performance. Table \ref{table:alignment} contains a summary of the samples studied.
+When using a capacitively coupled glue layer to connect the sensor and readout ASIC there are two main issues that arise from the device manufacturing procedure: the uniformity of the gluing layer and the physical alignment of the sensor and readout pads.  The former has been investigated in [CERN FABRICATION NOTE CITE] and the latter is the focus of this study.  A number of pixel detectors have been constructed that purposefully contained misalignments between the CCPDv3 and the CLICpix pads, as shown in figure \ref{fig:alignment}, so that the impact of a misalignment on detector performance can be characterised.  Table \ref{table:alignment} contains a summary of the samples studied.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/misalignedPads.pdf}
 \caption[Schematic of alignment of CCPDv3 and CLICpix sensors studied in this analysis.]{Alignment schematic of the CCPDv3 + CLICpix detectors studied.  The red dotted line represents the CCPDv3 pad and the solid black line represents the CLICpix top metal layer.  From left to right; centred pixels, 1/4 offset (6.25 {\mu}m) and 1/2 offset (12.5 {\mu}m).}
@@ -101,71 +101,63 @@ SET15 & Centred \\
 SET16 & $\frac{1}{2}$ Offset \\
 \hline
 \end{tabular}
-\caption[A list of the detectors considered in this study, showing the misalignment of the HV-CMOS and CLICpix coupling pads.]{A list of the detectors considered in this study, showing the misalignment of the HV-CMOS and CLICpix coupling pads.}
+\caption[A list of the devices considered in this study, showing the misalignment of the CCPDv3 and CLICpix coupling pads.]{A list of the devices considered in this study, showing the misalignment of the CCPDv3 and CLICpix coupling pads.}
 \label{table:alignment}
 \end{table}
 
-The full details of the glueing process can be found in [CERN NOTE CITE], along with a study of the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1~{\mu}m and the precision on the pad positioning was less than 0.5~{\mu}m.  
+The full details of the glueing procedure can be found in [CERN FABRICATION NOTE CITE], along with a study of the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1~{\mu}m and the precision on the pad positioning was less than 0.5~{\mu}m.  
 
 %========================================================================================
 %========================================================================================
 
 \section{Device Characterisation}
-
-%========================================================================================
-
-The assemblies were characterised using a series of lab experiments as well as in realistic experimental conditions using the CERN SPS test beam.  Due to the complexities of testing assemblies in a test beam, extensive lab test were performed first to characterise as many properties of the assemblies as possible.  The lab experiments performed were as follows:
+The devices produced for this analysis were characterised using a series of lab experiments and in realistic experimental conditions using the CERN SPS test beam.  Due to the complexities of testing devices in a test beam, extensive lab test were performed first to characterise as many properties of the assemblies as possible.  The lab experiments performed were as follows:
 
 \begin{itemize}
-\item \textbf{Radioactive source measurements}.  The goal of this measurement is to examine both the output of the HV-CMOS voltage and the response of the CLICpix readout chip when a radioactive source is used to deposit charge within the HV-CMOS sensor.  
-\item \textbf{Test pulse calibration of the CLICpix chip}.  The goal of this measurement is to calibrate the response of the CLICpix sensor.  This is achieved by injecting a voltage pulse of fixed height directly into the input of the chip and examining the output response.  
+\item \textbf{Radioactive source measurements}.  The goal of this measurement is to examine both the output of the CCPDv3 voltage and the response of the CLICpix readout ASIC when a radioactive source is used to deposit charge within the CCPDv3 sensor.  
+\item \textbf{Test pulse calibration of the CLICpix chip}.  The goal of this measurement is to calibrate the response of the CLICpix sensor.  This is achieved by injecting a voltage pulse of fixed height directly into the input of the ASIC and examining the output response.  
 \end{itemize} 
 
 %========================================================================================
 
 \subsection{Source Measurements}
-A radioactive source was used to deposit charge within the HV-CMOS sensor and used to characterise the response of the whole assembly.  The HV-CMOS sensor converts the deposited charge into a voltage, which in turn passes through the capacitively coupled glue layer and into the CLICpix chip.  Measurements were made of the output voltage produced by the HV-CMOS and the response of the CLICpix readout chip, in units of ToT.  As the exact amount of charge deposited by the radioactive sources is unknown, this experiment focuses on examining the form of the voltage signal produced by the HV-CMOS and determining the response of the CLICpix chip as a function of this voltage.  As the HV-CMOS signal must pass through the capacitively coupled glue layer before being measured by the CLICpix chip, this experiment characterises the behaviour of the gluing layer as well as the sensor and readout chips.
+For this measurement a radioactive source was used to deposit charge within the CCPDv3 sensor and used to characterise the response of the whole assembly.  The CCPDv3 sensor converts the deposited charge into a voltage, which in turn passes through the capacitively coupled glue layer and into the CLICpix chip.  Measurements were made of the output voltage produced by the CCPDv3 and the response of the CLICpix readout chip, in units of ToT.  As the exact amount of charge deposited by the radioactive sources is unknown, this experiment focuses on examining the form of the voltage signal produced by the CCPDv3 and determining the response of the CLICpix chip as a function of this voltage.  As the CCPDv3 signal passes through the capacitively coupled glue layer before being measured by the CLICpix chip, this experiment characterises the behaviour of the gluing layer as well as the sensor and readout chips.
 
 %========================================================================================
 
 \subsubsection{Experimental Setup}
-In order to characterise the samples, a $\text{Sr}^{90}$ radioactive source was used to deposit charge in the HV-CMOS sensor. $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, with the $\text{e}^{-}$ used to deposit charge in the HV-CMOS sensing layer.  The $\text{Sr}^{90}$ source used for this experiment had an activity of 29.6 MBq.  
+The radioactive material used in this experiment was a $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used for this experiment had an activity of 29.6 MBq.  
 
-The radioactive source was positioned directly above the back-side of the HV-CMOS sensor, and measurements were made of both the ToT output from the CLICpix and the HV-CMOS analogue signal for individual pixels on the sensor.  The HV-CMOS pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter was used to veto events where multiple hits occurred within the active shutter period.  
+The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  The analogue output has a baseline voltage of $\approx 1.15$~V, with signal saturation occurring around a height of 700~mV.  Examples of the CCPDv3 output can be seen in figure \ref{fig:pulseshapes}.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:pulseshape1}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000NoOffset.pdf}}
 \subfloat[]{\label{fig:pulseshape2}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005NoOffset.pdf}}\hfill
 \subfloat[]{\label{fig:pulseshape3}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01006NoOffset.pdf}}
 \subfloat[]{\label{fig:pulseshape4}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01008NoOffset.pdf}}
-\caption[HV-CMOS voltage pulses produced by radioactive $\text{Sr}^{90}$ source.]{HV-CMOS voltage pulses produced by radioactive $\text{Sr}^{90}$ source.}
+\caption[CCPDv3 voltage pulses produced by radioactive $\text{Sr}^{90}$ source.]{CCPDv3 voltage pulses produced by radioactive $\text{Sr}^{90}$ source.}
 \label{fig:pulseshapes}
 \end{figure}
 
-The HV-CMOS sensor was biased to 60~V during this experiment.  The analogue output has a baseline voltage of $\approx 1.15$~V, with signal saturation around a height of 700~mV.  Examples of the HV-CMOS output can be seen in figure \ref{fig:pulseshapes}.
-
 %========================================================================================
+%START HERE
 
 \subsubsection{Analysis}
 
-The quantities of interest related to the HV-CMOS output are the pulse height and rise time.  The baseline voltage was subtracted from the HV-CMOS analogue output and the pulse height inverted before the following analysis was applied.
+The quantities of interest related to the CCPDv3 output are the pulse height and rise time.  The baseline voltage was subtracted from the CCPDv3 analogue output and the pulse height inverted before the following analysis was applied.
 
 \begin{figure}
 \centering
-
-\subfloat[\textbf{Rise time determination.}  The blue arrows show the change in time and voltage as the pulse goes from 10\% to 90\% of the raw pulse height.  This time is used as the definition of the rise time in the subsequent analysis.]{\label{fig:pulseshapeanalysistime}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf}}
-
-\subfloat[\textbf{Pulse height determination.} The red dotted line is a Gaussian fit to the peak of the pulse.  The peak is defined as the section of the signal above 90\% of the raw pulse height.]{\label{fig:pulseshapeanalysisvoltage}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf}}\hfill
-
-\caption[Analysis of HV-CMOS voltage as a function of time for pulses created by radioactive strontium 90 source.]{Analysis of HV-CMOS voltage as a function of time for pulses created by radioactive $\text{Sr}^{90}$ source.}
-
+\subfloat[]{\label{fig:pulseshapeanalysistime}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf}}
+\subfloat[]{\label{fig:pulseshapeanalysisvoltage}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf}}
+%\caption[Analysis of the CCPDv3 output voltage as a function of time created by charge deposition from a radioactive $\text{Sr}^{90}$ source.  \protect\subref{fig:pulseshapeanalysistime} The rise time is defined as the time taken for the voltage to rise from 10\% to 90\% of the peak voltage pulse.  The rise time, and change in voltage over the rise time, are denoted in the figure by the blue arrows.  \protect\subref{fig:pulseshapeanalysisvoltage}  The pulse height is defined as the amplitude of a Gaussian function fitted across the peak of the voltage pulse.  The peak of the voltage pulse is defined as the region where the voltage in excess of 90\% of the raw pulse height.  The voltage region in excess of 90\% of the raw pulse height is indicated by the red solid line and a Gaussian fit, red dotted line, to this region is also shown.]{}
 \label{fig:pulseshapeanalysis}
 \end{figure}
 
-The pulse height was taken as the mean of a Gaussian fit to the peak of the HV-CMOS output signal, defined as the section of the signal above 90\% of the maximum recorded voltage change.  The application of a Gaussian fit provides a more robust metric for categorising the pulse height, which is less dependant on fluctuations in the voltage.  The rise time was calculated as the time taken for the signal to go from 10\% to 90\% of the maximum recorded voltage change.  This definition similarly makes the rise time metric more robust against fluctuations in the voltage.  Examples of the calculation of these metrics for a representative pulse are shown in figure \ref{fig:pulseshapeanalysis}.
+The pulse height was taken as the mean of a Gaussian fit to the peak of the CCPDv3 output signal, defined as the section of the signal above 90\% of the maximum recorded voltage change.  The application of a Gaussian fit provides a more robust metric for categorising the pulse height, which is less dependant on fluctuations in the voltage.  The rise time was calculated as the time taken for the signal to go from 10\% to 90\% of the maximum recorded voltage change.  This definition similarly makes the rise time metric more robust against fluctuations in the voltage.  Examples of the calculation of these metrics for a representative pulse are shown in figure \ref{fig:pulseshapeanalysis}.
 
-For each device the HV-CMOS pulse output was recorded for 15 pixels running along one edge of the 64 $\times$ 64 matrix; in the subsequent analysis the data for all 15 pixels is combined.
+For each device the CCPDv3 pulse output was recorded for 15 pixels running along one edge of the 64 $\times$ 64 matrix; in the subsequent analysis the data for all 15 pixels is combined.
 
 %========================================================================================
 
@@ -176,34 +168,34 @@ The mean rise time as function of pulse height is shown in figure \ref{fig:riset
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight.pdf}
-\caption[HV-CMOS voltage rise time as a function of pulse height.]{HV-CMOS voltage rise time as a function of pulse height. CAN THE FRACTIONS BE MADE THE SAME SIZE AS THE REST OF THE TEXT? }
+\caption[CCPDv3 voltage rise time as a function of pulse height.]{CCPDv3 voltage rise time as a function of pulse height. CAN THE FRACTIONS BE MADE THE SAME SIZE AS THE REST OF THE TEXT? }
 \label{fig:risetime}
 \end{figure}
  
-The data in figure \ref{fig:risetime} shows that the rise time for the HV-CMOS front-end is approximately 300~ns across all samples, and that this is largely independent of pulse height for all but the smallest signals. For very small pulse heights ($< 100$ mV) rise times are significantly larger, suggesting that the deposited charge takes a longer time to be collected. This may be due to charge transport via diffusion rather than drift, giving a large increase in the time for the signal charge to be collected. At large values of deposited charge (higher output voltage), a gradual reduction in the rise time is observed, as expected for higher charge deposits. The similar characteristics for all samples makes the comparison of the different misaligned samples more straightforward, as the intrinsic HV-CMOS performance can be seen to be the same. The same must also be true of the CLICpix ASICS, which is indeed the case as the results in section \ref{testpulsecalibrationresults} show.  
+The data in figure \ref{fig:risetime} shows that the rise time for the CCPDv3 front-end is approximately 300~ns across all samples, and that this is largely independent of pulse height for all but the smallest signals. For very small pulse heights ($< 100$ mV) rise times are significantly larger, suggesting that the deposited charge takes a longer time to be collected. This may be due to charge transport via diffusion rather than drift, giving a large increase in the time for the signal charge to be collected. At large values of deposited charge (higher output voltage), a gradual reduction in the rise time is observed, as expected for higher charge deposits. The similar characteristics for all samples makes the comparison of the different misaligned samples more straightforward, as the intrinsic CCPDv3 performance can be seen to be the same. The same must also be true of the CLICpix ASICS, which is indeed the case as the results in section \ref{testpulsecalibrationresults} show.  
 
 %========================================================================================
 
 \subsubsection{Results -  ToT vs Pulse Height}
 \label{sec:totvspulseheight}
 
-Figure \ref{fig:tot} shows the mean ToT measured in the CLICpix as a function of the HV-CMOS output voltage pulse height.  The determination of the mean and error bars for the ToT measurement is identical to that described in section \ref{sec:resultsrisetimepulseheight} for the rise time measurement. 
+Figure \ref{fig:tot} shows the mean ToT measured in the CLICpix as a function of the CCPDv3 output voltage pulse height.  The determination of the mean and error bars for the ToT measurement is identical to that described in section \ref{sec:resultsrisetimepulseheight} for the rise time measurement. 
 
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight.pdf}
-\caption[CLICpix ToT as a function of HV-CMOS voltage pulse height.]{CLICpix ToT as a function of HV-CMOS voltage pulse height.  SAME COMMENT TO LABELS AND FRACTION SIZES}
+\caption[CLICpix ToT as a function of CCPDv3 voltage pulse height.]{CLICpix ToT as a function of CCPDv3 voltage pulse height.  SAME COMMENT TO LABELS AND FRACTION SIZES}
 \label{fig:tot}
 \end{figure}
 
-The distribution of mean ToT versus pulse height shows that for samples where the corresponding coupling pads are centred, the ToT increases with pulse height up to values of approximately 300~mV, and that the mean ToT saturates at $\approx 13$.  It is expected that the $\frac{1}{4}-$ and $\frac{1}{2}-$offset samples should have a lower ToT than the centred samples due to the lower effective capacitance between the HV-CMOS and CLICpix pads.  The greater the offset is, the smaller the effective capacitance to the target CLICpix pad will be, and so the lower the recorded ToT.  This is can be seen when comparing the centred samples to the $\frac{1}{4}-$offset sample and SET 16, the $\frac{1}{2}-$offset sample.  
+The distribution of mean ToT versus pulse height shows that for samples where the corresponding coupling pads are centred, the ToT increases with pulse height up to values of approximately 300~mV, and that the mean ToT saturates at $\approx 13$.  It is expected that the $\frac{1}{4}-$ and $\frac{1}{2}-$offset samples should have a lower ToT than the centred samples due to the lower effective capacitance between the CCPDv3 and CLICpix pads.  The greater the offset is, the smaller the effective capacitance to the target CLICpix pad will be, and so the lower the recorded ToT.  This is can be seen when comparing the centred samples to the $\frac{1}{4}-$offset sample and SET 16, the $\frac{1}{2}-$offset sample.  
 
 %========================================================================================
 IN GENERAL YOU KEEP FORGETTING TO PUT THINGS IN CONTEXT - WHY CROSS-COUPLING?
 
 \subsubsection{Results -  Cross Couplings}
 
-Due to the capacitive transfer of signal from the HV-CMOS sensor to the readout ASIC, it can be expected that any capacitance between the HV-CMOS pixel pads and the readout pads of neighbouring pixels may give rise to additional unwanted hits. Such cross-capacitancies can be observed in the same manner as the previous measurements, but by considering instead the ToT of the neighbouring CLICpix pixel. This is shown in figure \ref{fig:totcrosscoupling1} for all devices where the pixel pads are centred on each other, and in figure \ref{fig:totcrosscoupling2} for the $\frac{1}{4}-$offset sample and the $\frac{1}{2}-$offset sample, SET 16.  
+Due to the capacitive transfer of signal from the CCPDv3 sensor to the readout ASIC, it can be expected that any capacitance between the CCPDv3 pixel pads and the readout pads of neighbouring pixels may give rise to additional unwanted hits. Such cross-capacitancies can be observed in the same manner as the previous measurements, but by considering instead the ToT of the neighbouring CLICpix pixel. This is shown in figure \ref{fig:totcrosscoupling1} for all devices where the pixel pads are centred on each other, and in figure \ref{fig:totcrosscoupling2} for the $\frac{1}{4}-$offset sample and the $\frac{1}{2}-$offset sample, SET 16.  
 
 IN GENERAL USE "SET" INSTEAD OF "SET"
 
@@ -213,11 +205,11 @@ SO: this part should be rewritten a little. Most likely you have a threshold eff
 
 REMOVE REFERENCES TO SET14!
 
-No correlation between the adjacent pixel ToT and the HV-CMOS pulse height is observed for the samples shown in figure \ref{fig:totcrosscoupling1} for all but the lowest values of pulse height.  The correlation observed at low pulse heights may arise due to the signal $\text{e}^{-}$, which is primarily recorded in the target pixel, depositing a small amount of charge in the adjacent adjacent pixel.  This can happen as the $\text{e}^{-}$ may not be traveling normal to the pixel surface.  However, as this feature is not present in all samples it could indicate a small misalignment exists in the samples showing the correlation.  
+No correlation between the adjacent pixel ToT and the CCPDv3 pulse height is observed for the samples shown in figure \ref{fig:totcrosscoupling1} for all but the lowest values of pulse height.  The correlation observed at low pulse heights may arise due to the signal $\text{e}^{-}$, which is primarily recorded in the target pixel, depositing a small amount of charge in the adjacent adjacent pixel.  This can happen as the $\text{e}^{-}$ may not be traveling normal to the pixel surface.  However, as this feature is not present in all samples it could indicate a small misalignment exists in the samples showing the correlation.  
 
-There is, however, a strong correlation between adjacent pixel ToT and the HV-CMOS pulse height, shown in figure \ref{fig:totcrosscoupling2}, for SET 16, which is one of the $\frac{1}{2}$ offset samples.  This distribution is almost identical to the the target pixel ToT distribution as a function of HV-CMOS pulse height, which is what would be expected given an equal signal charge sharing between the two readout ASICs.  This indicates the charge sharing is well understood for this $\frac{1}{2}$ offset sample.   
+There is, however, a strong correlation between adjacent pixel ToT and the CCPDv3 pulse height, shown in figure \ref{fig:totcrosscoupling2}, for SET 16, which is one of the $\frac{1}{2}$ offset samples.  This distribution is almost identical to the the target pixel ToT distribution as a function of CCPDv3 pulse height, which is what would be expected given an equal signal charge sharing between the two readout ASICs.  This indicates the charge sharing is well understood for this $\frac{1}{2}$ offset sample.   
 
-For the $\frac{1}{4}$ offset sample correlation is present only for low pulse heights as was the case for the centred samples.  However, the mean ToT within the uncorrelated region is centred around $\approx$ 5 units of ToT, which is lower than was observed for the centred samples.  This is due to the offset reducing the total capacitance between the HV-CMOS and CLICpix in comparison to the centred samples and thus reducing the ToT recorded.
+For the $\frac{1}{4}$ offset sample correlation is present only for low pulse heights as was the case for the centred samples.  However, the mean ToT within the uncorrelated region is centred around $\approx$ 5 units of ToT, which is lower than was observed for the centred samples.  This is due to the offset reducing the total capacitance between the CCPDv3 and CLICpix in comparison to the centred samples and thus reducing the ToT recorded.
 
 Cross coupling was observed in one of the $\frac{1}{2}$ offset samples and, assuming that the other $\frac{1}{2}$ offset sample was manufactured incorrectly, then charge sharing was well understood for these $\frac{1}{2}$ offset samples.  No cross coupling was observed for any of the other samples considered in this analysis.  
 
@@ -228,7 +220,7 @@ THE RESULTS OF THIS SECTION SHOULD BE DISCUSSED AND I SHOULD TAKE A LOOK ONCE YO
 \subfloat[]{\label{fig:totcrosscoupling1}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/NoCrossCouplingSETs_Tot_X_PulseHeight.pdf}}\hfill
 \subfloat[]{\label{fig:totcrosscoupling2}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/CrossCouplingSETs_Tot_X_PulseHeight.pdf}}
 \label{fig:totcrosscoupling}
-\caption[CLICpix ToT on adjacent pixel along the direction of the offset as a function of HV-CMOS voltage pulse height.]{CLICpix ToT on adjacent pixel along the direction of the offset as a function of HV-CMOS voltage pulse height.}
+\caption[CLICpix ToT on adjacent pixel along the direction of the offset as a function of CCPDv3 voltage pulse height.]{CLICpix ToT on adjacent pixel along the direction of the offset as a function of CCPDv3 voltage pulse height.}
 \end{figure}
 
 %========================================================================================
@@ -243,7 +235,7 @@ This measurement focuses upon determining the response of the CLICpix readout ch
 
 I WOULD PRESENT A LITTLE MORE "STORY" STYLE, AND NOT SIMPLY AS A LIST OF UNRELATED EXPERIMENTS
 
-In order to understand the charge transfer to the CLICpix, it is important to perform a calibration of the CLICpix front-end response. This was achieved by directly injecting a voltage pulse of fixed height directly into a capacitor held in each pixel, to inject a known quantity of charge. This gives a measure of the performance of the CLICpix independently of the HV-CMOS sensor.  %Due to the construction of the sensor it was not possible to access the HV-CMOS to perform a similar test to isolate its performance.  
+In order to understand the charge transfer to the CLICpix, it is important to perform a calibration of the CLICpix front-end response. This was achieved by directly injecting a voltage pulse of fixed height directly into a capacitor held in each pixel, to inject a known quantity of charge. This gives a measure of the performance of the CLICpix independently of the CCPDv3 sensor.  %Due to the construction of the sensor it was not possible to access the CCPDv3 to perform a similar test to isolate its performance.  
 
 %========================================================================================
 
@@ -380,7 +372,7 @@ This sections describes the performance of the devices when placed under real ex
 \subsection{Test Beam Setup}
 
 COMBINED WITH ABOVE COMMENT
-The overall goal of this experiment was to determine the tracking performance of the capacitively coupled pixel sensors and to see whether the misalignment of the HV-CMOS and the CLICpix changes the performance.  To that end the samples were mounted on a telescope and placed in a test beam to determine the efficiency, defined as the ratio of number of recorded tracks passing through device to the actual number of tracks passing through device, of the samples.  
+The overall goal of this experiment was to determine the tracking performance of the capacitively coupled pixel sensors and to see whether the misalignment of the CCPDv3 and the CLICpix changes the performance.  To that end the samples were mounted on a telescope and placed in a test beam to determine the efficiency, defined as the ratio of number of recorded tracks passing through device to the actual number of tracks passing through device, of the samples.  
 
 These test beam experiments were carried out in August and September 2015 on the H6 beam line in the CERN SPS North Area.  The beam consisted of positively charged hadrons of momenta 120 GeV/c.  Mean particle rates of 500 kHz/cm$^{2}$ were observed during the 4.8 s spills at intervals of 25 s.  \textcolor{red}{Is this data correct?}.
 
