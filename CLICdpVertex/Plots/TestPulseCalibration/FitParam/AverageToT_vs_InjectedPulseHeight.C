@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: Name/
-//=========  (Thu Mar  2 09:40:52 2017) by ROOT version5.34/37
+//=========  (Wed Apr 26 14:27:22 2017) by ROOT version5.34/37
    TCanvas *Name = new TCanvas("Name", "",0,45,1920,1035);
    gStyle->SetOptStat(0);
    Name->Range(-32.90909,-4,296.1818,22.66667);
@@ -41,6 +41,11 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",12.79,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#009900");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->GetXaxis()->SetNdivisions(505);
    Set->GetXaxis()->SetLabelFont(132);
@@ -68,7 +73,9 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",8.02,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(2);
+
+   ci = TColor::GetColor("#ff0000");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->GetXaxis()->SetNdivisions(505);
    Set->GetXaxis()->SetLabelFont(132);
@@ -96,7 +103,9 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",7.86,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(3);
+
+   ci = TColor::GetColor("#ff00ff");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->GetXaxis()->SetNdivisions(505);
    Set->GetXaxis()->SetLabelFont(132);
@@ -124,7 +133,9 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",6.65,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(4);
+
+   ci = TColor::GetColor("#0000ff");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->GetXaxis()->SetNdivisions(505);
    Set->GetXaxis()->SetLabelFont(132);
@@ -149,38 +160,12 @@
    Set->SetParLimits(3,0,0);
    Set->Draw("same");
    
-   TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",9.89,180);
-   Set->SetFillColor(1);
-   Set->SetFillStyle(0);
-   Set->SetLineColor(6);
-   Set->SetLineWidth(2);
-   Set->GetXaxis()->SetNdivisions(505);
-   Set->GetXaxis()->SetLabelFont(132);
-   Set->GetXaxis()->SetLabelSize(0.05);
-   Set->GetXaxis()->SetTitleSize(0.05);
-   Set->GetXaxis()->SetTitleFont(132);
-   Set->GetYaxis()->SetLabelFont(132);
-   Set->GetYaxis()->SetLabelSize(0.05);
-   Set->GetYaxis()->SetTitleSize(0.05);
-   Set->GetYaxis()->SetTitleFont(132);
-   Set->SetParameter(0,0.0748);
-   Set->SetParError(0,0);
-   Set->SetParLimits(0,0,0);
-   Set->SetParameter(1,2.57);
-   Set->SetParError(1,0);
-   Set->SetParLimits(1,0,0);
-   Set->SetParameter(2,16);
-   Set->SetParError(2,0);
-   Set->SetParLimits(2,0,0);
-   Set->SetParameter(3,9.89);
-   Set->SetParError(3,0);
-   Set->SetParLimits(3,0,0);
-   Set->Draw("same");
-   
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",12.51,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(7);
+
+   ci = TColor::GetColor("#00ffff");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->GetXaxis()->SetNdivisions(505);
    Set->GetXaxis()->SetLabelFont(132);
@@ -208,7 +193,6 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",6.65,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(8);
    Set->SetLineWidth(2);
    Set->GetXaxis()->SetNdivisions(505);
    Set->GetXaxis()->SetLabelFont(132);
@@ -236,6 +220,9 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",0.25,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
+
+   ci = TColor::GetColor("#009900");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->SetLineStyle(2);
    Set->GetXaxis()->SetNdivisions(505);
@@ -264,7 +251,9 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",0.1,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(2);
+
+   ci = TColor::GetColor("#ff0000");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->SetLineStyle(2);
    Set->GetXaxis()->SetNdivisions(505);
@@ -293,7 +282,9 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",0.36,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(3);
+
+   ci = TColor::GetColor("#ff00ff");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->SetLineStyle(2);
    Set->GetXaxis()->SetNdivisions(505);
@@ -322,7 +313,9 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",0.18,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(4);
+
+   ci = TColor::GetColor("#0000ff");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->SetLineStyle(2);
    Set->GetXaxis()->SetNdivisions(505);
@@ -348,39 +341,12 @@
    Set->SetParLimits(3,0,0);
    Set->Draw("same");
    
-   TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",0.16,180);
-   Set->SetFillColor(1);
-   Set->SetFillStyle(0);
-   Set->SetLineColor(6);
-   Set->SetLineWidth(2);
-   Set->SetLineStyle(2);
-   Set->GetXaxis()->SetNdivisions(505);
-   Set->GetXaxis()->SetLabelFont(132);
-   Set->GetXaxis()->SetLabelSize(0.05);
-   Set->GetXaxis()->SetTitleSize(0.05);
-   Set->GetXaxis()->SetTitleFont(132);
-   Set->GetYaxis()->SetLabelFont(132);
-   Set->GetYaxis()->SetLabelSize(0.05);
-   Set->GetYaxis()->SetTitleSize(0.05);
-   Set->GetYaxis()->SetTitleFont(132);
-   Set->SetParameter(0,0.0754);
-   Set->SetParError(0,0);
-   Set->SetParLimits(0,0,0);
-   Set->SetParameter(1,1.68);
-   Set->SetParError(1,0);
-   Set->SetParLimits(1,0,0);
-   Set->SetParameter(2,57.3);
-   Set->SetParError(2,0);
-   Set->SetParLimits(2,0,0);
-   Set->SetParameter(3,0.16);
-   Set->SetParError(3,0);
-   Set->SetParLimits(3,0,0);
-   Set->Draw("same");
-   
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",0.42,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(7);
+
+   ci = TColor::GetColor("#00ffff");
+   Set->SetLineColor(ci);
    Set->SetLineWidth(2);
    Set->SetLineStyle(2);
    Set->GetXaxis()->SetNdivisions(505);
@@ -409,7 +375,6 @@
    TF1 *Set = new TF1("Set","x*[0]+[1]-[2]/(x-[3])",0.1,180);
    Set->SetFillColor(1);
    Set->SetFillStyle(0);
-   Set->SetLineColor(8);
    Set->SetLineWidth(2);
    Set->SetLineStyle(2);
    Set->GetXaxis()->SetNdivisions(505);
@@ -445,15 +410,19 @@
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
    TLegendEntry *entry=leg->AddEntry("Set","Set 9, Centred","l");
-   entry->SetLineColor(1);
+
+   ci = TColor::GetColor("#009900");
+   entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("Set","Set 10, #frac{1}{4} Offset","l");
-   entry->SetLineColor(2);
+   entry=leg->AddEntry("Set","Set 10, 1/4 Offset","l");
+
+   ci = TColor::GetColor("#ff0000");
+   entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
@@ -461,7 +430,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
    entry=leg->AddEntry("Set","Set 12, Centred","l");
-   entry->SetLineColor(3);
+
+   ci = TColor::GetColor("#ff00ff");
+   entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
@@ -469,15 +440,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
    entry=leg->AddEntry("Set","Set 13, Centred","l");
-   entry->SetLineColor(4);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
-   entry=leg->AddEntry("Set","Set 14, #frac{1}{2} Offset","l");
-   entry->SetLineColor(6);
+
+   ci = TColor::GetColor("#0000ff");
+   entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
@@ -485,15 +450,17 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
    entry=leg->AddEntry("Set","Set 15, Centred","l");
-   entry->SetLineColor(7);
+
+   ci = TColor::GetColor("#00ffff");
+   entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("Set","Set 16, #frac{1}{2} Offset","l");
-   entry->SetLineColor(8);
+   entry=leg->AddEntry("Set","Set 16, 1/2 Offset","l");
+   entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
