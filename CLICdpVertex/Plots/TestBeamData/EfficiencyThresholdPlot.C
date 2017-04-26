@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: c1/c1
 //=========  (Thu Mar  2 15:04:38 2017) by ROOT version5.34/36
-   TCanvas *c1 = new TCanvas("c1", "c1",12,51,700,500);
+   TCanvas *c1 = new TCanvas("c1", "c1",12,51,3000,2500);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
    c1->Range(0,0,1,1);
@@ -52,6 +52,8 @@
    gre->SetName("Graph0");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
+   gre->SetLineColor(kGreen+2);
+   gre->SetMarkerColor(kGreen+2);
    gre->SetLineWidth(2);
    gre->SetPoint(0,2200,97.34009);
    gre->SetPointError(0,0,0.05422753);
@@ -123,9 +125,9 @@
    gre->SetName("Graph1");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
-   gre->SetLineColor(2);
-   gre->SetLineWidth(2);
-   gre->SetMarkerColor(2);
+   gre->SetLineColor(kRed);
+   gre->SetLineWidth(1);
+   gre->SetMarkerColor(kRed);
    gre->SetPoint(0,1000,100);
    gre->SetPointError(0,0,0);
    gre->SetPoint(1,12200,98.27409);
@@ -194,9 +196,9 @@
    gre->SetName("Graph2");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
-   gre->SetLineColor(3);
+   gre->SetLineColor(kMagenta);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(3);
+   gre->SetMarkerColor(kMagenta);
    gre->SetPoint(0,1100,99.95627);
    gre->SetPointError(0,0,0.01212622);
    gre->SetPoint(1,11450,98.10938);
@@ -269,9 +271,9 @@
    gre->SetName("Graph3");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
-   gre->SetLineColor(4);
+   gre->SetLineColor(kBlue);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(4);
+   gre->SetMarkerColor(kBlue);
    gre->SetPoint(0,1100,99.93407);
    gre->SetPointError(0,0,0.01902516);
    gre->SetPoint(1,11400,99.25979);
@@ -296,7 +298,7 @@
    gre->SetPointError(10,0,0.08993329);
    gre->SetPoint(11,2100,97.75943);
    gre->SetPointError(11,0,0.1358302);
-   
+   /*
    TH1F *Graph_Graph4 = new TH1F("Graph_Graph4","Graph",100,70,12430);
    Graph_Graph4->SetMinimum(80);
    Graph_Graph4->SetMaximum(100);
@@ -367,7 +369,7 @@
    gre->SetPointError(14,0,0.1814502);
    gre->SetPoint(15,2400,95.98063);
    gre->SetPointError(15,0,0.3056299);
-   
+   */
    TH1F *Graph_Graph5 = new TH1F("Graph_Graph5","Graph",100,41,11549);
    Graph_Graph5->SetMinimum(80);
    Graph_Graph5->SetMaximum(100);
@@ -403,9 +405,9 @@
    gre->SetName("Graph5");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
-   gre->SetLineColor(7);
+   gre->SetLineColor(kCyan);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(7);
+   gre->SetMarkerColor(kCyan);
    gre->SetPoint(0,1100,99.98912);
    gre->SetPointError(0,0,0.005441733);
    gre->SetPoint(1,11990,97.53297);
@@ -486,9 +488,9 @@
    gre->SetName("Graph6");
    gre->SetTitle("Graph");
    gre->SetFillColor(1);
-   gre->SetLineColor(8);
+   gre->SetLineColor(kBlack);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(8);
+   gre->SetMarkerColor(kBlack);
    gre->SetPoint(0,1000,99.52303);
    gre->SetPointError(0,0,0.03339706);
    gre->SetPoint(1,1100,98.99958);
@@ -569,7 +571,7 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("Graph1","Set 10, #frac{1}{4} Offset","l");
+   entry=leg->AddEntry("Graph1","Set 10, 1/4 Offset","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -590,13 +592,13 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("Graph4","Set 14, #frac{1}{2} Offset","l");
+/*   entry=leg->AddEntry("Graph4","Set 14, 1/2 Offset","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
+   entry->SetMarkerSize(1);*/
    entry=leg->AddEntry("Graph5","Set 15, Centred","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
@@ -604,7 +606,7 @@
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("Graph6","Set 16, #frac{1}{2} Offset","l");
+   entry=leg->AddEntry("Graph6","Set 16, 1/2 Offset","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
