@@ -25,16 +25,16 @@
    TColor *color; // for color definition with alpha
    ci = 10007;
    color = new TColor(ci, 0, 0, 0, " ", 0);
-   gre->SetFillColor(ci);
+   gre->SetFillColor(0);
 
    ci = 10005;
    color = new TColor(ci, 0, 0, 0, " ", 0);
-   gre->SetLineColor(ci);
+   gre->SetLineColor(0);
    gre->SetLineWidth(2);
 
    ci = 10006;
    color = new TColor(ci, 0, 0, 0, " ", 0);
-   gre->SetMarkerColor(ci);
+   gre->SetMarkerColor(0);
    gre->SetPoint(0,62,8.692307);
    gre->SetPointError(0,0,1.204981);
    gre->SetPoint(1,66,8.694525);
@@ -375,9 +375,9 @@
    gre->SetName("Graph1");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(2);
-   gre->SetLineWidth(2);
-   gre->SetMarkerColor(2);
+   gre->SetLineColor(kRed);
+   gre->SetLineWidth(1);
+   gre->SetMarkerColor(kRed);
    gre->SetPoint(0,41.77518,1.22807);
    gre->SetPointError(0,0,0.5469041);
    gre->SetPoint(1,45.31545,0.3508771);
@@ -732,9 +732,9 @@
    gre->SetName("Graph6");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(8);
+   gre->SetLineColor(kGreen+2);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(8);
+   gre->SetMarkerColor(kGreen+2);
    gre->SetPoint(0,38,1.121951);
    gre->SetPointError(0,0,0.4706687);
    gre->SetPoint(1,42,0.3968254);
@@ -1098,7 +1098,7 @@
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("Graph1","Set 10, #frac{1}{4} Offset","l");
+   TLegendEntry *entry=leg->AddEntry("Graph1","Set 10, 1/4 Offset","l");
    entry->SetLineColor(2);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -1106,7 +1106,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph6","Set 16, #frac{1}{2} Offset","l");
+   entry=leg->AddEntry("Graph6","Set 16, 1/2 Offset","l");
    entry->SetLineColor(8);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -1118,4 +1118,5 @@
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);
+   Name->SaveAs("CrossCouplingSETs_Tot_X_PulseHeight.pdf");
 }

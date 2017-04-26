@@ -17,6 +17,8 @@
    gre->SetName("Graph0");
    gre->SetTitle("");
    gre->SetFillColor(1);
+   gre->SetLineColor(kGreen+2);
+   gre->SetMarkerColor(kGreen+2);
    gre->SetPoint(0,65,669.1334);
    gre->SetPointError(0,0,36.42373);
    gre->SetPoint(1,75,457.9547);
@@ -175,8 +177,8 @@
    gre->SetName("Graph1");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(2);
-   gre->SetMarkerColor(2);
+   gre->SetLineColor(kRed);
+   gre->SetMarkerColor(kRed);
    gre->SetPoint(0,45,1055);
    gre->SetPointError(0,0,0.2886751);
    gre->SetPoint(1,55,811.1539);
@@ -337,8 +339,8 @@
    gre->SetName("Graph2");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(3);
-   gre->SetMarkerColor(3);
+   gre->SetLineColor(kMagenta);
+   gre->SetMarkerColor(kMagenta);
    gre->SetPoint(0,55,909.7222);
    gre->SetPointError(0,0,42.76061);
    gre->SetPoint(1,65,686.8364);
@@ -497,8 +499,8 @@
    gre->SetName("Graph3");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(4);
-   gre->SetMarkerColor(4);
+   gre->SetLineColor(kBlue);
+   gre->SetMarkerColor(kBlue);
    gre->SetPoint(0,55,793.5263);
    gre->SetPointError(0,0,30.8261);
    gre->SetPoint(1,65,709.3466);
@@ -650,7 +652,7 @@
    gre->SetHistogram(Graph_Graph46);
    
    gre->Draw(" p");
-   
+   /*
    gre = new TGraphErrors(62);
    gre->SetName("Graph4");
    gre->SetTitle("");
@@ -808,13 +810,13 @@
    gre->SetHistogram(Graph_Graph47);
    
    gre->Draw(" p");
-   
+   */
    gre = new TGraphErrors(63);
    gre->SetName("Graph5");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(7);
-   gre->SetMarkerColor(7);
+   gre->SetLineColor(kCyan);
+   gre->SetMarkerColor(kCyan);
    gre->SetPoint(0,45,989.1177);
    gre->SetPointError(0,0,39.16127);
    gre->SetPoint(1,55,939.3564);
@@ -973,8 +975,8 @@
    gre->SetName("Graph6");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(8);
-   gre->SetMarkerColor(8);
+   gre->SetLineColor(kBlack);
+   gre->SetMarkerColor(kBlack);
    gre->SetPoint(0,55,765);
    gre->SetPointError(0,0,154.3085);
    gre->SetPoint(1,65,837.6203);
@@ -1147,7 +1149,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph1","Set 10, #frac{1}{4} Offset","l");
+   entry=leg->AddEntry("Graph1","Set 10, 1/4 Offset","l");
    entry->SetLineColor(2);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -1171,14 +1173,14 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph4","Set 14, #frac{1}{2} Offset","l");
+/*   entry=leg->AddEntry("Graph4","Set 14, 1/2 Offset","l");
    entry->SetLineColor(6);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
+   entry->SetTextFont(42);*/
    entry=leg->AddEntry("Graph5","Set 15, Centred","l");
    entry->SetLineColor(7);
    entry->SetLineStyle(1);
@@ -1187,7 +1189,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph6","Set 16, #frac{1}{2} Offset","l");
+   entry=leg->AddEntry("Graph6","Set 16, 1/2 Offset","l");
    entry->SetLineColor(8);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);

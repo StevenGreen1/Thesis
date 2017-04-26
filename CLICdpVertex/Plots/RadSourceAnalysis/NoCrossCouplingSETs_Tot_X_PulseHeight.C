@@ -21,6 +21,8 @@
    gre->SetName("Graph0");
    gre->SetTitle("");
    gre->SetFillColor(1);
+   gre->SetLineColor(kGreen+2);
+   gre->SetMarkerColor(kGreen+2);
    gre->SetLineWidth(2);
    gre->SetPoint(0,62,8.692307);
    gre->SetPointError(0,0,1.204981);
@@ -727,9 +729,9 @@
    gre->SetName("Graph2");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(3);
+   gre->SetLineColor(kMagenta);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(3);
+   gre->SetMarkerColor(kMagenta);
    gre->SetPoint(0,34,8.086957);
    gre->SetPointError(0,0,1.224996);
    gre->SetPoint(1,38,7.78344);
@@ -1084,9 +1086,9 @@
    gre->SetName("Graph3");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(4);
+   gre->SetLineColor(kBlue);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(4);
+   gre->SetMarkerColor(kBlue);
    gre->SetPoint(0,50,6.911765);
    gre->SetPointError(0,0,0.9304236);
    gre->SetPoint(1,54,4.663043);
@@ -1428,7 +1430,7 @@
    gre->SetHistogram(Graph_Graph_Graph114);
    
    gre->Draw(" p");
-   
+  /* 
    gre = new TGraphErrors(155);
    gre->SetName("Graph4");
    gre->SetTitle("");
@@ -1775,14 +1777,14 @@
    gre->SetHistogram(Graph_Graph_Graph125);
    
    gre->Draw(" p");
-   
+   */
    gre = new TGraphErrors(160);
    gre->SetName("Graph5");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(7);
+   gre->SetLineColor(kCyan);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(7);
+   gre->SetMarkerColor(kCyan);
    gre->SetPoint(0,30,3.088235);
    gre->SetPointError(0,0,0.7874092);
    gre->SetPoint(1,34,2.928571);
@@ -2536,14 +2538,14 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("Graph4","Set 14, #frac{1}{2} Offset","l");
+/*   entry=leg->AddEntry("Graph4","Set 14, #frac{1}{2} Offset","l");
    entry->SetLineColor(6);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry->SetTextFont(42);
+   entry->SetTextFont(42);*/
    entry=leg->AddEntry("Graph5","Set 15, Centred","l");
    entry->SetLineColor(7);
    entry->SetLineStyle(1);
@@ -2556,4 +2558,5 @@
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);
+   Name->SaveAs("NoCrossCouplingSETs_Tot_X_PulseHeight.pdf");
 }
