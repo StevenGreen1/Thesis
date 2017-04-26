@@ -128,7 +128,7 @@ For this measurement a radioactive source was used to deposit charge within the 
 \subsubsection{Experimental Setup}
 The radioactive material used in this experiment was a $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used for this experiment had an activity of 29.6 MBq.  
 
-The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  The analogue output has a baseline voltage of $\approx 1.15$~V, with signal saturation occurring around a height of 700~mV.  Examples of the CCPDv3 output can be seen in figure \ref{fig:pulseshapes}.
+The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  The analogue output has a baseline voltage of $\approx 1.15$~V, with signal saturation occurring around a height of 700~mV.  Examples of CCPDv3 output voltage pulses when using the $\text{Sr}^{90}$ source can be seen in figure \ref{fig:pulseshapes}.
 
 \begin{figure}[h!]
 \centering
@@ -141,69 +141,73 @@ The radioactive source was positioned directly above the back-side of the CCPDv3
 \end{figure}
 
 %========================================================================================
-%START HERE
 
 \subsubsection{Analysis}
+The quantities of interest related to the CCPDv3 output voltage are the pulse height, the peak height of the voltage pulse, and the rise time, the time it takes for the CCPDv3 to reach the pulse height.  For ease of analysis the baseline voltage is subtracted from the CCPDv3 output voltage and the pulse shape inverted before the following analysis is applied to extract the variables of interest.  The pulse height is defined using a Gaussian fit to the peak of the voltage pulse.  This method is used to minimise the dependency of the pulse height on small fluctuations in the output voltage.  The peak of the voltage pulse is defined as the region where the change in the CCPDv3 voltage output is greater than 90\% of the maximum change in the CCPDv3 voltage output.  The rise time us defined as the time taken for the signal to go from 10\% to 90\% of the maximum change in the CCPDv3 voltage output.  This definition makes the rise time metric more robust against fluctuations in the CCPDv3 voltage output.  Examples of the calculation of these metrics for a representative pulse are shown in figure \ref{fig:pulseshapeanalysis}.  Due to the design of the CCPDv3 matrix, it is only possible to record the CCPDv3 voltage output for 15 pixels running along one edge of the 64 $\times$ 64 matrix.  Therefore, in the subsequent analysis data was taken for each of these accessible pixels and combined.
 
-The quantities of interest related to the CCPDv3 output are the pulse height and rise time.  The baseline voltage was subtracted from the CCPDv3 analogue output and the pulse height inverted before the following analysis was applied.
-
-\begin{figure}
+\begin{figure}[h!]
 \centering
-\subfloat[]{\label{fig:pulseshapeanalysistime}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf}}
 \subfloat[]{\label{fig:pulseshapeanalysisvoltage}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf}}
-%\caption[Analysis of the CCPDv3 output voltage as a function of time created by charge deposition from a radioactive $\text{Sr}^{90}$ source.  \protect\subref{fig:pulseshapeanalysistime} The rise time is defined as the time taken for the voltage to rise from 10\% to 90\% of the peak voltage pulse.  The rise time, and change in voltage over the rise time, are denoted in the figure by the blue arrows.  \protect\subref{fig:pulseshapeanalysisvoltage}  The pulse height is defined as the amplitude of a Gaussian function fitted across the peak of the voltage pulse.  The peak of the voltage pulse is defined as the region where the voltage in excess of 90\% of the raw pulse height.  The voltage region in excess of 90\% of the raw pulse height is indicated by the red solid line and a Gaussian fit, red dotted line, to this region is also shown.]{}
+\subfloat[]{\label{fig:pulseshapeanalysistime}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf}}
+\caption[An example calculation of the pulse height and rise time for the CCPDv3 output voltage.  In this example the black line show the CCPDv3 output voltage having removed the baseline voltage and inverted the pulse shape as a function of time.  This output voltage is produced when charge is deposited in the CCPDv3 from the decay products of a radioactive source, $\text{Sr}^{90}$.  \protect\subref{fig:pulseshapeanalysisvoltage} The definition of the pulse height.  Pulse height is defined as the amplitude of a Gaussian function fitted across the peak of the voltage pulse.  The peak of the voltage pulse is defined as the region where the voltage in excess of 90\% of the raw pulse height and is indicated in the figure by the red arrow.  The red dotted line shows the Gaussian fit used to extract the pulse height.  \protect\subref{fig:pulseshapeanalysistime} The definition of rise time.  Rise time is defined as the time taken for the CCPDv3 voltage to rise from 10\% to 90\% of the raw pulse height.  The rise time, and change in CCPDv3 output voltage over this time, are shown in the figure by the blue arrows.]{An example calculation of the pulse height and rise time for the CCPDv3 output voltage.  In this example the black line show the CCPDv3 output voltage having removed the baseline voltage and inverted the pulse shape as a function of time.  This output voltage is produced when charge is deposited in the CCPDv3 from the decay products of a radioactive source, $\text{Sr}^{90}$.  \protect\subref{fig:pulseshapeanalysisvoltage} The definition of the pulse height.  Pulse height is defined as the amplitude of a Gaussian function fitted across the peak of the voltage pulse.  The peak of the voltage pulse is defined as the region where the voltage in excess of 90\% of the raw pulse height and is indicated in the figure by the red arrow.  The red dotted line shows the Gaussian fit used to extract the pulse height.  \protect\subref{fig:pulseshapeanalysistime} The definition of rise time.  Rise time is defined as the time taken for the CCPDv3 voltage to rise from 10\% to 90\% of the raw pulse height.  The rise time, and change in CCPDv3 output voltage over this time, are shown in the figure by the blue arrows.}
 \label{fig:pulseshapeanalysis}
 \end{figure}
 
-The pulse height was taken as the mean of a Gaussian fit to the peak of the CCPDv3 output signal, defined as the section of the signal above 90\% of the maximum recorded voltage change.  The application of a Gaussian fit provides a more robust metric for categorising the pulse height, which is less dependant on fluctuations in the voltage.  The rise time was calculated as the time taken for the signal to go from 10\% to 90\% of the maximum recorded voltage change.  This definition similarly makes the rise time metric more robust against fluctuations in the voltage.  Examples of the calculation of these metrics for a representative pulse are shown in figure \ref{fig:pulseshapeanalysis}.
-
-For each device the CCPDv3 pulse output was recorded for 15 pixels running along one edge of the 64 $\times$ 64 matrix; in the subsequent analysis the data for all 15 pixels is combined.
-
 %========================================================================================
 
-\subsubsection{Results -  Rise Time vs Pulse Height}
+\subsubsection{Results - Rise Time Vs Pulse Height}
 \label{sec:resultsrisetimepulseheight}
-The mean rise time as function of pulse height is shown in figure \ref{fig:risetime}.  This was determined by binning the events in terms of pulse height and determining the mean rise time for events in each of those bins.  The pulse height was binned using a bin width of 4 mV ranging from 0 to 700 mV.  At least 100 measurements per pulse height bin were used for the calculation of the average rise time.  The error bars on this figure show the standard error in the mean rise time.  
+The mean rise time as function of pulse height for the CCPDv3 output voltage is shown in figure \ref{fig:risetime}.  This was determined by binning the measurements in terms of pulse height and determining the mean rise time for measurements in each bin.  The pulse height was binned using a bin width of 4 mV ranging from 0 to 700 mV.  At least 100 measurements per pulse height bin were used for the calculation of the average rise time.  The error bars on this figure show the standard error in the mean rise time.  
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight.pdf}
-\caption[CCPDv3 voltage rise time as a function of pulse height.]{CCPDv3 voltage rise time as a function of pulse height. CAN THE FRACTIONS BE MADE THE SAME SIZE AS THE REST OF THE TEXT? }
+\caption[The CCPDv3 output voltage rise time as a function of pulse height.]{The CCPDv3 output voltage rise time as a function of pulse height.}
 \label{fig:risetime}
 \end{figure}
  
-The data in figure \ref{fig:risetime} shows that the rise time for the CCPDv3 front-end is approximately 300~ns across all samples, and that this is largely independent of pulse height for all but the smallest signals. For very small pulse heights ($< 100$ mV) rise times are significantly larger, suggesting that the deposited charge takes a longer time to be collected. This may be due to charge transport via diffusion rather than drift, giving a large increase in the time for the signal charge to be collected. At large values of deposited charge (higher output voltage), a gradual reduction in the rise time is observed, as expected for higher charge deposits. The similar characteristics for all samples makes the comparison of the different misaligned samples more straightforward, as the intrinsic CCPDv3 performance can be seen to be the same. The same must also be true of the CLICpix ASICS, which is indeed the case as the results in section \ref{testpulsecalibrationresults} show.  
+The data in figure \ref{fig:risetime} shows that the rise time for the CCPDv3 front-end is approximately 300~ns across all samples.  The rise time is largely independent of pulse height for all but the smallest signals.  For very small pulse heights ($< 100$ mV) rise times are significantly larger, which suggests that the deposited charge takes a longer time to be collected.  This may be due to charge transport occurring via diffusion rather than drift, which is a much slower mechanism.  A gradual reduction in the rise time is observed as the total of deposited charge, which is proportional to the pulse height, increases.  This is expected for higher charge deposits as it will take less time for the CCPDv3 to collect enough charge to reach saturation if there is more charge deposited in the sensor bulk.  These results show that the intrinsic performance of the CCPDv3 sensors in the devices tested is very similar, which will make comparisons of the misaligned samples more straightforward.  Furthermore, almost identical intrinsic performance was observed for the CLICpix readout chips, as shown in section \ref{sec:testpulsecalibration}.  This indicates that any performance differences observed between these devices is entirely due to the capacitively coupled glue layer and the pad alignment.    
 
 %========================================================================================
 
-\subsubsection{Results -  ToT vs Pulse Height}
-\label{sec:totvspulseheight}
+\subsubsection{Results - ToT Vs Pulse Height}
+\label{sec:resultstotpulseheight}
+The mean ToT measured in the CLICpix as a function of the CCPDv3 output voltage pulse height is shown in figure \ref{fig:tot}.  The determination of the mean and error bars for the ToT measurement is identical to that described above for the rise time as a function of pulse height plot.  
 
-Figure \ref{fig:tot} shows the mean ToT measured in the CLICpix as a function of the CCPDv3 output voltage pulse height.  The determination of the mean and error bars for the ToT measurement is identical to that described in section \ref{sec:resultsrisetimepulseheight} for the rise time measurement. 
-
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight.pdf}
-\caption[CLICpix ToT as a function of CCPDv3 voltage pulse height.]{CLICpix ToT as a function of CCPDv3 voltage pulse height.  SAME COMMENT TO LABELS AND FRACTION SIZES}
+\caption[The mean ToT measured on the CLICpix ASIC as a function of CCPDv3 voltage pulse height.]{The mean ToT measured on the CLICpix ASIC as a function of CCPDv3 voltage pulse height.}
 \label{fig:tot}
 \end{figure}
 
-The distribution of mean ToT versus pulse height shows that for samples where the corresponding coupling pads are centred, the ToT increases with pulse height up to values of approximately 300~mV, and that the mean ToT saturates at $\approx 13$.  It is expected that the $\frac{1}{4}-$ and $\frac{1}{2}-$offset samples should have a lower ToT than the centred samples due to the lower effective capacitance between the CCPDv3 and CLICpix pads.  The greater the offset is, the smaller the effective capacitance to the target CLICpix pad will be, and so the lower the recorded ToT.  This is can be seen when comparing the centred samples to the $\frac{1}{4}-$offset sample and SET 16, the $\frac{1}{2}-$offset sample.  
+The distribution of the mean ToT against the pulse height shows that, for samples where the CCPDv3 and CLICpix are centred, the ToT increases with pulse height up to values of approximately 300~mV while at larger pulse heights the mean ToT saturates at $\approx 13$.  It is expected that the $\frac{1}{4}-$ and $\frac{1}{2}-$offset samples will have a lower ToT than the centred samples due to the lower effective capacitance between the CCPDv3 and CLICpix pads.  The greater the offset is, the smaller the effective capacitance to the target CLICpix pad will be, and so the lower the recorded ToT.  This is can be seen when comparing the centred samples to SET 10, the $\frac{1}{4}-$offset sample, and SET 16, the $\frac{1}{2}-$offset sample.  
 
 %========================================================================================
-IN GENERAL YOU KEEP FORGETTING TO PUT THINGS IN CONTEXT - WHY CROSS-COUPLING?
 
-\subsubsection{Results -  Cross Couplings}
+\subsubsection{Results - Cross Couplings}
+Capacitive coupling of the sensor to a readout ASIC may lead to the unwanted effect of cross coupling.  Cross coupling is the unwanted transfer of signal from a given pixel on the sensor to neighbouring pixels in the readout ASIC and can be expected to occur if there is a non-zero capacitance, cross-capacitance, between the two.  This issue is of special interest in this analysis as any misalignments between the CCPDv3 and CLICpix will lead to an increase in the cross-capacitance between two pixels depending on the direction of the misalignment.  
 
-Due to the capacitive transfer of signal from the CCPDv3 sensor to the readout ASIC, it can be expected that any capacitance between the CCPDv3 pixel pads and the readout pads of neighbouring pixels may give rise to additional unwanted hits. Such cross-capacitancies can be observed in the same manner as the previous measurements, but by considering instead the ToT of the neighbouring CLICpix pixel. This is shown in figure \ref{fig:totcrosscoupling1} for all devices where the pixel pads are centred on each other, and in figure \ref{fig:totcrosscoupling2} for the $\frac{1}{4}-$offset sample and the $\frac{1}{2}-$offset sample, SET 16.  
+Following the same setup as was used in section \ref{sec:resultstotpulseheight} for the ToT against pulse height analysis, but this time considering the ToT on the adjacent CLICpix pixel along the direction of the misalignment, it is possible to determine the effect of any cross coupling in these devices.  The mean ToT on the adjacent pixel is shown as a function of the pulse height for all devices where the CCPDv3 and CLICpix are aligned in figure \ref{fig:totcrosscoupling1} and for the misaligned samples in figure \ref{fig:totcrosscoupling2}.
 
-IN GENERAL USE "SET" INSTEAD OF "SET"
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:totcrosscoupling1}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/NoCrossCouplingSETs_Tot_X_PulseHeight.pdf}}\hfill
+\subfloat[]{\label{fig:totcrosscoupling2}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/CrossCouplingSETs_Tot_X_PulseHeight.pdf}}
+\label{fig:totcrosscoupling}
+\caption[The mean ToT measured on the adjacent pixel, along the direction of the offset, of the CLICpix ASIC as a function of CCPDv3 voltage pulse height.]{The mean ToT measured on the adjacent pixel, along the direction of the offset, of the CLICpix ASIC as a function of CCPDv3 voltage pulse height.}
+\end{figure}
 
-DO YOU HAVE A PLOT SHOWING THE NUMBER OF HITS IN THE NEIGHBOUR? RELATIVE TO THE NUMBER OF HITS IN THE ALIGNED PIXEL? THIS PSEUDO-EFFICIENCY MIGHT BE A BETTER INDICATOR? FOLLOWED BY THESE PLOTS
+% HERE
+
+The distribution of mean ToT on the adjacent CLICpix pixel against the pulse height for the centred samples show that there is no strong correlation between the ToT and pulse height.  This indicates that the cross-capacitance for the case of nominal alignment is sufficiently small that cross coupling should not be a problem.  
+
+
+
+
+
 
 SO: this part should be rewritten a little. Most likely you have a threshold effect at low pulse heights (not enough charge injected to make a hit, followed by enough to make a hit but just with a "default" low ToT). Then at high pulse heights you start to see a linear rise, which suggests you are now injecting enough charge to have a good correlation. But these are both second order to the point above, of showing that the number of hits in the main peak is N, and in the side peak is M << N (for low coupling).
-
-REMOVE REFERENCES TO SET14!
 
 No correlation between the adjacent pixel ToT and the CCPDv3 pulse height is observed for the samples shown in figure \ref{fig:totcrosscoupling1} for all but the lowest values of pulse height.  The correlation observed at low pulse heights may arise due to the signal $\text{e}^{-}$, which is primarily recorded in the target pixel, depositing a small amount of charge in the adjacent adjacent pixel.  This can happen as the $\text{e}^{-}$ may not be traveling normal to the pixel surface.  However, as this feature is not present in all samples it could indicate a small misalignment exists in the samples showing the correlation.  
 
@@ -215,18 +219,12 @@ Cross coupling was observed in one of the $\frac{1}{2}$ offset samples and, assu
 
 THE RESULTS OF THIS SECTION SHOULD BE DISCUSSED AND I SHOULD TAKE A LOOK ONCE YOU HAVE CHANGED THE TEXT AROUND AGAIN.
 
-\begin{figure}
-\centering
-\subfloat[]{\label{fig:totcrosscoupling1}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/NoCrossCouplingSETs_Tot_X_PulseHeight.pdf}}\hfill
-\subfloat[]{\label{fig:totcrosscoupling2}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/CrossCouplingSETs_Tot_X_PulseHeight.pdf}}
-\label{fig:totcrosscoupling}
-\caption[CLICpix ToT on adjacent pixel along the direction of the offset as a function of CCPDv3 voltage pulse height.]{CLICpix ToT on adjacent pixel along the direction of the offset as a function of CCPDv3 voltage pulse height.}
-\end{figure}
+
 
 %========================================================================================
 
 \subsection{Test Pulse Calibration}
-
+\label{sec:testpulsecalibration}
 %~~~
 
 This measurement focuses upon determining the response of the CLICpix readout chip as a function of the input voltage entering the chip.  The CLICpix readout chip allows for a fixed height voltage pulse to be directly applied at the input of the chip meaning a full calibration of the chip can be performed.  This experiment extends the characterisation of the CLICpix chip beyond what was found using the radioactive source measurements as applying the voltage directly to the CLICpix fully isolates the response of the chip from effects relating to the glue layer.  
@@ -312,7 +310,6 @@ SET 9   & $0.0875 \pm 0.0005$ & $2.41 \pm 0.03$ & $5.1 \pm 0.1$ & $12.79 \pm 0.1
 SET 10 & $0.0769 \pm 0.0005$ & $2.58 \pm 0.03$ & $7.5 \pm 0.2$ & $8.02 \pm 0.14$ \\
 SET 12 & $0.0725 \pm 0.0005$ & $2.87 \pm 0.04$ & $12.1 \pm 0.3$ & $7.86 \pm 0.22$  \\
 SET 13 & $0.0708 \pm 0.0005$ & $2.69 \pm 0.03$ & $16.2 \pm 0.3$ & $6.65 \pm 0.18$ \\
-%SET 14 & $0.0748 \pm 0.0005$ & $2.57 \pm 0.04$ & $16.0 \pm 1.3$ & $9.89 \pm 0.28$ \\
 SET 15 & $0.0856 \pm 0.0005$ & $2.34 \pm 0.03$ & $5.1 \pm 0.2$ & $12.51 \pm 0.13$ \\
 SET 16 & $0.0746 \pm 0.0004$ & $2.32 \pm 0.02$ & $13.7 \pm 0.3$ & $6.65\pm 0.16$ \\
 \hline
@@ -331,9 +328,8 @@ SET 9   & $0.0834 \pm 0.0003$ & $1.72 \pm 0.01$ & $61.0 \pm 0.3$ & $0.25 \pm 0.0
 SET 10 & $0.0759 \pm 0.0002$ & $1.63 \pm 0.01$ & $43.2 \pm 0.2$ & $0.10 \pm 0.02$ \\
 SET 12 & $0.0731 \pm 0.0003$ & $1.92 \pm 0.02$ & $51.5 \pm 0.3$ & $0.36 \pm 0.12$ \\
 SET 13 & $0.0713 \pm 0.0002$ & $1.72 \pm 0.01$ & $52.5 \pm 0.3$ & $0.18 \pm 0.07$ \\
-%SET 14 & $0.0754 \pm 0.0002$ & $1.68 \pm 0.01$ & $57.3 \pm 0.3$ & $0.16 \pm 0.03$ \\
 SET 15 & $0.0836 \pm 0.0003$ & $1.52 \pm 0.02$ & $52.7 \pm 0.3$ & $0.42 \pm 0.08$ \\
-SET16  & $0.0727 \pm 0.0002$ & $1.49 \pm 0.01$ & $50.7 \pm 0.2$ & $0.10 \pm 0.03$ \\
+SET 16  & $0.0727 \pm 0.0002$ & $1.49 \pm 0.01$ & $50.7 \pm 0.2$ & $0.10 \pm 0.03$ \\
 \hline
 \end{tabular}
 \caption[Average fit parameters for odd columns of CLICpix sensor.]{Average fit parameters for odd columns of the different CLICpix assemblies.}
@@ -346,8 +342,6 @@ SET16  & $0.0727 \pm 0.0002$ & $1.49 \pm 0.01$ & $50.7 \pm 0.2$ & $0.10 \pm 0.03
 \caption[Fitted CLICpix ToT as a function of injected pulse height averaged across the device matrix.]{Fitted ToT as a function of injected pulse height for all samples, averaged across the device matrix.}
 \label{fig:testpulsemeanfit}
 \end{figure}
-
-USE A TILDE TO SEPARATE NUMBER AND UNITS IN LATEX, THEN THE UNITS WILL NEVER BE PUT ONTO THE NEXT LINE
 
 As figure \ref{fig:testpulsemeanfit} shows, the response of the CLICpix to the injected pulse height is rather uniform across all samples.  In general, the turn-on pulse height is $\approx$ 10~mV and saturation (i.e. ToT of 15 units) occurs at $\approx$ 150~mV.  For even-numbered columns there is a sharper rise in ToT than for odd-numbered columns due to the different quantity of (unwanted) injected charge. This effect was observed across all devices considered. The uniformity of the sample response ensures that differing effects between the assemblies produced with different misalignments are not due to the response of the CLICpix front end.
 
