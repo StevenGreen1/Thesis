@@ -732,9 +732,9 @@
    gre->SetName("Graph6");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineColor(kGreen+2);
+   gre->SetLineColor(kBlack);
    gre->SetLineWidth(2);
-   gre->SetMarkerColor(kGreen+2);
+   gre->SetMarkerColor(kBlack);
    gre->SetPoint(0,38,1.121951);
    gre->SetPointError(0,0,0.4706687);
    gre->SetPoint(1,42,0.3968254);
