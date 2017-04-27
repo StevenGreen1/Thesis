@@ -23,7 +23,7 @@
    gre->SetFillColor(1);
    gre->SetLineColor(kGreen+2);
    gre->SetMarkerColor(kGreen+2);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
    gre->SetPoint(0,62,8.692307);
    gre->SetPointError(0,0,1.204981);
    gre->SetPoint(1,66,8.694525);
@@ -341,7 +341,7 @@
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph81->SetLineColor(ci);
-   Graph_Graph_Graph81->SetLineWidth(2);
+   Graph_Graph_Graph81->SetLineWidth(1);
    Graph_Graph_Graph81->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph81->GetXaxis()->SetRange(1,153);
    Graph_Graph_Graph81->GetXaxis()->SetNdivisions(505);
@@ -370,7 +370,7 @@
    ci = 10009;
    color = new TColor(ci, 1, 0, 0, " ", 0);
    gre->SetLineColor(ci);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
 
    ci = 10010;
    color = new TColor(ci, 1, 0, 0, " ", 0);
@@ -704,7 +704,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph92->SetLineColor(ci);
-   Graph_Graph_Graph92->SetLineWidth(2);
+   Graph_Graph_Graph92->SetLineWidth(1);
    Graph_Graph_Graph92->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph92->GetXaxis()->SetRange(1,160);
    Graph_Graph_Graph92->GetXaxis()->SetNdivisions(505);
@@ -730,7 +730,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(kMagenta);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
    gre->SetMarkerColor(kMagenta);
    gre->SetPoint(0,34,8.086957);
    gre->SetPointError(0,0,1.224996);
@@ -1061,7 +1061,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph103->SetLineColor(ci);
-   Graph_Graph_Graph103->SetLineWidth(2);
+   Graph_Graph_Graph103->SetLineWidth(1);
    Graph_Graph_Graph103->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph103->GetXaxis()->SetRange(1,160);
    Graph_Graph_Graph103->GetXaxis()->SetNdivisions(505);
@@ -1087,7 +1087,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(kBlue);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
    gre->SetMarkerColor(kBlue);
    gre->SetPoint(0,50,6.911765);
    gre->SetPointError(0,0,0.9304236);
@@ -1410,7 +1410,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph114->SetLineColor(ci);
-   Graph_Graph_Graph114->SetLineWidth(2);
+   Graph_Graph_Graph114->SetLineWidth(1);
    Graph_Graph_Graph114->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph114->GetXaxis()->SetRange(1,156);
    Graph_Graph_Graph114->GetXaxis()->SetNdivisions(505);
@@ -1436,7 +1436,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(6);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
    gre->SetMarkerColor(6);
    gre->SetPoint(0,42,4.758621);
    gre->SetPointError(0,0,0.920961);
@@ -1757,7 +1757,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph125->SetLineColor(ci);
-   Graph_Graph_Graph125->SetLineWidth(2);
+   Graph_Graph_Graph125->SetLineWidth(1);
    Graph_Graph_Graph125->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph125->GetXaxis()->SetRange(1,155);
    Graph_Graph_Graph125->GetXaxis()->SetNdivisions(505);
@@ -1783,7 +1783,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(kCyan);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
    gre->SetMarkerColor(kCyan);
    gre->SetPoint(0,30,3.088235);
    gre->SetPointError(0,0,0.7874092);
@@ -2114,7 +2114,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph136->SetLineColor(ci);
-   Graph_Graph_Graph136->SetLineWidth(2);
+   Graph_Graph_Graph136->SetLineWidth(1);
    Graph_Graph_Graph136->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph136->GetXaxis()->SetRange(1,160);
    Graph_Graph_Graph136->GetXaxis()->SetNdivisions(505);
@@ -2146,7 +2146,7 @@
    ci = 10006;
    color = new TColor(ci, 0.35, 0.83, 0.33, " ", 0);
    gre->SetLineColor(ci);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
 
    ci = 10008;
    color = new TColor(ci, 0.35, 0.83, 0.33, " ", 0);
@@ -2484,7 +2484,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph147->SetLineColor(ci);
-   Graph_Graph_Graph147->SetLineWidth(2);
+   Graph_Graph_Graph147->SetLineWidth(1);
    Graph_Graph_Graph147->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph147->GetXaxis()->SetRange(1,162);
    Graph_Graph_Graph147->GetXaxis()->SetNdivisions(505);
@@ -2517,7 +2517,7 @@
    TLegendEntry *entry=leg->AddEntry("Graph0","Set 9, Centred","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2525,7 +2525,7 @@
    entry=leg->AddEntry("Graph2","Set 12, Centred","l");
    entry->SetLineColor(3);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2533,7 +2533,7 @@
    entry=leg->AddEntry("Graph3","Set 13, Centred","l");
    entry->SetLineColor(4);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2541,7 +2541,7 @@
 /*   entry=leg->AddEntry("Graph4","Set 14, #frac{1}{2} Offset","l");
    entry->SetLineColor(6);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -2549,7 +2549,7 @@
    entry=leg->AddEntry("Graph5","Set 15, Centred","l");
    entry->SetLineColor(7);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);

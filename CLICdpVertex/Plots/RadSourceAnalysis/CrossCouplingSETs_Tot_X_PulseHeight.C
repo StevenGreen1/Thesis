@@ -30,7 +30,7 @@
    ci = 10005;
    color = new TColor(ci, 0, 0, 0, " ", 0);
    gre->SetLineColor(0);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
 
    ci = 10006;
    color = new TColor(ci, 0, 0, 0, " ", 0);
@@ -350,7 +350,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph_Graph811->SetLineColor(ci);
-   Graph_Graph_Graph_Graph811->SetLineWidth(2);
+   Graph_Graph_Graph_Graph811->SetLineWidth(1);
    Graph_Graph_Graph_Graph811->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph_Graph811->GetXaxis()->SetRange(1,153);
    Graph_Graph_Graph_Graph811->GetXaxis()->SetNdivisions(505);
@@ -707,7 +707,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph_Graph922->SetLineColor(ci);
-   Graph_Graph_Graph_Graph922->SetLineWidth(2);
+   Graph_Graph_Graph_Graph922->SetLineWidth(1);
    Graph_Graph_Graph_Graph922->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph_Graph922->GetXaxis()->SetRange(1,160);
    Graph_Graph_Graph_Graph922->GetXaxis()->SetNdivisions(505);
@@ -733,7 +733,7 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(kBlack);
-   gre->SetLineWidth(2);
+   gre->SetLineWidth(1);
    gre->SetMarkerColor(kBlack);
    gre->SetPoint(0,38,1.121951);
    gre->SetPointError(0,0,0.4706687);
@@ -1068,7 +1068,7 @@
 
    ci = TColor::GetColor("#000099");
    Graph_Graph_Graph_Graph1433->SetLineColor(ci);
-   Graph_Graph_Graph_Graph1433->SetLineWidth(2);
+   Graph_Graph_Graph_Graph1433->SetLineWidth(1);
    Graph_Graph_Graph_Graph1433->GetXaxis()->SetTitle("Pulse Height [mV]");
    Graph_Graph_Graph_Graph1433->GetXaxis()->SetRange(1,162);
    Graph_Graph_Graph_Graph1433->GetXaxis()->SetNdivisions(505);
@@ -1101,7 +1101,7 @@
    TLegendEntry *entry=leg->AddEntry("Graph1","Set 10, 1/4 Offset","l");
    entry->SetLineColor(2);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
@@ -1109,7 +1109,7 @@
    entry=leg->AddEntry("Graph6","Set 16, 1/2 Offset","l");
    entry->SetLineColor(8);
    entry->SetLineStyle(1);
-   entry->SetLineWidth(2);
+   entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
