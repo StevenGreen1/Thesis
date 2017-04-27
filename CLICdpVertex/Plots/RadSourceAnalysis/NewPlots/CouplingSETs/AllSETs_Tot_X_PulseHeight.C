@@ -18,7 +18,6 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(2);
-   gre->SetLineWidth(1);
    gre->SetMarkerColor(2);
    gre->SetPoint(0,46,1.478261);
    gre->SetPointError(0,0,0.8472564);
@@ -343,7 +342,7 @@
    
    TH1F *Graph_Graph5 = new TH1F("Graph_Graph5","",160,0,700);
    Graph_Graph5->SetMinimum(0);
-   Graph_Graph5->SetMaximum(12);
+   Graph_Graph5->SetMaximum(20);
    Graph_Graph5->SetDirectory(0);
    Graph_Graph5->SetStats(0);
 
@@ -374,7 +373,6 @@
    gre->SetName("Graph1");
    gre->SetTitle("");
    gre->SetFillColor(1);
-   gre->SetLineWidth(1);
    gre->SetPoint(0,38,1.727273);
    gre->SetPointError(0,0,0.9798879);
    gre->SetPoint(1,46,1.733333);
@@ -702,7 +700,7 @@
    
    TH1F *Graph_Graph6 = new TH1F("Graph_Graph6","",162,0,700);
    Graph_Graph6->SetMinimum(0);
-   Graph_Graph6->SetMaximum(12);
+   Graph_Graph6->SetMaximum(20);
    Graph_Graph6->SetDirectory(0);
    Graph_Graph6->SetStats(0);
 
@@ -755,5 +753,4 @@
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);
-   Name->SaveAs("CrossCouplingSETs_Tot_X_PulseHeight.pdf");
 }

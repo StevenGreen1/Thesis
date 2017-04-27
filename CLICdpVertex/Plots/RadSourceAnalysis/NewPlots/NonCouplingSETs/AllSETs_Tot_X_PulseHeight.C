@@ -16,7 +16,7 @@
    TGraphErrors *gre = new TGraphErrors(153);
    gre->SetName("Graph0");
    gre->SetTitle("");
-   gre->SetFillColor(1);gre->SetLineWidth(1);
+   gre->SetFillColor(1);
    gre->SetLineColor(8);
    gre->SetMarkerColor(8);
    gre->SetPoint(0,62,6);
@@ -328,7 +328,7 @@
    
    TH1F *Graph_Graph9 = new TH1F("Graph_Graph9","",153,0,700);
    Graph_Graph9->SetMinimum(0);
-   Graph_Graph9->SetMaximum(12);
+   Graph_Graph9->SetMaximum(20);
    Graph_Graph9->SetDirectory(0);
    Graph_Graph9->SetStats(0);
 
@@ -358,7 +358,7 @@
    gre = new TGraphErrors(159);
    gre->SetName("Graph1");
    gre->SetTitle("");
-   gre->SetFillColor(1);gre->SetLineWidth(1);
+   gre->SetFillColor(1);
    gre->SetLineColor(6);
    gre->SetMarkerColor(6);
    gre->SetPoint(0,42,7.454545);
@@ -682,7 +682,7 @@
    
    TH1F *Graph_Graph10 = new TH1F("Graph_Graph10","",159,0,700);
    Graph_Graph10->SetMinimum(0);
-   Graph_Graph10->SetMaximum(12);
+   Graph_Graph10->SetMaximum(20);
    Graph_Graph10->SetDirectory(0);
    Graph_Graph10->SetStats(0);
 
@@ -710,7 +710,7 @@
    gre = new TGraphErrors(155);
    gre->SetName("Graph2");
    gre->SetTitle("");
-   gre->SetFillColor(1);gre->SetLineWidth(1);
+   gre->SetFillColor(1);
    gre->SetLineColor(4);
    gre->SetMarkerColor(4);
    gre->SetPoint(0,54,3.227273);
@@ -1026,7 +1026,7 @@
    
    TH1F *Graph_Graph11 = new TH1F("Graph_Graph11","",155,0,700);
    Graph_Graph11->SetMinimum(0);
-   Graph_Graph11->SetMaximum(12);
+   Graph_Graph11->SetMaximum(20);
    Graph_Graph11->SetDirectory(0);
    Graph_Graph11->SetStats(0);
 
@@ -1054,7 +1054,7 @@
    gre = new TGraphErrors(161);
    gre->SetName("Graph3");
    gre->SetTitle("");
-   gre->SetFillColor(1);gre->SetLineWidth(1);
+   gre->SetFillColor(1);
    gre->SetLineColor(7);
    gre->SetMarkerColor(7);
    gre->SetPoint(0,34,4.558139);
@@ -1382,7 +1382,7 @@
    
    TH1F *Graph_Graph12 = new TH1F("Graph_Graph12","",161,0,700);
    Graph_Graph12->SetMinimum(0);
-   Graph_Graph12->SetMaximum(12);
+   Graph_Graph12->SetMaximum(20);
    Graph_Graph12->SetDirectory(0);
    Graph_Graph12->SetStats(0);
 
@@ -1451,5 +1451,4 @@
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);
-   Name->SaveAs("NoCrossCouplingSETs_Tot_X_PulseHeight.pdf");
 }

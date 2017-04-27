@@ -18,7 +18,6 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(8);
-   gre->SetLineWidth(1);
    gre->SetMarkerColor(8);
    gre->SetPoint(0,62,5);
    gre->SetPointError(0,0,0.2571297);
@@ -361,7 +360,6 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(2);
-   gre->SetLineWidth(1);
    gre->SetMarkerColor(2);
    gre->SetPoint(0,46,7);
    gre->SetPointError(0,0,0.7777628);
@@ -716,7 +714,6 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(6);
-   gre->SetLineWidth(1);
    gre->SetMarkerColor(6);
    gre->SetPoint(0,42,9.045455);
    gre->SetPointError(0,0,0.8683538);
@@ -1069,7 +1066,6 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(4);
-   gre->SetLineWidth(1);
    gre->SetMarkerColor(4);
    gre->SetPoint(0,54,4.818182);
    gre->SetPointError(0,0,0.2813713);
@@ -1414,7 +1410,6 @@
    gre->SetTitle("");
    gre->SetFillColor(1);
    gre->SetLineColor(7);
-   gre->SetLineWidth(1);
    gre->SetMarkerColor(7);
    gre->SetPoint(0,34,7.72093);
    gre->SetPointError(0,0,0.5877104);
@@ -2182,5 +2177,4 @@
    Name->Modified();
    Name->cd();
    Name->SetSelected(Name);
-   Name->SaveAs("AllSETs_TargetTot_PulseHeight.pdf");
 }

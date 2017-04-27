@@ -1,0 +1,168 @@
+{
+//=========Macro generated from canvas: Name/Title
+//=========  (Thu Apr 27 13:41:07 2017) by ROOT version5.34/30
+   TCanvas *Name = new TCanvas("Name", "Title",0,0,3000,2500);
+   gStyle->SetOptStat(0);
+   Name->SetHighLightColor(2);
+   Name->Range(-3.409091,-3.2,25.68182,18.13333);
+   Name->SetFillColor(0);
+   Name->SetBorderMode(0);
+   Name->SetBorderSize(2);
+   Name->SetRightMargin(0.35);
+   Name->SetBottomMargin(0.15);
+   Name->SetFrameBorderMode(0);
+   Name->SetFrameBorderMode(0);
+   
+   TGraphErrors *gre = new TGraphErrors(14);
+   gre->SetName("Graph0");
+   gre->SetTitle("");
+   gre->SetFillColor(1);
+   gre->SetLineColor(2);
+   gre->SetMarkerColor(2);
+   gre->SetPoint(0,2,4.274336);
+   gre->SetPointError(0,0,0.4423447);
+   gre->SetPoint(1,3,3.491158);
+   gre->SetPointError(1,0,0.06468029);
+   gre->SetPoint(2,4,3.668355);
+   gre->SetPointError(2,0,0.03578901);
+   gre->SetPoint(3,5,3.855093);
+   gre->SetPointError(3,0,0.03487444);
+   gre->SetPoint(4,6,4.150523);
+   gre->SetPointError(4,0,0.03887151);
+   gre->SetPoint(5,7,4.398542);
+   gre->SetPointError(5,0,0.04382128);
+   gre->SetPoint(6,8,4.513229);
+   gre->SetPointError(6,0,0.0497805);
+   gre->SetPoint(7,9,4.549202);
+   gre->SetPointError(7,0,0.05354234);
+   gre->SetPoint(8,10,4.703005);
+   gre->SetPointError(8,0,0.05720906);
+   gre->SetPoint(9,11,4.75826);
+   gre->SetPointError(9,0,0.06004859);
+   gre->SetPoint(10,12,5.159938);
+   gre->SetPointError(10,0,0.05870029);
+   gre->SetPoint(11,13,5.576838);
+   gre->SetPointError(11,0,0.06070057);
+   gre->SetPoint(12,14,6.591392);
+   gre->SetPointError(12,0,0.08527859);
+   gre->SetPoint(13,15,7.392609);
+   gre->SetPointError(13,0,0.1217036);
+   
+   TH1F *Graph_Graph1 = new TH1F("Graph_Graph1","",100,-0.5,15.5);
+   Graph_Graph1->SetMinimum(0);
+   Graph_Graph1->SetMaximum(16);
+   Graph_Graph1->SetDirectory(0);
+   Graph_Graph1->SetStats(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#000099");
+   Graph_Graph1->SetLineColor(ci);
+   Graph_Graph1->GetXaxis()->SetTitle("ToT");
+   Graph_Graph1->GetXaxis()->SetRange(1,100);
+   Graph_Graph1->GetXaxis()->SetLabelFont(42);
+   Graph_Graph1->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph1->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph1->GetXaxis()->SetTitleFont(42);
+   Graph_Graph1->GetYaxis()->SetTitle("ToT Adjacent Pixel");
+   Graph_Graph1->GetYaxis()->SetLabelFont(42);
+   Graph_Graph1->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph1->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph1->GetYaxis()->SetTitleFont(42);
+   Graph_Graph1->GetZaxis()->SetLabelFont(42);
+   Graph_Graph1->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph1->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph1->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph1);
+   
+   gre->Draw("ap");
+   
+   gre = new TGraphErrors(14);
+   gre->SetName("Graph1");
+   gre->SetTitle("");
+   gre->SetFillColor(1);
+   gre->SetPoint(0,2,2.476378);
+   gre->SetPointError(0,0,0.1594055);
+   gre->SetPoint(1,3,2.526617);
+   gre->SetPointError(1,0,0.036437);
+   gre->SetPoint(2,4,2.6821);
+   gre->SetPointError(2,0,0.02339435);
+   gre->SetPoint(3,5,3.197883);
+   gre->SetPointError(3,0,0.02467441);
+   gre->SetPoint(4,6,4.015559);
+   gre->SetPointError(4,0,0.02763769);
+   gre->SetPoint(5,7,4.869619);
+   gre->SetPointError(5,0,0.03156926);
+   gre->SetPoint(6,8,5.678486);
+   gre->SetPointError(6,0,0.03654125);
+   gre->SetPoint(7,9,5.810131);
+   gre->SetPointError(7,0,0.04270563);
+   gre->SetPoint(8,10,5.888905);
+   gre->SetPointError(8,0,0.04931743);
+   gre->SetPoint(9,11,6.929358);
+   gre->SetPointError(9,0,0.0538855);
+   gre->SetPoint(10,12,8.26616);
+   gre->SetPointError(10,0,0.05149016);
+   gre->SetPoint(11,13,9.562392);
+   gre->SetPointError(11,0,0.05460471);
+   gre->SetPoint(12,14,10.18128);
+   gre->SetPointError(12,0,0.08218117);
+   gre->SetPoint(13,15,10.9589);
+   gre->SetPointError(13,0,0.1582587);
+   
+   TH1F *Graph_Graph2 = new TH1F("Graph_Graph2","",100,-0.5,15.5);
+   Graph_Graph2->SetMinimum(0);
+   Graph_Graph2->SetMaximum(16);
+   Graph_Graph2->SetDirectory(0);
+   Graph_Graph2->SetStats(0);
+
+   ci = TColor::GetColor("#000099");
+   Graph_Graph2->SetLineColor(ci);
+   Graph_Graph2->GetXaxis()->SetTitle("ToT");
+   Graph_Graph2->GetXaxis()->SetRange(1,100);
+   Graph_Graph2->GetXaxis()->SetLabelFont(42);
+   Graph_Graph2->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph2->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph2->GetXaxis()->SetTitleFont(42);
+   Graph_Graph2->GetYaxis()->SetTitle("ToT Adjacent Pixel");
+   Graph_Graph2->GetYaxis()->SetLabelFont(42);
+   Graph_Graph2->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph2->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph2->GetYaxis()->SetTitleFont(42);
+   Graph_Graph2->GetZaxis()->SetLabelFont(42);
+   Graph_Graph2->GetZaxis()->SetLabelSize(0.035);
+   Graph_Graph2->GetZaxis()->SetTitleSize(0.035);
+   Graph_Graph2->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph2);
+   
+   gre->Draw(" p");
+   
+   TLegend *leg = new TLegend(0.7,0.1,0.95,0.9,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetTextSize(0.05);
+   leg->SetLineColor(0);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("Graph0","SET 10, 1/4 Offset","l");
+   entry->SetLineColor(2);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("Graph1","SET 16, 1/2 Offset","l");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   Name->Modified();
+   Name->cd();
+   Name->SetSelected(Name);
+}
