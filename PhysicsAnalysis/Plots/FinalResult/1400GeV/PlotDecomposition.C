@@ -15,9 +15,9 @@ void PlotDecomposition()
 
 void MakePlots(TString name, TString description, TString briefDescription)
 {
-    TGraph2D *pTGraph2D = SinglePlot(name,"Chi2CosThetaStarSynJets");
-    TGraph *pTGraph_a4 = OneDSinglePlot(name,"Chi2CosThetaStarSynJets", "Alpha4");
-    TGraph *pTGraph_a5 = OneDSinglePlot(name,"Chi2CosThetaStarSynJets", "Alpha5");
+    TGraph2D *pTGraph2D = SinglePlot(name,"Chi2MVV");
+    TGraph *pTGraph_a4 = OneDSinglePlot(name,"Chi2MVV", "Alpha4");
+    TGraph *pTGraph_a5 = OneDSinglePlot(name,"Chi2MVV", "Alpha5");
 
     // 2D Plot
     TCanvas *pTCanvas = new TCanvas(briefDescription, "", 600, 600);
@@ -63,6 +63,14 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTGraph_a4->Draw("APL");
     TString plotPDF_a4 = briefDescription + "_alpha4.pdf";
     TString plotDotC_a4 = briefDescription + "_alpha4.C";
+    TF1 *pTF1a4 = new TF1("Alpha4Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.015,0.015);
+    pTGraph_a4->Fit("Alpha4Fit","MR","",-0.015,0.015);
+    pTF1a4->SetLineColor(kBlue);
+    pTF1a4->Draw("same");
+    TLegend *pTLegend_a4 = new TLegend(0.35, 0.65, 0.65, 0.85);
+    pTLegend_a4->AddEntry(pTF1a4, "#splitline{4th Order}{Polynomial Fit}", "l");
+    pTLegend_a4->SetLineColor(0);
+    pTLegend_a4->Draw();
     pTCanvas_a4->SaveAs(plotPDF_a4);
     pTCanvas_a4->SaveAs(plotDotC_a4);
 
@@ -77,6 +85,14 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTGraph_a5->Draw("APL");
     TString plotPDF_a5 = briefDescription + "_alpha5.pdf";
     TString plotDotC_a5 = briefDescription + "_alpha5.C";
+    TF1 *pTF1a5 = new TF1("Alpha5Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.015,0.015);
+    pTGraph_a5->Fit("Alpha5Fit","MR","",-0.015,0.015);
+    pTF1a5->SetLineColor(kBlue);
+    pTF1a5->Draw("same");
+    TLegend *pTLegend_a5 = new TLegend(0.35, 0.65, 0.65, 0.85);
+    pTLegend_a5->AddEntry(pTF1a5, "#splitline{4th Order}{Polynomial Fit}", "l");
+    pTLegend_a5->SetLineColor(0);
+    pTLegend_a5->Draw();
     pTCanvas_a5->SaveAs(plotPDF_a5);
     pTCanvas_a5->SaveAs(plotDotC_a5);
 
