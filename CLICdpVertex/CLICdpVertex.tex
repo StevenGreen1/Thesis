@@ -128,7 +128,7 @@ For this measurement a radioactive source was used to deposit charge within the 
 \subsubsection{Experimental Setup}
 The radioactive material used in this experiment was a $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used for this experiment had an activity of 29.6 MBq.  
 
-The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  The analogue output has a baseline voltage of $\approx 1.15$~V, with signal saturation occurring around a height of 700~mV.  Examples of CCPDv3 output voltage pulses when using the $\text{Sr}^{90}$ source can be seen in figure \ref{fig:pulseshapes}.
+The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter, which is located in the CLICpix ASIC, was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  The analogue output has a baseline voltage of $\approx 1.15$~V, with signal saturation occurring around a height of 700~mV.  Examples of CCPDv3 output voltage pulses when using the $\text{Sr}^{90}$ source can be seen in figure \ref{fig:pulseshapes}.
 
 \begin{figure}[h!]
 \centering
@@ -157,7 +157,7 @@ The quantities of interest related to the CCPDv3 output voltage are the pulse he
 
 \subsubsection{Results - Rise Time Vs Pulse Height}
 \label{sec:resultsrisetimepulseheight}
-The mean rise time as function of pulse height for the CCPDv3 output voltage is shown in figure \ref{fig:risetime}.  This was determined by binning the measurements in terms of pulse height and determining the mean rise time for measurements in each bin.  The pulse height was binned using a bin width of 4 mV ranging from 0 to 700 mV.  At least 100 measurements per pulse height bin were used for the calculation of the average rise time.  The error bars on this figure show the standard error in the mean rise time.  
+The mean rise time as function of pulse height for the CCPDv3 output voltage is shown in figure \ref{fig:risetime}.  This was determined by binning the measurements in terms of pulse height and determining the mean rise time for measurements in each bin.  The pulse height was binned using a bin width of 4 mV ranging from 0 to 700 mV.  At least 10 measurements per pulse height bin were used for the calculation of the average rise time.  The error bars on this figure show the standard error in the mean rise time.  Data was only included in this analysis if the on-pixel event counter registered a single hit in the time window used to take data.
 
 \begin{figure}[h!]
 \centering
@@ -172,7 +172,7 @@ The data in figure \ref{fig:risetime} shows that the rise time for the CCPDv3 fr
 
 \subsubsection{Results - ToT Vs Pulse Height}
 \label{sec:resultstotpulseheight}
-The mean ToT measured in the CLICpix as a function of the CCPDv3 output voltage pulse height is shown in figure \ref{fig:tot}.  The determination of the mean and error bars for the ToT measurement is identical to that described above for the rise time as a function of pulse height plot.  
+The mean ToT measured in the CLICpix as a function of the CCPDv3 output voltage pulse height is shown in figure \ref{fig:tot}.  Determination of the mean and error bars for the ToT as a function of pulse height measurement is identical to that described above for the rise time as a function of pulse height measurement.   
 
 \begin{figure}[h!]
 \centering
@@ -186,26 +186,32 @@ The distribution of the mean ToT against the pulse height shows that, for sample
 %========================================================================================
 
 \subsubsection{Results - Cross Couplings}
-Capacitive coupling of the sensor to a readout ASIC may lead to the unwanted effect of cross coupling.  Cross coupling is the unwanted transfer of signal from a given pixel on the sensor to neighbouring pixels in the readout ASIC and can be expected to occur if there is a non-zero capacitance, cross-capacitance, between the two.  This issue is of special interest in this analysis as any misalignments between the CCPDv3 and CLICpix will lead to an increase in the cross-capacitance between two pixels depending on the direction of the misalignment.  
+Capacitive coupling of the sensor to the readout ASIC in a pixel detector can lead to the unwanted effect of cross-coupling.  Cross-coupling is the transfer of signal from a sensor pad to the readout ASIC on adjacent pads, which will occur if there is a non-negligible capacitance between adjacent pads.  In this case the signal is still transferred between the aligned sensor and readout pads, however, the cross-capacitance is large enough unwanted additional hits in neighbouring pads will be created.  This issue is particularly relevant for this study as any misalignment of the sensor and readout pads will result in an increase in the cross-capacitance along the direction of the misalignment.   
 
-Following the same setup as was used in section \ref{sec:resultstotpulseheight} for the ToT against pulse height analysis, but this time considering the ToT on the adjacent CLICpix pixel along the direction of the misalignment, it is possible to determine the effect of any cross coupling in these devices.  The mean ToT on the adjacent pixel is shown as a function of the pulse height for all devices where the CCPDv3 and CLICpix are aligned in figure \ref{fig:totcrosscoupling1} and for the misaligned samples in figure \ref{fig:totcrosscoupling2}.
+Any effects of cross-coupling can be studied using the same setup as was used in section \ref{sec:resultstotpulseheight} for the ToT against pulse height analysis, but by considering the ToT on the adjacent CLICpix pixel along the direction of the misalignment.  The mean ToT on the adjacent pixel is shown as a function of the pulse height for all devices where the CCPDv3 and CLICpix are aligned in figure \ref{fig:totcrosscoupling1} and for the misaligned samples in figure \ref{fig:totcrosscoupling2}.
 
 \begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:totcrosscoupling1}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/NoCrossCouplingSETs_Tot_X_PulseHeight.pdf}}\hfill
 \subfloat[]{\label{fig:totcrosscoupling2}\includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/RadSourceAnalysis/CrossCouplingSETs_Tot_X_PulseHeight.pdf}}
 \label{fig:totcrosscoupling}
-\caption[The mean ToT measured on the adjacent pixel, along the direction of the offset, of the CLICpix ASIC as a function of CCPDv3 voltage pulse height.]{The mean ToT measured on the adjacent pixel, along the direction of the offset, of the CLICpix ASIC as a function of CCPDv3 voltage pulse height.}
+\caption[The mean ToT measured on the adjacent CLICpix pixel, along the direction of the offset, as a function of CCPDv3 voltage pulse height.]{The mean ToT measured on the adjacent CLICpix pixel, along the direction of the offset, as a function of CCPDv3 voltage pulse height.}
 \end{figure}
 
 % HERE
 
-The distribution of mean ToT on the adjacent CLICpix pixel against the pulse height for the centred samples show that there is no strong correlation between the ToT and pulse height.  This indicates that the cross-capacitance for the case of nominal alignment is sufficiently small that cross coupling should not be a problem.  
+% Centred sample chat
+The distribution of the mean ToT on the adjacent CLICpix pixel shows little correlation with the pulse height on the target pixel for majority of pulse heights considered.  There is a weak correlation for small, $<$200~mV, pulse heights, which will most likely occur when charge occurs across two neighbouring CCPDv3 pixels.  There is also a correlation for large pulse heights and this is most likely due to cross-coupling.  Even if the cross-capacitance between a CCPDv3 pad and the neighbouring CLICpix pad is small, if the CCPDv3 output voltage pulse is large enough it will overcome the small capacitance and inject some charge into the neighbouring CLICpix and cause the observed correlation.  
 
+For the $\frac{1}{4}-$offset sample there is no correlation between the adjacent CLICpix mean ToT and pulse height for all but the largest pulse heights.  As expected there is a clear correlation between adjacent ToT and pulse height for large pulse heights due to the cross-capacitance.  This correlation is stronger for this sample as the misalignment acts to increase the cross-capacitance in the direction of the offset indicating that cross-coupling will be more problematic for offset samples.  There is also a correlation present for low pulse heights, however, as the capacitance of the offset samples is lower the gradient of the adjacent ToT against the pulse height is much flatter.
 
+% Cross coupling
 
+The mean ToT on the adjacent pad is correlated with the pulse height up to $\sim$200~m, while above this the correlation 
 
+For the $\frac{1}{4}-$offset sample 
 
+it is clear that there the effects of cross-coupling are more prominent as there is a strong correlation between the  
 
 SO: this part should be rewritten a little. Most likely you have a threshold effect at low pulse heights (not enough charge injected to make a hit, followed by enough to make a hit but just with a "default" low ToT). Then at high pulse heights you start to see a linear rise, which suggests you are now injecting enough charge to have a good correlation. But these are both second order to the point above, of showing that the number of hits in the main peak is N, and in the side peak is M << N (for low coupling).
 
