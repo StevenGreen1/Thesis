@@ -332,36 +332,30 @@ The test beam experiments presented here were carried out in August and Septembe
 \subsection{Analysis}
 The track position on the DUT was calculated using the measured particle trajectory through the telescope planes.  This was followed by a search around the intercept position on the DUT to find an associated cluster.  Clusters were associated to the track if they fell within 75 $\mu$m, or 3 pixels, about the intercept position.  If multiple clusters were associated to a track the cluster position was calculated as the ToT-weighted centre-of-gravity.  As tracks may undergo non-negligible multiple scattering, a $\chi^{2}$ cut was used to remove less precisely reconstructed tracks.  Pixels identified on the DUT that were deemed to be noisy were removed from the analysis.  Any tracks with an intercept within half a pixel of a noisy pixel were also rejected from the analysis.  A pixel was deemed noisy if it responded at a mean rate greater than 5 $\sigma$ in comparison to the average rate across the whole matrix.  Finally, all tracks occurring within 125 $\mu$m of each other were vetoed, in order to reduce the possibility of mis-association of clusters to tracks. 
 
-MAYBE SAY WHY ALIGNMENT IS NECESSARY? IN GENERAL THIS SECTION COULD DO WITH A LITTLE MORE CONTEXT
-
-An alignment procedure was applied to both the telescope planes and the DUT, in order to account for the physical layout of the setup.  The six telescope planes were aligned by producing rough tracks, and then varying the global alignment parameters of each plane in turn, in order to minimise the track $\chi^{2}$. This was performed iteratively until no further gain was observed. After the telescope planes were aligned, the DUT was aligned by varying its alignment parameters in order to minimise the summed square of track residuals over many events.
+Alignment of the telescope planes is essential for ensuring that the correct trajectory of the particles passing through the setup can be determined.  Furthermore, alignment of the DUT with respect to the telescope planes is critical for ensuring the correct track intercept position is determined.  With that in mind the six telescope planes were aligned by minimising the total track $\chi^{2}$ with respect to the global alignment parameters.  The tracks that are created in the alignment procedure are referred to as "rough tracks" as they are produced using the hits from sensor planes that may not be ideally aligned.  The alignment proceeds one telescope plane at a time until all planes have been accounted for.  Using the updated alignment the procedure is repeated to see if further gains can be made from the new starting alignment.  This procedure is iteratively repeated, updating the global alignment parameters to the optimal values found each time, until no further gains can be made.  Once the telescope planes have been aligned the DUT is aligned in a similar manor, but where the summed square of track residuals is minimised.  The residual is defined as the difference between the track intercept and associated cluster centre-of-gravity.  
 
 %========================================================================================
 
-AGAIN A BIT OF CONTEXT.
-
-\subsection{Single Hit Efficiency}
-The single hit efficiency, $\epsilon$, is defined as the number of tracks with associated clusters in the CLICpix assembly, $n$, divided by the number of tracks reconstructed through the detector using the telescope, $m$. The errors shown on the efficiency measurements are given by $\sqrt{\frac{\epsilon (1 - \epsilon)}{m}}$, which follows from the variance of $n$ given binomial statistics with mean $\epsilon$.  
-
-CONTEXT
+\subsection{Results}
+The metric used for characterising the device performance in the test beam is the single hit efficiency, $\epsilon$.  This is defined as the number of tracks with associated clusters recorded by the DUT, $n$, divided by the number of reconstructed tracks passing through the DUT recorded by the telescope, $m$. The errors shown on the efficiency measurements are given by $\sqrt{\frac{\epsilon (1 - \epsilon)}{m}}$, which follows from the variance of $n$ given binomial statistics with mean $\epsilon$.  The single hit efficiency as a function of threshold is shown in figure \ref{fig:efficiency}.  The threshold, which in this case is defined as the number of electrons, is the size of the signal that must be injected into the CLICpix ASIC to generate a hit. 
 
 \begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/TestBeamData/EfficiencyThresholdPlot.pdf}
-\caption[Efficiency as a function of threshold.]{Efficiency as a function of threshold.}
+\caption[The efficiency of the devices considered as a function of the threshold applied.]{The efficiency of the devices considered as a function of the threshold applied.}
 \label{fig:efficiency}
 \end{figure}
 
-CONTEXT (just in case you missed that ;-))
-
-The efficiency as a function of threshold is shown in figure \ref{fig:efficiency}.  The data indicates that, as expected, for all assemblies the single hit efficiency of the detector decreases when a higher amount of charge is required to generate a signal.  However, it is clear that for the $\frac{1}{2}$ offset sample, SET 16, the efficiency is significantly lower in comparison to the other samples. There is a minor degradation in performance when considering the $\frac{1}{4}$ offset sample, but these results are still comparable to several of the centred samples.  Overall, it can be concluded that manufacturing tolerances up to $\frac{1}{4}$ of a pixel width would not significantly affect performance.    
-
-AGAIN THIS NEEDS EXPANSION. You spent so much time on the earlier section, but now on the results you just say "see figure 1. end.". You can talk a bit more about the lower signal expected by reduced capacitance, etc.
+The data indicates that for all assemblies the single hit efficiency of the detector decreases when a higher amount of charge is required to generate a signal, which is to be expected.  However, the efficiency of all samples, with the exception of the $\frac{1}{2}$-offset sample, is still above 99\% up to a threshold of 2000 electrons.  This is encouraging behaviour as the larger the threshold that can be applied the lower the effects from noise will be, which would aid tracking performance for the CLIC vertex detector.  It is clear that the $\frac{1}{2}$ offset sample, SET 16, has a much lower efficiency as a function of threshold in comparison to the other samples.  For the same deposited charge in the CCPDv3, the $\frac{1}{2}$-offset sample will produce a smaller signal in the CLICpix than the centred samples due to the reduced capacitance between the CCPDv3 and the CLICpix.  This will be the cause of the reduced efficiency as a function of threshold in this sample.  More encouragingly is the behaviour of the $\frac{1}{4}$-offset sample, SET 14, which in terms of performance is comparable to the aligned samples.  There is a very small degradation in efficiency of the $\frac{1}{4}$-offset sample with respect to the aligned sampled, which is to be expected given the reduced capacitance.  These results indicate that even with a relatively large misalignment between the CCPDv3 and CLICpix pads the device performance is not significantly affected and, therefore, manufacutring tolerances of up to $\frac{1}{4}$ of a pixel width would not be problematic if this device were used for the CLIC vertex detector.
 
 %========================================================================================
 
 \section{Conclusions}
+In summary:
 
+\begin{itemize}
+\item Device fabrication tolerances of up to $\frac{1}{4}$ of a pixel width would not harm the performance when using a capacitively coupled glue layer to transfer charged between a CCPDv3 sensor ASIC and a CLICpix readout ASIC.
+\end{itemize}
 
 %========================================================================================
 
