@@ -1,15 +1,17 @@
 {
 //=========Macro generated from canvas: KtSPFOsR0p70_Alpha4/
-//=========  (Tue May  2 09:16:34 2017) by ROOT version5.34/37
+//=========  (Tue May  2 12:14:03 2017) by ROOT version5.34/37
    TCanvas *KtSPFOsR0p70_Alpha4 = new TCanvas("KtSPFOsR0p70_Alpha4", "",0,45,600,600);
    gStyle->SetOptStat(0);
-   KtSPFOsR0p70_Alpha4->Range(-0.01245176,-1.875,0.01126588,16.875);
+   KtSPFOsR0p70_Alpha4->Range(-0.023184,-3,0.017136,17);
    KtSPFOsR0p70_Alpha4->SetFillColor(0);
    KtSPFOsR0p70_Alpha4->SetBorderMode(0);
    KtSPFOsR0p70_Alpha4->SetBorderSize(2);
    KtSPFOsR0p70_Alpha4->SetTickx(1);
    KtSPFOsR0p70_Alpha4->SetTicky(1);
+   KtSPFOsR0p70_Alpha4->SetLeftMargin(0.2);
    KtSPFOsR0p70_Alpha4->SetRightMargin(0.05);
+   KtSPFOsR0p70_Alpha4->SetBottomMargin(0.15);
    KtSPFOsR0p70_Alpha4->SetFrameLineWidth(2);
    KtSPFOsR0p70_Alpha4->SetFrameBorderMode(0);
    KtSPFOsR0p70_Alpha4->SetFrameLineWidth(2);
@@ -61,11 +63,13 @@
    Graph_Graph1->SetStats(0);
    Graph_Graph1->SetLineWidth(2);
    Graph_Graph1->GetXaxis()->SetTitle("#alpha_{4}");
-   Graph_Graph1->GetXaxis()->SetRange(23,78);
-   Graph_Graph1->GetXaxis()->SetNdivisions(505);
+   Graph_Graph1->GetXaxis()->SetRange(9,92);
+   Graph_Graph1->GetXaxis()->SetNdivisions(5);
    Graph_Graph1->GetXaxis()->SetLabelFont(132);
+   Graph_Graph1->GetXaxis()->SetLabelOffset(0.025);
    Graph_Graph1->GetXaxis()->SetLabelSize(0.05);
    Graph_Graph1->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph1->GetXaxis()->SetTitleOffset(1.2);
    Graph_Graph1->GetXaxis()->SetTitleFont(132);
    Graph_Graph1->GetYaxis()->SetTitle("#chi^{2}");
    Graph_Graph1->GetYaxis()->SetLabelFont(132);
@@ -143,15 +147,19 @@
    Alpha4Fit->SetParLimits(3,0,0);
    Alpha4Fit->Draw("same");
    
-   TLegend *leg = new TLegend(0.35,0.65,0.65,0.85,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.15,0.95,0.9,0.95,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetTextFont(132);
-   leg->SetLineColor(0);
+   leg->SetTextSize(0.05);
+
+   ci = 10006;
+   color = new TColor(ci, 1, 1, 1, " ", 0);
+   leg->SetLineColor(ci);
    leg->SetLineStyle(1);
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
-   leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("Alpha4Fit","#splitline{4th Order}{Polynomial Fit}","l");
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("Alpha4Fit","4th Order Polynomial Fit","l");
 
    ci = TColor::GetColor("#0000ff");
    entry->SetLineColor(ci);

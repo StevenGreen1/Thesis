@@ -6,8 +6,10 @@
 
 void PlotFit()
 {
+//    TString name1 = "SPFOs_kt_0p50_1400GeV_FitData.root";
     TString name2 = "SPFOs_kt_0p70_1400GeV_FitData.root";
     TString name3 = "SPFOs_kt_0p90_1400GeV_FitData.root";
+//    TString name4 = "SPFOs_kt_1p00_1400GeV_FitData.root";
     TString name5 = "SPFOs_kt_1p10_1400GeV_FitData.root";
     TString name6 = "TPFOs_kt_0p70_1400GeV_FitData.root";
     TString name7 = "LPFOs_kt_0p70_1400GeV_FitData.root";
@@ -16,8 +18,10 @@ void PlotFit()
     TString name10 = "TPFOs_kt_0p90_1400GeV_FitData.root";
     TString name11 = "TPFOs_kt_1p10_1400GeV_FitData.root";
 
+//    MakePlots(name1, "Longitudinally Invariant Kt, Selected PFOs, R = 0.5", "KtSPFOsR0p50");
     MakePlots(name2, "Longitudinally Invariant Kt, Selected PFOs, R = 0.7", "KtSPFOsR0p70");
     MakePlots(name3, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "KtSPFOsR0p90");
+//    MakePlots(name4, "Longitudinally Invariant Kt, Selected PFOs, R = 1.0", "KtSPFOsR1p00");
     MakePlots(name5, "Longitudinally Invariant Kt, Selected PFOs, R = 1.1", "KtSPFOsR1p10");
     MakePlots(name6, "Longitudinally Invariant Kt, Tight Selected PFOs, R = 0.7", "KtTPFOsR0p70");
     MakePlots(name7, "Longitudinally Invariant Kt, Loose Selected PFOs, R = 0.7", "KtLPFOsR0p70");
@@ -38,9 +42,9 @@ void MakePlots(TString name, TString description, TString briefDescription)
     // 2D Plot
     TCanvas *pTCanvas = new TCanvas(briefDescription, "", 600, 600);
     pTCanvas->SetRightMargin(0.05);
-    pTCanvas->SetLeftMargin(0.2);
+    pTCanvas->SetLeftMargin(0.15);
     pTCanvas->SetTopMargin(0.10);
-    pTCanvas->SetBottomMargin(0.15);
+    pTCanvas->SetBottomMargin(0.10);
     TH1F *pTH1FDummy1 = new TH1F();
     pTH1FDummy1->SetLineColor(2);
     TH1F *pTH1FDummy2 = new TH1F();
@@ -49,13 +53,13 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTH1FDummy3->SetLineColor(4);
     gStyle->SetLegendBorderSize(1); 
 
-    TLegend *pTLegend_all = new TLegend(0.25, 0.2, 0.6, 0.35);
-    pTLegend_all->AddEntry(pTH1FDummy1,"68\% Confidence Region", "l");
-    pTLegend_all->AddEntry(pTH1FDummy2,"90\% Confidence Region", "l");
-    pTLegend_all->AddEntry(pTH1FDummy3,"99\% Confidence Region", "l");
-    pTLegend_all->SetLineColorAlpha(kWhite,0);
-    pTLegend_all->SetFillStyle(0);
-    pTLegend_all->SetTextSize(0.05);
+    TLegend *pTLegend_all = new TLegend(0.2, 0.15, 0.6, 0.35);
+    pTLegend_all->AddEntry(pTH1FDummy1,"68\% Confidence Contour", "l");
+    pTLegend_all->AddEntry(pTH1FDummy2,"90\% Confidence Contour", "l");
+    pTLegend_all->AddEntry(pTH1FDummy3,"99\% Confidence Contour", "l");
+    pTLegend_all->SetLineWidth(2);
+    pTLegend_all->SetLineColor(kBlack);
+    pTLegend_all->SetFillColor(10);
     pTGraph2D->SetTitle("");
     pTGraph2D->SetLineWidth(3);
     pTGraph2D->Draw("CONT1");
@@ -68,9 +72,9 @@ void MakePlots(TString name, TString description, TString briefDescription)
     // Alpha 4 Plot
     TCanvas *pTCanvas_a4 = new TCanvas(briefDescription + "_Alpha4", "", 600, 600);
     pTCanvas_a4->SetRightMargin(0.05);
-    pTCanvas_a4->SetLeftMargin(0.2);
+    pTCanvas_a4->SetLeftMargin(0.10);
     pTCanvas_a4->SetTopMargin(0.10);
-    pTCanvas_a4->SetBottomMargin(0.15);
+    pTCanvas_a4->SetBottomMargin(0.10);
     pTGraph_a4->Draw("APL");
     TString plotPDF_a4 = briefDescription + "_alpha4.pdf";
     TString plotDotC_a4 = briefDescription + "_alpha4.C";
@@ -79,11 +83,9 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTF1a4->SetLineColor(kBlue);
     pTF1a4->SetLineWidth(3);
     pTF1a4->Draw("same");
-    TLegend *pTLegend_a4 = new TLegend(0.15, 0.95, 0.9, 0.95);
-    pTLegend_a4->AddEntry(pTF1a4, "4th Order Polynomial Fit", "l");
-    pTLegend_a4->SetLineColorAlpha(kWhite,0);
-    pTLegend_a4->SetFillStyle(0);
-    pTLegend_a4->SetTextSize(0.05);
+    TLegend *pTLegend_a4 = new TLegend(0.35, 0.65, 0.65, 0.85);
+    pTLegend_a4->AddEntry(pTF1a4, "#splitline{4th Order}{Polynomial Fit}", "l");
+    pTLegend_a4->SetLineColor(0);
     pTLegend_a4->Draw();
     pTCanvas_a4->SaveAs(plotPDF_a4);
     pTCanvas_a4->SaveAs(plotDotC_a4);
@@ -91,9 +93,9 @@ void MakePlots(TString name, TString description, TString briefDescription)
     // Alpha 5 Plot
     TCanvas *pTCanvas_a5 = new TCanvas(briefDescription + "_Alpha5", "", 600, 600);
     pTCanvas_a5->SetRightMargin(0.05);
-    pTCanvas_a5->SetLeftMargin(0.2);
+    pTCanvas_a5->SetLeftMargin(0.10);
     pTCanvas_a5->SetTopMargin(0.10);
-    pTCanvas_a5->SetBottomMargin(0.15);
+    pTCanvas_a5->SetBottomMargin(0.10);
     pTGraph_a5->Draw("APL");
     TString plotPDF_a5 = briefDescription + "_alpha5.pdf";
     TString plotDotC_a5 = briefDescription + "_alpha5.C";
@@ -102,11 +104,9 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTF1a5->SetLineColor(kBlue);
     pTF1a5->SetLineWidth(3);
     pTF1a5->Draw("same");
-    TLegend *pTLegend_a5 = new TLegend(0.15, 0.95, 0.9, 0.95);
-    pTLegend_a5->AddEntry(pTF1a5, "4th Order Polynomial Fit", "l");
-    pTLegend_a5->SetLineColorAlpha(kWhite,0);
-    pTLegend_a5->SetFillStyle(0);
-    pTLegend_a5->SetTextSize(0.05);
+    TLegend *pTLegend_a5 = new TLegend(0.35, 0.65, 0.65, 0.85);
+    pTLegend_a5->AddEntry(pTF1a5, "#splitline{4th Order}{Polynomial Fit}", "l");
+    pTLegend_a5->SetLineColor(0);
     pTLegend_a5->Draw();
     pTCanvas_a5->SaveAs(plotPDF_a5);
     pTCanvas_a5->SaveAs(plotDotC_a5);
@@ -161,20 +161,13 @@ TGraph2D *SinglePlot(TString name, TString quantity)
     Double_t levels[] = {0.0, 2.28, 4.61, 9.21, 1.79e308};
     pTGraph2D->GetHistogram()->SetContour((sizeof(levels)/sizeof(Double_t)), levels);
 
-    pTGraph2D->GetXaxis()->SetTitle("#alpha_{4}");
     pTGraph2D->GetXaxis()->SetTitleSize(0.05);
-    pTGraph2D->GetXaxis()->SetTitleOffset(1.2);
     pTGraph2D->GetXaxis()->SetLabelSize(0.05);
-    pTGraph2D->GetXaxis()->SetLabelOffset(0.025);
-    pTGraph2D->GetXaxis()->SetNdivisions(5);
-    pTGraph2D->GetXaxis()->SetDecimals();
-    pTGraph2D->GetYaxis()->SetTitle("#alpha_{5}");
+    pTGraph2D->GetXaxis()->SetTitle("#alpha_{4}");
+    pTGraph2D->GetYaxis()->SetTitleOffset(1.6);
     pTGraph2D->GetYaxis()->SetTitleSize(0.05);
-    pTGraph2D->GetYaxis()->SetTitleOffset(2);
     pTGraph2D->GetYaxis()->SetLabelSize(0.05);
-    pTGraph2D->GetYaxis()->SetLabelOffset(0.025);
-    pTGraph2D->GetYaxis()->SetNdivisions(5);
-    pTGraph2D->GetYaxis()->SetDecimals();
+    pTGraph2D->GetYaxis()->SetTitle("#alpha_{5}");
     pTGraph2D->SetTitle("");
 
     return pTGraph2D;
@@ -219,17 +212,13 @@ TGraph *OneDSinglePlot(TString name, TString quantity, TString variable)
     pTGraph->SetMarkerStyle(2);
     pTGraph->GetXaxis()->SetTitleSize(0.05);
     pTGraph->GetXaxis()->SetLabelSize(0.05);
-    pTGraph->GetXaxis()->SetDecimals();
-    pTGraph->GetXaxis()->SetNdivisions(5);
-    pTGraph->GetXaxis()->SetTitleOffset(1.2);
-    pTGraph->GetXaxis()->SetLabelOffset(0.025);
 
     if (variable == "Alpha4")
         pTGraph->GetXaxis()->SetTitle("#alpha_{4}");
     else if (variable == "Alpha5")
         pTGraph->GetXaxis()->SetTitle("#alpha_{5}");
 
-    pTGraph->GetXaxis()->SetRangeUser(-0.015,0.015);
+    pTGraph->GetXaxis()->SetRangeUser(-0.01,0.01);
     pTGraph->GetYaxis()->SetTitleOffset(1);
     pTGraph->GetYaxis()->SetTitleSize(0.05);
     pTGraph->GetYaxis()->SetLabelSize(0.05);

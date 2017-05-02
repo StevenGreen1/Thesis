@@ -1,16 +1,17 @@
 {
 //=========Macro generated from canvas: KtLPFOsR0p70/
-//=========  (Tue May  2 09:16:38 2017) by ROOT version5.34/37
+//=========  (Tue May  2 12:14:06 2017) by ROOT version5.34/37
    TCanvas *KtLPFOsR0p70 = new TCanvas("KtLPFOsR0p70", "",0,45,600,600);
    gStyle->SetOptStat(0);
-   KtLPFOsR0p70->Range(-0.020625,-0.01875,0.016875,0.01875);
+   KtLPFOsR0p70->Range(-0.023,-0.021,0.017,0.019);
    KtLPFOsR0p70->SetFillColor(0);
    KtLPFOsR0p70->SetBorderMode(0);
    KtLPFOsR0p70->SetBorderSize(2);
    KtLPFOsR0p70->SetTickx(1);
    KtLPFOsR0p70->SetTicky(1);
-   KtLPFOsR0p70->SetLeftMargin(0.15);
+   KtLPFOsR0p70->SetLeftMargin(0.2);
    KtLPFOsR0p70->SetRightMargin(0.05);
+   KtLPFOsR0p70->SetBottomMargin(0.15);
    KtLPFOsR0p70->SetFrameLineWidth(2);
    KtLPFOsR0p70->SetFrameBorderMode(0);
    KtLPFOsR0p70->SetFrameLineWidth(2);
@@ -984,15 +985,21 @@
    graph2d->SetPoint(960,0.015,0.015,1306.976);
    graph2d->Draw("cont1");
    
-   TLegend *leg = new TLegend(0.2,0.15,0.6,0.35,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.25,0.2,0.6,0.35,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetTextFont(132);
-   leg->SetLineColor(1);
+   leg->SetTextSize(0.05);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = 10017;
+   color = new TColor(ci, 1, 1, 1, " ", 0);
+   leg->SetLineColor(ci);
    leg->SetLineStyle(1);
    leg->SetLineWidth(2);
-   leg->SetFillColor(10);
-   leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("","68% Confidence Contour","l");
+   leg->SetFillColor(0);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("","68% Confidence Region","l");
    entry->SetLineColor(2);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -1000,10 +1007,8 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("","90% Confidence Contour","l");
+   entry=leg->AddEntry("","90% Confidence Region","l");
 
-   Int_t ci;      // for color index setting
-   TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#009900");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
@@ -1012,7 +1017,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("","99% Confidence Contour","l");
+   entry=leg->AddEntry("","99% Confidence Region","l");
    entry->SetLineColor(4);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
