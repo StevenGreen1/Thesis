@@ -11,8 +11,9 @@
    ZKDBGUAEXJ->SetLogy();
    ZKDBGUAEXJ->SetFrameBorderMode(0);
    ZKDBGUAEXJ->SetFrameBorderMode(0);
-   ZKDBGUAEXJ->SetTopMargin(0.05);
-   ZKDBGUAEXJ->SetRightMargin(0.3);
+   //ZKDBGUAEXJ->SetTopMargin(0.05);
+   //ZKDBGUAEXJ->SetRightMargin(0.3);
+   ZKDBGUAEXJ->SetBottomMargin(0.125);
    
    THStack *CMOQVRUOLL = new THStack();
    CMOQVRUOLL->SetName("CMOQVRUOLL");
@@ -21,7 +22,7 @@
    CMOQVRUOLL->SetMaximum(2000000);
    
    TH1F *CMOQVRUOLL_stack_45 = new TH1F("CMOQVRUOLL_stack_45","InvariantMassSynBosons",2100,0,2100);
-   CMOQVRUOLL_stack_45->SetMinimum(0.02144358);
+   CMOQVRUOLL_stack_45->SetMinimum(0.1);
    CMOQVRUOLL_stack_45->SetMaximum(2000000);
    CMOQVRUOLL_stack_45->SetDirectory(0);
    CMOQVRUOLL_stack_45->SetStats(0);
@@ -30,7 +31,7 @@
    TColor *color; // for color definition with alpha
    ci = TColor::GetColor("#000099");
    CMOQVRUOLL_stack_45->SetLineColor(ci);
-   CMOQVRUOLL_stack_45->GetXaxis()->SetTitle("Invariant Mass Paired Jets [GeV]");
+   CMOQVRUOLL_stack_45->GetXaxis()->SetTitle("Invariant Mass Candidate Bosons [GeV]");
    CMOQVRUOLL_stack_45->GetXaxis()->SetLabelFont(42);
    CMOQVRUOLL_stack_45->GetXaxis()->SetLabelSize(0.05);
    CMOQVRUOLL_stack_45->GetXaxis()->SetTitleSize(0.05);
@@ -15214,9 +15215,10 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+//   leg->Draw();
    ZKDBGUAEXJ->Modified();
-   ZKDBGUAEXJ->SaveAs("InvariantMassSynBosons_1400GeV_No_Cuts_StackPlot.pdf");
    ZKDBGUAEXJ->cd();
    ZKDBGUAEXJ->SetSelected(ZKDBGUAEXJ);
+   ZKDBGUAEXJ->Modified();
+   ZKDBGUAEXJ->SaveAs("InvariantMassSynBosons_1400GeV_No_Cuts_StackPlot.pdf");
 }

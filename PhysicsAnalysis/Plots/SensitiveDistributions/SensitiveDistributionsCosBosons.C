@@ -1,22 +1,24 @@
-void SensitiveDistributions()
+void SensitiveDistributionsCosBosons()
 {
-    TString energy("3000");
+    TString energy("1400");
 
 //    TString name("CosThetaStarSynJets_vs_Bosons");
-//    TString name("CosThetaStarSynJets");
     TString name("CosThetaStarSynBosons");
+//    TString name("MVVs");
 
-    TString zeroFloat("6.23416e-19"); // 3000 GeV
-//    TString zeroFloat("1.04083e-17"); // 1400 GeV
+    TString zeroFloat("0.0"); // 1400 GeV
 
-    TString upperLimit("0.002");
+    TString upperLimit("0.015");
 //    TString upperLimit("0.02");
 
-    TFile *pTFile = new TFile("../JetAlgorithmConfiguration/" + energy + "GeV/SPFOs_kt_0p70_" + energy + "GeV_FitData.root");
+    TFile *pTFile = new TFile("../Chi2ContoursOptimisation/" + energy + "GeV/SPFOs_kt_0p90_" + energy + "GeV_FitData.root");
 
     TH1F *pTH1F_0_0 = (TH1F*)pTFile->Get(name + "_Alpha4_" + zeroFloat + "_Alpha5_" + zeroFloat);
+//    pTH1F_0_0->Rebin(2);
     TH1F *pTH1F_0p02_0 = (TH1F*)pTFile->Get(name + "_Alpha4_" + upperLimit + "_Alpha5_" + zeroFloat);
+//    pTH1F_0p02_0->Rebin(2);
     TH1F *pTH1F_0_0p02 = (TH1F*)pTFile->Get(name + "_Alpha4_" + zeroFloat + "_Alpha5_" + upperLimit);
+//    pTH1F_0_0p02->Rebin(2);
 
     pTH1F_0_0->SetName("Reference");
     pTH1F_0p02_0->SetName("Alpha4Change");
@@ -60,6 +62,8 @@ void SensitiveDistributions()
 
     double min = 0.95 * min;
 
+    min = 0.f;
+
     pTH1F_0_0->GetYaxis()->SetRangeUser(min, max);
     pTH1F_0_0->SetLineColor(kRed);
     pTH1F_0_0->SetFillColor(kRed);
@@ -78,23 +82,25 @@ void SensitiveDistributions()
     TCanvas *pTCanvas = new TCanvas(name, "", 600, 600);
     pTCanvas->Draw();
     pTCanvas->SetRightMargin(0.05);
-    pTCanvas->SetLeftMargin(0.15);
+    pTCanvas->SetLeftMargin(0.2);
     pTCanvas->SetTopMargin(0.05);
-    pTCanvas->SetBottomMargin(0.15);
+    pTCanvas->SetBottomMargin(0.125);
 
-    TLegend *pTLegend = new TLegend(0.2, 0.7, 0.6, 0.9);
+    TLegend *pTLegend = new TLegend(0.35, 0.7, 0.75, 0.9);
     pTLegend->SetFillStyle(0);
+    pTLegend->SetTextSize(0.05);
     pTLegend->AddEntry(pTH1F_0_0, "#alpha_{4} = #alpha_{5} = 0", "l");
     pTLegend->AddEntry(pTH1F_0p02_0, "#alpha_{4} = " + upperLimit + ", #alpha_{5} = 0", "l");
     pTLegend->AddEntry(pTH1F_0_0p02, "#alpha_{4} = 0, #alpha_{5} = " + upperLimit, "l");
 
     pTH1F_0_0p02->Draw("");
     pTH1F_0_0p02->SetTitle("");
+    pTH1F_0_0p02->GetXaxis()->SetTitle("Cos(#theta^{*}_{Bosons})");
     pTH1F_0_0p02->GetXaxis()->SetTitleSize(0.05);
-    pTH1F_0_0p02->GetYaxis()->SetTitleSize(0.05);
-    pTH1F_0_0p02->GetYaxis()->SetTitleOffset(1.6);
     pTH1F_0_0p02->GetXaxis()->SetLabelSize(0.05);
+    pTH1F_0_0p02->GetYaxis()->SetTitleSize(0.05);
     pTH1F_0_0p02->GetYaxis()->SetLabelSize(0.05);
+    pTH1F_0_0p02->GetYaxis()->SetTitleOffset(2);
 
     pTH1F_0p02_0->Draw("same");
     pTH1F_0_0->Draw("same");
