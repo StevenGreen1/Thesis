@@ -112,9 +112,11 @@ This study focuses on determining the sensitivity of CLIC to the anomalous gauge
   \label{fig:smtripleandquarticvertices}
 \end{figure}
 
-\fi
+%\fi
 
 % Feynam diagrams of sensitive processes 
+
+%\iffalse
 
 \begin{figure}
 \begin{tikzpicture}[]
@@ -229,6 +231,7 @@ This study focuses on determining the sensitivity of CLIC to the anomalous gauge
 \label{fig:vectorbosonscatteringclic}
 \end{figure}
 
+\fi
 
 %========================================================================================
 %========================================================================================
@@ -363,7 +366,7 @@ The first alternative jet algorithm considered was the $k_{t}$ algorithm for $\t
 
 The second alternative jet algorithm considered was the Cambridge-Aachen jet algorithm where $d_{ij} = {\Delta}R_{ij}^{2}/R^2$ and $d_{iB} = 1$.  This algorithm performed poorly as neither accounts for the transverse momentum nor energy of the particles being clustered. In essence, this is a cone clustering algorithm with a cone radius defined through ${\Delta}R_{ij} = R$, which even for large R was found to discard too much energy in the event to be useful for this analysis.  This can be seen in figure \ref{fig:invariantmassalgoveto} as the invariant mass of the paired jets is much lower than expected.  This algorithm is useful for events with highly boosted jets, but at CLIC the jets are too disperse for this algorithm to be successfully applied.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:invariantmassalgoveto1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto.pdf}}
 \caption[Reconstructed invariant masses for different choices of jet algorithm for 1.4 TeV \nu{\nu}qqqq events.]{Reconstructed masses for different choices of jet algorithm for 1.4 TeV \nu{\nu}qqqq events. These masses arise by forcing the reconstructed events into 4 jets and then pairing up the jets into pairs such that the reconstructed invariant masses of the pairs are closest to each other. These samples should be dominated by vector boson scattering involving pairs of W bosons and so it is expected that a peak at the W boson true mass should be observed. As this does not occur for the Cambridge-Aachen algorithm or the ee\_kt algorithm they were deemed unsuitable for this analysis at both 1.4. In the case of the kt algorithm and the ee\_kt algorithm an R parameter of 0.7 was used.}
@@ -382,10 +385,10 @@ Confidence limits on the individual parameters $\alpha_{4}$ and $\alpha_{5}$ wer
 
 \begin{figure}
 \centering
-\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90.pdf}}\hfill
-\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4Optimal.pdf}}
-\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5Optimal.pdf}}
-\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 1.4 TeV for the optimal jet reconstruction parameters. - Make the blue stand out more.} 
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_Optimal.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4_Optimal.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5_Optimal.pdf}}
+\caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $M_{VV}$ at 1.4 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $M_{VV}$ at 1.4 TeV for the optimal jet reconstruction parameters.} 
 \label{fig:allchi2jetalgoideal1400GeV}
 \end{figure}
 
@@ -393,7 +396,9 @@ Confidence limits on the individual parameters $\alpha_{4}$ and $\alpha_{5}$ wer
 
 \subsection{Lepton Finding} 
 \label{sec:isolatedleptonfinding}
-An isolated lepton finder was included in the analysis chain in an attempt to reject background events containing leptons.  The isolated lepton finder attempts to find whether a PFO is an electron or muon based on the calorimetric energy deposits.  Cuts are then placed on the tracks associated to any PFOs, initially tagged as electrons or muons, to determine whether the tracks originate from the impact point.  If the track cuts deem the PFO to have originated from the impact point, isolation cuts restricting the energy in a cone surrounding these PFO are applied to ensure the particles does not belong to a jet.  If a PFO passes all of these criteria then it is counted as an isolated lepton.  The efficiency of the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.  
+An isolated lepton finder was included in the analysis chain in an attempt to reject background final states containing leptons.  As it is unlikely that isolated leptons will form via hadronisation, because all hadronisation products will be boosted along the same direction, it is likely that they originate from the primary interaction occurring at the IP.  This makes the number of isolated leptons a powerful discriminating variable for discerning final states containing leptons. 
+
+The isolated lepton finder used here attempts to find whether a PFO is an electron or muon based on the calorimetric energy deposits.  Cuts are then placed on the tracks associated to any PFOs, initially tagged as electrons or muons, to determine whether the tracks originate from the impact point.  If the track cuts deem the PFO to have originated from the impact point, isolation cuts restricting the energy in a cone surrounding these PFO are applied to ensure the particles does not belong to a jet.  If a PFO passes all of these criteria then it is counted as an isolated lepton.  The efficiency of the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.   
 
 \begin{table}[h!]
 \centering
@@ -419,21 +424,19 @@ The next stage of the analysis involved the calculation of a number of event-bas
 \item \textbf{Particle level} variables:
 
 \begin{itemize}
-\item Number of PFOs.
-\item Particle type and energy of the highest energy PFO.
+\item Number of PFOs in each jet.
+\item Energy of the highest energy PFO.
 \item Energy of the highest energy electron.
 \item Cosine of the polar angle of the highest energy track.
+\item The number of isolated leptons found using the isolated lepton finder.
 \end{itemize}
 
 \item \textbf{Candidate boson} variables:
 
 \begin{itemize}
-\item Energy of candidate bosons.
-\item Invariant mass of the bosons.
-\item Acolinearity of the boson pair, which is defined as 180 degrees minus the opening angle of the pair of bosons in the rest frame of the detector.
-\item Acolinearities of the jets forming each of the candidate bosons.
-\item $\text{Cos}(\theta^{*}_{Bosons})$.  Cosine of the opening of the bosons in the rest frame of the boson pair.
-\item $\text{Cos}(\theta^{*}_{Jets})$.  Cosine of the opening of the jets forming each candidate in the rest frame of the candidate boson.
+\item Energy of the candidate bosons.
+\item Invariant mass of the candidate bosons.
+\item Acolinearity of the candidate boson pair, which is defined as 180 degrees minus the opening angle of the pair of bosons in the rest frame of the detector.
 \end{itemize}
 
 \item \textbf{Event based} variables:  
@@ -441,22 +444,14 @@ The next stage of the analysis involved the calculation of a number of event-bas
 \begin{itemize}
 \item The invariant mass of the visible system.
 \item The vector sum of the transverse momentum of all PFOs in the event. 
-\item The cosine of the polar angle of the missing 3-momentum assuming a collision at the nominal centre of mass energy.
-\item Principle thrust $T$, defined through the following equation
-\begin{equation}
-T = \text{max}_{\bar{\textbf{n}}} (\frac{\Sigma_{i} \textbf{p}_{i}.\bar{\textbf{n}}}{\Sigma_{i} |\textbf{p}_{i}|^{2}})
-\end{equation}
-Where $p_{i}$ are the components of the momenta of PFO i in the rest frame of the detector, $\bar{\textbf{n}}$ is unit vector and the sum $\Sigma_{i}$ runs over all particles in the event.
 \item Sphericity, defined through the sphericity tensor $S^{ab}$:
 \begin{equation}
 S^{ab} = \frac{\Sigma_{i}p^{\alpha}_{i}p^{\alpha}_{j}}{\Sigma_{i,\alpha=1,2,3}|p^{\alpha}_{i|^{2}}}
 \end{equation}
 Where $p_{i}$ are the components of the momenta of PFO i in the rest frame of the detector and the sum $\Sigma_{i}$ runs over all particles in the event.  Sphericity is defined as $\text{S} = \frac{3}{2}(\lambda_{2} + \lambda_{3})$, where $\lambda_{i}$ are the eigenvalues of the sphericity tensor defined such $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3}$.  This provides a measure of how spherical the reconstructed event topology is with isotropic events having $S \approx 1$, while two jet events have $S \approx 0$.
-\item Aplanarity defined as $\frac{3}{2} \lambda_{3}$ where $\lambda_{3}$ is an eigenvalue of the sphericity tensor.  This provides a measure of whether an event is linear or planar in shape.
 \end{itemize}
 
-\item \textbf{Jet clustering parameter} variables, $y_{ij}$ where $i = 1,2,3,4,5,6$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  Note: -log10 yij cut on.
-
+\item \textbf{Jet clustering parameter} variables, $y_{ij}$ where $i = 3,4$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  The variable used in the multivariate analysis is $-\text{log}_{10}(y_{ij})$.
 \end{itemize}
 
 %========================================================================================
@@ -473,97 +468,20 @@ As described in section \ref{sec:modellingofanomalouscouplings} the signal final
 A refined selection of the \nu{\nu}qqqq signal final state is achieved using MVA.  However, to ensure efficiency in the training and application of that MVA a number of simple preselection cuts were developed that veto obvious background final states prior to the application of the MVA.  These cuts were developed such that as much background as possible would be rejected, while retaining enough signal to make the analysis viable.  Preselection cuts were applied to the transverse momentum, invariant mass of the visible system and the number of isolated leptons. The raw distributions of these variables is shown in figure \ref{fig:preselection1400} and based on these distributions the following cuts were applied:
 
 \begin{itemize}
-\item Transverse momentum > 100 GeV. This cut is effective due to the presence of missing energy in the form of neutrinos in the signal final state.
-\item Visible mass of the system > 200 GeV.  This vetoes $\nu\nu\text{qq}$ and $\nu\text{lqq}$ final states as these states would be dominated by the channels involving a single W or Z boson propagator decaying hadronically, as shown in figure \ref{fig:backgroundresonancefd}.  Therefore the invariant mass of the visible system for these states peaks around the W and Z mass.  This is not the case for the \nu{\nu}qqqq signal final state, which typically has a much larger visible mass.
-\item Number of isolated leptons = 0. This cut vetoes events with leptons in the final state.
+\item Transverse momentum of system > 100 GeV.  This cut is effective due to the presence of missing energy in the form of neutrinos in the signal final state.
+\item Number of isolated leptons in system = 0.  This cut is effective as the signal final state does not contain leptons, while numerous background final states do.  
 \end{itemize}
 
 The impact of these preselection cuts can be found in table FINAL SUMMARY TABLE REF \ref{}.
 
-\iffalse
-\begin{figure}
+\begin{figure}[h!]
 \centering
-\subfloat[Transverse momentum of system.]{\label{fig:preselection1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}}\hfill
-\subfloat[Invariant mass of the visible system.]{\label{fig:preselection1400_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/InvariantMassSystem.pdf}}
-\subfloat[Number of isolated leptons.]{\label{fig:preselection1400_3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}}
-\caption[Distribution of variables cut on in the preselection at 1.4 TeV.]{Distribution of variables cut on in the preselection at 1.4 TeV.}
+\subfloat[]{\label{fig:preselection1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}}
+\subfloat[]{\label{fig:preselection1400_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}} \hfill
+\subfloat[]{\label{fig:preselection1400_3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}}
+\caption[Distribution of variables cut on in the preselection at 1.4 TeV.  \protect\subref{fig:preselection1400_1} shows the transverse momentum of the visible system, \protect\subref{fig:preselection1400_2} shows the number of isolated leptons in the system and \protect\subref{fig:preselection1400_3} shows the legend for the preceding plots.]{Distribution of variables cut on in the preselection at 1.4 TeV.  \protect\subref{fig:preselection1400_1} shows the transverse momentum of the visible system, \protect\subref{fig:preselection1400_2} shows the number of isolated leptons in the system and \protect\subref{fig:preselection1400_3} shows the legend for the preceding plots.}
 \label{fig:preselection1400}
 \end{figure}
-
-\begin{figure}
-\begin{tikzpicture}[]
-\begin{feynman}
-\vertex (a1);
-\vertex[above left=2cm of a1] (a2);
-\vertex[right=2cm of a1] (a3) {\(Z\)};
-\vertex[below left=2cm of a1] (a4);
-\vertex[above left=1cm of a2] (i1) {\(e^{-}\)};
-\vertex[below left=1cm of a4] (i2) {\(e^{+}\)};
-\vertex[above right=1cm and 3cm of a3] (i3) {\(q\)};
-\vertex[below right=1cm and 3cm of a3] (i4) {\(\bar{q}\)};
-\vertex[above=2cm of a3] (v1) {\(\nu_{e}\)};
-\vertex[below=2cm of a3] (v2) {\(\bar{\nu_{e}}\)};
-\diagram* {
-   (a1) -- [boson, edge label'=\(W^{-}\)] (a2)
-   (a1) -- [boson] (a3)
-   (a1) -- [boson, edge label=\(W^{+}\)] (a4)
-   (i1) -- [fermion] (a2) -- [fermion] (v1)
-   (v2) -- [fermion] (a4) -- [fermion] (i2)
-   (i4) -- [fermion] (a3) -- [fermion] (i3)
-};
-\end{feynman}
-\end{tikzpicture}
-
-\begin{tikzpicture}[]
-\begin{feynman}
-\vertex (a1);
-\vertex[above left=2cm of a1] (a2);
-\vertex[right=2cm of a1] (a3) {\(W^{+}\)};
-\vertex[below left=2cm of a1] (a4);
-\vertex[above left=1cm of a2] (i1) {\(e^{-}\)};
-\vertex[below left=1cm of a4] (i2) {\(e^{+}\)};
-\vertex[above right=1cm and 3cm of a3] (i3) {\(q\)};
-\vertex[below right=1cm and 3cm of a3] (i4) {\(\bar{q}\)};
-\vertex[above=2cm of a3] (v1) {\(e^{-}\)};
-\vertex[below=2cm of a3] (v2) {\(\bar{\nu_{e}}\)};
-\diagram* {
-   (a1) -- [boson, edge label'=\(Z\)] (a2)
-   (a1) -- [boson] (a3)
-   (a1) -- [boson, edge label=\(W^{+}\)] (a4)
-   (i1) -- [fermion] (a2) -- [fermion] (v1)
-   (v2) -- [fermion] (a4) -- [fermion] (i2)
-   (i4) -- [fermion] (a3) -- [fermion] (i3)
-};
-\end{feynman}
-\end{tikzpicture}
-
-\begin{tikzpicture}[]
-\begin{feynman}
-\vertex (a1);
-\vertex[above left=2cm of a1] (a2);
-\vertex[right=2cm of a1] (a3) {\(W^{-}\)};
-\vertex[below left=2cm of a1] (a4);
-\vertex[above left=1cm of a2] (i1) {\(e^{-}\)};
-\vertex[below left=1cm of a4] (i2) {\(e^{+}\)};
-\vertex[above right=1cm and 3cm of a3] (i3) {\(q\)};
-\vertex[below right=1cm and 3cm of a3] (i4) {\(\bar{q}\)};
-\vertex[above=2cm of a3] (v1)  {\(\nu_{e}\)};
-\vertex[below=2cm of a3] (v2) {\(e^{+}\)};
-\diagram* {
-   (a1) -- [boson, edge label'=\(W^{-}\)] (a2)
-   (a1) -- [boson] (a3)
-   (a1) -- [boson, edge label=\(Z\)] (a4)
-   (i1) -- [fermion] (a2) -- [fermion] (v1)
-   (v2) -- [fermion] (a4) -- [fermion] (i2)
-   (i4) -- [fermion] (a3) -- [fermion] (i3)
-};
-\end{feynman}
-\end{tikzpicture}
-
-\caption[Feynman diagram dominant in the $\nu\nu\text{qq}$ and $\nu\text{lqq}$ final states at CLIC.]{Feynman diagram dominant in the $\nu\nu\text{qq}$ and $\nu\text{lqq}$ final states at CLIC.  $q = \text{u, d, s, b, c}$}
-\label{fig:backgroundresonancefd}
-\end{figure}
-\fi
 
 %========================================================================================
 
@@ -574,45 +492,44 @@ Having established the preselection cuts a MVA was applied, using the TMVA toolk
 The following variables were used for training of the MVA:
 
 \begin{itemize}
-\item Number of PFOs.
-\item Particle type and energy of the highest energy PFO.
+\item Number of PFOs in each jet. 
+\item Energy of the highest energy PFO.
 \item Energy of the highest energy electron.
 \item Cosine of the polar angle of the highest energy track.
-\item Energy and invariant mass of the candidate bosons.
-\item Acolinearity of the boson pair.
-\item Acolinearities of the jets forming each of the candidate bosons.
+\item Energy of the candidate bosons.
+\item Invariant mass of the candidate bosons.
+\item Acolinearity of the candidate boson pair.
 \item The vector sum of the transverse momentum of all PFOs in the event. 
-\item The cosine of the polar angle of the missing 3-momentum assuming a collision at the nominal centre of mass energy.
-\item Principle thrust.
-\item Sphericity and aplanarity.
-\item The jet clustering parameter $y_{ij}$ where $i = 1,2,3,4,5,6$ and $j=i+1$.
+\item Sphericity. 
+\item Jet clustering parameter variables, $y_{ij}$ where $i = 3,4$ and $j=i+1$.  The variable used in the multivariate analysis is $-\text{log}_{10}(y_{ij})$.
 \end{itemize}
 
 A variety of MVA options were considered and it was found that the optimal algorithm was the boosted decision tree (BDT) as shown by figure \ref{ig:mvaalternatives1400GeV}.  
 
 \begin{figure}
 \centering
-\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV.pdf}
+\includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV.pdf} %%% REMAKING
 \caption[Background rejection as a function of signal efficiency for a variety of MVA options at 1.4 TeV.]{Background rejection as a function of signal efficiency for a variety of MVA options at 1.4 TeV.} 
 \label{fig:mvaalternatives1400GeV}
 \end{figure}
 
-The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied and an optimal significance, S/$\sqrt(\text{S + B})$, of 53.6 was obtained.  
+The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied and an optimal significance, S/$\sqrt(\text{S + B})$, of 52.7 was obtained.  
 
 %========================================================================================
 
 \subsection{Event Selection Summary}
 \label{sec:eventselsummary1400GeV}
-The event selection is summarised using the distribution of the invariant mass of the candidate bosons, which for the signal final state should peak around the W and Z masses.  This distribution is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact} with no event selection, with the preselection cuts and with both preselections cuts and MVA applied.  The event selection is also summarised using the efficiencies that are shown in table \ref{table:selectionsummary1400GeV}.
+The event selection is summarised using the distribution of the invariant mass of the candidate bosons, which for the signal final state should peak around the W and Z masses.  This distribution is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact} with no event selection, with the preselection cuts and with both preselections cuts and MVA applied.  The event selection is also summarised using efficiencies shown in table \ref{table:selectionsummary1400GeV}.
 
-As expected the dominant background processes after the MVA is applied are those that will look identical to the visible signal process i.e. qqqq and missing energy.  Two smaller sources of background that pass the MVA exists, those where two jets and missing energy are confused as four jets and missing energy and those where a lepton is not properly reconstructed and the events look like four jets and missing energy.  
+As expected the dominant background processes after the MVA is applied are those that will look identical to the visible signal process, i.e. qqqq with missing energy.  Two smaller sources of background that pass the MVA exists: two jet events with missing energy, which are confused with four jet events with missing energy and those where a lepton is not properly reconstructed and the events look like four jets and missing energy.  
 
 \begin{figure}
 \centering
-\subfloat[No cuts applied.]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_No_Cuts_StackPlot.pdf}}\hfill
-\subfloat[Preselection cuts applied.]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_Pt_gt100GeV_MVis_gt200GeV_NIsoLep_eq0_Cuts_StackPlot.pdf}}
-\subfloat[Preselection cuts and MVA applied.]{\label{fig:postmvasynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_PostPreSelection_PostMVA_Cuts_StackPlot.pdf}} 
-\caption[Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at 1.4 TeV.]{Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at 1.4 TeV.}
+\subfloat[]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_No_Cuts_StackPlot.pdf}}
+\subfloat[]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf}}\hfill
+\subfloat[]{\label{fig:postmvasynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_PostPreSelection_PostMVA_Cuts_StackPlot.pdf}} 
+\subfloat[]{\label{fig:legendselection}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}}
+\caption[Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at 1.4 TeV.   \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} no cuts applied.  \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} preselection cuts applied.  \protect\subref{fig:postmvasynbosonmass1400GeVMVAimpact} MVA with preselection applied.  \protect\subref{fig:legendselection} legend for the event selection plots.]{Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at 1.4 TeV.   \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} no cuts applied.  \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} preselection cuts applied.  \protect\subref{fig:postmvasynbosonmass1400GeVMVAimpact} MVA with preselection applied.  \protect\subref{fig:legendselection} legend for the event selection plots.}
 \label{fig:synbosonmass1400GeVMVAimpact}
 \end{figure}
 
@@ -622,29 +539,29 @@ As expected the dominant background processes after the MVA is applied are those
 \hline
 Final State & $\epsilon_{\text{presel}}$ & $\epsilon_{\text{BDT}}$ & $N_{\text{BDT}}$ \\ 
 \hline
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 56.7\% & 39.9\% & 14,770 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 25.7\% & 3.7\% & 6,159 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 0.7\% & 0.1\% & 80 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 8.8\% & 0.1\% & 1,264 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 4.3\% & 0.3\% & 3,286 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 8.8\% & 0.1\% & 6,262 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 64.1\% & 44.5\% & 16,470 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 26.1\% & 5.2\% & 8,582 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 0.8\% & 0.1\% & 100 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qqqq}$ & 0.3\% & 0.1\% & 1,698 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qq}$ & 43.4\% & 0.5\% & 5,351 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qq}$ & 19.1\% & 0.1\% & 9,319 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqq}$ & 0.1\% & - & 234 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 0.6\% & - & 1,016 \\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 0.2\% & - & 20 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \text{qq}$ & 0.6\% & - & 1,586 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 0.2\% & - & 48 \\
 $\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\text{e}^{-}$ & 0.1\% & - & 42 \\
 $\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\text{e}^{+}$ & 0.3\% & - & 19 \\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & - & - & 44 \\
-$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 18.0\% & 7.3\% & 3,552 \\
-$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 23.2\% & 12.0\% & 18,540 \\
-$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 18.2\% & 7.5\% & 3,652 \\
-$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 23.4\% & 12.2\% & 18,770 \\
-$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 0.2\% & - & 68 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\text{e}^{+}$ & - & - & 65 \\
+$\gamma_{\text{EPA}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 26.0\% & 9.0\% & 4,421 \\
+$\gamma_{\text{BS}}\text{e}^{-} \rightarrow \text{qqqq}\nu$ & 36.1\% & 15.0\% & 23,150 \\
+$\text{e}^{+}\gamma_{\text{EPA}} \rightarrow \text{qqqq}\nu$ & 25.9\% & 9.2\% & 4,495 \\
+$\text{e}^{+}\gamma_{\text{BS}} \rightarrow \text{qqqq}\nu$ & 36.4\% & 15.3\% & 23,410 \\
+$\gamma_{\text{EPA}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 0.2\% & - & 81 \\
 $\gamma_{\text{EPA}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 0.1\% & - & 55 \\
-$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & - & - & 0 \\
+$\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & - & - & 53 \\
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & - & - & 0 \\
 \hline
 \end{tabular}
-\caption[Selection summary at 1.4TeV.]{Selection summary at 1.4TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
+\caption[Selection summary at 1.4TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Selection summary at 1.4TeV.   The subscript EPA or BS for the incoming photons indicate whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
 \label{table:selectionsummary1400GeV}
 \end{table}
 
@@ -655,23 +572,25 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & - & - & 0 \\
 \label{sec:fitting}
 This section describes the procedure used for constructing the $\chi^{2}$ surface and the subsequent confidence contours used to determine the sensitivity of CLIC to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.
 
+%========================================================================================
+
 \subsection{Sensitive Distribution}
-The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $\text{cos}\theta^{*}_{Jets}$.  For a given event, the jet clustering and pairing proceeds as described in section \ref{sec:analysis} and leads to the event being clustered into four jets, which are then paired up to give two candidate bosons.  $\theta^{*}_{Jets}$ is defined as the opening angle of the jets in the rest frame of these candidate bosons.  The distribution of $\text{cos}\theta^{*}_{Jets}$ proved to be highly sensitive to the anomalous gauge couplings as shown in figure \ref{fig:costhetastarjets}.
+The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $M_{VV}$, the invariant mass of the visible system.  For a given event, the jet clustering and pairing proceeds as described in section \ref{sec:analysis}.  This leads to each event being clustered into four jets that are then paired up to give two candidate bosons.  The distribution of $M_{VV}$ proved to be highly sensitive to the anomalous gauge couplings, particularly for at large invariant masses, as shown in figure \ref{fig:mvv}.
 
-The distribution of $\text{cos}\theta^{*}_{Bosons}$ was also considered for this sensitivity study, however, it proved to be less sensitive than $\text{cos}\theta^{*}_{Jets}$.  $\theta^{*}_{Bosons}$ is defined as the opening angle between the two candidate bosons in the rest frame of the candidate boson pair.  The reduced sensitivity can be seen when comparing figures \ref{fig:costhetastarjets} and \ref{fig:costhetastarbosons}.  Furthermore, it was found that the $\chi^{2}$ distribution formed from the two dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ against $\text{cos}\theta^{*}_{Bosons}$ did not significantly benefit the sensitivity in comparison using the one dimensional distribution of $\text{cos}\theta^{*}_{Jets}$ and therefore was not considered for this analysis.
+Two other distributions were considered for this sensitivity study, but proved to be less sensitive than $M_{VV}$: $\text{cos}\theta^{*}_{Jets}$, the angle between the boost direction and the back to back quark jets in the rest frame of the candidate bosons, and $\text{cos}\theta^{*}_{Bosons}$, the angle between the boost direction and the back to back candidate bosons in the rest frame of the visible system.  The sensitivity of these variables can be seen in figure \ref{fig:costhetastar}.  It should be noted that there are two entries, one from each candidate boson, in the $\text{cos}\theta^{*}_{Jets}$ distribution per event.  To negate the effect of correlation between these two variables when performing the $\chi^{2}$ fit, a two dimensional fit of $\text{cos}\theta^{*}_{Jets}$ variable was applied where a distinction between candidate bosons was made based on their energy.  When this was done the sensitivity of the $\text{cos}\theta^{*}_{Jets}$ variable was worse than that obtained fitting the $M_{VV}$ variable.  Not such effect was present for the $\text{cos}\theta^{*}_{Bosons}$ variable as there is only a single pair of candidate bosons per event.
 
-\begin{figure}
-\subfloat[1.4 TeV Events]{\label{fig:costhetastarjets1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_1400GeV.pdf}}
-\subfloat[3 TeV Events]{\label{fig:costhetastarjets3000GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p70_3000GeV.pdf}}
-\caption[Sensitivity of $\text{cos}\theta^{8}_{Jets}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 and 3 TeV.]{Sensitivity of $\text{cos}\theta^{*}_{Jets}$ to anomalous couplings at 1.4 and 3 TeV. The jet algorithm used for this example was the longitudinally invariant kt algorithm with an R parameter of 0.7. This sample corresponds to pure signal of hadronic decays in vector boson scattering i.e. \nu{\nu}qqqq.}
-\label{fig:costhetastarjets}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/MVVs_SPFOs_kt_0p90_1400GeV.pdf}
+\caption[The sensitivity of $M_{VV}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV.  The jet algorithm used was the longitudinally invariant kt algorithm with an R parameter of 0.9 and Selected PFOs were used.  This distribution is for the \nu{\nu}qqqq signal final state only.]{The sensitivity of $M_{VV}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV.  The jet algorithm used was the longitudinally invariant kt algorithm with an R parameter of 0.9 and Selected PFOs were used.  This distribution is for the \nu{\nu}qqqq signal final state only.}
+\label{fig:mvv}
 \end{figure}
 
-\begin{figure}
-\subfloat[1.4 TeV Events]{\label{fig:costhetastarbosons1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p70_1400GeV.pdf}}
-\subfloat[3 TeV Events]{\label{fig:costhetastarbosons3000GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p70_3000GeV.pdf}}
-\caption[Sensitivity of $\text{cos}\theta^{8}_{Bosons}$ to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 and 3 TeV.]{Sensitivity of $\text{cos}\theta^{*}_{Bosons}$ to anomalous couplings at 1.4 and 3 TeV. The jet algorithm used for this example was the longitudinally invariant $k_{t}$ algorithm with an R parameter of 0.7. This sample corresponds to pure signal of hadronic decays in vector boson scattering i.e. \nu{\nu}qqqq. - Make legend bigger!}
-\label{fig:costhetastarbosons}
+\begin{figure}[h!]
+\subfloat[]{\label{fig:costhetastarjets1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p90_1400GeV.pdf}}
+\subfloat[]{\label{fig:costhetastarbosons1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p90_1400GeV.pdf}}
+\caption[The sensitivity of various variables to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV.  The jet algorithm used was the longitudinally invariant kt algorithm with an R parameter of 0.9 and Selected PFOs were used.  This distribution is for the \nu{\nu}qqqq signal final state only.  \protect\subref{fig:costhetastarjets1400GeV} shows the distribution of $\text{cos}\theta^{*}_{Jets}$ and \protect\subref{fig:costhetastarbosons1400GeV} shows the distribution of $\text{cos}\theta^{*}_{Bosons}$.]{The sensitivity of various variables to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at 1.4 TeV.  The jet algorithm used was the longitudinally invariant kt algorithm with an R parameter of 0.9 and Selected PFOs were used.  This distribution is for the \nu{\nu}qqqq signal final state only.  \protect\subref{fig:costhetastarjets1400GeV} shows the distribution of $\text{cos}\theta^{*}_{Jets}$ and \protect\subref{fig:costhetastarbosons1400GeV} shows the distribution of $\text{cos}\theta^{*}_{Bosons}$.}
+\label{fig:costhetastar}
 \end{figure}
 
 %========================================================================================
@@ -681,10 +600,14 @@ The distribution of $\text{cos}\theta^{*}_{Bosons}$ was also considered for this
 The $\chi^{2}$ surface is defined through the following equation:
 
 \begin{equation}
-\chi^{2} = \Sigma_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}}
+\chi^{2} = \Sigma_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}} \text{,}
 \end{equation}
 
-Where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, and $E_{i}$ the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin i in the distribution of $\text{cos}\theta^{*}_{Jets}$.  $\Sigma_{i}$ is the sum over the bins of the $\text{cos}\theta^{*}_{Jets}$ distribution.  The distribution of $\text{cos}\theta^{*}_{Jets}$ was binned in a histograms containing 10 bins ranging from 0 to 1, as shown in figure \ref{fig:costhetastarjets}.  This binning was selected to maximise the sensitivity of the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
+\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, and $E_{i}$ the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin i in the distribution of $M_{VV}$.  $\Sigma_{i}$ is the sum over the bins of the $M_{VV}$ distribution.  The distribution of $M_{VV}$ was binned in a histograms containing 14 bins.  The first bin spanned the invariant mass range between 0 and 200 GeV, this was followed by 11 bins of width 100 GeV ranging from 200 to 1300 GeV and finally the last bin contained all invariant masses above 1300 GeV.  The expanded bin widths were chosen at the tails of the distribution to ensure the bin contents are sufficiently well populated, which is essential for applying a $\chi^{2}$ fit appropriate. % DETAILS?
+
+%HERE
+
+This binning was selected to maximise the sensitivity of the distribution, while minimising the effect of large bin by bin fluctuations arising from individual events with large event weights.
 
 Confidence limits, which describe the sensitivity of CLIC to the anomalous gauge couplings, were found by examining the $\chi^{2}$ surface in $\alpha_{4}$ and $\alpha_{5}$ space.  Deviations about the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$ based on the $\text{cos}\theta^{*}_{Jets}$ distribution.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ contours of 2.28, 4.61 and 9.21 respectively.  These numbers arise from the integral of the two dimensional $\chi^{2}$ function.
 
@@ -798,9 +721,9 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 13050.3 \\
 
 \begin{figure}
 \centering
-\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10.pdf}}\hfill
-\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha4Optimal.pdf}}
-\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha5Optimal.pdf}}
+\subfloat[$\chi^{2}$ sensitivity contours in $\alpha_{4}$ and $\alpha_{5}$ space.]{\label{fig:chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_Optimal.pdf}}\hfill
+\subfloat[$\chi^{2}$ as a function of $\alpha_{4}$ assuming $\alpha_{5} = 0$.]{\label{fig:a4chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha4_Optimal.pdf}}
+\subfloat[$\chi^{2}$ as a function of $\alpha_{5}$ assuming $\alpha_{4} = 0$.]{\label{fig:a5chi2jetalgoideal3000GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/3000GeV/KtTPFOsR1p10_alpha5_Optimal.pdf}}
 \caption[$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.]{$\chi^{2}$ sensitivity distributions for the $\text{qqqq}\nu\nu$ final state arising from a fit to $\text{cos}\theta^{*}_{\text{Jets}}$ at 3 TeV for the optimal jet reconstruction parameters.} 
 \label{fig:allchi2jetalgoideal3000GeV}
 \end{figure}

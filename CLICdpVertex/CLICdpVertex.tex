@@ -76,12 +76,14 @@ Solder bump-bonding is the typical method used to connect sensor and readout ASI
 
 \section{Device Fabrication}
 
-When using a capacitively coupled glue layer to connect the sensor and readout ASIC there are two main issues that arise from the device manufacturing procedure: the uniformity of the gluing layer and the physical alignment of the sensor and readout pads.  The former has been investigated in [CERN FABRICATION NOTE CITE] and the latter is the focus of this study.  A number of pixel detectors have been constructed that purposefully contained misalignments between the CCPDv3 and the CLICpix pads, as shown in figure \ref{fig:alignment}, so that the impact of a misalignment on detector performance can be characterised.  Table \ref{table:alignment} contains a summary of the samples studied.
+There are two issues related to device manufacture that have to be considered when using a capacitively coupled glue layer to connect the sensor and readout ASIC: the uniformity of the glue layer and the alignment of the sensor and readout pads.  The former has been investigated in [CERN FABRICATION NOTE CITE] while the latter is the focus of this study.  In order to characterise the impact on detector performance of any misalignment between the CCPDv3 and the CLICpix pads, a number of pixel detectors have been constructed that purposefully contain misalignments, as shown in figure \ref{fig:alignment}.  Table \ref{table:alignment} contains a summary of the samples produced.
+
+%HERE
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=1.0\textwidth]{CLICdpVertex/Plots/misalignedPads.pdf}
-\caption[Schematic of alignment of CCPDv3 and CLICpix sensors studied in this analysis.]{Alignment schematic of the CCPDv3 + CLICpix detectors studied.  The red dotted line represents the CCPDv3 pad and the solid black line represents the CLICpix top metal layer.  From left to right; centred pixels, 1/4 offset (6.25 {\mu}m) and 1/2 offset (12.5 {\mu}m).}
+\caption[Alignment schematic of the CCPDv3 and CLICpix detectors studied.  The red dotted line represents the CCPDv3 pad and the solid black line represents the CLICpix top metal layer.  From left to right; centred pixels, 1/4 offset (6.25 {\mu}m) and 1/2 offset (12.5 {\mu}m).]{Alignment schematic of the CCPDv3 and CLICpix detectors studied.  The red dotted line represents the CCPDv3 pad and the solid black line represents the CLICpix top metal layer.  From left to right; centred pixels, 1/4 offset (6.25 {\mu}m) and 1/2 offset (12.5 {\mu}m).}
 \label{fig:alignment}
 \end{figure}
 
@@ -105,7 +107,11 @@ SET16 & $\frac{1}{2}$ Offset \\
 \label{table:alignment}
 \end{table}
 
-The full details of the glueing procedure can be found in [CERN FABRICATION NOTE CITE], along with a study of the absolute precision of the manufacturing procedure.  It was found that for devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1~{\mu}m and the precision on the pad positioning was less than 0.5~{\mu}m.  
+The full details of the glueing procedure can be found in [CERN FABRICATION NOTE CITE], along with a study of the absolute precision of the manufacturing procedure.  For devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1~{\mu}m and the precision on the pad positioning was less than 0.5~{\mu}m.  These results indicate the manufacturing tolerances 
+
+give the crucial reliability to ensure that the 
+
+ensure that the devices produced for this study have been constructed to a sufficient  tolerance to make study of the misalignement feasible.  
 
 %========================================================================================
 %========================================================================================
