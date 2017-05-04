@@ -4111,6 +4111,7 @@
    TH2FFitParamC->SetBinContent(4288,2.040028);
    TH2FFitParamC->SetEntries(4096);
    TH2FFitParamC->SetStats(0);
+/*
    TH2FFitParamC->SetContour(20);
    TH2FFitParamC->SetContourLevel(0,0);
    TH2FFitParamC->SetContourLevel(1,7.668436);
@@ -4132,7 +4133,7 @@
    TH2FFitParamC->SetContourLevel(17,130.3634);
    TH2FFitParamC->SetContourLevel(18,138.0319);
    TH2FFitParamC->SetContourLevel(19,145.7003);
-   
+  */ 
    TPaletteAxis *palette = new TPaletteAxis(64.4,0,68,64,TH2FFitParamC);
 palette->SetLabelColor(1);
 palette->SetLabelFont(42);
@@ -4162,6 +4163,7 @@ palette->SetTitleSize(0.05);
    TH2FFitParamC->GetZaxis()->SetLabelSize(0.05);
    TH2FFitParamC->GetZaxis()->SetTitleSize(0.05);
    TH2FFitParamC->GetZaxis()->SetTitleFont(42);
+   TH2FFitParamC->SetMaximum(100);
    TH2FFitParamC->Draw("COLZ");
    
    TPaveText *pt = new TPaveText(0.1818103,0.9339831,0.8181897,0.995,"blNDC");
