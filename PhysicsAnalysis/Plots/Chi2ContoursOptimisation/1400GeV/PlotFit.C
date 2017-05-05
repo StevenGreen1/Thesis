@@ -16,8 +16,9 @@ void PlotFit()
     TString name10 = "TPFOs_kt_0p90_1400GeV_FitData.root";
     TString name11 = "TPFOs_kt_1p10_1400GeV_FitData.root";
 
-    MakePlots(name2, "Longitudinally Invariant Kt, Selected PFOs, R = 0.7", "KtSPFOsR0p70");
+//    MakePlots(name2, "Longitudinally Invariant Kt, Selected PFOs, R = 0.7", "KtSPFOsR0p70");
     MakePlots(name3, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "KtSPFOsR0p90");
+/*
     MakePlots(name5, "Longitudinally Invariant Kt, Selected PFOs, R = 1.1", "KtSPFOsR1p10");
     MakePlots(name6, "Longitudinally Invariant Kt, Tight Selected PFOs, R = 0.7", "KtTPFOsR0p70");
     MakePlots(name7, "Longitudinally Invariant Kt, Loose Selected PFOs, R = 0.7", "KtLPFOsR0p70");
@@ -25,6 +26,7 @@ void PlotFit()
     MakePlots(name9, "Longitudinally Invariant Kt, Loose Selected PFOs, R = 1.1", "KtLPFOsR1p10");
     MakePlots(name10, "Longitudinally Invariant Kt, Tight Selected PFOs, R = 0.9", "KtTPFOsR0p90");
     MakePlots(name11, "Longitudinally Invariant Kt, Tight Selected PFOs, R = 1.1", "KtTPFOsR1p10");
+*/
 }
 
 //================================================================
@@ -49,7 +51,7 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTH1FDummy3->SetLineColor(4);
     gStyle->SetLegendBorderSize(1); 
 
-    TLegend *pTLegend_all = new TLegend(0.25, 0.2, 0.6, 0.35);
+    TLegend *pTLegend_all = new TLegend(0.225, 0.175, 0.575, 0.325);
     pTLegend_all->AddEntry(pTH1FDummy1,"68\% Confidence Region", "l");
     pTLegend_all->AddEntry(pTH1FDummy2,"90\% Confidence Region", "l");
     pTLegend_all->AddEntry(pTH1FDummy3,"99\% Confidence Region", "l");
