@@ -56,7 +56,7 @@ void NuisancePlotExplanation()
     pTH1F_S_BSM->Draw("same");
     pTLegned->Draw();
     pTCanvas->SaveAs("NuisanceExplanation.C");
-    pTCanvas->SaveAs("NuisanceExplanation.C");
+    pTCanvas->SaveAs("NuisanceExplanation.pdf");
 }
 
 //================================================================
