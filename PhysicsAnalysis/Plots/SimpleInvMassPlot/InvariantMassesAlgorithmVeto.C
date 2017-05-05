@@ -14,8 +14,8 @@
    Canvas->SetFrameLineWidth(2);
    Canvas->SetFrameBorderMode(0);
    Canvas->SetRightMargin(0.05);
-   Canvas->SetLeftMargin(0.15);
-   Canvas->SetTopMargin(0.05);
+   Canvas->SetLeftMargin(0.175);
+   Canvas->SetTopMargin(0.075);
    Canvas->SetBottomMargin(0.15);
    
    TH1F *InvarinatMassesBosonsKt = new TH1F("InvarinatMassesBosonsKt","",100,0,200);
@@ -276,19 +276,20 @@
    InvarinatMassesBosonsKt->SetLineColor(2);
    InvarinatMassesBosonsKt->SetLineWidth(2);
    InvarinatMassesBosonsKt->SetMarkerStyle(20);
-   InvarinatMassesBosonsKt->GetXaxis()->SetTitle("Invariant Masses of Reconstructed Bosons [GeV]");
+   InvarinatMassesBosonsKt->GetXaxis()->SetTitle("Invariant Mass of Candidate Boson [GeV]");
    InvarinatMassesBosonsKt->GetXaxis()->SetNdivisions(505);
    InvarinatMassesBosonsKt->GetXaxis()->SetLabelFont(132);
    InvarinatMassesBosonsKt->GetXaxis()->SetLabelSize(0.05);
    InvarinatMassesBosonsKt->GetXaxis()->SetTitleSize(0.05);
-   InvarinatMassesBosonsKt->GetXaxis()->SetTitleOffset(1.5);
+   InvarinatMassesBosonsKt->GetXaxis()->SetTitleOffset(1.2);
    InvarinatMassesBosonsKt->GetXaxis()->SetTitleFont(132);
    InvarinatMassesBosonsKt->GetYaxis()->SetTitle("Entries");
    InvarinatMassesBosonsKt->GetYaxis()->SetLabelFont(132);
    InvarinatMassesBosonsKt->GetYaxis()->SetLabelSize(0.05);
    InvarinatMassesBosonsKt->GetYaxis()->SetTitleSize(0.05);
-   InvarinatMassesBosonsKt->GetYaxis()->SetTitleOffset(1.6);
+   InvarinatMassesBosonsKt->GetYaxis()->SetTitleOffset(1.7);
    InvarinatMassesBosonsKt->GetYaxis()->SetTitleFont(132);
+   InvarinatMassesBosonsKt->GetYaxis()->SetRangeUser(0,16000);
    InvarinatMassesBosonsKt->GetZaxis()->SetLabelFont(132);
    InvarinatMassesBosonsKt->GetZaxis()->SetLabelSize(0.05);
    InvarinatMassesBosonsKt->GetZaxis()->SetTitleSize(0.05);
@@ -789,7 +790,8 @@
    InvarinatMassesBosonsCam->GetZaxis()->SetTitleFont(132);
    InvarinatMassesBosonsCam->Draw("same");
    
-   TLegend *leg = new TLegend(0.55,0.65,0.95,0.85,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.2,0.75,0.95,0.9,NULL,"brNDC");
+   leg->SetTextSize(0.05);
    leg->SetBorderSize(0);
    leg->SetTextFont(132);
    leg->SetLineColor(1);
@@ -836,4 +838,6 @@
    Canvas->Modified();
    Canvas->cd();
    Canvas->SetSelected(Canvas);
+   Canvas->SaveAs("InvariantMassesAlgorithmVeto.pdf");
+   Canvas->SaveAs("InvariantMassesAlgorithmVeto.png");
 }
