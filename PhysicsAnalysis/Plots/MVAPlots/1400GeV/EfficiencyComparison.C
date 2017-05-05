@@ -1,9 +1,13 @@
 {
 //=========Macro generated from canvas: pTCanvas/the canvas
-//=========  (Fri May  5 12:08:59 2017) by ROOT version5.34/37
-   TCanvas *pTCanvas = new TCanvas("pTCanvas", "the canvas",202,73,650,500);
+//=========  (Fri May  5 08:48:17 2017) by ROOT version5.34/30
+   TCanvas *pTCanvas = new TCanvas("pTCanvas", "the canvas",202,51,650,500);
    gStyle->SetOptStat(0);
    pTCanvas->Range(-0.128266,0.07692306,1.059382,1.102564);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#f0f0f0");
    pTCanvas->SetFillColor(0);
    pTCanvas->SetBorderMode(0);
    pTCanvas->SetBorderSize(2);
@@ -13,42 +17,46 @@
    pTCanvas->SetTicky(1);
    pTCanvas->SetLeftMargin(0.15);
    pTCanvas->SetRightMargin(0.05);
-   pTCanvas->SetTopMargin(0.2);
    pTCanvas->SetBottomMargin(0.15);
+   pTCanvas->SetTopMargin(0.2);
 
-   Int_t ci;      // for color index setting
-   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#fffffd");
+   pTCanvas->SetFrameFillColor(ci);
+   pTCanvas->SetFrameLineWidth(2);
+   pTCanvas->SetFrameBorderMode(0);
+
    ci = TColor::GetColor("#fffffd");
    pTCanvas->SetFrameFillColor(ci);
    pTCanvas->SetFrameLineWidth(2);
    pTCanvas->SetFrameBorderMode(0);
    
-   TH2F *frame__1 = new TH2F("frame__1","",500,0,1,500,0.2,1);
-   frame__1->SetDirectory(0);
-   frame__1->SetStats(0);
-   frame__1->SetLineWidth(2);
-   frame__1->SetMarkerStyle(21);
-   frame__1->SetMarkerSize(0.3);
-   frame__1->GetXaxis()->SetTitle("Signal Efficiency");
-   frame__1->GetXaxis()->SetNdivisions(505);
-   frame__1->GetXaxis()->SetLabelFont(132);
-   frame__1->GetXaxis()->SetLabelOffset(0.012);
-   frame__1->GetXaxis()->SetLabelSize(0.05);
-   frame__1->GetXaxis()->SetTitleSize(0.05);
-   frame__1->GetXaxis()->SetTitleOffset(1.25);
-   frame__1->GetXaxis()->SetTitleFont(132);
-   frame__1->GetYaxis()->SetTitle("Background Rejection");
-   frame__1->GetYaxis()->SetLabelFont(132);
-   frame__1->GetYaxis()->SetLabelOffset(0.012);
-   frame__1->GetYaxis()->SetLabelSize(0.05);
-   frame__1->GetYaxis()->SetTitleSize(0.05);
-   frame__1->GetYaxis()->SetTitleOffset(1.22);
-   frame__1->GetYaxis()->SetTitleFont(132);
-   frame__1->GetZaxis()->SetLabelFont(132);
-   frame__1->GetZaxis()->SetLabelSize(0.03);
-   frame__1->GetZaxis()->SetTitleSize(0.036);
-   frame__1->GetZaxis()->SetTitleFont(132);
-   frame__1->Draw("");
+   TH2F *frame = new TH2F("frame","",500,0,1,500,0.2,1);
+   frame->SetStats(0);
+   frame->SetLineWidth(2);
+   frame->SetMarkerStyle(21);
+   frame->SetMarkerSize(0.3);
+   frame->GetXaxis()->SetTitle("Signal Efficiency");
+   frame->GetXaxis()->SetNdivisions(505);
+   frame->GetXaxis()->SetDecimals();
+   frame->GetXaxis()->SetLabelFont(132);
+   frame->GetXaxis()->SetLabelOffset(0.012);
+   frame->GetXaxis()->SetTitleSize(0.05);
+   frame->GetXaxis()->SetLabelSize(0.05);
+   frame->GetXaxis()->SetTitleOffset(1.25);
+   frame->GetXaxis()->SetTitleFont(132);
+   frame->GetYaxis()->SetTitle("Background Rejection");
+   frame->GetYaxis()->SetDecimals();
+   frame->GetYaxis()->SetLabelFont(132);
+   frame->GetYaxis()->SetLabelOffset(0.012);
+   frame->GetYaxis()->SetTitleSize(0.05);
+   frame->GetYaxis()->SetLabelSize(0.05);
+   frame->GetYaxis()->SetTitleOffset(1.22);
+   frame->GetYaxis()->SetTitleFont(132);
+   frame->GetZaxis()->SetLabelFont(132);
+   frame->GetZaxis()->SetLabelSize(0.03);
+   frame->GetZaxis()->SetTitleSize(0.036);
+   frame->GetZaxis()->SetTitleFont(132);
+   frame->Draw("");
    
    TH1F *MVA_Cuts_1400GeV_rejBvsS = new TH1F("MVA_Cuts_1400GeV_rejBvsS","MVA_Cuts_1400GeV",100,0,1);
    MVA_Cuts_1400GeV_rejBvsS->SetBinContent(1,0.995);
@@ -924,14 +932,12 @@
    frame->GetXaxis()->SetNdivisions(505);
    frame->GetXaxis()->SetLabelFont(132);
    frame->GetXaxis()->SetLabelOffset(0.012);
-   frame->GetXaxis()->SetLabelSize(0.05);
    frame->GetXaxis()->SetTitleSize(0.045);
    frame->GetXaxis()->SetTitleOffset(1.25);
    frame->GetXaxis()->SetTitleFont(132);
    frame->GetYaxis()->SetTitle("Background rejection");
    frame->GetYaxis()->SetLabelFont(132);
    frame->GetYaxis()->SetLabelOffset(0.012);
-   frame->GetYaxis()->SetLabelSize(0.05);
    frame->GetYaxis()->SetTitleSize(0.045);
    frame->GetYaxis()->SetTitleOffset(1.22);
    frame->GetYaxis()->SetTitleFont(132);
@@ -941,10 +947,11 @@
    frame->GetZaxis()->SetTitleFont(132);
    frame->Draw("sameaxis");
    
-   TLegend *leg = new TLegend(-2.353437e-185,-2.353437e-185,-2.353437e-185,-2.353437e-185,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.05,0.81,0.95,0.99,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
+   leg->SetNColumns(4);
 
    ci = TColor::GetColor("#7d8b9d");
    leg->SetLineColor(ci);
@@ -1018,7 +1025,7 @@
    entry->SetTextFont(132);
    leg->Draw();
    
-   TPaveText *pt = new TPaveText(-2.353437e-185,-2.353437e-185,-2.353437e-185,-2.353437e-185,"blNDC");
+   TPaveText *pt = new TPaveText(0.01,0.9390678,0.6878947,0.995,"blNDC");
    pt->SetName("title");
    pt->SetBorderSize(1);
 
@@ -1032,7 +1039,11 @@
    pt->SetTextFont(132);
    TText *text = pt->AddText("Background rejection versus Signal efficiency");
    pt->Draw();
+  
+   pTCanvas->cd();
    pTCanvas->Modified();
    pTCanvas->cd();
    pTCanvas->SetSelected(pTCanvas);
+   pTCanvas->SaveAs("ThesisPlotMVAAlternatives1400GeV.C");
+   pTCanvas->SaveAs("ThesisPlotMVAAlternatives1400GeV.pdf");
 }
