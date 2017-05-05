@@ -100,10 +100,10 @@ void MakePlots(TString name, TString description, TString briefDescription)
     double alphaHigh_a4(0.0);
     double alphaLow_a5(0.0);
     double alphaHigh_a5(0.0);
-    alphaLow_a4 = pTF1a4->GetX(0.989, -0.005, 0.0);
-    alphaHigh_a4 = pTF1a4->GetX(0.989, 0.0, 0.005);
-    alphaLow_a5 = pTF1a5->GetX(0.989, -0.005, 0.0);
-    alphaHigh_a5 = pTF1a5->GetX(0.989, 0.0, 0.005);
+    alphaLow_a4 = pTF1a4->GetX(0.989, -0.02, 0.0);
+    alphaHigh_a4 = pTF1a4->GetX(0.989, 0.0, 0.02);
+    alphaLow_a5 = pTF1a5->GetX(0.989, -0.02, 0.0);
+    alphaHigh_a5 = pTF1a5->GetX(0.989, 0.0, 0.02);
 
     std::ofstream resultsFile;
     std::string resultFileName = briefDescription + ".txt";
