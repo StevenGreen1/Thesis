@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{tikz-feynman}
+\makeatletter
+\tikzfeynmanset{compat=\tikzfeynman@version@major.\tikzfeynman@version@minor.\tikzfeynman@version@patch}
+%\makeatother					% Activate to display a given date or no date
+
+\begin{document}  
+  \begin{tikzpicture}[]
+  \begin{feynman}
+    \vertex (a1);
+    \vertex[left=1cm of a1] (a2) {\(Z/\gamma\)};
+    \vertex[above right=1cm of a1] (a3) {\(W^{+}\)};
+    \vertex[below right=1cm of a1] (a4) {\(W^{-}\)};
+    \diagram* {
+       (a1) -- [boson] (a2) 
+       (a1) -- [boson] (a3) 
+       (a1) -- [boson] (a4) 
+    };
+  \end{feynman}
+  \end{tikzpicture}
+\end{document}  
