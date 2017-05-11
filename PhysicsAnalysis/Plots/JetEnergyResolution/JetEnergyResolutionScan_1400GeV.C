@@ -179,7 +179,7 @@
    Graph_Graph1->SetStats(0);
    Graph_Graph1->SetLineWidth(2);
    Graph_Graph1->SetMarkerStyle(20);
-   Graph_Graph1->GetXaxis()->SetTitle("E_{q} [GeV]");
+   Graph_Graph1->GetXaxis()->SetTitle("E_{j} [GeV]");
    Graph_Graph1->GetXaxis()->SetNdivisions(505);
    Graph_Graph1->GetXaxis()->SetLabelFont(132);
    Graph_Graph1->GetXaxis()->SetLabelSize(0.05);
