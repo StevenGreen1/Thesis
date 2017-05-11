@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: pTCanvas/the canvas
-//=========  (Fri May  5 12:08:59 2017) by ROOT version5.34/37
+//=========  (Thu May 11 14:02:04 2017) by ROOT version5.34/37
    TCanvas *pTCanvas = new TCanvas("pTCanvas", "the canvas",202,73,650,500);
    gStyle->SetOptStat(0);
    pTCanvas->Range(-0.128266,0.07692306,1.059382,1.102564);
@@ -398,7 +398,9 @@
    MVA_HMatrix_1400GeV_rejBvsS->SetBinContent(100,0.2350371);
    MVA_HMatrix_1400GeV_rejBvsS->SetEntries(100);
    MVA_HMatrix_1400GeV_rejBvsS->SetStats(0);
-   MVA_HMatrix_1400GeV_rejBvsS->SetLineColor(3);
+
+   ci = TColor::GetColor("#ffcc00");
+   MVA_HMatrix_1400GeV_rejBvsS->SetLineColor(ci);
    MVA_HMatrix_1400GeV_rejBvsS->SetLineWidth(3);
    MVA_HMatrix_1400GeV_rejBvsS->SetMarkerStyle(21);
    MVA_HMatrix_1400GeV_rejBvsS->SetMarkerSize(0.3);
@@ -993,7 +995,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
    entry=leg->AddEntry("MVA_HMatrix_1400GeV_rejBvsS","HMatrix","l");
-   entry->SetLineColor(3);
+
+   ci = TColor::GetColor("#ffcc00");
+   entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(3);
    entry->SetMarkerColor(1);

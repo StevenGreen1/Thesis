@@ -406,7 +406,7 @@
    MVA_HMatrix_1400GeV_rejBvsS->SetBinContent(100,0.2350371);
    MVA_HMatrix_1400GeV_rejBvsS->SetEntries(100);
    MVA_HMatrix_1400GeV_rejBvsS->SetStats(0);
-   MVA_HMatrix_1400GeV_rejBvsS->SetLineColor(3);
+   MVA_HMatrix_1400GeV_rejBvsS->SetLineColor(kOrange);
    MVA_HMatrix_1400GeV_rejBvsS->SetLineWidth(3);
    MVA_HMatrix_1400GeV_rejBvsS->SetMarkerStyle(21);
    MVA_HMatrix_1400GeV_rejBvsS->SetMarkerSize(0.3);
@@ -1000,7 +1000,7 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
    entry=leg->AddEntry("MVA_HMatrix_1400GeV_rejBvsS","HMatrix","l");
-   entry->SetLineColor(3);
+   entry->SetLineColor(kOrange);
    entry->SetLineStyle(1);
    entry->SetLineWidth(3);
    entry->SetMarkerColor(1);
