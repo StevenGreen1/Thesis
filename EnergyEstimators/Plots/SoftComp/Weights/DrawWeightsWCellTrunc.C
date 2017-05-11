@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void DrawWeights()
+void DrawWeightsWCellTrunc()
 {
     const int nE = 4;
 //    const int nE = 14;
@@ -33,6 +33,18 @@ void DrawWeights()
     pTLegend->SetLineColor(0);
     pTLegend->SetTextSize(0.05);
 
+    TH2F *pTH2FAxes = new TH2F("pTH2FAxes","",200,0,100,200,0,2.5);
+    pTH2FAxes->GetXaxis()->SetTitle("#rho [GeV/dm^{3}]");
+    pTH2FAxes->GetXaxis()->SetTitleSize(0.05);
+    pTH2FAxes->GetXaxis()->SetLabelSize(0.05);
+    pTH2FAxes->GetXaxis()->SetDecimals();
+    pTH2FAxes->GetYaxis()->SetTitle("#omega");
+    pTH2FAxes->GetYaxis()->SetTitleSize(0.05);
+    pTH2FAxes->GetYaxis()->SetLabelSize(0.05);
+    pTH2FAxes->GetYaxis()->SetRangeUser(0,2.5);
+    pTH2FAxes->GetYaxis()->SetDecimals();
+    pTH2FAxes->Draw();
+
     for (int ie = 0; ie < nE; ie++)
     {
         gWei[ie] = new TGraph();
@@ -54,34 +66,25 @@ void DrawWeights()
             gWei[ie]->SetPoint(ibin,rho[ibin],weight);
         }
 
-        TString pTLegendname = "#it{E}_{Raw} ";
-        pTLegendname += Ebeam[ie]; 
-        pTLegendname += " GeV";
+        TString pTLegendname = "#it{E}_{Raw} "; pTLegendname += Ebeam[ie]; pTLegendname += " GeV";
         pTLegend->AddEntry(gWei[ie],pTLegendname,"p");
 
         gWei[ie]->SetMarkerColor(rootColor[ie]);
         gWei[ie]->SetLineColor(rootColor[ie]);
-        gWei[ie]->GetXaxis()->SetTitle("#rho [GeV/dm^{3}]");
-        gWei[ie]->GetXaxis()->SetTitleSize(0.05);
-        gWei[ie]->GetXaxis()->SetLabelSize(0.05);
-        gWei[ie]->GetXaxis()->SetDecimals();
-        gWei[ie]->GetYaxis()->SetTitle("#omega");
-        gWei[ie]->GetYaxis()->SetTitleSize(0.05);
-        gWei[ie]->GetYaxis()->SetLabelSize(0.05);
-        gWei[ie]->GetYaxis()->SetRangeUser(0,2.5);
-        gWei[ie]->GetYaxis()->SetDecimals();
 
-        if (ie == 0)
-        {
-            gWei[ie]->Draw("AP");
-        }
-        else
-        {
-            gWei[ie]->Draw("PS");
-        }
+        gWei[ie]->Draw("PS");
     }
 
+    TF1 *pTF1_l = new TF1("pTF1","1",0,41.92872);
+    TF1 *pTF1_h = new TF1("pTF1","41.92872/x",41.92872,1000);
+    pTF1_l->SetLineColor(kRed);
+    pTF1_h->SetLineColor(kRed);
+    pTF1_l->Draw("same");
+    pTF1_h->Draw("same");
+
+    pTLegend->AddEntry(pTF1_l,"HCal Cell Truncation","l");
+
     pTLegend->Draw();
-    pTCanvas->SaveAs("SoftwareCompensationWeights.C");
-    pTCanvas->SaveAs("SoftwareCompensationWeights.pdf");
+    pTCanvas->SaveAs("SoftwareCompensationWeightsWithCellTruncWeights.C");
+    pTCanvas->SaveAs("SoftwareCompensationWeightsWithCellTruncWeights.pdf");
 }
