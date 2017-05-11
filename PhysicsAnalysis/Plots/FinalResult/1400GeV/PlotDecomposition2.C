@@ -4,21 +4,21 @@
 
 //================================================================
 
-void PlotDecomposition()
+void PlotDecomposition2()
 {
-    TString name = "TPFOs_kt_1p10_3000GeV_FitDataOptimal.root";
+    TString name = "SPFOs_kt_0p90_1400GeV_FitDataOptimal.root";
 
-    MakePlots(name, "Longitudinally Invariant Kt, Tight Selected PFOs, R = 1.1", "Final");
+    MakePlots(name, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "CosThetaStarBosons");
 }
 
 //================================================================
 
 void MakePlots(TString name, TString description, TString briefDescription)
 {
-//    TGraph2D *pTGraph2D = SinglePlot(name,"Chi2MVV");
-    TGraph *pTGraph_a4 = OneDSinglePlot(name,"Chi2MVV", "Alpha4");
-    TGraph *pTGraph_a5 = OneDSinglePlot(name,"Chi2MVV", "Alpha5");
-/*
+    TGraph2D *pTGraph2D = SinglePlot(name,"Chi2CosThetaStarSynBosons");
+//    TGraph *pTGraph_a4 = OneDSinglePlot(name,"Chi2MVV", "Alpha4");
+//    TGraph *pTGraph_a5 = OneDSinglePlot(name,"Chi2MVV", "Alpha5");
+
     // 2D Plot
     TCanvas *pTCanvas = new TCanvas(briefDescription, "", 600, 600);
     pTCanvas->SetRightMargin(0.05);
@@ -48,7 +48,7 @@ void MakePlots(TString name, TString description, TString briefDescription)
     TString plotDotC = briefDescription + ".C";
     pTCanvas->SaveAs(plotPDF);
     pTCanvas->SaveAs(plotDotC);
-*/
+/*
     // Alpha 4 Plot
     TCanvas *pTCanvas_a4 = new TCanvas(briefDescription + "_Alpha4", "", 600, 600);
     pTCanvas_a4->SetRightMargin(0.05);
@@ -58,8 +58,8 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTGraph_a4->Draw("APL");
     TString plotPDF_a4 = briefDescription + "_alpha4.pdf";
     TString plotDotC_a4 = briefDescription + "_alpha4.C";
-    TF1 *pTF1a4 = new TF1("Alpha4Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.00125,0.00125);
-    pTGraph_a4->Fit("Alpha4Fit","MR","",-0.00125,0.00125);
+    TF1 *pTF1a4 = new TF1("Alpha4Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.015,0.015);
+    pTGraph_a4->Fit("Alpha4Fit","MR","",-0.015,0.015);
     pTF1a4->SetLineColor(kBlue);
     pTF1a4->SetLineWidth(3);
     pTF1a4->Draw("same");
@@ -81,14 +81,8 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTGraph_a5->Draw("APL");
     TString plotPDF_a5 = briefDescription + "_alpha5.pdf";
     TString plotDotC_a5 = briefDescription + "_alpha5.C";
-    TF1 *pTF1a5 = new TF1("Alpha5Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.001,0.001);
-//    pTGraph_a5->Fit("Alpha5Fit","MR","",-0.001,0.001);
-// I did fit by hand in root to save messing around
-    pTF1a5->SetParameter(0, -9.51977);
-    pTF1a5->SetParameter(1, 538132);
-    pTF1a5->SetParameter(2, -2.59463e+08);
-    pTF1a5->SetParameter(3,  2.66635e+12);
-
+    TF1 *pTF1a5 = new TF1("Alpha5Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.015,0.015);
+    pTGraph_a5->Fit("Alpha5Fit","MR","",-0.015,0.015);
     pTF1a5->SetLineColor(kBlue);
     pTF1a5->SetLineWidth(3);
     pTF1a5->Draw("same");
@@ -106,10 +100,10 @@ void MakePlots(TString name, TString description, TString briefDescription)
     double alphaHigh_a4(0.0);
     double alphaLow_a5(0.0);
     double alphaHigh_a5(0.0);
-    alphaLow_a4 = pTF1a4->GetX(0.989, -0.005, 0.0);
-    alphaHigh_a4 = pTF1a4->GetX(0.989, 0.0, 0.005);
-    alphaLow_a5 = pTF1a5->GetX(0.989, -0.005, 0.0);
-    alphaHigh_a5 = pTF1a5->GetX(0.989, 0.0, 0.005);
+    alphaLow_a4 = pTF1a4->GetX(0.989, -0.02, 0.0);
+    alphaHigh_a4 = pTF1a4->GetX(0.989, 0.0, 0.02);
+    alphaLow_a5 = pTF1a5->GetX(0.989, -0.02, 0.0);
+    alphaHigh_a5 = pTF1a5->GetX(0.989, 0.0, 0.02);
 
     std::ofstream resultsFile;
     std::string resultFileName = briefDescription + ".txt";
@@ -121,6 +115,7 @@ void MakePlots(TString name, TString description, TString briefDescription)
     resultsFile << std::setprecision(3) << alphaLow_a4 << " & " << alphaHigh_a4 << std::endl;
     resultsFile << std::setprecision(3) << alphaLow_a5 << " & " << alphaHigh_a5 << std::endl;
     resultsFile.close();
+*/
 }
 
 //================================================================

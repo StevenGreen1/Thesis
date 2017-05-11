@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: Final_Alpha5/
-//=========  (Tue May  2 12:44:52 2017) by ROOT version5.34/37
+//=========  (Fri May  5 10:54:51 2017) by ROOT version5.34/37
    TCanvas *Final_Alpha5 = new TCanvas("Final_Alpha5", "",0,45,600,600);
    gStyle->SetOptStat(0);
    Final_Alpha5->Range(-0.01122248,-3,0.008294876,17);
@@ -172,38 +172,9 @@
    Graph_Graph2->GetZaxis()->SetTitleFont(132);
    graph->SetHistogram(Graph_Graph2);
    
-   
-   TF1 *Alpha5Fit = new TF1("Alpha5Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.015,0.015);
-   Alpha5Fit->SetFillColor(1);
-   Alpha5Fit->SetFillStyle(0);
-   Alpha5Fit->SetLineWidth(2);
-   Alpha5Fit->SetChisquare(1769.223);
-   Alpha5Fit->SetNDF(117);
-   Alpha5Fit->GetXaxis()->SetNdivisions(505);
-   Alpha5Fit->GetXaxis()->SetLabelFont(132);
-   Alpha5Fit->GetXaxis()->SetLabelSize(0.05);
-   Alpha5Fit->GetXaxis()->SetTitleSize(0.05);
-   Alpha5Fit->GetXaxis()->SetTitleFont(132);
-   Alpha5Fit->GetYaxis()->SetLabelFont(132);
-   Alpha5Fit->GetYaxis()->SetLabelSize(0.05);
-   Alpha5Fit->GetYaxis()->SetTitleSize(0.05);
-   Alpha5Fit->GetYaxis()->SetTitleFont(132);
-   Alpha5Fit->SetParameter(0,-875.266);
-   Alpha5Fit->SetParError(0,252.676);
-   Alpha5Fit->SetParLimits(0,0,0);
-   Alpha5Fit->SetParameter(1,6560061);
-   Alpha5Fit->SetParError(1,75643.22);
-   Alpha5Fit->SetParLimits(1,0,0);
-   Alpha5Fit->SetParameter(2,-7.693913e+07);
-   Alpha5Fit->SetParError(2,1.054393e+07);
-   Alpha5Fit->SetParLimits(2,0,0);
-   Alpha5Fit->SetParameter(3,9.089366e+10);
-   Alpha5Fit->SetParError(3,2.773501e+09);
-   Alpha5Fit->SetParLimits(3,0,0);
-   graph->GetListOfFunctions()->Add(Alpha5Fit);
    graph->Draw("apl");
    
-   TF1 *Alpha5Fit = new TF1("Alpha5Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.015,0.015);
+   TF1 *Alpha5Fit = new TF1("Alpha5Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.001,0.001);
    Alpha5Fit->SetFillColor(1);
    Alpha5Fit->SetFillStyle(0);
 
@@ -212,8 +183,6 @@
    ci = TColor::GetColor("#0000ff");
    Alpha5Fit->SetLineColor(ci);
    Alpha5Fit->SetLineWidth(3);
-   Alpha5Fit->SetChisquare(1769.223);
-   Alpha5Fit->SetNDF(117);
    Alpha5Fit->GetXaxis()->SetNdivisions(505);
    Alpha5Fit->GetXaxis()->SetLabelFont(132);
    Alpha5Fit->GetXaxis()->SetLabelSize(0.05);
@@ -223,26 +192,26 @@
    Alpha5Fit->GetYaxis()->SetLabelSize(0.05);
    Alpha5Fit->GetYaxis()->SetTitleSize(0.05);
    Alpha5Fit->GetYaxis()->SetTitleFont(132);
-   Alpha5Fit->SetParameter(0,-875.266);
-   Alpha5Fit->SetParError(0,252.676);
+   Alpha5Fit->SetParameter(0,-9.51977);
+   Alpha5Fit->SetParError(0,0);
    Alpha5Fit->SetParLimits(0,0,0);
-   Alpha5Fit->SetParameter(1,6560061);
-   Alpha5Fit->SetParError(1,75643.22);
+   Alpha5Fit->SetParameter(1,538132);
+   Alpha5Fit->SetParError(1,0);
    Alpha5Fit->SetParLimits(1,0,0);
-   Alpha5Fit->SetParameter(2,-7.693913e+07);
-   Alpha5Fit->SetParError(2,1.054393e+07);
+   Alpha5Fit->SetParameter(2,-2.59463e+08);
+   Alpha5Fit->SetParError(2,0);
    Alpha5Fit->SetParLimits(2,0,0);
-   Alpha5Fit->SetParameter(3,9.089366e+10);
-   Alpha5Fit->SetParError(3,2.773501e+09);
+   Alpha5Fit->SetParameter(3,2.66635e+12);
+   Alpha5Fit->SetParError(3,0);
    Alpha5Fit->SetParLimits(3,0,0);
    Alpha5Fit->Draw("same");
    
    TLegend *leg = new TLegend(0.15,0.95,0.9,0.95,NULL,"brNDC");
-   leg->SetBorderSize(1);
+   leg->SetBorderSize(0);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
 
-   ci = 10007;
+   ci = 10006;
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetLineColor(ci);
    leg->SetLineStyle(1);

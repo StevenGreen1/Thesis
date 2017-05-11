@@ -117,10 +117,10 @@ void TidyPlot()
 //    pTLineMean->SetLineStyle(2);
     pTLineMean->Draw("same");
 
-    float leftRawRMS = rawMean - 0.5 * rawRms;
-    float rightRawRMS = rawMean + 0.5 * rawRms;
-    float leftRMS = mean - 0.5 * rmsmin;
-    float rightRMS = mean + 0.5 * rmsmin;
+    float leftRawRMS = rawMean - rawRms;
+    float rightRawRMS = rawMean + rawRms;
+    float leftRMS = mean - rmsmin;
+    float rightRMS = mean + rmsmin;
 
     TArrow *pTArrowRawRMS = new TArrow(leftRawRMS,pTCanvas->GetUymax()*0.2,rightRawRMS,pTCanvas->GetUymax()*0.2,0.025,"<|>");
     pTArrowRawRMS->SetLineColor(kRed);

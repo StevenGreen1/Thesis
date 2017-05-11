@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: name/
-//=========  (Fri Feb 24 10:29:01 2017) by ROOT version5.34/37
+//=========  (Mon Mar 20 11:51:07 2017) by ROOT version5.34/37
    TCanvas *name = new TCanvas("name", "",10,45,700,500);
    gStyle->SetOptStat(0);
    name->Range(172,-62.31397,225.3333,353.1125);
@@ -150,7 +150,7 @@
    line->SetLineColor(ci);
    line->SetLineWidth(2);
    line->Draw();
-   TArrow *arrow = new TArrow(195.6195,62.31397,201.4431,62.31397,0.025,"<|>");
+   TArrow *arrow = new TArrow(192.7077,62.31397,204.3549,62.31397,0.025,"<|>");
 
    ci = TColor::GetColor("#ff0000");
    arrow->SetFillColor(ci);
@@ -160,7 +160,7 @@
    arrow->SetLineColor(ci);
    arrow->SetLineWidth(2);
    arrow->Draw();
-   arrow = new TArrow(197.0961,77.89247,201.1775,77.89247,0.025,"<|>");
+   arrow = new TArrow(195.0554,77.89247,203.2182,77.89247,0.025,"<|>");
 
    ci = TColor::GetColor("#0000ff");
    arrow->SetFillColor(ci);

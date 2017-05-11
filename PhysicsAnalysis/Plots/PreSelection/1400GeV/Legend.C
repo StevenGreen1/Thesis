@@ -11,9 +11,8 @@
    FKPEQSWMFV->SetLogy();
    FKPEQSWMFV->SetFrameBorderMode(0);
    FKPEQSWMFV->SetFrameBorderMode(0);
-   FKPEQSWMFV->SetRightMargin(0.05);
+   FKPEQSWMFV->SetRightMargin(0.3);
    FKPEQSWMFV->SetTopMargin(0.05);
-   FKPEQSWMFV->SetBottomMargin(0.125);
    
    THStack *LAPCRJHOKQ = new THStack();
    LAPCRJHOKQ->SetName("LAPCRJHOKQ");
@@ -8950,7 +8949,7 @@
    RHCSIWFVJT->GetZaxis()->SetTitleSize(0.035);
    RHCSIWFVJT->GetZaxis()->SetTitleFont(42);
    LAPCRJHOKQ->Add(RHCSIWFVJT,"");
-   LAPCRJHOKQ->Draw("");
+   LAPCRJHOKQ->Draw("A");
 
    LAPCRJHOKQ->GetXaxis()->SetRangeUser(0,700);
    
@@ -8963,15 +8962,16 @@
    TText *text = pt->AddText("TransverseMomentum");
    pt->Draw();
    
-   TLegend *leg = new TLegend(0.7,0.1,0.95,0.95,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.05,0.05,0.95,0.975,NULL,"brNDC");
+   leg->SetTextSize(0.05);
+   leg->SetNColumns(2);
    leg->SetBorderSize(1);
-   leg->SetLineColor(1);
+   leg->SetLineColorAlpha(1,0);
    leg->SetLineStyle(1);
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("","","");
-   entry=leg->AddEntry("FEFLVVLKZP","e^{+}e^{-} #rightarrow #nu #nu qqqq","f");
+   TLegendEntry *entry=leg->AddEntry("FEFLVVLKZP","e^{+}e^{-} #rightarrow #nu #nu qqqq","f");
    entry->SetFillColor(1);
    entry->SetFillStyle(3001);
    entry->SetLineColor(1);
@@ -9226,7 +9226,7 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("RHCSIWFVJT","#gamma_{BS}#gamma_{BS} #rightarrow qqqq","f");
-   entry=leg->AddEntry("","","");
+ //  entry=leg->AddEntry("","","");
 
    ci = TColor::GetColor("#00ae7e");
    entry->SetFillColor(ci);
@@ -9240,9 +9240,9 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   //leg->Draw();
+   leg->Draw();
    FKPEQSWMFV->Modified();
    FKPEQSWMFV->cd();
    FKPEQSWMFV->SetSelected(FKPEQSWMFV);
-   FKPEQSWMFV->SaveAs("TransverseMomentum.pdf");
+   FKPEQSWMFV->SaveAs("Legend.pdf");
 }

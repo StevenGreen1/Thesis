@@ -12,7 +12,8 @@
    RWSSVMYKOS->SetFrameBorderMode(0);
    RWSSVMYKOS->SetFrameBorderMode(0);
    RWSSVMYKOS->SetTopMargin(0.05);
-   RWSSVMYKOS->SetRightMargin(0.3);
+   RWSSVMYKOS->SetRightMargin(0.05);
+   RWSSVMYKOS->SetBottomMargin(0.125);
    
    THStack *HLAAMGXXTE = new THStack();
    HLAAMGXXTE->SetName("HLAAMGXXTE");
@@ -952,8 +953,9 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   leg->Draw();
+   //leg->Draw();
    RWSSVMYKOS->Modified();
    RWSSVMYKOS->cd();
    RWSSVMYKOS->SetSelected(RWSSVMYKOS);
+   RWSSVMYKOS->SaveAs("NumberOfIsolatedLeptons.pdf");
 }

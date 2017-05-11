@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: Final_Alpha4/
-//=========  (Tue May  2 12:44:52 2017) by ROOT version5.34/37
+//=========  (Fri May  5 10:54:51 2017) by ROOT version5.34/37
    TCanvas *Final_Alpha4 = new TCanvas("Final_Alpha4", "",0,45,600,600);
    gStyle->SetOptStat(0);
    Final_Alpha4->Range(-0.01674298,-3,0.01237525,17);
@@ -233,12 +233,12 @@
    graph->SetHistogram(Graph_Graph1);
    
    
-   TF1 *Alpha4Fit = new TF1("Alpha4Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.015,0.015);
+   TF1 *Alpha4Fit = new TF1("Alpha4Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.00125,0.00125);
    Alpha4Fit->SetFillColor(1);
    Alpha4Fit->SetFillStyle(0);
    Alpha4Fit->SetLineWidth(2);
-   Alpha4Fit->SetChisquare(4627.774);
-   Alpha4Fit->SetNDF(177);
+   Alpha4Fit->SetChisquare(0.004777108);
+   Alpha4Fit->SetNDF(21);
    Alpha4Fit->GetXaxis()->SetNdivisions(505);
    Alpha4Fit->GetXaxis()->SetLabelFont(132);
    Alpha4Fit->GetXaxis()->SetLabelSize(0.05);
@@ -248,22 +248,22 @@
    Alpha4Fit->GetYaxis()->SetLabelSize(0.05);
    Alpha4Fit->GetYaxis()->SetTitleSize(0.05);
    Alpha4Fit->GetYaxis()->SetTitleFont(132);
-   Alpha4Fit->SetParameter(0,-894.1181);
-   Alpha4Fit->SetParError(0,181.7942);
+   Alpha4Fit->SetParameter(0,-4.238909);
+   Alpha4Fit->SetParError(0,10.51284);
    Alpha4Fit->SetParLimits(0,0,0);
-   Alpha4Fit->SetParameter(1,3293402);
-   Alpha4Fit->SetParError(1,36293.99);
+   Alpha4Fit->SetParameter(1,230510.5);
+   Alpha4Fit->SetParError(1,15333.8);
    Alpha4Fit->SetParLimits(1,0,0);
-   Alpha4Fit->SetParameter(2,-3.411476e+07);
-   Alpha4Fit->SetParError(2,3390608);
+   Alpha4Fit->SetParameter(2,-1.37609e+08);
+   Alpha4Fit->SetParError(2,1.032629e+07);
    Alpha4Fit->SetParLimits(2,0,0);
-   Alpha4Fit->SetParameter(3,2.630522e+10);
-   Alpha4Fit->SetParError(3,5.945615e+08);
+   Alpha4Fit->SetParameter(3,5.661181e+11);
+   Alpha4Fit->SetParError(3,1.325809e+10);
    Alpha4Fit->SetParLimits(3,0,0);
    graph->GetListOfFunctions()->Add(Alpha4Fit);
    graph->Draw("apl");
    
-   TF1 *Alpha4Fit = new TF1("Alpha4Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.015,0.015);
+   TF1 *Alpha4Fit = new TF1("Alpha4Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.00125,0.00125);
    Alpha4Fit->SetFillColor(1);
    Alpha4Fit->SetFillStyle(0);
 
@@ -272,8 +272,8 @@
    ci = TColor::GetColor("#0000ff");
    Alpha4Fit->SetLineColor(ci);
    Alpha4Fit->SetLineWidth(3);
-   Alpha4Fit->SetChisquare(4627.774);
-   Alpha4Fit->SetNDF(177);
+   Alpha4Fit->SetChisquare(0.004777108);
+   Alpha4Fit->SetNDF(21);
    Alpha4Fit->GetXaxis()->SetNdivisions(505);
    Alpha4Fit->GetXaxis()->SetLabelFont(132);
    Alpha4Fit->GetXaxis()->SetLabelSize(0.05);
@@ -283,26 +283,26 @@
    Alpha4Fit->GetYaxis()->SetLabelSize(0.05);
    Alpha4Fit->GetYaxis()->SetTitleSize(0.05);
    Alpha4Fit->GetYaxis()->SetTitleFont(132);
-   Alpha4Fit->SetParameter(0,-894.1181);
-   Alpha4Fit->SetParError(0,181.7942);
+   Alpha4Fit->SetParameter(0,-4.238909);
+   Alpha4Fit->SetParError(0,10.51284);
    Alpha4Fit->SetParLimits(0,0,0);
-   Alpha4Fit->SetParameter(1,3293402);
-   Alpha4Fit->SetParError(1,36293.99);
+   Alpha4Fit->SetParameter(1,230510.5);
+   Alpha4Fit->SetParError(1,15333.8);
    Alpha4Fit->SetParLimits(1,0,0);
-   Alpha4Fit->SetParameter(2,-3.411476e+07);
-   Alpha4Fit->SetParError(2,3390608);
+   Alpha4Fit->SetParameter(2,-1.37609e+08);
+   Alpha4Fit->SetParError(2,1.032629e+07);
    Alpha4Fit->SetParLimits(2,0,0);
-   Alpha4Fit->SetParameter(3,2.630522e+10);
-   Alpha4Fit->SetParError(3,5.945615e+08);
+   Alpha4Fit->SetParameter(3,5.661181e+11);
+   Alpha4Fit->SetParError(3,1.325809e+10);
    Alpha4Fit->SetParLimits(3,0,0);
    Alpha4Fit->Draw("same");
    
    TLegend *leg = new TLegend(0.15,0.95,0.9,0.95,NULL,"brNDC");
-   leg->SetBorderSize(1);
+   leg->SetBorderSize(0);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
 
-   ci = 10006;
+   ci = 10005;
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetLineColor(ci);
    leg->SetLineStyle(1);
