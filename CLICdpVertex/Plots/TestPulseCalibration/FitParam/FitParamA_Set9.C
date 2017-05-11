@@ -4110,6 +4110,7 @@
    TH2FFitParamA->SetBinContent(4288,0.09953927);
    TH2FFitParamA->SetEntries(4096);
    TH2FFitParamA->SetStats(0);
+/*
    TH2FFitParamA->SetContour(20);
    TH2FFitParamA->SetContourLevel(0,1.398383e-11);
    TH2FFitParamA->SetContourLevel(1,0.005439472);
@@ -4131,7 +4132,7 @@
    TH2FFitParamA->SetContourLevel(17,0.09247103);
    TH2FFitParamA->SetContourLevel(18,0.0979105);
    TH2FFitParamA->SetContourLevel(19,0.10335);
-   
+  */ 
    TPaletteAxis *palette = new TPaletteAxis(64.4,0,68,64,TH2FFitParamA);
 palette->SetLabelColor(1);
 palette->SetLabelFont(42);

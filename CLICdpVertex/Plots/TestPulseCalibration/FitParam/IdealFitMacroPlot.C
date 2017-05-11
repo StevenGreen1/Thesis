@@ -16,27 +16,27 @@ void IdealFitMacroPlot()
     TF1 *pTF1_OddSet15 = (TF1*)(GetFunction(0.0836, 1.52, 52.7, 0.42)->Clone());
     TF1 *pTF1_OddSet16 = (TF1*)(GetFunction(0.0727, 1.49, 50.7, 0.10)->Clone());
 
-    pTF1_EvenSet9->SetLineColor(1);
-    pTF1_EvenSet10->SetLineColor(2);
-    pTF1_EvenSet12->SetLineColor(3);
-    pTF1_EvenSet13->SetLineColor(4);
-    pTF1_EvenSet14->SetLineColor(6);
-    pTF1_EvenSet15->SetLineColor(7);
-    pTF1_EvenSet16->SetLineColor(8);
+    pTF1_EvenSet9->SetLineColor(kGreen+2);
+    pTF1_EvenSet10->SetLineColor(kRed);
+    pTF1_EvenSet12->SetLineColor(kMagenta);
+    pTF1_EvenSet13->SetLineColor(kBlue);
+//    pTF1_EvenSet14->SetLineColor();
+    pTF1_EvenSet15->SetLineColor(kCyan);
+    pTF1_EvenSet16->SetLineColor(kBlack);
 
-    pTF1_OddSet9->SetLineColor(1);
+    pTF1_OddSet9->SetLineColor(kGreen+2);
     pTF1_OddSet9->SetLineStyle(2);
-    pTF1_OddSet10->SetLineColor(2);
+    pTF1_OddSet10->SetLineColor(kRed);
     pTF1_OddSet10->SetLineStyle(2);
-    pTF1_OddSet12->SetLineColor(3);
+    pTF1_OddSet12->SetLineColor(kMagenta);
     pTF1_OddSet12->SetLineStyle(2);
-    pTF1_OddSet13->SetLineColor(4);
+    pTF1_OddSet13->SetLineColor(kBlue);
     pTF1_OddSet13->SetLineStyle(2);
-    pTF1_OddSet14->SetLineColor(6);
-    pTF1_OddSet14->SetLineStyle(2);
-    pTF1_OddSet15->SetLineColor(7);
+//    pTF1_OddSet14->SetLineColor(6);
+//    pTF1_OddSet14->SetLineStyle(2);
+    pTF1_OddSet15->SetLineColor(kCyan);
     pTF1_OddSet15->SetLineStyle(2);
-    pTF1_OddSet16->SetLineColor(8);
+    pTF1_OddSet16->SetLineColor(kBlack);
     pTF1_OddSet16->SetLineStyle(2);
 
     TCanvas *pTCanvas = new TCanvas("Name", "",0,0,3000,2500);
@@ -47,17 +47,17 @@ void IdealFitMacroPlot()
     TLegend *pTLegend = new TLegend(0.7,0.1,0.95,0.9); 
     pTLegend->SetTextSize(0.05);
     pTLegend->AddEntry(pTF1_EvenSet9, "Set 9, Centred", "l");
-    pTLegend->AddEntry(pTF1_EvenSet10, "Set 10, #frac{1}{4} Offset", "l");
+    pTLegend->AddEntry(pTF1_EvenSet10, "Set 10, 1/4 Offset", "l");
     pTLegend->AddEntry(pTF1_EvenSet12, "Set 12, Centred", "l");
     pTLegend->AddEntry(pTF1_EvenSet13, "Set 13, Centred", "l");
-    pTLegend->AddEntry(pTF1_EvenSet14, "Set 14, #frac{1}{2} Offset", "l");
+//    pTLegend->AddEntry(pTF1_EvenSet14, "Set 14, 1/2 Offset", "l");
     pTLegend->AddEntry(pTF1_EvenSet15, "Set 15, Centred", "l");
-    pTLegend->AddEntry(pTF1_EvenSet16, "Set 16, #frac{1}{2} Offset", "l");
+    pTLegend->AddEntry(pTF1_EvenSet16, "Set 16, 1/2 Offset", "l");
 
     TLegend *pTLegend2 = new TLegend(0.15,0.65,0.4,0.85); 
     pTLegend2->SetTextSize(0.05);
-    pTLegend2->AddEntry(pTF1_EvenSet9, "Even Columns", "l");
-    pTLegend2->AddEntry(pTF1_OddSet9, "Odd Columns", "l");
+    pTLegend2->AddEntry(pTF1_EvenSet16, "Even Columns", "l");
+    pTLegend2->AddEntry(pTF1_OddSet16, "Odd Columns", "l");
 
     TH2F *pAxes = new TH2F("Axes","",180,0,180,200,0,20);
     pAxes->Draw();
@@ -73,14 +73,14 @@ void IdealFitMacroPlot()
     pTF1_EvenSet10->Draw("same");
     pTF1_EvenSet12->Draw("same");
     pTF1_EvenSet13->Draw("same");
-    pTF1_EvenSet14->Draw("same");
+//    pTF1_EvenSet14->Draw("same");
     pTF1_EvenSet15->Draw("same");
     pTF1_EvenSet16->Draw("same");
     pTF1_OddSet9->Draw("same");
     pTF1_OddSet10->Draw("same");
     pTF1_OddSet12->Draw("same");
     pTF1_OddSet13->Draw("same");
-    pTF1_OddSet14->Draw("same");
+//    pTF1_OddSet14->Draw("same");
     pTF1_OddSet15->Draw("same");
     pTF1_OddSet16->Draw("same");
     pTLegend->Draw();
@@ -88,6 +88,8 @@ void IdealFitMacroPlot()
     pTCanvas->SaveAs("AverageToT_vs_InjectedPulseHeight.pdf");
     pTCanvas->SaveAs("AverageToT_vs_InjectedPulseHeight.C");
 }
+
+//===============================================================
 
 TF1 *GetFunction(double a, double b, double c, double t)
 {
