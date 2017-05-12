@@ -9,34 +9,34 @@
 
 \section{Introduction}
 \label{sec:optimisationstudies}
-The fundamental principle of particle flow calorimetry is to measure the energy of a particle passing through a detector in whichever sub-detector offers the best energy resolution.  For particle collider experiments, this involves measuring the momenta of charged particles using the curvature of the track they create in the detector.  This offers extremely good energy resolution in comparison to calorimetric energy measurements and is the source of the excellent energy resolution that particle flow calorimetry can produce.  As neutral particles produce no tracks, their energies must be measured using calorimetric energy deposits.  
+The fundamental principle of particle flow calorimetry is to measure the energy of a particle passing through a detector in whichever sub-detector offers the best energy resolution.  For particle collider experiments, this involves measuring the momenta of charged particles using the curvature of the track they create in the detector.  This offers extremely good energy resolution in comparison to calorimetric energy measurements.  As neutral particles produce no tracks, their energies must be measured using calorimetric energy deposits.
 
-The application of particle flow calorimetry is extremely challenging as it is possible, by using incorrect associations of charged particle tracks to calorimetric energy deposits, to both double count and omit energy measurements.  For example:
+The application of particle flow calorimetry is extremely challenging as charged particles create both tracks and calorimetric energy deposits.  If both of these energy measurements were included, the energy of all charged particles would be double counted.  Therefore, to avoid this, any calorimetric energy deposits originating from charged particles are not included in the final energy measurement.  However, this methodology makes it possible to double count and omit energy measurements if the origin of a calorimetric energy deposit is misidentified.  For example:
 \begin{itemize}
-\item If part of the calorimetric energy deposit from a charged particle is not associated to the track that energy deposit is double counted.
-\item If part of the calorimetric energy deposit from a neutral particle is incorrectly associated to a track, the energy deposit is not accounted for.
+\item If a calorimetric energy deposit, made by a charged particle, is not associated to a track, the calorimetric energy deposit will be double counted: Firstly, when the track energy is accounted for and secondly, when the calorimetric energy deposit is incorrectly reported as the energy of a neutral particle.  
+\item If a calorimetric energy deposit, made by a neutral particle, is incorrectly associated to a track, that calorimetric energy deposit is not accounted for.
 \end{itemize}
-\noindent These effects, collectively know as "confusion", degrade the energy resolution of a particle flow detector.  Therefore, it it is crucial to make correct associations between charged particle tracks and calorimetric energy deposits to minimise the effect of confusion.  These associations can only be successfully made if the calorimeters in use have fine segmentation, such as those found at the linear collider experiment, so that it becomes possible to separate the energy deposits from nearby showering particles.  Even with this segmentation, making the association of charged particle tracks to the calorimetric energy deposits is highly non-trivial.  At the linear collider experiment, these associations are made using sophisticated pattern recognition algorithms, provided by PandoraPFA.  The fine segmentation of the calorimeters allows PandoraPFA to reconstruct the four-momenta of all particles passing through the detector and to use the energy measurement from the optimal sub-detector in each case. 
+\noindent These effects, collectively know as "confusion", degrade the energy resolution of a particle flow detector.  Therefore, it it is crucial to make correct associations between charged particle tracks and their calorimetric energy deposits to minimise the effect of confusion.  These associations can only be successfully made if the calorimeters used have fine segmentation, such as those found at the linear collider experiment, so that it becomes possible to separate the energy deposits from nearby showering particles.  Even with this segmentation, making the association of charged particle tracks to calorimetric energy deposits is highly non-trivial.  At the linear collider experiment, these associations are made using sophisticated pattern recognition algorithms, provided by PandoraPFA.  The fine segmentation of the linear collider calorimeters allows PandoraPFA to reconstruct the four-momenta of all particles passing through the detector and to report the energy of all reconstructed particles using the energy measurement from the optimal sub-detector.  For additional details on PandoraPFA see chapter \ref{chap:pflowandlcdetectors}.
 
-This chapter considered optimisation of the calorimeters used at the linear collider, with focus placed on obtaining the best energy resolution for jets.  Parameters such as the number of layers, cell size and material choices for the calorimeters are investigated.  This chapter concludes with an optimisation of several global parameters for the detector such as the magnetic field strength used for the detector and the inner radius of the ECal.  These parameters are not calorimeter specific, but affect the jet energy resolution obtained from particle flow. 
+This chapter considered optimisation of the calorimeters used at the linear collider, with focus placed on obtaining the best energy resolution for jets.  Parameters such as the number of layers, cell size and material choices for the calorimeters are investigated.  This chapter concludes with an optimisation of several global detector parameters such as the magnetic field strength and the inner radius of the ECal.  These parameters are not calorimeter specific, but affect the jet energy resolution obtained from particle flow. 
 
 %========================================================================================
 %========================================================================================
 
 \section{Jet Energy Resolution}
 \label{sec:optstudiesmetric}
-As many physics processes of interest at the linear collider involve multi-jet final states, good jet energy resolution is a crucial a aspect of detector performance.  As shown in chapter \ref{chap:PhysicsAnalysis}, parameters derived from the energy measurements of jets, such as invariant mass, are extremely useful for identification of physics channels of interest as well as determining the sensitivity of the linear collider experiments to areas of new physics.  Therefore, the primary metric used in this study is the jet energy resolution.
+As many physics processes of interest at the linear collider involve multi-jet final states \cite{Abramowicz:2016zbo}, good jet energy resolution is a crucial a aspect of detector performance.  As shown in chapter \ref{chap:PhysicsAnalysis}, the sensitivity of the linear collider experiment to areas of new physics can determined using reconstructed jet energies.  Furthermore, parameters derived from the energy measurements of jets are extremely useful for identification of physics channels of interest.  Therefore, the primary metric used for this optimisation study is the jet energy resolution.
 
 Jet energy resolution in particular can benefit from the application of particle flow calorimetry as $\approx 70 \%$ of the energy of jets are carried in the form of charged particles.  As particle flow aims to measure the energy of charged particles using the tracker, it has the potential to offer extremely large benefits when measuring jet energies in comparison to the traditional calorimetric approach.  
 
 %========================================================================================
 
 \subsection{Jet Energy Resolution Metrics}
-The primary metric used to optimise detector performance is the jet energy resolution.  This was found through the simulation of off-shell mass Z boson events decaying to light quarks (u, d, s).  In these events the Z boson is produced at rest, which means the typical decays form two mono-energetic jets that are produced back to back as shown in figure \ref{fig:500GeVzudsevtdisplay}.  Only events where $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the quarks from the Z decay, are used in the metric calculation to ensure little energy is lost down the beam axis.  Using these events the jet energy resolution is calculated as follows: 
+The jet energy resolution in these studies was determined through the simulation of off-shell mass Z boson events decaying to light quarks (u, d, s).  In these events, the Z boson is produced at rest, which means the typical decays form two mono-energetic jets that are produced back to back as shown in figure \ref{fig:500GeVzudsevtdisplay}.  Only events where $|\text{cos}(\theta)| < 0.7$, where $\theta$ is the polar angle of the quarks, are used in the jet energy resolution calculation.  This ensures little energy is lost down the beam axis.  Using these events the jet energy resolution is calculated as follows: 
 \begin{equation} 
-\frac{\text{RMS}_{90}(E_{i})}{\text{Mean}_{90}(E_{i})} = \frac{\text{RMS}_{90}(E_{jj})}{\text{Mean}_{90}(E_{jj})} \times \sqrt{2} \text{ ,}
+\frac{\text{RMS}_{90}(E_{j})}{\text{Mean}_{90}(E_{j})} = \frac{\text{RMS}_{90}(E_{jj})}{\text{Mean}_{90}(E_{jj})} \times \sqrt{2} \text{ ,}
 \end{equation}
-\noindent where $E_{jj}$ is the total reconstructed energy.  $\text{Mean}_{90}(E_{jj})$ and $\text{RMS}_{90}(E_{jj})$ are the mean and root mean squared (RMS) of the $E_{jj}$ distribution.  These variables are calculated across the range of $E_{jj}$ with the smallest RMS containing at least 90\% of the data.  
+\noindent where $E_{jj}$ is the total reconstructed energy.  $\text{Mean}_{90}(E_{jj})$ and $\text{RMS}_{90}(E_{jj})$ are the mean and root mean squared (RMS) of the $E_{jj}$ distribution.  These variables are calculated across the range of $E_{jj}$ with the smallest RMS containing at least 90\% of the data.  This definition is used to remove the effect of outliers in the distribution \cite{arXiv:0907.3577}.  If all associations between charged particle tracks and calorimeter clusters were correctly made, the reconstructed jet energy distribution would be Gaussian.  However, the effect of confusion on certain events will distort this distribution and broaden the tails significantly.  If the full range were to be used in the jet energy resolution calculation, the effect of these tails is overinflated.  If the distribution of reconstructed jet energies is truncated to the narrowest range of the data containing at least $90\%$ of the data, the effect of these tails can be negated.  This removes events where confusion is dominant, which makes the jet energy resolution metric far more robust and representative of the bulk of the data.  
 
 \begin{figure}[h!]
 \centering
@@ -52,23 +52,61 @@ The primary metric used to optimise detector performance is the jet energy resol
 \label{fig:rms90defintion}
 \end{figure} 
 
-This definition is used to remove the effect of outliers in the distribution \cite{arXiv:0907.3577}.  Although the correct combination of charged particle tracks and calorimetric energy measurements would give a Gaussian reconstructed jet energy distribution, the effect of confusion on certain events will distort this distribution and broaden the tails significantly.  If the full range were to be used in the jet energy resolution calculation, the effect of these tails is overinflated.  If the distribution of reconstructed jet energies is truncated to the narrowest range of the data containing at least $90\%$ of the data, the effect of these tails can be negated.  This removes events where confusion is dominant, which makes the jet energy resolution metric far more robust and representative of the bulk of the data.  
+An example of the application of this metric can be found in figure \ref{fig:rms90defintion}.  In this example $\text{RMS}(E_{j})$, the RMS calculated using the full range, is 5.8~GeV, while $\text{RMS}_{90}(E_{j})$, the RMS using the reduced range, is 4.1~GeV.  This corresponds to a reduction in the jet energy resolution from $4.1\%$ to $2.9\%$, which clearly shows an overemphasis of the tails of the distribution when using the full jet energy range.
 
-An example of the application of this metric can be found in figure \ref{fig:rms90defintion}.  The RMS calculated using the full range is 5.8~GeV, while the RMS using the reduced range is 4.1~GeV.  This corresponds to a reduction in the jet energy resolution from $4.1\%$ to $2.9\%$, which clearly shows an overemphasis of the tails of the distribution if the full range is used in the calculation.
-
-In the subsequent analysis a range of di-jet energies were considered ranging from the Z mass, 91~GeV, to the nominal running energy of the ILC, 500~GeV.  Each event sample contained 10,000 events generated isotropically so that, given the polar angle cut, approximately 7,000 events contribute to the jet energy resolution metric. 
+In the subsequent analysis a range of di-jet energies were considered ranging from the Z mass, 91~GeV, to the nominal running energy of the ILC, 500~GeV.  Each event sample contained 10,000 events generated isotropically so that, given the polar angle cut, approximately 7,000 events contribute to the jet energy resolution calculation. 
 
 %========================================================================================
 
 \subsection{Jet Energy Resolution Decompositions}
-It is possible to gain insight into the detector performance by cheating various parts of the pattern recognition using the MC information.  Cheating the pattern recognition removes the effect of confusion as it ensures no errors are made when either clustering calorimeter hits together or when associating charged particle tracks to those calorimeter clusters.  This allows the detector performance to be deconstructed into two terms; one related exclusively to the intrinsic energy resolution of the detector and another related to the pattern recognition confusion.  The additional information this provides is extremely useful for characterising changes to the overall detector performance.  
+It is possible to gain additional insight into the detector performance by cheating the pattern recognition, the clustering of calorimeter hits together and the creation of track to cluster associations, using MC information.  Cheating the pattern recognition removes the effect of confusion as it ensures no errors are made when either clustering calorimeter hits together or when associating charged particle tracks to those calorimeter clusters.  This allows the detector performance to be deconstructed into two terms; one related exclusively to the intrinsic energy resolution of the detector and another related to the pattern recognition confusion.  The additional information this provides is extremely useful for characterising changes to the overall detector performance.  
 
-The intrinsic energy resolution contribution to the jet energy resolution is determined by fully cheating the pattern recognition; in this case all confusion is negated.  The total confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and this fully cheated reconstruction.  Furthermore, it is possible to cheat the pattern recognition associated with individual types of particles.  This is particularly useful for studies related to the ECal as, by cheating the photon pattern recognition, it is possible to isolate the confusion associated with photons.  The photon confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and the reconstruction where photons pattern recognition is cheated.    
+The intrinsic energy resolution contribution to the jet energy resolution is determined by fully cheating the pattern recognition; in this case all confusion is negated.  The total confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and this fully cheated reconstruction.  Furthermore, it is possible to cheat the pattern recognition associated with individual types of particles.  This is particularly useful for studies related to the ECal as, by cheating the photon pattern recognition, it is possible to isolate the confusion associated with photons.  The photon confusion is defined as the quadrature difference between the jet energy resolution using the standard reconstruction and the reconstruction where the photon pattern recognition is cheated.  Examples of the calculation of the various confusion terms defined above are given in table \ref{table:confusioncalculation}.
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r}
+\hline
+Reconstruction & Jet Energy Resolution [\%] \\
+\hline
+Standard Reconstruction (No MC Information) & $a = 2.97\pm0.05$ \\
+Cheating Entire Reconstruction & $b = 1.69\pm0.02$ \\
+Confusion & $\sqrt{a^{2}-b^{2}} = 2.45\pm0.05$ \\
+\hline
+Cheating Photon Reconstruction & $c = 2.73\pm0.04$ \\
+Photon Confusion & $\sqrt{a^{2}-c^{2}} =1.18\pm0.06$ \\
+\hline
+\end{tabular}
+\caption[Example calculation of the confusion contributions to the jet energy resolution.  These jet energy resolutions are for 250~GeV jets using the nominal ILD detector model.]{Example calculation of the confusion contributions to the jet energy resolution.  These jet energy resolutions are for 250~GeV jets using the nominal ILD detector model.}
+\label{table:confusioncalculation}
+\end{table}
 
 %========================================================================================
 
 \subsection{Single Particle Energy Resolution}
-Several physics studies rely on the identification of single particles, such as $\gamma$ in anomalous triple gauge coupling studies CITE, and as such the energy resolution of individual particles is presented alongside the jet energy resolution metric.  As only uncharged particle energies are measured in the calorimeters in the particle flow paradigm, the single particle energy resolution is shown using $\gamma$s and $K^{0}_{L}$s.  $\gamma$s are particularly relevant for several physics studies and, as they are largely contained within the ECal, they provide insight into detector changes related purely to the ECal.  This makes $\gamma$s a natural choice of particle to consider for this study.  $K^{0}_{L}$s were used as, analogously to $\gamma$s and the ECal, their energies are primarily measured using the HCal.  Although in general neutral hadron energy resolutions are less crucial to physics studies, the energy resolution is still a crucial contribution to the jet energy resolution, which should not be overlooked.  For these single particle samples the energy resolution is defined using a Gaussian fit to the reconstructed energy distributions.  The fit was applied to the narrowest region of the reconstructed PFO energy distribution that contained at least 75\% of the data.  This increases the likelihood that the fit converges and ensures a better parameterisation of the bulk of the data set.  The resolution is defined as the standard deviation divided by the mean of that reconstructed Gaussian.  A total of 10,000 events are used to calculate the energy resolution at each fixed energy point.  A cut of $|\text{cos}(\theta)| < 0.7$ is applied to ensure events avoid the Barrel/EndCap overlap region.  Examples of the single particle energy distributions for 100 GeV $\gamma$s and 50 GeV $K^{0}_{L}$s alongside the Gaussian fit used to determine their energy resolution are shown in figure \ref{fig:singleparticleenergyhists}.  The errors quoted on single particle energy resolutions are determined by propagating the errors reported from the Gaussian fit into the resolution calculation.  
+The energy resolution for single particles is crucial to a number of physics studies, such as $\gamma$ energy resolution for anomalous triple gauge coupling studies \cite{Chatrchyan:2013fya,ATLAS:2012mec}.  
+
+%HERE
+Furthermore, by carefully choosing the type of single particle to study, it is possible to characterising the behaviour of individual calorimeter systems.  For example
+
+Furthermore, single particle energy resolutions are beneficial for , which in-turn helps to explain trends observed in the overall detector behaviour seen using jets.  
+
+For example, as $\gamma$s are largely contained within the ECal, the $\gamma$ energy resolution represents the energy resolution of the ECal.  
+
+ within the full simulation.  
+
+ resolutions are useful for quantifying the behaviour of 
+
+In the particle flow paradigm, only uncharged particle energies are recorded in the calorimeter and so for this optimisation study uncharged particles will be used to quantify the calorimeter behaviour.  
+
+ uncharged particles will be used to determine the calorimeter 
+
+The effect of confusion on single particle samples is minimal as there is only one particle per event, meaning the pattern recognition is trivial, and there are no tracks, meaning creating track cluster associations is redundant.
+
+As only uncharged particle energies are measured in the calorimeters in the particle flow paradigm, the single particle energy resolutions presented here are for samples of $\gamma$s and $K^{0}_{L}$s
+%%%
+
+$\gamma$s are particularly relevant for several physics studies and, as they are largely contained within the ECal, they provide insight into detector changes related purely to the ECal.  This makes $\gamma$s a natural choice of particle to consider for this study.  $K^{0}_{L}$s were used as, analogously to $\gamma$s and the ECal, their energies are primarily measured using the HCal.  Although in general neutral hadron energy resolutions are less crucial to physics studies, the energy resolution is still a crucial contribution to the jet energy resolution, which should not be overlooked.  For these single particle samples the energy resolution is defined using a Gaussian fit to the reconstructed energy distributions.  The fit was applied to the narrowest region of the reconstructed PFO energy distribution that contained at least 75\% of the data.  This increases the likelihood that the fit converges and ensures a better parameterisation of the bulk of the data set.  The resolution is defined as the standard deviation divided by the mean of that reconstructed Gaussian.  A total of 10,000 events are used to calculate the energy resolution at each fixed energy point.  A cut of $|\text{cos}(\theta)| < 0.7$ is applied to ensure events avoid the Barrel/EndCap overlap region.  Examples of the single particle energy distributions for 100 GeV $\gamma$s and 50 GeV $K^{0}_{L}$s alongside the Gaussian fit used to determine their energy resolution are shown in figure \ref{fig:singleparticleenergyhists}.  The errors quoted on single particle energy resolutions are determined by propagating the errors reported from the Gaussian fit into the resolution calculation.  
 
 \begin{figure}[h!]
 \centering
@@ -182,7 +220,7 @@ It is clear that the ECal cell size is extremely important for the jet energy re
 
 %========================================================================================
 
-\subsection{ECal Number of Layers}curves 
+\subsection{ECal Number of Layers} 
 \label{sec:ecalnlayers}
 The ECal performance was simulated for different numbers of sampling layers, while keeping the total material budget ($\text{X}_{0}$) approximately constant.  This study was performed for both the silicon and scintillator active material options.  In all cases tungsten was used for the ECal absorber material and the active layer thicknesses were not changed from those used in the nominal ECal models found in table \ref{table:defaultildecal}.  The different layouts for the ECals considered here are summarised in table \ref{table:nlayersecaloption}.  
 
@@ -432,7 +470,7 @@ The ILD detector performance was simulated where the ratio of the active to abso
 \subsection{HCal Absorber Material}
 \label{sec:hcalabsorbermaterial}
 
-The nominal choice of absorber material is steel wiht tungsten providing a feasible alternative.  Although tungsten is more expensive than steel, it contains a larger number of nuclear interaction lengths per unit length.  Therefore, using tungsten as opposed to steel as the absorber material would reduce the size of the HCal, while retaining the same number of nuclear interaction lengths.  Reducing the depth of the calorimeter would decrease the size of the solenoid required, which would offset some of the additional cost if tungsten were used as the absorber material. 
+The nominal choice of absorber material is steel with tungsten providing a feasible alternative \cite{Blaising:2015nla}.  Although tungsten is more expensive than steel, it contains a larger number of nuclear interaction lengths per unit length.  Therefore, using tungsten as opposed to steel as the absorber material would reduce the size of the HCal, while retaining the same number of nuclear interaction lengths.  Reducing the depth of the calorimeter would decrease the size of the solenoid required, which would offset some of the additional cost if tungsten were used as the absorber material. 
 
 \begin{table}[h!]
 \centering
