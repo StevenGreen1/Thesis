@@ -7,70 +7,84 @@
 %========================================================================================
 %========================================================================================
 
-\section{Calibration in the particle flow paradigm}
-\label{sec:calibration}
-%========================================================================================
-
-\subsection{Motivation}
+\section{Motivation}
+\label{sec:motivation}
 % Results use detector model 85 and calibration variant 71
 In any experiment, calibration is essential for ensuring reliability in measured quantities and the linear collider will be no exception to this.  In the particle flow paradigm measured energy deposits fall into two distinct classes (i) calorimetric energy deposits and (ii) charged particle tracks.  Calorimetric energy deposits are the essential building blocks for the application of the particle flow.  The separation of energy deposits from charged and neutral particles in the calorimeters is crucial for achieving good energy resolutions, which is only possible if the energy estimators for those energy deposits are accurate.  
 
 The ultimate goal of calibration is to obtain the best energy estimator for particles showering in the calorimeters.  The energy of a cluster of calorimeter hits is:
 
 \begin{equation}
-E_{Cluster} & = \sum_{ECal \text{ } hits} E_{ECal} + \sum_{HCal \text{ } hits} E_{HCal} \text{ ,}
+E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \text{ ,}
 \end{equation}
 
-\noindent where $E_{ECal}$ is the energy of a calorimeter hit in the ECal, $E_{HCal}$ is the energy of a calorimeter hit in the HCal and $\sum$ runs over all hits in a given calorimeter.  This is a naive energy estimator, but it is a starting point for the development of more sophisticated procedures.  However, the determination of the hit energies in the calorimeter for a sampling calorimeters is non-trivial as it is only the energy in the active medium of the calorimeter that is reported in the detector response.  The full calorimeter hit energy is determined through a process, loosely referred to as digitisation, whereby the energy deposited in the absorber material of the calorimeter is estimated based on the energy in the active medium.  It is assumed that the energy deposited in the active and absorber layers of the calorimeter will be proportional to each other and so a series of constants, $\alpha$ one for each calorimeter, are used to make this estimation.  In this way the cluster energy estimator introduced above can be written as:
+\noindent where $E^{i}_{ECal}$ is the energy of a calorimeter hit $i$ in the ECal, $E^{i}_{HCal}$ is the energy of a calorimeter hit $i$ in the HCal and $\sum$ runs over all hits in a given calorimeter.  This is a naive energy estimator, but it is a starting point for the development of more sophisticated procedures aimed at improving detector performance.  However, before going further the calorimeter hit energies must be determined, which for a sampling calorimeter is a non-trivial task.  Sampling calorimeters, such as those found at the linear collider, are comprised of alternating layers of active and absorber materials \cite{Fabjan:2003aq};  The absorber layers are designed to initiate and propagate particle shower development, while the active layers are designed to give a response that is proportional to the energy deposited within them.  As the response of a sampling calorimeter gives a measure of the energy deposited in the active layers, the total energy deposited in the calorimeter has to be estimated based on the active layer energies.  It is assumed that the energy deposited the active and absorber layers of a sampling calorimeter are the proportional to each other, which makes the total hit energy is proportional to the active layer hit energy.  This estimation procedure is loosely referred to as digitisation.  In this way the cluster energy estimator introduced above can be written as:
 
 \begin{equation}
 \begin{aligned}
-E_{Cluster} = \sum_{ECal \text{ } hits} \epsilon_{ECal} \alpha_{ECal} + \sum_{HCal \text{ } hits} \epsilon_{HCal} \alpha_{HCal} \text{ ,}
+E_{Cluster} = \sum_{ECal \text{ } hits \text{, }i} \epsilon^{i}_{ECal} \alpha_{ECal} + \sum_{HCal \text{ } hits \text{, }i} \epsilon^{i}_{HCal} \alpha_{HCal} \text{ ,}
 \end{aligned}
 \end{equation}
 
-\noindent where $\epsilon_{ECal}$ is the energy response in the active medium for a calorimeter hit in the ECal, where $\epsilon_{HCal}$ is the energy response in the active medium for a calorimeter hit in the HCal and $\sum$ runs over all hits in a given calorimeter.  The first stage of the calibration procedure presented in this chapter covers the determination of these digitisation constants.  
+\noindent where $\epsilon^{i}_{ECal}$ is the energy response in the active medium for a calorimeter hit $i$ in the ECal, where $\epsilon^{i}_{HCal}$ is the energy response in the active medium for a calorimeter hit $i$ in the HCal and $\sum$ runs over all hits in a given calorimeter.  The first stage of the calibration procedure presented in this chapter covers the determination of these digitisation constants.  
 
-Once the basic energy estimator has been calibrated, it is possible to apply more advanced procedures designed to give a compensating calorimeter response.  Depending on the properties of the materials used, calorimeters may have different responses to electromagnetic and hadronic particle showers.  The primary cause of this different response is the invisible energy component found in hadronic showers.  The invisible energy component in hadronic showers is caused by various factors such as neutrons stopping within the calorimeter and nuclear binding energy losses.  Overall, these effects leads to a reduction in the response of a calorimeter to hadronically showering particles in comparison to electromagnetically showering particles.  If left unchecked, this difference would lead to a systematic loss of energy for hadronic showers that would harm detector performance.  There are two distinct routes available for negating this unwanted effect and achieving a compensating response from a calorimeter, that is one where the response to electromagnetic and hadronic showers are identical:  The first is hardware compensation, whereby the calorimeters are constructed using materials that have a yield extra energy in response to hadronic showers, and the second is software compensation, whereby the uncompensated calorimetric energies are corrected based on whether the originate from a hadronic shower.  The linear collider lends itself to software compensation as the fine segmentation of the calorimeter and precise reconstruction of individual particles that enables makes identification of hadronic showers, and modifying their energies to achieve a compensating response, feasible.  A basic form of software compensation included in the linear collider reconstruction is the modification of the electromagnetic cluster energy estimator to:
+Once the basic energy estimator has been calibrated, it is possible to apply more advanced procedures designed to give a compensating calorimeter response.  A compensating calorimeter produces an identical response to electromagnetically and hadronically showering particles.  Depending on the properties of the materials used, calorimeters can have different responses to electromagnetic and hadronic particle showers.  The primary cause of this different response is the invisible energy component found in hadronic showers.  As this component cannot be measured by the calorimeter, the response of a calorimeter is typically lower to hadronically showering particles than to electromagnetically showering particles.  The invisible component exists due to a combination of various effects, such as neutrons stopping within the calorimeter and nuclear binding energy losses.  If left unchecked, this difference would lead to a systematic loss of energy for hadronic showers that would harm detector performance.  
 
-\begin{equation}
-E_{EM \text{ } Cluster} & = \sum_{ECal \text{ } hits} E_{ECal} \beta^{EM}_{ECal} + \sum_{HCal \text{ } hits} E_{HCal} \beta^{EM}_{HCal}
-\end{equation}
-
-and the hadronic cluster energy to:
+There are two distinct routes available for negating this unwanted effect and achieving a compensating response from a calorimeter:  The first is hardware compensation, whereby calorimeters are constructed using materials that yield extra energy in response to hadronic showers and the second is software compensation, whereby the uncompensated calorimetric energies are corrected based on whether the shower is hadronic.  The linear collider lends itself to software compensation as the fine segmentation of the calorimeters and precise reconstruction of individual particles makes identification of hadronic showers, and modifying their energies, feasible.  A basic form of software compensation included in the linear collider reconstruction is the modification of the electromagnetic cluster energy estimator to:
 
 \begin{equation}
-E_{Had \text{ } Cluster} & = \sum_{ECal \text{ } hits} E_{ECal} \beta^{Had}_{ECal} + \sum_{HCal \text{ } hits} E_{HCal} \beta^{Had}_{HCal}
+E_{EM \text{ } Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} \beta^{EM}_{ECal} + \sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \beta^{EM}_{HCal}
 \end{equation}
 
-\noindent where $\beta$ are constant scaling factors that are applied to the calorimeter hit energies associate to electromagnetic and hadronic clusters in the ECal and HCal.  This simple scaling of energies compensates the response of the calorimeters at single energy point leading to better detector performance.  Determination of these energy scale setting constants is the second stage of the calibration procedure that is presented in this chapter.  
+\noindent and the hadronic cluster energy to:
 
-While this scaling of energies improves detector performance, it does not account for any changes to the $\beta$ scaling factors as a function of energy, meaning compensation can only be guaranteed for the single energy point where the $\beta$ constants are calibrated.  As such, an alternative software compensation technique has been developed that makes use of the fine segmentation of the linear collider detectors to achieve a compensating response across a wider range of energies.  In this chapter, following the description of the calibration procedure outlined above, is a detailed explanation of this technique and the results showing the impact it has on performance.  This chapter concludes with a discussion of the impact of timing cuts applied to calorimeter hits in the software trigger for the linear collider.   Details regarding how all the detector performance metrics used in this chapter are calculated can be found in section \ref{sec:optstudiesmetric}.
+\begin{equation}
+E_{Had \text{ } Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} \beta^{Had}_{ECal} + \sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \beta^{Had}_{HCal}
+\end{equation}
+
+\noindent where the $\beta$s are constant scaling factors that are applied to the calorimeter hit energies associated to electromagnetic and hadronic clusters in the ECal and HCal.  This simple scaling of energies compensates the response of the calorimeters at the fixed energy where the $\beta$s are calibrated, which leads to better detector performance.  Determination of these energy scale setting constants is the second stage of the calibration procedure that is presented in this chapter.  
+
+While this scaling of energies improves detector performance, it does not account for any changes to the $\beta$ scaling factors as a function of energy.  As such, an alternative software compensation technique has been developed, which makes use of the fine segmentation of the linear collider detectors, to achieve a compensating response across a wider range of energies.  In this chapter, following the description of the calibration procedure outlined above, is an explanation of this technique and the results showing the impact it has on performance.  
+
+This chapter concludes with a study determining the impact on detector performance of timing cuts that are applied to the calorimeter hits.  These cuts form part of the software trigger that will be used at the linear collider experiment.  Details regarding how all the detector performance metrics used in this chapter are calculated can be found in section \ref{sec:optstudiesmetric}.
 
 %========================================================================================
 
 \subsubsection{Hardware Compensation}
-A novel example of hardware compensation would be the ZEUS calorimeter \cite{Derrick:1991tq} that was constructed using uranium as the absorber material.  In response to neutral hadrons the uranium underwent fission producing extra energy, which raises the hadronic response of the calorimeter.  The amount of uranium was carefully chosen to achieve a fully compensating calorimeter response i.e. identical calorimeter response to electromagnetic and hadronic showers.  While hardware compensation is possible for the linear collider calorimeters, restrictions on calorimeter construction and the use of a large amount of radioactive material are highly undesirable.  
+A novel example of hardware compensation would be the ZEUS calorimeter \cite{Derrick:1991tq}.  The ZEUS calorimeter was constructed using uranium as the absorber material.  In response to neutral hadrons the uranium undergoes fission producing extra energy that increases the hadronic response of the calorimeter.  The amount of uranium was carefully chosen to achieve a fully compensating calorimeter response i.e. identical calorimeter response to electromagnetic and hadronic showers.  While hardware compensation is possible for the linear collider calorimeters, restrictions on calorimeter construction and the use of a large amount of radioactive material are highly undesirable.  
 
 %========================================================================================
 
 \subsection{Calibration and detector optimisation}
-Optimising the detector at a future linear collider will be crucial to exploit the full physics potential available to it.  An extensive optimisation of the calorimeters was performed and the results can be found in chapter \ref{sec:optimisationstudies}.  For each detector model considered in that study, the calibration procedure outlined in section \ref{sec:overviewcalibration} was applied to ensure optimal energy estimators were used to quantify the detector performance.  This made unbiased comparison between detector models performance possible and ensured reliability in the conclusions drawn from this study.
+Optimising the detector at a future linear collider will be crucial to exploit the full physics potential available to it.  An extensive optimisation of the calorimeters was performed and the results can be found in chapter \ref{sec:optimisationstudies}.  For each detector model considered in that study, the calibration procedure outlined in section \ref{sec:overviewcalibration} was applied to ensure optimal energy estimators were used to quantify the detector performance.  This made unbiased comparison between detector models performance possible and ensured reliability in the conclusions drawn from that study.
 
 %========================================================================================
 
-\subsection{Calibration Goals}
+\section{Calibration in the particle flow paradigm}
 \label{sec:overviewcalibration}
-The calibration procedure aims to determine variables related to four aspects of the reconstruction, which are:
+The calibration procedure described in the following section discusses how the digitisation constants, $\alpha$, and the scaling factors $\beta$ introduced in section \ref{sec:motivation} are determined.  In addition, two further operations are included in the general calibration procedure designed to ensure optimal detector performance.  These are minimum ionising particle (MIP) scale setting and retraining of likelihood data used in the reconstruction.  
 
-\begin{enumerate}
-\item \textbf{Digitisation of calorimeter hits}.  Digitisation in this sense is the estimation of the energy deposited within a calorimeter cell, both the active and absorber layers, based on the signal measured in the sensitive region of the cell, the active layer.  
-\item \textbf{Minimum ionising particle (MIP) scale setting in the digitisation processor and PandoraPFA}.  The MIP scale has to be set in the digitiser as it simulates the response of the readout technology, which includes a maximum readout value set in units of MIPs.  The digitiser also applies a minimum threshold on the active layer cell energy, in units of MIPs, for calorimeter hit to be created.  PandoraPFA uses the MIP scale to place further threshold cuts on the cell energy that must be exceeded for a calorimeter hit to be used in the reconstruction.  Both of these thresholds are designed to veto noise that would be present in a real detector.  While noise is not applied in these simulations, the cuts are applied to better reflect the performance of a real detector. 
-\item \textbf{Electromagnetic and hadronic scale setting in PandoraPFA}.  As discussed in chapter CALORIMETER CHAPTER, the response of a calorimeter to electromagnetic and hadronic showers is different due to the fundamentally different mechanisms governing their propagation.  A key difference between the two is the presence of an invisible energy component within hadronic showers.  This leads to calorimeters to produce a lower response to hadronic showers than to electromagnetic showers initiated by particles of the same incident energy.  To account for this and any energy losses incurred due to the application of noise vetoing cuts in PandoraPFA the PFO energies are rescaled depending on whether the PFO has showered electromagnetically or hadronically.  Determination of these scaling factors is the setting of the electromagnetic and hadronic energy scales.  
-\item \textbf{Retraining photon likelihood data}.  The PandoraPFA algorithm uses likelihood data to determine whether a reconstructed object is a photon.  This likelihood data has to be retrained every time the ECal is altered.
-\end{enumerate}
+The MIP scale has to be set in the digitisation processor as it simulates the response of the readout technology, which includes a maximum readout value set in units of MIPs.  The digitiser also applies a minimum threshold on the active layer cell energy, in units of MIPs, for calorimeter hit to be created.  PandoraPFA also uses the MIP scale to place further threshold cuts on the hit energy that must be exceeded for a calorimeter hit to be used in the reconstruction.  Both of these thresholds are designed to veto noise that would be present in a real detector.  While noise is not applied in these simulations, the cuts are applied to better reflect the performance of a real detector. 
 
-The majority of these aspects must be addressed every time the detector model changes.  The ordering of each of these calibration steps is also crucial as it is possible to get interference between the different stages if applied in an arbitrary order.
+The likelihood data that is used in the reconstruction consists of a series of probability density functions (PDFs), which describe a number of topological properties of clusters of calorimeter hits.  This data is used to determine whether a cluster of hits corresponds to an electromagnetically showering particle.  The topological properties used in these PDFs are related solely to the ECal, which means that every time the ECal is changed from that of the nominal ILD detector this likelihood data must be retrained.  Therefore, it is natural to included this retraining a description of the calibration procedure that will be used for calorimeter optimisation.
+
+% ITERATIVE?
+
+%========================================================================================
+
+\subsection{Ordering of calibration procedure}
+The calibration procedure is broadly split into four separate operations: determination of digitisation constants, determination of scaling factor constants, MIP scale setting and retraining of likelihood data.  The ordering of each of these calibration steps is crucial as it is possible to get interference between the different stages if applied in an arbitrary order.  With that in mind the procedure order to minimise interference is as follows:
+
+\begin{enumerate} 
+\item MIP scale setting in the digitiser.
+\item Digitisation constant, $\alpha$, setting.
+\item MIP scale setting in the PandoraPFA.
+\item Scaling factor constant, $\beta$, setting.
+\end{enumerate} 
+
+\noindent should the ECal be modified and recalibration of the likelihood data be required, it is trained 
+
+%HERE
 
 %========================================================================================
 
@@ -283,21 +297,7 @@ The minimisation is done by stepping a range of $\delta^{Had}_{ECal}$ and $\delt
 
 where $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ are the values of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ giving the minimum $\chi^{2}$.  The step sizes used for minimising $\chi^{2}$ with respect to $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ is chosen such that a single step corresponds to the target final tolerance on $\delta^{Had}$ i.e. $|\delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.  
 
-This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ both fall within a given tolerance, which in this case it taken to be $|\Delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$
-
-%========================================================================================
-
-\subsection{Calibration step ordering}
-\label{sec:orderingcalib}
-
-The calibration procedure has to be run in the following order so that the building blocks used for each stage of the calibration procedure can be assumed to be correctly calibrated:
-
-\begin{enumerate}
-\item MIP Scale setting in the digitiser as described in section \ref{sec:mipresponse}.
-\item Calibration of digitisation of calorimeter hits in the ECal and HCal as described in section \ref{sec:digi}.
-\item MIP Scale setting in PandoraPFA as described in section \ref{sec:mipresponse}.
-\item Electromagnetic and hadronic scale settings in PandoraPFA as described in section \ref{sec:scalesetting}.
-\end{enumerate}
+This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ both fall within a given tolerance, which in this case it taken to be $|\Delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.
 
 %========================================================================================
 
