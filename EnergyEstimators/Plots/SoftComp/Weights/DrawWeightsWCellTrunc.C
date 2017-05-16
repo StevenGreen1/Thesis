@@ -67,12 +67,12 @@ void DrawWeightsWCellTrunc()
         }
 
         TString pTLegendname = "#it{E}_{Raw} "; pTLegendname += Ebeam[ie]; pTLegendname += " GeV";
-        pTLegend->AddEntry(gWei[ie],pTLegendname,"p");
+//        pTLegend->AddEntry(gWei[ie],pTLegendname,"p");
 
         gWei[ie]->SetMarkerColor(rootColor[ie]);
         gWei[ie]->SetLineColor(rootColor[ie]);
 
-        gWei[ie]->Draw("PS");
+//        gWei[ie]->Draw("PS");
     }
 
     TF1 *pTF1_l = new TF1("pTF1","1",0,41.92872);
@@ -82,9 +82,11 @@ void DrawWeightsWCellTrunc()
     pTF1_l->Draw("same");
     pTF1_h->Draw("same");
 
-    pTLegend->AddEntry(pTF1_l,"HCal Cell Truncation","l");
+    pTLegend->AddEntry(pTF1_l,"HCal Hit Energy Truncation","l");
 
     pTLegend->Draw();
-    pTCanvas->SaveAs("SoftwareCompensationWeightsWithCellTruncWeights.C");
-    pTCanvas->SaveAs("SoftwareCompensationWeightsWithCellTruncWeights.pdf");
+    pTCanvas->SaveAs("CellTruncWeights.C");
+//    pTCanvas->SaveAs("SoftwareCompensationWeightsWithCellTruncWeights.C");
+    pTCanvas->SaveAs("CellTruncWeights.pdf");
+//    pTCanvas->SaveAs("SoftwareCompensationWeightsWithCellTruncWeights.pdf");
 }

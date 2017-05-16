@@ -10,9 +10,9 @@
 \section{Motivation}
 \label{sec:motivation}
 % Results use detector model 85 and calibration variant 71
-In any experiment, calibration is essential for ensuring reliability in measured quantities and the linear collider will be no exception to this.  In the particle flow paradigm measured energy deposits fall into two distinct classes (i) calorimetric energy deposits and (ii) charged particle tracks.  Calorimetric energy deposits are the essential building blocks for the application of the particle flow.  The separation of energy deposits from charged and neutral particles in the calorimeters is crucial for achieving good energy resolutions, which is only possible if the energy estimators for those energy deposits are accurate.  
+In the particle flow paradigm measured energy deposits fall into two distinct classes (i) calorimetric energy deposits and (ii) charged particle tracks.  Calorimetric energy deposits are the essential building blocks for the application of the pattern recognition aspect of particle flow.  The separation of energy deposits from charged and neutral particles in the calorimeters is crucial for achieving good energy resolutions, which is only possible if the energy estimators for those energy deposits are accurate.  
 
-The ultimate goal of calibration is to obtain the best energy estimator for particles showering in the calorimeters.  The energy of a cluster of calorimeter hits is:
+The ultimate goal of the calibration procedure outlined in this chapter is to obtain the best energy estimator for particles showering in the calorimeters.  The energy of a cluster of calorimeter hits is:
 
 \begin{equation}
 E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \text{ ,}
@@ -21,9 +21,7 @@ E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \t
 \noindent where $E^{i}_{ECal}$ is the energy of a calorimeter hit $i$ in the ECal, $E^{i}_{HCal}$ is the energy of a calorimeter hit $i$ in the HCal and $\sum$ runs over all hits in a given calorimeter.  This is a naive energy estimator, but it is a starting point for the development of more sophisticated procedures aimed at improving detector performance.  However, before going further the calorimeter hit energies must be determined, which for a sampling calorimeter is a non-trivial task.  Sampling calorimeters, such as those found at the linear collider, are comprised of alternating layers of active and absorber materials \cite{Fabjan:2003aq};  The absorber layers are designed to initiate and propagate particle shower development, while the active layers are designed to give a response that is proportional to the energy deposited within them.  As the response of a sampling calorimeter gives a measure of the energy deposited in the active layers, the total energy deposited in the calorimeter has to be estimated based on the active layer energies.  It is assumed that the energy deposited the active and absorber layers of a sampling calorimeter are the proportional to each other, which makes the total hit energy is proportional to the active layer hit energy.  This estimation procedure is loosely referred to as digitisation.  In this way the cluster energy estimator introduced above can be written as:
 
 \begin{equation}
-\begin{aligned}
 E_{Cluster} = \sum_{ECal \text{ } hits \text{, }i} \epsilon^{i}_{ECal} \alpha_{ECal} + \sum_{HCal \text{ } hits \text{, }i} \epsilon^{i}_{HCal} \alpha_{HCal} \text{ ,}
-\end{aligned}
 \end{equation}
 
 \noindent where $\epsilon^{i}_{ECal}$ is the energy response in the active medium for a calorimeter hit $i$ in the ECal, where $\epsilon^{i}_{HCal}$ is the energy response in the active medium for a calorimeter hit $i$ in the HCal and $\sum$ runs over all hits in a given calorimeter.  The first stage of the calibration procedure presented in this chapter covers the determination of these digitisation constants.  
@@ -44,7 +42,7 @@ E_{Had \text{ } Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} \
 
 \noindent where the $\beta$s are constant scaling factors that are applied to the calorimeter hit energies associated to electromagnetic and hadronic clusters in the ECal and HCal.  This simple scaling of energies compensates the response of the calorimeters at the fixed energy where the $\beta$s are calibrated, which leads to better detector performance.  Determination of these energy scale setting constants is the second stage of the calibration procedure that is presented in this chapter.  
 
-While this scaling of energies improves detector performance, it does not account for any changes to the $\beta$ scaling factors as a function of energy.  As such, an alternative software compensation technique has been developed, which makes use of the fine segmentation of the linear collider detectors, to achieve a compensating response across a wider range of energies.  In this chapter, following the description of the calibration procedure outlined above, is an explanation of this technique and the results showing the impact it has on performance.  
+While this scaling of energies improves detector performance, it does not account for any changes to the $\beta$ scaling factors as a function of energy.  As such, more sophisticated software techniques, which makes use of the fine segmentation of the linear collider calorimeters, have been developed that vary the calorimeter cluster energy estimator as a function of energy to achieve a compensating response across a wider range of energies.  In addition to obtaining a compensating calorimeter response, these techniques address the problem of spuriously high energy calorimeter hits that if left unchecked would skew the reconstruction.  These high energy hits are caused by Landau fluctuations \cite{Landau:1944if}, which originate from high energy knock-on electrons appearing within particle showers \cite{Bichsel:2004ej}.  In this chapter, following the description of the calibration procedure outlined above, is an explanation of two novel energy estimators and the impact they have on detector performance.  
 
 This chapter concludes with a study determining the impact on detector performance of timing cuts that are applied to the calorimeter hits.  These cuts form part of the software trigger that will be used at the linear collider experiment.  Details regarding how all the detector performance metrics used in this chapter are calculated can be found in section \ref{sec:optstudiesmetric}.
 
@@ -55,7 +53,7 @@ A novel example of hardware compensation would be the ZEUS calorimeter \cite{Der
 
 %========================================================================================
 
-\subsection{Calibration and detector optimisation}
+\subsubsection{Calibration and detector optimisation}
 Optimising the detector at a future linear collider will be crucial to exploit the full physics potential available to it.  An extensive optimisation of the calorimeters was performed and the results can be found in chapter \ref{sec:optimisationstudies}.  For each detector model considered in that study, the calibration procedure outlined in section \ref{sec:overviewcalibration} was applied to ensure optimal energy estimators were used to quantify the detector performance.  This made unbiased comparison between detector models performance possible and ensured reliability in the conclusions drawn from that study.
 
 %========================================================================================
@@ -64,188 +62,150 @@ Optimising the detector at a future linear collider will be crucial to exploit t
 \label{sec:overviewcalibration}
 The calibration procedure described in the following section discusses how the digitisation constants, $\alpha$, and the scaling factors $\beta$ introduced in section \ref{sec:motivation} are determined.  In addition, two further operations are included in the general calibration procedure designed to ensure optimal detector performance.  These are minimum ionising particle (MIP) scale setting and retraining of likelihood data used in the reconstruction.  
 
-The MIP scale has to be set in the digitisation processor as it simulates the response of the readout technology, which includes a maximum readout value set in units of MIPs.  The digitiser also applies a minimum threshold on the active layer cell energy, in units of MIPs, for calorimeter hit to be created.  PandoraPFA also uses the MIP scale to place further threshold cuts on the hit energy that must be exceeded for a calorimeter hit to be used in the reconstruction.  Both of these thresholds are designed to veto noise that would be present in a real detector.  While noise is not applied in these simulations, the cuts are applied to better reflect the performance of a real detector. 
+The MIP scale is the average energy response, on a per hit level, of a calorimeter when a normally incident MIP passes through it.  This scale must be set in the digitisation processor as the response of the readout technology is simulated in this processor, which includes a maximum readout value set in units of MIPs.  The digitiser also applies a minimum threshold on the active layer hit energy, in units of MIPs, for calorimeter hit to be created.  PandoraPFA uses the MIP scale to place further threshold cuts on the hit energy that must be exceeded for a calorimeter hit to be used in the reconstruction.  Both of these thresholds are designed to veto noise that would be present in a real detector.  Although noise is not applied in any simulations presented in this work, these cuts are applied to better reflect the performance of a real detector.  The MIP scale in the digitiser and PandoraPFA, while intrinsically linked, have to be calculated separately as the digitiser requires the MIP scale to be defined using the active layer hit energies while, PandoraPFA requires the definition from the full hit, the active and absorber layer, energies.  It may be expected that the digitisation MIP scale could be related to the PandoraPFA MIP scale by the digitisation constants, however, this is not necessarily the case as additional cuts are applied to the full calorimeter hit energies that are not applied to the active layer hit energies e.g. timing cuts.  Therefore, the conservative approach of independently recalculating the MIP scale for PandoraPFA was taken.   
 
 The likelihood data that is used in the reconstruction consists of a series of probability density functions (PDFs), which describe a number of topological properties of clusters of calorimeter hits.  This data is used to determine whether a cluster of hits corresponds to an electromagnetically showering particle.  The topological properties used in these PDFs are related solely to the ECal, which means that every time the ECal is changed from that of the nominal ILD detector this likelihood data must be retrained.  Therefore, it is natural to included this retraining a description of the calibration procedure that will be used for calorimeter optimisation.
 
-% ITERATIVE?
+To calibrate the $\alpha$ and $\beta$ constants reconstructed energy distributions, of either clusters of calorimeter hits for the $\alpha$ or PFO energies for the $\beta$, are produced and their mean value tuned by varying these constants.  However, when filling these distributions a number of cuts are applied to the data to ensure the correct constant is being tuned.  The application of these cuts means that linear scaling of the $\alpha$ and $\beta$ constants does not lead to a linear shift in the mean of the reconstructed energy distributions.  Therefore, when calibrating the $\alpha$ and $\beta$ constants an iterative approach is taken whereby the calibration is repeated several times, each time updating the calibration constants, until a certain accuracy in the mean of these reconstructed energy distributions is achieved.  
 
 %========================================================================================
 
-\subsection{Ordering of calibration procedure}
-The calibration procedure is broadly split into four separate operations: determination of digitisation constants, determination of scaling factor constants, MIP scale setting and retraining of likelihood data.  The ordering of each of these calibration steps is crucial as it is possible to get interference between the different stages if applied in an arbitrary order.  With that in mind the procedure order to minimise interference is as follows:
+\subsubsection{Ordering of Calibration Procedure}
+The calibration procedure is broadly split into four separate operations: determination of digitisation constants, determination of scaling factor constants, MIP scale setting and retraining of likelihood data.  The ordering of each of these calibration steps is crucial as it is possible to get interference between the different stages if applied in an arbitrary order.  With that in mind, the procedure order to minimise interference is as follows:
 
 \begin{enumerate} 
-\item MIP scale setting in the digitiser.
-\item Digitisation constant, $\alpha$, setting.
-\item MIP scale setting in the PandoraPFA.
-\item Scaling factor constant, $\beta$, setting.
+\item MIP scale setting in the digitiser.  No dependancies on other parameters.  
+\item Digitisation constant, $\alpha$, setting.  This relies upon the MIP scale in the digitiser being set.
+\item MIP scale setting in the PandoraPFA.  This relies upon correct calibration of calorimeter hit energies, therefore, the $\alpha$s must be calibrated first.
+\item Scaling factor constant, $\beta$, setting.  This relies upon correct calibration of calorimeter hit energies and correct MIP scale setting in PandoraPFA.
+\item If required, retrain likelihood data and then repeat the first four steps using the updated likelihood data.  This relies upon the PFO energies being correct, therefore, the $\beta$s must be calibrated first.  
 \end{enumerate} 
 
-\noindent should the ECal be modified and recalibration of the likelihood data be required, it is trained 
-
-%HERE
-
 %========================================================================================
 
-\subsection{Digitisation}
+\subsection{Digitisation Implementation}
 \label{sec:digi}
-Calibration of the digitisation of the calorimeter hits involves accurately estimating the energy deposited in a calorimeter cell, in both the active and absorber layers, based on the energy deposited in the sensitive element of the calorimeter, the active layer.  The relationship between the energy deposited in the active layers and the absorber layers of a calorimeter is linear as the energy deposited in both layers is proportional to the number of charged particle tracks passing through them.  This works under the assumption that the density of charged particle tracks across a calorimeter cell within a particle shower is uniform.  The ratio of the calorimeter cell energy to the energy deposited in the active layers is hereby called the digitisation constant.
-
-The digitisation constant for a calorimeter depends upon factors including the material properties of the calorimeters, the magnetic field strength and energy losses occurring within the gaps between the active and absorber layers.  To account for the extra material in the detector due to the effect of instrumented read out technology additional material surrounding the active and absorber layers is added in the simulation of the calorimeters.  In comparison to the absorber layer, this extra material adds little to the detector, however the small energy losses incurred here will be accounted for by the digitisation calibration.  
+Digitisation. in this sense, refers to the process whereby an estimation made of the energy deposited in a calorimeter hit, in both the active and absorber layers, based on the energy deposited in the sensitive element, the active layers.  The relationship between the energy deposited in the active layers and the absorber layers of a calorimeter is linear as the energy deposited in both layers is proportional to the number of charged particle tracks, or $\gamma$s depending on the material choices, passing through them.  This works under the assumption that the density of charged particle tracks across a calorimeter hit within a particle shower is uniform.  The ratio of the calorimeter hit energy to the energy deposited in the active layers is hereby called the digitisation constant.  The digitisation constant for a given calorimeter depends upon several factors such as the material properties of the active and absorber layers, the magnetic field strength and energy losses occurring within the gaps in the detector.  
 
 %========================================================================================
 
-\subsubsection{ECal Digitisation}
+\subsubsection{ECal Digitisation Implementation}
 \label{sec:ecaldigi}
-The procedure for determining the digitisation constants in the ECal involves simulation of single $\gamma$ events at energy $E_{MC} = 10$ GeV.  $\gamma$ events are ideal for the calibration of the ECal as $\gamma$ energy measurements are made primarily within the ECal.  Furthermore, at this energy, $\gamma$s are largely fully contained within the ECal, as shown in figure \ref{fig:ecaldigiphotonsplit}.  This makes them ideal for isolating the ECal digitisation calibration from that of the HCal digitisation calibration.   
+The procedure for determining the digitisation constants in the ECal involves simulation of single $\gamma$ events at energy $E_{MC} = 10$ GeV.  $\gamma$ events are ideal for calibration of the ECal as $\gamma$s are, at this energy, largely contained within the ECal, as shown in figure \ref{fig:ecaldigiphotonsplit}.  This makes them ideal for isolating the ECal digitisation calibration from that of the HCal digitisation calibration.  Events are only used for calibrating the ECal digitisation if they are confined to the ECal.  To that extent, cuts are applied ensuring that the sum of the reconstructed energy found outside the ECal is less than 1\% of $E_{MC}$ and that the $\text{cos}(\theta) < 0.95$, where $\theta$ is the polar angle of the $\gamma$.  The polar angle cut veto events where the $\gamma$ goes down the beam pipe.  $\gamma$ conversions are also vetoed in this event sample at MC level.  The impact of these cuts on the sum of ECal hit energies for the $E_{MC} = 10$ GeV $\gamma$ events is shown in figure \ref{fig:ecaldigiselection}.
 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/ECalHCalPhotonSplit.pdf}
-\caption[The sum of calorimeter hit energies in ECal and HCal for 10 GeV $\gamma$ events.]{The sum of calorimeter hit energies in ECal and HCal for 10 GeV $\gamma$ events.}
-\label{fig:ecaldigiphotonsplit}
+\begin{figure}[h!]
+\subfloat[]{\label{fig:ecaldigiphotonsplit}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/ECalHCalPhotonSplit.pdf}}
+\subfloat[]{\label{fig:ecaldigiselection}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalSelection.pdf}}
+\caption[\protect\subref{fig:ecaldigiphotonsplit} The sum of calorimeter hit energies in ECal and HCal for 10 GeV $\gamma$ events.  \protect\subref{fig:ecaldigiselection} The sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with and without the selection cuts.]{\protect\subref{fig:ecaldigiphotonsplit} The sum of calorimeter hit energies in ECal and HCal for 10 GeV $\gamma$ events.  \protect\subref{fig:ecaldigiselection} The sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with and without the selection cuts.}
+\label{fig:ecaldigi}
 \end{figure}
 
-Events are only used for calibrating the ECal digitisation if they are confined to the ECal.  To that extent cuts are applied ensuring that the sum of any reconstructed energy found outside the ECal is less than 1\% of $E_{MC}$ and that the $\text{cos}(\theta) < 0.95$ where $\theta$ is the polar angle of the $\gamma$.  $\gamma$ conversions are also vetoed in this event sample at MC level.  The impact of these cuts on the sum of ECal hit energies for the $E_{MC} = 10$ GeV $\gamma$ events is shown in figure \ref{fig:ecaldigiselection}.
+The calibration of the digitisation in the ECal is an iterative procedure, which begins with the simulation of single $\gamma$ events using a trial calibration, with digitisation constant in the ECal $\alpha^{0}_{\text{ECal}}$.  Next the distribution of the sum of calorimeter hit energies within the ECal is produced for events passing the selection cuts, as shown in figure \ref{fig:ecaldigiselection}.  For an ideal calorimeter this distribution should be Gaussian, as was described in chapter \ref{chap:detopt}, therefore, a Gaussian fit is applied to this distribution and the mean, $E_{\text{Fit}}$, extracted.  To remove the effect of any outliers in this distribution, the fit is applied to the range of data with the smallest root mean square that contains at least 90 \% of the data.  An example of such a fit is shown in figure \ref{fig:ecaldigifit}.  In the case of ideal calibration the mean of this fit, $E_{\text{Fit}}$, would be equal $E_{MC}$.  It is assumed that any difference between the two is due to the calibration and to correct for this the digitisation constant from the trial calibration, $\alpha^{0}_{\text{ECal}}$, is rescaled by the ratio of the $E_{MC}$ to $E_{\text{Fit}}$:
 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalSelection.pdf}
-\caption[The sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with and without the selection cuts.]{The sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with and without the selection cuts.}
-\label{fig:ecaldigiselection}
-\end{figure}
+\begin{equation}
+\alpha^{0}_{\text{ECal}} \rightarrow \alpha_{\text{ECal}} = \alpha^{0}_{\text{ECal}} \times \frac{E_{MC}}{E_{Fit}}\text{ ,}
+\end{equation}
 
-\begin{figure}
+This procedure is then repeated until the $E_{\text{Fit}}$ falls within a specified tolerance.  The tolerance applied here was $|E_{\text{Fit}} - E_{\text{MC}}| < E_{\text{MC}} \times 5 \%$.  The binning used for the fitted histogram is chosen such that the bin width is equal to the desired tolerance on $E_{\text{Fit}}$ e.g. $E_{\text{MC}} \times 5 \% = 0.5$ GeV.  This tolerance is somewhat loose, however, it is tight enough to ensure successful application of PFA.  It should also be emphasised that the PFO energies used for downstream analyses have the electromagnetic and hadronic energy scale corrections applied, which are calibrated to a much tighter accuracy.
+
+\begin{figure}[h!]
 \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalFit.pdf}
-\caption[Gaussian fit to sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with selection cuts.]{Gaussian fit to sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with selection cuts.}
+\caption[Gaussian fit to sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with selection cuts.  The coarse binning reflects the tolerance on the digitisation constant calibration.]{Gaussian fit to sum of the ECal calorimeter hit energies for 10 GeV $\gamma$ events with selection cuts.  The coarse binning reflects the tolerance on the digitisation constant calibration.}
 \label{fig:ecaldigifit}
 \end{figure}
 
-The calibration of the digitisation in the ECal is an iterative procedure and begins with the simulation of single $\gamma$ events using a trial calibration, with digitisation constant in the ECal $\alpha^{0}_{\text{ECal}}$ that may not be ideal.  Next the distribution of the sum of calorimeter hit energies within the ECal is produced for events passing the selection cuts, as shown in figure \ref{fig:ecaldigiselection}.  For an ideal calorimeter this distribution should be Gaussian, as was described in section CALORIMETER CHAPTER, therefore, a Gaussian fit is applied to this distribution and the mean, $E_{\text{Fit}}$, extracted.  To remove the effect of any outliers in this distribution, the fit is applied to the range of data with the smallest root mean square that contains at least 90 \% of the data.  An example of such a fit is shown in figure \ref{fig:ecaldigifit}.  In the case of ideal calibration the mean of this fit, $E_{\text{Fit}}$, would be equal $E_{MC}$.  It is assumed that any difference between the two is due to the calibration and to correct for this the digitisation constant from the trial calibration, $\alpha^{0}_{\text{ECal}}$, is rescaled by the ratio of the $E_{MC}$ to $E_{\text{Fit}}$.
-
-\begin{equation}
-\alpha^{0}_{\text{ECal}} \rightarrow \alpha_{\text{ECal}} = \alpha^{0}_{\text{ECal}} \times \frac{E_{MC}}{E_{Fit}}
-\end{equation}
-
-This procedure is then repeated until the $E_{\text{Fit}}$ falls within a specified tolerance.  The tolerance applied here was $|E_{\text{Fit}} - E_{\text{MC}}| < E_{\text{MC}} \times 5 \%$.  The binning used for the fitted histogram is chosen such that the bin width is equal to the desired tolerance on $E_{\text{Fit}}$ e.g. $E_{\text{MC}} \times 5 \% = 0.5$ GeV.  This tolerance is somewhat loose, however, it is tight enough to ensure successful application of PFA.  It should also be emphasised that the PFO energies used in downstream analyses have the electromagnetic and hadronic energy scale corrections applied, which are calibrated to a much tighter accuracy.
-
 %========================================================================================
 
-\subsubsection{HCal Digitisation}
+\subsubsection{HCal Digitisation Implementation}
 \label{sec:hcaldigi}
-The calibration for the digitisation in the HCal proceeds in a similar manor to that described for the ECal with a few key differences.  This calibration uses $K^{0}_{L}$ events at $E_{MC} = 20$ GeV as these neutral hadrons will deposit the bulk of their energy in the HCal.  The higher energy is used to create larger particle showers and sample deeper into the calorimeters.  
+The calibration for the digitisation in the HCal proceeds in a similar manor to that described for the ECal with a few key differences.  This calibration uses $K^{0}_{L}$ events at $E_{MC} = 20$ GeV as these neutral hadrons will deposit the bulk of their energy in the HCal.  The higher energy, with respect to the ECal digitisation, is used to create larger particle showers that sample deeper into the HCal.  As the $K^{0}_{L}$s must pass through the ECal before arriving at the HCal and, as the ECal contains $\approx 1 \lambda_{I}$, some of the $K^{0}_{L}$s begin showering in the ECal, as shown by figure \ref{fig:hcaldigikaonsplit}.  Such events are unsuitable for calibration of the HCal digitisation constants as rescaling $\alpha^{0}_{\text{HCal}}$ would not lead to a linear rescaling in $E_{\text{Fit}}$.  These events are vetoed in the even selection by requiring events deposit less than less than 5\% of $E_{MC}$ outside of the HCal.  In addition to this, the last layer of the HCal where energy is deposited is required to be in the innermost 90\% of the HCal.  This cut vetoes events that shower late in the HCal and deposit a significant amount of energy in the uninstrumented coil region of the detector.  The impact of these cuts on the sum of HCal calorimeter hit energies for the $E_{MC} = 20$ GeV $K^{0}_{L}$ events is shown in figure \ref{fig:hcaldigiselection}.  There are two HCal digitisation constants used in the detector simulation, one applied for the barrel and another for the endcap.  This is to account for differences in hadronic shower dynamics between the two, such as differing magnetic field configurations in the barrel and endcap.  Both parameters are calibrated in the same manor, but have different cuts on $\theta$, the polar angle of the $K^{0}_{L}$.  For the barrel region of the HCal events are selected if $0.2 < \text{cos}(\theta) < 0.6$, while for the endcap events are selected if $0.8 < \text{cos}(\theta) < 0.9$.  These angular cuts are conservative to account for the transverse profile of the hadronic showers and ensure that they are confined to the relevant sub-detector.  One further difference to the ECal digitisation procedure is that the target reconstructed energy for the $K^{0}_{L}$ samples is the kinetic energy as opposed to the total energy.  As the majority of the neutral hadrons appearing in jets are neutrons and their accessible energy is their kinetic energy, calibrating to the kinetic energy should give the best performance for jet reconstruction.  
 
-As in these events the $K^{0}_{L}$s have to pass through the ECal before arriving at the HCal and as the ECal contains $\approx 1 \lambda_{I}$, some of the $K^{0}_{L}$ begin showering in the ECal, as shown by figure \ref{fig:hcaldigikaonsplit}.  Such events are unsuitable for calibration of the HCal digitisation constants as rescaling $\alpha^{0}_{\text{HCal}}$ would not lead to a linear rescaling in $E_{\text{Fit}}$.  These events are vetoed in the even selections by applying selection cuts to ensure events used for the calibration deposit the bulk of their energy in the HCal.  
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/ECalHCalKaon0LSplit.pdf}
-\caption[Sum of calorimeter hit energies in ECal and HCal for 20 GeV $K^{0}_{L}$ events.]{Sum of calorimeter hit energies in ECal and HCal for 20 GeV $K^{0}_{L}$ events.}
-\label{fig:hcaldigikaonsplit}
+\begin{figure}[h!]
+\subfloat[]{\label{fig:hcaldigikaonsplit}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/ECalHCalKaon0LSplit.pdf}}
+\subfloat[]{\label{fig:hcaldigiselection}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalSelection.pdf}}
+\caption[\protect\subref{fig:hcaldigikaonsplit} Sum of calorimeter hit energies in ECal and HCal for 20 GeV $K^{0}_{L}$ events.  \protect\subref{fig:hcaldigiselection} Sum of the HCal calorimeter hit energies for a 20 GeV $K^{0}_{L}$ events with and without the selection cuts.]{\protect\subref{fig:hcaldigikaonsplit} Sum of calorimeter hit energies in ECal and HCal for 20 GeV $K^{0}_{L}$ events.  \protect\subref{fig:hcaldigiselection} Sum of the HCal calorimeter hit energies for a 20 GeV $K^{0}_{L}$ events with and without the selection cuts.}
+\label{fig:hcaldigi}
 \end{figure}
 
-Events are only considered in this analysis if a single neutral hadron PFO is reconstruction, the sum of any reconstructed energy found outside the HCal is less than 5\% of $E_{MC}$ and the last layer of the HCal where energy is deposited is in the first 90\% of the HCal.  The cut on the last HCal layer where energy is deposited is applied to veto events that shower late in the HCal and deposit a significant amount of energy in the uninstrumented coil region of the detector.  The impact of these cuts on the sum of HCal calorimeter hit energies for the $E_{MC} = 20$ GeV $K^{0}_{L}$ events is shown in figure \ref{fig:hcaldigiselection}.
+Using these cuts the calibration procedure for the digitisation of the HCal barrel and endcap proceeds in the same manor as was described for the ECal, the details of which can be found in section \ref{sec:ecaldigi}.  Examples of the Gaussian fits applied to the sum of the calorimeter hit energies in the HCal barrel and endcap can be found in figure \ref{fig:hcaldigifit}.  
 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalSelection.pdf}
-\caption[Sum of the HCal calorimeter hit energies for a 20 GeV $K^{0}_{L}$ events with and without the selection cuts.]{Sum of the HCal calorimeter hit energies for a 20 GeV $K^{0}_{L}$ events with and without the selection cuts.}
-\label{fig:hcaldigiselection}
-\end{figure}
-
-There are two HCal digitisation constants used in the detector simulation, one applied for the Barrel and another for the EndCap.  This is to account for differences in hadronic shower dynamics between the two, such as differing magnetic field configurations in the Barrel and EndCap.  Both parameters are calibrated in the same manor, but have different cuts on $\theta$, the polar angle of the $K^{0}_{L}$.  For the Barrel region of the HCal events are selected if $0.2 < \text{cos}(\theta) < 0.6$, while for the EndCap events are selected if $0.8 < \text{cos}(\theta) < 0.9$.  These angular cuts are conservative to account for the transverse profile of the hadronic showers and ensure that they are confined to the relevant sub-detector.
-
-Using these cuts the calibration procedure for the digitisation of the HCal Barrel and EndCap proceeds in the same manor as was described for the ECal, the details of which can be found in section \ref{sec:ecaldigi}.  Examples of the Gaussian fits applied to the sum of the calorimeter hit energies in the HCal Barrel and EndCap can be found in figure \ref{fig:hcaldigifit}.  
-
-A noteworthy difference to the ECal digitisation procedure is that the target reconstructed energy for the $K^{0}_{L}$ samples is the kinetic energy as opposed to the total energy.  This decision was made as the majority of the neutral hadrons appearing in jets are neutrons and their accessible energy, what they can deposit in the detector, is their kinetic energy and not their rest mass energy.  This is the case as neutrons will come to a rest rather than decaying in the detector.  Therefore, calibrating to the kinetic energy should give the best performance for jet reconstruction.  
-
-\begin{figure}
-\subfloat[HCal Barrel.]{\label{fig:hcaldigibarrel}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalBarrelFit.pdf}}
-\subfloat[HCal EndCap.]{\label{fig:hcaldigiendcap}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalEndCapFit.pdf}}
+\begin{figure}[h!]
+\subfloat[HCal barrel.]{\label{fig:hcaldigibarrel}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalbarrelFit.pdf}}
+\subfloat[HCal endcap.]{\label{fig:hcaldigiendcap}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalendcapFit.pdf}}
 \caption[Gaussian fit to sum of the HCal calorimeter hit energies for 20 GeV $K^{0}_{L}$ events with selection cuts.]{Gaussian fit to sum of the HCal calorimeter hit energies for 20 GeV $K^{0}_{L}$ events with selection cuts.}
 \label{fig:hcaldigifit}
 \end{figure}
 
 %========================================================================================
 
-\subsubsection{HCal Ring Digitisation}
+\subsubsection{HCal Ring Digitisation Implementation}
 \label{sec:hcalringdigi}
+The HCal ring, illustrated in figure \ref{fig:calorimeters}, also has an independent digitisation constant to account for any difference in the hadronic shower development between the ring, barrel and endcap.  The procedure used to calibrate this constant has to differs from that presented in section \ref{sec:hcaldigi} as it is unfeasible, due to the depth of the ring, to produce events that are wholly contained within it.  Fortunately, the size of the HCal ring means it plays a minimal role in the reconstruction, so precise calibration is not crucial.  To ensure that the calibration is approximately correct for the HCal ring, $\alpha_{\text{HCal ring}}$ is assumed to equal $\alpha_{\text{HCal endcap}}$ multiplied by several factors designed to accounts for changes in the active layer thickness, absorber layer thickness and the MIP response between the HCal endcap and ring.  In detail:
 
-\begin{figure}
-\subfloat[]{\label{fig:ecal}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/Calibration/VisualDisplay/ECal.png}}
+\begin{equation}
+\alpha_{\text{HCal ring}} = \alpha_{\text{HCal endcap}} \times \frac{\langle \text{cos}(\theta_\text{endcap}) \rangle}{\langle \text{cos}(\theta_\text{ring}) \rangle} \times \frac{P_\text{endcap} }{P_\text{ring} } \times \frac{L^{Absorber}_\text{endcap}}{L^{Absorber}_\text{ring} } \times \frac{L^{Active}_\text{ring}}{L^{Active}_\text{endcap}}
+\end{equation}
+
+\noindent where $\theta$ is the incident angle of the incoming particle to the calorimeter determined using the 20 GeV $K^{0}_{L}$ events, $L^{Active}$ is the active layer thickness and $L^{Absorber}$ is the absorber layer thickness. $P$ is the position of the MIP peak in the distribution of active layer hit energies, which has been corrected so that the MIP appears to enter the calorimeter at normal incidence, and is determined using 10 GeV $\mu^{-}$ events.  Details on how $P$ is determined can be found in section \ref{sec:mipresponse}.
+
+\begin{figure}[h!]
+\subfloat[]{\label{fig:ecal}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/Calibration/VisualDisplay/ECalWithScale.pdf}}
 \subfloat[]{\label{fig:hcal}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/Calibration/VisualDisplay/HCal.png}}
-\subfloat[]{\label{fig:hcalring}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/Calibration/VisualDisplay/HCalRing.png}}
-\caption[A PandoraPFA event display showing the nominal ILD calorimeters.  \protect\subref{fig:ecal} show the ECal, \protect\subref{fig:hcal} shows the full HCal and \protect\subref{fig:hcalring} shows the HCal Ring.]{A PandoraPFA event display showing the nominal ILD calorimeters.  \protect\subref{fig:ecal} show the ECal, \protect\subref{fig:hcal} shows the full HCal and \protect\subref{fig:hcalring} shows the HCal Ring.}
+\subfloat[]{\label{fig:hcalring}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/Calibration/VisualDisplay/HCalring.png}}
+\caption[A PandoraPFA event display showing the nominal ILD calorimeters.  \protect\subref{fig:ecal} the ECal, \protect\subref{fig:hcal} the full HCal and \protect\subref{fig:hcalring} the HCal ring.]{A PandoraPFA event display showing the nominal ILD calorimeters.  \protect\subref{fig:ecal} the ECal, \protect\subref{fig:hcal} the full HCal and \protect\subref{fig:hcalring} the HCal ring.}
 \label{fig:calorimeters}
 \end{figure}
 
-The HCal Ring, illustrated in figure \ref{fig:calorimeters}, also has an independent digitisation constant to account for any difference in the hadronic shower development between the Ring, Barrel and EndCap.  The procedure used to calibrate this constant has to differs from that presented in section \ref{sec:hcaldigi} as it is unfeasible, due to the depth of the ring, to produce events that are wholly contained within it.  Fortunately, the size of the HCal ring means it plays a minimal role in the reconstruction, so precise calibration is not crucial.  To ensure that the calibration is approximately correct for the HCal Ring, $\alpha_{\text{HCal Ring}}$ is assumed to equal $\alpha_{\text{HCal EndCap}}$ multiplied by several factors designed to accounts for changes in the active layer thickness, absorber layer thickness and the MIP response between the HCal EndCap and Ring.  In detail:
-
-\begin{equation}
-\alpha_{\text{HCal Ring}} = \alpha_{\text{HCal EndCap}} \times \frac{\langle \text{cos}(\theta_\text{EndCap}) \rangle}{\langle \text{cos}(\theta_\text{Ring}) \rangle} \times \frac{P_\text{EndCap} }{P_\text{Ring} } \times \frac{L^{Absorber}_\text{EndCap}}{L^{Absorber}_\text{Ring} } \times \frac{L^{Active}_\text{Ring}}{L^{Active}_\text{EndCap}}
-\end{equation}
-
-where $\theta$ is the incident angle of the incoming particle to the calorimeter cells determined using the 20 GeV $K^{0}_{L}$ events, $L^{Active}$ is the active layer thickness and $L^{Absorber}$ is the absorber layer thickness. $P$ is the position of the MIP peak in the distribution of active layer cell energies, which has been corrected so that the MIP appears to enter the cell at normal incidence, and is determined using 10 GeV $\mu^{-}$ events.  Details on how $P$ is determined can be found in section \ref{sec:mipresponse}.
-
 %========================================================================================
 
-\subsection{MIP Scale Setting}
+\subsection{MIP Scale Determination}
 \label{sec:mipresponse}
-The response of the various sub-detectors to a MIP has to be determined for both the digitisation processor and for PandoraPFA as both apply cuts in units of MIP response.  The digitiser applies cuts related to the electronic readout range of the various active layer technology options and applies a threshold on the minimum active layer energy for the creation of calorimeter hits.  PandoraPFA applies cuts designed to veto noise that would be present in a real detector.  Both these MIP responses, while intrinsically linked, have to be calculated separately as the digitiser requires the MIP peak definition from the active layer cell energies while, PandoraPFA requires the definition from the full cell, active and absorber layer, energies.  In these studies a MIP was defined as a 10 GeV $\mu^{-}$ \cite{Bichsel:2004ej} and no selection cuts applied to the sample.  
+The digitiser MIP scale was defined as the, non-zero, peak in the distribution of the active layer calorimeter hit energies for normally incident 10~GeV $\mu^{-}$ \cite{Bichsel:2004ej}, as shown in figure \ref{fig:digitisermip}.  This distribution is made for each calorimeter where the MIP scale needs to be determined.  As the average energy deposited per hit in a given sub-detector is relevant for setting the MIP scale, as opposed to the total energy deposited in a sub-detector, no selection cuts are required.  The sample of $\mu^{-}$ events used for setting the MIP scale were generated isotropically.  When populating the active layer energy distribution a direction correction factor of $\text{cos}(\theta)$, where $\theta$ is the incident angle of the $\mu^{-}$ to the calorimeter hit, was applied to the hit energy to generate the effect of having the $\mu^{-}$ enter the calorimeter at normal incidence.  The MIP scale was determined separately for the ECal, HCal barrel, HCal endcap and HCal ring, however, only a single HCal MIP scale, taken as the HCal barrel, was required by the digitisation processor.  The HCal endcap and ring MIP scales were calculated for the purposes of the HCal ring digitisation described in section \ref{sec:hcalringdigi}.  No MIP scale setting was required in the digitisation processor for the muon chamber.  
 
-For the digitiser the MIP scale was defined as the, non-zero, peak in the distribution of the active layer calorimeter cell energies for normally incident $\mu^{-}$ as shown in figure \ref{fig:digitisermip}.  This distribution was produced using a sample of $\mu^{-}$ events that are spatially isotropic about the impact point.  A direction correction factor, $\text{cos}(\theta)$ where $\theta$ is the incident angle of the incoming $\mu^{-}$ to the calorimeter cell, was applied to the active layer cell energies to generate the effect of having normally incident $\mu^{-}$.  
-
-\begin{figure}
-\subfloat[ECal.]{\label{fig:digitisermipecal}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserECal.pdf}}
-\subfloat[HCal Barrel.]{\label{fig:digitisermiphcalbarrel}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalBarrel.pdf}} \\
-\subfloat[HCal EndCap.]{\label{fig:digitisermiphcalendcap}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalEndCap.pdf}}
-\subfloat[HCal Ring.]{\label{fig:digitisermiphcalring}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalOther.pdf}}
-\caption[The active layer calorimeter cell energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal Barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal EndCap and \protect\subref{fig:digitisermiphcalring} the HCal Ring for 10 GeV $\mu^{-}$ events.]{The active layer calorimeter cell energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal Barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal EndCap and \protect\subref{fig:digitisermiphcalring} the HCal Ring for 10 GeV $\mu^{-}$ events.}
+\begin{figure}[h!]
+\subfloat[]{\label{fig:digitisermipecal}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserECal.pdf}}
+\subfloat[]{\label{fig:digitisermiphcalbarrel}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalbarrel.pdf}} \\
+\subfloat[]{\label{fig:digitisermiphcalendcap}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalendcap.pdf}}
+\subfloat[]{\label{fig:digitisermiphcalring}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalOther.pdf}}
+\caption[The active layer calorimeter hit energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal endcap and \protect\subref{fig:digitisermiphcalring} the HCal ring for 10 GeV $\mu^{-}$ events.]{The active layer calorimeter hit energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal endcap and \protect\subref{fig:digitisermiphcalring} the HCal ring for 10 GeV $\mu^{-}$ events.}
 \label{fig:digitisermip}
 \end{figure}
 
-In the digitiser processor a single value for the MIP peak was required for the HCal and that was taken as the MIP peak position for the HCal Barrel.  The MIP peaks were separately calculated for the HCal EndCap and Ring for the purposes of the HCal Ring digitisation described in section \ref{sec:hcalringdigi}.  The realistic digitisation features present in the simulation of the ECal and HCal are not available for the muon chamber simulation, therefore, no MIP peak setting for that digitisation step is required.
-
-A similar procedure was employed for calculation of the MIP peak in PandoraPFA.  One important difference was the distribution used for setting the MIP scale in PandoraPFA is the distribution of calorimeter cell energies, i.e. the energy in the active and absorber layers of a cell, and not just the active layer energies.  Examples of the distributions used to set the MIP scale in PandoraPFA can be found in figure \ref{fig:pandoramip}.  There are few populated low calorimeter cell energy bins due to cuts applied in the digitiser on the minimum active layer energy required to make a calorimeter hit.  The double peak structure in the ECal calorimeter hit energy distribution is present due to the doubling of the thickness of the ECal absorber material, from 2.1 mm to 4.2 mm tungsten, in the ILD detector model that occurs for the back 10 layers of the 30 layer ECal.  Further differences between the MIP scale setting in the digitiser and PandoraPFA worthy of note are that in PandoraPFA the HCal MIP scale setting combines the HCal sub-detectors, the Barrel, EndCal and Ring, together and PandoraPFA requires the MIP scale to be set in the muon chamber, which requires the muon chamber cell energy distribution to be created.  
+A similar procedure was employed for calculation of the MIP peak in PandoraPFA.  One important difference was the distribution used for setting the MIP scale in PandoraPFA is the distribution of calorimeter hit energies, i.e. the energy in the active and absorber layers of a hit, and not just the active layer energies.  Examples of the distributions used to set the MIP scale in PandoraPFA can be found in figure \ref{fig:pandoramip}.  There are few populated low calorimeter hit energy bins in this these distributions due to cuts applied in the digitiser on the active layer energy.  The double peak structure observed in the ECal calorimeter hit energy distribution is due to the ECal absorber material thickness doubling in the back 10 layers of the ECal.  Further differences between the MIP scale setting in the digitiser and PandoraPFA are as follows: The MIP scale setting in PandoraPFA combines the HCal sub-detectors, the barrel, endcap and ring, together when creating the calorimeter hit energy distributions; PandoraPFA requires the MIP scale to be set in the muon chamber unlike the digitisation processor and, therefore, the muon chamber hit energy distribution must also be created.  
 
 \begin{figure}
 \subfloat[]{\label{fig:pandoramipecal}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFAECal.pdf}}
 \subfloat[]{\label{fig:pandoramiphcal}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFAHCal.pdf}} \\
 \subfloat[]{\label{fig:pandoramipmuon}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFAMuon.pdf}}
-\caption[The calorimeter cell energy distributions for \protect\subref{fig:pandoramipecal} the ECal, \protect\subref{fig:pandoramiphcal} the HCal and \protect\subref{fig:pandoramipmuon} the muon chamber for 10 GeV $\mu^{-}$ events.]{The calorimeter cell energy distributions for \protect\subref{fig:pandoramipecal} the ECal, \protect\subref{fig:pandoramiphcal} the HCal and \protect\subref{fig:pandoramipmuon} the muon chamber for 10 GeV $\mu^{-}$ events.}
+\caption[The calorimeter hit energy distributions for \protect\subref{fig:pandoramipecal} the ECal, \protect\subref{fig:pandoramiphcal} the HCal and \protect\subref{fig:pandoramipmuon} the muon chamber for 10 GeV $\mu^{-}$ events.]{The calorimeter hit energy distributions for \protect\subref{fig:pandoramipecal} the ECal, \protect\subref{fig:pandoramiphcal} the HCal and \protect\subref{fig:pandoramipmuon} the muon chamber for 10 GeV $\mu^{-}$ events.}
 \label{fig:pandoramip}
 \end{figure}
 
 %========================================================================================
 
-\subsection{Electromagnetic and hadronic scale setting}
+\subsection{Electromagnetic and Hadronic Scale Setting}
 \label{sec:scalesetting}
-The electromagnetic and hadronic scales have to be independently set in the simulation to account for the different mechanisms governing the propagation of electromagnetic and hadronic showers.  The setting of the scales involves tuning four parameters in PandoraPFA that correspond to energy rescaling factors, which are applied to energy measurements from electromagnetic and hadronic showering particles in the ECal and HCal.  
 
 %========================================================================================
 
 \subsubsection{Electromagnetic scale setting}
 \label{sec:emscalesetting}
-The electromagnetic scale in the ECal, $\beta^{EM}_{ECal}$, is determined using $\gamma$ events at $E_{MC} = 10$ GeV.  $\gamma$ events are ideal for the setting of the electromagnetic scale as they procedure electromagnetic showers and are primarily confined to the ECal at the energy considered, which was shown in figure \ref{fig:ecaldigiphotonsplit}.  
+The electromagnetic scale in the ECal, $\beta^{EM}_{ECal}$, is determined using $\gamma$ events at $E_{MC} = 10$ GeV.  $\gamma$ events are ideal for the setting of the electromagnetic scale as they procedure electromagnetic showers and are primarily confined to the ECal at the energy considered, which was shown in figure \ref{fig:ecaldigiphotonsplit}.  A cut requiring less than 1\% of the reconstructed energy to be found outside the ECal is applied to ensure that only events where the bulk of the energy is deposited within the ECal are used for this part of the calibration.  Furthermore, a cut requiring a single $\gamma$ be reconstructed are added to veto events with pattern recognition failures.  $\gamma$ conversions are excluded at MC level to ensure energy measurements used in the calibration arise from the calorimeters and not the charged particle tracks.  The impact of these cuts on the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events is shown in figure \ref{fig:ecalemscaleselection}.   
 
-Cuts are applied to ensure that only events where the bulk of the energy is deposited within the ECal are used for this part of the calibration.  Less than 1\% of the reconstructed energy is outside the ECal to ensure the event is contained.  Furthermore, cuts requiring a single $\gamma$ be reconstructed are added to veto pattern recognition failures.  $\gamma$ conversions are excluded at MC level to ensure energy measurements used in the calibration arise from the calorimeters and not the charged particle tracks.  The impact of these cuts on the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events is shown in figure \ref{fig:ecalemscaleselection}.
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleECalSelection.pdf}
-\caption[Sum of the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events with and without the selection cuts.]{Sum of the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events with and without the selection cuts.}
-\label{fig:ecalemscaleselection}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleSettingECalFit.pdf}
-\caption[Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.]{Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.}
-\label{fig:ecalemscalefit}
-\end{figure}
-
-The fitting procedure follows that used for the ECal digitisation, described in section \ref{sec:ecaldigi}, whereby a trial calibration for the electromagnetic energy scale in the ECal, $\beta^{EM0}_{ECal}$, is assumed and the single $\gamma$ events simulated.  The distribution of the electromagnetic energy in the ECal is created and a Gaussian fit applied to the range of data with the smallest root mean square containing at least 90 \% of the data.  The mean of this fit, $E_{\text{Fit}}$, is then used to scale $\beta^{EM0}_{ECal}$ in the following way
+The fitting procedure follows that used for the ECal digitisation, described in section \ref{sec:ecaldigi}, whereby a trial calibration for the electromagnetic energy scale in the ECal, $\beta^{EM0}_{ECal}$, is assumed and the single $\gamma$ events simulated.  The distribution of the electromagnetic energy in the ECal is created and a Gaussian fit applied to the range of data with the smallest root mean square containing at least 90 \% of the data.  The mean of this fit, $E_{\text{Fit}}$, is then used to scale $\beta^{EM0}_{ECal}$ in the following way:
 
 \begin{equation}
-\beta^{EM0}_{ECal} \rightarrow \beta^{EM}_{ECal} = \beta^{EM0}_{ECal} \times \frac{E_{MC}}{E_{Fit}}
+\beta^{EM0}_{ECal} \rightarrow \beta^{EM}_{ECal} = \beta^{EM0}_{ECal} \times \frac{E_{MC}}{E_{Fit}}\text{ ,}
 \end{equation}
 
 An example distribution and fit used in the calibration of the nominal ILD detector model can be found in figure \ref{fig:ecalemscalefit}.  This procedure is repeated using the updated $\beta^{EM}_{ECal}$ until $E_{\text{Fit}}$ falls within a specified tolerance.  The tolerance applied here was $|E_{\text{Fit}} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \%$.  The binning for the fitted histogram is chosen such that the bin width is equal to the desired target tolerance on $E_{\text{Fit}}$ e.g. $E_{\text{MC}} \times 0.5 \% = 0.05$ GeV.  This tolerance is tighter than was applied for the digitisation as it is these energies that are used in downstream analyses.   
+ 
+\begin{figure}[h!]
+\subfloat[]{\label{fig:ecalemscaleselection}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleECalSelection.pdf}}
+\subfloat[]{\label{fig:ecalemscalefit}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleSettingECalFit.pdf}}
+\caption[\protect\subref{fig:ecalemscaleselection} The sum of the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events with and without the selection cuts.  \protect\subref{fig:ecalemscalefit} Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.  The fine binning reflects the tolerance on the electromagnetic scale calibration constant in the ECal.]{\protect\subref{fig:ecalemscaleselection} The sum of the electromagnetic energy measured in the ECal for 10 GeV $\gamma$ events with and without the selection cuts.  \protect\subref{fig:ecalemscalefit} Gaussian fit to sum of the electromagnetic energy deposited in the ECal for 10 GeV $\gamma$ events with selection cuts.  The fine binning reflects the tolerance on the electromagnetic scale calibration constant in the ECal.}
+\label{fig:ecalemscale}
+\end{figure}
  
 The electromagnetic scale in the HCal, $\beta^{EM}_{HCal}$, is chosen to be equal to the hadronic scale in the HCal, $\beta^{Had}_{HCal}$.  The details of the determination of $\beta^{Had}_{HCal}$ can be found in section \ref{sec:hadscalesetting}.  For the ILC and CLIC, $\beta^{EM}_{HCal}$ is not a critical parameter in the reconstruction as photons are largely contained within the ECal meaning little to no electromagnetic energy is measured in the HCal.  
 
@@ -253,101 +213,121 @@ The electromagnetic scale in the HCal, $\beta^{EM}_{HCal}$, is chosen to be equa
 
 \subsubsection{Hadronic scale setting}
 \label{sec:hadscalesetting}
-The hadronic scale in the ECal, $\beta^{Had}_{ECal}$, is important to detector performance as a non-negligible amount of hadronic energy will be measured in the ECal.  As the ECal contains $\approx 1 \lambda_{I}$, the hadronic scale in the ECal cannot be independently set as it is unfeasible to create a large sample of 20 GeV $K^{0}_{L}$ events that are fully contained within it.  Therefore, the hadronic scale in the ECal and HCal have to be set simultaneously.  
+The hadronic scale in the ECal, $\beta^{Had}_{ECal}$, is important to detector performance as a non-negligible amount of hadronic energy will be measured in the ECal.  As the ECal contains $\approx 1 \lambda_{I}$, the hadronic scale in the ECal cannot be independently set as it is unfeasible to create a large sample of 20 GeV $K^{0}_{L}$ events that are fully contained within it.  Therefore, the hadronic scale in the ECal and HCal have to be set simultaneously.  Cuts are applied to select the $K^{0}_{L}$ events that are appropriate to use for the hadronic scale calibration.  To ensure the events do not suffer from the effect of leakage out of the back of the HCal, a cut is applied requiring the last layer in which energy is deposited in the HCal to be in the first 90\% of the HCal.  In addition to this, a cut requiring a single neutral hadron to be reconstructed is applied to veto events with reconstruction failures.  Finally, the total hadronic energy measured in ECal and HCal, $E^{Had}_{ECal} + E^{Had}_{HCal}$, must fall within 3 $\sigma$ of the desired hadronic energy distribution, $E^{Had}_{ECal} + E^{Had}_{HCal} = 20 \text {GeV} - m_{K^{0}_{L}} = E_{K}$.  Where $\sigma$ is defined to be $55\% \times \sqrt{E} = 2.46 \text{GeV}$ for 20 GeV $K^{0}_{L}$.  This definition for $\sigma$ is derived from the energy resolution for neutral hadrons using the nominal ILD HCal \cite{Behnke:2013lya}.  This cut ensures that when fitting the two dimensional distribution of hadronic energy measured in the ECal and HCal outliers do not skew the fit.  Again, the target reconstructed energy for this sample is the kinetic energy and not the total energy of the $K^{0}_{L}$ for the reasons outlined in section \ref{sec:hcaldigi}.  The impact of cuts are illustrated in figure \ref{fig:hadscaleselection}.
 
-Cuts are applied to select the $K^{0}_{L}$ events that are appropriate to use for the hadronic scale calibration.  The last layer in which energy is deposited in the HCal must not occur in the back 10 \% of the HCal.  This ensures that the event does not suffer from leakage of energy out of the back of the HCal.  A single neutral hadron must be reconstructed to veto events with reconstruction failures.  Finally, the total hadronic energy measured in ECal and HCal, $E^{Had}_{ECal} + E^{Had}_{HCal}$, must fall within 3 $\sigma$ of the desired hadronic energy distribution, $E^{Had}_{ECal} + E^{Had}_{HCal} = 20 \text {GeV} - m_{K^{0}_{L}} = E_{K}$.  $\sigma$ is defined to be $55\% \times \sqrt{E} = 2.46 \text{GeV}$ for 20 GeV $K^{0}_{L}$.  This definition for sigma is used as it matches the energy resolution as a function of energy for neutral hadrons using the nominal ILD HCal \cite{Behnke:2013lya}.  This cut ensures that when fitting the two dimensional distribution of hadronic energy measured in the ECal and HCal outliers do not skew the fit.  Once again the target reconstructed energy for this sample is the kinetic energy and not the total energy of the $K^{0}_{L}$ for the reasons outlined in section \ref{sec:hcaldigi}.  The impact of cuts are illustrated in figure \ref{fig:hadscaleselection}.
-
-\begin{figure}
+\begin{figure}[h!]
 \subfloat[]{\label{fig:hadscaleselectionnocuts}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionNoCuts.pdf}}
 \subfloat[]{\label{fig:hadscaleselectioncuts}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionCuts.pdf}}
 \caption[The distribution of hadronic energy measured in the ECal and HCal for 20 GeV $K^{0}_{L}$ events with and without selection cuts.]{The distribution of hadronic energy measured in the ECal and HCal for 20 GeV $K^{0}_{L}$ events \protect\subref{fig:hadscaleselectionnocuts} without selection cuts and \protect\subref{fig:hadscaleselectioncuts} with selection cuts.}
 \label{fig:hadscaleselection}
 \end{figure}
 
-This part of the calibration procedure is again iterative and begins by assuming trial values, $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$, for the hadronic scale calibration factors $\beta^{Had}_{ECal}$ and $\beta^{Had}_{ECal}$.  The 20 GeV $K^{0}_{L}$ events are then simulated and reconstructed.  Following that a linear fit to the distribution of $E^{Had}_{ECal}$ against $E^{Had}_{HCal}$ for 20 GeV $K^{0}_{L}$ events passing the selection cuts is applied.  The fit is performed by minimising $\chi^{2}$, which is defined as
+This part of the calibration procedure is again iterative and begins by assuming trial values, $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$, for the hadronic scale calibration factors $\beta^{Had}_{ECal}$ and $\beta^{Had}_{ECal}$.  The 20 GeV $K^{0}_{L}$ events are then simulated and reconstructed.  Following that a linear fit to the distribution of $E^{Had}_{ECal}$ against $E^{Had}_{HCal}$ for 20 GeV $K^{0}_{L}$ events passing the selection cuts is applied.  The fit is performed by minimising $\chi^{2}$, which is defined as:
 
 \begin{equation}
-\chi^{2}(\delta^{Had}_{ECal}, \delta^{Had}_{HCal}) = \sum_{i} \frac{x_{i}}{\sigma_{x_{i}}}
+\chi^{2}(\delta^{Had}_{ECal}, \delta^{Had}_{HCal}) = \sum_{i} \frac{x_{i}}{\sigma_{x_{i}}}\text{ ,}
 \end{equation}
 
-where $x_{i}$ is the perpendicular distance from $E^{Had}_{ECal}$ and $E^{Had}_{HCal}$ for event $i$ to the line $E^{Had}_{HCal} = \delta^{Had}_{HCal} - E^{Had}_{ECal} \frac{\delta^{Had}_{HCal}}{\delta^{Had}_{ECal}}$.   The definition of $x_{i}$ is given in equation \ref{equ:xicalc}, but best illustrated by considering figure \ref{fig:hadscalechi2calc}.  $\sigma_{x_{i}}$ is the uncertainty on $x_{i}$, which is calculated by propagating the uncertainties on $E^{Had}_{ECal}$ and $E^{Had}_{HCal}$, which are assumed to be $\sigma_{E^{Had}_{E/HCal}} = 55\% \times \sqrt{E^{Had}_{E/HCal}}$, into the expression for $x_{i}$.  The result of this propagation of errors is given in equation \ref{equ:sigmaxicalc}.  The sum runs over all events, $i$, passing the selection cuts.  
+\noindent where $x_{i}$ is the perpendicular distance from $E^{Had}_{ECal}$ and $E^{Had}_{HCal}$ for event $i$ to the line $E^{Had}_{HCal} = \delta^{Had}_{HCal} - E^{Had}_{ECal} \frac{\delta^{Had}_{HCal}}{\delta^{Had}_{ECal}}$.   The definition of $x_{i}$ is given in equation \ref{equ:xicalc}, but best illustrated by considering figure \ref{fig:hadscalechi2calc}.  $\sigma_{x_{i}}$ is the uncertainty on $x_{i}$, which is calculated by propagating the uncertainties on $E^{Had}_{ECal}$ and $E^{Had}_{HCal}$, which are assumed to be $\sigma_{E^{Had}_{E/HCal}} = 55\% \times \sqrt{E^{Had}_{E/HCal}}$, into the expression for $x_{i}$.  The result of this propagation of errors is given in equation \ref{equ:sigmaxicalc}.  The sum runs over all events, $i$, passing the selection cuts.  
 
-\begin{figure}
+\begin{equation}
+x_{i} = \frac{E^{Had}_{HCal} \delta^{Had}_{ECal} + E^{Had}_{ECal} \delta^{Had}_{HCal} - \delta^{Had}_{ECal} \delta^{Had}_{HCal}}{\sqrt{(\delta^{Had}_{ECal})^{2} + (\delta^{Had}_{HCal})^{2}}}\text{ ,}
+\label{equ:xicalc}
+\end{equation}
+\begin{equation}
+\sigma_{i} = \frac{(\sigma_{E^{Had}_{HCal}}  \delta^{Had}_{ECal})^{2} + (\sigma_{E^{Had}_{ECal}} \delta^{Had}_{HCal})^{2}}{\sqrt{(\delta^{Had}_{ECal})^{2} + (\delta^{Had}_{HCal})^{2}}}\text{ ,}
+\label{equ:sigmaxicalc}
+\end{equation}
+
+\begin{figure}[h!]
 \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionExample.pdf}
 \caption[An example showing the definition of $x_{i}$, the variable used for the calculation of $\chi^{2}(\delta^{Had}_{ECal}, \delta^{Had}_{HCal})$ for the setting of the hadronic energy scale.]{An example showing the definition of $x_{i}$, the variable used for the calculation of $\chi^{2}$ for the setting of the hadronic energy scale.  For an event that has been measured with hadronic energy $E^{Had}_{ECal}$ in the ECal and $E^{Had}_{HCal}$ in the HCal, the geometric interpretation of $x_{i}$ is shown.  The blue dotted line is defined as $E^{Had}_{HCal} = \delta^{Had}_{HCal} - E^{Had}_{ECal} \frac{\delta^{Had}_{HCal}}{\delta^{Had}_{ECal}}$.}
 \label{fig:hadscalechi2calc}
 \end{figure}
 
-\begin{equation}
-x_{i} = \frac{E^{Had}_{HCal} \delta^{Had}_{ECal} + E^{Had}_{ECal} \delta^{Had}_{HCal} - \delta^{Had}_{ECal} \delta^{Had}_{HCal}}{\sqrt{(\delta^{Had}_{ECal})^{2} + (\delta^{Had}_{HCal})^{2}}}
-\label{equ:xicalc}
-\end{equation}
-
-\begin{equation}
-\sigma_{i} = \frac{(\sigma_{E^{Had}_{HCal}}  \delta^{Had}_{ECal})^{2} + (\sigma_{E^{Had}_{ECal}} \delta^{Had}_{HCal})^{2}}{\sqrt{(\delta^{Had}_{ECal})^{2} + (\delta^{Had}_{HCal})^{2}}}
-\label{equ:sigmaxicalc}
-\end{equation}
-
-The minimisation is done by stepping a range of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{HCal}$ centred about the ideal value of $20 \text { GeV} - m_{K^{0}_{L}}$ in search for the minimum $\chi^{2}$.  Once the minima in $\chi^{2}$ is found the trial calibration factors $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$ are rescaled to correct for any deviation from the desired fit as follows
+The minimisation of $\chi^{2}$ is done by stepping over a range of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{HCal}$ centred about the ideal value of $20 \text { GeV} - m_{K^{0}_{L}}$ in search for the minimum $\chi^{2}$.  Once the minima in $\chi^{2}$ is found the trial calibration factors $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$ are rescaled to correct for any deviation from the desired fit as follows:
 
 \begin{equation}
 \beta^{Had0}_{ECal} \rightarrow \beta^{Had}_{ECal} = \beta^{Had0}_{ECal} \times \frac{E_{K}}{\Delta^{Had}_{ECal}} \\
-\beta^{Had0}_{HCal} \rightarrow \beta^{Had}_{HCal} = \beta^{Had0}_{HCal} \times \frac{E_{K}}{\Delta^{Had}_{HCal}}
+\beta^{Had0}_{HCal} \rightarrow \beta^{Had}_{HCal} = \beta^{Had0}_{HCal} \times \frac{E_{K}}{\Delta^{Had}_{HCal}}\text{ ,}
 \end{equation}
 
-where $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ are the values of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ giving the minimum $\chi^{2}$.  The step sizes used for minimising $\chi^{2}$ with respect to $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ is chosen such that a single step corresponds to the target final tolerance on $\delta^{Had}$ i.e. $|\delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.  
-
-This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ both fall within a given tolerance, which in this case it taken to be $|\Delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.
+\noindent where $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ are the values of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ giving the minimum $\chi^{2}$.  The step sizes used for minimising $\chi^{2}$ with respect to $\delta^{Had}_{ECal}$ and $\delta^{Had}_{ECal}$ is chosen such that a single step corresponds to the target final tolerance on $\delta^{Had}$ i.e. $|\delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.  This procedure is then repeated until $\Delta^{Had}_{ECal}$ and $\Delta^{Had}_{ECal}$ both fall within a given tolerance, which in this case it taken to be $|\Delta^{Had}_{E/HCal} - E_{\text{MC}}| < E_{\text{MC}} \times 0.5 \% \approx 0.1 \text{GeV}$.
 
 %========================================================================================
 
 \subsection{Retraining photon likelihood data}
-PandoraPFA uses likelihood data in the identification of $\gamma$s.  Data related to the topology and energy of electromagnetic showers and the wider event environment is used to determine whether a given shower is likely to be a $\gamma$.  The likelihood data is trained using off-shell mass Z boson (Z') events at 500 GeV that decay into light quarks (u, d, s).  It is necessary to retrain this data only when varying the ECal as photons are contained largely within the ECal at the energies being considered and the likelihood data only uses measurements made in the ECal.
+The likelihood data used by PandoraPFA in the identification of electromagnetic showers is trained using off-shell mass Z boson (Z') events at 500 GeV decaying into light quarks (u, d, s).  It is necessary to retrain this data only when varying the ECal as electromagnetic showers are largely contained within the ECal at the energies being considered and the likelihood data only uses measurements made in the ECal.
 
 As this data uses post digitisation hits it is important to ensure that a fully calibrated detector is used when retraining the likelihood data.  Therefore, it is necessary to run the calibration procedure, as described in section \ref{sec:orderingcalib}, before retaining.  However, as the reconstruction uses likelihood data the calibration procedure must be performed twice.  Initially the calibration procedure is performed where PandoraPFA is run without the inclusion of this likelihood data, using PandoraSettingsMuon.xml.  Then the likelihood data is retrained using the results of the first calibration pass and then the retrained likelihood data is used in the second pass of the calibration procedure.  
 
-In the optimisation studies presented in chapter OPTIMISATION STUDIES this procedure was followed whenever the ECal was modified so that optimal detector performance was achieved.  
-
 %========================================================================================
 %========================================================================================
 
-\section{HCal Cell Truncation}
+\section{Novel Energy Estimators}
+This section focuses upon novel energy estimators, introduced in section \ref{sec:motivation}.  Both techniques modify the cluster energy estimator by introducing weights, $\omega^{i}$, to energy deposits in the HCal that vary as a function of energy:
+
+\begin{equation}
+E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \omega^{i} \text{ ,}
+\end{equation}
+
+\noindent As hadronic showers are largely contained in the HCal, weights are only applied to HCal hits.  The weights $\omega^{i}$ vary a function of the hit energy density $\rho^{i} = \frac{E^{i}_{HCal}}{V}$, where $V$ is the HCal hit volume, and, while the exact weight values depend on the implementation of the technique, a general feature present in both is that at large $E^{i}_{HCal}$ the weight is less than one.  This reduces the energy of spuriously high energy cells to limit the impact of Landau fluctuations.  The metrics used for quantifying detector performance when using these novel energy estimators are thoroughly defined in chapter \ref{chap:detopt}.
+
+%========================================================================================
+
+\subsection{HCal Hit Energy Truncation}
 \label{sec:hcalcelltruncation}
-A powerful tool used by PandoraPFA in event reconstruction is the application of a truncation to the maximum amount of energy that can be recorded in a calorimeter cell in the HCal.  The purpose of this truncation is to eliminate the effect of spuriously high energy calorimeter cells that would skew the reconstruction.  The origin of these high energy cells is twofold: showering particles may be moving within the plane of the active material, which can lead to an overestimation of the deposited energy if the shower is not sufficiently uniform across the full cell, and Landau fluctuations \cite{Landau:1944if}, which originate from high energy knock-on electrons appearing within particle showers \cite{Bichsel:2004ej}.  These effects are only relevant in hadronic showers as electromagnetic showers begin showering almost immediately within the ECal, meaning they are unlikely to be directed within the plane of the active material of the calorimeter, and the Landau distribution only describes the energy loss for charged particles.  This means showering $\gamma$ do not produce Landau fluctuations and neither do $e^{-}$ and $e^{+}$ as their energy, in the particle flow paradigm, arises from the curvature of the track they produce and not the calorimeter hits.  Therefor, as only hadronic showers produce spuriously high energy cells through these mechanisms, this truncation is only applied on HCal cells.  
+The first technique to be examined is a truncation of the hadronic energy recorded in any given HCal hit.  In terms of the $\omega^{i}$, this corresponds to:
 
-A great deal of care has to be given to the truncation energy so that cells from typical hadronic shower development are not truncated, while the spuriously high energy cells are.  This can be illustrated by considering the single particle energy resolutions as a function of the HCal cell truncation that are shown in figure \ref{fig:ercelltrunc}.  The photon energy resolution is invariant to changes in the cell truncation as no photon energy is recorded in the HCal, while the energy resolution for the neutral hadrons is optimal for a truncation of 1 GeV.  This indicates that a  GeV truncation is sufficient for dealing with the Landau fluctuations and showering particles travelling within the active material of the calorimeter cell.  For cell truncations greater than 1 GeV the resolution degrades as the spuriously high energy cells are not accounted for, while truncations below 1 GeV truncate energy measurements from typical hadronic shower development.  If typical hadronic shower cells are truncated this leads to a poorer sampling of the shower and a degradation in the energy resolution.  
+\begin{equation}
+\begin{aligned}
+\omega^{i}(\rho^{i}) & = 1 \\
+& = \frac{\Lambda}{V \times \rho^{i}}
+\end{aligned}
+\end{equation}
 
-\begin{figure}
-\subfloat[]{\label{fig:ercelltruncphotons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/ER_vs_PhotonCellTrunc_100GeVPhoton.pdf}}
+\noindent where $\Lambda$ is the value of the truncation and $V$ is the volume of a HCal hit.  This weight as a function of hit energy density is shown in figure \ref{fig:hcalcellweight}
+
+\begin{figure}[h!]
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/CellTruncWeights.pdf}
+\caption[The weights, $\omega$, used in the HCal hit energy truncation as a function of the energy density of the HCal hit, $\rho$.  The truncation shown here corresponds to a 1~GeV truncation in the nominal ILD HCal.]{The weights, $\omega$, used in the HCal hit energy truncation as a function of the energy density of the HCal hit, $\rho$.  The truncation shown here corresponds to a 1~GeV truncation in the nominal ILD HCal.}
+\label{fig:hcalcellweight}
+\end{figure}
+
+The application of these weights can lead to improvements in the energy resolution for neutral hadrons, which can be seen in figure \ref{fig:ercelltrunckaons}.  However, a great deal of care has to be given to the truncation energy so that hits from typical hadronic shower development are not truncated, while the spuriously high energy hits are.  Figure \ref{fig:ercelltrunckaons} indicates that a 1~GeV truncation is sufficient for dealing with the Landau fluctuations.  For hit energy truncations greater than this the energy resolution worsens as the effect Landau fluctuations are not accounted for, while for hit energy truncations below 1~GeV the truncation is too aggressive and hits from typical hadronic shower development are truncated.  For completion the $\gamma$ energy resolutions as a function of HCal hit energy truncation are shown in figure \ref{fig:ercelltruncphotons}.  As expected the $\gamma$ energy resolution is invariant to the HCal hit energy truncation as the $\gamma$s are largely contained within the ECal.
+
+\begin{figure}[h!]
 \subfloat[]{\label{fig:ercelltrunckaons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/ER_vs_Kaon0LCellTrunc_50GeVKaon0L.pdf}}
-\caption[The energy resolution as a function of HCal cell truncation for \protect\subref{fig:ercelltruncphotons} 100 GeV $\gamma$ events and \protect\subref{fig:ercelltrunckaons} 50 GeV $K^{0}_{L}$ events for the nominal ILD detector model.]{The energy resolution as a function of HCal cell truncation for \protect\subref{fig:ercelltruncphotons} 100 GeV $\gamma$ events and \protect\subref{fig:ercelltrunckaons} 50 GeV $K^{0}_{L}$ events for the nominal ILD detector model.}
+\subfloat[]{\label{fig:ercelltruncphotons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/ER_vs_PhotonCellTrunc_100GeVPhoton.pdf}}
+\caption[The energy resolution as a function of HCal cell truncation for \protect\subref{fig:ercelltrunckaons} 50 GeV $K^{0}_{L}$ events and \protect\subref{fig:ercelltruncphotons} 100 GeV $\gamma$ events using the nominal ILD detector model.]{The energy resolution as a function of HCal cell truncation for \protect\subref{fig:ercelltrunckaons} 50 GeV $K^{0}_{L}$ events and \protect\subref{fig:ercelltruncphotons} 100 GeV $\gamma$ events using the nominal ILD detector model.}
 \label{fig:ercelltrunc}
 \end{figure}
 
-Once again, this effect propagates into the jet energy resolutions as shown by figure \ref{fig:jercelltrunc}.  The trends in this plot are complex as the optimal cell truncation varies with the jet energy.  At low energies a 0.5 GeV truncation gives the best performance, however, when the jet energies reach $\approx$ 180 GeV a 1-2 GeV truncation giving the best performance.  This is to be expected based on the Landau fluctuations.  The Landau distribution is essentially a Gaussian with a high energy tail and as the jet energy increases the definition of cell energies falling in the high energy tail changes.  Therefore, the definition of the cells requiring truncating changes as a function of jet energy and a procedure with more degrees of freedom than a single truncation value is required to fully account for this.  As particle showers grow in size with increasing incident particle energy it is expected that the problem of particles travelling within the active material plane, and not uniformly across the rest of the cell, should not change significantly with changes to the jet energy.  
+The improved energy resolution for careful choice of truncation can be seen in the jet energy resolution.  Figure \ref{fig:jercelltrunc} shows the jet energy resolution as a function of the jet energy for various values of the HCal hit energy truncation.  The trends in this plot are complex as the optimal cell truncation varies with the jet energy.  At low energies a 0.5~GeV truncation gives the best performance, however, when the jet energies reach $\approx$ 180~GeV a 1-2~GeV truncation gives the best performance.  This is to be expected based on the Landau fluctuations.  The Landau distribution, governing the energy deposition for hadronic showers, is essentially a Gaussian with a high energy tail and as the jet energy increases, the mean of the Gaussian increases and the definition of hit energies falling in the high energy tail changes.  
 
-When examining the breakdown of the jet energy resolutions into the intrinsic energy resolution and the confusion it was noted that the cell truncation improves both the intrinsic energy resolution and the confusion contribution to the jet energy resolution.  This indicates that the pattern recognition performed by PandoraPFA benefits from the absence of these spuriously high energy cells, which if not omitted can skew energy comparisons made in the reconstruction.  Any skewed energy comparisons in the reconstruction leads to inaccurate association of calorimeter hits to charged particle tracks.  In turn this causes double counting and/or omission of energy deposits in the calorimeters leading to a degradation of the energy resolution.  
-
-\begin{figure}
+\begin{figure}[h!]
 \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/JER_vs_JetEnergy_HCalCellTruncation.pdf}
 \caption[The jet energy resolution as a function of jet energy for various hadronic cell truncations.  The results shown use the nominal ILD detector model.]{The jet energy resolution as a function of jet energy for various hadronic cell truncations.  The results shown use the nominal ILD detector model.}
 \label{fig:jercelltrunc}
 \end{figure}
 
-While it is challenging to determine the optimal performance for a given detector model it is clear that applying an appropriate truncation produces significant improvement in detector performance.  Therefore, for the optimisation studies presented in section OPT STUDIES, the performance of each detector model is determined using a range of HCal cell truncations and the optimal resolutions quoted.  The HCal cell truncations considered in the optimisation were 0.5, 0.75, 1, 1.5, 2, 5, 10, and $10^{6}$ GeV (semi-infinite).  For the HCal cell size study the optimal performance for the 10, 20, 30, 40, 50 and 100 mm HCal cell size detector models was achieved using a 0.5, 0.75, 1, 1.5, 2 and 5 GeV truncation, for the tungsten HCal options the optimal truncation was 5 GeV and for all other detector models considered the optimal truncation was 1 GeV.  This optimisation has a significant impact on detector optimisation, which can be seen by comparing the jet energy resolutions using the optimised cell truncation and a uniform 1 GeV truncation, as found in \ref{fig:jerhcalcellopt}.  Without this optimisation of cell truncation the significance of the HCal cell size is overinflated and could have led to a misinformed detector design choice.  
+While it is challenging to determine the optimal performance for a given detector model it is clear that applying an appropriate truncation produces significant improvement in detector performance.  Therefore, for the optimisation studies presented in chapter \ref{chap:detopt} this form of novel energy estimator is applied.  The optimal truncation for each detector model considered in that study was determined by performing the reconstruction using range of HCal hit energy truncations and quoting the optimal performance.  The HCal hit energy truncations considered in the optimisation study were 0.5, 0.75, 1, 1.5, 2, 5, 10, and $10^{6}$ GeV (semi-infinite).  For the HCal cell size study the truncation used for the 10, 20, 30, 40, 50 and 100~mm cell size detector was 0.5, 0.75, 1, 1.5, 2 and 5~GeV respectively, for the tungsten HCal options the truncation used was 5~GeV and for all other options the truncation used was 1~GeV.  This optimisation has a significant impact on detector optimisation, which can be seen by comparing the jet energy resolutions obtained when using the optimised cell truncation and a fixed 1~GeV truncation, shown in figure \ref{fig:jerhcalcellopt}.  Without this optimisation of hit energy truncation the significance of the HCal cell size is overinflated and could lead to a misinformed detector design choice.  
 
-\begin{figure}
+\begin{figure}[h!]
 \subfloat[]{\label{fig:jerhcalcelloptgoodtrunc}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf}}
 \subfloat[]{\label{fig:jerhcalcelloptbadtrunc}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/JER_vs_HCalCellSizeBadTruncation.pdf}}
-\caption[The jet energy resolution as a function of HCal cell size using \protect\subref{fig:jerhcalcelloptgoodtrunc} an optimised HCal cell truncation and \protect\subref{fig:jerhcalcelloptbadtrunc} a fixed 1 GeV truncation.]{The jet energy resolution as a function of HCal cell size using \protect\subref{fig:jerhcalcelloptgoodtrunc} an optimised HCal cell truncation and \protect\subref{fig:jerhcalcelloptbadtrunc} a 1 GeV truncation.}
+\caption[The jet energy resolution as a function of HCal cell size using a HCal hit energy truncation that is \protect\subref{fig:jerhcalcelloptgoodtrunc} optimised and \protect\subref{fig:jerhcalcelloptbadtrunc} fixed at 1~GeV.]{The jet energy resolution as a function of HCal cell size using a HCal hit energy truncation that is \protect\subref{fig:jerhcalcelloptgoodtrunc} optimised and \protect\subref{fig:jerhcalcelloptbadtrunc} fixed at 1~GeV.}
 \label{fig:jerhcalcellopt}
 \end{figure}
 
 %========================================================================================
 %========================================================================================
 
-\section{Software Compensation}
+\subsection{Software Compensation}
 \label{sec:softcomp}
+
+% HERE
+
 As discussed in chapter CALORIMETERS CHAPTER, the response of a calorimeter to a hadronic shower is different to that of an electromagnetic showers.  The particle shower produced by a hadron when passing through a calorimeter has two components,\cite{Wigmans:2000vf}; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$, and a hadronic shower component originating from all other interacting and decaying hadrons in the shower.  
 
 %TAKEN "Hadronic showers have an "invisible" energy component caused by various factors such as neutrons stopping within the calorimeter and nuclear binding energy losses.  This leads to a reduced response from a calorimeter to a hadronic showering particle in comparison to an electromagnetic showering particle of the same energy.  " TO FRONT
