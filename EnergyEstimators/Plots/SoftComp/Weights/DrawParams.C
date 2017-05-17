@@ -21,6 +21,7 @@ void DrawParams()
     pTF1_p1->GetYaxis()->SetTitle("#it{p}_{1}");
     pTF1_p1->GetYaxis()->SetTitleSize(0.076);
     pTF1_p1->GetYaxis()->SetLabelSize(0.076);
+    pTF1_p1->GetYaxis()->SetDecimals();
 
     TF1 *pTF1_p2 = new TF1("p2","[0] + [1]*x + [2] *x * x",0,100);
     pTF1_p2->SetTitle("");
