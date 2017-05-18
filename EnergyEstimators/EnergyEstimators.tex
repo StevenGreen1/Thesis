@@ -31,13 +31,13 @@ Once the basic energy estimator has been calibrated, it is possible to apply mor
 There are two distinct routes available for negating this unwanted effect and achieving a compensating response from a calorimeter:  The first is hardware compensation, whereby calorimeters are constructed using materials that yield extra energy in response to hadronic showers and the second is software compensation, whereby the uncompensated calorimetric energies are corrected based on whether the shower is hadronic.  The linear collider lends itself to software compensation as the fine segmentation of the calorimeters and precise reconstruction of individual particles makes identification of hadronic showers, and modifying their energies, feasible.  A basic form of software compensation included in the linear collider reconstruction is the modification of the electromagnetic cluster energy estimator to:
 
 \begin{equation}
-E_{EM \text{ } Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} \beta^{EM}_{ECal} + \sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \beta^{EM}_{HCal}
+E_{EM \text{ } Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} \beta^{EM}_{ECal} + \sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \beta^{EM}_{HCal} \text{ ,}
 \end{equation}
 
 \noindent and the hadronic cluster energy to:
 
 \begin{equation}
-E_{Had \text{ } Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} \beta^{Had}_{ECal} + \sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \beta^{Had}_{HCal}
+E_{Had \text{ } Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} \beta^{Had}_{ECal} + \sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \beta^{Had}_{HCal} \text{ ,}
 \end{equation}
 
 \noindent where the $\beta$s are constant scaling factors that are applied to the calorimeter hit energies associated to electromagnetic and hadronic clusters in the ECal and HCal.  This simple scaling of energies compensates the response of the calorimeters at the fixed energy where the $\beta$s are calibrated, which leads to better detector performance.  Determination of these energy scale setting constants is the second stage of the calibration procedure that is presented in this chapter.  
@@ -143,7 +143,7 @@ Using these cuts the calibration procedure for the digitisation of the HCal barr
 The HCal ring, illustrated in figure \ref{fig:calorimeters}, also has an independent digitisation constant to account for any difference in the hadronic shower development between the ring, barrel and endcap.  The procedure used to calibrate this constant has to differs from that presented in section \ref{sec:hcaldigi} as it is unfeasible, due to the depth of the ring, to produce events that are wholly contained within it.  Fortunately, the size of the HCal ring means it plays a minimal role in the reconstruction, so precise calibration is not crucial.  To ensure that the calibration is approximately correct for the HCal ring, $\alpha_{\text{HCal ring}}$ is assumed to equal $\alpha_{\text{HCal endcap}}$ multiplied by several factors designed to accounts for changes in the active layer thickness, absorber layer thickness and the MIP response between the HCal endcap and ring.  In detail:
 
 \begin{equation}
-\alpha_{\text{HCal ring}} = \alpha_{\text{HCal endcap}} \times \frac{\langle \text{cos}(\theta_\text{endcap}) \rangle}{\langle \text{cos}(\theta_\text{ring}) \rangle} \times \frac{P_\text{endcap} }{P_\text{ring} } \times \frac{L^{Absorber}_\text{endcap}}{L^{Absorber}_\text{ring} } \times \frac{L^{Active}_\text{ring}}{L^{Active}_\text{endcap}}
+\alpha_{\text{HCal ring}} = \alpha_{\text{HCal endcap}} \times \frac{\langle \text{cos}(\theta_\text{endcap}) \rangle}{\langle \text{cos}(\theta_\text{ring}) \rangle} \times \frac{P_\text{endcap} }{P_\text{ring} } \times \frac{L^{Absorber}_\text{endcap}}{L^{Absorber}_\text{ring} } \times \frac{L^{Active}_\text{ring}}{L^{Active}_\text{endcap}} \text{ ,}
 \end{equation}
 
 \noindent where $\theta$ is the incident angle of the incoming particle to the calorimeter determined using the 20 GeV $K^{0}_{L}$ events, $L^{Active}$ is the active layer thickness and $L^{Absorber}$ is the absorber layer thickness. $P$ is the position of the MIP peak in the distribution of active layer hit energies, which has been corrected so that the MIP appears to enter the calorimeter at normal incidence, and is determined using 10 GeV $\mu^{-}$ events.  Details on how $P$ is determined can be found in section \ref{sec:mipresponse}.
@@ -248,7 +248,7 @@ x_{i} = \frac{E^{Had}_{HCal} \delta^{Had}_{ECal} + E^{Had}_{ECal} \delta^{Had}_{
 The minimisation of $\chi^{2}$ is done by stepping over a range of $\delta^{Had}_{ECal}$ and $\delta^{Had}_{HCal}$ centred about the ideal value of $20 \text { GeV} - m_{K^{0}_{L}}$ in search for the minimum $\chi^{2}$.  Once the minima in $\chi^{2}$ is found the trial calibration factors $\beta^{Had0}_{ECal}$ and $\beta^{Had0}_{ECal}$ are rescaled to correct for any deviation from the desired fit as follows:
 
 \begin{equation}
-\beta^{Had0}_{ECal} \rightarrow \beta^{Had}_{ECal} = \beta^{Had0}_{ECal} \times \frac{E_{K}}{\Delta^{Had}_{ECal}} \\
+\beta^{Had0}_{ECal} \rightarrow \beta^{Had}_{ECal} = \beta^{Had0}_{ECal} \times \frac{E_{K}}{\Delta^{Had}_{ECal}} \text{ ,}\\
 \beta^{Had0}_{HCal} \rightarrow \beta^{Had}_{HCal} = \beta^{Had0}_{HCal} \times \frac{E_{K}}{\Delta^{Had}_{HCal}}\text{ ,}
 \end{equation}
 
@@ -283,12 +283,12 @@ The first technique to be examined is a truncation of the hadronic energy record
 
 \begin{equation}
 \begin{aligned}
-\omega(\rho) & = 1 \\
-& = \frac{\Lambda}{V \times \rho}
+\omega(\rho) & = 1 & \hspace{1cm} \rho \times V < \kappa \\
+& = \frac{\kappa}{\rho \times V} & \hspace{1cm}  \rho \times V > \kappa \text{ ,}
 \end{aligned}
 \end{equation}
 
-\noindent where $\Lambda$ is the value of the truncation and $V$ is the volume of a HCal hit.  This weight as a function of hit energy density is shown in figure \ref{fig:hcalcellweight}.  
+\noindent where $\kappa$ is the value of the truncation and $V$ is the volume of a HCal hit.  This weight as a function of hit energy density is shown in figure \ref{fig:hcalcellweight}.  
 
 %========================================================================================
 
@@ -349,9 +349,9 @@ An additional layer of sophistication in this approach is the weights that are a
 In terms of the $\omega$ weights introduced in equation \ref{equ:compensation}, the weights \cite{Adloff:2012gv} in this technique corresponds to: 
 
 \begin{equation}
-\omega(E_{\text{Raw}}, \rho) = p_{1}(E_{\text{Raw}}) \times exp(p_{2}(E_{\text{Raw}}) \times \rho) + p_{3}(E_{\text{Raw}}) \text{ ,}\\
-p_{1} = p_{11} + p_{12} \times E_{\text{Raw}} + p_{13} \times E_{\text{Raw}}^{2} \text{ ,}\\
-p_{2} = p_{21} + p_{22} \times E_{\text{Raw}} + p_{23} \times E_{\text{Raw}}^{2} \text{ ,}\\
+\omega(E_{\text{Raw}}, \rho) = p_{1}(E_{\text{Raw}}) \times exp(p_{2}(E_{\text{Raw}}) \times \rho) + p_{3}(E_{\text{Raw}}) \\
+p_{1} = p_{11} + p_{12} \times E_{\text{Raw}} + p_{13} \times E_{\text{Raw}}^{2} \\
+p_{2} = p_{21} + p_{22} \times E_{\text{Raw}} + p_{23} \times E_{\text{Raw}}^{2} \\
 p_{3} = \frac{p_{31}}{p_{32} + exp(p_{33} \times E_{\text{Raw}})}\text{ ,}
 \label{equ:softcompweight}
 \end{equation}

@@ -2,9 +2,11 @@
     gStyle->SetOptStat(0);
 
     TCanvas *pCanvasEj = new TCanvas();
+    pCanvasEj->SetTopMargin(0.05);
+    pCanvasEj->SetRightMargin(0.05);
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",1200,0,110,12000,2.5,4.5);
+    TH2F *pAxesEj = new TH2F("axesEj","",1200,0,110,12000,2.5,5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetYaxis()->SetTitleOffset(0.8);
     pAxesEj->GetYaxis()->SetDecimals();
