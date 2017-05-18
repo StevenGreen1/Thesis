@@ -38,7 +38,7 @@
 
     float Variable_4_JERError[4] = {0.0452149,0.0357765,0.0362834,0.0385691};
 
-    TLegend *pLegend = new TLegend(0.65, 0.55, 0.85, 0.85);
+    TLegend *pLegend = new TLegend(0.45, 0.55, 0.85, 0.85);
     pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Variable_1 = new TGraphErrors(4,jetEnergy,Variable_1_JER,jetEnergyError,Variable_1_JERError);
 
