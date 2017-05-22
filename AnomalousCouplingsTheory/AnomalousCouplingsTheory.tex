@@ -3,32 +3,30 @@
 
 \chapterquote{There, sir! that is the perfection of vessels!}
 {Jules Verne, 1828--1905}
-
+%
 %========================================================================================
 %========================================================================================
-
+%
 \section{The Standard Model}
-The Standard Model is a non-abelian gauge theory of the $\text{SU}(3) \times \text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry group.  It provides a description of three of the four fundamental forces of nature: the electromagnetic, weak and strong nuclear forces.  CITE.  In this theory there are 24 fermion fields: six flavours of quark, each with three colours, and six leptons.  As summary of the properties of these particles is given in table \ref{table:smleptons} and \ref{table:smquarks}.  Each of these fermion fields, $\psi$, is spin-$\frac{1}{2}$, therefore, each field satisfies the Dirac equation, given by the Lagrangian density:
+The Standard Model is a non-abelian gauge theory of the $\text{SU}(3) \times \text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry group.  It provides a description of three of the four fundamental forces of nature: the electromagnetic, weak and strong nuclear forces.  CITE.  The Standard Model contains a total of 24 fermion fields: six flavours of quark, each with three colours, and six leptons.  A summary of the properties of these particles is given in table \ref{table:smleptons} and \ref{table:smquarks}.  As these fields are spin-$\frac{1}{2}$, the fields obey the Dirac equation:
 %
 \begin{equation}
 \mathcal{L} = \overline{\psi}(i \slashed{\partial} - m)\psi \text{ ,}
 \end{equation}
 %
-\noindent The gauge transformations of the Standard Model act on are defined by a unitary operator $U$, which acts to transform the vector space, $\Psi$, formed from a combination of fermion fields, $\psi$, such that:
+\noindent where $\mathcal{L}$ is the Lagrangian density and $m$ is a mass term.  The derivative term, $\slashed{\partial} = \gamma^{\mu}\partial_{\mu}$, represents a summation over the partial derivate, $\partial^{\mu} = (\frac{\partial}{\partial{t}},\frac{\partial}{\partial{x}},\frac{\partial}{\partial{y}},\frac{\partial}{\partial{z}})$, of the scalar field $\psi$ with respect to the position 4-vector, $x^{\mu} = (t,x,y,z)$, and the gamma matrices, $\gamma^{\mu}$.  Each of the gauge transformations of the Standard Model act are defined by a unitary operator \textrm{U}, which acts to transform the vector space, $\Psi$, formed from a combination of fermion fields, $\psi$, in the following way:
 %
 \begin{equation}
-\Psi \rightarrow \Psi' = U\Psi \text{ ,}
+\Psi \rightarrow \Psi' = \textrm{U}\Psi \text{ .}
 \end{equation}
 %
-For example, the $\text{SU}(2)_{L}$ gauge symmetry acts on doublets formed, in the fundamental representation, of pairs of left handed chiral components, $\psi_{L} = \frac{1}{2}(1-\gamma_{5})\psi$.  The right handed components, $\psi_{R} = \frac{1}{2}(1+\gamma_{5})\psi$, transform trivially as a singlet.  Similarly, the SU(3) symmetry acts on triplets formed of the fermion fields for each flavour of quark.  All fields transform under the fundamental representation of U(1).
-
-In the Standard Model, the Lagrangian density describing the fermion fields is invariant to the gauge transformations $\text{SU}(3)$, $\text{SU}(2)_{\text{L}}$ and U(1).  This is achieved through the introduction of 12 gauge fields in the covariant derivate of the fermion fields:
+The Lagrangian density describing the fermion fields in the Standard Model is invariant under a $\text{SU}(3)$, a $\text{SU}(2)_{\text{L}}$ and a U(1) gauge transformations .  The $\text{SU}(2)_{L}$ gauge symmetry acts on doublets formed, in the fundamental representation, of pairs of left handed chiral components, $\psi_{L} = \frac{1}{2}(1-\gamma_{5})\psi$.  The fundamental representation of a SU(N) theory allows the symmetry to be expressed using $N \times N$ matrices acting on a $N$-dimensional vector.  The right handed components, $\psi_{R} = \frac{1}{2}(1+\gamma_{5})\psi$, transform trivially as a singlet.  Similarly, the SU(3) symmetry acts on triplets formed of the fermion fields for each flavour of quark.  All fields transform under the fundamental representation of U(1).  The Standard Model is a non-abelian theory as gauge transformations from a given symmetry group, with the exception of the U(1) symmetry, do not commute with each other.  The invariance of the Standard Model Lagrangian to these gauge transformations is established by introducing 12 gauge fields, which are summarised in table \ref{table:smbosons}, via the covariant derivate of the fermion fields:
 %
 \begin{equation}
 \partial^{\mu} \rightarrow D^{\mu} = \partial^{\mu} + ig_{1}YB^{\mu} + ig_{2} \textbf{T} \cdot \textbf{W}^{\mu} + ig_{3}\textbf{X} \cdot \textbf{G}^{\mu} \text{ ,}
 \end{equation}
 %
-\noindent where $B^{\mu}$ is the gauge field for the U(1) symmetry, $\textbf{W}^{\mu}$ ($\text{W}^{\mu}_{j}, j =1,2,3$) are the fields of the SU(2) symmetry and $\textbf{G}^{\mu}$ ($\text{G}^{\mu}_{j}, j =1,..,8$) are the fields of the SU(3).  Mixing of the gauge fields for the U(1) and SU(2) symmetry of the form:
+\noindent where $B^{\mu}$ is the gauge field for the U(1) symmetry, $\textbf{W}^{\mu}$ ($\text{W}^{\mu}_{j}, j =1,2,3$) are the fields of the $\text{SU}(2)_{\text{L}}$ symmetry and $\textbf{G}^{\mu}$ ($\text{G}^{\mu}_{j}, j =1,..,8$) are the fields of the SU(3).  $Y$ is the weak hypercharge, which is related to the chirality and flavour of the fermion it relates to.  $g_{1}$, $g_{2}$ and $g_{3}$ are three coupling constants related to the three symmetry groups of the Standard Model.  Mixing of the gauge fields for the U(1) and SU(2) symmetry of the form:
 %
 \begin{equation}
 \text{Z}_{\mu} = \text{cos}{\theta_{W}} \text{W}^{3}_{\mu} - \text{sin}{\theta_{W}} \text{B}_{\mu} \text{ ,}\\
@@ -42,7 +40,7 @@ In the Standard Model, the Lagrangian density describing the fermion fields is i
 \text{cos}{\theta_{W}} = \frac{g_{2}}{g_{1}+g_{2}} \text{ and } \text{sin}{\theta_{W}} = \frac{g_{1}}{g_{1}+g_{2}} \text{ ,}
 \end{equation}
 %
-\noindent produce the $\text{W}^{\pm}$, Z and $\gamma$ gauge bosons.  The $\text{G}^{\mu}_{j}$ fields are the eight massless gluons of the strong force.   $Y$ is the weak hypercharge, which is related to the chirality and flavour of the fermion it relates to.  $g_{1}$, $g_{2}$ and $g_{3}$ are three coupling constants.  $\textbf{T}$ and $\textbf{X}$ are the generators for the SU(2) and SU(3) symmetries, which are typically chosen as:
+\noindent produce the $\text{W}^{\pm}$, Z and $\gamma$ gauge bosons.  This mixing ensures that the $\text{W}^{\pm}$ and Z bosons are massive, while the $\gamma$ remains massless.  The $\text{G}^{\mu}_{j}$ fields are the eight massless gluons of the strong force.   $\textbf{T}$ and $\textbf{X}$ are the generators for the SU(2) and SU(3) symmetries, which are typically chosen as:
 %
 \begin{equation}
 T_{i} = \frac{1}{2}\tau_{i} \text{ ,} \\
@@ -55,7 +53,7 @@ X_{i} = \frac{1}{2}\lambda_{i} \text{ ,} \\
 K_{\mu} \rightarrow K'_{\mu} = UK_{\mu}U^{\dagger} + \frac{i}{g}(\partial^{\mu}U)U^{\dagger} \text{ ,} 
 \end{equation}
 %
-\noindent where $K_{\mu}$ is any of $B_{\mu}$, $\textbf{W}_{\mu}$ and $\textbf{G}_{\mu}$ and $g$ is the coupling constants associated to the relevant gauge symmetry.  Each of the gauge fields introduced to the Standard Model to ensure the Lagrangian is invariant under gauge transformations, is spin-1 and as such is described by the Proca action:
+\noindent where $K_{\mu}$ is any of $B_{\mu}$, $\textbf{W}_{\mu}$ and $\textbf{G}_{\mu}$ and $g$ is the coupling constants associated to the relevant gauge field.  As the $B_{\mu}$, $\textbf{W}_{\mu}$ and $\textbf{G}_{\mu}$ gauge fields are spin-1, they are described by the Proca action:
 %
 \begin{equation}
 \mathcal{L} = -\frac{1}{4}F^{{\mu}{\nu}}_{i}F_{{\mu}{\nu}{i}} + \frac{1}{2}m_{K}^{2}K_{i\mu}K^{\mu}_{i} \text{ ,} 
@@ -73,7 +71,7 @@ F^{{\mu}{\nu}}_{i} = \partial^{\mu}K^{\nu}_{i} - \partial^{\nu}K^{\mu}_{i} - gf_
 [T_{i},T_{j}] = if_{ijk}T_{k} \text{.} 
 \end{equation}
 %
-\noindent There is only one structure constant for the U(1) symmetry, which is zero, while the SU(2) symmetry structure constants are $f_{ijk} = \epsilon_{ijk}$, where $\epsilon_{ijk}$ is the Levi-Civita tensor.  It is the structure constants that govern the self-interactions for the gauge bosons.  Due to the symmetries that are enforced in the Standard Model $m_{K} = 0$ for all the gauge fields present, however, it is clear that is is not the case in nature.  The gauge boson mass terms are introduced through the Higgs field, as described in section \ref{sec:higgsphysics}. 
+\noindent These structure constants that govern the self-interactions for the gauge bosons.  There is only one structure constant for the U(1) symmetry, which is zero as the U(1) symmetry is abelian.  The SU(2) symmetry structure constants are $f_{ijk} = \epsilon_{ijk}$, where $\epsilon_{ijk}$ is the Levi-Civita tensor.  Due to the symmetries that are enforced in the Standard Model $m_{K} = 0$ for all the gauge fields present, however, it is clear that is is not the case in nature.  The gauge boson mass terms are introduced through the Higgs field, as described in section \ref{sec:higgsphysics}. 
 
 \begin{table}[h!]
 \centering
@@ -90,7 +88,7 @@ Generation & Particle & Mass [MeV] & Spin & Q/e \\
 3 & $\tau^{-}$ & $1776.86\pm0.12$ & 1/2 & -1 \\
 & $\nu_{\tau}$ & - & 1/2 & 0 \\
 \end{tabular}
-\caption[]{}
+\caption[The mass, spin and electric charge (Q) of the leptons found in the Standard Model \cite{Beringer:1900zz}.  Neutrino masses have not been included in the above table as precise measurements are yet to be made.  However, oscillations between different neutrino flavour states have been observed, which indicates that the flavour and mass eigenstates differ and that the neutrinos have a non-zero mass.  The current upper bound on neutrino mass measurements is 2 eV.]{The mass, spin and electric charge (Q) of the leptons found in the Standard Model \cite{Beringer:1900zz}.  Neutrino masses have not been included in the above table as precise measurements are yet to be made.  However, oscillations between different neutrino flavour states have been observed, which indicates that the flavour and mass eigenstates differ and that the neutrinos have a non-zero mass.  The current upper bound on neutrino mass measurements is 2 eV.}
 \label{table:smleptons}
 \end{table}
 
@@ -109,7 +107,7 @@ Generation & Particle & Mass [MeV] & Spin & Q/e \\
 3 & $t$ & $173210 \pm 510 \pm 710$ & 1/2 & +2/3 \\
  & $b$ & $4180^{+40}_{-30}$ & 1/2 & -1/3 \\
 \end{tabular}
-\caption[]{}
+\caption[The mass, spin and electric charge (Q) of the quarks found in the Standard Model \cite{Beringer:1900zz}.  Each of the particles in the above table corresponds to three fermion fields, one for each of the three colours of the SU(3) symmetry.]{The mass, spin and electric charge (Q) of the quarks found in the Standard Model \cite{Beringer:1900zz}.  Each of the particles in the above table corresponds to three fermion fields, one for each of the three colours of the SU(3) symmetry.} 
 \label{table:smquarks}
 \end{table}
 
@@ -124,11 +122,11 @@ Electromagnetic & $\gamma$ & 0 & 1 & 0 \\
 Weak Nuclear & $\text{W}^{\pm}$ & $80.385 \pm 0.015$ & 1 & $\pm$ 1 \\
 & Z & $91.1876 \pm 0.0021$ & 1 & 0 \\
 \hline
-Strong Nuclear & $g$ & 0 & 1 & 0 \\
+Strong Nuclear & $g$ ($\times 8$ colours) & 0 & 1 & 0 \\
 \hline
 Higgs & H & $125.1 \pm 0.3$ & 0 & 0 \\
 \end{tabular}
-\caption[Properties of the bosons found in the Standard Model.  Their mass, spin and electric charge (Q) are given.  The $\gamma$ and $g$s theoretically have zero mass, which is consistent with measurements.  The upper bound on the $\gamma$ mass has been measured at $10^{-18}$ eV, while gluon masses of up to a few MeV have not been precluded.  The upper bound on the magnitude of the charge of the $\gamma$ is measured at $10^{-35}$.]{Properties of the bosons found in the Standard Model.  Their mass, spin and electric charge (Q) are given.  The $\gamma$ and $g$s theoretically have zero mass, which is consistent with measurements.  The upper bound on the $\gamma$ mass has been measured at $10^{-18}$ eV, while gluon masses of up to a few MeV have not been precluded.  The upper bound on the magnitude of the charge of the $\gamma$ is measured at $10^{-35}$.}
+\caption[The mass, spin and electric charge (Q) of the gauge bosons found in the Standard Model \cite{Beringer:1900zz}.  The $\gamma$ and $g$s theoretically have zero mass, which is consistent with measurements.  The upper bound on the $\gamma$ mass has been measured at $10^{-18}$ eV, while gluon masses of up to a few MeV have not been precluded.  The upper bound on the magnitude of the charge of the $\gamma$ is measured at $10^{-35}$.]{The mass, spin and electric charge (Q) of the gauge bosons found in the Standard Model \cite{Beringer:1900zz}.  The $\gamma$ and $g$s theoretically have zero mass, which is consistent with measurements.  The upper bound on the $\gamma$ mass has been measured at $10^{-18}$ eV, while gluon masses of up to a few MeV have not been precluded.  The upper bound on the magnitude of the charge of the $\gamma$ is measured at $10^{-35}$.}
 \label{table:smbosons}
 \end{table}
 
@@ -137,25 +135,26 @@ Higgs & H & $125.1 \pm 0.3$ & 0 & 0 \\
 
 \section{Higgs Physics}
 \label{sec:higgsphysics}
-The gauge symmetries present in the Standard Model forbid a mass term for these bosons, however, the electroweak gauge bosons have been measured to be massive indicating that the theory as it stands is incomplete.  This problem can be solved via the introduction of the Higgs field that undergoes spontaneous symmetry breaking.
+The gauge symmetries present in the Standard Model forbid a mass term for the gauge bosons, however, the electroweak gauge bosons are known to have mass, which indicates the theory as it stands is incomplete.  Similarly, mass terms, $m\overline{\psi}\psi$, for the leptons and quarks are forbidden as they violate the $\text{SU}(2)_{\text{L}}$ symmetry as the symmetry applied only to left hand chiral components.  The mass terms are generated in the Standard Model by introducing a Higgs field, which undergoes spontaneous symmetry breaking.
 
 %========================================================================================
 
 \subsection{Spontaneous Symmetry Breaking}
 \label{sec:ssb}
-To illustrate spontaneous symmetry breaking consider a complex scalar field \psi with the Klein-Gordon Lagrangian:
+To illustrate spontaneous symmetry breaking, consider a complex scalar field \psi with the Klein-Gordon Lagrangian:
 %
 \begin{equation}
 \mathcal{L} = \partial^{\mu} \psi^{*} \partial_{\mu} \psi -m^{2} |\psi|^{2} = \partial^{\mu} \psi^{*} \partial_{\mu} \psi - V(\psi) \text{ ,}
+\label{equ:kleingordon}
 \end{equation}
 %
-\noindent where $\mathcal{L}$ the is Lorentz invariant Lagrangian density, $\partial^{\mu}$ is the partial derivate of the scalar field $\psi$ with respect to the position 4-vector, $m$ is a mass term and $V(\psi)$ is the potential the felt by the field $\psi$.  This Lagrangian density is invariant under the global symmetry $\psi \rightarrow e^{i\alpha} \psi$.  By adding extra terms to the Lagrangian that retain the invariance to the global symmetry it is possible to modify interactions of this scalar field.  This can be interpreted as modifying the potential, all terms in the Lagrangian without derivatives, of the scalar field.  For example consider a fourth order potential of the following form:
+\noindent where $\mathcal{L}$ the is Lorentz invariant Lagrangian density, $\partial^{\mu} = (\frac{\partial}{\partial{t}},\frac{\partial}{\partial{x}},\frac{\partial}{\partial{y}},\frac{\partial}{\partial{z}})$ is the partial derivative of the scalar field $\psi$ with respect to the position 4-vector $x^{\mu} = (t,x,y,z)$, $m$ is a mass term and $V(\psi)$ is the potential the field $\psi$.  This Lagrangian density is invariant under the global symmetry $\psi \rightarrow e^{i\alpha} \psi$.  By adding extra terms to the Lagrangian, which retain the invariance to the global symmetry, it is possible to modify the interactions of this scalar field.  For example consider modifying the potential of the scalar field to the following:
 %
 \begin{equation}
 \text{V}(\psi) = m^{2}|\psi|^{2} + \lambda |\psi|^{4} \text{ ,}
 \end{equation}
 %
-\noindent The potential has a minima at zero, however, if $\text{m}^{2} < 0$ then the minima exists on a circle in the complex $\psi$ plane.  This complex circle is centred at $(0,0)$ and has radius $v = \sqrt{\frac{-m^{2}}{\lambda}}$.  To quantise this theory it is necessary to expand about the minima of the potential, however, in the case of $m^{2} < 0$ there are an infinite number of choices of minima to expand about.  Irrespective of the choice of minima for this configuration the symmetry $\psi \rightarrow e^{i\alpha} \psi$ is broken.  Fluctuations about the minima along the degenerate direction leave the potential unchanged, which is a consequence of the breaking of the $\psi \rightarrow e^{i\alpha} \psi$ symmetry; this is known as spontaneous symmetry breaking.
+\noindent If $m^{2} > 0$, the potential has a minima at zero, however, if $m^{2} < 0$ then the minima exists on a circle in the complex $\psi$ plane.  This complex circle is centred at $(0,0)$ and has radius $v = \sqrt{-m^{2}/\lambda}$.  To quantise this theory it is necessary to expand about the minima of the potential.  However, in the case of $m^{2} < 0$ there are an infinite number of choices of minima to expand about and irrespective of the choice of minima for this configuration the symmetry $\psi \rightarrow e^{i\alpha} \psi$ is broken.  Fluctuations about the minima along the degenerate direction leave the potential unchanged, which is a consequence of the breaking of the $\psi \rightarrow e^{i\alpha} \psi$ symmetry; this is known as spontaneous symmetry breaking.
 
 Goldstone's theorem \cite{Goldstone:1962es} implies that for Lorentz-invariant theories spontaneous symmetry breaking always leads to the existence a massless particle.  This can be seen in this example when expanding the complex scalar theory example about the minima.
 %
@@ -163,24 +162,24 @@ Goldstone's theorem \cite{Goldstone:1962es} implies that for Lorentz-invariant t
 \psi = \frac{1}{\sqrt{2}}(v + \psi_{1} + i \psi_{2}) \text{ ,}
 \end{equation}
 %
-\noindent where $\psi_{1/2}$ are real fields and $v = \sqrt{\frac{-m^{2}}{\lambda}}$.  Applying this parameterisation to the Lagrangian yields a mass term of $\sqrt{-\text{m}^{2}}$ for the $\psi_{1}$ field while the mass of the $\psi_{2}$ field yields a massless particle:
+\noindent where $\psi_{1}$ and $\psi_{2}$ are real fields and $v = \sqrt{-m^{2}/\lambda}$.  Applying this parameterisation to the Lagrangian yields a mass term of $\sqrt{-m^{2}}$ for the $\psi_{1}$ field, however, there is no corresponding mass term for the $\psi_{2}$ field.  This indicates the $\psi_{2}$ field describes massless particles:
 %
 \begin{equation}
-\mathcal{L} = \frac{1}{2}\partial^{\mu} \psi_{1} \partial_{\mu} \psi_{1} + \frac{1}{2}\partial^{\mu} \psi_{2} \partial_{\mu} \psi_{2} - m^{2}|\psi_{1}|^{2} + 0.|\psi_{2}|^{2} + ... \text{ ,}
+\mathcal{L} = \frac{1}{2}\partial^{\mu} \psi_{1} \partial_{\mu} \psi_{1} + \frac{1}{2}\partial^{\mu} \psi_{2} \partial_{\mu} \psi_{2} - m^{2}|\psi_{1}|^{2} + ... \text{ ,}
 \end{equation}
 %
-\noindent This procedure is the origin of the gauge boson mass terms when applied to local symmetries instead of global ones.  This can be see in the example by promoting the global symmetry to a to local symmetry by letting $\alpha \rightarrow \alpha(x)$ and $\partial^{\mu} \rightarrow D^{\mu} = \partial^{\mu} + ieA^{\mu}$ where $A^{\mu}$ a the gauge field, which transforms as $A^{\mu} \rightarrow A^{\mu} - \partial^{\mu}\alpha(x)$.  The new Lagrangian becomes:
+\noindent This procedure is the origin of the gauge boson mass terms when applied to local symmetries instead of global ones.  For example consider the global symmetry, $\psi \rightarrow e^{i\alpha} \psi$, that exists in equation \ref{equ:kleingordon}.  Consider promoting this global symmetry to a local symmetry by letting $\alpha \rightarrow \alpha(x)$ and $\partial^{\mu} \rightarrow D^{\mu} = \partial^{\mu} + iA^{\mu}$, where $A^{\mu}$ a the gauge field that transforms as $A^{\mu} \rightarrow A^{\mu} - \partial^{\mu}\alpha(x)$.  In that case the new Lagrangian becomes:
 %
 \begin{equation}
-\mathcal{L} = (D^{\mu} \psi)^{*} (D_{\mu} \psi) - \text{m}^{2} |\psi|^{2} - \lambda |\psi|^{4} \text{ ,}
+\mathcal{L} = (D^{\mu} \psi)^{*} (D_{\mu} \psi) - \text{m}^{2} |\psi|^{2} - \lambda |\psi|^{4} \text{ .}
 \end{equation}
 %
-\noindent If there is a non zero minima in the potential, $v$, then a gauge boson mass term appears of the form $+\frac{e^{2}v^{2}}{2} A^{\mu} A_{\mu}$.
+\noindent If there is a non-zero minima in the potential, i.e. $m^{2} < 0$ and $v = \sqrt{-m^{2}/\lambda}$, then a gauge boson mass term appears of the form $+\frac{v^{2}}{2} A^{\mu} A_{\mu}$.
 
 %========================================================================================
 
 \subsection{Electroweak Interactions}
-The electroweak sector of the Standard Model is that related to the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry.  In this sector spontaneous symmetry breaking must occur in such a way as to give three massive gauge bosons,  $\text{W}^{\pm}$ and Z, and one massless gauge bosons, the photon.  This can be achieved through a Higgs field, H, that is a doublet of the $\text{SU}(2)_{\text{L}}$ symmetry, with weak hypercharge $\frac{1}{2}$, in the potential $\text{V}(\text{H})$ defined as:
+The electroweak sector of the Standard Model is that related to the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry.  In this sector, spontaneous symmetry breaking must occur in such a way as to give three massive gauge bosons,  $\text{W}^{\pm}$ and Z, and one massless gauge boson, the photon.  This can be achieved through a Higgs field, H, that transforms as a doublet under the $\text{SU}(2)_{\text{L}}$ symmetry.  The potential of the Higgs field, $\text{V}(\text{H})$, is:
 %
 \begin{equation}
 \text{V}(\text{H}) = -\mu^{2}\text{H}^{\dagger}\text{H} + \lambda (\text{H}^{\dagger}\text{H})^{2} \text{ ,}
@@ -189,22 +188,22 @@ The electroweak sector of the Standard Model is that related to the $\text{SU}(2
 \noindent where $\mu$ and $\lambda$ are constants.  The minima of this field is at:
 %
 \begin{equation}
-\sqrt{\text{H}^{\dagger}\text{H}} = \frac{v}{\sqrt{2}} = \sqrt{\frac{\mu^{2}}{2\lambda}} \text{ ,}
+\sqrt{\text{H}^{\dagger}\text{H}} = \frac{v}{\sqrt{2}} = \sqrt{\frac{\mu^{2}}{2\lambda}} \text{ .}
 \end{equation}
 %
-\noindent and without loss of generality we may choose to expand this field around the point:
+\noindent Without loss of generality we may choose to expand this field around the point:
 %
 \begin{equation}
 \langle \text{H} \rangle = \binom{0}{\frac{v}{\sqrt{2}}} \text{ ,}
 \end{equation}
 %
-\noindent where $v$ is real.  Consider the kinematic term in the Lagrangian, $\partial^{\mu} \text{H}^{\dagger} \partial_{\mu} \text{H}$.  The covariant derivative of this Higgs field must satisfy the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ gauge symmetry and so it takes the form:
+\noindent where $v$ is real.  In this case, consider the kinematic term in the Lagrangian, $\partial^{\mu} \text{H}^{\dagger} \partial_{\mu} \text{H}$.  The covariant derivative of this Higgs field must satisfy the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ gauge symmetry meaning it takes the form:
 %
 \begin{equation}
-D_{\mu} \text{H} = (\partial_{\mu} + ig\frac{\sigma^{i}}{2}W^{i}_{\mu} + i\frac{g'}{2}B_{\mu})H \text{ ,}
+D_{\mu} \text{H} = (\partial_{\mu} + ig_{1}YB_{\mu} + ig_{2}\frac{\tau^{i}}{2}W^{i}_{\mu})H \text{ ,}
 \end{equation}
 %
-\noindent If there is mixing of the $\text{SU}(2)_{\text{L}}$ and U(1) fields of the form:
+\noindent where $g_{1}$ and $g_{2}$ are coupling constants for the relevant gauge symmetries, $Y = \frac{1}{2}$ is the weak hypercharge of the Higgs, $\tau^{i}$ are the Pauli matrices and $B_{\mu}$ is the gauge field related to the U(1) symmetry and $W^{i}_{\mu}$ are the gauge fields related to the $\text{SU}(2)_{\text{L}}$ symmetry.  If there is mixing of the $\text{SU}(2)_{\text{L}}$ and U(1) fields of the form:
 %
 \begin{equation}
 \text{Z}_{\mu} = \text{cos}{\theta_{W}} \text{W}^{3}_{\mu} - \text{sin}{\theta_{W}} \text{B}_{\mu} \text{ ,}\\
@@ -215,7 +214,12 @@ D_{\mu} \text{H} = (\partial_{\mu} + ig\frac{\sigma^{i}}{2}W^{i}_{\mu} + i\frac{
 \noindent then non-zero mass terms for the electroweak bosons arise:
 %
 \begin{equation}
-\frac{(gv)^{2}}{4} \text{W}^{+}_{\mu} \text{W}^{-\mu} + \frac{(g^{2} + g'^{2})v^{2}}{8} \text{Z}_{\mu} \text{Z}^{\mu} \text{ ,}\\
+\frac{(gv)^{2}}{4} \text{W}^{+}_{\mu} \text{W}^{-\mu} + \frac{(g^{2} + g'^{2})v^{2}}{8} \text{Z}_{\mu} \text{Z}^{\mu} \text{ .}\\
+\end{equation}
+%
+\noindent This leads to the following boson masses:
+%
+\begin{equation}
 \begin{aligned}
 m_{\text{W}} = & \frac{gv}{2} \text{ ,} \\
 m_{\text{Z}} = & \frac{v\sqrt{g^{2} + g'^{2}}}{2} = \frac{m_{W}}{\text{cos}{\theta_{W}}} \text{ ,} \\
@@ -293,5 +297,3 @@ m_{\text{Z}} = & \frac{v\sqrt{g^{2} + g'^{2}}}{2} = \frac{m_{\text{W}}}{\text{co
 \noindent The full expansion of these terms in terms of the massive gauge bosons $\text{W}^{\pm}$ and Z is given in the appendices \ref{sec:expansionalpha4alpha5}.  These terms contribute to the vector boson scattering processes involving $\text{W}^{\pm}$ and Z bosons.  A study into the sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ is presented in section \ref{chap:PhysicsAnalysis}.
 
 %========================================================================================
-
-
