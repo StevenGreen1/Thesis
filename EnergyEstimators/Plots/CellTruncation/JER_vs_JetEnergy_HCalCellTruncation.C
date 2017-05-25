@@ -67,14 +67,14 @@
     pTGraphErrors_Variable_3->SetLineColor(kMagenta);
     pTGraphErrors_Variable_3->SetMarkerColor(kMagenta);
     pTGraphErrors_Variable_3->SetMarkerStyle(1);
-    pTGraphErrors_Variable_3->Draw("lp,same");
+//    pTGraphErrors_Variable_3->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_3, "2 GeV", "lp");
+//    pLegend->AddEntry(pTGraphErrors_Variable_3, "2 GeV", "lp");
 
     TGraphErrors *pTGraphErrors_Variable_4 = new TGraphErrors(4,jetEnergy,Variable_4_JER,jetEnergyError,Variable_4_JERError);
 
-    pTGraphErrors_Variable_4->SetLineColor(kGreen+2);
-    pTGraphErrors_Variable_4->SetMarkerColor(kGreen+2);
+    pTGraphErrors_Variable_4->SetLineColor(kMagenta);
+    pTGraphErrors_Variable_4->SetMarkerColor(kMagenta);
     pTGraphErrors_Variable_4->SetMarkerStyle(1);
     pTGraphErrors_Variable_4->Draw("lp,same");
 

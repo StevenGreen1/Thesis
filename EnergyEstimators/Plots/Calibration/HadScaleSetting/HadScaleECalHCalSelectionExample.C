@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/
-//=========  (Wed Mar  8 14:59:56 2017) by ROOT version5.34/30
+//=========  (Thu May 25 12:28:21 2017) by ROOT version5.34/30
    TCanvas *c1 = new TCanvas("c1", "",268,1103,800,800);
    gStyle->SetOptStat(0);
    c1->Range(-6,-6,34,34);
@@ -176,18 +176,22 @@ palette->SetTitleSize(0.036);
    ideal->GetYaxis()->SetTitleFont(132);
    ideal->Draw("same");
    TLatex *   tex = new TLatex(19.5023,2,"(#it{#delta}^{#it{Had}}_{#it{ECal}}, 0)");
+   tex->SetTextAlign(12);
    tex->SetTextFont(132);
    tex->SetLineWidth(2);
    tex->Draw();
       tex = new TLatex(2,19.5023,"(0, #it{#delta}^{#it{Had}}_{#it{HCal}})");
+   tex->SetTextAlign(12);
    tex->SetTextFont(132);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(14.28567,14.85506,"(#it{E}^{#it{Had}}_{#it{ECal}}, #it{E}^{#it{Had}}_{#it{HCal}})");
+      tex = new TLatex(14.28567,14.85506,"(#it{x}_{#it{i}}, #it{y}_{#lower[-0.225]{#it{i}}})");
+   tex->SetTextAlign(12);
    tex->SetTextFont(132);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(9.37607,13.94546,"#it{x}_{#it{i}}");
+      tex = new TLatex(9.37607,13.94546,"#it{r}_{#it{i}}");
+   tex->SetTextAlign(12);
    tex->SetTextFont(132);
    tex->SetLineWidth(2);
    tex->Draw();
