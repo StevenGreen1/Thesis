@@ -191,7 +191,7 @@ The electroweak sector of the Standard Model is that related to the $\text{SU}(2
 \sqrt{\text{H}^{\dagger}\text{H}} = \frac{v}{\sqrt{2}} = \sqrt{\frac{\mu^{2}}{2\lambda}} \text{ .}
 \end{equation}
 %
-\noindent Without loss of generality we may choose to expand this field around the point:
+\noindent Without loss of generality we may choose to expand this field around the a non-zero vacuum expectation value (vev):
 %
 \begin{equation}
 \langle \text{H} \rangle = \binom{0}{\frac{v}{\sqrt{2}}} \text{ ,}
@@ -227,50 +227,66 @@ m_{\text{A}} = & 0 \text{ ,}
 \end{aligned}
 \end{equation}
 %
-\noindent where $\theta_{W}$ is known as the Weinberg angle.  This mixing produces a massless gauge boson, the photon, and three massive gauge bosons, the $W^{\pm}$ and $Z$.  The ratio of the masses of the $W^{\pm}$ and $Z$ bosons gives the $\rho$ parameter, which is defined as:
+\noindent where $\theta_{W}$ is known as the Weinberg angle.  This mixing produces a massless gauge boson, the $\gamma$, and three massive gauge bosons, the $W^{\pm}$ and $Z$.  By acquiring a non-zero vev, the Higgs field breaks the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry that was present in the Lagrangian to the $\text{U}(1)_{em}$ symmetry of electromagnetism.  
+
+The ratio of the masses of the $W^{\pm}$ and $Z$ bosons gives the $\rho$ parameter, which is defined as:
 %
 \begin{equation}
 \rho = \frac{m_{\text{W}}^{2}}{m_{\text{Z}}^{2}\text{cos}{\theta_{W}}^{2}} = 1\text{ .}
 \label{equ:custodialsymmetry}
 \end{equation}
 %
-\noindent The $\rho$ parameter being equal to 1 is a consequence of the custodial symmetry that exists after the spontaneous symmetry breaking of the Higgs field.  
+\noindent This is a consequence of the Higgs potential, used in spontaneous symmetry breaking, containing custodial symmetry \cite{Beringer:1900zz}.  As the $\rho$ parameter has been experimentally measured to be $1.00040 \pm 0.00024$ \cite{Agashe:2014kda}, it is clear that any extension to the Standard Model should maintain this result.
 
-%HERE
+%========================================================================================
 
 \subsubsection{Custodial Symmetry}
-The Higgs doublet contains four degrees of freedom:
+The Higgs Lagrangian:
 %
 \begin{equation}
-\text{H} = \binom{\psi_{1} + i\psi_{2}}{\psi_{3} + i\psi_{4}} \text{ .}
-\end{equation}
-%
-\noindent Before spontaneously breaking any symmetry, the Higgs potential is invariant to rotations of these coordinates.  This symmetry is an SO(4) symmetry and approximately equal to a $\text{SU}(2)_{L} \times \text{SU}(2)_{R}$ symmetry, where the $\text{SU}(2)_{L}$ is the gauge symmetry that is already present in the Standard Model.  The $\text{SU}(2)_{L}$
-
-This can be explicitly shown 
-
-while the Higgs potential, $V(H)$, is, before spontaneously breaking the symmetry, invariant to rotations of these coordinates:
-%
-\begin{equation}
+\mathcal{L}_{Higgs} = (D_{\mu}\text{H})^{\dagger}D^{\mu}\text{H} - \text{V}(\text{H}) \\
 \text{V}(\text{H}) = -\mu^{2}\text{H}^{\dagger}\text{H} + \lambda (\text{H}^{\dagger}\text{H})^{2} \text{ ,}
 \end{equation}
 %
-
-
-.  As his global SO(4) symmetry is $\simeq \text{SU}(2)_{L} \times \text{SU}(2)_{R} $ symmetry is approximately 
-
-  $\rho = 1$ where $\rho$ is defined as:
+\noindent is, by construction, invariant under local $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ gauge transformations.  However, a larger global symmetry also exists in this sector, which can be seen by considering the Higgs doublet \cite{Ellis:1991qj}:
 %
 \begin{equation}
-\rho = \frac{m_{\text{W}}^{2}}{m_{\text{Z}}^{2}\text{cos}{\theta_{W}}^{2}} \text{ ,}
-\label{equ:custodialsymmetry}
+\text{H} = \binom{\psi^{+}}{\psi^{0}} = \binom{\psi_{1} + i\psi_{2}}{\psi_{3} + i\psi_{4}} \text{ .}
 \end{equation}
 %
-\noindent This is ratio is constant, which is due to the custodial symmetry that exists after the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry has been broken to $\text{U}_{Q}(1)$.
+\noindent All the terms in the Higgs potential involve $\text{H}^{\dagger}\text{H} = \psi_{1}^{2} + \psi_{2}^{2} + \psi_{3}^{2} + \psi_{4}^{2}$.  This term is invariant under any rotation of these four components and hence under a SO(4) global symmetry.  It is convenient to note at this point that a SO(4) symmetry is isomorphic to a $\text{SU}(2) \times \text{SU}(2)$ symmetry.  The SO(4) symmetry of this Higgs potential is nothing less than a $\text{SU}(2)_{L} \times \text{SU}(2)_{R}$ symmetry where the $\text{SU}(2)_{L}$ symmetry is the gauged symmetry of the Standard Model.  It is possible to reconstruct the Higgs potential to make this symmetry more evident \cite{Andersen:2011yj, Grojean:2007zz}.  This is done by considering:
+%
+\begin{equation}
+\Phi = (i\tau_{2}\text{H}, \text{H}) = 
+\begin{pmatrix}
+\psi^{0*} & \psi^{+} \\
+-\psi^{+*} & \psi^{0}
+\end{pmatrix} 
+\text{ .}
+\end{equation}
+%
+\noindent Using this parametrisation the Higgs Lagrangian becomes:
+%
+\begin{equation}
+\mathcal{L}_{Higgs} =  \frac{1}{2}\text{Tr}[(D_{\mu}\Phi)^{\dagger}D^{\mu}\Phi] + \mu^{2}\text{Tr}[\Phi^{\dagger}\Phi] - \lambda \text{Tr}[\Phi^{\dagger}\Phi\Phi^{\dagger}\Phi] \text{ ,}
+\end{equation}
+%
+\noindent which is invariant under transformations of the form:
+%
+\begin{equation}
+\Phi \rightarrow U_{L} \Phi U_{R}^{\dagger} \text{ ,}
+\end{equation}
+%
+\noindent where $U_{L}$ and $U_{R}$ is a transformation of the $\text{SU}(2)_{L}$ and $\text{SU}(2)_{r}$ symmetry groups respectively.
+
+When the Higgs field acquires a non-zero vev, the $\text{SU}(2)_{\text{L}} \times \text{U}(1)$ symmetry was broken to the $\text{U}(1)_{em}$ symmetry of electromagnetism.  Analogously, the $\text{SU}(2)_{L} \times \text{SU}(2)_{R}$ symmetry of the Higgs potential is broken to a $\text{SU}(2)_{C}$ symmetry, which is known as custodial symmetry.  As a SU(2) symmetry is isomorphic to a SO(3) symmetry, in effect, symmetry breaking in the Higgs sector is equivalent to an SO(4) symmetry being broken to an SO(3).  This becomes clear when considering the form of the Higgs potential after symmetry breaking.  After spontaneous symmetry breaking the terms in the Higgs potential involve $\text{H}^{\dagger}\text{H} = (\psi_{1}^{2}-v^{2}) + \psi_{2}^{2} + \psi_{3}^{2} + \psi_{4}^{2}$, which is only invariant to rotations between the $\psi_{2}$,  $\psi_{3}$ and  $\psi_{4}$ fields i.e. an SO(3) symmetry.
+
+The Higgs field, H, transforms a singlet under this $\text{SU}(2)_{C}$ custodial symmetry, while the $\text{SU}(2)_{L}$ gauge boson fields transform as a triplet.  It is the transformation of the  $\text{SU}(2)_{L}$ gauge boson fields that enforce the relationship between the masses of the $W^{\pm}$ and $Z$ gauge bosons and hence guarantee that $\rho = 1$.  It should be noted that the $\text{SU}(2)_{L} \times \text{SU}(2)_{R}$ symmetry only exists in the Higgs sector of the standard model.  The $\text{SU}(2)_{R}$ symmetry is the Standard Model is broken by Yukawa couplings of the Higgs to quarks and leptons and by a non-zero coupling to the U(1) gauge symmetry of the Standard Model, $g_{1}$.  This breaking of the $\text{SU}(2)_{R}$ symmetry is relatively weak, which means the deviations of $\rho$ from unity are minimal.  
 
 %========================================================================================
 
 \section{Effective Field Theory}
+\cite{Ellis:2013jnq}
 There are a number of features in the observable universe that cannot be accounted for using the Standard Model of particle physics.  However, the Standard Model is a very good description of the interactions between particles at the energies being probed at modern particle collider experiments.  Any underlying theory governing the interactions of particles must, therefore, behave like the Standard Model over these energies, or distance scales.  Above such energies the theory will deviate from the Standard Model to account for the full underlying theory.  Effective field theories (EFTs) work from this premise by assuming that the complete theory  has a momentum scale, $\Lambda$, below which Standard Model behaviour is replicated.  
 
 Quantum field theories must be renormalizable to ensure that non-infinite predictions of the coefficients in the Lagrangian can be made and tested.  Infinities arise from non-renormalizable theories due to divergent integrals from loop diagrams that assume the theory being applied is valid at all energy and length scales.  Effective field theories act to avoid such problems by only integrating up to the momentum (mass) scale $\Lambda$ ($\Delta$) and not above it.  At the energy scale being considered, any infinities arising from the loop calculations in the EFT can be absorbed into a finite number of parameters.  This methodology avoids the assumption that the theory in question is applicable to all energy scales and allows measurable predictions to be made.  
@@ -283,7 +299,12 @@ In the EFT framework, it is no longer necessary to enforce renormalization in th
 %
 \noindent where $c_{i}^{(d)}$ are the coefficient of the operators $\mathcal{O}_{i}^{(d)}$ and the summations run over all the dimensions, $d$, of the operator and all unique operators, $i$, of dimension, $d$.  The presence of the $\Lambda^{d-4}$ in the denominator is needed to ensure correct dimensionality of the new terms being added to the Lagrangian, but it also sets the scale, $\Lambda$, of new physics being added.  At energies below this scale it is possible to find the dominant terms for the EFT and consider these as corrections to the Standard Model, while above this scale the EFT breaks down as each term in the Lagrangian has a non-negligible coefficient.  In the extremal limit, $\Lambda \rightarrow \infty$, the Standard Model is recovered as new physics is too far out of reach to have any impact on observables.
 
+% SMALL CORRECTIONS PROP TO g1^2
+
 %========================================================================================
+
+% BEGIN HERE
+% TALK ABOUT SU(2)L x SU(2)R SYMMETRY BEING OBEYED BY SIGMA TO ENFORCE CUSTODIAL SYMMETRY CONDITION.
 
 \section{Electroweak Chiral Lagrangian}
 The introduction of a Higgs field transforming appropriately under the relevant gauge transformations is able to produce mass terms in the Lagrangian for the $\text{W}^{\pm}$ and Z bosons.  However, it is possible to introduce these terms via an EFT approach.  In such an approach the EFT considered is that of the electroweak chiral Lagrangian, which takes the place of the Higgs field in the Standard Model.  In this model the symmetry breaking is achieved by introducing a field $\Sigma(x)$ that transforms under the $\text{SU}(2)_{\text{L}}$ transformations U($x$) and the $\text{U}(1)$ transformations V($x$) as
