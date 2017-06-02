@@ -1,4 +1,4 @@
-\chapter{Particle Flow Calorimetry and Linear Collider Detectors}
+\chapter{Particle Flow Calorimetry for Future Linear Colliders}
 \label{chap:pflowandlcdetectors}
 
 \chapterquote{I am fond of pigs.  Dogs look up to us.  Cats look down on us.  Pigs treat us as equals.}
@@ -7,9 +7,13 @@
 %========================================================================================
 %========================================================================================
 
-\section{Particle Flow Calorimetry}
+Particle flow calorimetry can provide extremely good jet energy resolutions for at a future linear collider.  Jet energy resolution is crucial at the linear collider as many of the interesting processes will be characterised by multi-jet final states.  Many of these multi-jet final states will be produced from the hadronic decays of W and Z bosons and one of the key goals of the future linear collider is to be able to separate these decays.  Separation of these decays can be achieved, however, only by placing a tight requirement on the jet energy resolution; $\sigma_{E}/E \lessapprox 3.5\%$ for 50-500~GeV jets at the ILC and up to 1.5~TeV at CLIC \cite{arXiv:0907.3577}.  The use of particle flow calorimetry will also be highly beneficial for quantifying final states of interest that involving charged leptons and missing momentum.  
 
-The premise of particle flow calorimetry is to use the sub-detector that offers the best energy resolution to measure the energy of any given particle.  The starkest contrast of this approach to that of traditional calorimetry occurs in the measurement of the energy of charged particles.  In particle flow calorimetry the energy of a charged particle is measured using the curvature of the path it transverses as it bends in a magnetic field, while in traditional calorimetry the energy would be measured using the calorimeters, predominantly the hadronic calorimeter (HCal).  The tracker energy resolution for a single charged particle of energy $E_{X^{\pm}}$ is $\sim 10^{-4} \times E_{X^{\pm}}^{2}$, while for the HCal it is $\sim 0.55 \times \sqrt{E_{X^{\pm}}}$.  The energy resolution offered by the tracker is significantly better than that offered by the HCal for energies up to $\sim \mathcal{O}(300 \text{ GeV})$, which means that particle flow calorimetry yields a much better energy resolution for charged particles, below $\sim \mathcal{O}(300 \text{ GeV})$, than that of the traditional calorimetry approach.  The energy resolutions for neutral particles is similar when comparing the two approaches as both use the calorimeters to measure neutral particle energies.  Particle flow calorimetry offers gains in performance for collision energies well beyond 300 GeV as the average long-lived particle energy for physics processes of interest is typically much less than 300 GeV.  Furthermore, it also leads to a significant improvement in the measurement of jet energies as, after the decay of short-lived particles, approximately 60\% of the energy of a jet is carried in the form of charged particles.  The measurement of jet energies in the particle flow paradigm is summarised in table \ref{table:pflowjet}.  The benefits to the energy resolution, for both charged particles and jets, offered by the particle flow approach to calorimetry is the driving factor behind why it will be used at the linear collider experiment.  The jet energy resolutions will be invaluable for characterising multi-jet final states in physics processes of interest at the linear collider experiment.  Furthermore, the improved energy resolutions will be highly beneficial for quantifying any final states of interest that involving charged leptons and missing momentum.
+%========================================================================================
+%========================================================================================
+
+\section{Particle Flow Calorimetry}
+The premise of particle flow calorimetry is to use the sub-detector that offers the best energy resolution to measure the energy of any given particle, which corresponds to energy measurements being made in the ECal for $\gamma$s, the HCal for neutral hadrons and, crucially, the tracker for charged particles.  The starkest contrast of this approach to that of traditional calorimetry occurs in the measurement of the energy of charged particles.  In particle flow calorimetry the energy of a charged particle is measured using the curvature of the path it transverses as it bends in a magnetic field, while in traditional calorimetry the energy would be measured using the calorimeters, predominantly the hadronic calorimeter (HCal).  The tracker energy resolution for a single charged particle of energy $E_{X^{\pm}}$ is $\sim 10^{-4} \times E_{X^{\pm}}^{2}$, while for the HCal it is $\sim 0.55 \times \sqrt{E_{X^{\pm}}}$ \cite{arXiv:0907.3577}.  The energy resolution offered by the tracker is significantly better than that offered by the HCal for energies up to $\sim \mathcal{O}(300 \text{ GeV})$.  This means that particle flow calorimetry has the potential to offer a much better energy resolution for charged particles, below $\sim \mathcal{O}(300 \text{ GeV})$, than that of the traditional calorimetry approach.  Particle flow calorimetry offers gains in performance for collision energies well beyond 300 GeV as the average long-lived particle energy for physics processes of interest is typically much less than 300 GeV.  Furthermore, it also leads to a significant improvement in the measurement of jet energies as, after the decay of short-lived particles, approximately 60\% of the energy of a jet is carried in the form of charged particles.  The measurement of jet energies in the particle flow paradigm is summarised in table \ref{table:pflowjet}.  The benefits to the energy resolution, for both charged particles and jets, offered by the particle flow approach to calorimetry is the driving factor behind why it is planned for used at the linear collider experiment.  
 
 \begin{table}[h!]
 \centering
@@ -18,15 +22,12 @@ The premise of particle flow calorimetry is to use the sub-detector that offers 
 Jet  & Detector & Energy & Energy\\
 Component &  & Fraction & Resolution\\
 \hline
-Charged & Tracker & $\sim 0.6 E_{j}$ & $10^{-4} \times E_{X^{\pm}}^{2}$ \\
-Particles ($X^{\pm}$) & & & & \\
-Photons & ECal & $\sim 0.3 E_{j}$ & $0.15 \times \sqrt{E_{\gamma}}$ \\
-($\gamma$) & & & & \\
-Neutral & HCal &$\sim 0.1 E_{j}$ & $0.55 \times \sqrt{E_{X^{0}}}$ \\
-Hadrons ($X^{0}$) & & & \\
+Charged Particles ($X^{\pm}$) & Tracker & $\sim 0.6 E_{j}$ & $10^{-4} \times E_{X^{\pm}}^{2}$ \\
+Photons ($\gamma$) & ECal & $\sim 0.3 E_{j}$ & $0.15 \times \sqrt{E_{\gamma}}$ \\
+Neutral Hadrons ($X^{0}$) & HCal &$\sim 0.1 E_{j}$ & $0.55 \times \sqrt{E_{X^{0}}}$ \\
 \hline
 \end{tabular}
-\caption[The approximate jet fractions and energy resolutions for charged particles ($X^{\pm}$), photons ($\gamma$) and neutral hadrons ($X^{0}$).  Taken from \cite{arXiv:0907.3577}.]{The approximate jet fractions and energy resolutions for charged particles ($X^{\pm}$), photons ($\gamma$) and neutral hadrons ($X^{0}$).  Taken from \cite{arXiv:0907.3577}.}
+\caption[The approximate jet fractions and energy resolutions for charged particles ($X^{\pm}$) of energy $E_{X^{\pm}}$, photons ($\gamma$) of energy $E_{\gamma}$ and neutral hadrons ($X^{0}$) of energy $E_{X^{0}}$.  Taken from \cite{arXiv:0907.3577}.]{The approximate jet fractions and energy resolutions for charged particles ($X^{\pm}$) of energy $E_{X^{\pm}}$, photons ($\gamma$) of energy $E_{\gamma}$ and neutral hadrons ($X^{0}$) of energy $E_{X^{0}}$.  Taken from \cite{arXiv:0907.3577}.}
 \label{table:pflowjet}
 \end{table}
 
@@ -42,8 +43,12 @@ Particle flow calorimetry is challenging to put into practice as it requires a p
 %========================================================================================
 %========================================================================================
 
-\section{Linear Collider Detectors}
+\section{International Large Detector}
 \label{sec:ild}
+
+%========================================================================================
+
+\subsection{Overview}
 All detector concepts for the linear collider have been purposely built to make particle flow calorimetry possible.  While there are a number of different concepts that are under consideration for both the ILC and CLIC one of the most prominent, and the focus of this work, is the International Large Detector (ILD).  The ILD detector, shown in figure \ref{fig:ild} achieves very high spatial resolution for all sub-detector systems thanks to its highly segmented calorimeters and central tracking system, both of which are encompassed within a 3.5 T magnetic field.  When combined with sophisticated pattern recognition software, provided by PandoraPFA, particle flow calorimetry can be realised and the linear collider jet energy resolution goal of $3.8 \%$, which is required to allow separation of hadronic decays from W and Z bosons, can be achieved.
 
 \begin{figure}[h!]
@@ -56,19 +61,35 @@ All detector concepts for the linear collider have been purposely built to make 
 
 %========================================================================================
 
-\subsection{Tracking System}
-The tracking system for the ILD detector consist of a multi-layer pixel-vertex detector, which is surrounded by a system of silicon strip and pixel detectors.  These are desigend to give precise information about displaced vertices with respect to the impact point, which are crucial for the study of short lived particles such as the $D$ or $B$ mesons.  Outside of the vertex detector is the central tracker of ILD, which is a Time Projection Chamber (TPC).  The TPC samples each charged particle track at many points giving detailed spatial information that can be used to extract the curvature of the track and hence the momentum of the charged particle that transversed it.  Finally, a further silicon strip detector surrounds the TPC to give an additional, high precision, space point to aid tracking performance. 
+\subsection{Vertex Detector}
+The tracking system for the ILD detector consist of a multi-layer pixel-vertex detector, which is surrounded by a system of silicon strip and pixel detectors.  These are designed to give precise information about displaced vertices with respect to the impact point, which are crucial for the study of short lived particles such as the $D$ or $B$ mesons.  Outside of the vertex detector is the central tracker of ILD, which is a Time Projection Chamber (TPC).  The TPC samples each charged particle track at many points giving detailed spatial information that can be used to extract the curvature of the track and hence the momentum of the charged particle that transversed it.  Finally, a further silicon strip detector surrounds the TPC to give an additional, high precision, space point to aid tracking performance. 
 
-%========================================================================================
 
-\subsubsection{Vertex System}
 The main goal of the ILD vertex detector is to achieve a resolution on the impact parameter of charged particle tracks of $\sigma_{b} < 5 \oplus \frac{10}{p\text{sin}(\theta)^{3/2}} \mu$m, where the first term is the transverse impact parameters resolution and the second is a multiple-scattering term.  This makes precisely tagging secondary vertices from charm and bottom mesons possible.  Typically these mesons have relatively short proper lifetimes, $\tau$, such that $c\tau \approx \mathcal{O}(300 \text{{\mu}m})$.  To achieve this impact parameter resolution, a spatial resolution of better than 3 {\mu}m is required near the IP.  Furthermore, a low material budget of less than 0.15 \% $X_{0}$ per layer is required to ensure that few electromagnetic showers are initiated within the vertex detector.  A low pixel occupancy is essential for determining the trajectory of individual tracks in the detector.  The vertex detector will also have to be radiation hard to cope with the intense beam induced backgrounds, which are predominantly from beamstrahlung, found close to the IP at the linear collider.  Furthermore, consideration will have to be given to the mechanical structure of the detector, power consumption and cooling.  
 
 There are a number of different pixel technology options under consideration for the vertex detector for the ILD detector and this is an active area of ongoing research and development for the linear collider collaboration.  The current design of the vertex detector consists of three concentric layers of double-sided ladders that are close to being cylindrical.  Each ladder has two pixel sensors on each side and the ladder thickness is approximately 2 mm.  The inner most radii of the ladders ranges from 16 mm to 60mm from the IP.  In the simulation of the vertex detector silicon is used as the sensitive material.  Support material and a cryostat are also included in the simulation for further realism.  
 
 %========================================================================================
 
-\subsubsection{Silicon Tracking System}
+\subsection{TPC}
+The central tracking system for the ILD detector is a TPC, which is shown in figure \ref{fig:tracker}.  The TPC consists of two chambers of gas with a high voltage applied across them.  Charged particles passing through the TPC ionise the gas and the ionised molecules drift in the high voltage to the end plates where they are collected and measured.  The drift time is then used to calculate the position of the ionisation point.  TPCs have an advantage over silicon tracking in that they continuously track any charged particle passing through them, while silicon detectors are only sensitive within each silicon layer.  This compensates for the worse single point resolution that TPCs have in comparison to silicon detectors and makes TPCs a viable option for the ILD detector.  Furthermore, TPCs has a very low material budget, which benefits calorimetry in ILD.  
+
+The ILD TPC will operate within a 3.5 T magnetic field and under these conditions a point resolution of better than 100 {\mu}m and a double hit resolution in $\phi$ of less than 2 mm can be achieved.  Several readout technology options are currently under development for the ILD TPC and each of these is tailored to the gas mixture that will be used for the TPC.  For all potential options it is envisaged that the readout pads would be $\approx 1 \times 6 \text{mm}^{2}$ giving a total of approximately $10^{6}$ on the TPC endplates.
+
+In the detector simulation the TPC is simulated as a cylindrical volume of the gas mixture, Ar:$\text{CH}_4$:$CO_{2}$ (95:3:2) \cite{Abe:2010aa}, which is surrounded by a realistic field cage.  A conservative estimate of the endplate is included in the simulation to account for the support structure, electronics and cooling pipes for the TPC.  Furthermore, the material budget required to account for power and readout cables for the inner vertex detector has been estimated and is included in the simulation as an aluminium cylinder between the beam pipe and the field cage of the TPC.
+
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:tracker1}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png}}
+\subfloat[]{\label{fig:tracker2}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Tracker2.png}}
+\caption[\protect\subref{fig:tracker1} Drawing of the propose end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:tracker1} Drawing of the propose end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.}
+\label{fig:tracker}
+\end{figure} 
+
+%========================================================================================
+
+\subsection{Supplemental Silicon Tracking System}
+% Requires restructuring as moved TPC upfront 
 There are four components that make up the silicon tracking system for ILD, shown in figure \ref{fig:vertex}, which are:
 
 \begin{figure}[h!]
@@ -86,23 +107,6 @@ There are four components that make up the silicon tracking system for ILD, show
 \end{itemize}
 
 The requirements for these sensors is similar to those of the vertex detector in terms of requiring low material budget and low occupancy, however, as the sensors are further away from the IP radiation hardness is less crucial.  The technology options for these sensors is under development as was the case for the vertex detector.  In the detector model simulations all of these elements are included with additional material added to represent the support structure.  
-
-%========================================================================================
-
-\subsubsection{TPC}
-The central tracking system for the ILD detector is a TPC, which is shown in figure \ref{fig:tracker}.  The TPC consists of two chambers of gas with a high voltage applied across them.  Charged particles passing through the TPC ionise the gas and the ionised molecules drift in the high voltage to the end plates where they are collected and measured.  The drift time is then used to calculate the position of the ionisation point.  TPCs have an advantage over silicon tracking in that they continuously track any charged particle passing through them, while silicon detectors are only sensitive within each silicon layer.  This compensates for the worse single point resolution that TPCs have in comparison to silicon detectors and makes TPCs a viable option for the ILD detector.  Furthermore, TPCs has a very low material budget, which benefits calorimetry in ILD.  
-
-The ILD TPC will operate within a 3.5 T magnetic field and under these conditions a point resolution of better than 100 {\mu}m and a double hit resolution in $\phi$ of less than 2 mm can be achieved.  Several readout technology options are currently under development for the ILD TPC and each of these is tailored to the gas mixture that will be used for the TPC.  For all potential options it is envisaged that the readout pads would be $\approx 1 \times 6 \text{mm}^{2}$ giving a total of approximately $10^{6}$ on the TPC endplates.
-
-In the detector simulation the TPC is simulated as a cylindrical volume of the gas mixture, Ar:$\text{CH}_4$:$CO_{2}$ (95:3:2) \cite{Abe:2010aa}, which is surrounded by a realistic field cage.  A conservative estimate of the endplate is included in the simulation to account for the support structure, electronics and cooling pipes for the TPC.  Furthermore, the material budget required to account for power and readout cables for the inner vertex detector has been estimated and is included in the simulation as an aluminium cylinder between the beam pipe and the field cage of the TPC.
-
-\begin{figure}[h!]
-\centering
-\subfloat[]{\label{fig:tracker1}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png}}
-\subfloat[]{\label{fig:tracker2}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Tracker2.png}}
-\caption[\protect\subref{fig:tracker1} Drawing of the propose end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:tracker1} Drawing of the propose end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.}
-\label{fig:tracker}
-\end{figure} 
 
 %========================================================================================
 
@@ -165,23 +169,6 @@ Simulation of the ILD HCal have a number of realistic features included such as 
 
 %========================================================================================
 
-\subsection{Forward Calorimetry}
-
-Three additional sampling calorimeters are envisaged for the linear collider experiment: the, LumiCal, the LHCal and the BeamCal.  Their purpose is to extend the coverage of the detector towards 4\pi and monitor the beam quality.  The LumiCal will aim to measure the luminosity with a precision of less than $10^{-3}$ at 500 GeV using Bhabha scattering, $\text{e}^{+}\text{e}^{-} \rightarrow \text{e}^{+}\text{e}^{-}(\gamma)$, as a gauge process \cite{Abe:2010aa}.  The BeamCal will make a bunch-bunch estimate of the luminosity and assist in the beam tuning.  Alongside the LumiCal is the LHCal, which extends the coverage of the HCal to low polar angle as shown in figure \ref{fig:fcal}.  The LumiCal covers polar angles between 31 and 77 mrad, while the BeamCal covers the range between 5 and 40 mrad.  The presence of beam-induced backgrounds along the beam line means these calorimeters will have to be radiation hard.  
- 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/FCal.png}
-\caption[The very forward revion of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.]{The very forward revion of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.}
-\label{fig:fcal}
-\end{figure} 
-
-As the primary focus of these calorimeters is measuring the $\text{e}^{+}\text{e}^{-}$  beam, they are all constructed using tungsten absorber material to ensure narrow electromagnetic showers form within them.  The LumiCal layer configuration mirrors that of the ECal giving it a total of $\approx 24 X_{0}$ across its 30 layers.  Silicon is used as sensitive detector element for the LumiCal.  The LHCal uses silicon readout sensors identical to those found in the LumiCal and in total the LHCal contains $4 \lambda_{I}$ across 40 layers.  The BeamCal sensitive detector material is currently being developed as, due to the high occupancy from the beam induced backgrounds, a fast readout is required.  The cell sizes for these calorimeters is yet to be confirmed.  
-
-These calorimeters play a minimal role in event reconstruction as few particles from the hard physics interaction will have their energy measured by these calorimeters.  It is for this reason that they are not used in the simulation.
-
-%========================================================================================
-
 \subsection{Muon Chamber}
 The ILD outer detector surrounds the HCal and is comprised of a coil, which generates a 3.5 T magnetic field, followed by an iron yoke.  The magnetic field produced by the coil is crucial for bending charged particles so that their momentum can be determined from the curvature of the path they transverse.  Furthermore, the bending of charged particles leads to greater separation of calorimetric energy deposits between charged and neutral particles, which will reduce the effects of confusion when using particle flow calorimetry.  The yoke is an iron scintillator sampling calorimeter, which consists of 10 layers spaced 140 mm apart followed by 2 (3) layers spaced 600 mm apart for the barrel (endcap) region of the detector as shown in figure \ref{fig:muon}.  There is also an additional sensitive layer for the barrel region placed immediately outside the HCal to help with association energy deposits between the calorimeters and the yoke.  
 
@@ -198,7 +185,28 @@ In the simulation of the ILD yoke a square cell size of 30 mm is assumed.  This 
 
 %========================================================================================
 
-\subsection{CLIC ILD}
+\subsection{Forward Calorimetry}
+Three additional sampling calorimeters are envisaged for the linear collider experiment: the, LumiCal, the LHCal and the BeamCal.  Their purpose is to extend the coverage of the detector towards 4\pi and monitor the beam quality.  The LumiCal will aim to measure the luminosity with a precision of less than $10^{-3}$ at 500 GeV using Bhabha scattering, $\text{e}^{+}\text{e}^{-} \rightarrow \text{e}^{+}\text{e}^{-}(\gamma)$, as a gauge process \cite{Abe:2010aa}.  The BeamCal will make a bunch-bunch estimate of the luminosity and assist in the beam tuning.  Alongside the LumiCal is the LHCal, which extends the coverage of the HCal to low polar angle as shown in figure \ref{fig:fcal}.  The LumiCal covers polar angles between 31 and 77 mrad, while the BeamCal covers the range between 5 and 40 mrad.  The presence of beam-induced backgrounds along the beam line means these calorimeters will have to be radiation hard.  
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/FCal.png}
+\caption[The very forward revion of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.]{The very forward revion of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.}
+\label{fig:fcal}
+\end{figure} 
+
+As the primary focus of these calorimeters is measuring the $\text{e}^{+}\text{e}^{-}$  beam, they are all constructed using tungsten absorber material to ensure narrow electromagnetic showers form within them.  The LumiCal layer configuration mirrors that of the ECal giving it a total of $\approx 24 X_{0}$ across its 30 layers.  Silicon is used as sensitive detector element for the LumiCal.  The LHCal uses silicon readout sensors identical to those found in the LumiCal and in total the LHCal contains $4 \lambda_{I}$ across 40 layers.  The BeamCal sensitive detector material is currently being developed as, due to the high occupancy from the beam induced backgrounds, a fast readout is required.  The cell sizes for these calorimeters is yet to be confirmed.  
+
+These calorimeters play a minimal role in event reconstruction as few particles from the hard physics interaction will have their energy measured by these calorimeters.  It is for this reason that they are not used in the simulation.
+
+
+%========================================================================================
+
+\section{Simulation}
+
+%========================================================================================
+
+\section{CLIC ILD}
 The increased collision energy found at the CLIC experiment mean the use of the nominal ILD detector model would be inappropriate.  Therefore, a new detector model, CLIC\_ILD \cite{Linssen:2012hp}, based upon the nominal ILD detector model was created to cope with the experimental conditions found at the CLIC experiment.  Several modifications were made to the nominal ILD detector model to make it more suitable for the CLIC experiment.  The key differences between the nominal ILD detector and CLIC\_ILD are:
 
 \begin{figure}[h!]
@@ -259,9 +267,12 @@ The PFO choices described in section \ref{sec:optimisationjetalgo} are applied t
 %========================================================================================
 %======================================================================================== 
 
-\section{PandoraPFA}
+\section{Particle Flow Reconstruction}
 Particle flow calorimetry relies upon correct associations being made between calorimetric energy deposits and charged particle tracks.  Even with a finely segmented detector, such as the ILD detector described in section \ref{sec:ild}, correctly making these associations is a highly a non-trivial task and must be done using advanced pattern recognition software.  This is provided by the PandoraPFA particle flow algorithm \cite{arXiv:0907.3577, arXiv:1209.4039}.
 
+%======================================================================================== 
+
+\subsection{PandoraPFA}
 PandoraPFA applies the pattern recognition logic in eight main stages:
 \begin{enumerate}
 \item Track selection.  The input track collections are examined to determine whether $V^{0}$ decays, two charged tracks originating from a point displaced from the IP, or kinks, where a charged particle has decayed into a single charged particle and a number of neutral ones, are present.  Such information will be propagated in the reconstruction to the final PFO creation stage.  
@@ -315,6 +326,9 @@ PandoraPFA applies the pattern recognition logic in eight main stages:
 
 The application of the pattern recognition algorithms in PandoraPFA when combined with a highly segmented detector make particle flow calorimetry a reality.  In turn this provides excellent jet energy resolution for studying many interesting physics processes at the linear collider experiment.
 
+%======================================================================================== 
+
+\subsection{Performance}
 
 
 
