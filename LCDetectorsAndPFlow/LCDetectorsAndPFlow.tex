@@ -31,7 +31,7 @@ Neutral Hadrons ($X^{0}$) & HCal &$\sim 0.1 E_{j}$ & $0.55 \times \sqrt{E_{X^{0}
 \label{table:pflowjet}
 \end{table}
 
-Particle flow calorimetry is challenging to put into practice as it requires a precise reconstruction for all long-lived particles within a detector.  Charged particle energy measurements are made using the curvature of the track they transverse as they bend in the magnetic field, but they also produce calorimetric energy deposits, as shown in figure \ref{fig:particleflowpic}.  If both energy measurements are included the energy of the charged particle will be double counted.  To avoid this, any calorimetric energy deposits associated to charged particle tracks are not used when reporting the reconstructed energy.  However, this means that if the calorimetric energy deposits for a neutral particle are incorrectly associated to a track, the energy measurement for that neutral particle will be totally omitted.  The combination of this double counting of charged particle energies and loss of neutral particle energies form the confusion contribution to the jet energy resolution, which acts to degrade the energy resolution.  Particle flow calorimetry hinges on the event reconstruction being able to correctly associate all charged particle tracks to their corresponding calorimetric energy deposits.  This can only be realised by using calorimeters with fine segmentation so that it is possible to resolve individual particle showers within them coupled with sophisticated pattern recognition algorithms to reduce the effects of confusion.
+Particle flow calorimetry is challenging to put into practice as it requires a precise reconstruction for all long-lived particles within a detector.  Charged particle energy measurements are made using the curvature of the track they transverse as they bend in the magnetic field, but they also produce calorimetric energy deposits, as shown in figure \ref{fig:particleflowpic}.  If both energy measurements are included, the energy of the charged particle will be double counted.  To avoid this, any calorimetric energy deposits associated to charged particle tracks must not be used when reporting the reconstructed energy.  Furthermore, if the calorimetric energy deposits for a neutral particle are incorrectly associated to a track, the energy measurement for that neutral particle will be totally omitted.  The combination of this double counting of charged particle energies and loss of neutral particle energies degrades the energy resolution.  This is referred to as the 'confusion' contribution to the jet energy resolution.  Particle flow calorimetry hinges on the event reconstruction being able to correctly associate all charged particle tracks to their corresponding calorimetric energy deposits.  This can only be realised using calorimeters with fine segmentation so that it is possible to resolve individual particle showers.  It also required sophisticated pattern recognition algorithms to reduce the effects of confusion.
 
 \begin{figure}[h!]
 \centering
@@ -45,68 +45,102 @@ Particle flow calorimetry is challenging to put into practice as it requires a p
 
 \section{International Large Detector}
 \label{sec:ild}
-
-%========================================================================================
-
-\subsection{Overview}
-All detector concepts for the linear collider have been purposely built to make particle flow calorimetry possible.  While there are a number of different concepts that are under consideration for both the ILC and CLIC one of the most prominent, and the focus of this work, is the International Large Detector (ILD).  The ILD detector, shown in figure \ref{fig:ild} achieves very high spatial resolution for all sub-detector systems thanks to its highly segmented calorimeters and central tracking system, both of which are encompassed within a 3.5 T magnetic field.  When combined with sophisticated pattern recognition software, provided by PandoraPFA, particle flow calorimetry can be realised and the linear collider jet energy resolution goal of $3.8 \%$, which is required to allow separation of hadronic decays from W and Z bosons, can be achieved.
+The current detector concepts for the linear collider experiments have been designed to make particle flow calorimetry possible.  While there are a number of different concepts that are under consideration for both the ILC and CLIC one of the most prominent, and the focus of this work, is the International Large Detector (ILD).  The ILD detector, shown in figure \ref{fig:ild}, achieves very high spatial resolution for all sub-detector systems thanks to its highly segmented calorimeters and central tracking system, both of which are encompassed within a 3.5 T magnetic field.  The sophisticated pattern recognition software that is needed for particle flow calorimetry is provided by PandoraPFA \cite{arXiv:1209.4039, arXiv:0907.3577}.   
 
 \begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:ild1}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/ILD.jpg}}
 \subfloat[]{\label{fig:ild2}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/ILD_2.jpg}}
-\caption[\protect\subref{fig:ild1} Quadrant view of the ILD detector concept.  The interaction point is in the lower right corner of the picture.  Dimensions are in mm.  \protect\subref{fig:ild2} View of the ILD detector concept.  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:ild1} Quadrant view of the ILD detector concept.  The interaction point is in the lower right corner of the picture.  Dimensions are in mm.  \protect\subref{fig:ild2} View of the ILD detector concept.  Figures taken from  \cite{Behnke:2013lya}.}
+\caption[\protect\subref{fig:ild1} Quadrant view of the ILD detector concept.  The interaction point is in the lower right corner of the picture.  Dimensions are in mm.  \protect\subref{fig:ild2} An artistic view of the ILD detector concept.  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:ild1} Quadrant view of the ILD detector concept.  The interaction point is in the lower right corner of the picture.  Dimensions are in mm.  \protect\subref{fig:ild2} An artistic view of the ILD detector concept.  Figures taken from  \cite{Behnke:2013lya}.}
 \label{fig:ild}
 \end{figure} 
 
 %========================================================================================
 
-\subsection{Vertex Detector}
-The tracking system for the ILD detector consist of a multi-layer pixel-vertex detector, which is surrounded by a system of silicon strip and pixel detectors.  These are designed to give precise information about displaced vertices with respect to the impact point, which are crucial for the study of short lived particles such as the $D$ or $B$ mesons.  Outside of the vertex detector is the central tracker of ILD, which is a Time Projection Chamber (TPC).  The TPC samples each charged particle track at many points giving detailed spatial information that can be used to extract the curvature of the track and hence the momentum of the charged particle that transversed it.  Finally, a further silicon strip detector surrounds the TPC to give an additional, high precision, space point to aid tracking performance. 
+\subsection{Overview}
+FILL THIS GAP
 
-
-The main goal of the ILD vertex detector is to achieve a resolution on the impact parameter of charged particle tracks of $\sigma_{b} < 5 \oplus \frac{10}{p\text{sin}(\theta)^{3/2}} \mu$m, where the first term is the transverse impact parameters resolution and the second is a multiple-scattering term.  This makes precisely tagging secondary vertices from charm and bottom mesons possible.  Typically these mesons have relatively short proper lifetimes, $\tau$, such that $c\tau \approx \mathcal{O}(300 \text{{\mu}m})$.  To achieve this impact parameter resolution, a spatial resolution of better than 3 {\mu}m is required near the IP.  Furthermore, a low material budget of less than 0.15 \% $X_{0}$ per layer is required to ensure that few electromagnetic showers are initiated within the vertex detector.  A low pixel occupancy is essential for determining the trajectory of individual tracks in the detector.  The vertex detector will also have to be radiation hard to cope with the intense beam induced backgrounds, which are predominantly from beamstrahlung, found close to the IP at the linear collider.  Furthermore, consideration will have to be given to the mechanical structure of the detector, power consumption and cooling.  
-
-There are a number of different pixel technology options under consideration for the vertex detector for the ILD detector and this is an active area of ongoing research and development for the linear collider collaboration.  The current design of the vertex detector consists of three concentric layers of double-sided ladders that are close to being cylindrical.  Each ladder has two pixel sensors on each side and the ladder thickness is approximately 2 mm.  The inner most radii of the ladders ranges from 16 mm to 60mm from the IP.  In the simulation of the vertex detector silicon is used as the sensitive material.  Support material and a cryostat are also included in the simulation for further realism.  
+% Tracking overview 
+The tracking system for the ILD detector consists of a multi-layer pixel-vertex detector, which is surrounded by a system of silicon strip and pixel detectors.  These are designed to give precise information about displaced vertices with respect to the impact point, which are crucial for the study of short lived particles such as the \PD or \PB mesons.  Outside of the vertex detector is the central tracker.  In ILD this is a Time Projection Chamber (TPC).  The TPC samples each charged particle track at many points giving detailed spatial information that can be used to extract the curvature of the track and hence the momentum of the charged particle that transversed it.  Finally, a further silicon strip detector surrounds the TPC to give additional, high precision, space points to aid track fitting. 
 
 %========================================================================================
 
-\subsection{TPC}
-The central tracking system for the ILD detector is a TPC, which is shown in figure \ref{fig:tracker}.  The TPC consists of two chambers of gas with a high voltage applied across them.  Charged particles passing through the TPC ionise the gas and the ionised molecules drift in the high voltage to the end plates where they are collected and measured.  The drift time is then used to calculate the position of the ionisation point.  TPCs have an advantage over silicon tracking in that they continuously track any charged particle passing through them, while silicon detectors are only sensitive within each silicon layer.  This compensates for the worse single point resolution that TPCs have in comparison to silicon detectors and makes TPCs a viable option for the ILD detector.  Furthermore, TPCs has a very low material budget, which benefits calorimetry in ILD.  
+\subsection{Vertex Detector}
 
-The ILD TPC will operate within a 3.5 T magnetic field and under these conditions a point resolution of better than 100 {\mu}m and a double hit resolution in $\phi$ of less than 2 mm can be achieved.  Several readout technology options are currently under development for the ILD TPC and each of these is tailored to the gas mixture that will be used for the TPC.  For all potential options it is envisaged that the readout pads would be $\approx 1 \times 6 \text{mm}^{2}$ giving a total of approximately $10^{6}$ on the TPC endplates.
+The main goal of the ILD vertex detector is to achieve a resolution on the impact parameter of charged particle tracks of:
+\begin{equation}
+\sigma_{b} < 5 \oplus \frac{10}{p\text{sin}(\theta)^{3/2}} \text{ {\mu}m,}
+\end{equation}
+\noindent where $\sigma_{b}$ is the resolution on the track impact parameter, $p$ is the momentum of the track and $\theta$ is the angle between the track and the vertex detector plane.  The first term in this parameterisation is the transverse impact parameters resolution and the second is a multiple-scattering term.  This makes precisely tagging secondary vertices from charm and bottom mesons possible.  Typically these mesons have relatively short proper lifetimes, $\tau$, such that $c\tau \approx \mathcal{O}(300 \text{{ \mu}m})$.  To achieve this impact parameter resolution, a spatial resolution of better than 3~{\mu}m is required near the impact point (IP).  Furthermore, a low material budget of less than 0.15~\% of a radiation length per layer is required to ensure that few electromagnetic showers are initiated within the vertex detector.  A low pixel occupancy is essential for determining the trajectory of individual tracks in the detector.  Furthermore, consideration will have to be given to the mechanical structure of the detector, power consumption and cooling.  
 
-In the detector simulation the TPC is simulated as a cylindrical volume of the gas mixture, Ar:$\text{CH}_4$:$CO_{2}$ (95:3:2) \cite{Abe:2010aa}, which is surrounded by a realistic field cage.  A conservative estimate of the endplate is included in the simulation to account for the support structure, electronics and cooling pipes for the TPC.  Furthermore, the material budget required to account for power and readout cables for the inner vertex detector has been estimated and is included in the simulation as an aluminium cylinder between the beam pipe and the field cage of the TPC.
+There are a number of different pixel technology options under consideration for the vertex detector for the ILD detector.  This is an active area of ongoing research and development for the linear collider collaboration.  The current design of the vertex detector consists of three concentric layers of double-sided ladders with the first layer contains 10 ladders, the second 11 ladders and the third 17 ladders as shown in figure \ref{fig:vertexpicture}.  Each ladder has two pixel sensors on each side and the ladder thickness is approximately 2~mm.  The radii covered by the detector range from 16~mm to 60~mm from the IP.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.3\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Vertex3.png}
+\caption[Vertex detector design for ILD.  Figures taken from \cite{arXiv:1006.3396}.]{Vertex detector design for ILD.  Figures taken from \cite{arXiv:1006.3396}.}
+\label{fig:vertexpicture}
+\end{figure} 
+
+%========================================================================================
+
+\subsection{Time Projection Chamber}
+The central tracking system for the ILD detector is a TPC, which is shown in figure \ref{fig:tracker}.  The TPC consists of a cylindrical gas volume with a central electrode providing an axial electric field.  When a charged particle passes through the TPC, it ionises the gas and the ionised molecules drift in the axial electric field.  The direction of the electric field is chosen such that the electrons drift towards the endplates where they are collected.  The position of the ionisation point can then be calculated using the drift time of the electrons in the TPC.  Combining these TPC hits together makes reconstruction of the full charged particle track possible.  TPCs have an advantage over silicon tracking in that they continuously track any charged particle passing through them, while silicon detectors are only sensitive within each silicon layer.  This compensates for the worse single point resolution that TPCs have in comparison to silicon detectors and makes TPCs a viable option for the ILD detector.  Furthermore, TPCs have a very low material budget.  This benefits calorimetry as it minimises energy losses prior to the particle energy entering the calorimeters, which means the calorimetric energy deposits give a better reflection of the true particle energy.  
+
+The ILD TPC has a point resolution of better than 100~{\mu}m and a double hit resolution in $\phi$ of less than 2~mm.  The gas used for the TPC will be Ar:$\text{CH}_4$:$CO_{2}$ (95:3:2) \cite{Abe:2010aa}.  Several readout technology options, designed to measure the ionisation current, are currently under development.  For all potential options it is envisaged that the readout pads would be $\approx 1 \times 6 \text{mm}^{2}$ giving a total of approximately $10^{6}$ pads on each TPC endplate.
 
 \begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:tracker1}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png}}
 \subfloat[]{\label{fig:tracker2}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Tracker2.png}}
-\caption[\protect\subref{fig:tracker1} Drawing of the propose end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:tracker1} Drawing of the propose end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.}
+\caption[\protect\subref{fig:tracker1} Drawing of the proposed end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:tracker1} Drawing of the proposed end-plate for the TPC.  \protect\subref{fig:tracker2} Conceptual sketch of the TPC system showing the main parts of the TPC (not to scale).  Figures taken from  \cite{Behnke:2013lya}.}
 \label{fig:tracker}
 \end{figure} 
 
 %========================================================================================
 
 \subsection{Supplemental Silicon Tracking System}
-% Requires restructuring as moved TPC upfront 
-There are four components that make up the silicon tracking system for ILD, shown in figure \ref{fig:vertex}, which are:
+There are four components that make up the supplemental silicon tracking system in ILD, shown in figure \ref{fig:vertex}, which are:
+\begin{itemize}
+\item Silicon Inner Tracker (SIT) and Silicon External Tracker (SET).  These are both barrel components, which are positioned immediately inside and outside the TPC.  The SIT helps form associations between hits in the vertex detector and TPC, while the SET helps with extrapolation of TPC tracks into the calorimeter.  
+\item Endplate of the TPC (ETD).  This sensor is identical to the SET, but is positioned in front of the ECal endcap calorimeter.  The ETD extends the coverage of the supplemental silicon tracking system envelope. 
+\item Forward tracker (FTD).  This detector consists of seven silicon disks that extend the coverage of the tracking down to small angles that are not covered by the TPC.  
+\end{itemize}
 
 \begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:vertex1}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Vertex1.jpg}}
 \subfloat[]{\label{fig:vertex2}\includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/Vertex2.pdf}}
-\caption[\protect\subref{fig:vertex1} A quadrant view of the ILD silicon envelope made of the four components SIT, SET, ETD and FTD as included in the full MOKKA simulation.  \protect\subref{fig:vertex2} a 3D detailed GEANT4 simulation description of the silicon system.  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:vertex1} A quadrant view of the ILD silicon envelope made of the four components SIT, SET, ETD and FTD as included in the full MOKKA simulation.  \protect\subref{fig:vertex2} a 3D detailed GEANT4 simulation description of the silicon system.  Figures taken from  \cite{Behnke:2013lya}.}
+\caption[\protect\subref{fig:vertex1} A 3D detailed GEANT4 simulation description of the silicon system.  \protect\subref{fig:vertex2} A quadrant view of the ILD silicon envelope made of the four components SIT, SET, ETD and FTD as included in the full MOKKA simulation.  Figures taken from  \cite{Behnke:2013lya}.]{\protect\subref{fig:vertex1} A 3D detailed GEANT4 simulation description of the silicon system.  \protect\subref{fig:vertex2} A quadrant view of the ILD silicon envelope made of the four components SIT, SET, ETD and FTD as included in the full MOKKA simulation.  Figures taken from  \cite{Behnke:2013lya}.}
 \label{fig:vertex}
 \end{figure} 
 
-\begin{itemize}
-\item Silicon Inner Tracker (SIT) and Silicon External Tracker (SET).  These are both barrel components, which are positioned immediately inside and outside the TPC.  They act to provide additional space points that can be used in track fitting.  In particular these help to link the vertex detector with the TPC and help with extrapolation of TPC tracks into the calorimeter.  These silicon sensors will have a 50 {\mu}m pitch and will contain 200 {\mu}m thick silicon.  
-\item Endplate of the TPC (ETD).  This sensor is identical to the SET, but is positioned in front of the ECal endcap calorimeter to extend the coverage of this silicon envelope. 
-\item Forward tracker (FTD).  This detector consists of seven silicon disks, which extends the coverage of the tracking down to small angles that are not covered by the TPC.  
-\end{itemize}
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r}
+\hline
+Tracking System & Coverage [cos$\theta$] \\
+\hline
+SIT & 0.910 \\
+SET & 0.789 \\
+ETD & 0.799 - 0.985 \\
+FTD & 0.802 - 0.996\\
+\hline
+\end{tabular}
+\caption[Coverage of the supplementary silicon tracking systems in the ILD detector.  In this table $\theta$ is the polar angle with respect to the beam direction.  Taken from \cite{Behnke:2013lya}.]{Coverage of the supplementary silicon tracking systems in the ILD detector.  In this table $\theta$ is the polar angle with respect to the beam direction.  Taken from \cite{Behnke:2013lya}.}
+ \label{table:supptrackingcoverage}
+\end{table}
 
-The requirements for these sensors is similar to those of the vertex detector in terms of requiring low material budget and low occupancy, however, as the sensors are further away from the IP radiation hardness is less crucial.  The technology options for these sensors is under development as was the case for the vertex detector.  In the detector model simulations all of these elements are included with additional material added to represent the support structure.  
+The coverage of the SIT, SET, ETD and FTD is given in table \ref{table:supptrackingcoverage}.  These detectors are designed to give high precision space points that can be used in track fitting.  Furthermore, the ETD and SET are of particular use for extrapolating the charged particle tracks into the calorimeters.  This is key for particle flow calorimetry, which relies upon correct association of charged particle tracks and clusters of calorimeter hits.  Analogously to the vertex detector, these detectors require low material budget and low occupancy.  The FTD, due to its proximity to the beam axis, is particularly prone to high occupancies.  
+
+The SIT, SET and ETD are silicon pixel sensors with 50~{\mu}m pitch embedded in 200~{\mu}m thick silicon.  The FTD consists of seven silicon tracking disks, the first two being pixel detectors and the remaining five being strip detectors.  The pixel detector disks are formed of 16 petals, as shown in figure \ref{fig:ftd}.  Within these petals the pixel size varies from $26 \times 29~{\mu}m^{2}$ to $26 \times 67~{\mu}m^{2}$.  Strip detectors are used for the outermost tracking disks as the occupancy considerations do not demand a high granularity detector i.e. a pixel detector.  These detector disks will have a pitch of 50~{\mu}m.  The active sensor and readout ASIC design for each of these detectors is an active area of development for the linear collider.  
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/FTD.png}
+\caption[A half-disk for the FTD showing the petal concept.  The rightmost zoom image showers a detail of the end-of-petal area that houses the read-out electronics.  The leftmost image shows the region at $R = 8$~cm where both the column width and the $R$-dimension of the pixels changes.  Figures taken from \cite{Behnke:2013lya}.]{A half-disk for the FTD showing the petal concept.  The rightmost zoom image showers a detail of the end-of-petal area that houses the read-out electronics.  The leftmost image shows the region at $R = 8$~cm where both the column width and the $R$-dimension of the pixels changes.  Figures taken from \cite{Behnke:2013lya}.}
+\label{fig:ftd}
+\end{figure} 
 
 %========================================================================================
 
@@ -204,6 +238,14 @@ These calorimeters play a minimal role in event reconstruction as few particles 
 
 \section{Simulation}
 
+%~~ Bits from other sections
+In the simulation of the vertex detector silicon is used as the sensitive material.  Support material and a cryostat are also included in the simulation for further realism.  
+
+% SIT SET FTD ETD
+In the detector model simulations all of these elements are included with additional material added to represent the support structure.  
+
+% Tracker
+In the detector simulation the TPC is simulated as a cylindrical volume of the gas mixture surrounded by a field cage.  A conservative estimate of the endplate is included in the simulation to account for the support structure, electronics and cooling pipes for the TPC.  Furthermore, the material budget required to account for power and readout cables for the inner vertex detector has been estimated and is included in the simulation as an aluminium cylinder between the beam pipe and the field cage of the TPC.
 %========================================================================================
 
 \section{CLIC ILD}
