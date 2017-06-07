@@ -207,6 +207,8 @@ The design requirements for the HCal mirror those of the ECal, which can be foun
 
 The active material in the nominal ILD HCal is scintillator.  In total, the HCal contains 48 readout layers, which provides an extremely good energy resolution.  This can be seen when comparing the HCal energy resolution between different experiments, as shown in table \ref{table:hcalenergyres}.  An individual layer in the HCal is comprised of 20~mm of steel absorber material with 3~mm of scintillator active material.  Each layer in the HCal is segmented into square cells, of side length 30~mm.  This cell size was chosen as a balance between reducing the cost of the detector, which is proportional to the number of readout channels, and achieving the required spatial resolution to make particle flow calorimetry possible.  The segmentation of the ILD HCal gives excellent spatial resolution and sufficiently good energy resolution to make the use of particle flow calorimetry a reality.  An optimisation study of the various HCal parameters for the ILD detector can be found in section \ref{sec:hcal}.
 
+The ILD HCal is intrinsically non-compensating, which means that it has a different response to electromagnetic and hadronic showers.  The origin of this different response is the fundamentally different mechanisms governing the propagation of electromagnetic and hadronic showers.  One key difference between the mechanisms is that hadronic showers have an invisible energy component, which occurs due to  effects such as neutrons coming to rest in the detector and nuclear biding energy losses \cite{Tran:2017tgr}.  In general, this leads to a lower response from a calorimeter to a hadronic shower than an electromagnetic shower.  A number of different software techniques have been developed for the linear collider experiment that attempt to correct this non-compensating response.  For more details see chapter \ref{chap:energyestimators}.  The ILD ECal has a compensating response due to the use of tungsten as the absorber material \cite{Blaising:2015nla}, therefore, no additional treatment of energies is required.
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{ l l }
@@ -240,47 +242,78 @@ This yoke is instrumented by a muon system in the barrel and forward regions of 
 \end{figure}   
 
 %========================================================================================
-% HERE
+
 \subsection{Forward Calorimetry}
-Three additional sampling calorimeters are envisaged for the linear collider experiment: the LumiCal, the LHCal and the BeamCal.  Their purpose is to extend the coverage of the detector towards 4\pi and monitor the beam quality.  The LumiCal will aim to measure the luminosity with a precision of less than $10^{-3}$ at 500 GeV using Bhabha scattering, $\text{e}^{+}\text{e}^{-} \rightarrow \text{e}^{+}\text{e}^{-}(\gamma)$, as a gauge process \cite{Abe:2010aa}.  The BeamCal will make a bunch-bunch estimate of the luminosity and assist in the beam tuning.  Alongside the LumiCal is the LHCal, which extends the coverage of the HCal to low polar angle as shown in figure \ref{fig:fcal}.  The LumiCal covers polar angles between 31 and 77 mrad, while the BeamCal covers the range between 5 and 40 mrad.  The presence of beam-induced backgrounds along the beam line means these calorimeters will have to be radiation hard.  
- 
+Forward calorimetry in the ILD detector consists of three additional sampling calorimeters:
+\begin{itemize}
+\item The LumiCal, which is located within the octagonal hole in the ECal endcap.  This will give a precise measurement of the luminosity of the linear collider beam.   The LumiCal uses Bhabha scattering, $\text{e}^{+}\text{e}^{-} \rightarrow \text{e}^{+}\text{e}^{-}(\gamma)$, as a gauge process for the luminosity measurement.  Using this approach the luminosity can be measured with precision of less than $10^{-3}$ at 500 GeV \cite{Abe:2010aa}. 
+\item The LHCal, which is positioned within the square hole of the HCal endcap.  This hadronic calorimeter is designed to extend the coverage of the HCal down to small polar angles.  
+\item The BeamCal, which is located just in front of the final focusing quadrupole.  This calorimeter will perform a bunch-by-bunch estimate of the luminosity based on the energy deposited in the calorimeter.
+\end{itemize}
+The layout of these calorimeters is shown in figure \ref{fig:fcal} and their coverage is summarised in table \ref{table:fcalcoverage}.  Each of the forward calorimeters will have to deal with high occupancies due to the presence of background processes, e.g. beamstrahlung, which makes fast readout crucial.  Furthermore, the BeamCal experiences a large flux of low energy electrons due to its proximity to the beam pipe, which results in a large radiation dose.  This makes radiation hard sensors essential for the BeamCal.  
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.5\textwidth]{LCDetectorsAndPFlow/Plots/Pictures/FCal.png}
-\caption[The very forward revion of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.]{The very forward revion of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.}
+\caption[The very forward region of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.]{The very forward region of the ILD detector.  LumiCal, BeamCal and LHCal are carried by the support tube for the final focusing quadruple, QD0, and the beam pipe.  Figure taken from  \cite{Behnke:2013lya}.}
 \label{fig:fcal}
 \end{figure} 
 
-As the primary focus of these calorimeters is measuring the $\text{e}^{+}\text{e}^{-}$  beam, they are all constructed using tungsten absorber material to ensure narrow electromagnetic showers form within them.  The LumiCal layer configuration mirrors that of the ECal giving it a total of $\approx 24 X_{0}$ across its 30 layers.  Silicon is used as sensitive detector element for the LumiCal.  The LHCal uses silicon readout sensors identical to those found in the LumiCal and in total the LHCal contains $4 \lambda_{I}$ across 40 layers.  The BeamCal sensitive detector material is currently being developed as, due to the high occupancy from the beam induced backgrounds, a fast readout is required.  The cell sizes for these calorimeters is yet to be confirmed.  
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r }
+\hline
+Forward Calorimeter & Polar Angle Coverage [mrad] \\
+\hline
+LumiCal & 31 - 77 \\
+LHCal & $\sim$ 29-122 \\
+BeamCal & 5 - 40 \\
+\hline
+\end{tabular}
+\caption[Coverage of the forward calorimeters in the ILD detector.]{Coverage of the forward calorimeters in the ILD detector.}
+\label{table:fcalcoverage}
+\end{table}
 
-These calorimeters play a minimal role in event reconstruction as few particles from the hard physics interaction will have their energy measured by these calorimeters.  It is for this reason that they are not used in the simulation.
+Each of these calorimeter is constructed using tungsten as the absorber material.  The small Moliére radius of tungsten ensures that narrow electromagnetic showers are formed within them, which makes separation and identification of showering particles easier.  
+
+The layout of these calorimeters is as follows:
+\begin{itemize}
+\item The LumiCal is a silicon tungsten sampling calorimeter that contains 30 readout layers.  This gives the LumiCal a total depth of $\approx 24 X_{0}$.  
+\item The LHCal is also a silicon tungsten sampling calorimeter, which contains 40 readout layers.  The total depth of the LHCal is $\approx 4 \lambda_{I}$.
+\item The BeamCal is a tungsten based sampling calorimeter.  The sensitive detector material for the BeamCal is an ongoing area of research as, due to the extremely high occupancy from the beam induced backgrounds, a very fast readout is required.  The exact layer configuration of the BeamCal will depend upon the choice of sensitive detector material and hence is yet to be specified.  
+\end{itemize}
+The segmentation within the layers, the cell size, in these forward calorimeter is yet to be fully optimised.
 
 %========================================================================================
 
 \section{Simulation}
+Detector model simulation for all studies presented in this work was performed using MOKKA \cite{MoradeFreitas:2002kj}, a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  
 
-%~~ Bits from other sections
-In the simulation of the vertex detector silicon is used as the sensitive material.  Support material and a cryostat are also included in the simulation for further realism.  
+For the ILD detector model in Mokka:
+\begin{itemize}
+\item The vertex detector is simulated using silicon as the sensitive material.  Support material and the cryostat are also included for additional realism.
+\item The supplementary silicon tracking systems are included.  Again, material has been added to the simulation to represent the support material for these systems.  Furthermore, an estimation has been made of the material budget for power and readout cables from the vertex detector, SIT and FTD and material has been added to the simulation to represent these.  The material added to represent the power and readout cables comes in the form of an aluminium cylinder running inside the TPC field cage and around a cone around the beam pipe.
+\item The TPC is simulated as a cylindrical volume of a gas mixture surrounded by a field cage.  A conservative estimate of the endplate is included in the simulation to account for the support structure, electronics and cooling pipes for the TPC.
+\item As well as including the silicon tungsten sampling calorimeter, the simulation of the ILD ECal contains additional material to represent the instrumented region of the sensor and a heat shield as shown in figure \ref{fig:ecal}.
+\item Simulation of the ILD HCal has a number of realistic features including detailed modelling of the electronics, detector gaps and the implementation of Birk's law for the scintillator sensitive detector elements.
+\item The muon system, which is the instrumentation of the iron yoke, uses scintillator as the active material in the simulation.  A square cell size of side length 30~mm is assumed.  This is in contrast to the nominal ILD model, but as the tail-catcher plays a minimal role in event reconstruction at ILC like energies this difference should have negligible impact.  
+\item The forward calorimeters, the LumiCal, LHCal and BeamCal, are all included in the simulation.  Tungsten is used as the absorber material for each of the calorimeters.  The LumiCal and LHCal use a silicon readout material, while the BeamCal uses a diamond readout.  
+\end{itemize}
 
-% SIT SET FTD ETD
-In the detector model simulations all of these elements are included with additional material added to represent the support structure.  
+%========================================================================================
 
-% Tracker
-In the detector simulation the TPC is simulated as a cylindrical volume of the gas mixture surrounded by a field cage.  A conservative estimate of the endplate is included in the simulation to account for the support structure, electronics and cooling pipes for the TPC.  Furthermore, the material budget required to account for power and readout cables for the inner vertex detector has been estimated and is included in the simulation as an aluminium cylinder between the beam pipe and the field cage of the TPC.
+%\section{Reconstruction Chain}
 
-% ECal
-As well as including the silicon tungsten sampling calorimeter, the simulation of the ILD ECal contains additional material to represent the instrumented region of the sensor and a heat shield as shown in figure \ref{fig:ecal}.
+%\section{Event Generation, Simulation and Reconstruction}
 
-% HCal
-Simulation of the ILD HCal have a number of realistic features included such as detailed modelling of the electronics, detector gaps and the implementation of Birk's law for the scintillator sensitive detector elements.
+%The jet fragmentation and hadronisation for the Z $\rightarrow$ uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these samples. 
 
-% Muon system
-In the simulation of the ILD yoke a square cell size of 30~mm is assumed.  This is in contrast to the nominal ILD model, but as the tail-catcher plays a minimal role in event reconstruction at ILC like energies this difference should have negligible impact.  
+%Event reconstruction was performed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter PANDORA CHAPTER.
 
 %========================================================================================
 
 \section{CLIC ILD}
-The increased collision energy found at the CLIC experiment mean the use of the nominal ILD detector model would be inappropriate.  Therefore, a new detector model, CLIC\_ILD \cite{Linssen:2012hp}, based upon the nominal ILD detector model was created to cope with the experimental conditions found at the CLIC experiment.  Several modifications were made to the nominal ILD detector model to make it more suitable for the CLIC experiment.  The key differences between the nominal ILD detector and CLIC\_ILD are:
+The increased collision energy of the proposed CLIC accelerator means the use of the nominal ILD detector model would be inappropriate.  Therefore, a new detector model, CLIC\_ILD \cite{Linssen:2012hp}, based upon the nominal ILD detector model was created to cope with the experimental conditions found at the CLIC experiment.  The main differences between the nominal ILD detector and CLIC\_ILD are:
 
 \begin{figure}[h!]
 \centering
@@ -292,50 +325,12 @@ The increased collision energy found at the CLIC experiment mean the use of the 
 \end{figure} 
 
 \begin{itemize}
-\item The higher energies found at the CLIC experiment lead to more intense beam induced backgrounds, which is especially problematic for detectors close to the IP where the occupancies will be extremely high.  To attempt to compensate for these effects the inner vertex detector in CLIC\_ILD is moved 15~mm further out from the IP.    
-\item The HCal thickness is increased from 6 $\lambda_{I}$ to 7.5 $\lambda_{I}$.  This ensures that higher energy particle showers found at the CLIC experiment are in general contained within the calorimeters.  
-\item The HCal absorber material for the barrel is tungsten as opposed to steel.  This reduces the overall thickness of the HCal and keeps the coil size, one of the driving cost factors for the detectors, similar for the nominal ILD and CLIC\_ILD detectors.  In the endcaps steel is used as the absorber material as there are no spatial requirements relating to the coil size and this will lower the detector cost.  Furthermore, the shower development time in steel is faster than in tungsten making effective time stamping of energy deposits easier, which is crucial for the CLIC experiment for vetoing beam induced backgrounds.  
+\item The higher energies found at the CLIC experiment lead to more intense beam induced backgrounds, which is especially problematic for detectors close to the IP where the occupancies will be extremely high.  For this reason the inner vertex detector in CLIC\_ILD is moved 15~mm further out from the IP.    
+\item The HCal thickness is increased from 6 $\lambda_{I}$ to 7.5 $\lambda_{I}$.  This ensures that higher energy hadronic showers found at the CLIC experiment are contained within the calorimeters.  
+\item The HCal absorber material for the barrel is tungsten as opposed to steel.  This reduces the overall thickness of the HCal and keeps the coil size, one of the driving cost factors for the detectors, similar for the nominal ILD and CLIC\_ILD detectors.  Steel is used as the absorber material for the HCal endcaps as there are no spatial requirements relating to the coil size and this will lower the detector cost.  Furthermore, the shower development time in steel is faster than in tungsten making effective time stamping of energy deposits easier, which is crucial for the CLIC experiment for vetoing beam induced backgrounds.  
 \item The magnetic field strength in the CLIC\_ILD detector is increased to 4 T.  This was found to benefit the reconstruction, particularly at high energies, as it leads to greater separation of charged particle tracks.  Furthermore, it was possible to achieve this increase in field strength using the nominal ILD coil design.   
+\item The CLIC\_ILD detector contains masking, graphite layers placed in front of the BeamCal, to prevent particles produced by the beam-induced interactions from backscattering into the main detector.  It is the increased collision energy that makes backscattering of particles a more problematic effect for the CLIC experiment than it is for the ILC experiment.   
 \end{itemize}  
-
-%========================================================================================
-
-%%%%%%% This is new!
-
-\subsection{Experimental Conditions at CLIC}
-
-The CLIC experiment will operate in a unique environment in comparison to previous generations of lepton colliders and this must be properly accounted for to get an accourate measure of the physics potential that CLIC has to offer.  The following aspects of the CLIC experiment present the largest challenges to the physics potential for the CLIC experiment:
-
-\begin{itemize}
-\item The high bunch charge density.  The small beam size at the impact point produces very large electromagnetic fields.  These fields can interact with the opposite beam particles causing them to radiate photons in an effect known as beamstrahlung.  Beamstrahlung acts to reduce the collision energy of the $\text{e}^{+}\text{e}^{-}$ pairs.   
-\item Beam related backgrounds.  Beamstrahlung photons can subsequently interact to produce background events that must be accounted for.  Dominant backgrounds of this form that cannot be easily vetoed in the reconstruction include incoherent pair production of $\text{e}^{+}\text{e}^{-}$ and $\gamma\gamma \rightarrow \text{Hadron}$.  
-\item Fast readout technology is crucial.  The CLIC bunch train consists of 312 bunches with a repetition rate of 50 Hz.  Each bunch is separated by 0.5ns, therefore, it will be necessary to integrate over multiple bunch crossing when reading out the detectors.  This places tight constraints on all detector electrical readout speeds and time resolutions.   
-\end{itemize}
-
-\subsubsection{Beam-Related Backgrounds at CLIC}
-The primary sources of background for the CLIC experiment are as follows:
-\begin{itemize}
-\item $\text{e}^{+}\text{e}^{-}$ pair creation from the interaction of a beamstrahlung photons with the opposing beam.  The different mechanisms for pair creation are as follows:
-\begin{itemize}
-\item \textbf{Coherent pair production}.  This mechanism involves the interaction of a real beamstrahlung photon with the electromagnetic field from the opposing beam.
-\item \textbf{Trident pair production}.  This mechanism involves the interaction of a virtual beamstrahlung photon with the electromagnetic field from the opposing beam.
-\item \textbf{Incoherent pair production}.  This mechanism involves the interaction of a real or virtual beamstrahlung photon with the individual particles in the opposing beam.
-\end{itemize}
-\item $\gamma\gamma \rightarrow \text{Hadron}$ from the interaction of real or virtual beamstrahlung photons with each other.  Example Feynman diagrams for such processes is shown in figure ??. 
-\item Beam halo muons that arise from interactions of the beam particles during collimation.  The dominant mechanisms producing beam halo muons are photon conversions into muon pairs ($\gamma \text{e}^{-} \rightarrow \mu^{+}\mu^{-}\text{e}^{-}$) and annihilation of positrons with atomic $\text{e}^{-}$ into muon pairs ($\text{e}^{+}\text{e}^{-} \rightarrow \mu^{+}\mu^{-}$) \cite{Pilicer:2015ijy}.
-\end{itemize}
-
-Each of these has to be properly addressed to get a true measure of the physics potential at CLIC.  Coherent and trident pair production is not a dominant source of background as they are produced at low transverse momenta, as figure \ref{fig:backgroundangle} shows, and a simple cut would veto these backgrounds.  This is not the case for incoherent pair production of $\text{e}^{+}\text{e}^{-}$, which are dominant in the forward regions of the detector, and $\gamma\gamma \rightarrow \text{Hadron}$, which are dominant in the tracker and the calorimeters (with the exception of low radii in the calorimeter endcaps) \cite{Linssen:2012hp, Sailer:2012mfa}.  Beam halo muons are not a major source of background either as they can be easily removed during the reconstruction due to the clear signal they create in the detector.  An algorithm was developed within the PandoraPFA framework for this purpose and it was found to be highly effective at removing the beam halo muons background \cite{Linssen:2012hp}.  
-
-$\gamma\gamma \rightarrow \text{Hadron}$ events are the most dominant source of background to consider at CLIC as these events deposit more energy throughout the detector than incoherent pair production of $\text{e}^{+}\text{e}^{-}$ events \cite{Linssen:2012hp}.  The effect of the $\gamma\gamma \rightarrow \text{Hadron}$ background is incorporated into this analysis by overlaying $\gamma\gamma \rightarrow \text{Hadron}$ events onto the event samples used in this analysis.  The overlaid backgrounds are added prior to reconstruction so that their effect on the reconstruction is fully accounted for.  For a given event the exact number of background events overlaid is drawn from a Poisson distribution with a mean of 3.2 (1.3) events per bunch crossing at 3 (1.4) TeV.  While incoherent pairs are still a source of background they will produce a second order effect in comparison to the $\gamma\gamma \rightarrow \text{Hadron}$ events.
-
-The PFO choices described in section \ref{sec:optimisationjetalgo} are applied to veto the effect of PFOs that arise from the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ events.
-
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{FutureLinearColliders/Plots/CDRPlots/BackgroundAngleCut.pdf}
-\caption[]{Angular distribution of number of particles for beam induced backgrounds for CLIC at $\sqrt{s} = 3$ TeV.  Taken from CLIC CDR.}
-\label{fig:backgroundangle}
-\end{figure}
 
 %========================================================================================
 %======================================================================================== 
@@ -346,21 +341,24 @@ Particle flow calorimetry relies upon correct associations being made between ca
 %======================================================================================== 
 
 \subsection{PandoraPFA}
-PandoraPFA applies the pattern recognition logic in eight main stages:
+PandoraPFA takes as input calorimeter hits and charged particles tracks and produces as output reconstructed particles known as particle flow objects (PFOs).  The pattern recognition in PandoraPFA is applied in eight main stages \cite{arXiv:0907.3577}:
 \begin{enumerate}
 \item Track selection.  The input track collections are examined to determine whether $V^{0}$ decays, two charged tracks originating from a point displaced from the IP, or kinks, where a charged particle has decayed into a single charged particle and a number of neutral ones, are present.  Such information will be propagated in the reconstruction to the final PFO creation stage.  
-\item Calorimeter hit selection.  This stage is broken down into several steps:
+\item Calorimeter hit treatment.  The treatment of calorimeter hits by PandoraPFA is of paramount importance to the work presented in chapters \ref{chap:energyestimators} and \ref{chap:detopt}.  Therefore, full details of the calorimeter hit selection procedure are presented here.  This selection procedure is broken down into several steps:
 \begin{itemize}
-\item The various collection of, post digitisation, calorimeter hits are passed into the Pandora framework and converted into Pandora calorimeter hits.  These objects are self describing so that the Pandora pattern recognition logic has no dependancy on the external software framework.  
+\item The various collection of, post digitisation, calorimeter hits are passed into the Pandora framework and converted into Pandora calorimeter hits.  
+\item To minimise any dependancy on the detector geometry each calorimeter hit is assigned to a pseudo-layer, which is representative of the hits position in the calorimeter.  All further topological association algorithms work using the pseudo-layer definition, illustrated in figure \ref{fig:pseudolayer}.  
 \item A minimum ionising particle equivalent energy cut is applied to the calorimeter hits.  If a calorimeter hit contains less than 0.5 (0.3) of the energy of a normally incident MIP passing through the calorimeter cell in the ECal (HCal) then it is not used in the reconstruction.  
-\item Calibration of the energy contained within the calorimeter hits is flagged up at this point, however, it is not directly applied at this stage.  The energy contribution for each calorimeter cell ultimately depends on whether the associated cluster of calorimeter hits is deemed to originate from an electromagnetic or hadronic shower.  Different scale factors are applied to the energy for electromagnetic and hadronic showers to account for effects such as the invisible energy component in hadronic showers.  These energy factors are used throughout the reconstruction, including the final reconstructed particle energy, once the particle shower type has been identified.  For energy comparisons prior to the shower type being identified the uncorrected calorimeter hit energy is used.  Further details on how these calibration constants are determined can be found in section \ref{sec:calibration}.  
-\item To minimise any dependancy on the detector geometry each calorimeter hit is assigned to a pseudo-layer, which is representative of the calorimeter stave layer.  All further topological association algorithms work using the pseudo-layer definition, illustrated in figure \ref{fig:pseudolayer}.  
 \item If a calorimeter hit is sufficiently far away from other hits, it is flagged as an isolated hit.  Such hits are most likely due to low energy neutrons produced in hadronic showers, which can travel a significant distance from the original shower before depositing energy.  Due to the distance they travel these hits are very difficult to associate to the correct particle shower.  Furthermore, as such hits are unlikely to be the seed for a particle shower they are not used by the initial clustering algorithm.  
 \item Any calorimeter hit that contains an energy consistent with a MIP signal and where, at most, one Pandora calorimeter hit exists in the neighbouring cells within the same layer is flagged as a MIP consistent hit.  This information is used in the identification of MIPs in the reconstruction.
+\item The energy contribution for each calorimeter hits ultimately depends on whether the cluster the calorimeter hit has been associated to is deemed to have originated from an electromagnetic or hadronic particle shower.  Different scale factors are applied to the energy for electromagnetic and hadronic showers to account for the non-compensating response of the calorimeters.  These scale factors are used throughout the reconstruction, including the final reconstructed particle energy, once the particle shower type has been identified.  For energy comparisons prior to the shower type being identified the uncorrected calorimeter hit energy is used.  Further details on how these calibration constants are determined can be found in chapter \ref{chap:energyestimators}.  
 \end{itemize}
 \item Clustering.  This begins by using the projection of the charged particle tracks onto the front face of the ECal as seeds for the initial clustering phase.  Calorimeter hits are looped over on a per layer basis, working from the inner to the outer pseudo-layer, and if they fall within a cone of fixed dimensions surrounding a cluster direction they are associated to the cluster.  If no association can be made to any preexisting calorimeter hit clusters then the calorimeter hit is used to seed a new cluster.  
 \item Topological cluster merging.  The initial clustering algorithm is designed to be conservative to avoid mixing together energy deposits from several particles.  The fragments produced by the initial clustering are then merged together by various algorithms whose logic is motivated by a number of well-motivated topological rules, such as those shown figure \ref{fig:associations}.  
 \item Statistical re-clustering.  Comparisons between the cluster energy and any associated track momenta are made to determine whether they are consistent.  If a large discrepancy is observed then statistical re-clustering is initiated.  This involves running a number of differently configured algorithms to change the cluster configuration to determine if a new optimal configuration of tracks and clusters can be found.  
+
+This step relies upon the reported cluster energies being accurate.  To ensure this is the case, a well defined calibration procedure is applied for all detector models considered in this work, for more details see chapter \ref{chap:energyestimators}.  At this point in the reconstruction, the energy resolution of the calorimeters impacts the way that the pattern recognition is performed.  The better the energy resolution of the calorimeters, the fewer the number of mistakes that are made when pairing up clusters of calorimeter hits to charged particle tracks.    
+
 \item Photon identification and recovery.  Topological likelihood data is used to identify clusters of calorimeter hits that are consistent with $\gamma$s.  This is possible due to the clear transverse and longitudinal profiles observed for electromagnetic showers.  
 \item Fragment removal.  Neutral clusters originating from a nearby charged particle cluster are identified and merged back into the parent charged particle cluster.  These algorithms take into account the changes in the compatibility of the track and cluster associations when merging any neutral clusters into charged clusters.  
 \item Formation of particle flow objects.  Finally, reconstructed particles are produced.  The energy for charged particles is taken from the track momenta, while neutral particle energies are taken from the calorimeter cluster measurements.  Furthermore, the different electromagnetic and hadronic scales are applied to the output neutral particle energies depending on whether the neutral cluster is consistent with a $\gamma$.  
