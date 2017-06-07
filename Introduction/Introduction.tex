@@ -16,13 +16,19 @@ The linear collider experiments place emphasis on precision measurements.  As we
 
 This thesis is organised as follows.  Chapter \ref{chap:anomalousgaugecouplingtheory} contains a summary of the Standard Model as well as an outline of the physics of interest related to the analysis presented in chapter \ref{chap:PhysicsAnalysis}.  Chapter \ref{chap:clicvertex} presents a study into a novel technology option for the Compact LInear Collider (CLIC) vertex detector.  Chapter \ref{chap:energyestimators} contains numerous studies related to the treatment of energy deposits in the linear collider simulation.  This begins with an outline of the calibration procedure for the linear collider detector simulation.  This is followed by a number of novel software techniques aimed at improving the energy resolution of a calorimeter designed for particle flow calorimetry.  Finally, the chapter concludes with a study of the timing requirements applied in the software trigger that will be used at the linear collider experiment.  Chapter \ref{chap:detopt} presents an optimisation study of the linear collider calorimeters.  The starkest contract in detector design when comparing particle flow calorimeter and tradition calorimeter is the design of the calorimeters.  As the linear collider experiments will be the first experiments purposefully built with particle flow calorimetry in mind, there is no precedence for the detector design.  Therefore, these studies are vital for guiding detector design.  Chapter \ref{chap:PhysicsAnalysis} contains a study into anomalous gauge couplings that are sensitive to massive gauge boson quartic vertices at the CLIC experiment.  This study is of particular interest as it provides a detailed probe of the electroweak symmetry breaking sector of the Standard Model as well as showing CLICs sensitivity to a possible extension to the Standard Model.  The thesis concludes with a summary in chapter \ref{chap:summary}.
 
+%========================================================================================
+%========================================================================================
+
+\section{The International Linear Collider}
+
+%========================================================================================
+%========================================================================================
+
+\section{The Compact Linear Collider}
 
 %========================================================================================
 
-%%%%%%% This is new!
-
 \subsection{Experimental Conditions at CLIC}
-
 The CLIC experiment will operate in a unique environment in comparison to previous generations of lepton colliders and this must be properly accounted for to get an accurate measure of the physics potential that CLIC has to offer.  The following aspects of the CLIC experiment present the largest challenges to the physics potential for the CLIC experiment:
 
 \begin{itemize}
@@ -30,6 +36,8 @@ The CLIC experiment will operate in a unique environment in comparison to previo
 \item Beam related backgrounds.  Beamstrahlung photons can subsequently interact to produce background events that must be accounted for.  Dominant backgrounds of this form that cannot be easily vetoed in the reconstruction include incoherent pair production of $\text{e}^{+}\text{e}^{-}$ and $\gamma\gamma \rightarrow \text{Hadron}$.  
 \item Fast readout technology is crucial.  The CLIC bunch train consists of 312 bunches with a repetition rate of 50 Hz.  Each bunch is separated by 0.5ns, therefore, it will be necessary to integrate over multiple bunch crossing when reading out the detectors.  This places tight constraints on all detector electrical readout speeds and time resolutions.   
 \end{itemize}
+
+%========================================================================================
 
 \subsubsection{Beam-Related Backgrounds at CLIC}
 The primary sources of background for the CLIC experiment are as follows:
@@ -51,12 +59,14 @@ $\gamma\gamma \rightarrow \text{Hadron}$ events are the most dominant source of 
 The PFO choices described in section \ref{sec:optimisationjetalgo} are applied to veto the effect of PFOs that arise from the overlaid $\gamma\gamma \rightarrow \text{Hadron}$ events.
 
 \begin{figure}
-\includegraphics[width=0.5\textwidth]{FutureLinearColliders/Plots/CDRPlots/BackgroundAngleCut.pdf}
+\includegraphics[width=0.5\textwidth]{Introduction/Plots/CDRPlots/BackgroundAngleCut.pdf}
 \caption[]{Angular distribution of number of particles for beam induced backgrounds for CLIC at $\sqrt{s} = 3$ TeV.  Taken from CLIC CDR.}
 \label{fig:backgroundangle}
 \end{figure}
 
 %========================================================================================
+%========================================================================================
+
 %Physics introduction leading to chapter description.
 %Max 2-3 pages
 %Standard model extremely successful, missing gravity though
