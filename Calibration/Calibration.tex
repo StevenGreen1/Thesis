@@ -9,14 +9,34 @@
 
 \section{Motivation}
 \label{sec:motivation}
-% Results use detector model 85 and calibration variant 71
-The separation of energy deposits from charged and neutral particles in the calorimeters is crucial for achieving good energy resolutions in the particle flow paradigm.  This is only possible if the energy estimators for those energy deposits are accurate.  The ultimate goal of the calibration procedure outlined in this chapter is to obtain the best energy estimator for particles showering in the calorimeters.  The energy estimator for a cluster of calorimeter hits is:
+The separation of energy deposits from charged and neutral particles in the calorimeters is crucial for achieving good energy resolutions in the particle flow paradigm.  This is only possible if the energy estimators for those energy deposits are accurate.  The ultimate goal of the calibration procedure outlined in this chapter is to obtain the best energy estimator for particles showering in the calorimeters.  
+
+Calorimeters are designed to measure the energy of particles.  
+
+Calorimeters initiate particle showers 
+
+Particle showers are a cascade of secondary particles that are produced from an interaction between a high energy particle and a dense material.  
+
+
+
+When a particle showers within a calorimeter it will create several energy deposits, or hits.  Depending on the segmentation of the calorimeter, many hits can be created when a particle showers.  The energy of the showering particle, $E_{Cluster}$, is determined by grouping these energy deposits together into clusters and summing their energy:
 %
 \begin{equation}
 E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \text{ ,}
 \end{equation}
 %
-\noindent where $E^{i}_{ECal}$ is the energy of ECal hit $i$, $E^{i}_{HCal}$ is the energy HCal hit $i$ and $\sum$ is the summation over all hits in a given calorimeter.  This is a naive energy estimator that will act as a starting point for the development of more sophisticated procedures aimed at improving detector performance.  However, before going further the calorimeter hit energies must be determined, which for a sampling calorimeter is non-trivial.  Sampling calorimeters, such as those found at the linear collider, are comprised of alternating layers of active and absorber materials \cite{Fabjan:2003aq};  The absorber layers are designed to initiate particle showers and propagate their development, while the active layers are designed to give a response that is proportional to the energy deposited within them.  As the response of a sampling calorimeter gives a measure of the energy deposited in the active layers only, the energy deposited in the absorber medium has to be estimated based on the active layer energies.  This estimation is made by assuming the energy deposited across a calorimeter hit, that is one active and one absorber layer, is uniform.  Working under this assumption, the total calorimeter hit energy is proportional to the active layer hit energy.  This estimation procedure is loosely referred to as digitisation and, in this way, the cluster energy estimator introduced above can be written as:
+\noindent where $E^{i}_{ECal}$ is the energy of ECal hit $i$, $E^{i}_{HCal}$ is the energy HCal hit $i$ and $\sum$ is the summation over all hits in a given calorimeter.  In this example, the energy deposits made by the showering particle are assumed to be split across an ECal and a HCal, therefore, the sum runs over the hits in both calorimeters.  
+
+At the linear collider experiments, the calorimeters are sampling calorimeters.  Sampling calorimeters are comprised of alternating layers of active and absorber materials \cite{Fabjan:2003aq};  The absorber layers are designed to initiate particle showers and propagate their development, while the active layers are designed to give a response that is proportional to the energy deposited within them.  It is only the response in the active layers of a sampling calorimeter that are measured, which means that the energy deposited in the absorber medium has to be estimated based on the active layer energies.  
+
+
+
+This is a naive energy estimator that will act as a starting point for the development of more sophisticated procedures aimed at improving detector performance.  
+
+
+However, before going further the calorimeter hit energies must be determined, which for a sampling calorimeter is non-trivial.  
+
+As the response of a sampling calorimeter gives a measure of the energy deposited in the active layers only, the energy deposited in the absorber medium has to be estimated based on the active layer energies.  This estimation is made by assuming the energy deposited across a calorimeter hit, that is one active and one absorber layer, is uniform.  Working under this assumption, the total calorimeter hit energy is proportional to the active layer hit energy.  This estimation procedure is loosely referred to as digitisation and, in this way, the cluster energy estimator introduced above can be written as:
 %
 \begin{equation}
 E_{Cluster} = \sum_{ECal \text{ } hits \text{, }i} \epsilon^{i}_{ECal} \alpha_{ECal} + \sum_{HCal \text{ } hits \text{, }i} \epsilon^{i}_{HCal} \alpha_{HCal} \text{ ,}
