@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: c1/
-//=========  (Mon Mar  6 14:50:52 2017) by ROOT version5.34/37
-   TCanvas *c1 = new TCanvas("c1", "",0,45,800,600);
+//=========  (Wed Jun 21 16:27:35 2017) by ROOT version5.34/37
+   TCanvas *c1 = new TCanvas("c1", "",1120,480,800,600);
    gStyle->SetOptStat(0);
-   c1->Range(-0.2,-1.314788,1.133333,5.443599);
+   c1->Range(-0.1,-0.1147881,0.5666667,5.310266);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
@@ -969,6 +969,7 @@
    MuonDirectionCorrectedCaloHitEnergy->SetLineColor(ci);
    MuonDirectionCorrectedCaloHitEnergy->SetLineWidth(2);
    MuonDirectionCorrectedCaloHitEnergy->GetXaxis()->SetTitle("Muon Calorimeter Hit Energy [GeV]");
+   MuonDirectionCorrectedCaloHitEnergy->GetXaxis()->SetRange(1,250);
    MuonDirectionCorrectedCaloHitEnergy->GetXaxis()->SetNdivisions(505);
    MuonDirectionCorrectedCaloHitEnergy->GetXaxis()->SetLabelFont(132);
    MuonDirectionCorrectedCaloHitEnergy->GetXaxis()->SetLabelSize(0.05);
@@ -985,7 +986,7 @@
    MuonDirectionCorrectedCaloHitEnergy->GetZaxis()->SetTitleSize(0.035);
    MuonDirectionCorrectedCaloHitEnergy->GetZaxis()->SetTitleFont(42);
    MuonDirectionCorrectedCaloHitEnergy->Draw("HIST");
-   TLine *line = new TLine(0.22425,0.15,0.22425,0.9);
+   TLine *line = new TLine(0.2985,0.15,0.2985,0.9);
    line->SetLineStyle(2);
    line->SetLineWidth(2);
    line->Draw();

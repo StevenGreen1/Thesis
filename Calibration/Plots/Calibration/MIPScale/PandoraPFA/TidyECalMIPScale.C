@@ -16,6 +16,7 @@ void TidyECalMIPScale()
     pTH1F->GetXaxis()->SetTitleFont(132);
     pTH1F->GetXaxis()->SetLabelFont(132);
     pTH1F->GetXaxis()->SetLabelSize(0.05);
+    pTH1F->GetXaxis()->SetRangeUser(0.0,0.05);
     pTH1F->GetYaxis()->SetTitle("Entries");
     pTH1F->GetYaxis()->SetTitleSize(0.05);
     pTH1F->GetYaxis()->SetTitleFont(132);

@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: c1/
-//=========  (Mon Mar  6 14:44:49 2017) by ROOT version5.34/37
-   TCanvas *c1 = new TCanvas("c1", "",0,45,800,600);
+//=========  (Wed Jun 21 16:25:58 2017) by ROOT version5.34/37
+   TCanvas *c1 = new TCanvas("c1", "",1120,480,800,600);
    gStyle->SetOptStat(0);
-   c1->Range(-0.02,-1.378671,0.1133333,5.805603);
+   c1->Range(-0.01,-1.378671,0.05666667,5.805603);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
@@ -1021,6 +1021,7 @@
    ECalDirectionCorrectedCaloHitEnergy->SetLineColor(ci);
    ECalDirectionCorrectedCaloHitEnergy->SetLineWidth(2);
    ECalDirectionCorrectedCaloHitEnergy->GetXaxis()->SetTitle("ECal Calorimeter Hit Energy [GeV]");
+   ECalDirectionCorrectedCaloHitEnergy->GetXaxis()->SetRange(1,250);
    ECalDirectionCorrectedCaloHitEnergy->GetXaxis()->SetNdivisions(505);
    ECalDirectionCorrectedCaloHitEnergy->GetXaxis()->SetLabelFont(132);
    ECalDirectionCorrectedCaloHitEnergy->GetXaxis()->SetLabelSize(0.05);
@@ -1037,7 +1038,7 @@
    ECalDirectionCorrectedCaloHitEnergy->GetZaxis()->SetTitleSize(0.035);
    ECalDirectionCorrectedCaloHitEnergy->GetZaxis()->SetTitleFont(42);
    ECalDirectionCorrectedCaloHitEnergy->Draw("HIST");
-   TLine *line = new TLine(0.19875,0.15,0.19875,0.9);
+   TLine *line = new TLine(0.2475,0.15,0.2475,0.9);
    line->SetLineStyle(2);
    line->SetLineWidth(2);
    line->Draw();

@@ -89,6 +89,21 @@ The calibration procedure is broadly split into four separate operations: determ
 
 %========================================================================================
 
+\subsection{MIP Scale Determination in the Digitiser}
+\label{sec:mipresponse}
+The digitiser MIP scale is defined as the, non-zero, peak in the distribution of the active layer calorimeter hit energies for normally incident 10~GeV $\mu^{-}$ \cite{Bichsel:2004ej}, as shown in figure \ref{fig:digitisermip}.  This distribution corresponds to the most probable energy deposition for a MIP.  As the average energy deposited per hit in a given sub-detector is relevant for setting the MIP scale, as opposed to the total energy deposited in a sub-detector, no selection cuts are required.  When populating the active layer energy distribution, a direction correction factor of $\text{cos}(\theta)$, where $\theta$ is the incident angle of the $\mu^{-}$ to the calorimeter hit, is applied to account for the path length of the MIP through the active medium of the calorimeter.  The MIP scale was determined separately for the ECal, HCal barrel, HCal endcap and HCal ring, however, only a single HCal MIP scale, taken as the HCal barrel, was required by the digitiser.  The HCal endcap and ring MIP scales were calculated for the purposes of the HCal ring digitisation.  
+
+\begin{figure}[h!]
+\subfloat[]{\label{fig:digitisermipecal}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserECal.pdf}}
+\subfloat[]{\label{fig:digitisermiphcalbarrel}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalbarrel.pdf}} \\
+\subfloat[]{\label{fig:digitisermiphcalendcap}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalendcap.pdf}}
+\subfloat[]{\label{fig:digitisermiphcalring}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalOther.pdf}}
+\caption[The active layer calorimeter hit energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal endcap and \protect\subref{fig:digitisermiphcalring} the HCal ring for 10~GeV $\mu^{-}$ events.  The vertical black dotted lines indicate the position of the MIP peak in these distributions.]{The active layer calorimeter hit energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal endcap and \protect\subref{fig:digitisermiphcalring} the HCal ring for 10~GeV $\mu^{-}$ events.  The vertical black dotted lines indicate the position of the MIP peak in these distributions.}
+\label{fig:digitisermip}
+\end{figure}
+
+%========================================================================================
+
 \subsection{Digitisation Implementation}
 \label{sec:digi}
 This section discusses how the digitisation constants, $\alpha$s, are determined.  The digitisation constant for a given calorimeter depends upon several factors such as the material properties of the active and absorber layers, the magnetic field strength and energy losses occurring within the gaps in the detector.  Therefore, each calorimeter in the ILD detector model has a distinct constant that must be independently determined. 
@@ -169,19 +184,7 @@ The HCal ring has an independent digitisation constant to account for any differ
 
 %========================================================================================
 
-\subsection{MIP Scale Determination}
-\label{sec:mipresponse}
-The digitiser MIP scale was defined as the, non-zero, peak in the distribution of the active layer calorimeter hit energies for normally incident 10~GeV $\mu^{-}$ \cite{Bichsel:2004ej}, as shown in figure \ref{fig:digitisermip}.  This distribution is made for each calorimeter where the MIP scale needs to be determined.  As the average energy deposited per hit in a given sub-detector is relevant for setting the MIP scale, as opposed to the total energy deposited in a sub-detector, no selection cuts are required.  When populating the active layer energy distribution, a direction correction factor of $\text{cos}(\theta)$, where $\theta$ is the incident angle of the $\mu^{-}$ to the calorimeter hit, was applied to the hit energy to generate the effect of having the $\mu^{-}$ enter the calorimeter at normal incidence.  The MIP scale was determined separately for the ECal, HCal barrel, HCal endcap and HCal ring, however, only a single HCal MIP scale, taken as the HCal barrel, was required by the digitisation processor.  The HCal endcap and ring MIP scales were calculated for the purposes of the HCal ring digitisation described in section \ref{sec:hcalringdigi}.  No MIP scale setting was required in the digitisation processor for the muon chamber.  
-
-\begin{figure}[h!]
-\subfloat[]{\label{fig:digitisermipecal}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserECal.pdf}}
-\subfloat[]{\label{fig:digitisermiphcalbarrel}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalbarrel.pdf}} \\
-\subfloat[]{\label{fig:digitisermiphcalendcap}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalendcap.pdf}}
-\subfloat[]{\label{fig:digitisermiphcalring}\includegraphics[width=0.5\textwidth]{Calibration/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalOther.pdf}}
-\caption[The active layer calorimeter hit energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal endcap and \protect\subref{fig:digitisermiphcalring} the HCal ring for 10~GeV $\mu^{-}$ events.]{The active layer calorimeter hit energy distributions for \protect\subref{fig:digitisermipecal} the ECal, \protect\subref{fig:digitisermiphcalbarrel} the HCal barrel, \protect\subref{fig:digitisermiphcalendcap} the HCal endcap and \protect\subref{fig:digitisermiphcalring} the HCal ring for 10~GeV $\mu^{-}$ events.}
-\label{fig:digitisermip}
-\end{figure}
-
+\subsection{MIP Scale Determination in PandoraPFA}
 A similar procedure was employed for calculation of the MIP peak in PandoraPFA.  The distribution used to set the MIP scale in PandoraPFA is the distribution of the calorimeter hit energies, i.e. the active and absorber layer energies, as opposed to the active layer energies used for setting the MIP scale in the digitisation processor.   Examples of the distributions used to set the MIP scale in PandoraPFA can be found in figure \ref{fig:pandoramip}.  There are few populated low calorimeter hit energy bins in this these distributions as cuts are applied in the digitiser on the active layer energy.  The double peak structure observed in the ECal calorimeter hit energy distribution is expected given the ECal absorber material thickness doubling in the back 10 layers of the ECal.  Further differences between the MIP scale setting in the digitiser and PandoraPFA are as follows: The MIP scale setting in PandoraPFA combines the HCal sub-detectors, the barrel, endcap and ring, together when creating the calorimeter hit energy distributions; PandoraPFA requires the MIP scale to be set in the muon chamber unlike the digitisation processor and, therefore, the muon chamber hit energy distribution must also be created.  
 
 \begin{figure}[h!]
