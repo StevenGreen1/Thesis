@@ -16,13 +16,14 @@ void TidyMuonMIPScale()
     pTH1F->GetXaxis()->SetTitleFont(132);
     pTH1F->GetXaxis()->SetLabelFont(132);
     pTH1F->GetXaxis()->SetLabelSize(0.05);
-    pTH1F->GetXaxis()->SetRangeUser(0.0,0.5);
+    pTH1F->GetXaxis()->SetRangeUser(0.0,0.25);
     pTH1F->GetYaxis()->SetTitle("Entries");
     pTH1F->GetYaxis()->SetTitleSize(0.05);
     pTH1F->GetYaxis()->SetTitleFont(132);
     pTH1F->GetYaxis()->SetLabelFont(132);
     pTH1F->GetYaxis()->SetTitleOffset(1.3);
     pTH1F->GetYaxis()->SetLabelSize(0.05);
+    pTH1F->GetYaxis()->SetRangeUser(100,1e5);
     pTH1F->SetLineColor(kBlue);
     pTH1F->SetFillColor(kBlue);
     pTH1F->SetFillStyle(3004);

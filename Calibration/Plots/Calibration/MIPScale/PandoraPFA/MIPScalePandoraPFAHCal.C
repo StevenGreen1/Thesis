@@ -1,9 +1,9 @@
 {
 //=========Macro generated from canvas: c1/
-//=========  (Wed Jun 21 16:27:04 2017) by ROOT version5.34/37
+//=========  (Thu Jun 22 13:46:02 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "",1120,480,800,600);
    gStyle->SetOptStat(0);
-   c1->Range(-0.012,-0.2737989,0.068,5.178647);
+   c1->Range(-0.012,1.479588,0.068,4.949001);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
@@ -982,6 +982,8 @@
    HCalDirectionCorrectedCaloHitEnergy->SetBinError(499,24.69818);
    HCalDirectionCorrectedCaloHitEnergy->SetBinError(500,24.41311);
    HCalDirectionCorrectedCaloHitEnergy->SetBinError(501,364.0508);
+   HCalDirectionCorrectedCaloHitEnergy->SetMinimum(100);
+   HCalDirectionCorrectedCaloHitEnergy->SetMaximum(40000);
    HCalDirectionCorrectedCaloHitEnergy->SetEntries(2883642);
    HCalDirectionCorrectedCaloHitEnergy->SetStats(0);
 

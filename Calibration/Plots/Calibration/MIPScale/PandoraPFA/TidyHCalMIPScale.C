@@ -23,6 +23,7 @@ void TidyHCalMIPScale()
     pTH1F->GetYaxis()->SetLabelFont(132);
     pTH1F->GetYaxis()->SetTitleOffset(1.3);
     pTH1F->GetYaxis()->SetLabelSize(0.05);
+    pTH1F->GetYaxis()->SetRangeUser(100,4e4);
     pTH1F->SetLineColor(kBlue);
     pTH1F->SetFillColor(kBlue);
     pTH1F->SetFillStyle(3004);

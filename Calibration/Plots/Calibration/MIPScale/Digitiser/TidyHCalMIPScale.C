@@ -25,6 +25,7 @@ void Run(TString name)
     else if (name == "Other")
     {
         pTH1F = HCalDirectionCorrectedSimCaloHitOther;
+        pTH1F->GetXaxis()->SetRangeUser(0,0.002);
         line = 9.375e-4;
     }
 
