@@ -7,22 +7,24 @@
 %========================================================================================
 %========================================================================================
 
+% Think about splitting this as possible need to redefine these variables....
+
 \section{Novel Energy Estimators}
-This section describes the novel energy estimators that were introduced in section \ref{sec:motivation} with a view to improving the energy resolution for hadronic showers.  Two techniques will be discussed; HCal hit energy truncation, which focuses on limiting the impact of Landau fluctuations, and software compensation, which focuses on achieving a compensating response from the calorimeters used in the simulation.  Both of these techniques are implemented by introducing weights, $\omega$, to calorimetric energy deposits found in the HCal:
+This section describes two novel energy estimators that are introduced with a view to improving the energy resolution for hadronic showers.  Two techniques will be discussed: HCal hit energy truncation, which focuses on limiting the impact of Landau fluctuations; and software compensation, which focuses on obtaining a compensating calorimeter response.  Both of these techniques are implemented by introducing weights, $\omega^{i}$, to calorimetric energy deposits made by showering particles in the HCal
 %
 \begin{equation}
-E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \omega^{i}(\rho^{i}) \text{ .}
+E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \omega^{i}(\rho^{i}) \text{ ,}
 \label{equ:compensation}
 \end{equation}
 %
-\noindent Weights are only applied to calorimeter hits in the HCal as both techniques attempt to modify the energy of hadronic showers, which are primarily contained within the HCal.  The weights, $\omega^{i}$, vary a function of the calorimeter hit energy density, $\rho^{i} = \frac{E^{i}_{HCal}}{V}$, where $V$ is the HCal hit volume.  While the exact weight values depend on the implementation of the technique, a general feature present in both is that at large $E^{i}_{HCal}$ the weight is less than one.  This limits the impact of spuriously high energy hits caused by Landau fluctuations that would otherwise harm detector performance.  The metrics used for quantifying detector performance when using these novel energy estimators are thoroughly defined in chapter \ref{chap:detopt}.
+\noindent Weights are only applied to calorimeter hits in the HCal as these techniques modify the energy of hadronic showers, which are primarily contained within the HCal.  The weights, $\omega^{i}$, vary a function of the energy density of the calorimeter hit, $\rho^{i} = \frac{E^{i}_{HCal}}{V}$ where $V$ is the physical volume of a calorimeter hit in the HCal, which includes the both the active and absorber layer thicknesses.  While the exact weights depend on the implementation of the technique, a general feature =is that at large $E^{i}_{HCal}$ the weight is less than one.  This limits the impact of spuriously high energy hits caused by Landau fluctuations. 
 
 %========================================================================================
 
 \subsection{HCal Hit Energy Truncation}
 \label{sec:hcalcelltruncation}
 \subsubsection{Application}
-The first technique to be examined is a simple truncation of the hadronic energy recorded in any given HCal hit.  This improves the energy estimators for hadronic clusters by limiting the impact of Landau fluctuations.  In terms of $\omega$ introduced in equation \ref{equ:compensation} the truncation corresponds to:
+The first technique to be examined is a simple truncation of the hadronic energy recorded in any given HCal hit.  This improves the energy estimators for hadronic clusters by limiting the impact of Landau fluctuations.  In terms of $\omega$ introduced in equation \ref{equ:compensation} the truncation corresponds to
 %
 \begin{equation}
 \omega(\rho) =
@@ -88,7 +90,7 @@ A particle shower produced when a hadron passing through a calorimeter has two c
 
 An additional layer of sophistication in this approach is the weights that are applied vary as a function of the uncompensated cluster energy, $E_{\text{Raw}}$, as well as the hit energy density, $\rho^{i}$.  This is to account for any changes to the distribution of calorimeter hit energy densities as the total shower energy is varied.  For example, the fraction of hits in a hadronic shower that are electromagnetic in nature increases as the total energy of the hadronic shower increases \cite{Wigmans:2000vf}.  Therefore, as the total shower energy increases a smaller fraction of hits will require weights greater than one as there are less fully hadronic hits in the shower than at low energies.  The highly segmented calorimeters used at the linear collider experiment will give excellent spatial resolution for individual particle showers, which enables precise mapping of the calorimeter hits to different shower components.  This allows the linear collider to employ this software compensation technique with greater effectiveness than was possible for previous collider experiments.  
 
-In terms of the parameterisation introduced in equation \ref{equ:compensation}, the weights used for this technique are \cite{Adloff:2012gv}:
+In terms of the parameterisation introduced in equation \ref{equ:compensation}, the weights used for this technique are \cite{Adloff:2012gv}
 %
 \begin{equation}
 \omega(E_{\text{Raw}}, \rho) = p_{1}(E_{\text{Raw}}) \times exp(p_{2}(E_{\text{Raw}}) \times \rho) + p_{3}(E_{\text{Raw}}) \\
@@ -97,7 +99,7 @@ p_{2} = p_{21} + p_{22} \times E_{\text{Raw}} + p_{23} \times E_{\text{Raw}}^{2}
 p_{3} = \frac{p_{31}}{p_{32} + exp(p_{33} \times E_{\text{Raw}})}\text{ ,}
 \label{equ:softcompweight}
 \end{equation}
-\noindent where $p_{ij}$ are trained parameters and:
+\noindent where $p_{ij}$ are trained parameters and
 \begin{equation}
 E_{Raw} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \text{ .}
 \end{equation}
