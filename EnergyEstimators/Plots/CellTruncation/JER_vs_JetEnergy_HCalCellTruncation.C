@@ -30,7 +30,8 @@
 
     float Variable_4_JER[4] = {3.77309,3.02386,2.98467,3.07305};
 
-    float Variable_5_JER[4] = {3.77308,3.02768,3.03721,3.16584};
+//10 GeV    float Variable_5_JER[4] = {3.77308,3.02768,3.03721,3.16584};
+    float Variable_5_JER[4] = {3.77195,3.03212,3.03374,3.18196};
 
     float Variable_1_JERError[4] = {0.045388,0.0364392,0.0379025,0.0419333};
 
@@ -40,7 +41,8 @@
 
     float Variable_4_JERError[4] = {0.0480152,0.0387229,0.0381304,0.0392436};
 
-    float Variable_5_JERError[4] = {0.0480151,0.0387718,0.0388017,0.0404285};
+//10GeV    float Variable_5_JERError[4] = {0.0480151,0.0387718,0.0388017,0.0404285};
+    float Variable_5_JERError[4] = {0.0480007,0.0388286,0.0387574,0.0406344};
 
     TLegend *pLegend = new TLegend(0.5, 0.55, 0.85, 0.85);
     pLegend->SetTextSize(0.05);
@@ -87,7 +89,7 @@
     pTGraphErrors_Variable_5->SetMarkerStyle(1);
     pTGraphErrors_Variable_5->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_5, "10GeV", "lp");
+    pLegend->AddEntry(pTGraphErrors_Variable_5, "No Truncation", "lp");
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
