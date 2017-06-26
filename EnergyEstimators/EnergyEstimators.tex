@@ -17,35 +17,48 @@ E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \t
 \label{equ:compensation}
 \end{equation}
 %
-\noindent Weights are only applied to calorimeter hits in the HCal as these techniques modify the energy of hadronic showers, which are primarily contained within the HCal.  The weights, $\omega^{i}$, vary a function of the energy density of the calorimeter hit, $\rho^{i} = \frac{E^{i}_{HCal}}{V}$ where $V$ is the physical volume of a calorimeter hit in the HCal, which includes the both the active and absorber layer thicknesses.  While the exact weights depend on the implementation of the technique, a general feature =is that at large $E^{i}_{HCal}$ the weight is less than one.  This limits the impact of spuriously high energy hits caused by Landau fluctuations. 
+\noindent Weights are only applied to calorimeter hits in the HCal as these techniques modify the energy of hadronic showers, which are primarily contained within the HCal.  The weights, $\omega^{i}$, vary a function of the energy density of the calorimeter hit, $\rho^{i} = E^{i}_{HCal}/V$ where $V$ is the physical volume of a calorimeter hit in the HCal, which includes the both the active and absorber layer thicknesses.  
+
+Although the exact weights depend on the implementation of the technique, a general feature is that at large $E^{i}_{HCal}$ the weight is less than one.  This limits the impact of spuriously high energy hits caused by Landau fluctuations.  The energy loss probability distribution function for scintillator detectors, such as the ILD HCal, is given by a Landau function, which is essentially a Gaussian function with a high energy tail \cite{Landau:1944if}.  Energy deposits from the high energy tail of this distribution, which are known as Landau fluctuations, account for high energy knock-on electrons that appear within particle showers \cite{Bichsel:2004ej}.  As Landau fluctuations deposit a disproportionately large amount of energy with respect to the bulk of the particle shower, they can lead to overestimates of the particle shower energy.  
+
+The energy loss probability distribution function for $n$ particles passing through a calorimeter hit is given by the convolution of $n$ Landau functions, which by the central limits theorem will tend to a Gaussian as $n$ becomes large.  Consequently, as the average number of particles passing through a calorimeter hit increases, the high energy tail in the energy loss probability distribution function for the hit becomes less pronounced and the impact of Landau fluctuations decreases.  This means that the impact of Landau fluctuations on energy measurements is dictated by the density of a particles within a particle shower and the transverse segmentation, or cell size, of the calorimeter in use.  If the transverse segmentation, or cell size, of a calorimeter decreases, the average number of particles passing through each hit decreases and the impact of Landau fluctuations increases.  Any technique used for minimising the impact of Landau fluctuations will be sensitive to the transverse segmentation of the calorimeters in use.  
 
 %========================================================================================
 
 \subsection{HCal Hit Energy Truncation}
 \label{sec:hcalcelltruncation}
-\subsubsection{Application}
-The first technique to be examined is a simple truncation of the hadronic energy recorded in any given HCal hit.  This improves the energy estimators for hadronic clusters by limiting the impact of Landau fluctuations.  In terms of $\omega$ introduced in equation \ref{equ:compensation} the truncation corresponds to
+The first technique to be examined is a simple truncation of the hadronic energy, $E$, recorded in any given HCal hit
+%
+\begin{equation}
+E \rightarrow E' =
+\begin{cases}
+E & \text{if } E < \kappa \text{ ,} \\
+\kappa & \text{otherwise} \text{ ,}
+\end{cases}
+\end{equation}
+%
+\noindent where $\kappa$ is the value of the truncation.  This improves the energy estimators for hadronic clusters by limiting the impact of Landau fluctuations.  In terms of $\omega$ introduced in equation \ref{equ:compensation} the truncation corresponds to
 %
 \begin{equation}
 \omega(\rho) =
 \begin{cases}
 1 & \text{if } \rho \times V < \kappa \text{ ,} \\
-\frac{\kappa}{\rho \times V} & \text{otherwise} \text{ ,}
+\frac{\kappa}{\rho \times V} & \text{otherwise} \text{ .}
 \end{cases}
 \end{equation}
 %
-\noindent where $\kappa$ is the value of the truncation and $V$ is the volume of a HCal hit.  This weight as a function of hit energy density is shown in figure \ref{fig:hcalcellweight}.  
-
-%========================================================================================
-
-\subsubsection{Results: Energy Resolution}
-The application of these weights leads to an improvement in the energy resolution for neutral hadrons, which can be seen in figure \ref{fig:ercelltrunckaons}.  However, a great deal of care has to be given to the truncation energy so that hits from typical hadronic shower development are not truncated, while the spuriously high energy hits are.  Figure \ref{fig:ercelltrunckaons} indicates that a 1~GeV truncation is sufficient for dealing with the Landau fluctuations.  For hit energy truncations greater than this, the energy resolution worsens as the effect Landau fluctuations are not accounted for.  For hit energy truncations below 1~GeV, the truncation is too aggressive and hits from typical hadronic shower development are truncated.  For completion the $\gamma$ energy resolutions as a function of HCal hit energy truncation are shown in figure \ref{fig:ercelltruncphotons}.  As expected the $\gamma$ energy resolution is invariant to the HCal hit energy truncation as the $\gamma$s are largely contained within the ECal.
+\noindent This weight as a function of hit energy density is shown in figure \ref{fig:hcalcellweight}.  
 
 \begin{figure}[h!]
 \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/CellTruncWeights.pdf}
 \caption[The weights, $\omega$, used in the HCal hit energy truncation as a function of the energy density of the HCal hit, $\rho$.  The truncation shown here corresponds to a 1~GeV truncation in the nominal ILD HCal.]{The weights, $\omega$, used in the HCal hit energy truncation as a function of the energy density of the HCal hit, $\rho$.  The truncation shown here corresponds to a 1~GeV truncation in the nominal ILD HCal.}
 \label{fig:hcalcellweight}
 \end{figure}
+
+%========================================================================================
+
+\subsubsection{Impact on Single Particle Energy Resolution}
+Figure \ref{fig:ercelltrunckaons} shows the energy resolution for neutral hadrons as a function of the HCal hit energy truncation.  The optimal truncation for the ILD detector model simulation was 1~GeV and, using this truncation, a neutral hadron energy resolution of $\sim$8.8\% was obtained.  This energy resolution is approximately $\sim$1.6\% lower than that obtained without the use of a truncation.  Smaller energy truncations begin to truncate the energy of calorimeter hits produced in typical hadronic shower development, while larger truncations allow for a larger impact from Landau fluctuations.  Both of these effects result in worsening neutral hadron energy resolutions.  For completeness the $\gamma$ energy resolutions as a function of HCal hit energy truncation are shown in figure \ref{fig:ercelltruncphotons}.  As expected the $\gamma$ energy resolution is unaffected by the HCal hit energy truncation as the $\gamma$s are largely contained within the ECal.
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:ercelltrunckaons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/ER_vs_Kaon0LCellTrunc_50GeVKaon0L.pdf}}
@@ -56,14 +69,24 @@ The application of these weights leads to an improvement in the energy resolutio
 
 %========================================================================================
 
-\subsubsection{Results: Jet Energy Resolution}
-There is an improvement in the jet energy resolution when applying a carefully chosen HCal hit energy truncation.  Figure \ref{fig:jercelltrunc} shows the jet energy resolution as a function of jet energy for selected values of the HCal hit energy truncation.  The trends in this plot are complex as the optimal cell truncation varies with the jet energy.  At low energies a 0.5~GeV truncation gives the optimal performance, however, when the jet energies reach $\approx$ 180~GeV a 1~GeV truncation gives the optimal performance.  This is to be expected based on the Landau fluctuations.  The Landau distribution, governing the energy deposition for hadronic showers, is essentially a Gaussian with a high energy tail and as the jet energy increases, the mean of the Gaussian increases and the definition of hit energies falling in the high energy tail changes.  
+\subsubsection{Impact on Jet Energy Resolution}
+Figure \ref{fig:jercelltrunc} shows the jet energy resolution as a function of jet energy for selected values of the HCal hit energy truncation.  The trends in this plot are complex as the optimal HCal hit energy truncation varies with the jet energy.  For 45.5~GeV jets, the best jet energy resolution, $\sim$3.55\%, is obtained using a 0.5~GeV truncation, while for 180~GeV jets, the best jet energy resolution, $\sim$2.85\%, is obtained using a 1~GeV truncation.  This is expected as at low jet energies the average number of particles passing through each active calorimeter hit will be small, meaning the impact of Landau fluctuations is large and that to limit them a small truncation is needed.  As the jet energy increases more particles on average pass through each calorimeter hit and the impact of Landau fluctuations decreases.  
 
 \begin{figure}[h!]
 \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/JER_vs_JetEnergy_HCalCellTruncation.pdf}
-\caption[The jet energy resolution as a function of jet energy for various hadronic cell truncations.  The results shown use the nominal ILD detector model.]{The jet energy resolution as a function of jet energy for various hadronic cell truncations.  The results shown use the nominal ILD detector model.}
+\caption[The jet energy resolution as a function of jet energy for various HCal hit energy truncations.  The results shown use the nominal ILD detector model, which contains $30\times30 \text{ mm}^{2}$ square scintillator tiles in the HCal.]{The jet energy resolution as a function of jet energy for various HCal hit energy truncations.  The results shown use the nominal ILD detector model, which contains $30\times30 \text{ mm}^{2}$ square scintillator tiles in the HCal.}
 \label{fig:jercelltrunc}
 \end{figure}
+
+It is clear that a 1~GeV HCal hit energy truncation is beneficial for the performance of the nominal ILD detector model as the jet energy resolution is reduced by roughly $\sim$0.15\% across the jet energy range from 45.5~GeV to 250~GeV.  
+
+%HERE
+1)
+As this is a significant improvement, this technique is applied for the optimisation studies presented in 
+2)
+Chapter \ref{chap:detopt} presents an optimisation of the ILD calorimeters and, as it produces a significant improvement in detector performance, the HCal hit energy truncation is used for these simulations.   
+3)
+Included in these studies is an optimisation of the HCal cell size and, as the average number of particles passing through each calorimeter hit depends on the cell size, the truncation used for each detector model has to be tailored to for cell size considered.  
 
 While it is challenging to determine the optimal truncation to use for any given detector model, it is clear that applying an appropriate truncation produces significant improvement in detector performance.  Therefore, for the optimisation studies presented in chapter \ref{chap:detopt} this form of novel energy estimator is applied.  The optimal truncation for each detector model considered in that study was determined by performing the reconstruction using range of HCal hit energy truncations and quoting the optimal performance.  The HCal hit energy truncations considered in the optimisation study were 0.5, 0.75, 1, 1.5, 2, 5 and 10~GeV.  For the HCal cell size study the truncation used for the 10, 20, 30, 40, 50 and 100~mm cell size detector was 0.5, 0.75, 1, 1.5, 2 and 5~GeV respectively, for the tungsten HCal options the truncation used was 5~GeV and for all other options the truncation used was 1~GeV.  This optimisation has a significant impact on detector optimisation, which can be seen by comparing the jet energy resolutions obtained when using the optimised cell truncation and a fixed 1~GeV truncation, shown in figure \ref{fig:jerhcalcellopt}.  Without this optimisation of hit energy truncation the significance of the HCal cell size is overinflated and could lead to a misinformed detector design choice.  
 
