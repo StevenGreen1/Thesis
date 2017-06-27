@@ -10,10 +10,10 @@
 % Think about splitting this as possible need to redefine these variables....
 
 \section{Novel Energy Estimators}
-This section describes two novel energy estimators that are introduced with a view to improving the energy resolution for hadronic showers.  Two techniques will be discussed: HCal hit energy truncation, which focuses on limiting the impact of Landau fluctuations; and software compensation, which focuses on obtaining a compensating calorimeter response.  Both of these techniques are implemented by introducing weights, $\omega^{i}$, to calorimetric energy deposits made by showering particles in the HCal
+This section describes two novel energy estimators that are introduced with a view to improving the energy resolution for hadronic showers.  Two techniques will be discussed: HCal hit energy truncation, which focuses on limiting the impact of Landau fluctuations; and software compensation, which focuses on obtaining a compensating calorimeter response.  Both of these techniques are implemented by introducing weights, $\omega^{i}$, to calorimetric energy deposits made by showering particles in the HCal.  The energy of a showering particle, $E_{Cluster}$, is determined by grouping together a clusters of calorimeter hits and summing their energies.  When weights are applied to HCal hits this energy estimator becomes 
 %
 \begin{equation}
-E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \omega^{i}(\rho^{i}) \text{ ,}
+E_{Cluster} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \omega^{i}(\rho^{i}) \text{ .}
 \label{equ:compensation}
 \end{equation}
 %
@@ -78,22 +78,14 @@ Figure \ref{fig:jercelltrunc} shows the jet energy resolution as a function of j
 \label{fig:jercelltrunc}
 \end{figure}
 
-It is clear that a 1~GeV HCal hit energy truncation is beneficial for the performance of the nominal ILD detector model as the jet energy resolution is reduced by roughly $\sim$0.15\% across the jet energy range from 45.5~GeV to 250~GeV.  
+It is clear that a 1~GeV HCal hit energy truncation is beneficial for the performance of the nominal ILD detector model as the jet energy resolution is reduced by roughly $\sim$0.15\% across the jet energy range from 45.5~GeV to 250~GeV.  As the HCal hit truncation technique offers significant performance gains, it is used for the calorimeter optimisation studies presented in chapter \ref{chap:detopt}.  Included in those studies is an optimisation of the HCal cell size.  Increasing the HCal cell size will increase the average number of particles passing through each calorimeter hit, which in turn reduces the impact of Landau fluctuations and vice verse.  For all detector models considered where the HCal cell size was varied, the HCal hit energy truncation was reoptimsied to account for the changing impact of Landau fluctuations.  For detector models with a HCal cell size of 10, 20, 30, 40, 50 and 100~mm the reoptimised truncations were 0.5, 0.75, 1, 1.5, 2 and 5~GeV respectively.  Furthermore, the average particle density in a HCal hit will also be sensitive to the properties of the absorber material used in the calorimeters, therefore, the HCal hit energy truncation was also reoptimised in the HCal absorber material study.  The optimal truncation for tungsten HCal options was 5~GeV, while for all other detector models considered it was 1~GeV.
 
-%HERE
-1)
-As this is a significant improvement, this technique is applied for the optimisation studies presented in 
-2)
-Chapter \ref{chap:detopt} presents an optimisation of the ILD calorimeters and, as it produces a significant improvement in detector performance, the HCal hit energy truncation is used for these simulations.   
-3)
-Included in these studies is an optimisation of the HCal cell size and, as the average number of particles passing through each calorimeter hit depends on the cell size, the truncation used for each detector model has to be tailored to for cell size considered.  
-
-While it is challenging to determine the optimal truncation to use for any given detector model, it is clear that applying an appropriate truncation produces significant improvement in detector performance.  Therefore, for the optimisation studies presented in chapter \ref{chap:detopt} this form of novel energy estimator is applied.  The optimal truncation for each detector model considered in that study was determined by performing the reconstruction using range of HCal hit energy truncations and quoting the optimal performance.  The HCal hit energy truncations considered in the optimisation study were 0.5, 0.75, 1, 1.5, 2, 5 and 10~GeV.  For the HCal cell size study the truncation used for the 10, 20, 30, 40, 50 and 100~mm cell size detector was 0.5, 0.75, 1, 1.5, 2 and 5~GeV respectively, for the tungsten HCal options the truncation used was 5~GeV and for all other options the truncation used was 1~GeV.  This optimisation has a significant impact on detector optimisation, which can be seen by comparing the jet energy resolutions obtained when using the optimised cell truncation and a fixed 1~GeV truncation, shown in figure \ref{fig:jerhcalcellopt}.  Without this optimisation of hit energy truncation the significance of the HCal cell size is overinflated and could lead to a misinformed detector design choice.  
+Understanding the affect of the HCal hit energy truncation is crucial when performing optimisation studies.  This can be seen in figure \ref{fig:jerhcalcellopt}, which shows the results of the HCal cell size optimisation study when using a 1~GeV truncation and when optimising the truncation for each detector model.  By applying a uniform HCal hit energy truncation the importance of the HCal cell size to particle flow calorimetry is vastly overinflated.  For example, if the HCal cell size is increased from 10~mm to 100~mm the jet energy resolution for 250~GeV jets goes from $\sim$2.8\% to $\sim$4.5\% for the flat 1~GeV truncation, but only $\sim$3.5\% when using an optimised truncation.  As the jet energy and HCal cell size increase, the flat 1~GeV truncation throws away a larger fraction of typical hadronic shower energy measurements, which causes the jet energy resolution to degrade rapidly.  
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:jerhcalcelloptgoodtrunc}\includegraphics[width=0.5\textwidth]{OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf}}
 \subfloat[]{\label{fig:jerhcalcelloptbadtrunc}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/JER_vs_HCalCellSizeBadTruncation.pdf}}
-\caption[The jet energy resolution as a function of HCal cell size using a HCal hit energy truncation that is \protect\subref{fig:jerhcalcelloptgoodtrunc} optimised and \protect\subref{fig:jerhcalcelloptbadtrunc} fixed at 1~GeV.]{The jet energy resolution as a function of HCal cell size using a HCal hit energy truncation that is \protect\subref{fig:jerhcalcelloptgoodtrunc} optimised and \protect\subref{fig:jerhcalcelloptbadtrunc} fixed at 1~GeV.}
+\caption[The jet energy resolution as a function of HCal cell size in the ILD detector model using a HCal hit energy truncation that is \protect\subref{fig:jerhcalcelloptgoodtrunc} optimised and \protect\subref{fig:jerhcalcelloptbadtrunc} fixed at 1~GeV.]{The jet energy resolution as a function of HCal cell size in the ILD detector model using a HCal hit energy truncation that is \protect\subref{fig:jerhcalcelloptgoodtrunc} optimised and \protect\subref{fig:jerhcalcelloptbadtrunc} fixed at 1~GeV.}
 \label{fig:jerhcalcellopt}
 \end{figure}
 
@@ -101,8 +93,16 @@ While it is challenging to determine the optimal truncation to use for any given
 
 \subsection{Software Compensation}
 \label{sec:softcomp}
-\subsubsection{Application}
-A particle shower produced when a hadron passing through a calorimeter has two components \cite{Wigmans:2000vf}; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$s and $\eta$s, and a hadronic shower component originating from all other interacting and decaying particles in the shower.  By identifying each of these components in the reconstruction, it is possible to increase the energy of the hadronic hits to give a compensating response and decrease the energy of spuriously high energy hits that come from Landau fluctuations.  The challenge of applying this approach is to identify whether a hit is likely to be hadronic or electromagnetic in nature.  This is done based on the energy density of a hit, with high energy densities likely to be part of the electromagnetic core and low energy densities likely to be part of satellite hadronic hits around the shower core.  An event display showing the energy density of a hadronic shower, where the electromagnetic core can be clearly seen, in a 500~GeV Z$\rightarrow$uds di-jet event can be found in figure \ref{fig:softcompeventdisplay}.  
+A particle shower produced when a hadron passing through a calorimeter has two components \cite{Wigmans:2000vf}; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$s and $\eta$s, and a hadronic shower component originating from other interacting and decaying particles.  By identifying each of these components in the reconstruction, it is possible to modify their energies to give a compensating calorimeter response.  This technique known as software compensation.  
+
+Software compensation achieves a compensating calorimeter response by applying weights, as introduced in equation \ref{equ:compensation}, that modify the energy of calorimeter hits in the HCal.  The weights vary as a function of the calorimeter hit energy density, $\rho^{i}$, and the uncompensated energy of the particle shower, $E_{Raw}$, where 
+%
+\begin{equation}
+E_{Raw} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \text{ .}
+\label{equ:eraw}
+\end{equation}
+%
+\noindent The electromagnetic and hadronic components in a hadronic particle shower are treated differently in this approach because the weights depend on the energy density of the calorimeter hits.  High energy density hits are likely to be part of the electromagnetic core, while low energy density hits are likely to be part of satellite hadronic hits around the electromagnetic shower core \cite{Adloff:2012gv}.  By tailoring the weights as a function of the energy density, a compensating calorimeter response can be obtained.  Figure \ref{fig:softcompeventdisplay} shows the electromagnetic and hadronic shower components, determined by the energy density of the calorimeter hits, for a hadronic shower in a 500~GeV Z$\rightarrow$uds di-jet event.  
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:softcompfulleventdisplay}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp1.png}}
@@ -111,29 +111,37 @@ A particle shower produced when a hadron passing through a calorimeter has two c
 \label{fig:softcompeventdisplay}
 \end{figure}
 
-An additional layer of sophistication in this approach is the weights that are applied vary as a function of the uncompensated cluster energy, $E_{\text{Raw}}$, as well as the hit energy density, $\rho^{i}$.  This is to account for any changes to the distribution of calorimeter hit energy densities as the total shower energy is varied.  For example, the fraction of hits in a hadronic shower that are electromagnetic in nature increases as the total energy of the hadronic shower increases \cite{Wigmans:2000vf}.  Therefore, as the total shower energy increases a smaller fraction of hits will require weights greater than one as there are less fully hadronic hits in the shower than at low energies.  The highly segmented calorimeters used at the linear collider experiment will give excellent spatial resolution for individual particle showers, which enables precise mapping of the calorimeter hits to different shower components.  This allows the linear collider to employ this software compensation technique with greater effectiveness than was possible for previous collider experiments.  
+The software compensation weights also depend on $E_{Raw}$ to account for the sensitivity of the hit energy density distribution on the total particle shower energy.  For hadronic showers, the fraction of the total energy carried in the electromagnetic core increases as the total shower energy increases \cite{Wigmans:2000vf}, therefore the dependancy of the weights on $E_{Raw}$ is needed to obtain a compensating calorimeter response across a wide range of energies.  
 
-In terms of the parameterisation introduced in equation \ref{equ:compensation}, the weights used for this technique are \cite{Adloff:2012gv}
+The precise form of the weights used for this technique are \cite{Adloff:2012gv}
 %
 \begin{equation}
-\omega(E_{\text{Raw}}, \rho) = p_{1}(E_{\text{Raw}}) \times exp(p_{2}(E_{\text{Raw}}) \times \rho) + p_{3}(E_{\text{Raw}}) \\
-p_{1} = p_{11} + p_{12} \times E_{\text{Raw}} + p_{13} \times E_{\text{Raw}}^{2} \\
-p_{2} = p_{21} + p_{22} \times E_{\text{Raw}} + p_{23} \times E_{\text{Raw}}^{2} \\
-p_{3} = \frac{p_{31}}{p_{32} + exp(p_{33} \times E_{\text{Raw}})}\text{ ,}
+\omega(E_{Raw}, \rho) = p_{1}(E_{Raw}) \times \text{exp}(p_{2}(E_{Raw}) \times \rho) + p_{3}(E_{Raw}) \\
+p_{1}(E_{Raw}) = p_{11} + p_{12} \times E_{Raw} + p_{13} \times E_{Raw}^{2} \\
+p_{2}(E_{Raw}) = p_{21} + p_{22} \times E_{Raw} + p_{23} \times E_{Raw}^{2} \\
+p_{3}(E_{Raw}) = \frac{p_{31}}{p_{32} + \text{exp}(p_{33} \times E_{Raw})}\text{ ,}
 \label{equ:softcompweight}
 \end{equation}
-\noindent where $p_{ij}$ are trained parameters and
+\noindent where $p_{\alpha\beta}$ are constants and
 \begin{equation}
 E_{Raw} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \text{ .}
 \end{equation}
 %
-\noindent The parameters $p_{ij}$ are determined by performing a $\chi^{2}$ fit of the software compensated cluster energy to the MC energy for samples of $K^{0}_{L}$ ranging from 10 to 100~GeV in steps of 10~GeV.  Using the fitted parameters obtained for the nominal ILD detector, $p_{1}$, $p_{2}$ and $p_{3}$ as a function of $E_{\text{Raw}}$ is shown in figure \ref{fig:softcompparams} and $\omega(E_{\text{Raw}}, \rho)$ as a function of $\rho$ for selected values of $E_{\text{Raw}}$ is shown in figure \ref{fig:softcompweights}.  Figure \ref{fig:softcompweights} shows that the high energy density hits are being reduced in energy to compensate for the effects of Landau fluctuations, while the low energy density hits are being increased in weight to compensate for the invisible energy component found in hadronic showers.  Furthermore, the weights vary as a function of the raw hadronic shower energy to account for the changing energy density topology of hadronic showers with increasing shower energy.
+\noindent The parameters $p_{\alpha\beta}$ were determined by minimising $\chi^{2}(p_{\alpha\beta})$ where
+%
+\begin{equation}
+\chi^{2}(p_{\alpha\beta}) = \sum_{Events} \bigg( \frac{(E_{SC,Cluster}(p_{\alpha\beta}) - E_{MC})}{0.5 \times \sqrt{E_{MC}}} \bigg)^{2}
+\end{equation}
+%
+where the sum runs over single $K^{0}_{L}$ events that ranged in energy from 10 to 100~GeV in steps of 10~GeV.  At each energy the same number of events was used to avoid biasing to particular energies.  In each event, $E_{SC,Cluster}$ is the software compensated energy estimator for the reconstructed event and $E_{MC}$ is the MC energy of the $K^{0}_{L}$.  Normalising the deviation of $E_{SC,Cluster}$ from $E_{MC}$ by the stochastic term in the HCal energy resolution made ensured each event contributed the same weight to the $\chi^{2}$ function.  
+
+Using the fitted parameters obtained for the nominal ILD detector, $p_{1}$, $p_{2}$ and $p_{3}$ as a function of $E_{Raw}$ is shown in figure \ref{fig:softcompparams} and $\omega(E_{Raw}, \rho)$ as a function of $\rho$ for selected values of $E_{Raw}$ is shown in figure \ref{fig:softcompweights}.  Figure \ref{fig:softcompweights} shows that the high energy density hits are being reduced in energy to compensate for the effects of Landau fluctuations, while the low energy density hits are being increased in weight to compensate for the invisible energy component found in hadronic showers.  Furthermore, the weights vary as a function of the raw hadronic shower energy to account for the changing energy density topology of hadronic showers with increasing shower energy.
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:softcompparam1}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam1.pdf}}
 \subfloat[]{\label{fig:softcompparam2}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam2.pdf}}
 \subfloat[]{\label{fig:softcompparam3}\includegraphics[width=0.33\textwidth]{EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam3.pdf}}
-\caption[Parameters used in software compensation weight determination as a function of $E_{\text{Raw}}$.]{Parameters used in software compensation weight determination as a function of $E_{\text{Raw}}$.}
+\caption[Parameters used in software compensation weight determination as a function of $E_{Raw}$.]{Parameters used in software compensation weight determination as a function of $E_{Raw}$.}
 \label{fig:softcompparams}
 \end{figure}
 
@@ -145,9 +153,9 @@ E_{Raw} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{
 
 This technique is applied in the PandoraPFA framework in the form of an energy correction function, which means whenever the energy of a cluster of hits is considered by PandoraPFA the software compensated energy is used.  Applying software compensation in this way benefits the detector energy resolution in two ways; firstly, the intrinsic energy resolution of the detector improves and secondly, the confusion contribution to the energy resolution is reduced.
 
-As software compensation only modifies the energy of HCal hits there is freedom to apply further energy corrections to the ECal hits.  Applying the Clean Clusters logic, described in section \ref{sec:legacycorrections}, to the ECal hits alongside software compensation was found to be beneficial to the jet energy resolution.  Therefore, the application of software compensation within PandoraPFA implicitly involves the application of the Clean Clusters logic to the ECal hits.  
+As software compensation only modifies the energy of HCal hits there is freedom to apply further energy corrections to the ECal hits.  Applying the "Clean Clusters" logic, described in section \ref{sec:legacycorrections}, to the ECal hits alongside software compensation was found to be beneficial to the jet energy resolution.  Therefore, the application of software compensation within PandoraPFA implicitly involves the application of the "Clean Clusters" logic to the ECal hits.  
 
-Software compensation was trained using a maximum $K^{0}_{L}$ energy of 100~GeV, therefore, it is only applied to clusters where $E_{\text{Raw}} < 100$~GeV as sensible behaviour outside this range cannot be ensured.  While it would be possible to modify the energy range of the training sample to go to higher energies, hadronic clusters with energy greater than 100~GeV will be rare at the ILC like energies considered here.
+Software compensation was tuned using a maximum $K^{0}_{L}$ energy of 100~GeV, therefore, it is only applied to clusters where $E_{Raw} < 100$~GeV as sensible behaviour outside this range cannot be ensured.  While it would be possible to modify the energy range of the training sample to go to higher energies, hadronic clusters with energy greater than 100~GeV will be rare at the ILC like energies considered here.
 
 %========================================================================================
 
