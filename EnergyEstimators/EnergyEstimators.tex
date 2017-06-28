@@ -57,6 +57,19 @@ E & \text{if } E < \kappa \text{ ,} \\
 
 %========================================================================================
 
+\subsubsection{Legacy Energy Corrections}
+\label{sec:legacycorrections}
+Alongside the HCal hit energy truncation, PandoraPFA also applied two other energy corrections designed at limiting the impact of Landau fluctuations.  They are:
+
+\begin{itemize}
+\item \textbf{Clean Clusters}.  This algorithm checks to see whether the energy measured within a calorimeter hit is anomalously high.  Anomalously high energy hits are defined as hits where the energy contained within the hit is greater than 10\% of the energy of the cluster that the hit has been associated to.  If a hit is deemed to have an anomalously high energy and if this energy is above a threshold (0.5~GeV) the hit energy used by PandoraPFA is modified.  The updated hit energy is taken as the average hit energy in the calorimeter layers immediately before and after the layer containing the high energy hit.    
+\item \textbf{Scale Hot Hadrons}.  This algorithm calculates the average number of MIP equivalent particles passing through each calorimeter hit in a cluster.  If this number is larger than a given value, default 15 MIPs per hit, the cluster energy is rescaled to give a lower average number of MIPs per hit, default is 5 MIPs per hit.  
+\end{itemize}
+
+These algorithms, with the HCal hit truncation, form the "legacy" energy corrections that are used by PandoraPFA when performing the event reconstruction.    
+
+%========================================================================================
+
 \subsubsection{Impact on Single Particle Energy Resolution}
 Figure \ref{fig:ercelltrunckaons} shows the energy resolution for neutral hadrons as a function of the HCal hit energy truncation.  The optimal truncation for the ILD detector model simulation was 1~GeV and, using this truncation, a neutral hadron energy resolution of $\sim$8.8\% was obtained.  This energy resolution is approximately $\sim$1.6\% lower than that obtained without the use of a truncation.  Smaller energy truncations begin to truncate the energy of calorimeter hits produced in typical hadronic shower development, while larger truncations allow for a larger impact from Landau fluctuations.  Both of these effects result in worsening neutral hadron energy resolutions.  For completeness the $\gamma$ energy resolutions as a function of HCal hit energy truncation are shown in figure \ref{fig:ercelltruncphotons}.  As expected the $\gamma$ energy resolution is unaffected by the HCal hit energy truncation as the $\gamma$s are largely contained within the ECal.
 
@@ -93,16 +106,16 @@ Understanding the affect of the HCal hit energy truncation is crucial when perfo
 
 \subsection{Software Compensation}
 \label{sec:softcomp}
-A particle shower produced when a hadron passing through a calorimeter has two components \cite{Wigmans:2000vf}; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$s and $\eta$s, and a hadronic shower component originating from other interacting and decaying particles.  By identifying each of these components in the reconstruction, it is possible to modify their energies to give a compensating calorimeter response.  This technique known as software compensation.  
+Particle showers that are produced when a hadron interacts with a calorimeter contain two components \cite{Wigmans:2000vf}; an electromagnetic shower core, which originates from the production and decay of $\pi^{0}$s and $\eta$s, and a hadronic shower component originating from other interacting and decaying particles.  By identifying each of these components in the reconstruction, it is possible to modify their energies to give a compensating calorimeter response.  This technique known as software compensation.  
 
-Software compensation achieves a compensating calorimeter response by applying weights, as introduced in equation \ref{equ:compensation}, that modify the energy of calorimeter hits in the HCal.  The weights vary as a function of the calorimeter hit energy density, $\rho^{i}$, and the uncompensated energy of the particle shower, $E_{Raw}$, where 
+Software compensation achieves a compensating calorimeter response by applying weights, as introduced in equation \ref{equ:compensation}, that modify the energy of calorimeter hits in the HCal.  These weights increase the energy found in the hadronic hits to compensate for the undetectable energy component found in hadronic showers.  Additionally, these weights is to reduce the energy of spuriously high energy hits to minimise the impact of Landau fluctuations.  The weights vary as a function of the calorimeter hit energy density, $\rho^{i}$, and the uncompensated energy of the particle shower, $E_{Raw}$, where 
 %
 \begin{equation}
 E_{Raw} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{ } hits \text{, }i} E^{i}_{HCal} \text{ .}
 \label{equ:eraw}
 \end{equation}
 %
-\noindent The electromagnetic and hadronic components in a hadronic particle shower are treated differently in this approach because the weights depend on the energy density of the calorimeter hits.  High energy density hits are likely to be part of the electromagnetic core, while low energy density hits are likely to be part of satellite hadronic hits around the electromagnetic shower core \cite{Adloff:2012gv}.  By tailoring the weights as a function of the energy density, a compensating calorimeter response can be obtained.  Figure \ref{fig:softcompeventdisplay} shows the electromagnetic and hadronic shower components, determined by the energy density of the calorimeter hits, for a hadronic shower in a 500~GeV Z$\rightarrow$uds di-jet event.  
+\noindent  The electromagnetic and hadronic components of a hadronic particle shower are treated differently in this approach by applying wights that are sensitive to the energy density of the calorimeter hits.  High energy density hits are likely to be part of the electromagnetic core, while low energy density hits are likely to be part of satellite hadronic hits around the electromagnetic shower core \cite{Adloff:2012gv}.  By tailoring the weights as a function of the energy density, a compensating calorimeter response can be obtained.  Figure \ref{fig:softcompeventdisplay} shows the electromagnetic and hadronic shower components, determined by the energy density of the calorimeter hits, for a hadronic shower in a 500~GeV Z$\rightarrow$uds di-jet event.  
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:softcompfulleventdisplay}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp1.png}}
@@ -111,7 +124,7 @@ E_{Raw} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{
 \label{fig:softcompeventdisplay}
 \end{figure}
 
-The software compensation weights also depend on $E_{Raw}$ to account for the sensitivity of the hit energy density distribution on the total particle shower energy.  For hadronic showers, the fraction of the total energy carried in the electromagnetic core increases as the total shower energy increases \cite{Wigmans:2000vf}, therefore the dependancy of the weights on $E_{Raw}$ is needed to obtain a compensating calorimeter response across a wide range of energies.  
+The software compensation weights also depend on $E_{Raw}$ to account for the sensitivity of the hit energy density distribution on the total particle shower energy.  For hadronic showers, the fraction of the total energy carried in the electromagnetic core increases as the total shower energy increases \cite{Wigmans:2000vf}, therefore a dependancy of the weights on $E_{Raw}$ is needed to obtain a compensating calorimeter response across a wide range of energies.  
 
 The precise form of the weights used for this technique are \cite{Adloff:2012gv}
 %
@@ -133,7 +146,7 @@ E_{Raw} & = \sum_{ECal \text{ } hits \text{, }i} E^{i}_{ECal} +\sum_{HCal \text{
 \chi^{2}(p_{\alpha\beta}) = \sum_{Events} \bigg( \frac{(E_{SC,Cluster}(p_{\alpha\beta}) - E_{MC})}{0.5 \times \sqrt{E_{MC}}} \bigg)^{2}
 \end{equation}
 %
-where the sum runs over single $K^{0}_{L}$ events that ranged in energy from 10 to 100~GeV in steps of 10~GeV.  At each energy the same number of events was used to avoid biasing to particular energies.  In each event, $E_{SC,Cluster}$ is the software compensated energy estimator for the reconstructed event and $E_{MC}$ is the MC energy of the $K^{0}_{L}$.  Normalising the deviation of $E_{SC,Cluster}$ from $E_{MC}$ by the stochastic term in the HCal energy resolution made ensured each event contributed the same weight to the $\chi^{2}$ function.  
+where the sum runs over single $K^{0}_{L}$ events that ranged in energy from 10 to 100~GeV in steps of 10~GeV.  At each energy the same number of events was used to avoid biasing to particular energies.  In each event, $E_{SC,Cluster}$ is the software compensated energy estimator for the reconstructed event and $E_{MC}$ is the MC energy of the $K^{0}_{L}$.  Normalising the deviation of $E_{SC,Cluster}$ from $E_{MC}$ by the stochastic term in the HCal energy resolution, $\sim 50\% \times \sqrt{E}$, made sure events of different MC energy contributed the same weight to $\chi^{2}$.  
 
 Using the fitted parameters obtained for the nominal ILD detector, $p_{1}$, $p_{2}$ and $p_{3}$ as a function of $E_{Raw}$ is shown in figure \ref{fig:softcompparams} and $\omega(E_{Raw}, \rho)$ as a function of $\rho$ for selected values of $E_{Raw}$ is shown in figure \ref{fig:softcompweights}.  Figure \ref{fig:softcompweights} shows that the high energy density hits are being reduced in energy to compensate for the effects of Landau fluctuations, while the low energy density hits are being increased in weight to compensate for the undetectable energy component found in hadronic showers.  Furthermore, the weights vary as a function of the raw hadronic shower energy to account for the changing energy density topology of hadronic showers with increasing shower energy.
 
@@ -159,40 +172,26 @@ Software compensation was tuned using a maximum $K^{0}_{L}$ energy of 100~GeV, t
 
 %========================================================================================
 
-\subsubsection{Context: Legacy Energy Corrections}
-\label{sec:legacycorrections}
-Before examining the impact of software compensation on detector performance is it necessary to address the 'legacy' energy corrections that are used by default in PandoraPFA.  The three energy correction that were in use prior to the development of software compensation are:
-
-\begin{itemize}
-\item \textbf{HCal hit energy truncation}, the details of which can be found in section \ref{sec:hcalcelltruncation}.
-\item \textbf{Clean Clusters}.  This algorithm checks to see whether the energy measured within a calorimeter hit is anomalously high.  Anomalously high energy hits are defined as hits where the energy contained within the hit is greater than 10\% of the energy of the cluster that the hit has been associated to.  If a hit is deemed to have an anomalously high energy and if this energy is above a threshold (0.5~GeV) the hit energy used by PandoraPFA is modified.  The updated hit energy is taken as the average hit energy in the calorimeter layers immediately before and after the layer containing the high energy hit.    
-\item \textbf{Scale Hot Hadrons}.  This algorithm calculates the average number of MIP equivalent particles passing through each calorimeter hit in a cluster.  If this number is larger than a given value, default 15 MIPs per hit, the cluster energy is rescaled to give a lower average number of MIPs per hit, default is 5 MIPs per hit.  
-\end{itemize}
-
-Each of these energy corrections help to deal with the effects of spuriously high energy hits the origin of which is described in section \ref{sec:hcalcelltruncation}.  However, the algorithms are simplistic and software compensation is expected to give far better results than these 'legacy' options.  The optimisation studies presented in section \ref{chap:detopt} use all three of these legacy options simultaneously, which was the default behaviour for PandoraPFA when the studies were undertaken.  The new default behaviour in PandoraPFA is to use software compensation.
-
-%========================================================================================
-
-\subsubsection{Results: Energy Resolution}
+\subsubsection{Impact on Single Particle Energy Resolution}
 \label{sec:softcomper}
-The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events is shown in figure \ref{fig:ersoftcomp} using various energy correction settings.  When comparing the energy resolution given by software compensation to that obtained using no energy corrections, it can be seen that software compensation offers a gain of $\approx 2 \%$ in energy resolution across the energy range considered.  The uniformity of this improvement is encouraging, indicating software compensation is achieving a compensating calorimeter response across this wide range of energies.  
+Figure \ref{fig:ersoftcomp} shows the energy resolution as a function of MC energy for single $K^{0}_{L}$ events obtained using various energy correction configurations in PandoraPFA.  When comparing the energy resolution given by software compensation to that obtained using no energy corrections, it can be seen that software compensation offers an improvement in the energy resolution of $\approx 15 \%$ across the energy range considered.  The uniformity of this improvement is encouraging, indicating that software compensation is achieving a compensating calorimeter response across this wide range of energies.  
 
-Comparing the performance of software compensation to the legacy corrections it can be seen that software compensation gives a better energy resolution across almost the entire range of energies considered.  The only exception to this is around $E_{K^{0}_{L}} \approx 50$~GeV where the performance of software compensation and the legacy corrections are comparable.  By removing the hit truncation from the legacy options it is clear that the changes in energy resolution when using the legacy options are being driven by the hit truncation.  This makes the trend in energy resolution observed using the legacy corrections clear as, at low $K^{0}_{L}$ energies, very few hits are affected by the truncation so the performance is comparable to not using any energy corrections.  At high $K^{0}_{L}$ energies, the truncation is too aggressive and removes energy from hits that are not spuriously high leading to a worsening energy resolution.  Between these two extremes, $E_{K^{0}_{L}} \approx 50$~GeV, the truncation works ideally and the improvement in energy resolution when using the legacy corrections is the largest.  
+Comparing the performance of software compensation to the legacy corrections, described in section \ref{sec:legacycorrections}, it can be seen that software compensation gives a better energy resolution across almost the entire range of energies considered.  The only exception to this is around $E_{K^{0}_{L}} \approx 50$~GeV where the performance of software compensation and the legacy corrections are comparable.  By removing the hit truncation from the legacy options it is clear that the changes in energy resolution when using the legacy options are being driven by the hit truncation.  This makes the trend in energy resolution observed using the legacy corrections clear as, at low $K^{0}_{L}$ energies, very few hits are affected by the truncation so the performance is comparable to not using any energy corrections.  At high $K^{0}_{L}$ energies, the truncation is too aggressive and removes energy from hits that are not spuriously high leading to a worsening energy resolution.  Between these two extremes, $E_{K^{0}_{L}} \approx 50$~GeV, the truncation works ideally and the improvement in energy resolution when using the legacy corrections is the largest.  
 
 \begin{figure}[h!]
-\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/EnergyResolution/ER_vs_Kaon0LSoftComp_Kaon0L.pdf}
-\caption[The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events using various energy correction settings.  The detector model used was the nominal ILD detector model.]{The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events using various energy correction settings.  The detector model used was the nominal ILD detector model.}
+\includegraphics[width=0.75\textwidth]{EnergyEstimators/Plots/SoftComp/EnergyResolution/ER_vs_Kaon0LSoftComp_Kaon0L.pdf}
+\caption[The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events using various energy correction settings.  The nominal ILD detector model was used in these simulations.]{The energy resolution as a function of the MC energy for single $K^{0}_{L}$ events using various energy correction settings.  The nominal ILD detector model was used in these simulations.}
 \label{fig:ersoftcomp}
 \end{figure}
 
 %========================================================================================
 
-\subsubsection{Results: Jet Energy Resolution}
+\subsubsection{Impact on Jet Energy Resolution}
 The improvements in the intrinsic energy resolution of the detector observed when using software compensation will propagate into the reconstruction of jets.  These effects are illustrated by examining the jet energy resolution as a function of jet energy, which is shown in figure \ref{fig:jersoftcomp}.  Again it is clear that software compensation is extremely beneficial to the detector performance as it gives a significant reduction in the jet energy resolution in comparison to using the legacy energy corrections.  
 
 \begin{figure}[h!]
 \includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_Default.pdf}
-\caption[The jet energy resolution as a function of the jet energy for a variety of different energy correction options.  These results were produced for the nominal ILD detector model.]{The jet energy resolution as a function of the jet energy for a variety of different energy correction options.  These results were produced for the nominal ILD detector model.}
+\caption[The jet energy resolution as a function of the jet energy for a variety of different energy correction options.  The nominal ILD detector model was used in these simulations.]{The jet energy resolution as a function of the jet energy for a variety of different energy correction options.  The nominal ILD detector model was used in these simulations.}
 \label{fig:jersoftcomp}
 \end{figure}
 

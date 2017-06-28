@@ -16,7 +16,7 @@
    c1_n2->SetFrameLineWidth(2);
    c1_n2->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","",100,0,105,1000,0,30);
+   TH2F *axesEj = new TH2F("axesEj","",100,0,105,1000,0,20);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);
@@ -258,7 +258,7 @@
    
    gre->Draw(" pl");
    
-   TLegend *leg = new TLegend(0.2,0.65,0.8,0.85,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.2,0.2,0.8,0.4,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
@@ -295,7 +295,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("Graph3","Legacy Corrections, w/o Cell Truncation","l");
+   entry=leg->AddEntry("Graph3","Legacy Corrections, w/o HCal Hit Energy Truncation","l");
 
    ci = TColor::GetColor("#ff0000");
    entry->SetLineColor(ci);
@@ -309,4 +309,5 @@
    c1_n2->Modified();
    c1_n2->cd();
    c1_n2->SetSelected(c1_n2);
+   c1_n2->SaveAs("ER_vs_Kaon0LSoftComp_Kaon0L.pdf");
 }
