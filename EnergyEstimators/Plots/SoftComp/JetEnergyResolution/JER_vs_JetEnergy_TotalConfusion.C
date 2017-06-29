@@ -8,7 +8,7 @@
 
     pCanvasEj->cd();
 
-    TH2F *pAxesEj = new TH2F("axesEj","",300,0,300,650,1.5,4);
+    TH2F *pAxesEj = new TH2F("axesEj","",300,0,300,650,1.5,3.5);
     pAxesEj->GetYaxis()->SetTitle("RMS_{90}(E_{j}) / Mean_{90}(E_{j}) [%]");
     pAxesEj->GetYaxis()->SetTitleOffset(0.8);
     pAxesEj->GetYaxis()->SetDecimals();
@@ -41,7 +41,7 @@
 
     float Variable_TotalConfusion_JERError[4] = {0.061602971179,0.0481443722615,0.0458211685206,0.0469560738166};
 
-    TLegend *pLegend = new TLegend(0.4, 0.6, 0.9, 0.9);
+    TLegend *pLegend = new TLegend(0.2, 0.6, 1.0, 0.9);
     pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Variable_TotalConfusion_NoECorr = new TGraphErrors(4,jetEnergy,Variable_TotalConfusion_NoECorr_JER,jetEnergyError,Variable_TotalConfusion_NoECorr_JERError);
 
@@ -50,7 +50,7 @@
     pTGraphErrors_Variable_TotalConfusion_NoECorr->SetMarkerStyle(1);
     pTGraphErrors_Variable_TotalConfusion_NoECorr->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion_NoECorr, "No Energy Corrections", "lp");
+    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion_NoECorr, "#splitline{No Energy}{Corrections}", "lp");
 
     TGraphErrors *pTGraphErrors_Variable_TotalConfusion_SoftComp = new TGraphErrors(4,jetEnergy,Variable_TotalConfusion_SoftComp_JER,jetEnergyError,Variable_TotalConfusion_SoftComp_JERError);
 
@@ -59,7 +59,7 @@
     pTGraphErrors_Variable_TotalConfusion_SoftComp->SetMarkerStyle(1);
     pTGraphErrors_Variable_TotalConfusion_SoftComp->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion_SoftComp, "Software Compensation", "lp");
+    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion_SoftComp, "#splitline{Software}{Compensation}", "lp");
 
     TGraphErrors *pTGraphErrors_Variable_TotalConfusion_CellTruncation = new TGraphErrors(4,jetEnergy,Variable_TotalConfusion_CellTruncation_JER,jetEnergyError,Variable_TotalConfusion_CellTruncation_JERError);
 
@@ -68,7 +68,7 @@
     pTGraphErrors_Variable_TotalConfusion_CellTruncation->SetMarkerStyle(1);
     pTGraphErrors_Variable_TotalConfusion_CellTruncation->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion_CellTruncation, "Legacy Corrections", "lp");
+    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion_CellTruncation, "#splitline{Legacy}{Corrections}", "lp");
 
     TGraphErrors *pTGraphErrors_Variable_TotalConfusion = new TGraphErrors(4,jetEnergy,Variable_TotalConfusion_JER,jetEnergyError,Variable_TotalConfusion_JERError);
 
@@ -77,9 +77,10 @@
     pTGraphErrors_Variable_TotalConfusion->SetMarkerStyle(1);
     pTGraphErrors_Variable_TotalConfusion->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion, "#splitline{Legacy Corrections,}{w/o Cell Truncation}", "lp");
+    pLegend->AddEntry(pTGraphErrors_Variable_TotalConfusion, "#splitline{Legacy Corrections,}{w/o Truncation}", "lp");
 
     pLegend->SetFillStyle(0);
+    pLegend->SetNColumns(2);
     pLegend->Draw("same");
     pCanvasEj->SaveAs("JER_vs_JetEnergy_TotalConfusion.pdf");
 }

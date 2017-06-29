@@ -41,7 +41,7 @@
 
     float Variable_PerfectPFA_JERError[4] = {0.0386117,0.0284644,0.0244426,0.0235312};
 
-    TLegend *pLegend = new TLegend(0.4, 0.6, 0.9, 0.9);
+    TLegend *pLegend = new TLegend(0.4, 0.45, 0.9, 0.9);
     pLegend->SetTextSize(0.05);
     TGraphErrors *pTGraphErrors_Variable_PerfectPFA_NoECorr = new TGraphErrors(4,jetEnergy,Variable_PerfectPFA_NoECorr_JER,jetEnergyError,Variable_PerfectPFA_NoECorr_JERError);
 
@@ -77,7 +77,7 @@
     pTGraphErrors_Variable_PerfectPFA->SetMarkerStyle(1);
     pTGraphErrors_Variable_PerfectPFA->Draw("lp,same");
 
-    pLegend->AddEntry(pTGraphErrors_Variable_PerfectPFA, "#splitline{Legacy Corrections,}{w/o Cell Truncation}", "lp");
+    pLegend->AddEntry(pTGraphErrors_Variable_PerfectPFA, "#splitline{Legacy Corrections,}{w/o Truncation}", "lp");
 
     pLegend->SetFillStyle(0);
     pLegend->Draw("same");
