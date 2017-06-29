@@ -295,7 +295,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("Graph3","Legacy Corrections, w/o HCal Hit Energy Truncation","l");
+   entry=leg->AddEntry("Graph3","Legacy Corrections, w/o Truncation","l");
 
    ci = TColor::GetColor("#ff0000");
    entry->SetLineColor(ci);
