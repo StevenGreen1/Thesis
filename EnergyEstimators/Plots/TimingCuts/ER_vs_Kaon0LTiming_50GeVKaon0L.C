@@ -15,7 +15,7 @@
    c1->SetFrameLineWidth(2);
    c1->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","",1,1,5000000,1000,0,12);
+   TH2F *axesEj = new TH2F("axesEj","",1,1,5000000,1000,7,10);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);
@@ -54,4 +54,10 @@
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+
+   TLatex tLatex;
+   tLatex.SetTextSize(0.05);
+   tLatex.DrawLatexNDC(0.7,0.8,"50 GeV K^{0}_{L}");
+
+   c1->SaveAs("ER_vs_Kaon0LTiming_50GeVKaon0L.pdf");
 }

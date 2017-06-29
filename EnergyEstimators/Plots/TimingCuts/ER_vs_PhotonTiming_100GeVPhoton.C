@@ -15,7 +15,7 @@
    c1_n2->SetFrameLineWidth(2);
    c1_n2->SetFrameBorderMode(0);
    
-   TH2F *axesEj = new TH2F("axesEj","",1,1,5000000,1000,0,3.2);
+   TH2F *axesEj = new TH2F("axesEj","",1,1,5000000,1000,1.5,2.5);
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);
@@ -54,4 +54,10 @@
    c1_n2->Modified();
    c1_n2->cd();
    c1_n2->SetSelected(c1_n2);
+
+   TLatex tLatex;
+   tLatex.SetTextSize(0.05);
+   tLatex.DrawLatexNDC(0.7,0.8,"100 GeV #gamma");
+
+   c1_n2->SaveAs("ER_vs_PhotonTiming_100GeVPhoton.pdf");
 }
