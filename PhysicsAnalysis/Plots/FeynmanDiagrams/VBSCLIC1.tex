@@ -1,6 +1,7 @@
 \documentclass[tikz]{standalone}
 
 \usepackage{tikz-feynman}
+\usepackage{amsmath}
 \makeatletter
 \tikzfeynmanset{compat=\tikzfeynman@version@major.\tikzfeynman@version@minor.\tikzfeynman@version@patch}
 %\makeatother					% Activate to display a given date or no date
@@ -10,21 +11,21 @@
 \begin{feynman}
 \vertex (a1);
 \vertex[above left=2cm of a1] (a2);
-\vertex[above right=1cm and 2cm of a1] (a3) {\(W^{\pm},Z\)};
+\vertex[above right=1cm and 2cm of a1] (a3) {$\text{W}^{\pm},Z$};
 \vertex[below left=2cm of a1] (a4);
-\vertex[below right=1cm and 2cm of a1] (a5) {\(W^{\mp},Z\)};
-\vertex[above left=1cm of a2] (i1) {\(e^{-}\)};
-\vertex[below left=1cm of a4] (i2) {\(e^{+}\)};
-\vertex[above right=1cm and 2cm of a3] (i3) {\(q,l\)};
-\vertex[below right=1cm and 2cm of a3] (i4) {\(\bar{q},\bar{l}\)};
-\vertex[above right=1cm and 2cm of a5] (i5) {\(q,l\)};
-\vertex[below right=1cm and 2cm of a5] (i6) {\(\bar{q},\bar{l}\)};
-\vertex[above=1cm of a3] (v1) {\(\nu_{e}\)};
-\vertex[below=1cm of a5] (v2) {\(\bar{\nu_{e}}\)};
+\vertex[below right=1cm and 2cm of a1] (a5) {$\text{W}^{\mp},Z$};
+\vertex[above left=1cm of a2] (i1) {$\text{e}^{-}$};
+\vertex[below left=1cm of a4] (i2) {$\text{e}^{+}$};
+\vertex[above right=1cm and 2cm of a3] (i3) {q,l};
+\vertex[below right=1cm and 2cm of a3] (i4) {$\bar{\text{q}},\bar{\text{l}}$};
+\vertex[above right=1cm and 2cm of a5] (i5) {q,l};
+\vertex[below right=1cm and 2cm of a5] (i6) {$\bar{\text{q}},\bar{\text{l}}$};
+\vertex[above=1cm of a3] (v1) {$\nu_{\text{e}}$};
+\vertex[below=1cm of a5] (v2) {$\bar{\nu}_{\text{e}}$};
 \diagram* {
-   (a1) -- [boson, edge label'=\(W^{-}\)] (a2) 
+   (a1) -- [boson, edge label'=$\text{W}^{-}$] (a2) 
    (a1) -- [boson] (a3) 
-   (a1) -- [boson, edge label=\(W^{+}\)] (a4) 
+   (a1) -- [boson, edge label=$\text{W}^{+}$] (a4) 
    (a1) -- [boson] (a5) 
    (i1) -- [fermion] (a2) -- [fermion] (v1)
    (v2) -- [fermion] (a4) -- [fermion] (i2)

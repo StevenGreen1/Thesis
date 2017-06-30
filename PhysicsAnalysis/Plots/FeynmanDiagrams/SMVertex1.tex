@@ -1,6 +1,7 @@
 \documentclass[tikz]{standalone}
 
 \usepackage{tikz-feynman}
+\usepackage{amsmath}
 \makeatletter
 \tikzfeynmanset{compat=\tikzfeynman@version@major.\tikzfeynman@version@minor.\tikzfeynman@version@patch}
 %\makeatother					% Activate to display a given date or no date
@@ -9,9 +10,9 @@
   \begin{tikzpicture}[]
   \begin{feynman}
     \vertex (a1);
-    \vertex[left=1cm of a1] (a2) {\(Z/\gamma\)};
-    \vertex[above right=1cm of a1] (a3) {\(W^{+}\)};
-    \vertex[below right=1cm of a1] (a4) {\(W^{-}\)};
+    \vertex[left=1cm of a1] (a2) {Z/$\gamma$};
+    \vertex[above right=1cm of a1] (a3) {$\text{W}^{+}$};
+    \vertex[below right=1cm of a1] (a4) {$\text{W}^{-}$};
     \diagram* {
        (a1) -- [boson] (a2) 
        (a1) -- [boson] (a3) 

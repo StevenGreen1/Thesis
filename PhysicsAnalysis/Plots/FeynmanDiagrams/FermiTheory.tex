@@ -1,6 +1,7 @@
 \documentclass[tikz]{standalone}
 
 \usepackage{tikz-feynman}
+\usepackage{amsmath}
 \makeatletter
 \tikzfeynmanset{compat=\tikzfeynman@version@major.\tikzfeynman@version@minor.\tikzfeynman@version@patch}
 %\makeatother					% Activate to display a given date or no date
@@ -11,10 +12,10 @@
 %    \vertex[label=135:\(G_{F}\)] (a1);
 %    \vertex[blob, left=2cm of a1] (a2) {\(d\)};
     \vertex[] (a1) {\(d\)};
-    \vertex[right=2cm of a1, label=135:\(G_{F}\)] (a2);
-    \vertex[right=2cm of a2] (a3) {\(u\)};
-    \vertex[above right=2cm of a2] (a4) {\(e^{-}\)};
-    \vertex[below right=2cm of a2] (a5) {\(\overline{\nu}\)};
+    \vertex[right=2cm of a1, label=135:$\text{G}_{\text{F}}$] (a2);
+    \vertex[right=2cm of a2] (a3) {u};
+    \vertex[above right=2cm of a2] (a4) {$\text{e}^{-}$};
+    \vertex[below right=2cm of a2] (a5) {$\bar{\nu}_{\text{e}}$};
     \diagram* {
        (a1) -- [fermion] (a2)
        (a2) -- [fermion] (a3) 
