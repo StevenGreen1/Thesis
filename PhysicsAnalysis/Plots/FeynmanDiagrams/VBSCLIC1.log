@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.21)  30 JUN 2017 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.21)  30 JUN 2017 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -613,8 +613,8 @@ distance' requires LuaTeX. It will be ignored. on input line 25.
 (./VBSCLIC1.aux) ) 
 Here is how much of TeX's memory you used:
  15347 strings out of 493014
- 335726 string characters out of 6133350
- 421854 words of memory out of 5000000
+ 335725 string characters out of 6133350
+ 421851 words of memory out of 5000000
  18602 multiletter control sequences out of 15000+600000
  4094 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -624,7 +624,7 @@ ts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy7.pfb>
-Output written on VBSCLIC1.pdf (1 page, 38688 bytes).
+Output written on VBSCLIC1.pdf (1 page, 38415 bytes).
 PDF statistics:
  27 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
