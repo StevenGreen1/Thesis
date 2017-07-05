@@ -85,11 +85,11 @@
    WXGNCOGTGP->SetEntries(741312);
    WXGNCOGTGP->SetStats(0);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    WXGNCOGTGP->SetFillColor(ci);
    WXGNCOGTGP->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    WXGNCOGTGP->SetLineColor(ci);
    WXGNCOGTGP->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    WXGNCOGTGP->GetXaxis()->SetLabelFont(42);
@@ -117,11 +117,11 @@
    KAQXXJOVHW->SetEntries(1268584);
    KAQXXJOVHW->SetStats(0);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    KAQXXJOVHW->SetFillColor(ci);
    KAQXXJOVHW->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    KAQXXJOVHW->SetLineColor(ci);
    KAQXXJOVHW->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    KAQXXJOVHW->GetXaxis()->SetLabelFont(42);
@@ -148,11 +148,11 @@
    BQCGYMDCYX->SetEntries(585054);
    BQCGYMDCYX->SetStats(0);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    BQCGYMDCYX->SetFillColor(ci);
    BQCGYMDCYX->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    BQCGYMDCYX->SetLineColor(ci);
    BQCGYMDCYX->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    BQCGYMDCYX->GetXaxis()->SetLabelFont(42);
@@ -178,11 +178,11 @@
    LRVSBNEOWX->SetEntries(583889);
    LRVSBNEOWX->SetStats(0);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    LRVSBNEOWX->SetFillColor(ci);
    LRVSBNEOWX->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    LRVSBNEOWX->SetLineColor(ci);
    LRVSBNEOWX->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    LRVSBNEOWX->GetXaxis()->SetLabelFont(42);
@@ -209,11 +209,11 @@
    CHLLLAFXFR->SetEntries(2093473);
    CHLLLAFXFR->SetStats(0);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    CHLLLAFXFR->SetFillColor(ci);
    CHLLLAFXFR->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    CHLLLAFXFR->SetLineColor(ci);
    CHLLLAFXFR->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    CHLLLAFXFR->GetXaxis()->SetLabelFont(42);
@@ -241,11 +241,11 @@
    UTIJYHJVLI->SetEntries(2099378);
    UTIJYHJVLI->SetStats(0);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    UTIJYHJVLI->SetFillColor(ci);
    UTIJYHJVLI->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    UTIJYHJVLI->SetLineColor(ci);
    UTIJYHJVLI->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    UTIJYHJVLI->GetXaxis()->SetLabelFont(42);
@@ -272,11 +272,11 @@
    CZZQNZKSIN->SetEntries(486219);
    CZZQNZKSIN->SetStats(0);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    CZZQNZKSIN->SetFillColor(ci);
    CZZQNZKSIN->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    CZZQNZKSIN->SetLineColor(ci);
    CZZQNZKSIN->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    CZZQNZKSIN->GetXaxis()->SetLabelFont(42);
@@ -304,9 +304,9 @@
    ZGDJGCQCXE->SetMaximum(549857.8);
    ZGDJGCQCXE->SetEntries(126422);
    ZGDJGCQCXE->SetStats(0);
-   ZGDJGCQCXE->SetFillColor(3);
+   ZGDJGCQCXE->SetFillColor(TColor::GetColor(113,161,55));
    ZGDJGCQCXE->SetFillStyle(3001);
-   ZGDJGCQCXE->SetLineColor(3);
+   ZGDJGCQCXE->SetLineColor(TColor::GetColor(113,161,55));
    ZGDJGCQCXE->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    ZGDJGCQCXE->GetXaxis()->SetLabelFont(42);
    ZGDJGCQCXE->GetXaxis()->SetLabelSize(0.05);
@@ -333,11 +333,11 @@
    VTEGUHTFGK->SetEntries(123749);
    VTEGUHTFGK->SetStats(0);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    VTEGUHTFGK->SetFillColor(ci);
    VTEGUHTFGK->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    VTEGUHTFGK->SetLineColor(ci);
    VTEGUHTFGK->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    VTEGUHTFGK->GetXaxis()->SetLabelFont(42);
@@ -365,11 +365,11 @@
    SHCTCDAIZJ->SetEntries(136717);
    SHCTCDAIZJ->SetStats(0);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    SHCTCDAIZJ->SetFillColor(ci);
    SHCTCDAIZJ->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    SHCTCDAIZJ->SetLineColor(ci);
    SHCTCDAIZJ->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    SHCTCDAIZJ->GetXaxis()->SetLabelFont(42);
@@ -397,11 +397,11 @@
    MWRGMHMGHZ->SetEntries(119393);
    MWRGMHMGHZ->SetStats(0);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    MWRGMHMGHZ->SetFillColor(ci);
    MWRGMHMGHZ->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    MWRGMHMGHZ->SetLineColor(ci);
    MWRGMHMGHZ->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    MWRGMHMGHZ->GetXaxis()->SetLabelFont(42);
@@ -428,11 +428,11 @@
    DEMLHVKHZF->SetEntries(176693);
    DEMLHVKHZF->SetStats(0);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    DEMLHVKHZF->SetFillColor(ci);
    DEMLHVKHZF->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    DEMLHVKHZF->SetLineColor(ci);
    DEMLHVKHZF->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    DEMLHVKHZF->GetXaxis()->SetLabelFont(42);
@@ -459,11 +459,11 @@
    HRJIGGWROH->SetEntries(174125);
    HRJIGGWROH->SetStats(0);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    HRJIGGWROH->SetFillColor(ci);
    HRJIGGWROH->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    HRJIGGWROH->SetLineColor(ci);
    HRJIGGWROH->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    HRJIGGWROH->GetXaxis()->SetLabelFont(42);
@@ -521,11 +521,11 @@
    EGGJYRCWKE->SetEntries(172737);
    EGGJYRCWKE->SetStats(0);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    EGGJYRCWKE->SetFillColor(ci);
    EGGJYRCWKE->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    EGGJYRCWKE->SetLineColor(ci);
    EGGJYRCWKE->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    EGGJYRCWKE->GetXaxis()->SetLabelFont(42);
@@ -552,9 +552,9 @@
    RRQHYZATTP->SetMaximum(1717440);
    RRQHYZATTP->SetEntries(166909);
    RRQHYZATTP->SetStats(0);
-   RRQHYZATTP->SetFillColor(4);
+   RRQHYZATTP->SetFillColor(TColor::GetColor(113,161,55));
    RRQHYZATTP->SetFillStyle(3001);
-   RRQHYZATTP->SetLineColor(4);
+   RRQHYZATTP->SetLineColor(TColor::GetColor(113,161,55));
    RRQHYZATTP->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    RRQHYZATTP->GetXaxis()->SetLabelFont(42);
    RRQHYZATTP->GetXaxis()->SetLabelSize(0.05);
@@ -580,11 +580,11 @@
    IRUYSMKQBM->SetEntries(166221);
    IRUYSMKQBM->SetStats(0);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    IRUYSMKQBM->SetFillColor(ci);
    IRUYSMKQBM->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    IRUYSMKQBM->SetLineColor(ci);
    IRUYSMKQBM->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    IRUYSMKQBM->GetXaxis()->SetLabelFont(42);
@@ -611,11 +611,11 @@
    OWMFDKJGZA->SetEntries(169684);
    OWMFDKJGZA->SetStats(0);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    OWMFDKJGZA->SetFillColor(ci);
    OWMFDKJGZA->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    OWMFDKJGZA->SetLineColor(ci);
    OWMFDKJGZA->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    OWMFDKJGZA->GetXaxis()->SetLabelFont(42);
@@ -642,11 +642,11 @@
    ANJYFPMVTD->SetEntries(159687);
    ANJYFPMVTD->SetStats(0);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    ANJYFPMVTD->SetFillColor(ci);
    ANJYFPMVTD->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    ANJYFPMVTD->SetLineColor(ci);
    ANJYFPMVTD->GetXaxis()->SetTitle("Number Of Isolated Leptons");
    ANJYFPMVTD->GetXaxis()->SetLabelFont(42);
@@ -696,11 +696,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("WXGNCOGTGP","e^{+}e^{-} #rightarrow l #nu qqqq","f");
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -710,11 +710,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("KAQXXJOVHW","e^{+}e^{-} #rightarrow llqqqq","f");
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -724,11 +724,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("BQCGYMDCYX","e^{+}e^{-} #rightarrow qqqq","f");
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -738,11 +738,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("LRVSBNEOWX","e^{+}e^{-} #rightarrow #nu #nu qq","f");
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -752,11 +752,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("CHLLLAFXFR","e^{+}e^{-} #rightarrow l #nu qq","f");
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -766,11 +766,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("UTIJYHJVLI","e^{+}e^{-} #rightarrow qqll","f");
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -780,11 +780,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("CZZQNZKSIN","e^{+}e^{-} #rightarrow qq","f");
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -793,9 +793,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("ZGDJGCQCXE","#gamma_{EPA} e^{-} #rightarrow qqqq e^{-}","f");
-   entry->SetFillColor(3);
+   entry->SetFillColor(TColor::GetColor(113,161,55));
    entry->SetFillStyle(3001);
-   entry->SetLineColor(3);
+   entry->SetLineColor(TColor::GetColor(113,161,55));
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
@@ -804,11 +804,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("VTEGUHTFGK","#gamma_{BS} e^{-} #rightarrow qqqq e^{-}","f");
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -818,11 +818,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("SHCTCDAIZJ","e^{+} #gamma_{EPA} #rightarrow qqqq e^{+}","f");
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -832,11 +832,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("MWRGMHMGHZ","e^{+} #gamma_{BS} #rightarrow qqqq e^{+}","f");
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -846,11 +846,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("DEMLHVKHZF","#gamma_{EPA} e^{-} #rightarrow qqqq #nu","f");
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -860,11 +860,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("HRJIGGWROH","#gamma_{BS} e^{-} #rightarrow qqqq #nu","f");
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -888,11 +888,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("EGGJYRCWKE","e^{+} #gamma_{BS} #rightarrow qqqq #nu","f");
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -901,9 +901,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("RRQHYZATTP","#gamma_{EPA}#gamma_{EPA} #rightarrow qqqq","f");
-   entry->SetFillColor(4);
+   entry->SetFillColor(TColor::GetColor(113,161,55));
    entry->SetFillStyle(3001);
-   entry->SetLineColor(4);
+   entry->SetLineColor(TColor::GetColor(113,161,55));
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
@@ -912,11 +912,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("IRUYSMKQBM","#gamma_{EPA}#gamma_{BS} #rightarrow qqqq","f");
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -926,11 +926,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("OWMFDKJGZA","#gamma_{BS}#gamma_{EPA} #rightarrow qqqq","f");
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -941,11 +941,11 @@
    entry=leg->AddEntry("ANJYFPMVTD","#gamma_{BS}#gamma_{BS} #rightarrow qqqq","f");
    entry=leg->AddEntry("","","");
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);

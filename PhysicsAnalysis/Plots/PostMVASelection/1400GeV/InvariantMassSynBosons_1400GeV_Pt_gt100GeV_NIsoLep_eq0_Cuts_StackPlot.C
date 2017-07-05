@@ -1511,11 +1511,11 @@
    QJUKZSHUSO->SetEntries(385740);
    QJUKZSHUSO->SetStats(0);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    QJUKZSHUSO->SetFillColor(ci);
    QJUKZSHUSO->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    QJUKZSHUSO->SetLineColor(ci);
    QJUKZSHUSO->GetXaxis()->SetTitle("InvariantMassSynBosons");
    QJUKZSHUSO->GetXaxis()->SetLabelFont(42);
@@ -2259,11 +2259,11 @@
    WUXTKLRXML->SetEntries(19314);
    WUXTKLRXML->SetStats(0);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    WUXTKLRXML->SetFillColor(ci);
    WUXTKLRXML->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    WUXTKLRXML->SetLineColor(ci);
    WUXTKLRXML->GetXaxis()->SetTitle("InvariantMassSynBosons");
    WUXTKLRXML->GetXaxis()->SetLabelFont(42);
@@ -2903,11 +2903,11 @@
    LLDYUBJAWL->SetEntries(4050);
    LLDYUBJAWL->SetStats(0);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    LLDYUBJAWL->SetFillColor(ci);
    LLDYUBJAWL->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    LLDYUBJAWL->SetLineColor(ci);
    LLDYUBJAWL->GetXaxis()->SetTitle("InvariantMassSynBosons");
    LLDYUBJAWL->GetXaxis()->SetLabelFont(42);
@@ -3422,11 +3422,11 @@
    NRPOVOVYNA->SetEntries(507386);
    NRPOVOVYNA->SetStats(0);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    NRPOVOVYNA->SetFillColor(ci);
    NRPOVOVYNA->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    NRPOVOVYNA->SetLineColor(ci);
    NRPOVOVYNA->GetXaxis()->SetTitle("InvariantMassSynBosons");
    NRPOVOVYNA->GetXaxis()->SetLabelFont(42);
@@ -4168,11 +4168,11 @@
    LNNVQVKECC->SetEntries(801044);
    LNNVQVKECC->SetStats(0);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    LNNVQVKECC->SetFillColor(ci);
    LNNVQVKECC->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    LNNVQVKECC->SetLineColor(ci);
    LNNVQVKECC->GetXaxis()->SetTitle("InvariantMassSynBosons");
    LNNVQVKECC->GetXaxis()->SetLabelFont(42);
@@ -4777,11 +4777,11 @@
    FRNUNYHFTX->SetEntries(6148);
    FRNUNYHFTX->SetStats(0);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    FRNUNYHFTX->SetFillColor(ci);
    FRNUNYHFTX->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    FRNUNYHFTX->SetLineColor(ci);
    FRNUNYHFTX->GetXaxis()->SetTitle("InvariantMassSynBosons");
    FRNUNYHFTX->GetXaxis()->SetLabelFont(42);
@@ -5437,11 +5437,11 @@
    BCJVRYSQTX->SetEntries(5590);
    BCJVRYSQTX->SetStats(0);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    BCJVRYSQTX->SetFillColor(ci);
    BCJVRYSQTX->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    BCJVRYSQTX->SetLineColor(ci);
    BCJVRYSQTX->GetXaxis()->SetTitle("InvariantMassSynBosons");
    BCJVRYSQTX->GetXaxis()->SetLabelFont(42);
@@ -5762,9 +5762,9 @@
    EBGSSZULEV->SetMaximum(61.31559);
    EBGSSZULEV->SetEntries(516);
    EBGSSZULEV->SetStats(0);
-   EBGSSZULEV->SetFillColor(3);
+   EBGSSZULEV->SetFillColor(TColor::GetColor(113,161,55));
    EBGSSZULEV->SetFillStyle(3001);
-   EBGSSZULEV->SetLineColor(3);
+   EBGSSZULEV->SetLineColor(TColor::GetColor(113,161,55));
    EBGSSZULEV->GetXaxis()->SetTitle("InvariantMassSynBosons");
    EBGSSZULEV->GetXaxis()->SetLabelFont(42);
    EBGSSZULEV->GetXaxis()->SetLabelSize(0.035);
@@ -5934,11 +5934,11 @@
    EPMIHUYSYA->SetEntries(196);
    EPMIHUYSYA->SetStats(0);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    EPMIHUYSYA->SetFillColor(ci);
    EPMIHUYSYA->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    EPMIHUYSYA->SetLineColor(ci);
    EPMIHUYSYA->GetXaxis()->SetTitle("InvariantMassSynBosons");
    EPMIHUYSYA->GetXaxis()->SetLabelFont(42);
@@ -6317,11 +6317,11 @@
    BYSPYMMQHK->SetEntries(726);
    BYSPYMMQHK->SetStats(0);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    BYSPYMMQHK->SetFillColor(ci);
    BYSPYMMQHK->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    BYSPYMMQHK->SetLineColor(ci);
    BYSPYMMQHK->GetXaxis()->SetTitle("InvariantMassSynBosons");
    BYSPYMMQHK->GetXaxis()->SetLabelFont(42);
@@ -6425,11 +6425,11 @@
    FWOQLUUYSW->SetEntries(88);
    FWOQLUUYSW->SetStats(0);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    FWOQLUUYSW->SetFillColor(ci);
    FWOQLUUYSW->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    FWOQLUUYSW->SetLineColor(ci);
    FWOQLUUYSW->GetXaxis()->SetTitle("InvariantMassSynBosons");
    FWOQLUUYSW->GetXaxis()->SetLabelFont(42);
@@ -7091,11 +7091,11 @@
    YOAQXWNZRF->SetEntries(91818);
    YOAQXWNZRF->SetStats(0);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    YOAQXWNZRF->SetFillColor(ci);
    YOAQXWNZRF->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    YOAQXWNZRF->SetLineColor(ci);
    YOAQXWNZRF->GetXaxis()->SetTitle("InvariantMassSynBosons");
    YOAQXWNZRF->GetXaxis()->SetLabelFont(42);
@@ -7550,11 +7550,11 @@
    YXDDNDIQMU->SetEntries(126258);
    YXDDNDIQMU->SetStats(0);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    YXDDNDIQMU->SetFillColor(ci);
    YXDDNDIQMU->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    YXDDNDIQMU->SetLineColor(ci);
    YXDDNDIQMU->GetXaxis()->SetTitle("InvariantMassSynBosons");
    YXDDNDIQMU->GetXaxis()->SetLabelFont(42);
@@ -8692,11 +8692,11 @@
    YJFYXRLPWU->SetEntries(125552);
    YJFYXRLPWU->SetStats(0);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    YJFYXRLPWU->SetFillColor(ci);
    YJFYXRLPWU->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    YJFYXRLPWU->SetLineColor(ci);
    YJFYXRLPWU->GetXaxis()->SetTitle("InvariantMassSynBosons");
    YJFYXRLPWU->GetXaxis()->SetLabelFont(42);
@@ -8999,9 +8999,9 @@
    ZPELLYJRUK->SetMaximum(108.2713);
    ZPELLYJRUK->SetEntries(484);
    ZPELLYJRUK->SetStats(0);
-   ZPELLYJRUK->SetFillColor(4);
+   ZPELLYJRUK->SetFillColor(TColor::GetColor(113,161,55));
    ZPELLYJRUK->SetFillStyle(3001);
-   ZPELLYJRUK->SetLineColor(4);
+   ZPELLYJRUK->SetLineColor(TColor::GetColor(113,161,55));
    ZPELLYJRUK->GetXaxis()->SetTitle("InvariantMassSynBosons");
    ZPELLYJRUK->GetXaxis()->SetLabelFont(42);
    ZPELLYJRUK->GetXaxis()->SetLabelSize(0.035);
@@ -9233,11 +9233,11 @@
    XLUQKXWARS->SetEntries(296);
    XLUQKXWARS->SetStats(0);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    XLUQKXWARS->SetFillColor(ci);
    XLUQKXWARS->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    XLUQKXWARS->SetLineColor(ci);
    XLUQKXWARS->GetXaxis()->SetTitle("InvariantMassSynBosons");
    XLUQKXWARS->GetXaxis()->SetLabelFont(42);
@@ -9411,11 +9411,11 @@
    OLWEAXNXCW->SetEntries(180);
    OLWEAXNXCW->SetStats(0);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    OLWEAXNXCW->SetFillColor(ci);
    OLWEAXNXCW->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    OLWEAXNXCW->SetLineColor(ci);
    OLWEAXNXCW->GetXaxis()->SetTitle("InvariantMassSynBosons");
    OLWEAXNXCW->GetXaxis()->SetLabelFont(42);
@@ -9463,11 +9463,11 @@
    ZSSHIDLHYQ->SetEntries(26);
    ZSSHIDLHYQ->SetStats(0);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    ZSSHIDLHYQ->SetFillColor(ci);
    ZSSHIDLHYQ->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    ZSSHIDLHYQ->SetLineColor(ci);
    ZSSHIDLHYQ->GetXaxis()->SetTitle("InvariantMassSynBosons");
    ZSSHIDLHYQ->GetXaxis()->SetLabelFont(42);
@@ -9519,11 +9519,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("QJUKZSHUSO","ee_lnuqqqq","f");
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9533,11 +9533,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("WUXTKLRXML","ee_llqqqq","f");
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9547,11 +9547,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("LLDYUBJAWL","ee_qqqq","f");
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9561,11 +9561,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("NRPOVOVYNA","ee_nunuqq","f");
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9575,11 +9575,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("LNNVQVKECC","ee_lnuqq","f");
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9589,11 +9589,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("FRNUNYHFTX","ee_qqll","f");
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9603,11 +9603,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("BCJVRYSQTX","ee_qq","f");
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9616,9 +9616,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("EBGSSZULEV","egamma_qqqqe_EPA","f");
-   entry->SetFillColor(3);
+   entry->SetFillColor(TColor::GetColor(113,161,55));
    entry->SetFillStyle(3001);
-   entry->SetLineColor(3);
+   entry->SetLineColor(TColor::GetColor(113,161,55));
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
@@ -9627,11 +9627,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("EPMIHUYSYA","egamma_qqqqe_BS","f");
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9641,11 +9641,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("BYSPYMMQHK","gammae_qqqqe_EPA","f");
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9655,11 +9655,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("FWOQLUUYSW","gammae_qqqqe_BS","f");
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9669,11 +9669,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("YOAQXWNZRF","egamma_qqqqnu_EPA","f");
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9683,11 +9683,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("YXDDNDIQMU","egamma_qqqqnu_BS","f");
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9711,11 +9711,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("YJFYXRLPWU","gammae_qqqqnu_BS","f");
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9724,9 +9724,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("ZPELLYJRUK","gammagamma_qqqq_EPA_EPA","f");
-   entry->SetFillColor(4);
+   entry->SetFillColor(TColor::GetColor(113,161,55));
    entry->SetFillStyle(3001);
-   entry->SetLineColor(4);
+   entry->SetLineColor(TColor::GetColor(113,161,55));
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
@@ -9735,11 +9735,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("XLUQKXWARS","gammagamma_qqqq_EPA_BS","f");
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9749,11 +9749,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("OLWEAXNXCW","gammagamma_qqqq_BS_EPA","f");
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9763,11 +9763,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("ZSSHIDLHYQ","gammagamma_qqqq_BS_BS","f");
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);

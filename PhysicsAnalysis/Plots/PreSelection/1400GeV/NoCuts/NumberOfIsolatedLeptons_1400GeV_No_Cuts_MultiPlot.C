@@ -1,0 +1,1941 @@
+{
+//=========Macro generated from canvas: RHEGJCXEQH/NumberOfIsolatedLeptons
+//=========  (Mon Jan 23 16:04:49 2017) by ROOT version5.34/30
+   TCanvas *RHEGJCXEQH = new TCanvas("RHEGJCXEQH", "NumberOfIsolatedLeptons",0,0,700,500);
+   gStyle->SetOptStat(0);
+   RHEGJCXEQH->SetHighLightColor(2);
+   RHEGJCXEQH->Range(0,0,1,1);
+   RHEGJCXEQH->SetFillColor(0);
+   RHEGJCXEQH->SetBorderMode(0);
+   RHEGJCXEQH->SetBorderSize(2);
+   RHEGJCXEQH->SetLogy();
+   RHEGJCXEQH->SetFrameBorderMode(0);
+  
+// ------------>Primitives in pad: RHEGJCXEQH_1
+   TPad *RHEGJCXEQH_1 = new TPad("RHEGJCXEQH_1", "RHEGJCXEQH_1",0.01,0.81,0.24,0.99);
+   RHEGJCXEQH_1->Draw();
+   RHEGJCXEQH_1->cd();
+   RHEGJCXEQH_1->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_1->SetFillColor(0);
+   RHEGJCXEQH_1->SetBorderMode(0);
+   RHEGJCXEQH_1->SetBorderSize(2);
+   RHEGJCXEQH_1->SetFrameBorderMode(0);
+   RHEGJCXEQH_1->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetFillColor(1);
+   YKMVPWGTOC->SetFillStyle(3001);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TLegend *leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("YKMVPWGTOC","ee_nunuqqqq","f");
+   entry->SetFillColor(1);
+   entry->SetFillStyle(3001);
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   TPaveText *pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   TText *text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_1->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_2
+   RHEGJCXEQH_2 = new TPad("RHEGJCXEQH_2", "RHEGJCXEQH_2",0.26,0.81,0.49,0.99);
+   RHEGJCXEQH_2->Draw();
+   RHEGJCXEQH_2->cd();
+   RHEGJCXEQH_2->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_2->SetFillColor(0);
+   RHEGJCXEQH_2->SetBorderMode(0);
+   RHEGJCXEQH_2->SetBorderSize(2);
+   RHEGJCXEQH_2->SetFrameBorderMode(0);
+   RHEGJCXEQH_2->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *WXGNCOGTGP = new TH1F("WXGNCOGTGP","NumberOfIsolatedLeptons",10,0,10);
+   WXGNCOGTGP->SetBinContent(1,0.4887927);
+   WXGNCOGTGP->SetBinContent(2,0.5094702);
+   WXGNCOGTGP->SetBinContent(3,0.001733008);
+   WXGNCOGTGP->SetBinContent(4,2.69518e-06);
+   WXGNCOGTGP->SetBinContent(5,1.34759e-06);
+   WXGNCOGTGP->SetEntries(741312);
+   WXGNCOGTGP->SetStats(0);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#000066");
+   WXGNCOGTGP->SetFillColor(ci);
+   WXGNCOGTGP->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#000066");
+   WXGNCOGTGP->SetLineColor(ci);
+   WXGNCOGTGP->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   WXGNCOGTGP->GetXaxis()->SetLabelFont(42);
+   WXGNCOGTGP->GetXaxis()->SetLabelSize(0.035);
+   WXGNCOGTGP->GetXaxis()->SetTitleSize(0.035);
+   WXGNCOGTGP->GetXaxis()->SetTitleFont(42);
+   WXGNCOGTGP->GetYaxis()->SetTitle("Entries");
+   WXGNCOGTGP->GetYaxis()->SetLabelFont(42);
+   WXGNCOGTGP->GetYaxis()->SetLabelSize(0.035);
+   WXGNCOGTGP->GetYaxis()->SetTitleSize(0.035);
+   WXGNCOGTGP->GetYaxis()->SetTitleFont(42);
+   WXGNCOGTGP->GetZaxis()->SetLabelFont(42);
+   WXGNCOGTGP->GetZaxis()->SetLabelSize(0.035);
+   WXGNCOGTGP->GetZaxis()->SetTitleSize(0.035);
+   WXGNCOGTGP->GetZaxis()->SetTitleFont(42);
+   WXGNCOGTGP->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("WXGNCOGTGP","ee_lnuqqqq","f");
+
+   ci = TColor::GetColor("#000066");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#000066");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_2->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_3
+   RHEGJCXEQH_3 = new TPad("RHEGJCXEQH_3", "RHEGJCXEQH_3",0.51,0.81,0.74,0.99);
+   RHEGJCXEQH_3->Draw();
+   RHEGJCXEQH_3->cd();
+   RHEGJCXEQH_3->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_3->SetFillColor(0);
+   RHEGJCXEQH_3->SetBorderMode(0);
+   RHEGJCXEQH_3->SetBorderSize(2);
+   RHEGJCXEQH_3->SetFrameBorderMode(0);
+   RHEGJCXEQH_3->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *KAQXXJOVHW = new TH1F("KAQXXJOVHW","NumberOfIsolatedLeptons",10,0,10);
+   KAQXXJOVHW->SetBinContent(1,0.560531);
+   KAQXXJOVHW->SetBinContent(2,0.3394876);
+   KAQXXJOVHW->SetBinContent(3,0.0996967);
+   KAQXXJOVHW->SetBinContent(4,0.0002846801);
+   KAQXXJOVHW->SetEntries(1268584);
+   KAQXXJOVHW->SetStats(0);
+
+   ci = TColor::GetColor("#d5ff00");
+   KAQXXJOVHW->SetFillColor(ci);
+   KAQXXJOVHW->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#d5ff00");
+   KAQXXJOVHW->SetLineColor(ci);
+   KAQXXJOVHW->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   KAQXXJOVHW->GetXaxis()->SetLabelFont(42);
+   KAQXXJOVHW->GetXaxis()->SetLabelSize(0.035);
+   KAQXXJOVHW->GetXaxis()->SetTitleSize(0.035);
+   KAQXXJOVHW->GetXaxis()->SetTitleFont(42);
+   KAQXXJOVHW->GetYaxis()->SetTitle("Entries");
+   KAQXXJOVHW->GetYaxis()->SetLabelFont(42);
+   KAQXXJOVHW->GetYaxis()->SetLabelSize(0.035);
+   KAQXXJOVHW->GetYaxis()->SetTitleSize(0.035);
+   KAQXXJOVHW->GetYaxis()->SetTitleFont(42);
+   KAQXXJOVHW->GetZaxis()->SetLabelFont(42);
+   KAQXXJOVHW->GetZaxis()->SetLabelSize(0.035);
+   KAQXXJOVHW->GetZaxis()->SetTitleSize(0.035);
+   KAQXXJOVHW->GetZaxis()->SetTitleFont(42);
+   KAQXXJOVHW->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("KAQXXJOVHW","ee_llqqqq","f");
+
+   ci = TColor::GetColor("#d5ff00");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#d5ff00");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_3->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_4
+   RHEGJCXEQH_4 = new TPad("RHEGJCXEQH_4", "RHEGJCXEQH_4",0.76,0.81,0.99,0.99);
+   RHEGJCXEQH_4->Draw();
+   RHEGJCXEQH_4->cd();
+   RHEGJCXEQH_4->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_4->SetFillColor(0);
+   RHEGJCXEQH_4->SetBorderMode(0);
+   RHEGJCXEQH_4->SetBorderSize(2);
+   RHEGJCXEQH_4->SetFrameBorderMode(0);
+   RHEGJCXEQH_4->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *BQCGYMDCYX = new TH1F("BQCGYMDCYX","NumberOfIsolatedLeptons",10,0,10);
+   BQCGYMDCYX->SetBinContent(1,0.9982792);
+   BQCGYMDCYX->SetBinContent(2,0.001719092);
+   BQCGYMDCYX->SetBinContent(3,1.697044e-06);
+   BQCGYMDCYX->SetEntries(585054);
+   BQCGYMDCYX->SetStats(0);
+
+   ci = TColor::GetColor("#ff0056");
+   BQCGYMDCYX->SetFillColor(ci);
+   BQCGYMDCYX->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#ff0056");
+   BQCGYMDCYX->SetLineColor(ci);
+   BQCGYMDCYX->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   BQCGYMDCYX->GetXaxis()->SetLabelFont(42);
+   BQCGYMDCYX->GetXaxis()->SetLabelSize(0.035);
+   BQCGYMDCYX->GetXaxis()->SetTitleSize(0.035);
+   BQCGYMDCYX->GetXaxis()->SetTitleFont(42);
+   BQCGYMDCYX->GetYaxis()->SetTitle("Entries");
+   BQCGYMDCYX->GetYaxis()->SetLabelFont(42);
+   BQCGYMDCYX->GetYaxis()->SetLabelSize(0.035);
+   BQCGYMDCYX->GetYaxis()->SetTitleSize(0.035);
+   BQCGYMDCYX->GetYaxis()->SetTitleFont(42);
+   BQCGYMDCYX->GetZaxis()->SetLabelFont(42);
+   BQCGYMDCYX->GetZaxis()->SetLabelSize(0.035);
+   BQCGYMDCYX->GetZaxis()->SetTitleSize(0.035);
+   BQCGYMDCYX->GetZaxis()->SetTitleFont(42);
+   BQCGYMDCYX->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("BQCGYMDCYX","ee_qqqq","f");
+
+   ci = TColor::GetColor("#ff0056");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#ff0056");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_4->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_5
+   RHEGJCXEQH_5 = new TPad("RHEGJCXEQH_5", "RHEGJCXEQH_5",0.01,0.61,0.24,0.79);
+   RHEGJCXEQH_5->Draw();
+   RHEGJCXEQH_5->cd();
+   RHEGJCXEQH_5->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_5->SetFillColor(0);
+   RHEGJCXEQH_5->SetBorderMode(0);
+   RHEGJCXEQH_5->SetBorderSize(2);
+   RHEGJCXEQH_5->SetFrameBorderMode(0);
+   RHEGJCXEQH_5->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *LRVSBNEOWX = new TH1F("LRVSBNEOWX","NumberOfIsolatedLeptons",10,0,10);
+   LRVSBNEOWX->SetBinContent(1,0.997883);
+   LRVSBNEOWX->SetBinContent(2,0.002117058);
+   LRVSBNEOWX->SetEntries(583889);
+   LRVSBNEOWX->SetStats(0);
+
+   ci = TColor::GetColor("#9e008e");
+   LRVSBNEOWX->SetFillColor(ci);
+   LRVSBNEOWX->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#9e008e");
+   LRVSBNEOWX->SetLineColor(ci);
+   LRVSBNEOWX->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   LRVSBNEOWX->GetXaxis()->SetLabelFont(42);
+   LRVSBNEOWX->GetXaxis()->SetLabelSize(0.035);
+   LRVSBNEOWX->GetXaxis()->SetTitleSize(0.035);
+   LRVSBNEOWX->GetXaxis()->SetTitleFont(42);
+   LRVSBNEOWX->GetYaxis()->SetTitle("Entries");
+   LRVSBNEOWX->GetYaxis()->SetLabelFont(42);
+   LRVSBNEOWX->GetYaxis()->SetLabelSize(0.035);
+   LRVSBNEOWX->GetYaxis()->SetTitleSize(0.035);
+   LRVSBNEOWX->GetYaxis()->SetTitleFont(42);
+   LRVSBNEOWX->GetZaxis()->SetLabelFont(42);
+   LRVSBNEOWX->GetZaxis()->SetLabelSize(0.035);
+   LRVSBNEOWX->GetZaxis()->SetTitleSize(0.035);
+   LRVSBNEOWX->GetZaxis()->SetTitleFont(42);
+   LRVSBNEOWX->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("LRVSBNEOWX","ee_nunuqq","f");
+
+   ci = TColor::GetColor("#9e008e");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#9e008e");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_5->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_6
+   RHEGJCXEQH_6 = new TPad("RHEGJCXEQH_6", "RHEGJCXEQH_6",0.26,0.61,0.49,0.79);
+   RHEGJCXEQH_6->Draw();
+   RHEGJCXEQH_6->cd();
+   RHEGJCXEQH_6->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_6->SetFillColor(0);
+   RHEGJCXEQH_6->SetBorderMode(0);
+   RHEGJCXEQH_6->SetBorderSize(2);
+   RHEGJCXEQH_6->SetFrameBorderMode(0);
+   RHEGJCXEQH_6->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *CHLLLAFXFR = new TH1F("CHLLLAFXFR","NumberOfIsolatedLeptons",10,0,10);
+   CHLLLAFXFR->SetBinContent(1,0.7374216);
+   CHLLLAFXFR->SetBinContent(2,0.2621731);
+   CHLLLAFXFR->SetBinContent(3,0.0004052421);
+   CHLLLAFXFR->SetEntries(2093473);
+   CHLLLAFXFR->SetStats(0);
+
+   ci = TColor::GetColor("#0e4ca1");
+   CHLLLAFXFR->SetFillColor(ci);
+   CHLLLAFXFR->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#0e4ca1");
+   CHLLLAFXFR->SetLineColor(ci);
+   CHLLLAFXFR->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   CHLLLAFXFR->GetXaxis()->SetLabelFont(42);
+   CHLLLAFXFR->GetXaxis()->SetLabelSize(0.035);
+   CHLLLAFXFR->GetXaxis()->SetTitleSize(0.035);
+   CHLLLAFXFR->GetXaxis()->SetTitleFont(42);
+   CHLLLAFXFR->GetYaxis()->SetTitle("Entries");
+   CHLLLAFXFR->GetYaxis()->SetLabelFont(42);
+   CHLLLAFXFR->GetYaxis()->SetLabelSize(0.035);
+   CHLLLAFXFR->GetYaxis()->SetTitleSize(0.035);
+   CHLLLAFXFR->GetYaxis()->SetTitleFont(42);
+   CHLLLAFXFR->GetZaxis()->SetLabelFont(42);
+   CHLLLAFXFR->GetZaxis()->SetLabelSize(0.035);
+   CHLLLAFXFR->GetZaxis()->SetTitleSize(0.035);
+   CHLLLAFXFR->GetZaxis()->SetTitleFont(42);
+   CHLLLAFXFR->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("CHLLLAFXFR","ee_lnuqq","f");
+
+   ci = TColor::GetColor("#0e4ca1");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#0e4ca1");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_6->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_7
+   RHEGJCXEQH_7 = new TPad("RHEGJCXEQH_7", "RHEGJCXEQH_7",0.51,0.61,0.74,0.79);
+   RHEGJCXEQH_7->Draw();
+   RHEGJCXEQH_7->cd();
+   RHEGJCXEQH_7->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_7->SetFillColor(0);
+   RHEGJCXEQH_7->SetBorderMode(0);
+   RHEGJCXEQH_7->SetBorderSize(2);
+   RHEGJCXEQH_7->SetFrameBorderMode(0);
+   RHEGJCXEQH_7->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *UTIJYHJVLI = new TH1F("UTIJYHJVLI","NumberOfIsolatedLeptons",10,0,10);
+   UTIJYHJVLI->SetBinContent(1,0.8427154);
+   UTIJYHJVLI->SetBinContent(2,0.1397088);
+   UTIJYHJVLI->SetBinContent(3,0.01755235);
+   UTIJYHJVLI->SetBinContent(4,2.347452e-05);
+   UTIJYHJVLI->SetEntries(2099378);
+   UTIJYHJVLI->SetStats(0);
+
+   ci = TColor::GetColor("#ffe502");
+   UTIJYHJVLI->SetFillColor(ci);
+   UTIJYHJVLI->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#ffe502");
+   UTIJYHJVLI->SetLineColor(ci);
+   UTIJYHJVLI->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   UTIJYHJVLI->GetXaxis()->SetLabelFont(42);
+   UTIJYHJVLI->GetXaxis()->SetLabelSize(0.035);
+   UTIJYHJVLI->GetXaxis()->SetTitleSize(0.035);
+   UTIJYHJVLI->GetXaxis()->SetTitleFont(42);
+   UTIJYHJVLI->GetYaxis()->SetTitle("Entries");
+   UTIJYHJVLI->GetYaxis()->SetLabelFont(42);
+   UTIJYHJVLI->GetYaxis()->SetLabelSize(0.035);
+   UTIJYHJVLI->GetYaxis()->SetTitleSize(0.035);
+   UTIJYHJVLI->GetYaxis()->SetTitleFont(42);
+   UTIJYHJVLI->GetZaxis()->SetLabelFont(42);
+   UTIJYHJVLI->GetZaxis()->SetLabelSize(0.035);
+   UTIJYHJVLI->GetZaxis()->SetTitleSize(0.035);
+   UTIJYHJVLI->GetZaxis()->SetTitleFont(42);
+   UTIJYHJVLI->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("UTIJYHJVLI","ee_qqll","f");
+
+   ci = TColor::GetColor("#ffe502");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#ffe502");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_7->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_8
+   RHEGJCXEQH_8 = new TPad("RHEGJCXEQH_8", "RHEGJCXEQH_8",0.76,0.61,0.99,0.79);
+   RHEGJCXEQH_8->Draw();
+   RHEGJCXEQH_8->cd();
+   RHEGJCXEQH_8->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_8->SetFillColor(0);
+   RHEGJCXEQH_8->SetBorderMode(0);
+   RHEGJCXEQH_8->SetBorderSize(2);
+   RHEGJCXEQH_8->SetFrameBorderMode(0);
+   RHEGJCXEQH_8->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *CZZQNZKSIN = new TH1F("CZZQNZKSIN","NumberOfIsolatedLeptons",10,0,10);
+   CZZQNZKSIN->SetBinContent(1,0.9986103);
+   CZZQNZKSIN->SetBinContent(2,0.001385574);
+   CZZQNZKSIN->SetBinContent(3,4.111506e-06);
+   CZZQNZKSIN->SetEntries(486219);
+   CZZQNZKSIN->SetStats(0);
+
+   ci = TColor::GetColor("#006633");
+   CZZQNZKSIN->SetFillColor(ci);
+   CZZQNZKSIN->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#006633");
+   CZZQNZKSIN->SetLineColor(ci);
+   CZZQNZKSIN->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   CZZQNZKSIN->GetXaxis()->SetLabelFont(42);
+   CZZQNZKSIN->GetXaxis()->SetLabelSize(0.035);
+   CZZQNZKSIN->GetXaxis()->SetTitleSize(0.035);
+   CZZQNZKSIN->GetXaxis()->SetTitleFont(42);
+   CZZQNZKSIN->GetYaxis()->SetTitle("Entries");
+   CZZQNZKSIN->GetYaxis()->SetLabelFont(42);
+   CZZQNZKSIN->GetYaxis()->SetLabelSize(0.035);
+   CZZQNZKSIN->GetYaxis()->SetTitleSize(0.035);
+   CZZQNZKSIN->GetYaxis()->SetTitleFont(42);
+   CZZQNZKSIN->GetZaxis()->SetLabelFont(42);
+   CZZQNZKSIN->GetZaxis()->SetLabelSize(0.035);
+   CZZQNZKSIN->GetZaxis()->SetTitleSize(0.035);
+   CZZQNZKSIN->GetZaxis()->SetTitleFont(42);
+   CZZQNZKSIN->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("CZZQNZKSIN","ee_qq","f");
+
+   ci = TColor::GetColor("#006633");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#006633");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_8->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_9
+   RHEGJCXEQH_9 = new TPad("RHEGJCXEQH_9", "RHEGJCXEQH_9",0.01,0.41,0.24,0.59);
+   RHEGJCXEQH_9->Draw();
+   RHEGJCXEQH_9->cd();
+   RHEGJCXEQH_9->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_9->SetFillColor(0);
+   RHEGJCXEQH_9->SetBorderMode(0);
+   RHEGJCXEQH_9->SetBorderSize(2);
+   RHEGJCXEQH_9->SetFrameBorderMode(0);
+   RHEGJCXEQH_9->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *ZGDJGCQCXE = new TH1F("ZGDJGCQCXE","NumberOfIsolatedLeptons",10,0,10);
+   ZGDJGCQCXE->SetBinContent(1,0.6384405);
+   ZGDJGCQCXE->SetBinContent(2,0.3113225);
+   ZGDJGCQCXE->SetBinContent(3,0.05011041);
+   ZGDJGCQCXE->SetBinContent(4,0.000118656);
+   ZGDJGCQCXE->SetBinContent(5,7.910399e-06);
+   ZGDJGCQCXE->SetEntries(126422);
+   ZGDJGCQCXE->SetStats(0);
+   ZGDJGCQCXE->SetFillColor(3);
+   ZGDJGCQCXE->SetFillStyle(3001);
+   ZGDJGCQCXE->SetLineColor(3);
+   ZGDJGCQCXE->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   ZGDJGCQCXE->GetXaxis()->SetLabelFont(42);
+   ZGDJGCQCXE->GetXaxis()->SetLabelSize(0.035);
+   ZGDJGCQCXE->GetXaxis()->SetTitleSize(0.035);
+   ZGDJGCQCXE->GetXaxis()->SetTitleFont(42);
+   ZGDJGCQCXE->GetYaxis()->SetTitle("Entries");
+   ZGDJGCQCXE->GetYaxis()->SetLabelFont(42);
+   ZGDJGCQCXE->GetYaxis()->SetLabelSize(0.035);
+   ZGDJGCQCXE->GetYaxis()->SetTitleSize(0.035);
+   ZGDJGCQCXE->GetYaxis()->SetTitleFont(42);
+   ZGDJGCQCXE->GetZaxis()->SetLabelFont(42);
+   ZGDJGCQCXE->GetZaxis()->SetLabelSize(0.035);
+   ZGDJGCQCXE->GetZaxis()->SetTitleSize(0.035);
+   ZGDJGCQCXE->GetZaxis()->SetTitleFont(42);
+   ZGDJGCQCXE->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("ZGDJGCQCXE","egamma_qqqqe_EPA","f");
+   entry->SetFillColor(3);
+   entry->SetFillStyle(3001);
+   entry->SetLineColor(3);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_9->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_10
+   RHEGJCXEQH_10 = new TPad("RHEGJCXEQH_10", "RHEGJCXEQH_10",0.26,0.41,0.49,0.59);
+   RHEGJCXEQH_10->Draw();
+   RHEGJCXEQH_10->cd();
+   RHEGJCXEQH_10->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_10->SetFillColor(0);
+   RHEGJCXEQH_10->SetBorderMode(0);
+   RHEGJCXEQH_10->SetBorderSize(2);
+   RHEGJCXEQH_10->SetFrameBorderMode(0);
+   RHEGJCXEQH_10->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *VTEGUHTFGK = new TH1F("VTEGUHTFGK","NumberOfIsolatedLeptons",10,0,10);
+   VTEGUHTFGK->SetBinContent(1,0.8643137);
+   VTEGUHTFGK->SetBinContent(2,0.134636);
+   VTEGUHTFGK->SetBinContent(3,0.001042153);
+   VTEGUHTFGK->SetBinContent(4,8.078718e-06);
+   VTEGUHTFGK->SetEntries(123749);
+   VTEGUHTFGK->SetStats(0);
+
+   ci = TColor::GetColor("#990033");
+   VTEGUHTFGK->SetFillColor(ci);
+   VTEGUHTFGK->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#990033");
+   VTEGUHTFGK->SetLineColor(ci);
+   VTEGUHTFGK->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   VTEGUHTFGK->GetXaxis()->SetLabelFont(42);
+   VTEGUHTFGK->GetXaxis()->SetLabelSize(0.035);
+   VTEGUHTFGK->GetXaxis()->SetTitleSize(0.035);
+   VTEGUHTFGK->GetXaxis()->SetTitleFont(42);
+   VTEGUHTFGK->GetYaxis()->SetTitle("Entries");
+   VTEGUHTFGK->GetYaxis()->SetLabelFont(42);
+   VTEGUHTFGK->GetYaxis()->SetLabelSize(0.035);
+   VTEGUHTFGK->GetYaxis()->SetTitleSize(0.035);
+   VTEGUHTFGK->GetYaxis()->SetTitleFont(42);
+   VTEGUHTFGK->GetZaxis()->SetLabelFont(42);
+   VTEGUHTFGK->GetZaxis()->SetLabelSize(0.035);
+   VTEGUHTFGK->GetZaxis()->SetTitleSize(0.035);
+   VTEGUHTFGK->GetZaxis()->SetTitleFont(42);
+   VTEGUHTFGK->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("VTEGUHTFGK","egamma_qqqqe_BS","f");
+
+   ci = TColor::GetColor("#990033");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#990033");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_10->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_11
+   RHEGJCXEQH_11 = new TPad("RHEGJCXEQH_11", "RHEGJCXEQH_11",0.51,0.41,0.74,0.59);
+   RHEGJCXEQH_11->Draw();
+   RHEGJCXEQH_11->cd();
+   RHEGJCXEQH_11->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_11->SetFillColor(0);
+   RHEGJCXEQH_11->SetBorderMode(0);
+   RHEGJCXEQH_11->SetBorderSize(2);
+   RHEGJCXEQH_11->SetFrameBorderMode(0);
+   RHEGJCXEQH_11->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *SHCTCDAIZJ = new TH1F("SHCTCDAIZJ","NumberOfIsolatedLeptons",10,0,10);
+   SHCTCDAIZJ->SetBinContent(1,0.6358752);
+   SHCTCDAIZJ->SetBinContent(2,0.3141339);
+   SHCTCDAIZJ->SetBinContent(3,0.04985181);
+   SHCTCDAIZJ->SetBinContent(4,0.0001390446);
+   SHCTCDAIZJ->SetEntries(136717);
+   SHCTCDAIZJ->SetStats(0);
+
+   ci = TColor::GetColor("#ff937e");
+   SHCTCDAIZJ->SetFillColor(ci);
+   SHCTCDAIZJ->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#ff937e");
+   SHCTCDAIZJ->SetLineColor(ci);
+   SHCTCDAIZJ->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   SHCTCDAIZJ->GetXaxis()->SetLabelFont(42);
+   SHCTCDAIZJ->GetXaxis()->SetLabelSize(0.035);
+   SHCTCDAIZJ->GetXaxis()->SetTitleSize(0.035);
+   SHCTCDAIZJ->GetXaxis()->SetTitleFont(42);
+   SHCTCDAIZJ->GetYaxis()->SetTitle("Entries");
+   SHCTCDAIZJ->GetYaxis()->SetLabelFont(42);
+   SHCTCDAIZJ->GetYaxis()->SetLabelSize(0.035);
+   SHCTCDAIZJ->GetYaxis()->SetTitleSize(0.035);
+   SHCTCDAIZJ->GetYaxis()->SetTitleFont(42);
+   SHCTCDAIZJ->GetZaxis()->SetLabelFont(42);
+   SHCTCDAIZJ->GetZaxis()->SetLabelSize(0.035);
+   SHCTCDAIZJ->GetZaxis()->SetTitleSize(0.035);
+   SHCTCDAIZJ->GetZaxis()->SetTitleFont(42);
+   SHCTCDAIZJ->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("SHCTCDAIZJ","gammae_qqqqe_EPA","f");
+
+   ci = TColor::GetColor("#ff937e");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#ff937e");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_11->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_12
+   RHEGJCXEQH_12 = new TPad("RHEGJCXEQH_12", "RHEGJCXEQH_12",0.76,0.41,0.99,0.59);
+   RHEGJCXEQH_12->Draw();
+   RHEGJCXEQH_12->cd();
+   RHEGJCXEQH_12->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_12->SetFillColor(0);
+   RHEGJCXEQH_12->SetBorderMode(0);
+   RHEGJCXEQH_12->SetBorderSize(2);
+   RHEGJCXEQH_12->SetFrameBorderMode(0);
+   RHEGJCXEQH_12->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *MWRGMHMGHZ = new TH1F("MWRGMHMGHZ","NumberOfIsolatedLeptons",10,0,10);
+   MWRGMHMGHZ->SetBinContent(1,0.8650432);
+   MWRGMHMGHZ->SetBinContent(2,0.133884);
+   MWRGMHMGHZ->SetBinContent(3,0.001064455);
+   MWRGMHMGHZ->SetBinContent(4,8.381529e-06);
+   MWRGMHMGHZ->SetEntries(119393);
+   MWRGMHMGHZ->SetStats(0);
+
+   ci = TColor::GetColor("#a42400");
+   MWRGMHMGHZ->SetFillColor(ci);
+   MWRGMHMGHZ->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#a42400");
+   MWRGMHMGHZ->SetLineColor(ci);
+   MWRGMHMGHZ->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   MWRGMHMGHZ->GetXaxis()->SetLabelFont(42);
+   MWRGMHMGHZ->GetXaxis()->SetLabelSize(0.035);
+   MWRGMHMGHZ->GetXaxis()->SetTitleSize(0.035);
+   MWRGMHMGHZ->GetXaxis()->SetTitleFont(42);
+   MWRGMHMGHZ->GetYaxis()->SetTitle("Entries");
+   MWRGMHMGHZ->GetYaxis()->SetLabelFont(42);
+   MWRGMHMGHZ->GetYaxis()->SetLabelSize(0.035);
+   MWRGMHMGHZ->GetYaxis()->SetTitleSize(0.035);
+   MWRGMHMGHZ->GetYaxis()->SetTitleFont(42);
+   MWRGMHMGHZ->GetZaxis()->SetLabelFont(42);
+   MWRGMHMGHZ->GetZaxis()->SetLabelSize(0.035);
+   MWRGMHMGHZ->GetZaxis()->SetTitleSize(0.035);
+   MWRGMHMGHZ->GetZaxis()->SetTitleFont(42);
+   MWRGMHMGHZ->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("MWRGMHMGHZ","gammae_qqqqe_BS","f");
+
+   ci = TColor::GetColor("#a42400");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#a42400");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_12->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_13
+   RHEGJCXEQH_13 = new TPad("RHEGJCXEQH_13", "RHEGJCXEQH_13",0.01,0.21,0.24,0.39);
+   RHEGJCXEQH_13->Draw();
+   RHEGJCXEQH_13->cd();
+   RHEGJCXEQH_13->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_13->SetFillColor(0);
+   RHEGJCXEQH_13->SetBorderMode(0);
+   RHEGJCXEQH_13->SetBorderSize(2);
+   RHEGJCXEQH_13->SetFrameBorderMode(0);
+   RHEGJCXEQH_13->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *DEMLHVKHZF = new TH1F("DEMLHVKHZF","NumberOfIsolatedLeptons",10,0,10);
+   DEMLHVKHZF->SetBinContent(1,0.737062);
+   DEMLHVKHZF->SetBinContent(2,0.2620783);
+   DEMLHVKHZF->SetBinContent(3,0.0008597053);
+   DEMLHVKHZF->SetEntries(176693);
+   DEMLHVKHZF->SetStats(0);
+
+   ci = TColor::GetColor("#001544");
+   DEMLHVKHZF->SetFillColor(ci);
+   DEMLHVKHZF->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#001544");
+   DEMLHVKHZF->SetLineColor(ci);
+   DEMLHVKHZF->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   DEMLHVKHZF->GetXaxis()->SetLabelFont(42);
+   DEMLHVKHZF->GetXaxis()->SetLabelSize(0.035);
+   DEMLHVKHZF->GetXaxis()->SetTitleSize(0.035);
+   DEMLHVKHZF->GetXaxis()->SetTitleFont(42);
+   DEMLHVKHZF->GetYaxis()->SetTitle("Entries");
+   DEMLHVKHZF->GetYaxis()->SetLabelFont(42);
+   DEMLHVKHZF->GetYaxis()->SetLabelSize(0.035);
+   DEMLHVKHZF->GetYaxis()->SetTitleSize(0.035);
+   DEMLHVKHZF->GetYaxis()->SetTitleFont(42);
+   DEMLHVKHZF->GetZaxis()->SetLabelFont(42);
+   DEMLHVKHZF->GetZaxis()->SetLabelSize(0.035);
+   DEMLHVKHZF->GetZaxis()->SetTitleSize(0.035);
+   DEMLHVKHZF->GetZaxis()->SetTitleFont(42);
+   DEMLHVKHZF->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("DEMLHVKHZF","egamma_qqqqnu_EPA","f");
+
+   ci = TColor::GetColor("#001544");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#001544");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_13->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_14
+   RHEGJCXEQH_14 = new TPad("RHEGJCXEQH_14", "RHEGJCXEQH_14",0.26,0.21,0.49,0.39);
+   RHEGJCXEQH_14->Draw();
+   RHEGJCXEQH_14->cd();
+   RHEGJCXEQH_14->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_14->SetFillColor(0);
+   RHEGJCXEQH_14->SetBorderMode(0);
+   RHEGJCXEQH_14->SetBorderSize(2);
+   RHEGJCXEQH_14->SetFrameBorderMode(0);
+   RHEGJCXEQH_14->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *HRJIGGWROH = new TH1F("HRJIGGWROH","NumberOfIsolatedLeptons",10,0,10);
+   HRJIGGWROH->SetBinContent(1,0.9904368);
+   HRJIGGWROH->SetBinContent(2,0.009528717);
+   HRJIGGWROH->SetBinContent(3,3.446232e-05);
+   HRJIGGWROH->SetEntries(174125);
+   HRJIGGWROH->SetStats(0);
+
+   ci = TColor::GetColor("#99cccc");
+   HRJIGGWROH->SetFillColor(ci);
+   HRJIGGWROH->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#99cccc");
+   HRJIGGWROH->SetLineColor(ci);
+   HRJIGGWROH->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   HRJIGGWROH->GetXaxis()->SetLabelFont(42);
+   HRJIGGWROH->GetXaxis()->SetLabelSize(0.035);
+   HRJIGGWROH->GetXaxis()->SetTitleSize(0.035);
+   HRJIGGWROH->GetXaxis()->SetTitleFont(42);
+   HRJIGGWROH->GetYaxis()->SetTitle("Entries");
+   HRJIGGWROH->GetYaxis()->SetLabelFont(42);
+   HRJIGGWROH->GetYaxis()->SetLabelSize(0.035);
+   HRJIGGWROH->GetYaxis()->SetTitleSize(0.035);
+   HRJIGGWROH->GetYaxis()->SetTitleFont(42);
+   HRJIGGWROH->GetZaxis()->SetLabelFont(42);
+   HRJIGGWROH->GetZaxis()->SetLabelSize(0.035);
+   HRJIGGWROH->GetZaxis()->SetTitleSize(0.035);
+   HRJIGGWROH->GetZaxis()->SetTitleFont(42);
+   HRJIGGWROH->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("HRJIGGWROH","egamma_qqqqnu_BS","f");
+
+   ci = TColor::GetColor("#99cccc");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#99cccc");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_14->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_15
+   RHEGJCXEQH_15 = new TPad("RHEGJCXEQH_15", "RHEGJCXEQH_15",0.51,0.21,0.74,0.39);
+   RHEGJCXEQH_15->Draw();
+   RHEGJCXEQH_15->cd();
+   RHEGJCXEQH_15->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_15->SetFillColor(0);
+   RHEGJCXEQH_15->SetBorderMode(0);
+   RHEGJCXEQH_15->SetBorderSize(2);
+   RHEGJCXEQH_15->SetFrameBorderMode(0);
+   RHEGJCXEQH_15->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *VHYAMYVHDN = new TH1F("VHYAMYVHDN","NumberOfIsolatedLeptons",10,0,10);
+   VHYAMYVHDN->SetBinContent(1,0.7372627);
+   VHYAMYVHDN->SetBinContent(2,0.2619964);
+   VHYAMYVHDN->SetBinContent(3,0.0007409377);
+   VHYAMYVHDN->SetEntries(176691);
+   VHYAMYVHDN->SetStats(0);
+
+   ci = TColor::GetColor("#620e00");
+   VHYAMYVHDN->SetFillColor(ci);
+   VHYAMYVHDN->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#620e00");
+   VHYAMYVHDN->SetLineColor(ci);
+   VHYAMYVHDN->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   VHYAMYVHDN->GetXaxis()->SetLabelFont(42);
+   VHYAMYVHDN->GetXaxis()->SetLabelSize(0.035);
+   VHYAMYVHDN->GetXaxis()->SetTitleSize(0.035);
+   VHYAMYVHDN->GetXaxis()->SetTitleFont(42);
+   VHYAMYVHDN->GetYaxis()->SetTitle("Entries");
+   VHYAMYVHDN->GetYaxis()->SetLabelFont(42);
+   VHYAMYVHDN->GetYaxis()->SetLabelSize(0.035);
+   VHYAMYVHDN->GetYaxis()->SetTitleSize(0.035);
+   VHYAMYVHDN->GetYaxis()->SetTitleFont(42);
+   VHYAMYVHDN->GetZaxis()->SetLabelFont(42);
+   VHYAMYVHDN->GetZaxis()->SetLabelSize(0.035);
+   VHYAMYVHDN->GetZaxis()->SetTitleSize(0.035);
+   VHYAMYVHDN->GetZaxis()->SetTitleFont(42);
+   VHYAMYVHDN->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("VHYAMYVHDN","gammae_qqqqnu_EPA","f");
+
+   ci = TColor::GetColor("#620e00");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#620e00");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_15->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_16
+   RHEGJCXEQH_16 = new TPad("RHEGJCXEQH_16", "RHEGJCXEQH_16",0.76,0.21,0.99,0.39);
+   RHEGJCXEQH_16->Draw();
+   RHEGJCXEQH_16->cd();
+   RHEGJCXEQH_16->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_16->SetFillColor(0);
+   RHEGJCXEQH_16->SetBorderMode(0);
+   RHEGJCXEQH_16->SetBorderSize(2);
+   RHEGJCXEQH_16->SetFrameBorderMode(0);
+   RHEGJCXEQH_16->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *EGGJYRCWKE = new TH1F("EGGJYRCWKE","NumberOfIsolatedLeptons",10,0,10);
+   EGGJYRCWKE->SetBinContent(1,0.9909855);
+   EGGJYRCWKE->SetBinContent(2,0.008973997);
+   EGGJYRCWKE->SetBinContent(3,4.04751e-05);
+   EGGJYRCWKE->SetEntries(172737);
+   EGGJYRCWKE->SetStats(0);
+
+   ci = TColor::GetColor("#6b6882");
+   EGGJYRCWKE->SetFillColor(ci);
+   EGGJYRCWKE->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#6b6882");
+   EGGJYRCWKE->SetLineColor(ci);
+   EGGJYRCWKE->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   EGGJYRCWKE->GetXaxis()->SetLabelFont(42);
+   EGGJYRCWKE->GetXaxis()->SetLabelSize(0.035);
+   EGGJYRCWKE->GetXaxis()->SetTitleSize(0.035);
+   EGGJYRCWKE->GetXaxis()->SetTitleFont(42);
+   EGGJYRCWKE->GetYaxis()->SetTitle("Entries");
+   EGGJYRCWKE->GetYaxis()->SetLabelFont(42);
+   EGGJYRCWKE->GetYaxis()->SetLabelSize(0.035);
+   EGGJYRCWKE->GetYaxis()->SetTitleSize(0.035);
+   EGGJYRCWKE->GetYaxis()->SetTitleFont(42);
+   EGGJYRCWKE->GetZaxis()->SetLabelFont(42);
+   EGGJYRCWKE->GetZaxis()->SetLabelSize(0.035);
+   EGGJYRCWKE->GetZaxis()->SetTitleSize(0.035);
+   EGGJYRCWKE->GetZaxis()->SetTitleFont(42);
+   EGGJYRCWKE->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("EGGJYRCWKE","gammae_qqqqnu_BS","f");
+
+   ci = TColor::GetColor("#6b6882");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#6b6882");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_16->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_17
+   RHEGJCXEQH_17 = new TPad("RHEGJCXEQH_17", "RHEGJCXEQH_17",0.01,0.01,0.24,0.19);
+   RHEGJCXEQH_17->Draw();
+   RHEGJCXEQH_17->cd();
+   RHEGJCXEQH_17->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_17->SetFillColor(0);
+   RHEGJCXEQH_17->SetBorderMode(0);
+   RHEGJCXEQH_17->SetBorderSize(2);
+   RHEGJCXEQH_17->SetFrameBorderMode(0);
+   RHEGJCXEQH_17->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *RRQHYZATTP = new TH1F("RRQHYZATTP","NumberOfIsolatedLeptons",10,0,10);
+   RRQHYZATTP->SetBinContent(1,0.7605389);
+   RRQHYZATTP->SetBinContent(2,0.2173456);
+   RRQHYZATTP->SetBinContent(3,0.02206155);
+   RRQHYZATTP->SetBinContent(4,5.393937e-05);
+   RRQHYZATTP->SetEntries(166909);
+   RRQHYZATTP->SetStats(0);
+   RRQHYZATTP->SetFillColor(4);
+   RRQHYZATTP->SetFillStyle(3001);
+   RRQHYZATTP->SetLineColor(4);
+   RRQHYZATTP->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   RRQHYZATTP->GetXaxis()->SetLabelFont(42);
+   RRQHYZATTP->GetXaxis()->SetLabelSize(0.035);
+   RRQHYZATTP->GetXaxis()->SetTitleSize(0.035);
+   RRQHYZATTP->GetXaxis()->SetTitleFont(42);
+   RRQHYZATTP->GetYaxis()->SetTitle("Entries");
+   RRQHYZATTP->GetYaxis()->SetLabelFont(42);
+   RRQHYZATTP->GetYaxis()->SetLabelSize(0.035);
+   RRQHYZATTP->GetYaxis()->SetTitleSize(0.035);
+   RRQHYZATTP->GetYaxis()->SetTitleFont(42);
+   RRQHYZATTP->GetZaxis()->SetLabelFont(42);
+   RRQHYZATTP->GetZaxis()->SetLabelSize(0.035);
+   RRQHYZATTP->GetZaxis()->SetTitleSize(0.035);
+   RRQHYZATTP->GetZaxis()->SetTitleFont(42);
+   RRQHYZATTP->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("RRQHYZATTP","gammagamma_qqqq_EPA_EPA","f");
+   entry->SetFillColor(4);
+   entry->SetFillStyle(3001);
+   entry->SetLineColor(4);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_17->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_18
+   RHEGJCXEQH_18 = new TPad("RHEGJCXEQH_18", "RHEGJCXEQH_18",0.26,0.01,0.49,0.19);
+   RHEGJCXEQH_18->Draw();
+   RHEGJCXEQH_18->cd();
+   RHEGJCXEQH_18->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_18->SetFillColor(0);
+   RHEGJCXEQH_18->SetBorderMode(0);
+   RHEGJCXEQH_18->SetBorderSize(2);
+   RHEGJCXEQH_18->SetFrameBorderMode(0);
+   RHEGJCXEQH_18->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *IRUYSMKQBM = new TH1F("IRUYSMKQBM","NumberOfIsolatedLeptons",10,0,10);
+   IRUYSMKQBM->SetBinContent(1,0.8594954);
+   IRUYSMKQBM->SetBinContent(2,0.1392276);
+   IRUYSMKQBM->SetBinContent(3,0.001277051);
+   IRUYSMKQBM->SetEntries(166221);
+   IRUYSMKQBM->SetStats(0);
+
+   ci = TColor::GetColor("#007db5");
+   IRUYSMKQBM->SetFillColor(ci);
+   IRUYSMKQBM->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#007db5");
+   IRUYSMKQBM->SetLineColor(ci);
+   IRUYSMKQBM->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   IRUYSMKQBM->GetXaxis()->SetLabelFont(42);
+   IRUYSMKQBM->GetXaxis()->SetLabelSize(0.035);
+   IRUYSMKQBM->GetXaxis()->SetTitleSize(0.035);
+   IRUYSMKQBM->GetXaxis()->SetTitleFont(42);
+   IRUYSMKQBM->GetYaxis()->SetTitle("Entries");
+   IRUYSMKQBM->GetYaxis()->SetLabelFont(42);
+   IRUYSMKQBM->GetYaxis()->SetLabelSize(0.035);
+   IRUYSMKQBM->GetYaxis()->SetTitleSize(0.035);
+   IRUYSMKQBM->GetYaxis()->SetTitleFont(42);
+   IRUYSMKQBM->GetZaxis()->SetLabelFont(42);
+   IRUYSMKQBM->GetZaxis()->SetLabelSize(0.035);
+   IRUYSMKQBM->GetZaxis()->SetTitleSize(0.035);
+   IRUYSMKQBM->GetZaxis()->SetTitleFont(42);
+   IRUYSMKQBM->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("IRUYSMKQBM","gammagamma_qqqq_EPA_BS","f");
+
+   ci = TColor::GetColor("#007db5");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#007db5");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_18->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_19
+   RHEGJCXEQH_19 = new TPad("RHEGJCXEQH_19", "RHEGJCXEQH_19",0.51,0.01,0.74,0.19);
+   RHEGJCXEQH_19->Draw();
+   RHEGJCXEQH_19->cd();
+   RHEGJCXEQH_19->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_19->SetFillColor(0);
+   RHEGJCXEQH_19->SetBorderMode(0);
+   RHEGJCXEQH_19->SetBorderSize(2);
+   RHEGJCXEQH_19->SetFrameBorderMode(0);
+   RHEGJCXEQH_19->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *OWMFDKJGZA = new TH1F("OWMFDKJGZA","NumberOfIsolatedLeptons",10,0,10);
+   OWMFDKJGZA->SetBinContent(1,0.8600947);
+   OWMFDKJGZA->SetBinContent(2,0.1387282);
+   OWMFDKJGZA->SetBinContent(3,0.00117705);
+   OWMFDKJGZA->SetEntries(169684);
+   OWMFDKJGZA->SetStats(0);
+
+   ci = TColor::GetColor("#6a826c");
+   OWMFDKJGZA->SetFillColor(ci);
+   OWMFDKJGZA->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#6a826c");
+   OWMFDKJGZA->SetLineColor(ci);
+   OWMFDKJGZA->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   OWMFDKJGZA->GetXaxis()->SetLabelFont(42);
+   OWMFDKJGZA->GetXaxis()->SetLabelSize(0.035);
+   OWMFDKJGZA->GetXaxis()->SetTitleSize(0.035);
+   OWMFDKJGZA->GetXaxis()->SetTitleFont(42);
+   OWMFDKJGZA->GetYaxis()->SetTitle("Entries");
+   OWMFDKJGZA->GetYaxis()->SetLabelFont(42);
+   OWMFDKJGZA->GetYaxis()->SetLabelSize(0.035);
+   OWMFDKJGZA->GetYaxis()->SetTitleSize(0.035);
+   OWMFDKJGZA->GetYaxis()->SetTitleFont(42);
+   OWMFDKJGZA->GetZaxis()->SetLabelFont(42);
+   OWMFDKJGZA->GetZaxis()->SetLabelSize(0.035);
+   OWMFDKJGZA->GetZaxis()->SetTitleSize(0.035);
+   OWMFDKJGZA->GetZaxis()->SetTitleFont(42);
+   OWMFDKJGZA->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("OWMFDKJGZA","gammagamma_qqqq_BS_EPA","f");
+
+   ci = TColor::GetColor("#6a826c");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#6a826c");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_19->Modified();
+   RHEGJCXEQH->cd();
+  
+// ------------>Primitives in pad: RHEGJCXEQH_20
+   RHEGJCXEQH_20 = new TPad("RHEGJCXEQH_20", "RHEGJCXEQH_20",0.76,0.01,0.99,0.19);
+   RHEGJCXEQH_20->Draw();
+   RHEGJCXEQH_20->cd();
+   RHEGJCXEQH_20->Range(-1.25,-0.1308527,11.25,1.177674);
+   RHEGJCXEQH_20->SetFillColor(0);
+   RHEGJCXEQH_20->SetBorderMode(0);
+   RHEGJCXEQH_20->SetBorderSize(2);
+   RHEGJCXEQH_20->SetFrameBorderMode(0);
+   RHEGJCXEQH_20->SetFrameBorderMode(0);
+   
+   TH1F *YKMVPWGTOC = new TH1F("YKMVPWGTOC","NumberOfIsolatedLeptons",10,0,10);
+   YKMVPWGTOC->SetBinContent(1,0.9969726);
+   YKMVPWGTOC->SetBinContent(2,0.003021918);
+   YKMVPWGTOC->SetBinContent(3,5.138224e-06);
+   YKMVPWGTOC->SetBinContent(4,3.67016e-07);
+   YKMVPWGTOC->SetEntries(2695997);
+   YKMVPWGTOC->SetStats(0);
+   YKMVPWGTOC->SetLineStyle(2);
+   YKMVPWGTOC->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   YKMVPWGTOC->GetXaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetXaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetXaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetYaxis()->SetTitle("Entries");
+   YKMVPWGTOC->GetYaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetYaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetYaxis()->SetTitleFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelFont(42);
+   YKMVPWGTOC->GetZaxis()->SetLabelSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleSize(0.035);
+   YKMVPWGTOC->GetZaxis()->SetTitleFont(42);
+   YKMVPWGTOC->Draw("");
+   
+   TH1F *ANJYFPMVTD = new TH1F("ANJYFPMVTD","NumberOfIsolatedLeptons",10,0,10);
+   ANJYFPMVTD->SetBinContent(1,0.9823508);
+   ANJYFPMVTD->SetBinContent(2,0.01753025);
+   ANJYFPMVTD->SetBinContent(3,0.000118999);
+   ANJYFPMVTD->SetEntries(159687);
+   ANJYFPMVTD->SetStats(0);
+
+   ci = TColor::GetColor("#00ae7e");
+   ANJYFPMVTD->SetFillColor(ci);
+   ANJYFPMVTD->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#00ae7e");
+   ANJYFPMVTD->SetLineColor(ci);
+   ANJYFPMVTD->GetXaxis()->SetTitle("NumberOfIsolatedLeptons");
+   ANJYFPMVTD->GetXaxis()->SetLabelFont(42);
+   ANJYFPMVTD->GetXaxis()->SetLabelSize(0.035);
+   ANJYFPMVTD->GetXaxis()->SetTitleSize(0.035);
+   ANJYFPMVTD->GetXaxis()->SetTitleFont(42);
+   ANJYFPMVTD->GetYaxis()->SetTitle("Entries");
+   ANJYFPMVTD->GetYaxis()->SetLabelFont(42);
+   ANJYFPMVTD->GetYaxis()->SetLabelSize(0.035);
+   ANJYFPMVTD->GetYaxis()->SetTitleSize(0.035);
+   ANJYFPMVTD->GetYaxis()->SetTitleFont(42);
+   ANJYFPMVTD->GetZaxis()->SetLabelFont(42);
+   ANJYFPMVTD->GetZaxis()->SetLabelSize(0.035);
+   ANJYFPMVTD->GetZaxis()->SetTitleSize(0.035);
+   ANJYFPMVTD->GetZaxis()->SetTitleFont(42);
+   ANJYFPMVTD->Draw("same");
+   
+   leg = new TLegend(0.7,0.7,1,1,NULL,"brNDC");
+   leg->SetBorderSize(1);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   entry=leg->AddEntry("ANJYFPMVTD","gammagamma_qqqq_BS_BS","f");
+
+   ci = TColor::GetColor("#00ae7e");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
+
+   ci = TColor::GetColor("#00ae7e");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   
+   pt = new TPaveText(0.3338281,0.9385028,0.6661719,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   text = pt->AddText("NumberOfIsolatedLeptons");
+   pt->Draw();
+   RHEGJCXEQH_20->Modified();
+   RHEGJCXEQH->cd();
+   TBox *box = new TBox(0,0,1,1);
+   box->Draw();
+   RHEGJCXEQH->Modified();
+   RHEGJCXEQH->cd();
+   RHEGJCXEQH->SetSelected(RHEGJCXEQH);
+}

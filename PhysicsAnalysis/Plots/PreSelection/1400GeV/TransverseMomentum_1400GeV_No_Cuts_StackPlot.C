@@ -1532,11 +1532,11 @@
    VWMDKOVRXT->SetEntries(741312);
    VWMDKOVRXT->SetStats(0);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    VWMDKOVRXT->SetFillColor(ci);
    VWMDKOVRXT->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    VWMDKOVRXT->SetLineColor(ci);
    VWMDKOVRXT->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    VWMDKOVRXT->GetXaxis()->SetLabelFont(42);
@@ -2082,11 +2082,11 @@
    HSNOYQURQG->SetEntries(1268584);
    HSNOYQURQG->SetStats(0);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    HSNOYQURQG->SetFillColor(ci);
    HSNOYQURQG->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    HSNOYQURQG->SetLineColor(ci);
    HSNOYQURQG->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    HSNOYQURQG->GetXaxis()->SetLabelFont(42);
@@ -2386,11 +2386,11 @@
    VYKVGSSIJY->SetEntries(585054);
    VYKVGSSIJY->SetStats(0);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    VYKVGSSIJY->SetFillColor(ci);
    VYKVGSSIJY->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    VYKVGSSIJY->SetLineColor(ci);
    VYKVGSSIJY->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    VYKVGSSIJY->GetXaxis()->SetLabelFont(42);
@@ -3147,11 +3147,11 @@
    WDOAVANXOG->SetEntries(583889);
    WDOAVANXOG->SetStats(0);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    WDOAVANXOG->SetFillColor(ci);
    WDOAVANXOG->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    WDOAVANXOG->SetLineColor(ci);
    WDOAVANXOG->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    WDOAVANXOG->GetXaxis()->SetLabelFont(42);
@@ -3930,11 +3930,11 @@
    WWZANVFNDW->SetEntries(2093473);
    WWZANVFNDW->SetStats(0);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    WWZANVFNDW->SetFillColor(ci);
    WWZANVFNDW->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    WWZANVFNDW->SetLineColor(ci);
    WWZANVFNDW->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    WWZANVFNDW->GetXaxis()->SetLabelFont(42);
@@ -4435,11 +4435,11 @@
    TUXNFBUFGN->SetEntries(2099378);
    TUXNFBUFGN->SetStats(0);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    TUXNFBUFGN->SetFillColor(ci);
    TUXNFBUFGN->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    TUXNFBUFGN->SetLineColor(ci);
    TUXNFBUFGN->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    TUXNFBUFGN->GetXaxis()->SetLabelFont(42);
@@ -4797,11 +4797,11 @@
    OSUVEDPCGF->SetEntries(486219);
    OSUVEDPCGF->SetStats(0);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    OSUVEDPCGF->SetFillColor(ci);
    OSUVEDPCGF->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    OSUVEDPCGF->SetLineColor(ci);
    OSUVEDPCGF->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    OSUVEDPCGF->GetXaxis()->SetLabelFont(42);
@@ -5068,9 +5068,9 @@
    SXTBJQEXQI->SetMaximum(27700.1);
    SXTBJQEXQI->SetEntries(126422);
    SXTBJQEXQI->SetStats(0);
-   SXTBJQEXQI->SetFillColor(3);
+   SXTBJQEXQI->SetFillColor(TColor::GetColor(113,161,55));
    SXTBJQEXQI->SetFillStyle(3001);
-   SXTBJQEXQI->SetLineColor(3);
+   SXTBJQEXQI->SetLineColor(TColor::GetColor(113,161,55));
    SXTBJQEXQI->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    SXTBJQEXQI->GetXaxis()->SetLabelFont(42);
    SXTBJQEXQI->GetXaxis()->SetLabelSize(0.05);
@@ -5258,11 +5258,11 @@
    YBXXCVEYRM->SetEntries(123749);
    YBXXCVEYRM->SetStats(0);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    YBXXCVEYRM->SetFillColor(ci);
    YBXXCVEYRM->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    YBXXCVEYRM->SetLineColor(ci);
    YBXXCVEYRM->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    YBXXCVEYRM->GetXaxis()->SetLabelFont(42);
@@ -5551,11 +5551,11 @@
    LCTETHJIVJ->SetEntries(136717);
    LCTETHJIVJ->SetStats(0);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    LCTETHJIVJ->SetFillColor(ci);
    LCTETHJIVJ->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    LCTETHJIVJ->SetLineColor(ci);
    LCTETHJIVJ->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    LCTETHJIVJ->GetXaxis()->SetLabelFont(42);
@@ -5720,11 +5720,11 @@
    VLOUZGIFFR->SetEntries(119393);
    VLOUZGIFFR->SetStats(0);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    VLOUZGIFFR->SetFillColor(ci);
    VLOUZGIFFR->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    VLOUZGIFFR->SetLineColor(ci);
    VLOUZGIFFR->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    VLOUZGIFFR->GetXaxis()->SetLabelFont(42);
@@ -6334,11 +6334,11 @@
    IVNYIOAWZH->SetEntries(176693);
    IVNYIOAWZH->SetStats(0);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    IVNYIOAWZH->SetFillColor(ci);
    IVNYIOAWZH->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    IVNYIOAWZH->SetLineColor(ci);
    IVNYIOAWZH->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    IVNYIOAWZH->GetXaxis()->SetLabelFont(42);
@@ -6925,11 +6925,11 @@
    PNSRVTPHSC->SetEntries(174125);
    PNSRVTPHSC->SetStats(0);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    PNSRVTPHSC->SetFillColor(ci);
    PNSRVTPHSC->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    PNSRVTPHSC->SetLineColor(ci);
    PNSRVTPHSC->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    PNSRVTPHSC->GetXaxis()->SetLabelFont(42);
@@ -8124,11 +8124,11 @@
    WGNUDQJDRX->SetEntries(172737);
    WGNUDQJDRX->SetStats(0);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    WGNUDQJDRX->SetFillColor(ci);
    WGNUDQJDRX->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    WGNUDQJDRX->SetLineColor(ci);
    WGNUDQJDRX->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    WGNUDQJDRX->GetXaxis()->SetLabelFont(42);
@@ -8376,9 +8376,9 @@
    NJFXFHVKAV->SetMaximum(85099.65);
    NJFXFHVKAV->SetEntries(166909);
    NJFXFHVKAV->SetStats(0);
-   NJFXFHVKAV->SetFillColor(4);
+   NJFXFHVKAV->SetFillColor(TColor::GetColor(113,161,55));
    NJFXFHVKAV->SetFillStyle(3001);
-   NJFXFHVKAV->SetLineColor(4);
+   NJFXFHVKAV->SetLineColor(TColor::GetColor(113,161,55));
    NJFXFHVKAV->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    NJFXFHVKAV->GetXaxis()->SetLabelFont(42);
    NJFXFHVKAV->GetXaxis()->SetLabelSize(0.05);
@@ -8594,11 +8594,11 @@
    RONQKZTITM->SetEntries(166221);
    RONQKZTITM->SetStats(0);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    RONQKZTITM->SetFillColor(ci);
    RONQKZTITM->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    RONQKZTITM->SetLineColor(ci);
    RONQKZTITM->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    RONQKZTITM->GetXaxis()->SetLabelFont(42);
@@ -8785,11 +8785,11 @@
    MGKMDTPQHL->SetEntries(169684);
    MGKMDTPQHL->SetStats(0);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    MGKMDTPQHL->SetFillColor(ci);
    MGKMDTPQHL->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    MGKMDTPQHL->SetLineColor(ci);
    MGKMDTPQHL->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    MGKMDTPQHL->GetXaxis()->SetLabelFont(42);
@@ -8929,11 +8929,11 @@
    RHCSIWFVJT->SetEntries(159687);
    RHCSIWFVJT->SetStats(0);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    RHCSIWFVJT->SetFillColor(ci);
    RHCSIWFVJT->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    RHCSIWFVJT->SetLineColor(ci);
    RHCSIWFVJT->GetXaxis()->SetTitle("Transverse Momentum of System [GeV]");
    RHCSIWFVJT->GetXaxis()->SetLabelFont(42);
@@ -8983,11 +8983,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("VWMDKOVRXT","e^{+}e^{-} #rightarrow l #nu qqqq","f");
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#000066");
+   ci = TColor::GetColor(203,94,221);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -8997,11 +8997,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("HSNOYQURQG","e^{+}e^{-} #rightarrow llqqqq","f");
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#d5ff00");
+   ci = TColor::GetColor(100,218,92);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9011,11 +9011,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("VYKVGSSIJY","e^{+}e^{-} #rightarrow qqqq","f");
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff0056");
+   ci = TColor::GetColor(232,80,125);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9025,11 +9025,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("WDOAVANXOG","e^{+}e^{-} #rightarrow #nu #nu qq","f");
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#9e008e");
+   ci = TColor::GetColor(189,226,61);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9039,11 +9039,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("WWZANVFNDW","e^{+}e^{-} #rightarrow l #nu qq","f");
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#0e4ca1");
+   ci = TColor::GetColor(127,141,224);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9053,11 +9053,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("TUXNFBUFGN","e^{+}e^{-} #rightarrow qqll","f");
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ffe502");
+   ci = TColor::GetColor(225,188,51);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9067,11 +9067,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("OSUVEDPCGF","e^{+}e^{-} #rightarrow qq","f");
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#006633");
+   ci = TColor::GetColor(209,128,193);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9080,9 +9080,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("SXTBJQEXQI","#gamma_{EPA} e^{-} #rightarrow qqqq e^{-}","f");
-   entry->SetFillColor(3);
+   entry->SetFillColor(TColor::GetColor(113,161,55));
    entry->SetFillStyle(3001);
-   entry->SetLineColor(3);
+   entry->SetLineColor(TColor::GetColor(113,161,55));
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
@@ -9091,11 +9091,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("YBXXCVEYRM","#gamma_{BS} e^{-} #rightarrow qqqq e^{-}","f");
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#990033");
+   ci = TColor::GetColor(208,214,112);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9105,11 +9105,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("LCTETHJIVJ","e^{+} #gamma_{EPA} #rightarrow qqqq e^{+}","f");
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#ff937e");
+   ci = TColor::GetColor(105,174,204);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9119,11 +9119,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("VLOUZGIFFR","e^{+} #gamma_{BS} #rightarrow qqqq e^{+}","f");
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#a42400");
+   ci = TColor::GetColor(233,104,50);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9133,11 +9133,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("IVNYIOAWZH","#gamma_{EPA} e^{-} #rightarrow qqqq #nu","f");
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#001544");
+   ci = TColor::GetColor(99,224,195);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9147,11 +9147,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("PNSRVTPHSC","#gamma_{BS} e^{-} #rightarrow qqqq #nu","f");
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#99cccc");
+   ci = TColor::GetColor(212,127,110);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9175,11 +9175,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("WGNUDQJDRX","e^{+} #gamma_{BS} #rightarrow qqqq #nu","f");
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6b6882");
+   ci = TColor::GetColor(192,160,184);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9188,9 +9188,9 @@
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
    entry=leg->AddEntry("NJFXFHVKAV","#gamma_{EPA}#gamma_{EPA} #rightarrow qqqq","f");
-   entry->SetFillColor(4);
+   entry->SetFillColor(TColor::GetColor(113,161,55));
    entry->SetFillStyle(3001);
-   entry->SetLineColor(4);
+   entry->SetLineColor(TColor::GetColor(113,161,55));
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
@@ -9199,11 +9199,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("RONQKZTITM","#gamma_{EPA}#gamma_{BS} #rightarrow qqqq","f");
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#007db5");
+   ci = TColor::GetColor(189,146,63);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9213,11 +9213,11 @@
    entry->SetTextFont(42);
    entry=leg->AddEntry("MGKMDTPQHL","#gamma_{BS}#gamma_{EPA} #rightarrow qqqq","f");
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#6a826c");
+   ci = TColor::GetColor(184,212,203);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
@@ -9228,11 +9228,11 @@
    entry=leg->AddEntry("RHCSIWFVJT","#gamma_{BS}#gamma_{BS} #rightarrow qqqq","f");
    entry=leg->AddEntry("","","");
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    entry->SetFillColor(ci);
    entry->SetFillStyle(3001);
 
-   ci = TColor::GetColor("#00ae7e");
+   ci = TColor::GetColor(92,161,114);
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
