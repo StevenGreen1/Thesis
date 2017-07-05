@@ -265,7 +265,7 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 48.9 \\
 
 \subsection{Discriminant Variables} 
 \label{sec:analysisprocessor}
-The next stage of the analysis involved the calculation of a number of event-based variables that were found to be useful for this analysis.  The variables that were calculated are as follows:
+The next stage of the analysis involved the calculation of a number of event-based variables that were found to be useful for this analysis.  The variables that were calculated are as follows
 
 \begin{itemize}
 \item \textbf{Particle level} variables:
@@ -298,16 +298,16 @@ S^{ab} = \frac{\Sigma_{i}p^{\alpha}_{i}p^{\alpha}_{j}}{\Sigma_{i,\alpha=1,2,3}|p
 Where $p_{i}$ are the components of the momenta of PFO $i$ in the rest frame of the detector and the sum $\Sigma_{i}$ runs over all particles in the event.  Sphericity is defined as $\text{S} = \frac{3}{2}(\lambda_{2} + \lambda_{3})$, where $\lambda_{i}$ are the eigenvalues of the sphericity tensor defined such $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3}$.  This provides a measure of how spherical the reconstructed event topology is with isotropic events having $S \approx 1$, while two jet events have $S \approx 0$.
 \end{itemize}
 
-\item \textbf{Jet clustering parameter} variables, $y_{ij}$ where $i = 3,4$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  The variable used in the multivariate analysis is $-\text{log}_{10}(y_{ij})$.
+\item \textbf{Jet clustering parameters}, $y_{ij}$ where $i = 3,4$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  
 \end{itemize}
 
 %========================================================================================
 
 \subsection{Jet Energy Resolution at CLIC} 
 \label{sec:jetenergyresolution}
-It is important to flag up the importance of the jet energy resolution that is extensively discussed in chapters \ref{chapt:energyestimators} and \ref{chap:detopt}.  Many of the discriminant variables that are calculated for this analysis are dependant upon the jet energy resolution.  In particular, all variables related to the candidate bosons, which are formed from pairing up jets, are totally dependent upon the measurement of jet energies.  
+The importance of the jet energy resolution that is extensively discussed in chapters \ref{chapt:energyestimators} and \ref{chap:detopt} should be emphasised at this point.  Many of the discriminant variables that are calculated for this analysis are dependant upon the jet energy resolution.  In particular, all variables related to the candidate bosons that are formed from pairing up jets, are dependent upon the measurement of jet energies.  
 
-The jet energy resolution as a function of the jet energy is shown in figure \ref{fig:jeteenrgyresolutionphysicsanalysis} for the {\nu}{\nu}qqqq final state, at $\sqrt{s}=1.4$~TeV, used in this analysis.  The MC jet energy is obtained by pairing up quarks appearing in the final state to the reconstructed jets.  In the calculation of the jet energy resolution presented here, the mean and RMS of the reconstructed jet energy are calculated over a narrower range than used in the previous chapters, 60\% of the data with narrowest RMS as opposed to 90\%.  This is to account for the effects of jet finding and beam-induced background that are not present in the jet energy resolution studies presented in preceding chapters.  The jet energy resolutions reported here are comparable to those quoted in earlier chapters from the standard reconstruction.  
+Figure \ref{fig:jeteenrgyresolutionphysicsanalysis} shows the jet energy resolution as a function of the MC jet energy for the {\nu}{\nu}qqqq event sample used in the $\sqrt{s}=1.4$~TeV analysis.  The MC jet energy was obtained by pairing up quarks appearing in the final state to the reconstructed jets.  The events were then binned in terms of their MC jet energy and the jet energy resolution calculated for each bin.  When calculating the jet energy resolution, a narrower range of jet energies was used in compared to previous studies, 60\% of the data with narrowest RMS as opposed to 90\%, to minimise the effects of jet finding and beam-induced backgrounds.  The jet energy resolutions reported here are worse than those quoted in earlier chapters, however, this is to be expected given the effects of jet finding and beam-induced backgrounds.
 
 \begin{figure}
 \centering
@@ -321,20 +321,20 @@ The jet energy resolution as a function of the jet energy is shown in figure \re
 
 \section{Event Selection}
 \label{sec:eventselection}
-As described in section \ref{sec:modellingofanomalouscouplings}, the signal for this analysis is the \nu{\nu}qqqq final state, while the backgrounds consist of all two and four jet final states that could be confused with the signal after reconstruction.  A complete list of signal and background final states used for this analysis, alongside their Standard Model cross sections, can be found in table \ref{table:crosssection1400GeV}.  In an attempt to isolate the signal final state from the backgrounds an event selection procedure consisting of a set of preselection cuts followed by the application of a multivariate analysis (MVA), was applied.  The full details of this procedure are given in the following section.  All event numbers used in this analysis have been normalised, prior to event selection, to the correct luminosity for CLIC running at $\sqrt{s}=1.4$~TeV.
+This section discusses the event selection procedure that is applied in this analysis.  The goal of this procedure is to isolate the \nu{\nu}qqqq final state from the backgrounds final states, i.e. those containing two and four primary quarks.  The procedure consists of a set of preselection cuts followed by the application of a multivariate analysis (MVA).  All event numbers used in this analysis have been normalised, prior to event selection, to an integrated luminosity ($\mathcal{L}_{int}$) of 1.5 (2) $\text{ab}^{-1}$ for CLIC running at $\sqrt{s}=1.4~(3)$~TeV.
 
 %========================================================================================
 
 \subsection{Preselection}
 \label{sec:preselection1400GeV}
-A refined selection of the \nu{\nu}qqqq signal final state is achieved using MVA.  However, to ensure efficiency in the training and application of that MVA a number of simple preselection cuts were developed to veto obvious background final states prior to the application of the MVA.  These cuts were developed to reject as much background as possible, while retaining enough signal to make the analysis viable.  Preselection cuts were applied to the transverse momentum of the system and the number of isolated leptons found in the event.  The raw distributions of these variables is shown in figure \ref{fig:preselection1400} and based on these distributions the following cuts were applied:
-
+A refined selection of the \nu{\nu}qqqq signal final state is achieved using MVA, however, to ensure efficiency in the training and application of that MVA a number of simple preselection cuts were developed to veto obvious background final states prior to the application of the MVA.  Preselection cuts were applied to the transverse momentum of the system and the number of isolated leptons found in the event.  The raw distributions of these variables is shown in figure \ref{fig:preselection1400} and based on these distributions the following cuts were applied
+%
 \begin{itemize}
 \item Transverse momentum of system > 100~GeV.  This cut is effective due to the presence of missing energy in the form of neutrinos in the signal final state.
 \item Number of isolated leptons in system = 0.  This cut is effective as the signal final state does not contain leptons, while numerous background final states do.  
 \end{itemize}
-
-The impact of these preselection cuts can be found in table \ref{table:selectionsummary1400GeV} in section \ref{sec:eventselsummary1400GeV}.
+%
+\noindent The impact of these preselection cuts can be found in table \ref{table:selectionsummary1400GeV} in section \ref{sec:eventselsummary1400GeV}.
 
 \begin{figure}[h!]
 \centering
@@ -349,7 +349,7 @@ The impact of these preselection cuts can be found in table \ref{table:selection
 
 \subsection{Multivariate analysis}
 \label{sec:mva1400GeV}
-Having established the preselection cuts a MVA was applied, using the TMVA toolkit \cite{Hocker:2007ht}, to refine the event selection.  The signal and background final state samples were halved; one half sample was used to train the MVA and the remaining half sample was used in the subsequent analysis.  The sample sizes for the signal and backgrounds were sufficiently large that halving them in this way had a negligible impact on the subsequent analysis.  The following variables were used for training of the MVA:
+Having established the preselection cuts a MVA was applied, using the TMVA toolkit \cite{Hocker:2007ht}, to refine the event selection.  The signal and background final state samples were halved; one half sample was used to train the MVA and the remaining half sample was used in the subsequent analysis.  The following variables were used for training of the MVA
 \begin{itemize}
 \item Number of PFOs in each jet. 
 \item Energy of the highest energy PFO.
@@ -359,8 +359,8 @@ Having established the preselection cuts a MVA was applied, using the TMVA toolk
 \item Invariant mass of the candidate bosons.
 \item Acolinearity of the candidate boson pair.
 \item The vector sum of the transverse momentum of all PFOs in the event. 
-\item Sphericity. 
-\item Jet clustering parameter variables, $y_{ij}$ where $i = 3,4$ and $j=i+1$.  The variable used in the multivariate analysis is $-\text{log}_{10}(y_{ij})$.
+\item The sphericity of the event. 
+\item The derived jet clustering parameter variables $-\text{log}_{10}(y_{ij})$ where $y_{ij}$ are jet clustering parameters, $i = 3,4$ and $j=i+1$.  
 \end{itemize}
 
 A variety of MVA options were considered and it was found that the optimal algorithm was the boosted decision tree (BDT) as shown by figure \ref{fig:mvaalternatives1400GeV}.  
@@ -372,7 +372,7 @@ A variety of MVA options were considered and it was found that the optimal algor
 \label{fig:mvaalternatives1400GeV}
 \end{figure}
 
-The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied and an optimal significance, S/$\sqrt(\text{S + B})$, of 52.7 was obtained.  In the determination of the significance S (B) is the number of signal (background) events passing the preselection.
+The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied.  An optimal significance, S/$\sqrt(\text{S + B})$ where S and B are the number of signal and background events passing the preselection respectively, of 52.7 was obtained. 
 
 %========================================================================================
 
@@ -380,7 +380,7 @@ The BDT was further optimised by varying the number of trees used, the depth of 
 \label{sec:eventselsummary1400GeV}
 The event selection is summarised using the distribution of the invariant mass of the candidate bosons, which for the signal final state should peak around the W mass.  This distribution is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact} with no event selection, with the preselection cuts applied and with both preselections cuts and MVA applied.  The event selection is also summarised using efficiencies shown in table \ref{table:selectionsummary1400GeV}.
 
-As expected the dominant background processes after the MVA is applied are those that will look identical to the signal process, i.e. qqqq with missing energy.  Two smaller sources of background are also present: two jet events with missing energy that are confused with four jet events with missing energy and events where a lepton is not properly reconstructed causing the event to look like four jets and missing energy.  
+As expected the dominant background processes after the MVA is applied are those that will look identical to the signal process, i.e. four primary quarks with missing energy.  Two smaller sources of background are also present: two jet events with missing energy that are confused with four jet events with missing energy and events where a lepton is not properly reconstructed causing the event to look like four jets and missing energy.  
 
 \begin{figure}
 \centering
@@ -420,7 +420,7 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & - & - & 53 \\
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & - & - & 0 \\
 \hline
 \end{tabular}
-\caption[Selection summary at $\sqrt{s}=1.4$~TeV.   The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Selection summary at $\sqrt{s}=1.4$~TeV.   The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
+\caption[Event selection summary at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Event selection summary at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
 \label{table:selectionsummary1400GeV}
 \end{table}
 
@@ -434,9 +434,9 @@ This section describes the procedure used for constructing the $\chi^{2}$ surfac
 %========================================================================================
 
 \subsection{Sensitive Distribution}
-The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $M_{VV}$, the invariant mass of the visible system.  For a given event, the jet clustering and pairing proceeds as described in section \ref{sec:analysis}.  This leads to each event being clustered into four jets that are then paired up to give two candidate bosons.  The distribution of $M_{VV}$ proved to be highly sensitive to the anomalous gauge couplings, particularly for at large invariant masses, as shown in figure \ref{fig:mvv}.
+The sensitivity of CLIC to the anomalous gauge couplings is determined through the use of a $\chi^{2}$ fit to the distribution of $M_{VV}$, the invariant mass of the visible system.  The distribution of $M_{VV}$ proved to be highly sensitive to the anomalous gauge couplings, particularly for large $M_{VV}$, as shown in figure \ref{fig:mvv}.
 
-Two other distributions were considered for this sensitivity study, but proved to be less sensitive than $M_{VV}$: $\text{cos}\theta^{*}_{Jets}$, the angle between the boost direction and the back to back quark jets in the rest frame of the candidate bosons, and $\text{cos}\theta^{*}_{Bosons}$, the angle between the boost direction and the back to back candidate bosons in the rest frame of the visible system.  The sensitivity of these variables can be seen in figure \ref{fig:costhetastar}.  It should be noted that there are two entries, one from each candidate boson, in the $\text{cos}\theta^{*}_{Jets}$ distribution per event.  To negate the effect of correlation between these two variables when performing the $\chi^{2}$ fit, a two dimensional fit of $\text{cos}\theta^{*}_{Jets}$ variable was applied where a distinction between candidate bosons was made based on their energy.  No such effect was present for the $\text{cos}\theta^{*}_{Bosons}$ variable as there is only a single pair of candidate bosons per event.
+Two other variables were considered for this study, but they proved to be less sensitive to the anomalous gauge couplings than $M_{VV}$.  They were $\text{cos}\theta^{*}_{Jets}$, the angle between the boost direction and the back to back jets in the rest frame of the candidate bosons, and $\text{cos}\theta^{*}_{Bosons}$, the angle between the boost direction and the back to back candidate bosons in the rest frame of the visible system.  It should be noted that the distribution of $\text{cos}\theta^{*}_{Jets}$ contains two entries per event, one for each candidate boson.  To negate the effects of correlation when determining sensitivity of the $\text{cos}\theta^{*}_{Jets}$ variable, a two dimensional fit of $\text{cos}\theta^{*}_{Jets}$ was used where a distinction had been made between the candidate bosons based on their energy.  Figure \ref{fig:costhetastar} shows the sensitivity of these variables to the anomalous gauge couplings.  Of the variables considered, the $M_{VV}$ distribution shows the greatest sensitivity to the anomalous gauge couplings because the couplings primarily affect events with large values of $M_{VV}$ and there are relatively few of these events.  
 
 \begin{figure}[h!]
 \centering
@@ -453,20 +453,20 @@ Two other distributions were considered for this sensitivity study, but proved t
 \end{figure}
 
 %========================================================================================
-
+%HERE
 \subsection{$\chi^{2}$ Surface Definition}
 \label{sec:chi2surfacedefinition}
-The $\chi^{2}$ surface is defined through the following equation:
-
+The $\chi^{2}$ surface is defined through the following equation
+%
 \begin{equation}
 \chi^{2} = \sum_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}} \text{,}
 \end{equation}
+%
+\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, and $E_{i}$ the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$.  The summation $\Sigma_{i}$ runs over bins in the $M_{VV}$ distribution.  The distribution of $M_{VV}$ was binned using 14 bins.  The first bin spanned the invariant mass range between 0 and 200~GeV, this was followed by 11 bins of width 100~GeV ranging from 200 to 1300~GeV and finally the last bin contained all invariant masses above 1300~GeV.  The expanded bin widths at the tails of the distribution were chosen to ensure the bin contents were sufficiently large to give a reliable estimate the likelihood function using the $\chi^{2}$ parameter.  This choice of bin width ensured the bin contents were sufficiently large to minimise fluctuations arising from individual events with large weights.
 
-\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, and $E_{i}$ the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$.  $\Sigma_{i}$ is the sum over the bins of the $M_{VV}$ distribution.  The distribution of $M_{VV}$ was binned using 14 bins.  The first bin spanned the invariant mass range between 0 and 200~GeV, this was followed by 11 bins of width 100~GeV ranging from 200 to 1300~GeV and finally the last bin contained all invariant masses above 1300~GeV.  The expanded bin widths were chosen at the tails of the distribution to ensure the bin contents are sufficiently large to give a reliable estimate the likelihood function using the $\chi^{2}$ parameter.  This choice of binning minimises the effect of large bin by bin fluctuations arising from individual events with large event weights.
+Confidence limits describing the sensitivity of the CLIC experiment to the anomalous gauge couplings were found by examining this $\chi^{2}$ surface in $\alpha_{4}$ and $\alpha_{5}$ space.  Deviations about the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ contours ($\Delta\chi^{2}$) of 2.28, 4.61 and 9.21 respectively.
 
-Confidence limits describing the sensitivity of the CLIC experiment to the anomalous gauge couplings were found by examining this $\chi^{2}$ surface in $\alpha_{4}$ and $\alpha_{5}$ space.  Deviations about the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ contours of 2.28, 4.61 and 9.21 respectively.  These numbers arise from the integral of the two dimensional $\chi^{2}$ function.
-
-It proved useful to consider the sensitivities to the individual parameters $\alpha_{4}$ and $\alpha_{5}$ independently.  This was done by projecting out the $\alpha_{4} = 0$ or $\alpha_{5} = 0$ one dimensional $\chi^{2}$ distribution from the two dimensional $\chi^{2}$ distribution as discussed in section \ref{sec:optimaljetalgorithm}.  The sensitivity to individual parameters was then extracted using confidence limits arising from the integral of the one dimensional $\chi^{2}$ function i.e. 68\% confidence limit occurs for $\chi^{2} = 0.989$.  In subsequent chapters these are the sensitivities quoted for individual anomalous gauge couplings. 
+The sensitivity of the individual anomalous gauge couplings was obtained by projecting out the $\alpha_{4} = 0$ and $\alpha_{5} = 0$ one dimensional $\chi^{2}$ distributions from the two dimensional $\chi^{2}$ distribution as discussed in section \ref{sec:optimaljetalgorithm}.  The sensitivity to individual parameters could then be extracted using confidence limits arising from the integral of the one dimensional $\chi^{2}$ function i.e. 68\% confidence limit occurs for $\Delta\chi^{2} = 0.989$.  
 
 %========================================================================================
 
