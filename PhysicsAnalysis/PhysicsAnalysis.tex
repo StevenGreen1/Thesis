@@ -218,9 +218,9 @@ d_{iB} = 1 \text{ .}
 \label{sec:optimaljetalgorithm}
 Optimisation of the jet finding procedure was performed on both the PFO selection and the value of the R parameter used in the longitudinally invariant $k_{t}$ algorithm.   The optimal configuration for the jet algorithm at $\sqrt{s}=1.4$~TeV was found to use default selected PFOs and an R parameter of 0.9.
 
-The optimisation procedure involved performing the sensitivity study, described in section \ref{sec:fitting}, using solely the {\nu}{\nu}qqqq signal final state.  Confidence contours were created from a $\chi^{2}$ that was obtained by comparing the distribution of the invariant mass of the visible system, $M_{VV}$, with and without the effect of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$.  The $\chi^{2}$ surface for the optimal jet configuration at $\sqrt{s}=1.4$~TeV is shown in figure \ref{fig:chi2jetalgoideal1400GeV}.  This methodology ensured that the optimisation was done with respect to the physics of interest without having to perform the jet reconstruction for the large number of background events for each jet algorithm configuration considered.  
+The optimisation procedure involved performing the sensitivity study, described in section \ref{sec:fitting}, using solely the {\nu}{\nu}qqqq signal final state.  This methodology ensures that the optimisation was done with respect to the physics of interest without having to perform the jet reconstruction for the large number of background events for each jet algorithm configuration considered. 
 
-Confidence limits on the individual parameters $\alpha_{4}$ and $\alpha_{5}$ were determined by setting the corresponding coupling term to zero and examining the one dimensional $\chi^{2}$ distribution.  A fourth order polynomial was fitted to the minima of this distribution and the one sigma confidence limit defined using $\Delta\chi^{2} = 1$, where $\Delta\chi^{2}$ is the change in $\chi^{2}$ with respect to the minima.  Note that for the two dimensional $\chi^{2}$ surface a one sigma confidence limit is given by a $\Delta\chi^{2}$ of 2.28 due to the additional degree of freedom in the fit.  The one dimensional $\chi^{2}$ distribution for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the optimal jet configuration at $\sqrt{s}=1.4$~TeV is shown in figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV}.  These distributions gave one sigma confidence limits on the anomalous gauge couplings of
+Figure \ref{fig:chi2jetalgoideal1400GeV} shows confidence contours, given a null hypothesis of $\alpha_{4} = \alpha_{5} = 0$, for the optimal jet configuration at $\sqrt{s}=1.4$~TeV.  Figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} show the one dimensional $\chi^{2}$ distribution for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the optimal jet configuration at $\sqrt{s}=1.4$~TeV.  These distributions give one sigma confidence limits on the anomalous gauge couplings of
 %
 \begin{equation}
 -0.0038 < \alpha_{4} < 0.0047 
@@ -230,6 +230,8 @@ Confidence limits on the individual parameters $\alpha_{4}$ and $\alpha_{5}$ wer
 -0.0027 < \alpha_{5} < 0.0030 \text{.}
 \end{equation}
 %
+\noindent These confidence limits represent the idealised sensitivity of the CLIC experiment to the anomalous gauge couplings.  Once the effects of backgrounds and event selection are included in the analysis, these confidence limits will increase in size.
+
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_Optimal.pdf}}\hfill
@@ -420,7 +422,7 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & - & - & 53 \\
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & - & - & 0 \\
 \hline
 \end{tabular}
-\caption[Event selection summary at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Event selection summary at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
+\caption[Event selection efficiencies at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Event selection efficiencies at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
 \label{table:selectionsummary1400GeV}
 \end{table}
 
@@ -453,28 +455,30 @@ Two other variables were considered for this study, but they proved to be less s
 \end{figure}
 
 %========================================================================================
-%HERE
-\subsection{$\chi^{2}$ Surface Definition}
+
+\subsection{$\chi^{2}$ Surface and Confidence Limit Definition}
 \label{sec:chi2surfacedefinition}
-The $\chi^{2}$ surface is defined through the following equation
+A $\chi^{2}$ surface is used to determine confidence limits on the anomalous gauge couplings given the null hypothesis that $\alpha_{4} = \alpha_{5} = 0$.  This surface is defined as  
 %
 \begin{equation}
 \chi^{2} = \sum_{i} \frac{(O_{i} - E_{i})^{2}}{E_{i}} \text{,}
 \end{equation}
 %
-\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, and $E_{i}$ the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$.  The summation $\Sigma_{i}$ runs over bins in the $M_{VV}$ distribution.  The distribution of $M_{VV}$ was binned using 14 bins.  The first bin spanned the invariant mass range between 0 and 200~GeV, this was followed by 11 bins of width 100~GeV ranging from 200 to 1300~GeV and finally the last bin contained all invariant masses above 1300~GeV.  The expanded bin widths at the tails of the distribution were chosen to ensure the bin contents were sufficiently large to give a reliable estimate the likelihood function using the $\chi^{2}$ parameter.  This choice of bin width ensured the bin contents were sufficiently large to minimise fluctuations arising from individual events with large weights.
+\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, and $E_{i}$ the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$.  The summation $\Sigma_{i}$ runs over bins in the $M_{VV}$ distribution.  
 
-Confidence limits describing the sensitivity of the CLIC experiment to the anomalous gauge couplings were found by examining this $\chi^{2}$ surface in $\alpha_{4}$ and $\alpha_{5}$ space.  Deviations about the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$.  The confidence limits used in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ contours ($\Delta\chi^{2}$) of 2.28, 4.61 and 9.21 respectively.
+The distribution of $M_{VV}$ used to create the $\chi^{2}$ surface was binned using 14 bins.  The first bin spanned the invariant mass range between 0 and 200~GeV, this was followed by 11 bins of width 100~GeV ranging from 200 to 1300~GeV and finally the last bin contained all invariant masses above 1300~GeV.  The expanded bin widths at the tails of the distribution were chosen to ensure the bin contents were sufficiently large to give a reliable estimate the likelihood function using the $\chi^{2}$ parameter.  This choice of bin width ensured the bin contents were sufficiently large to minimise fluctuations arising from individual events with large weights.
 
-The sensitivity of the individual anomalous gauge couplings was obtained by projecting out the $\alpha_{4} = 0$ and $\alpha_{5} = 0$ one dimensional $\chi^{2}$ distributions from the two dimensional $\chi^{2}$ distribution as discussed in section \ref{sec:optimaljetalgorithm}.  The sensitivity to individual parameters could then be extracted using confidence limits arising from the integral of the one dimensional $\chi^{2}$ function i.e. 68\% confidence limit occurs for $\Delta\chi^{2} = 0.989$.  
+Confidence limits describing the sensitivity of the CLIC experiment to the anomalous gauge couplings were found by examining the $\chi^{2}$ surface in the space of $\alpha_{4}$ and $\alpha_{5}$.  Deviations from the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$ given the null hypothesis that $\alpha_{4} = \alpha_{5} = 0$.  The confidence limits reported in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ surface ($\Delta\chi^{2}$) of 2.28, 4.61 and 9.21 respectively.
+
+Confidence limits on the individual parameters $\alpha_{4}$ and $\alpha_{5}$ were determined by setting the corresponding coupling term to zero and examining the remaining one dimensional $\chi^{2}$ distribution.  A fourth order polynomial was fitted to the minima of this distribution and the one sigma confidence limit defined using $\Delta\chi^{2} = 1$.  The definition of a one sigma confidence limit accounts for changes in the number of degrees of freedom in the fit, therefore, it changes when fixing the corresponding coupling term to zero.  
 
 %========================================================================================
 
 \subsection{Event Weight Interpolation Scheme}
 \label{sec:eventweightsinterpolation}
-As described in section \ref{sec:modellingofanomalouscouplings}, event weights are used to determine the sensitivity of CLIC to the anomalous gauge couplings.  These event weights are extracted on an event by event basis for the signal final state $\nu\nu\text{qqqq}$ from the generator Whizard.  To achieve a smooth $\chi^{2}$ distribution a fine sampling of the $M_{VV}$ distribution in the $\alpha_{4}$ and $\alpha_{5}$ space is needed.  However, as extracting the event weights is highly CPU intensive, it is unfeasible to produce a finely sampled grid of event weights on an event by event basis by calling the generator.  To resolve this issue, an interpolation scheme was applied to determine the event weights within a sampled region of the $\alpha_{4}$ and $\alpha_{5}$ space.  This allows for an infinite sampling of the $M_{VV}$ distribution in the space of $\alpha_{4}$ and $\alpha_{5}$ within the sampled region, without having to call the generator an infinite number of times.
+In order to obtain a smooth $\chi^{2}$ surface a fine sampling of the event weights in the $\alpha_{4}$ and $\alpha_{5}$ space is required, however, it is unfeasible to generate a finely sampled grid of event weights on an event by event basis because event generation is highly CPU intensive.  To resolve this issue, an interpolation scheme was applied to determine the event weights within a sampled region of the $\alpha_{4}$ and $\alpha_{5}$ space.  This allows for an infinite sampling of the event weights in the space of $\alpha_{4}$ and $\alpha_{5}$ without having to call the generator an infinite number of times.
 
-A bicubic interpolation scheme, cubic interpolation along two dimensions, was applied to the event weights that were extracted from the generator.  This procedure is best illustrated by figure \ref{fig:eventweights1400interpolated}, which shows the interpolated event weight surface superimposed with the raw event weights from the generator for several $\nu\nu\text{qqqq}$ events at $\sqrt{s}=1.4$~TeV.  This interpolation scheme produces a smooth and continuous surface that is sufficiently accurate for the fitting procedure applied in this analysis.  At $\sqrt{s}=1.4$~TeV event weights were produced from the generator, Whizard, by stepping along $\alpha_{4}$ and $\alpha_{5}$ in steps of 0.01 ranging from -0.07 to 0.07, as shown in figure \ref{fig:eventweights1400raw}.  These range proved to be sufficient for the contours of interest for the CLIC sensitivity analysis at these energies.
+A bicubic interpolation scheme, cubic interpolation along the two dimensions, was applied to the event weights produced by the generator.  This procedure is best illustrated by figure \ref{fig:eventweights1400interpolated}, which shows the interpolated event weight surface superimposed with the raw event weights from the generator for four $\nu\nu\text{qqqq}$ events at $\sqrt{s}=1.4$~TeV.  This interpolation scheme produces a smooth and continuous surface that can be used for generating a smooth $\chi^{2}$ surface.  
 
 \begin{figure}[h!]
 \centering
@@ -490,7 +494,16 @@ A bicubic interpolation scheme, cubic interpolation along two dimensions, was ap
 %========================================================================================
 
 \section{Results}
-The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at $\sqrt{s}=1.4$~TeV is shown in figure \ref{fig:finalresult1400GeV}.  This result shows the sensitivity after the application of preselection and MVA purposed to remove the included background channels.  These contours yield the one $\sigma$ confidence limit on the measurement of $\alpha_{4}$ to the range -0.0082, 0.0116 and similarly for the measurement of $\alpha_{5}$ to the range -0.0055, 0.0078.
+The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at $\sqrt{s}=1.4$~TeV is shown in figure \ref{fig:finalresult1400GeV}.  This result shows the sensitivity after the application of preselection and MVA purposed to remove the included background channels.  These contours yield the one $\sigma$ confidence limits for CLIC operating at $\sqrt{s}=1.4$~TeV of
+%
+\begin{equation}
+-0.0082 < \alpha_{4} < 0.0116 
+\end{equation}
+\noindent and 
+\begin{equation}
+-0.0055 < \alpha_{5} < 0.0078 \text{.}
+\end{equation}
+%
 
 \begin{figure}[h!]
 \centering
@@ -504,15 +517,15 @@ The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_
 %========================================================================================
 
 \subsection{Systematic Uncertainties}
-A source of systematic error in this experiment is the uncertainty on the cross sections for the signal and background final states.  Based on the selection efficiencies given in table \ref{table:selectionsummary1400GeV}, the $\chi^{2}$ fit procedure is applied on a distribution that primarily consists of the background final states $\text{qqqq}\nu$ arising from the interaction of $\text{e}^{+}$ and $\text{e}^{-}$ with beamstrahlung photons.  Therefore, uncertainties in the cross section for these backgrounds should be considered.  A detailed study of the accuracy of the relevant cross section calculations has yet to be performed for CLIC and so a wide spectrum in the uncertainty of these cross sections is considered here.   
+A source of systematic error in this experiment is the uncertainty on the cross sections for the signal and background final states.  Based on the selection efficiencies given in table \ref{table:selectionsummary1400GeV}, the distribution used to determine the sensitivity of CLIC to the anomalous gauge couplings primarily consists of $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ events, therefore, uncertainties on the cross section for these processes should be considered.  A detailed study of these processes is yet to be undertaken for CLIC, therefore, a broad span of cross section uncertainties is considered for completion.
 
-This systematic is included in the $\chi^{2}$ through the use of a nuisance parameter, whereby the cross section for the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ backgrounds are allowed to fluctuate.  The magnitude of the fluctuation of the cross section, $r$, is moderated by an additional penalty term in the $\chi^{2}$ as follows:
+The effect of the uncertainty on the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ cross sections is included in the $\chi^{2}$ through the use of a nuisance parameter.  The cross section for the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ processes are allowed to fluctuate, however, the magnitude of the fluctuation, $r$, is moderated by an additional penalty term in the $\chi^{2}$ as follows:
 
 \begin{equation}
 \chi^{2}(r) = \sum_{i} \frac{(O_{i} - E_{i}(r))^{2}}{E_{i}(r)} + \frac{(r-1)^{2}}{\sigma_{r}^{2}} \text{,}
 \end{equation}
 
-\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with no background fluctuations.  $E_{i}(r)$ is the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ background cross sections fluctuated by the factor $r$.  $\sum_{i}$ is the sum over the bins of the $M_{VV}$ distribution.  $\sigma_{r}$ is the width of the distribution of $r$, which indicates the uncertainty on the measurement of the background cross sections.  The $\chi^{2}$ surface is constructed in the space of $\alpha_{4}$ and $\alpha_{5}$ by minimising $\chi^{2}(r)$ at each point.  The 68\% confidence contour is shown with the inclusion of this nuisance parameter for various values of $\sigma_{r}$ in figure \ref{fig:nuisance1400GeV}.   
+\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with no background fluctuations.  $E_{i}(r)$ is the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ background cross sections fluctuated by the factor $r$.  $\sum_{i}$ is the sum over the bins of the $M_{VV}$ distribution.  The $\sigma_{r}$ variable is the width of the distribution of $r$, which indicates the uncertainty on the measurement of the background cross sections.  The $\chi^{2}$ surface is constructed in the space of $\alpha_{4}$ and $\alpha_{5}$ by minimising $\chi^{2}(r)$ at each point.  The 68\% confidence contour is shown with the inclusion of this nuisance parameter for various values of $\sigma_{r}$ in figure \ref{fig:nuisance1400GeV}.   
 
 \begin{figure}[h!]
 \centering
@@ -521,7 +534,7 @@ This systematic is included in the $\chi^{2}$ through the use of a nuisance para
 \label{fig:nuisance1400GeV}
 \end{figure}
 
-Minimal changes in sensitivity are observed when allowing the backgrounds to fluctuate even up to the 50\% level.  This can be understood by considering the shape of the $M_{VV}$ distribution for the signal, with and without the effect of anomalous couplings, and the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ backgrounds, which is shown in figure \ref{fig:nuisanceexplanation1400GeV}.  These distribution shows that anomalous couplings primarily affect events with large invariant masses, while these backgrounds peak at low invariant masses.  Therefore, by fluctuating the cross-section for the background processes it is not possible to gain a significantly better match between the observed and expected bin contents in the $M_{VV}$ distribution.  This is encouraging as despite these backgrounds dominating the fit being used to determine the sensitivity of CLIC to the anomalous gauge couplings, precise knowledge of their cross-section is not essential.
+Minimal changes in sensitivity are observed when allowing the backgrounds to fluctuate even up to the 50\% level.  This can be understood by considering the shape of the $M_{VV}$ distribution for the signal and the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ backgrounds, which is shown in figure \ref{fig:nuisanceexplanation1400GeV}.  These distribution shows that anomalous couplings primarily affect events with large invariant masses, while these backgrounds peak at low invariant masses.  Therefore, by fluctuating the cross-section for the background processes, it is not possible to gain a significantly better match between the observed and expected bin contents in the $M_{VV}$ distribution.  This is encouraging as despite these backgrounds dominating the $\chi^{2}$ fit that determinea the sensitivity of CLIC to the anomalous gauge couplings, precise knowledge of their cross-section is not crucial.
 
 \begin{figure}[h!]
 \centering
@@ -534,9 +547,9 @@ Minimal changes in sensitivity are observed when allowing the backgrounds to flu
 %========================================================================================
 
 \section{Sensitivity at $\sqrt{s}=3$~TeV}
-The anomalous gauge coupling sensitivity study described in this chapter was reproduced for CLIC operating at $\sqrt{s}=3$~TeV.  The procedure for the $\sqrt{s}=3$~TeV analysis largely mirrors that of the $\sqrt{s}=1.4$~TeV analysis, therefore, in this section only the differences between the analyses are highlighted.  
+The anomalous gauge coupling sensitivity study described in this chapter was repeated for CLIC operating at $\sqrt{s}=3$~TeV.  As this analysis largely mirrors that of the $\sqrt{s}=1.4$~TeV analysis, this section focuses on the differences between the two analyses.  
 
-The signal and background final states for the $\sqrt{s}=3$~TeV analysis were identical to those used for the $\sqrt{s}=1.4$~TeV analysis as described in section \ref{sec:eventgenerationandbackgrounds}.  The cross sections at $\sqrt{s}=3$~TeV for those signal and background final states can be found in table \ref{table:crosssection3000GeV}.  
+The signal and background final states for the $\sqrt{s}=3$~TeV analysis were identical to those used for the $\sqrt{s}=1.4$~TeV analysis.  Cross sections for these processes at $\sqrt{s}=3$~TeV are given in table \ref{table:crosssection3000GeV}.  
 
 \begin{table}[h!]
 \centering
@@ -572,11 +585,19 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 13050.3 \\
 
 The data analysis and event selection procedures used at $\sqrt{s}=3$~TeV mirrored those used at $\sqrt{s}=1.4$~TeV.  Descriptions of both can be found in sections \ref{sec:dataanalysis} and \ref{sec:eventselection} respectively.  
 
-Jet finding was performed using the longitudinally invariant $k_{t}$ algorithm as described in section \label{sec:jetpairing}.  Optimisation of the jet algorithm configuration, which uses pure signal only as described in section \ref{sec:optimaljetalgorithm}, found the optimal configuration at $\sqrt{s}=3$~TeV to be tight selected PFOs and an R parameter of 1.1.  As the cross section for the $\gamma\gamma \rightarrow hadrons$ increases with energy the impact of these background is more problematic at $\sqrt{s}=3$~TeV than $\sqrt{s}=1.4$~TeV \cite{arXiv:1209.4039}.  Therefore, it is to be expected that the optimal PFO selection at $\sqrt{s}=3$~TeV is more aggressive, tight selected PFOs, at vetoing these backgrounds than at $\sqrt{s}=1.4$~TeV, selected PFOs, which is what is observed.   
+Jet finding was performed using the longitudinally invariant $k_{t}$ algorithm as described in section \label{sec:jetpairing}.  The jet algorithm configuration was optimised using the sensitivity of CLIC to the anomalous gauge couplings using pure signal only as described in section \ref{sec:optimaljetalgorithm}.  The optimal jet algorithm configuration at $\sqrt{s}=3$~TeV used tight selected PFOs and an R parameter of 1.1.  The one sigma confidence limits using pure signal and this jet algorithm configuration were 
+%
+\begin{equation}
+-0.0003 < \alpha_{4} < 0.0003 
+\end{equation}
+\noindent and 
+\begin{equation}
+-0.0002 < \alpha_{5} < 0.0002 \text{.}
+\end{equation}
+%
+\noindent These limits represent the upper bound on the sensitivity of the CLIC experiment to the anomalous gauge couplings at $\sqrt{s}=3$~TeV.  As the cross section for the $\gamma\gamma \rightarrow hadrons$ increases with energy, the effect of these background is more problematic at $\sqrt{s}=3$~TeV than at $\sqrt{s}=1.4$~TeV \cite{arXiv:1209.4039}.  Therefore, it is to be expected that the optimal PFO selection at $\sqrt{s}=3$~TeV, tight selected PFOs, is more aggressive at vetoing these backgrounds than at $\sqrt{s}=1.4$~TeV, selected PFOs, which is what is observed.  
 
-As opposed to training the MVA using 50\% of the signal and background samples, as was done for the $\sqrt{s}=1.4$~TeV analysis, the $\sqrt{s}=3$~TeV analysis trained the MVA using 10\% of the signal and background samples.  This change was made to increase the sample size going forward to the sensitivity study to minimise the impact of a small number of events with very large anomalous coupling event weights that would otherwise skew the $M_{VV}$ distribution and bias the fit applied to it.  No such effect was seen at $\sqrt{s}=1.4$~TeV where the sensitivity to anomalous couplings is much lower than at $\sqrt{s}=3$~TeV.  The sample sizes were sufficiently large that training on 10\% of the total sample was sufficient to achieve good MVA performance.  
-
-The event selection for the $\sqrt{s}=3$~TeV analysis is summarised in table \ref{table:selectionsummary3000GeV}.
+As opposed to training the MVA using 50\% of the signal and background events, as was done for the $\sqrt{s}=1.4$~TeV analysis, the $\sqrt{s}=3$~TeV analysis trained the MVA using 10\% of the signal and background events.  This modification minimises the effect of events with large weights that would otherwise skew the $M_{VV}$ distribution and bias the fit.  No such effect was seen at $\sqrt{s}=1.4$~TeV where the sensitivity to anomalous couplings is much lower.  The sample sizes were sufficiently large that training on 10\% of the total sample was sufficient to achieve good MVA performance.  Event selection for the $\sqrt{s}=3$~TeV analysis is summarised in table \ref{table:selectionsummary3000GeV}.
 
 \begin{table}[h!]
 \centering
@@ -606,13 +627,30 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3.5\% & 0.4\% 
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 0.6\% & - & 4,124 \\
 \hline
 \end{tabular}
-\caption[Selection summary at $\sqrt{s}=3$~TeV.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Selection summary at $\sqrt{s}=3$~TeV.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
+\caption[Event selection efficiencies at $\sqrt{s}=3$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Event selection efficiencies at $\sqrt{s}=3$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
 \label{table:selectionsummary3000GeV}
 \end{table}
 
-Due to the increased sensitivity of the signal sample at $\sqrt{s}=3$~TeV, the stepping along $\alpha_{4}$ and $\alpha_{5}$ to extract the event weights from the generator was much finer than that used for the $\sqrt{s}=1.4$~TeV analysis.  At $\sqrt{s}=3$~TeV event weights were taken from the generator in steps of 0.00025 ranging from 0.0065 to -0.0065.  Bicubic interpolation was again used to make a continuous surface for the event weights.  These event weight surfaces were then used to construct the $M_{VV}$ distribution and the $\chi^{2}$ surface used to determine the reported sensitivities.
+Due to the increased sensitivity of the signal sample, event weights were sampled with greater frequency in the space of $\alpha_{4}$ and $\alpha_{5}$ at $\sqrt{s}=3$~TeV than at $\sqrt{s}=1.4$~TeV analysis.  Bicubic interpolation was again used to make a continuous surface for the event weights.  These event weight surfaces were then used to construct the $M_{VV}$ distribution and the $\chi^{2}$ surface used to determine the reported sensitivities.  Figure \ref{fig:eventweights3000} shows an example of the event weights extracted from the generator and the interpolated surface used to define the $\chi^{2}$ surface as a function of $\alpha_{4}$ and $\alpha_{5}$ for a selected $\nu\nu\text{qqqq}$ event at $\sqrt{s}=3$~TeV.
 
-The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at $\sqrt{s}=3$~TeV is shown in figure \ref{fig:finalresult3000GeV}.  This result shows the sensitivity after the application of preselection and MVA, described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV}, purposed to remove the included background channels.  These contours yield the one $\sigma$ confidence limit on the measurement of $\alpha_{4}$ to the range -0.0010 to 0.0011 and similarly for the measurement of $\alpha_{5}$ the range is -0.0007 to 0.0007.
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:weight3000GeV1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Raw.pdf}}
+\subfloat[]{\label{fig:weight3000GeV2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Interpolated.pdf}} 
+\caption[]{FILL IN}
+\label{fig:eventweights3000}
+\end{figure}
+
+The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at $\sqrt{s}=3$~TeV is shown in figure \ref{fig:finalresult3000GeV}.  This result shows the sensitivity after the application of preselection and MVA, described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV}, purposed to remove the included background channels.  These contours yield the one $\sigma$ confidence limit on the measurement of 
+%
+\begin{equation}
+-0.0010 < \alpha_{4} < 0.0011 
+\end{equation}
+\noindent and 
+\begin{equation}
+-0.0007 < \alpha_{5} < 0.0007 \text{.}
+\end{equation}
+%
 
 \begin{figure}[h!]
 \centering
