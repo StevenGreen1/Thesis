@@ -49,7 +49,7 @@ TGraph2D LoadTGraph2D(TString name)
     pTH3F->Draw();
 
     Graph2D->SetMarkerStyle(20);
-    Graph2D->SetMarkerColor(kBlue);
+    Graph2D->SetMarkerColor(kBlack);
     Graph2D->SetMinimum(0.75);
     Graph2D->SetMaximum(1.25);
     Graph2D->Draw("p same");
