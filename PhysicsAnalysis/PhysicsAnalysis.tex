@@ -1,4 +1,4 @@
-\chapter{The sensitivity of CLIC to anomalous gauge couplings through vector boson scattering}
+\chapter{The Sensitivity of CLIC to Anomalous Gauge Couplings through Vector Boson Scattering}
 \label{chap:PhysicsAnalysis}
 
 \chapterquote{Kids, you tried your best, and you failed miserably.  The lesson is, never try.}%
@@ -129,7 +129,7 @@ Figure \ref{fig:eventweights1400raw} shows the dependence of the event weights o
 \subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}} \hfill
 \subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
 \subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
-\caption[The event weight as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.]{The event weight as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.}
+\caption[The event weights, w, determined by the generator as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.]{The event weights, w, determined by the generator as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.}
 \label{fig:eventweights1400raw}
 \end{figure}
 
@@ -223,16 +223,13 @@ The optimisation procedure involved performing the sensitivity study, described 
 Figure \ref{fig:chi2jetalgoideal1400GeV} shows confidence contours, given a null hypothesis of $\alpha_{4} = \alpha_{5} = 0$, for the optimal jet configuration at $\sqrt{s}=1.4$~TeV.  Figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} show the one dimensional $\chi^{2}$ distribution for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the optimal jet configuration at $\sqrt{s}=1.4$~TeV.  These distributions give one sigma confidence limits on the anomalous gauge couplings of
 %
 \begin{equation}
--0.0038 < \alpha_{4} < 0.0047 
-\end{equation}
-\noindent and 
-\begin{equation}
+-0.0038 < \alpha_{4} < 0.0047 \text{,} \\
 -0.0027 < \alpha_{5} < 0.0030 \text{.}
 \end{equation}
 %
 \noindent These confidence limits represent the idealised sensitivity of the CLIC experiment to the anomalous gauge couplings.  Once the effects of backgrounds and event selection are included in the analysis, these confidence limits will increase in size.
 
-\begin{figure}
+\begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_Optimal.pdf}}\hfill
 \subfloat[]{\label{fig:a4chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4_Optimal.pdf}}
@@ -268,7 +265,7 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 48.9 \\
 \subsection{Discriminant Variables} 
 \label{sec:analysisprocessor}
 The next stage of the analysis involved the calculation of a number of event-based variables that were found to be useful for this analysis.  The variables that were calculated are as follows
-
+%
 \begin{itemize}
 \item \textbf{Particle level} variables:
 
@@ -323,7 +320,7 @@ Figure \ref{fig:jeteenrgyresolutionphysicsanalysis} shows the jet energy resolut
 
 \section{Event Selection}
 \label{sec:eventselection}
-This section discusses the event selection procedure that is applied in this analysis.  The goal of this procedure is to isolate the \nu{\nu}qqqq final state from the backgrounds final states, i.e. those containing two and four primary quarks.  The procedure consists of a set of preselection cuts followed by the application of a multivariate analysis (MVA).  All event numbers used in this analysis have been normalised, prior to event selection, to an integrated luminosity ($\mathcal{L}_{int}$) of 1.5 (2) $\text{ab}^{-1}$ for CLIC running at $\sqrt{s}=1.4~(3)$~TeV.
+This section discusses the event selection procedure that is applied in this analysis.  The goal of this procedure is to isolate the \nu{\nu}qqqq final state from the backgrounds final states, i.e. those containing two and four primary quarks.  The procedure consists of a set of preselection cuts followed by the application of a multivariate analysis (MVA).  All event numbers used in this analysis have been normalised, prior to event selection, to an integrated luminosity, $\mathcal{L}_{int}$, of 1.5 (2) $\text{ab}^{-1}$ for CLIC running at $\sqrt{s}=1.4~(3)$~TeV.
 
 %========================================================================================
 
@@ -486,7 +483,7 @@ A bicubic interpolation scheme, cubic interpolation along the two dimensions, wa
 \subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}} \hfill
 \subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
 \subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
-\caption[A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The hollow circles show the event weight produced from the generator, while the surface shown is found using bicubic interpolation between those points.]{A selection of plots showing how the event weight changes when varying the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The hollow circles show the event weight produced from the generator, while the surface shown is found using bicubic interpolation between those points.}
+\caption[The event weight, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The black circles show the event weight produced from the generator and the blue surface is determined using bicubic interpolation between these points.]{The event weight, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The black circles show the event weight produced from the generator and the blue surface is determined using bicubic interpolation between these points.}
 \label{fig:eventweights1400interpolated}
 \end{figure}
 
@@ -497,10 +494,7 @@ A bicubic interpolation scheme, cubic interpolation along the two dimensions, wa
 The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at $\sqrt{s}=1.4$~TeV is shown in figure \ref{fig:finalresult1400GeV}.  This result shows the sensitivity after the application of preselection and MVA purposed to remove the included background channels.  These contours yield the one $\sigma$ confidence limits for CLIC operating at $\sqrt{s}=1.4$~TeV of
 %
 \begin{equation}
--0.0082 < \alpha_{4} < 0.0116 
-\end{equation}
-\noindent and 
-\begin{equation}
+-0.0082 < \alpha_{4} < 0.0116 \text{,} \\
 -0.0055 < \alpha_{5} < 0.0078 \text{.}
 \end{equation}
 %
@@ -525,7 +519,7 @@ The effect of the uncertainty on the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarr
 \chi^{2}(r) = \sum_{i} \frac{(O_{i} - E_{i}(r))^{2}}{E_{i}(r)} + \frac{(r-1)^{2}}{\sigma_{r}^{2}} \text{,}
 \end{equation}
 
-\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with no background fluctuations.  $E_{i}(r)$ is the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ background cross sections fluctuated by the factor $r$.  $\sum_{i}$ is the sum over the bins of the $M_{VV}$ distribution.  The $\sigma_{r}$ variable is the width of the distribution of $r$, which indicates the uncertainty on the measurement of the background cross sections.  The $\chi^{2}$ surface is constructed in the space of $\alpha_{4}$ and $\alpha_{5}$ by minimising $\chi^{2}(r)$ at each point.  The 68\% confidence contour is shown with the inclusion of this nuisance parameter for various values of $\sigma_{r}$ in figure \ref{fig:nuisance1400GeV}.   
+\noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with no background fluctuations.  $E_{i}(r)$ is the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with the $\gamma_{\text{BS}}\text{e}^{\pm} \rightarrow \text{qqqq}\nu$ background cross sections fluctuated by the factor $r$.  $\sum_{i}$ is the sum over the bins of the $M_{VV}$ distribution.  The $\sigma_{r}$ variable is the width of the distribution of $r$, which indicates the uncertainty on the measurement of the background cross sections.  The $\chi^{2}$ surface is constructed in the space of $\alpha_{4}$ and $\alpha_{5}$ by minimising $\chi^{2}(r)$ at each point.  The 68\% confidence contour is shown with the inclusion of this nuisance parameter for selected values of $\sigma_{r}$ in figure \ref{fig:nuisance1400GeV}.   
 
 \begin{figure}[h!]
 \centering
@@ -586,15 +580,12 @@ $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 13050.3 \\
 The data analysis and event selection procedures used at $\sqrt{s}=3$~TeV mirrored those used at $\sqrt{s}=1.4$~TeV.  Descriptions of both can be found in sections \ref{sec:dataanalysis} and \ref{sec:eventselection} respectively.  
 
 Jet finding was performed using the longitudinally invariant $k_{t}$ algorithm as described in section \label{sec:jetpairing}.  The jet algorithm configuration was optimised using the sensitivity of CLIC to the anomalous gauge couplings using pure signal only as described in section \ref{sec:optimaljetalgorithm}.  The optimal jet algorithm configuration at $\sqrt{s}=3$~TeV used tight selected PFOs and an R parameter of 1.1.  The one sigma confidence limits using pure signal and this jet algorithm configuration were 
-%
+
 \begin{equation}
--0.0003 < \alpha_{4} < 0.0003 
-\end{equation}
-\noindent and 
-\begin{equation}
+-0.0003 < \alpha_{4} < 0.0003 \text{,} \\
 -0.0002 < \alpha_{5} < 0.0002 \text{.}
 \end{equation}
-%
+
 \noindent These limits represent the upper bound on the sensitivity of the CLIC experiment to the anomalous gauge couplings at $\sqrt{s}=3$~TeV.  As the cross section for the $\gamma\gamma \rightarrow hadrons$ increases with energy, the effect of these background is more problematic at $\sqrt{s}=3$~TeV than at $\sqrt{s}=1.4$~TeV \cite{arXiv:1209.4039}.  Therefore, it is to be expected that the optimal PFO selection at $\sqrt{s}=3$~TeV, tight selected PFOs, is more aggressive at vetoing these backgrounds than at $\sqrt{s}=1.4$~TeV, selected PFOs, which is what is observed.  
 
 As opposed to training the MVA using 50\% of the signal and background events, as was done for the $\sqrt{s}=1.4$~TeV analysis, the $\sqrt{s}=3$~TeV analysis trained the MVA using 10\% of the signal and background events.  This modification minimises the effect of events with large weights that would otherwise skew the $M_{VV}$ distribution and bias the fit.  No such effect was seen at $\sqrt{s}=1.4$~TeV where the sensitivity to anomalous couplings is much lower.  The sample sizes were sufficiently large that training on 10\% of the total sample was sufficient to achieve good MVA performance.  Event selection for the $\sqrt{s}=3$~TeV analysis is summarised in table \ref{table:selectionsummary3000GeV}.
@@ -637,17 +628,14 @@ Due to the increased sensitivity of the signal sample, event weights were sample
 \centering
 \subfloat[]{\label{fig:weight3000GeV1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Raw.pdf}}
 \subfloat[]{\label{fig:weight3000GeV2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Interpolated.pdf}} 
-\caption[]{FILL IN}
+\caption[The event weights, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selected \nu{\nu}qqqq final state events at $\sqrt{s}=3$~TeV.  These weights are calculated using \protect\subref{fig:weight3000GeV1} the generator and \protect\subref{fig:weight3000GeV2} bicubic interpolation.]{The event weights, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selected \nu{\nu}qqqq final state events at $\sqrt{s}=3$~TeV.  These weights are calculated using \protect\subref{fig:weight3000GeV1} the generator and \protect\subref{fig:weight3000GeV2} bicubic interpolation.}
 \label{fig:eventweights3000}
 \end{figure}
 
 The sensitivity of the CLIC experiment to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ at $\sqrt{s}=3$~TeV is shown in figure \ref{fig:finalresult3000GeV}.  This result shows the sensitivity after the application of preselection and MVA, described in sections \ref{sec:preselection1400GeV} and \ref{sec:mva1400GeV}, purposed to remove the included background channels.  These contours yield the one $\sigma$ confidence limit on the measurement of 
 %
 \begin{equation}
--0.0010 < \alpha_{4} < 0.0011 
-\end{equation}
-\noindent and 
-\begin{equation}
+-0.0010 < \alpha_{4} < 0.0011 \text{,} \\
 -0.0007 < \alpha_{5} < 0.0007 \text{.}
 \end{equation}
 %
