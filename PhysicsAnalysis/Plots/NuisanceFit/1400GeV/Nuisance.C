@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: Canvas_Nuisance/
-//=========  (Fri May  5 09:29:22 2017) by ROOT version5.34/37
-   TCanvas *Canvas_Nuisance = new TCanvas("Canvas_Nuisance", "",0,45,600,600);
+//=========  (Fri Jul  7 10:08:43 2017) by ROOT version5.34/37
+   TCanvas *Canvas_Nuisance = new TCanvas("Canvas_Nuisance", "",1108,1125,600,600);
    gStyle->SetOptStat(0);
    Canvas_Nuisance->Range(-0.03875,-0.035,0.03625,0.04);
    Canvas_Nuisance->SetFillColor(0);
@@ -1704,7 +1704,7 @@
    graph2d->SetPoint(1679,0.05,0.0475,1866.312);
    graph2d->SetPoint(1680,0.05,0.05,2009.613);
    graph2d->Draw("cont1");
-   TExec *exec = new TExec("ex4","Int_t colors4[] = {0, kCyan, 1}; gStyle->SetPalette((sizeof(colors4)/sizeof(Int_t)), colors4);");
+   TExec *exec = new TExec("ex4","Int_t colors4[] = {0, kBlue, 1}; gStyle->SetPalette((sizeof(colors4)/sizeof(Int_t)), colors4);");
    exec->Draw();
    
    graph2d = new TGraph2D(1600);
@@ -3346,7 +3346,7 @@
    entry->SetTextFont(132);
    entry=leg->AddEntry("","50%","l");
 
-   ci = TColor::GetColor("#00ffff");
+   ci = TColor::GetColor("#0000ff");
    entry->SetLineColor(ci);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);

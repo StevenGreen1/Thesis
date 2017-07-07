@@ -22,7 +22,7 @@ void NuisancePlot()
     TH1F *pTH1FDummy3 = new TH1F();
     pTH1FDummy3->SetLineColor(418);
     TH1F *pTH1FDummy4 = new TH1F();
-    pTH1FDummy4->SetLineColor(kCyan);
+    pTH1FDummy4->SetLineColor(kBlue);
 
     gStyle->SetLegendBorderSize(1); 
 
@@ -46,7 +46,7 @@ void NuisancePlot()
     TExec *ex1 = new TExec("ex1","Int_t colors1[] = {0, 1, 1}; gStyle->SetPalette((sizeof(colors1)/sizeof(Int_t)), colors1);"); // Black
     TExec *ex2 = new TExec("ex2","Int_t colors2[] = {0, 2, 1}; gStyle->SetPalette((sizeof(colors2)/sizeof(Int_t)), colors2);"); // Red
     TExec *ex3 = new TExec("ex3","Int_t colors3[] = {0, 418, 1}; gStyle->SetPalette((sizeof(colors3)/sizeof(Int_t)), colors3);"); // Green
-    TExec *ex4 = new TExec("ex4","Int_t colors4[] = {0, kCyan, 1}; gStyle->SetPalette((sizeof(colors4)/sizeof(Int_t)), colors4);"); // Blue
+    TExec *ex4 = new TExec("ex4","Int_t colors4[] = {0, kBlue, 1}; gStyle->SetPalette((sizeof(colors4)/sizeof(Int_t)), colors4);"); // Blue
 
     TCanvas *pTCanvas = new TCanvas("Canvas_Nuisance", "", 600, 600);
     pTCanvas->SetRightMargin(0.15);
