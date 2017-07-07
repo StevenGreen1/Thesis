@@ -83,7 +83,7 @@ void SensitiveDistributionsMass()
     pTCanvas->SetTopMargin(0.05);
     pTCanvas->SetBottomMargin(0.125);
 
-    TLegend *pTLegend = new TLegend(0.35, 0.7, 0.75, 0.9);
+    TLegend *pTLegend = new TLegend(0.4, 0.7, 0.75, 0.9);
     pTLegend->SetFillStyle(0);
     pTLegend->SetTextSize(0.05);
     pTLegend->AddEntry(pTH1F_0_0, "#alpha_{4} = #alpha_{5} = 0", "l");
