@@ -61,7 +61,7 @@ CLICpix is a hybrid pixel readout chip that has been developed for the CLIC vert
 
 The CLICpix operates using a shutter-based readout, where the entire matrix is kept active while the shutter is open and when closed the matrix is readout in its entirety.  This is designed to match the expected beam structure for the CLIC experiment, as the accelerator will deliver bunch trains of $e^{+}$ and $e^{-}$ that are separated by 20~ms.  Each bunch train contains 312~bunches with a spacing of 0.5~ns, giving a total train length of 156~ns.  Furthermore, the shutter-based readout is well suited to power-pulsing, where the power to the front-end electronics is turned off between bunch crossings.  This helps to significantly reduce the power consumption of the detector.
 
-The threshold voltage, the voltage required for the discriminator to register an output, seen by each CLICpix pixel is slightly different due to variations in the manufacturing process.  If these variations are not accounted for then the behaviour of the device across the matrix will not be uniform.  To minimise the impact of these fluctuations, each CLICpix pixel contains a 4-bit local adjustment to the threshold voltage, which is calibrated to unify the response across the matrix.  The threshold 'equalisation' is achieved by performing two threshold scans across the matrix, once with all four bits set to 0 (no local threshold adjustment), and a second time with all four bits set to 1 (maximum local threshold adjustment).  For each scan, the baseline voltage of each pixel is determined. By applying a linear interpolation between the 0000 and 1111 cases, each pixel can be tuned to a common point, such that all pixels respond at the same global threshold.
+The threshold voltage, the voltage required for the discriminator to register an output, seen by each CLICpix pixel is slightly different due to variations in the manufacturing process.  If these variations are not accounted for then the behaviour of the device across the matrix will not be uniform.  To minimise the impact of these fluctuations, each CLICpix pixel contains a 4-bit local adjustment to the threshold voltage, which is calibrated to unify the response across the matrix.  The threshold "equalisation" is achieved by performing two threshold scans across the matrix, once with all four bits set to 0 (no local threshold adjustment), and a second time with all four bits set to 1 (maximum local threshold adjustment).  For each scan, the baseline voltage of each pixel is determined. By applying a linear interpolation between the 0000 and 1111 cases, each pixel can be tuned to a common point, such that all pixels respond at the same global threshold.
 
 %========================================================================================
 
@@ -109,7 +109,7 @@ The full details of the glueing procedure can be found in [CERN FABRICATION NOTE
 %========================================================================================
 
 \section{Device Characterisation}
-A series of lab experiments were used to characterise the devices produced for this alignment study.  The devices were also tested in realistic experimental conditions using the CERN SPS test beam.  Due to the complexities of testing devices in a test beam, extensive lab test were performed first to characterise as many properties of the assemblies as possible.  The lab experiments performed were as follows:
+A series of laboratory experiments were used to characterise the devices produced for this alignment study.  The devices were also tested in realistic experimental conditions using the CERN SPS test beam.  Due to the complexities of testing devices in a test beam, extensive laboratory test were performed first to characterise as many properties of the assemblies as possible.  The laboratory experiments performed were:
 
 \begin{itemize}
 \item \textbf{Radioactive source measurements}.  The goal of this measurement is to measure the response of the CCPDv3 and CLICpix when a radioactive source is used to deposit charge within the CCPDv3 sensor.  
@@ -120,13 +120,12 @@ A series of lab experiments were used to characterise the devices produced for t
 
 \subsection{Source Measurements}
 \label{sec:source}
-
 A radioactive source was used to deposit charge within the CCPDv3 sensor and the response of the CCPDv3 and CLICpix examined.  The CCPDv3 sensor converts the deposited charge into a voltage, which in turn passes through the capacitive glue layer and into the CLICpix chip.  Measurements were made of the output voltage produced by the CCPDv3 and the response of the CLICpix readout chip, in units of ToT.  As the exact amount of charge deposited by the radioactive source is unknown, calibration of the CCPDv3 is not possible.  Instead, this experiment focuses on examining the shape of the voltage produced by the CCPDv3 and determining the response of the CLICpix chip as a function of this voltage.  As the CCPDv3 signal passes through the capacitively coupled glue layer before entering the CLICpix chip, this study characterises the properties of the gluing layer as well as the sensor and readout chips.
 
 %========================================================================================
 
 \subsubsection{Experimental Setup}
-The radioactive material used in this study was $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu_{e}}$, and it is the $\text{e}^{-}$ that goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  
+The radioactive material used in this study was $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu}_{\text{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  
 
 The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter, which is located in the CLICpix chip, was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  Examples of CCPDv3 output voltage pulses when using the $\text{Sr}^{90}$ source can be seen in figure \ref{fig:pulseshapes}.  The analogue output has a baseline voltage of $\approx 1.15$~V, with signal saturation occurring around a height of 700~mV.  
 
@@ -161,7 +160,7 @@ Examples of the calculation of these metrics for a representative pulse is shown
 
 %========================================================================================
 
-\subsubsection{Results - Rise Time vs Pulse Height}
+\subsubsection{Results: Rise Time vs Pulse Height}
 \label{sec:resultsrisetimepulseheight}
 The mean rise time as function of pulse height for the CCPDv3 output voltage is shown in figure \ref{fig:risetime}.  This was determined by binning the measurements in pulse height and determining the mean rise time for measurements in each bin.  The pulse height was binned using a bin width of 4 mV ranging from 0 to 700 mV.  A minimum of 10 measurements per bin were used for the calculation of the average rise time.  The error bars on this figure show the standard error in the mean rise time.  Data was only included in this analysis if the on-pixel event counter registered a single hit in the time window used to take data.
 
@@ -176,7 +175,7 @@ The data in figure \ref{fig:risetime} shows that the rise time for the CCPDv3 fr
 
 %========================================================================================
 
-\subsubsection{Results - ToT vs Pulse Height}
+\subsubsection{Results: ToT vs Pulse Height}
 \label{sec:resultstotpulseheight}
 The mean ToT measured in the CLICpix as a function of the CCPDv3 output voltage pulse height is shown in figure \ref{fig:tot}.  Determination of the mean and error bars for the ToT as a function of pulse height measurement is identical to that described above for the rise time as a function of pulse height measurement.   
 
@@ -191,7 +190,7 @@ For samples where the CCPDv3 and CLICpix are centred, the distribution of the me
 
 %========================================================================================
 
-\subsubsection{Results - Cross Couplings}
+\subsubsection{Results: Cross Couplings}
 Capacitive coupling of the sensor to the readout ASIC can also lead to unwanted signals being induced on neighbouring pixels, due to non-zero stray capacitances. Cross-coupling is the transfer of signal from a sensor pad to the readout ASIC on an adjacent pad, which will occur if there is a non-negligible capacitance between the two pads.  Signals are still transferred between the aligned sensor and readout pads, however, if the cross-capacitance is large enough unwanted additional hits in the neighbouring pads will be created.  This issue is particularly relevant for this study as any misalignment between the sensor and readout pads will result in an increase in the cross-capacitance along the direction of the misalignment.   
 
 Any effects of cross-coupling can be studied using the same setup as was used in section \ref{sec:resultstotpulseheight} for the ToT against pulse height analysis, but by instead considering the ToT on the adjacent CLICpix pixel along the direction of the misalignment.  The mean ToT on the adjacent pixel is shown as a function of the pulse height for all devices where the CCPDv3 and CLICpix are aligned in figure \ref{fig:totcrosscoupling1} and for the misaligned samples in figure \ref{fig:totcrosscoupling2}.
@@ -231,7 +230,7 @@ To prevent any influence from neighbouring pixels during the testpulse measureme
 %========================================================================================
 
 \subsubsection{Analysis}
-The functional form of the ToT against pulse height plot will be described using a surrogate function \cite{AlipourTehrani:2054922}, which is defined as:  
+The functional form of the ToT against pulse height plot will be described using a surrogate function \cite{AlipourTehrani:2054922}
 \begin{equation}
 y  = ax + b  - \frac{c}{x-t} \text{,}
 \end{equation}
@@ -249,7 +248,6 @@ y  = ax + b  - \frac{c}{x-t} \text{,}
 
 \subsubsection{Results}
 \label{sec:testpulsecalibrationresults}
-
 A known issue with the design of the CLICpix ASIC is the unwanted feedback capacitance between the discriminator output and amplifier input.  This feedback leads to an additional fixed injected charge being measured for each recorded hit, due to the firing of the discriminator.  The magnitude of this effect differs between even and odd columns across the CLICpix matrix due to slight differences in the physical layouts of alternating columns.  By examining the distribution of the surrogate fit parameters, shown for SET 9 in figure \ref{fig:fitparams}, this effect can be seen.  
 
 \begin{figure}[h!]
@@ -356,13 +354,15 @@ The metric used for characterising the device performance in the test beam is th
 The data indicates that for all assemblies the single hit efficiency of the detector decreases when a higher amount of charge is required to generate a signal, which is to be expected.  However, the efficiency of all samples, with the exception of the $\frac{1}{2}$-offset sample, is still above 99\% up to a threshold of 2000 electrons.  This is encouraging behaviour as the larger the threshold that can be applied the lower the effects from noise will be.  Reducing the effects from noise will aid tracking performance in the CLIC vertex detector, which is highly desirable.  It is clear that the $\frac{1}{2}$ offset sample, SET 16, has a much lower efficiency as a function of threshold in comparison to the other samples.  For the same deposited charge in the CCPDv3 the $\frac{1}{2}$-offset sample will, due to the reduced capacitance, produce a smaller signal in the CLICpix than the centred samples.  This is the cause of the reduced efficiency as a function of threshold in this sample.  More encouragingly is the behaviour of the $\frac{1}{4}$-offset sample, SET 14, which in terms of performance is comparable to the aligned samples.  There is a degradation in efficiency of the $\frac{1}{4}$-offset sample with respect to the aligned sampled, which is to be expected given the reduced capacitance, however, it is relatively small.  These results indicate that even with a relatively large misalignment between the CCPDv3 and CLICpix pads the device performance is not significantly affected, and therefore manufacturing tolerances of $\frac{1}{4}$ of a pixel width would not be problematic if this device were used for the CLIC vertex detector.
 
 %========================================================================================
-%\section{Conclusions}
-%In summary, for the capacitively coupled pixel detectors considered in this analysis:
-%
-%\begin{itemize}
-%\item The CCPDv3 sensor ASIC properties have been characterised and were found to be comparable across all devices.
-%\item A calibration of the CLICpix readout ASIC was performed and their behaviour was found to be comparable across all devices.  
-%\item Combining the CCPDv3 and CLICpix characterisations it becomes clear that any performance differences between the devices are due to the capacitive coupling gluing layer as opposed to the intrinsic behaviour of the ASICs.
-%\item Test beam analysis of the devices found that device fabrication tolerances of up to $\frac{1}{4}$ of a pixel width would not harm the performance of these devices should they be used for the CLIC vertex detector.  
-%\end{itemize}
+
+\section{Conclusions}
+In summary, for the capacitively coupled pixel detectors considered in this analysis:
+
+\begin{itemize}
+\item The CCPDv3 sensor ASIC properties have been characterised and were found to be comparable across all devices.
+\item A calibration of the CLICpix readout ASIC was performed and their behaviour was found to be comparable across all devices.  
+\item When combining the CCPDv3 and CLICpix characterisations, it becomes clear that any performance differences between the devices are due to the capacitive coupling gluing layer as opposed to the intrinsic behaviour of the ASICs.
+\item Test beam analysis of the devices found that device fabrication tolerances of up to $\frac{1}{4}$ of a pixel width would not harm the performance of these devices should they be used for the CLIC vertex detector.  
+\end{itemize}
+
 %========================================================================================
