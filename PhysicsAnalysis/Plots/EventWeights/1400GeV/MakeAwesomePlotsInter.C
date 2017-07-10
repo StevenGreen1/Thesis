@@ -3,9 +3,9 @@ void MakeAwesomePlotsInter(TString name)
    const Int_t NRGBs = 2;
    const Int_t NCont = 99;
    Double_t stops[NRGBs] = { 0.00, 1.00 };
-   Double_t red2[NRGBs]   = { 0.40, 0.00 };
-   Double_t green2[NRGBs] = { 0.70, 0.00 };
-   Double_t blue2[NRGBs]  = { 1.00, 0.60 };
+   Double_t red2[NRGBs]   = { 0.498, 0.498 };
+   Double_t green2[NRGBs] = { 0.553, 0.553 };
+   Double_t blue2[NRGBs]  = { 0.878, 0.878 };
    TColor::CreateGradientColorTable(NRGBs, stops, red2, green2, blue2, NCont);
 
    LoadTGraph2D(name);
