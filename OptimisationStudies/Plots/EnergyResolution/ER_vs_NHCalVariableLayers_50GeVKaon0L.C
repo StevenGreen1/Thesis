@@ -18,7 +18,7 @@
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);
-   axesEj->GetXaxis()->SetTitle("N_{Readout Layers HCal}");
+   axesEj->GetXaxis()->SetTitle("N_{HCal}");
    axesEj->GetXaxis()->SetNdivisions(505);
    axesEj->GetXaxis()->SetLabelFont(132);
    axesEj->GetXaxis()->SetLabelSize(0.05);
@@ -61,4 +61,5 @@
    c1_n4->Modified();
    c1_n4->cd();
    c1_n4->SetSelected(c1_n4);
+   c1_n4->SaveAs("ER_vs_NHCalVariableLayers_50GeVKaon0L.pdf");
 }
