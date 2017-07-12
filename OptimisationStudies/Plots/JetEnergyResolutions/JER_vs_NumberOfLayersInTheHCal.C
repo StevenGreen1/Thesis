@@ -12,7 +12,7 @@
     pAxesEj->GetYaxis()->SetDecimals();
     pAxesEj->GetYaxis()->SetTitleSize(0.05);
     pAxesEj->GetYaxis()->SetLabelSize(0.05);
-    pAxesEj->GetXaxis()->SetTitle("N_{Readout Layers HCal}");
+    pAxesEj->GetXaxis()->SetTitle("N_{HCal}");
     pAxesEj->GetXaxis()->SetTitleOffset(0.95);
     pAxesEj->GetXaxis()->SetDecimals();
     pAxesEj->GetXaxis()->SetTitleSize(0.05);
