@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: KtLPFOsR0p90_Alpha5/
-//=========  (Wed May  3 11:47:53 2017) by ROOT version5.34/37
+//=========  (Mon Jul 17 12:13:16 2017) by ROOT version5.34/37
    TCanvas *KtLPFOsR0p90_Alpha5 = new TCanvas("KtLPFOsR0p90_Alpha5", "",0,45,600,600);
    gStyle->SetOptStat(0);
    KtLPFOsR0p90_Alpha5->Range(-0.0231472,-3,0.0171088,17);
@@ -60,31 +60,31 @@
    graph->SetPoint(33,0.016,508.981038);
    graph->SetPoint(34,0.017,610.7915982);
    
-   TH1F *Graph_Graph12 = new TH1F("Graph_Graph12","",100,-0.0204,0.0204);
-   Graph_Graph12->SetMinimum(0);
-   Graph_Graph12->SetMaximum(15);
-   Graph_Graph12->SetDirectory(0);
-   Graph_Graph12->SetStats(0);
-   Graph_Graph12->SetLineWidth(2);
-   Graph_Graph12->GetXaxis()->SetTitle("#alpha_{5}");
-   Graph_Graph12->GetXaxis()->SetRange(14,87);
-   Graph_Graph12->GetXaxis()->SetNdivisions(5);
-   Graph_Graph12->GetXaxis()->SetLabelFont(132);
-   Graph_Graph12->GetXaxis()->SetLabelOffset(0.025);
-   Graph_Graph12->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph12->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph12->GetXaxis()->SetTitleOffset(1.2);
-   Graph_Graph12->GetXaxis()->SetTitleFont(132);
-   Graph_Graph12->GetYaxis()->SetTitle("#chi^{2}");
-   Graph_Graph12->GetYaxis()->SetLabelFont(132);
-   Graph_Graph12->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph12->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph12->GetYaxis()->SetTitleFont(132);
-   Graph_Graph12->GetZaxis()->SetLabelFont(132);
-   Graph_Graph12->GetZaxis()->SetLabelSize(0.05);
-   Graph_Graph12->GetZaxis()->SetTitleSize(0.05);
-   Graph_Graph12->GetZaxis()->SetTitleFont(132);
-   graph->SetHistogram(Graph_Graph12);
+   TH1F *Graph_Graph4 = new TH1F("Graph_Graph4","",100,-0.0204,0.0204);
+   Graph_Graph4->SetMinimum(0);
+   Graph_Graph4->SetMaximum(15);
+   Graph_Graph4->SetDirectory(0);
+   Graph_Graph4->SetStats(0);
+   Graph_Graph4->SetLineWidth(2);
+   Graph_Graph4->GetXaxis()->SetTitle("#alpha_{5}");
+   Graph_Graph4->GetXaxis()->SetRange(14,87);
+   Graph_Graph4->GetXaxis()->SetNdivisions(5);
+   Graph_Graph4->GetXaxis()->SetLabelFont(132);
+   Graph_Graph4->GetXaxis()->SetLabelOffset(0.025);
+   Graph_Graph4->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph4->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph4->GetXaxis()->SetTitleOffset(1.2);
+   Graph_Graph4->GetXaxis()->SetTitleFont(132);
+   Graph_Graph4->GetYaxis()->SetTitle("#chi^{2}");
+   Graph_Graph4->GetYaxis()->SetLabelFont(132);
+   Graph_Graph4->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph4->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph4->GetYaxis()->SetTitleFont(132);
+   Graph_Graph4->GetZaxis()->SetLabelFont(132);
+   Graph_Graph4->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph4->GetZaxis()->SetTitleSize(0.05);
+   Graph_Graph4->GetZaxis()->SetTitleFont(132);
+   graph->SetHistogram(Graph_Graph4);
    
    
    TF1 *Alpha5Fit = new TF1("Alpha5Fit","[0]*x+[1]*x*x+[2]*x*x*x+[3]*x*x*x*x",-0.005,0.005);
@@ -156,7 +156,7 @@
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
 
-   ci = 10022;
+   ci = 10010;
    color = new TColor(ci, 1, 1, 1, " ", 0);
    leg->SetLineColor(ci);
    leg->SetLineStyle(1);

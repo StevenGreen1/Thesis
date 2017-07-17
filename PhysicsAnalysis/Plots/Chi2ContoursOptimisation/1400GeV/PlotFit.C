@@ -18,6 +18,7 @@ void PlotFit()
 
 //    MakePlots(name2, "Longitudinally Invariant Kt, Selected PFOs, R = 0.7", "KtSPFOsR0p70");
     MakePlots(name3, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "KtSPFOsR0p90");
+    MakePlots(name8, "Longitudinally Invariant Kt, Loose Selected PFOs, R = 0.9", "KtLPFOsR0p90");
 /*
     MakePlots(name5, "Longitudinally Invariant Kt, Selected PFOs, R = 1.1", "KtSPFOsR1p10");
     MakePlots(name6, "Longitudinally Invariant Kt, Tight Selected PFOs, R = 0.7", "KtTPFOsR0p70");

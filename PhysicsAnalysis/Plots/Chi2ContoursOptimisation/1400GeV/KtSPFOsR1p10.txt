@@ -4,3 +4,5 @@ The 1D confidence limits for alpha 4 are (-0.00358925, 0.00330415)
 The 1D confidence limits for alpha 5 are (-0.00245081, 0.0028826)
 -0.00359 & 0.0033
 -0.00245 & 0.00288
+
+Actually upper limit on a4 is 0.0048.  Problem with fit.

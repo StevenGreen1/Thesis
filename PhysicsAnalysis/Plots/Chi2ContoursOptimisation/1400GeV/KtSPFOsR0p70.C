@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: KtSPFOsR0p70/
-//=========  (Wed May  3 11:47:45 2017) by ROOT version5.34/37
+//=========  (Mon Jul 17 12:12:16 2017) by ROOT version5.34/37
    TCanvas *KtSPFOsR0p70 = new TCanvas("KtSPFOsR0p70", "",0,45,600,600);
    gStyle->SetOptStat(0);
    KtSPFOsR0p70->Range(-0.02606667,-0.0238,0.01926667,0.02153333);
@@ -1249,7 +1249,7 @@
    graph2d->SetPoint(1224,0.017,0.017,2137.902);
    graph2d->Draw("cont1");
    
-   TLegend *leg = new TLegend(0.25,0.2,0.6,0.35,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.225,0.175,0.575,0.325,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);

@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: KtSPFOsR0p90_Alpha5/
-//=========  (Fri May  5 14:54:57 2017) by ROOT version5.34/37
+//=========  (Mon Jul 17 12:13:14 2017) by ROOT version5.34/37
    TCanvas *KtSPFOsR0p90_Alpha5 = new TCanvas("KtSPFOsR0p90_Alpha5", "",0,45,600,600);
    gStyle->SetOptStat(0);
    KtSPFOsR0p90_Alpha5->Range(-0.0231472,-3,0.0171088,17);
