@@ -197,7 +197,7 @@
    Graph_Graph1->GetZaxis()->SetTitleFont(132);
    gre->SetHistogram(Graph_Graph1);
    
-   gre->Draw("apl");
+   gre->Draw("ap");
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);

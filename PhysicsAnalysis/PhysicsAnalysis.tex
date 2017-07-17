@@ -30,13 +30,13 @@ Anomalous triple and quartic gauge couplings are introduced as parameters in eff
 \label{fig:fermitheory}
 \end{figure}
 
-The study presented in this chapter examines the anomalous quartic gauge couplings $\alpha_{4}$ and $\alpha_{5}$ through vector boson scattering process.  The anomalous gauge couplings that are to be examined are introduced as part of an EFT that is described in chapter \ref{chap:anomalousgaugecouplingtheory}.  These couplings appear in the Lagrangian through the following terms:
+The study presented in this chapter examines the anomalous quartic gauge couplings $\alpha_{4}$ and $\alpha_{5}$ through vector boson scattering process.  The anomalous gauge couplings that are to be examined are introduced as part of an EFT that is described in chapter \ref{chap:anomalousgaugecouplingtheory}.  These couplings appear in the Lagrangian through the following terms
 %
 \begin{equation}
-\alpha_{4}[\text{Tr}(V^{\mu}V_{\mu})]^{2} \text{ and } \alpha_{5}\text{Tr}(V^{\mu}V_{\nu})] \text{Tr}(V^{\nu}V_{\mu})]\text{,}
+\alpha_{4}[\text{Tr}(V^{\mu}V_{\mu})]^{2} \quad \text{ and } \quad \alpha_{5}\text{Tr}(V^{\mu}V_{\nu})] \text{Tr}(V^{\nu}V_{\mu})]\text{ ,}
 \end{equation}
 %
-\noindent where $V_{\mu}$ corresponds, in a carefully chosen gauge, to a linear combination of the massive gauge bosons $\text{W}^{+}$, $\text{W}^{-}$ and Z.  These terms modify the Standard Model vertices $\text{W}^{+}\text{W}^{-} \rightarrow \text{W}^{+}\text{W}^{-}$ and $\text{W}^{+}\text{W}^{-} \rightarrow \text{Z}\text{Z}$ as well as introducing the new vertex $\text{Z}\text{Z} \rightarrow \text{Z}\text{Z}$.  The anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ can be studies in vector boson scattering processes such as those shown in figure \ref{fig:vectorbosonscatteringclic}.  
+\noindent where $V_{\mu}$ corresponds, in a carefully chosen gauge, to a linear combination of the massive gauge bosons $\text{W}^{+}$, $\text{W}^{-}$ and Z.  These terms modify the Standard Model vertices $\text{W}^{+}\text{W}^{-} \rightarrow \text{W}^{+}\text{W}^{-}$ and $\text{W}^{+}\text{W}^{-} \rightarrow \text{Z}\text{Z}$ as well as introducing the new vertex $\text{Z}\text{Z} \rightarrow \text{Z}\text{Z}$.  The anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ can be studied in vector boson scattering processes such as those shown in figure \ref{fig:vectorbosonscatteringclic}.  
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:vbsclic1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC1.pdf}} \hfill
@@ -76,7 +76,7 @@ Events were generated using Whizard \cite{0708.4233, hep-ph/0102195} version 1.9
 \centering
 \begin{tabular}{ l r }
 \hline
-Final State & Cross Section $\sqrt{s}=1.4$~TeV [fb] \\ 
+Final State & Cross Section [fb] \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 110.4\\
@@ -100,28 +100,32 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 4018.7\\
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 21406.2\\
 \hline
 \end{tabular}
-\caption[Cross sections of signal and background processes at $\sqrt{s}=1.4$~TeV]{Cross sections of signal and background processes at $\sqrt{s}=1.4$~TeV.  In the above table q represents u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$;  l represents $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$; and $\nu$ represents $\nu_{e}$, $\overline{\nu_{e}}$, $\nu_{\mu}$, $\overline{\nu_{\mu}}$, $\nu_{\tau}$ and $\overline{\nu_{\tau}}$.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\caption[Cross sections of signal and background processes at $\sqrt{s}=1.4$~TeV]{Cross sections of signal and background processes at $\sqrt{s}=1.4$~TeV.  In the above table q represents u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$;  l represents $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$; and $\nu$ represents $\nu_{e}$, $\overline{\nu}_{\text{e}}$, $\nu_{\mu}$, $\overline{\nu}_{\mu}$, $\nu_{\tau}$ and $\overline{\nu}_{\tau}$.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
 \label{table:crosssection1400GeV}
 \end{table}
 
 Monte-Carlo (MC) samples were simulated using the CLID\_ILD detector model \cite{arXiv:1006.3396}.  Further details of this detector model can be found in chapter \ref{chap:pflowandlcdetectors}.  The simulation was performed in MOKKA \cite{MoradeFreitas:2002kj}, which is a GEANT4 \cite{Agostinelli:2002hh} wrapper providing detailed geometric descriptions of detector concepts for the linear collider.  Events were reconstructed using the MARLIN \cite{Gaede:2006pj} c++ framework, designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter \ref{chap:pflowandlcdetectors}.
   
-The effect of the $\gamma\gamma \rightarrow hadrons$ backgrounds, discussed in section \ref{sec:beamrelatedbackgrounds}, were incorporated in the analysis by overlaying $\gamma\gamma \rightarrow hadrons$ events onto the signal and background event samples.  The overlaid backgrounds were added prior to reconstruction so that their impact on the reconstruction was fully accounted for.  For a given event, the exact number of background events overlaid is drawn from a Poisson distribution with a mean of 1.3 (3.2) events per bunch crossing at $\sqrt{s}=1.4$~(3)~TeV \cite{Linssen:2012hp}.  
+The effect of the $\gamma\gamma \rightarrow hadrons$ backgrounds, discussed in section \ref{sec:beamrelatedbackgrounds}, were incorporated in the analysis by overlaying $\gamma\gamma \rightarrow hadrons$ events onto the signal and background event samples.  The overlaid backgrounds were added prior to reconstruction so that their impact on the reconstruction was fully accounted for.  For each physics event of interest, $\gamma\gamma \rightarrow hadrons$ background events equivalent to 60 bunch crossings (BXs) are included.  As readout time windows are applied in detector readout, 60 BXs is sufficient for accounting for the $\gamma\gamma \rightarrow hadrons$ backgrounds.  These backgrounds occur in a time window of $-5$~ns to 25~ns around the physics event and the BXs are separated by 0.5~ns, to mimic the CLIC bunch train structure.  The number of background events overlaid per BX is drawn from a Poisson distribution with a mean of 1.3 (3.2) events per bunch crossing at $\sqrt{s}=1.4$~(3)~TeV \cite{Linssen:2012hp}.  
+
+Detector readout is simulated using a readout time window, of 10~ns on all detectors apart from the TPC and HCal barrel.  All hits are kept in the TPC, while a 100~ns time window is used in the HCal barrel to account for the additional time it takes hadronic showers to develop in tungsten.  All readout times are corrected for straight time-of-flight to the impact point (IP).  Any hits that have are measured outside of these windows are not used in the reconstruction.   
  
 %========================================================================================
 %========================================================================================
 
 \section{Modelling of Anomalous Gauge Couplings}
 \label{sec:modellingofanomalouscouplings}
-The samples that were sensitive to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ were generated using Whizard version 1.97, instead of the previously quoted version 1.95.  This change was required as version 1.97 contained a unitarisation scheme that ensured cross sections for processes involving longitudinal gauge boson scattering were bound at the energies considered here.  
+The samples that were sensitive to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$ were generated using Whizard version 1.97, instead of the previously quoted version 1.95.  This change was required as version 1.97 contained a unitarisation scheme that ensured cross sections for processes involving longitudinal gauge boson scattering did not violate unitarity at the energies considered here.  
 
-Two alternative methods exist for modelling the sensitive of the vector boson scattering process to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.  The first is to generate multiple samples with different values of $\alpha_{4}$ and $\alpha_{5}$ and the second is to generate a single sample with $\alpha_{4} = 0$ and $\alpha_{5} = 0$ and reweight that sample.  The latter approach was taken in this analysis as the former approach is impractical when considering a fine sampling of the $\alpha_{4}$ and $\alpha_{5}$ space.
+Two alternative methods exist for modelling the sensitivity of the vector boson scattering process to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.  The first is to generate multiple samples with different values of $\alpha_{4}$ and $\alpha_{5}$ and the second is to generate a single sample with $\alpha_{4} = 0$ and $\alpha_{5} = 0$ and reweight that sample.  The latter approach was taken in this analysis as the former approach is impractical when considering a fine sampling of the $\alpha_{4}$ and $\alpha_{5}$ space.
 
 Event weights, $w$, are calculated according to the ratio of the matrix elements, $M$, for the particular event configuration \cite{WhizardManual}
+%
 \begin{equation}
-w(\alpha_{4},\alpha_{5}) = \bigg(\frac{M(event,\alpha_{4},\alpha_{5})}{M(event,0,0)}\bigg)^{2} \text{.}
+w(\alpha_{4},\alpha_{5}) = \frac{|M(event,\alpha_{4},\alpha_{5})|^{2}}{|M(event,0,0)|^{2}} \text{.}
 \end{equation}
-Figure \ref{fig:eventweights1400raw} shows the dependence of the event weights on $\alpha_{4}$ and $\alpha_{5}$ for four selected $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.
+%
+Figure \ref{fig:eventweights1400raw} shows the dependence of the event weights on $\alpha_{4}$ and $\alpha_{5}$ for four individual \nu{\nu}qqqq final state events, generated at $\sqrt{s}=1.4$~TeV.
 
 \begin{figure}[h!]
 \centering
@@ -129,7 +133,7 @@ Figure \ref{fig:eventweights1400raw} shows the dependence of the event weights o
 \subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}} \hfill
 \subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
 \subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf}}
-\caption[The event weights, w, determined by the generator as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.]{The event weights, w, determined by the generator as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.}
+\caption[The event weights, $w$, determined by the generator as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.]{The event weights, $w$, determined by the generator as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of \nu{\nu}qqqq final state events at $\sqrt{s}=1.4$~TeV.}
 \label{fig:eventweights1400raw}
 \end{figure}
 
@@ -151,9 +155,9 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \text{llqqqq}$ & 62.1 & 68.6 & +10.5 \\
 \label{table:crosssectionsensitivity1400}
 \end{table}
 
-To maximise the sensitivity to the anomalous gauge couplings, the \nu{\nu}qqqq final state is used to define signal in this analysis.  The l{\nu}qqqq and llqqqq final states are treated as backgrounds that are invariant to changes in $\alpha_{4}$ and $\alpha_{5}$ because they have a much reduced sensitivity to the anomalous gauge couplings in comparison to the \nu{\nu}qqqq final state.  Furthermore, the l{\nu}qqqq and llqqqq final states can be easily vetoed during event selection, because to the presence of the primary lepton, which means the sensitivity of these states to the anomalous gauge couplings will have a negligible effect on the results from this study.
+To maximise the sensitivity to the anomalous gauge couplings, the \nu{\nu}qqqq final state is used to define signal in this analysis.  The l{\nu}qqqq and llqqqq final states are treated as backgrounds that are invariant to changes in $\alpha_{4}$ and $\alpha_{5}$ because they have a much reduced sensitivity to the anomalous gauge couplings in comparison to the \nu{\nu}qqqq final state.  Furthermore, the l{\nu}qqqq and llqqqq final states can be easily vetoed during event selection because of the presence of the primary lepton, which means the sensitivity of these states to the anomalous gauge couplings will have a negligible effect on the results from this study.
 
-Modelling of the anomalous gauge coupling $\alpha_{4}$ and $\alpha_{5}$ in Whizard enforces a unit CKM matrix.  No significant differences were observed when comparing a number of reconstructed level distributions for \nu{\nu}qqqq final state events generated with Whizard using a Standard Model and unit CKM matrix, which indcates that enforcing a unit CKM matrix had a negligible effect on this analysis.  
+Use of the unitarisation scheme in Whizard 1.97, which is needed to ensure cross sections do not violate unitarity when studying anomalous gauge couplings at CLIC like energies, requires a unit CKM matrix \cite{WhizardManual}.  The impact of this requirement was examined by comparing several reconstructed and MC distributions for \nu{\nu}qqqq final state events generated with Whizard using a Standard Model and unit CKM matrix.  No significant differences were observed, which indicates that enforcing a unit CKM matrix when generating the \nu{\nu}qqqq final state samples did not significantly affect this analysis.  
 
 %========================================================================================
 %========================================================================================
@@ -186,12 +190,12 @@ where ${\Delta}R^{2}_{ij} = (y_{i} - y_{j})^2 + (\phi_{i} - \phi_{j})^2$, $p_{ti
 \item Repeat until the desired number of jets is created.  Alternatively, in inclusive mode this would be repeated until no particles are left in the event.
 \end{enumerate}
 
-\noindent Two other clustering algorithms were considered, but, as figure \ref{fig:invariantmassalgoveto} shows, were found to be inappropriate for the experimental conditions at CLIC.  These alternative algorithm choices are applied in the same manner as the longitudinally invariant $k_{t}$ algorithm, however, they differ in the definition of $d_{ij}$ and $d_{iB}$.
+\noindent Two other clustering algorithms were considered, however, they were found to be inappropriate for the experimental conditions at CLIC.  These alternative algorithm choices are applied in the same manner as the longitudinally invariant $k_{t}$ algorithm, however, they differ in the definition of $d_{ij}$ and $d_{iB}$.  Figure \ref{fig:invariantmassalgoveto} shows the distribution of the invariant mass of the candidate bosons for $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events for each of the jet algorithms considered.  The candidate boson masses are determined by forcing the events into 4 jets and then pairing the jet pairs to form candidate bosons.  The jet pairing configuration is determined by pairing jets such that the mass differences between the two candidate bosons is a minimum.  
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto.pdf}
-\caption[The reconstructed masses for different choices of jet algorithm for $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The masses are determined by forcing the events into 4 jets and then pairing the jet pairs to form candidate bosons.  The jet pairing configuration is determined by pairing jets such that the mass differences between the two candidate bosons is a minimum.  These samples should be dominated by vector boson scattering involving pairs of outgoing W bosons and so it is expected that a peak at the W boson mass, $m_{W} = 80.385 \pm 0.015$~GeV \cite{Beringer:1900zz}, should be observed.  As this does not occur for the Cambridge-Aachen algorithm or the EE\_kt algorithm they were deemed unsuitable for this analysis. In the case of the kt algorithm and the EE\_kt algorithm an R parameter of 0.7 was used.]{The reconstructed masses for different choices of jet algorithm for $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The masses are determined by forcing the events into 4 jets and then pairing the jet pairs to form candidate bosons.  The jet pairing configuration is determined by pairing jets such that the mass differences between the two candidate bosons is a minimum.  These samples should be dominated by vector boson scattering involving pairs of outgoing W bosons and so it is expected that a peak at the W boson mass, $m_{W} = 80.385 \pm 0.015$~GeV \cite{Beringer:1900zz}, should be observed.  As this does not occur for the Cambridge-Aachen algorithm or the EE\_kt algorithm they were deemed unsuitable for this analysis. In the case of the kt algorithm and the EE\_kt algorithm an R parameter of 0.7 was used.}
+\caption[The reconstructed masses for different choices of jet algorithm for $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  These samples should be dominated by vector boson scattering involving pairs of outgoing W bosons and so it is expected that a peak at the W boson mass, $m_{W} = 80.385 \pm 0.015$~GeV \cite{Beringer:1900zz}, should be observed.  In the case of the kt algorithm and the EE\_kt algorithm an R parameter of 0.7 was used.]{The reconstructed masses for different choices of jet algorithm for $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  These samples should be dominated by vector boson scattering involving pairs of outgoing W bosons and so it is expected that a peak at the W boson mass, $m_{W} = 80.385 \pm 0.015$~GeV \cite{Beringer:1900zz}, should be observed.  In the case of the kt algorithm and the EE\_kt algorithm an R parameter of 0.7 was used.}
 \label{fig:invariantmassalgoveto}
 \end{figure}
 
@@ -210,25 +214,38 @@ d_{ij} = {\Delta}R_{ij}^{2}/R^2 \text{ ,} \\
 d_{iB} = 1 \text{ .}
 \end{equation}
 %
-\noindent This algorithm performs poorly as it does not accounts for the transverse momentum or the energy of the particles being clustered. In essence, this is a cone clustering algorithm with a cone radius defined through ${\Delta}R_{ij} = R$, which even for large R was found to discard too much energy in the event to be useful for this analysis.  This can be seen in figure \ref{fig:invariantmassalgoveto} where the invariant mass of the paired jets is much lower than expected.  This algorithm is appropriate for events that contain highly boosted jets, however, at CLIC the jets are too disperse for this algorithm to be successful.
+\noindent This algorithm performs poorly as it does not account for the transverse momentum or the energy of the particles being clustered. In essence, this is a cone clustering algorithm with a cone radius defined through ${\Delta}R_{ij} = R$, which even for large R was found to discard too much energy in the event to be useful for this analysis.  This can be seen in figure \ref{fig:invariantmassalgoveto} where the invariant mass of the paired jets is much lower than expected.  This algorithm is appropriate for events that contain highly boosted jets, however, at CLIC the jets are too disperse for this algorithm to be successful.
 
 %========================================================================================
 
 \subsubsection{Optimal Jet Finding Algorithm}
 \label{sec:optimaljetalgorithm}
-Optimisation of the jet finding procedure was performed on both the PFO selection and the value of the R parameter used in the longitudinally invariant $k_{t}$ algorithm.   The optimal configuration for the jet algorithm at $\sqrt{s}=1.4$~TeV was found to use default selected PFOs and an R parameter of 0.9.
+Optimisation of the jet finding procedure was performed on both the PFO selection and the value of the R parameter used in the longitudinally invariant $k_{t}$ algorithm.  The optimisation procedure involved performing the sensitivity study, described in section \ref{sec:fitting}, using solely the {\nu}{\nu}qqqq signal final state.  This methodology ensures that the optimisation was done with respect to the physics of interest without having to perform the jet reconstruction for the large number of background events for each jet algorithm configuration considered. 
 
-The optimisation procedure involved performing the sensitivity study, described in section \ref{sec:fitting}, using solely the {\nu}{\nu}qqqq signal final state.  This methodology ensures that the optimisation was done with respect to the physics of interest without having to perform the jet reconstruction for the large number of background events for each jet algorithm configuration considered. 
+Table \ref{table:precisionsignaljetalgo1400GeV} shows the one $\sigma$ confidence limits on the measurement of $\alpha_{4}$ and $\alpha_{5}$ obtained using the {\nu}{\nu}qqqq signal final state only at $\sqrt{s} = 1.4$~TeV for different jet algorithm configurations.  These confidence limits represent the idealised sensitivity of the CLIC experiment to the anomalous gauge couplings.  Once the effects of backgrounds and event selection are included in the analysis, these confidence limits will increase in size.
 
-Figure \ref{fig:chi2jetalgoideal1400GeV} shows confidence contours, given a null hypothesis of $\alpha_{4} = \alpha_{5} = 0$, for the optimal jet configuration at $\sqrt{s}=1.4$~TeV.  Figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} show the one dimensional $\chi^{2}$ distribution for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the optimal jet configuration at $\sqrt{s}=1.4$~TeV.  These distributions give one sigma confidence limits on the anomalous gauge couplings of
-%
-\begin{equation}
--0.0038 < \alpha_{4} < 0.0047 \text{,} \\
--0.0027 < \alpha_{5} < 0.0030 \text{.}
-\end{equation}
-%
-\noindent These confidence limits represent the idealised sensitivity of the CLIC experiment to the anomalous gauge couplings.  Once the effects of backgrounds and event selection are included in the analysis, these confidence limits will increase in size.
+\begin{table}[h!]
+\centering
+\begin{tabular}{l l l l}
+\hline
+& \multicolumn{3}{c}{PFO Selection} \\ 
+R Parameter & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\ 
+\hline
+\multirow{ 2}{*}{0.7} & $-0.0039 < \alpha_{4} < 0.0051$ & $-0.0035 < \alpha_{4} < 0.0047$ & $-0.0037 < \alpha_{4} < 0.0047$ \\
+                                & $-0.0027 < \alpha_{5} < 0.0031$ & $-0.0025 < \alpha_{5} < 0.0031$ & $-0.0024 < \alpha_{5} < 0.0028$ \\
+\hline
+\multirow{ 2}{*}{0.9} & $-0.0036 < \alpha_{4} < 0.0047$ & $-0.0035 < \alpha_{4} < 0.0045$ & $-0.0035 < \alpha_{4} < 0.0045$ \\
+                                & $-0.0026 < \alpha_{5} < 0.0031$ & $-0.0023 < \alpha_{5} < 0.0027$ & $-0.0022 < \alpha_{5} < 0.0027$ \\
+\hline
+\multirow{ 2}{*}{1.1} & $-0.0036 < \alpha_{4} < 0.0047$ & $-0.0036 < \alpha_{4} < 0.0048$ & $-0.0036 < \alpha_{4} < 0.0046$ \\
+                                & $-0.0026 < \alpha_{5} < 0.0031$ & $-0.0025 < \alpha_{5} < 0.0029$ & $-0.0024 < \alpha_{5} < 0.0028$ \\
+\hline
+\end{tabular}
+\caption[One $\sigma$ confidence limits on the measurement of $\alpha_{4}$ and $\alpha_{5}$ obtained using the {\nu}{\nu}qqqq signal final state only at $\sqrt{s} = 1.4$~TeV for different jet algorithm configurations.]{One $\sigma$ confidence limits on the measurement of $\alpha_{4}$ and $\alpha_{4}$ obtained using the {\nu}{\nu}qqqq signal final state only at $\sqrt{s} = 1.4$~TeV for different jet algorithm configurations.}
+\label{table:precisionsignaljetalgo1400GeV}
+\end{table}
 
+The configuration for the jet algorithm for the $\sqrt{s}=1.4$~TeV analysis was chosen as selected PFOs with an R parameter of 0.9.  While the loose PFO selection gives a marginally better performance, the selected PFO selection was preferred to minimise the effects of the $\gamma\gamma \rightarrow hadrons$ background.  Figure \ref{fig:chi2jetalgoideal1400GeV} shows confidence contours, given a null hypothesis of $\alpha_{4} = \alpha_{5} = 0$, for the selected PFO and R parameter of 0.9 jet algorithm configuration at $\sqrt{s}=1.4$~TeV.  Figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} show the one dimensional $\chi^{2}$ distribution for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the same configuration.  
 \begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:chi2jetalgoideal1400GeV}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_Optimal.pdf}}\hfill
@@ -244,7 +261,7 @@ Figure \ref{fig:chi2jetalgoideal1400GeV} shows confidence contours, given a null
 \label{sec:isolatedleptonfinding}
 An isolated lepton finder was included in the analysis chain to reject background final states containing primary leptons.  Leptons produced via hadronisation are unlikely to be flagged as isolated because all hadronisation products are boosted along the direction of the parent quark.  This means isolated leptons are likely to correspond to primary leptons, which makes the number of isolated leptons a powerful discriminating variable to use in event selection.  
 
-The isolated lepton finder determines whether a PFO is an electron or muon by first checking that the PFO has a single charged particle track associated to it.  If that is the case, the calorimetric energy deposits of the PFO are examined to see if they are consistent with what is expected for an electron or muon.  If they are consistent with expectations, the properties of the charged particle track are examined to determine whether the track originates from the IP.  If the PFO is deemed to have originated from the IP, isolation checks, which examine the energy deposited in the calorimeters within a cone surrounding the PFO, are applied to determine whether the particles belongs to a jet.  If the PFO does not appear to belong to a jet then it is counted as an isolated lepton.  The efficiency of the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.   
+The isolated lepton finder determines whether a PFO is an electron or muon by first checking that the PFO has a single charged particle track associated to it.  If that is the case, the calorimetric energy deposits of the PFO are examined to see if they are consistent with what is expected for an electron or muon.  If they are consistent with expectations, the properties of the charged particle track are examined to determine whether the track originates from the IP.  If the PFO is deemed to have originated from the IP, isolation checks, which examine the energy deposited in the calorimeters within a cone surrounding the PFO, are applied to determine whether the particles belongs to a jet.  If the PFO does not appear to belong to a jet then it is counted as an isolated lepton.  The fraction of events rejected by the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.   
 
 \begin{table}[h!]
 \centering
@@ -256,7 +273,7 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 99.7 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 48.9 \\
 \hline
 \end{tabular}
-\caption[The efficiency of isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and l{\nu}qqqq final states.]{The efficiency of isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and l{\nu}qqqq final states.  Efficiency here is defined as the fraction of events where no isolated leptons were found.}
+\caption[The fraction of events rejected by of isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and l{\nu}qqqq final states.]{The fraction of events rejected by of isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and l{\nu}qqqq final states.}
 \label{table:efficiencyleptonfinding}
 \end{table}
 
@@ -270,43 +287,44 @@ The next stage of the analysis involved the calculation of a number of event-bas
 \item \textbf{Particle level} variables:
 
 \begin{itemize}
-\item Number of PFOs in each jet.
-\item Energy of the highest energy PFO.
-\item Energy of the highest energy electron.
-\item Cosine of the polar angle of the highest energy track.
+\item Number of PFOs in each jet;
+\item Energy of the highest energy PFO;
+\item Energy of the highest energy electron;
+\item Cosine of the polar angle of the highest energy track;
 \item The number of isolated leptons found using the isolated lepton finder.
 \end{itemize}
 
 \item \textbf{Candidate boson} variables:
-
 \begin{itemize}
-\item Energy of the candidate bosons.
-\item Invariant mass of the candidate bosons.
+\item Energy of the candidate bosons;
+\item Invariant mass of the candidate bosons;
 \item Acolinearity of the candidate boson pair, which is defined as 180 degrees minus the opening angle of the pair of bosons in the rest frame of the detector.
 \end{itemize}
 
 \item \textbf{Event based} variables:  
-
 \begin{itemize}
-\item The invariant mass of the visible system, $M_{VV}$.
-\item The vector sum of the transverse momentum of all PFOs in the event. 
-\item Sphericity, defined through the sphericity tensor $S^{ab}$:
+\item The invariant mass of the visible system, $M_{VV}$;
+\item The vector sum of the transverse momentum of all PFOs in the event;
+\item Sphericity, defined through the sphericity tensor $S^{ab}$;
 \begin{equation}
 S^{ab} = \frac{\Sigma_{i}p^{\alpha}_{i}p^{\alpha}_{j}}{\Sigma_{i,\alpha=1,2,3}|p^{\alpha}_{i|^{2}}}
 \end{equation}
 Where $p_{i}$ are the components of the momenta of PFO $i$ in the rest frame of the detector and the sum $\Sigma_{i}$ runs over all particles in the event.  Sphericity is defined as $\text{S} = \frac{3}{2}(\lambda_{2} + \lambda_{3})$, where $\lambda_{i}$ are the eigenvalues of the sphericity tensor defined such $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3}$.  This provides a measure of how spherical the reconstructed event topology is with isotropic events having $S \approx 1$, while two jet events have $S \approx 0$.
 \end{itemize}
 
-\item \textbf{Jet clustering parameters}, $y_{ij}$ where $i = 3,4$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  
+\item \textbf{Jet clustering parameters} variables:
+\begin{itemize}
+\item The $y_{ij}$ variables where $i = 3,4$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  
+\end{itemize}
 \end{itemize}
 
 %========================================================================================
 
 \subsection{Jet Energy Resolution at CLIC} 
 \label{sec:jetenergyresolution}
-The importance of the jet energy resolution that is extensively discussed in chapters \ref{chapt:energyestimators} and \ref{chap:detopt} should be emphasised at this point.  Many of the discriminant variables that are calculated for this analysis are dependant upon the jet energy resolution.  In particular, all variables related to the candidate bosons that are formed from pairing up jets, are dependent upon the measurement of jet energies.  
+The importance of the jet energy resolution, which is extensively discussed in chapters \ref{chapt:energyestimators} and \ref{chap:detopt}, should be emphasised at this point.  Many of the discriminant variables that are calculated for this analysis are dependant upon the jet energy resolution.  In particular, all variables related to the candidate bosons that are formed from pairing up jets, are dependent upon the measurement of jet energies.  
 
-Figure \ref{fig:jeteenrgyresolutionphysicsanalysis} shows the jet energy resolution as a function of the MC jet energy for the {\nu}{\nu}qqqq event sample used in the $\sqrt{s}=1.4$~TeV analysis.  The MC jet energy was obtained by pairing up quarks appearing in the final state to the reconstructed jets.  The events were then binned in terms of their MC jet energy and the jet energy resolution calculated for each bin.  When calculating the jet energy resolution, a narrower range of jet energies was used in compared to previous studies, 60\% of the data with narrowest RMS as opposed to 90\%, to minimise the effects of jet finding and beam-induced backgrounds.  The jet energy resolutions reported here are worse than those quoted in earlier chapters, however, this is to be expected given the effects of jet finding and beam-induced backgrounds.
+Figure \ref{fig:jeteenrgyresolutionphysicsanalysis} shows the jet energy resolution as a function of the MC jet energy for the {\nu}{\nu}qqqq event sample used in the $\sqrt{s}=1.4$~TeV analysis.  The MC jet energy was obtained by pairing up quarks appearing in the final state to the reconstructed jets.  The events were then binned in terms of their MC jet energy and the jet energy resolution calculated for each bin.  When calculating the jet energy resolution, a narrower range of jet energies was used in compared to previous studies, 60\% of the data with narrowest RMS as opposed to 90\%, to minimise the effects of jet finding and beam-induced backgrounds.  The jet energy resolutions reported here are worse than those quoted in earlier chapters.  This is to be expected given the effects of jet finding and beam-induced backgrounds.
 
 \begin{figure}
 \centering
@@ -320,27 +338,27 @@ Figure \ref{fig:jeteenrgyresolutionphysicsanalysis} shows the jet energy resolut
 
 \section{Event Selection}
 \label{sec:eventselection}
-This section discusses the event selection procedure that is applied in this analysis.  The goal of this procedure is to isolate the \nu{\nu}qqqq final state from the backgrounds final states, i.e. those containing two and four primary quarks.  The procedure consists of a set of preselection cuts followed by the application of a multivariate analysis (MVA).  All event numbers used in this analysis have been normalised, prior to event selection, to an integrated luminosity, $\mathcal{L}_{int}$, of 1.5 (2) $\text{ab}^{-1}$ for CLIC running at $\sqrt{s}=1.4~(3)$~TeV.
+This section discusses the event selection procedure.  The goal of this procedure is to isolate the \nu{\nu}qqqq final state from the background final states, i.e. those containing two and four primary quarks.  The procedure consists of a set of preselection cuts followed by the application of a multivariate analysis (MVA).  All event numbers  have been normalised, prior to event selection, to an integrated luminosity of $\mathcal{L}_{int} = 1.5\text{ ab}^{-1}$ for the $\sqrt{s} = 1.4$~TeV analysis and $\mathcal{L}_{int} = 2\text{ ab}^{-1}$  for the $\sqrt{s} = 3$~TeV analysis.  
 
 %========================================================================================
 
 \subsection{Preselection}
 \label{sec:preselection1400GeV}
-A refined selection of the \nu{\nu}qqqq signal final state is achieved using MVA, however, to ensure efficiency in the training and application of that MVA a number of simple preselection cuts were developed to veto obvious background final states prior to the application of the MVA.  Preselection cuts were applied to the transverse momentum of the system and the number of isolated leptons found in the event.  The raw distributions of these variables is shown in figure \ref{fig:preselection1400} and based on these distributions the following cuts were applied
+A refined selection of the \nu{\nu}qqqq signal final state is achieved using a MVA, however, to ensure efficiency in the training and application of that MVA a number of simple preselection cuts were developed to veto obvious background final states prior to the application of the MVA.  Preselection cuts were applied to the transverse momentum of the system and the number of isolated leptons found in the event.  The raw distributions of these variables is shown in figure \ref{fig:preselection1400} and based on these distributions the following cuts were applied
 %
 \begin{itemize}
 \item Transverse momentum of system > 100~GeV.  This cut is effective due to the presence of missing energy in the form of neutrinos in the signal final state.
 \item Number of isolated leptons in system = 0.  This cut is effective as the signal final state does not contain leptons, while numerous background final states do.  
 \end{itemize}
 %
-\noindent The impact of these preselection cuts can be found in table \ref{table:selectionsummary1400GeV} in section \ref{sec:eventselsummary1400GeV}.
+\noindent The impact of these preselection cuts can be found in table \ref{table:selectionsummary1400GeV}, which can be found on page \pageref{table:selectionsummary1400GeV}.
 
 \begin{figure}[h!]
 \centering
 \subfloat[]{\label{fig:preselection1400_1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf}}
 \subfloat[]{\label{fig:preselection1400_2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf}} \hfill
-\subfloat[]{\label{fig:preselection1400_3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}}
-\caption[Distribution of variables cut on in the preselection at $\sqrt{s}=1.4$~TeV.  \protect\subref{fig:preselection1400_1} The transverse momentum of the visible system.  \protect\subref{fig:preselection1400_2} The number of isolated leptons in the system.  \protect\subref{fig:preselection1400_3} The legend for the preceding plots.]{Distribution of variables cut on in the preselection at $\sqrt{s}=1.4$~TeV.  \protect\subref{fig:preselection1400_1} The transverse momentum of the visible system.  \protect\subref{fig:preselection1400_2} The number of isolated leptons in the system.  \protect\subref{fig:preselection1400_3} The legend for the preceding plots.}
+\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}
+\caption[Distribution of the preselection cut variables at $\sqrt{s}=1.4$~TeV: \protect\subref{fig:preselection1400_1} the transverse momentum of the visible system; and \protect\subref{fig:preselection1400_2} the number of isolated leptons in the system.]{Distribution of the preselection cut variables at $\sqrt{s}=1.4$~TeV: \protect\subref{fig:preselection1400_1} the transverse momentum of the visible system; and \protect\subref{fig:preselection1400_2} the number of isolated leptons in the system.}
 \label{fig:preselection1400}
 \end{figure}
 
@@ -348,17 +366,21 @@ A refined selection of the \nu{\nu}qqqq signal final state is achieved using MVA
 
 \subsection{Multivariate analysis}
 \label{sec:mva1400GeV}
-Having established the preselection cuts a MVA was applied, using the TMVA toolkit \cite{Hocker:2007ht}, to refine the event selection.  The signal and background final state samples were halved; one half sample was used to train the MVA and the remaining half sample was used in the subsequent analysis.  The following variables were used for training of the MVA
+Having established the preselection cuts, a MVA was applied using the TMVA toolkit \cite{Hocker:2007ht}, to refine the event selection.  The signal and background final state samples were separated into two equally sized samples; one sample was used to train the MVA and the other sample was used in the subsequent analysis.  
+
+HERE
+
+The following variables were used for training of the MVA:
 \begin{itemize}
-\item Number of PFOs in each jet. 
-\item Energy of the highest energy PFO.
-\item Energy of the highest energy electron.
-\item Cosine of the polar angle of the highest energy track.
-\item Energy of the candidate bosons.
-\item Invariant mass of the candidate bosons.
-\item Acolinearity of the candidate boson pair.
-\item The vector sum of the transverse momentum of all PFOs in the event. 
-\item The sphericity of the event. 
+\item Number of PFOs in each jet;
+\item Energy of the highest energy PFO;
+\item Energy of the highest energy electron;
+\item Cosine of the polar angle of the highest energy track;
+\item Energy of the candidate bosons;
+\item Invariant mass of the candidate bosons;
+\item Acolinearity of the candidate boson pair;
+\item The vector sum of the transverse momentum of all PFOs in the event;
+\item The sphericity of the event;
 \item The derived jet clustering parameter variables $-\text{log}_{10}(y_{ij})$ where $y_{ij}$ are jet clustering parameters, $i = 3,4$ and $j=i+1$.  
 \end{itemize}
 
@@ -483,7 +505,7 @@ A bicubic interpolation scheme, cubic interpolation along the two dimensions, wa
 \subfloat[]{\label{fig:weight2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}} \hfill
 \subfloat[]{\label{fig:weight3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
 \subfloat[]{\label{fig:weight4}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf}}
-\caption[The event weight, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The black circles show the event weight produced from the generator and the blue surface is determined using bicubic interpolation between these points.]{The event weight, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The black circles show the event weight produced from the generator and the blue surface is determined using bicubic interpolation between these points.}
+\caption[The event weight, $w$, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The black circles show the event weight produced from the generator and the blue surface is determined using bicubic interpolation between these points.]{The event weight, $w$, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selection of $\sqrt{s}=1.4$~TeV \nu{\nu}qqqq final state events.  The black circles show the event weight produced from the generator and the blue surface is determined using bicubic interpolation between these points.}
 \label{fig:eventweights1400interpolated}
 \end{figure}
 
@@ -549,7 +571,7 @@ The signal and background final states for the $\sqrt{s}=3$~TeV analysis were id
 \centering
 \begin{tabular}{ l r r }
 \hline
-Final State & Cross Section $\sqrt{s}=3$~TeV [fb]  \\ 
+Final State & Cross Section [fb]  \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 71.5 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \text{l}\nu\text{qqqq}$ & 106.6 \\
@@ -573,7 +595,7 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 2420.6 \\
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 13050.3 \\
 \hline
 \end{tabular}
-\caption[Cross sections of signal and background processes at $\sqrt{s}=3$~TeV]{Cross sections of signal and background processes at $\sqrt{s}=3$~TeV.  In the above table q represents u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$;  l represents $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$; and $\nu$ represents $\nu_{e}$, $\overline{\nu_{e}}$, $\nu_{\mu}$, $\overline{\nu_{\mu}}$, $\nu_{\tau}$ and $\overline{\nu_{\tau}}$.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
+\caption[Cross sections of signal and background processes at $\sqrt{s}=3$~TeV]{Cross sections of signal and background processes at $\sqrt{s}=3$~TeV.  In the above table q represents u, $\bar{\text{u}}$, d, $\bar{\text{d}}$, s, $\bar{\text{s}}$, c, $\bar{\text{c}}$, b or $\bar{\text{b}}$;  l represents $\text{e}^{\pm}$, $\mu^{\pm}$ or $\tau^{\pm}$; and $\nu$ represents $\nu_{e}$, $\overline{\nu}_{\text{e}}$, $\nu_{\mu}$, $\overline{\nu}_{\mu}$, $\nu_{\tau}$ and $\overline{\nu}_{\tau}$.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.}
 \label{table:crosssection3000GeV}
 \end{table}
 
@@ -628,7 +650,7 @@ Due to the increased sensitivity of the signal sample, event weights were sample
 \centering
 \subfloat[]{\label{fig:weight3000GeV1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Raw.pdf}}
 \subfloat[]{\label{fig:weight3000GeV2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Interpolated.pdf}} 
-\caption[The event weights, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selected \nu{\nu}qqqq final state events at $\sqrt{s}=3$~TeV.  These weights are calculated using \protect\subref{fig:weight3000GeV1} the generator and \protect\subref{fig:weight3000GeV2} bicubic interpolation.]{The event weights, w, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selected \nu{\nu}qqqq final state events at $\sqrt{s}=3$~TeV.  These weights are calculated using \protect\subref{fig:weight3000GeV1} the generator and \protect\subref{fig:weight3000GeV2} bicubic interpolation.}
+\caption[The event weights, $w$, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selected \nu{\nu}qqqq final state events at $\sqrt{s}=3$~TeV.  These weights are calculated using \protect\subref{fig:weight3000GeV1} the generator and \protect\subref{fig:weight3000GeV2} bicubic interpolation.]{The event weights, $w$, as a function of the anomalous couplings $\alpha_{4}$ and $\alpha_{5}$ for a selected \nu{\nu}qqqq final state events at $\sqrt{s}=3$~TeV.  These weights are calculated using \protect\subref{fig:weight3000GeV1} the generator and \protect\subref{fig:weight3000GeV2} bicubic interpolation.}
 \label{fig:eventweights3000}
 \end{figure}
 
