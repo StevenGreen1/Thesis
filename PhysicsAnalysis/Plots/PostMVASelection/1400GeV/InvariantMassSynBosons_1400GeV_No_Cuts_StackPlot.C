@@ -19,7 +19,7 @@
    CMOQVRUOLL->SetName("CMOQVRUOLL");
    CMOQVRUOLL->SetTitle("");
    CMOQVRUOLL->SetMinimum(1);
-   CMOQVRUOLL->SetMaximum(2000000);
+   CMOQVRUOLL->SetMaximum(20000000);
    
    TH1F *CMOQVRUOLL_stack_45 = new TH1F("CMOQVRUOLL_stack_45","InvariantMassSynBosons",2100,0,2100);
    CMOQVRUOLL_stack_45->SetMinimum(0.1);
@@ -815,6 +815,7 @@
    IIIFFSAMAN->GetZaxis()->SetLabelSize(0.035);
    IIIFFSAMAN->GetZaxis()->SetTitleSize(0.035);
    IIIFFSAMAN->GetZaxis()->SetTitleFont(42);
+   IIIFFSAMAN->Rebin(10);
    CMOQVRUOLL->Add(IIIFFSAMAN,"");
    
    TH1F *RLXIEEWBRO = new TH1F("RLXIEEWBRO","InvariantMassSynBosons",2100,0,2100);
@@ -1658,6 +1659,7 @@
    RLXIEEWBRO->GetZaxis()->SetLabelSize(0.035);
    RLXIEEWBRO->GetZaxis()->SetTitleSize(0.035);
    RLXIEEWBRO->GetZaxis()->SetTitleFont(42);
+   RLXIEEWBRO->Rebin(10);
    CMOQVRUOLL->Add(RLXIEEWBRO,"");
    
    TH1F *TKNIAAAATY = new TH1F("TKNIAAAATY","InvariantMassSynBosons",2100,0,2100);
@@ -2559,6 +2561,7 @@
    TKNIAAAATY->GetZaxis()->SetLabelSize(0.035);
    TKNIAAAATY->GetZaxis()->SetTitleSize(0.035);
    TKNIAAAATY->GetZaxis()->SetTitleFont(42);
+   TKNIAAAATY->Rebin(10);
    CMOQVRUOLL->Add(TKNIAAAATY,"");
    
    TH1F *ZAMNRTPGEI = new TH1F("ZAMNRTPGEI","InvariantMassSynBosons",2100,0,2100);
@@ -3420,6 +3423,7 @@
    ZAMNRTPGEI->GetZaxis()->SetLabelSize(0.035);
    ZAMNRTPGEI->GetZaxis()->SetTitleSize(0.035);
    ZAMNRTPGEI->GetZaxis()->SetTitleFont(42);
+   ZAMNRTPGEI->Rebin(10);
    CMOQVRUOLL->Add(ZAMNRTPGEI,"");
    
    TH1F *QSTBERJWXH = new TH1F("QSTBERJWXH","InvariantMassSynBosons",2100,0,2100);
@@ -3989,6 +3993,7 @@
    QSTBERJWXH->GetZaxis()->SetLabelSize(0.035);
    QSTBERJWXH->GetZaxis()->SetTitleSize(0.035);
    QSTBERJWXH->GetZaxis()->SetTitleFont(42);
+   QSTBERJWXH->Rebin(10);
    CMOQVRUOLL->Add(QSTBERJWXH,"");
    
    TH1F *EXMQVLSAJR = new TH1F("EXMQVLSAJR","InvariantMassSynBosons",2100,0,2100);
@@ -4839,6 +4844,7 @@
    EXMQVLSAJR->GetZaxis()->SetLabelSize(0.035);
    EXMQVLSAJR->GetZaxis()->SetTitleSize(0.035);
    EXMQVLSAJR->GetZaxis()->SetTitleFont(42);
+   EXMQVLSAJR->Rebin(10);
    CMOQVRUOLL->Add(EXMQVLSAJR,"");
    
    TH1F *SSWLIURSQH = new TH1F("SSWLIURSQH","InvariantMassSynBosons",2100,0,2100);
@@ -5722,6 +5728,7 @@
    SSWLIURSQH->GetZaxis()->SetLabelSize(0.035);
    SSWLIURSQH->GetZaxis()->SetTitleSize(0.035);
    SSWLIURSQH->GetZaxis()->SetTitleFont(42);
+   SSWLIURSQH->Rebin(10);
    CMOQVRUOLL->Add(SSWLIURSQH,"");
    
    TH1F *HAZDPKMKCJ = new TH1F("HAZDPKMKCJ","InvariantMassSynBosons",2100,0,2100);
@@ -6585,6 +6592,7 @@
    HAZDPKMKCJ->GetZaxis()->SetLabelSize(0.035);
    HAZDPKMKCJ->GetZaxis()->SetTitleSize(0.035);
    HAZDPKMKCJ->GetZaxis()->SetTitleFont(42);
+   HAZDPKMKCJ->Rebin(10);
    CMOQVRUOLL->Add(HAZDPKMKCJ,"");
    
    TH1F *KDURNGGFFH = new TH1F("KDURNGGFFH","InvariantMassSynBosons",2100,0,2100);
@@ -7401,6 +7409,7 @@
    KDURNGGFFH->GetZaxis()->SetLabelSize(0.035);
    KDURNGGFFH->GetZaxis()->SetTitleSize(0.035);
    KDURNGGFFH->GetZaxis()->SetTitleFont(42);
+   KDURNGGFFH->Rebin(10);
    CMOQVRUOLL->Add(KDURNGGFFH,"");
    
    TH1F *SBXHBWOJNZ = new TH1F("SBXHBWOJNZ","InvariantMassSynBosons",2100,0,2100);
@@ -8076,6 +8085,7 @@
    SBXHBWOJNZ->GetZaxis()->SetLabelSize(0.035);
    SBXHBWOJNZ->GetZaxis()->SetTitleSize(0.035);
    SBXHBWOJNZ->GetZaxis()->SetTitleFont(42);
+   SBXHBWOJNZ->Rebin(10);
    CMOQVRUOLL->Add(SBXHBWOJNZ,"");
    
    TH1F *YRJBDHCDUZ = new TH1F("YRJBDHCDUZ","InvariantMassSynBosons",2100,0,2100);
@@ -8902,6 +8912,7 @@
    YRJBDHCDUZ->GetZaxis()->SetLabelSize(0.035);
    YRJBDHCDUZ->GetZaxis()->SetTitleSize(0.035);
    YRJBDHCDUZ->GetZaxis()->SetTitleFont(42);
+   YRJBDHCDUZ->Rebin(10);
    CMOQVRUOLL->Add(YRJBDHCDUZ,"");
    
    TH1F *QYEWJIOAZT = new TH1F("QYEWJIOAZT","InvariantMassSynBosons",2100,0,2100);
@@ -9570,6 +9581,7 @@
    QYEWJIOAZT->GetZaxis()->SetLabelSize(0.035);
    QYEWJIOAZT->GetZaxis()->SetTitleSize(0.035);
    QYEWJIOAZT->GetZaxis()->SetTitleFont(42);
+   QYEWJIOAZT->Rebin(10);
    CMOQVRUOLL->Add(QYEWJIOAZT,"");
    
    TH1F *AIJJGVZTCA = new TH1F("AIJJGVZTCA","InvariantMassSynBosons",2100,0,2100);
@@ -10353,6 +10365,7 @@
    AIJJGVZTCA->GetZaxis()->SetLabelSize(0.035);
    AIJJGVZTCA->GetZaxis()->SetTitleSize(0.035);
    AIJJGVZTCA->GetZaxis()->SetTitleFont(42);
+   AIJJGVZTCA->Rebin(10);
    CMOQVRUOLL->Add(AIJJGVZTCA,"");
    
    TH1F *PFSWGRTDZV = new TH1F("PFSWGRTDZV","InvariantMassSynBosons",2100,0,2100);
@@ -10891,6 +10904,7 @@
    PFSWGRTDZV->GetZaxis()->SetLabelSize(0.035);
    PFSWGRTDZV->GetZaxis()->SetTitleSize(0.035);
    PFSWGRTDZV->GetZaxis()->SetTitleFont(42);
+   PFSWGRTDZV->Rebin(10);
    CMOQVRUOLL->Add(PFSWGRTDZV,"");
    
    TH1F *QGBYGFIHXX = new TH1F("QGBYGFIHXX","InvariantMassSynBosons",2100,0,2100);
@@ -11671,6 +11685,7 @@
    QGBYGFIHXX->GetZaxis()->SetLabelSize(0.035);
    QGBYGFIHXX->GetZaxis()->SetTitleSize(0.035);
    QGBYGFIHXX->GetZaxis()->SetTitleFont(42);
+   QGBYGFIHXX->Rebin(10);
    CMOQVRUOLL->Add(QGBYGFIHXX,"");
    
    TH1F *NUUUKJBVGV = new TH1F("NUUUKJBVGV","InvariantMassSynBosons",2100,0,2100);
@@ -12205,6 +12220,7 @@
    NUUUKJBVGV->GetZaxis()->SetLabelSize(0.035);
    NUUUKJBVGV->GetZaxis()->SetTitleSize(0.035);
    NUUUKJBVGV->GetZaxis()->SetTitleFont(42);
+   NUUUKJBVGV->Rebin(10);
    CMOQVRUOLL->Add(NUUUKJBVGV,"");
    
    TH1F *OWLEAWPTZM = new TH1F("OWLEAWPTZM","InvariantMassSynBosons",2100,0,2100);
@@ -13007,6 +13023,7 @@
    OWLEAWPTZM->GetZaxis()->SetLabelSize(0.035);
    OWLEAWPTZM->GetZaxis()->SetTitleSize(0.035);
    OWLEAWPTZM->GetZaxis()->SetTitleFont(42);
+   OWLEAWPTZM->Rebin(10);
    CMOQVRUOLL->Add(OWLEAWPTZM,"");
    
    TH1F *IVIGLJOBZJ = new TH1F("IVIGLJOBZJ","InvariantMassSynBosons",2100,0,2100);
@@ -13711,6 +13728,7 @@
    IVIGLJOBZJ->GetZaxis()->SetLabelSize(0.035);
    IVIGLJOBZJ->GetZaxis()->SetTitleSize(0.035);
    IVIGLJOBZJ->GetZaxis()->SetTitleFont(42);
+   IVIGLJOBZJ->Rebin(10);
    CMOQVRUOLL->Add(IVIGLJOBZJ,"");
    
    TH1F *JLBJFTHKLM = new TH1F("JLBJFTHKLM","InvariantMassSynBosons",2100,0,2100);
@@ -14401,6 +14419,7 @@
    JLBJFTHKLM->GetZaxis()->SetLabelSize(0.035);
    JLBJFTHKLM->GetZaxis()->SetTitleSize(0.035);
    JLBJFTHKLM->GetZaxis()->SetTitleFont(42);
+   JLBJFTHKLM->Rebin(10);
    CMOQVRUOLL->Add(JLBJFTHKLM,"");
    
    TH1F *WEWFACNPAD = new TH1F("WEWFACNPAD","InvariantMassSynBosons",2100,0,2100);
@@ -14925,6 +14944,7 @@
    WEWFACNPAD->GetZaxis()->SetLabelSize(0.035);
    WEWFACNPAD->GetZaxis()->SetTitleSize(0.035);
    WEWFACNPAD->GetZaxis()->SetTitleFont(42);
+   WEWFACNPAD->Rebin(10);
    CMOQVRUOLL->Add(WEWFACNPAD,"");
    CMOQVRUOLL->Draw("");
    CMOQVRUOLL->GetXaxis()->SetRangeUser(0,700);

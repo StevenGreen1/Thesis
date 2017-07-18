@@ -20,7 +20,7 @@
    
    TH1F *HCZYCOGPMU_stack_45 = new TH1F("HCZYCOGPMU_stack_45","InvariantMassSynBosons",2100,0,2100);
    HCZYCOGPMU_stack_45->SetMinimum(1);
-   HCZYCOGPMU_stack_45->SetMaximum(2000000);
+   HCZYCOGPMU_stack_45->SetMaximum(20000000);
    HCZYCOGPMU_stack_45->SetDirectory(0);
    HCZYCOGPMU_stack_45->SetStats(0);
 
@@ -778,6 +778,7 @@
    AMALPAAANX->GetZaxis()->SetLabelSize(0.035);
    AMALPAAANX->GetZaxis()->SetTitleSize(0.035);
    AMALPAAANX->GetZaxis()->SetTitleFont(42);
+   AMALPAAANX->Rebin(10);
    HCZYCOGPMU->Add(AMALPAAANX,"");
    
    TH1F *QJUKZSHUSO = new TH1F("QJUKZSHUSO","InvariantMassSynBosons",2100,0,2100);
@@ -1531,6 +1532,7 @@
    QJUKZSHUSO->GetZaxis()->SetLabelSize(0.035);
    QJUKZSHUSO->GetZaxis()->SetTitleSize(0.035);
    QJUKZSHUSO->GetZaxis()->SetTitleFont(42);
+   QJUKZSHUSO->Rebin(10);
    HCZYCOGPMU->Add(QJUKZSHUSO,"");
    
    TH1F *WUXTKLRXML = new TH1F("WUXTKLRXML","InvariantMassSynBosons",2100,0,2100);
@@ -2279,6 +2281,7 @@
    WUXTKLRXML->GetZaxis()->SetLabelSize(0.035);
    WUXTKLRXML->GetZaxis()->SetTitleSize(0.035);
    WUXTKLRXML->GetZaxis()->SetTitleFont(42);
+   WUXTKLRXML->Rebin(10);
    HCZYCOGPMU->Add(WUXTKLRXML,"");
    
    TH1F *LLDYUBJAWL = new TH1F("LLDYUBJAWL","InvariantMassSynBosons",2100,0,2100);
@@ -2923,6 +2926,7 @@
    LLDYUBJAWL->GetZaxis()->SetLabelSize(0.035);
    LLDYUBJAWL->GetZaxis()->SetTitleSize(0.035);
    LLDYUBJAWL->GetZaxis()->SetTitleFont(42);
+   LLDYUBJAWL->Rebin(10);
    HCZYCOGPMU->Add(LLDYUBJAWL,"");
    
    TH1F *NRPOVOVYNA = new TH1F("NRPOVOVYNA","InvariantMassSynBosons",2100,0,2100);
@@ -3442,6 +3446,7 @@
    NRPOVOVYNA->GetZaxis()->SetLabelSize(0.035);
    NRPOVOVYNA->GetZaxis()->SetTitleSize(0.035);
    NRPOVOVYNA->GetZaxis()->SetTitleFont(42);
+   NRPOVOVYNA->Rebin(10);
    HCZYCOGPMU->Add(NRPOVOVYNA,"");
    
    TH1F *LNNVQVKECC = new TH1F("LNNVQVKECC","InvariantMassSynBosons",2100,0,2100);
@@ -4188,6 +4193,7 @@
    LNNVQVKECC->GetZaxis()->SetLabelSize(0.035);
    LNNVQVKECC->GetZaxis()->SetTitleSize(0.035);
    LNNVQVKECC->GetZaxis()->SetTitleFont(42);
+   LNNVQVKECC->Rebin(10);
    HCZYCOGPMU->Add(LNNVQVKECC,"");
    
    TH1F *FRNUNYHFTX = new TH1F("FRNUNYHFTX","InvariantMassSynBosons",2100,0,2100);
@@ -4797,6 +4803,7 @@
    FRNUNYHFTX->GetZaxis()->SetLabelSize(0.035);
    FRNUNYHFTX->GetZaxis()->SetTitleSize(0.035);
    FRNUNYHFTX->GetZaxis()->SetTitleFont(42);
+   FRNUNYHFTX->Rebin(10);
    HCZYCOGPMU->Add(FRNUNYHFTX,"");
    
    TH1F *BCJVRYSQTX = new TH1F("BCJVRYSQTX","InvariantMassSynBosons",2100,0,2100);
@@ -5457,6 +5464,7 @@
    BCJVRYSQTX->GetZaxis()->SetLabelSize(0.035);
    BCJVRYSQTX->GetZaxis()->SetTitleSize(0.035);
    BCJVRYSQTX->GetZaxis()->SetTitleFont(42);
+   BCJVRYSQTX->Rebin(10);
    HCZYCOGPMU->Add(BCJVRYSQTX,"");
    
    TH1F *EBGSSZULEV = new TH1F("EBGSSZULEV","InvariantMassSynBosons",2100,0,2100);
@@ -5779,6 +5787,7 @@
    EBGSSZULEV->GetZaxis()->SetLabelSize(0.035);
    EBGSSZULEV->GetZaxis()->SetTitleSize(0.035);
    EBGSSZULEV->GetZaxis()->SetTitleFont(42);
+   EBGSSZULEV->Rebin(10);
    HCZYCOGPMU->Add(EBGSSZULEV,"");
    
    TH1F *EPMIHUYSYA = new TH1F("EPMIHUYSYA","InvariantMassSynBosons",2100,0,2100);
@@ -5954,6 +5963,7 @@
    EPMIHUYSYA->GetZaxis()->SetLabelSize(0.035);
    EPMIHUYSYA->GetZaxis()->SetTitleSize(0.035);
    EPMIHUYSYA->GetZaxis()->SetTitleFont(42);
+   EPMIHUYSYA->Rebin(10);
    HCZYCOGPMU->Add(EPMIHUYSYA,"");
    
    TH1F *BYSPYMMQHK = new TH1F("BYSPYMMQHK","InvariantMassSynBosons",2100,0,2100);
@@ -6337,6 +6347,7 @@
    BYSPYMMQHK->GetZaxis()->SetLabelSize(0.035);
    BYSPYMMQHK->GetZaxis()->SetTitleSize(0.035);
    BYSPYMMQHK->GetZaxis()->SetTitleFont(42);
+   BYSPYMMQHK->Rebin(10);
    HCZYCOGPMU->Add(BYSPYMMQHK,"");
    
    TH1F *FWOQLUUYSW = new TH1F("FWOQLUUYSW","InvariantMassSynBosons",2100,0,2100);
@@ -6445,6 +6456,7 @@
    FWOQLUUYSW->GetZaxis()->SetLabelSize(0.035);
    FWOQLUUYSW->GetZaxis()->SetTitleSize(0.035);
    FWOQLUUYSW->GetZaxis()->SetTitleFont(42);
+   FWOQLUUYSW->Rebin(10);
    HCZYCOGPMU->Add(FWOQLUUYSW,"");
    
    TH1F *YOAQXWNZRF = new TH1F("YOAQXWNZRF","InvariantMassSynBosons",2100,0,2100);
@@ -7111,6 +7123,7 @@
    YOAQXWNZRF->GetZaxis()->SetLabelSize(0.035);
    YOAQXWNZRF->GetZaxis()->SetTitleSize(0.035);
    YOAQXWNZRF->GetZaxis()->SetTitleFont(42);
+   YOAQXWNZRF->Rebin(10);
    HCZYCOGPMU->Add(YOAQXWNZRF,"");
    
    TH1F *YXDDNDIQMU = new TH1F("YXDDNDIQMU","InvariantMassSynBosons",2100,0,2100);
@@ -7570,6 +7583,7 @@
    YXDDNDIQMU->GetZaxis()->SetLabelSize(0.035);
    YXDDNDIQMU->GetZaxis()->SetTitleSize(0.035);
    YXDDNDIQMU->GetZaxis()->SetTitleFont(42);
+   YOAQXWNZRF->Rebin(10);
    HCZYCOGPMU->Add(YXDDNDIQMU,"");
    
    TH1F *ISNAJBWKIU = new TH1F("ISNAJBWKIU","InvariantMassSynBosons",2100,0,2100);
@@ -8241,6 +8255,7 @@
    ISNAJBWKIU->GetZaxis()->SetLabelSize(0.035);
    ISNAJBWKIU->GetZaxis()->SetTitleSize(0.035);
    ISNAJBWKIU->GetZaxis()->SetTitleFont(42);
+   ISNAJBWKIU->Rebin(10);
    HCZYCOGPMU->Add(ISNAJBWKIU,"");
    
    TH1F *YJFYXRLPWU = new TH1F("YJFYXRLPWU","InvariantMassSynBosons",2100,0,2100);
@@ -8712,6 +8727,7 @@
    YJFYXRLPWU->GetZaxis()->SetLabelSize(0.035);
    YJFYXRLPWU->GetZaxis()->SetTitleSize(0.035);
    YJFYXRLPWU->GetZaxis()->SetTitleFont(42);
+   YJFYXRLPWU->Rebin(10);
    HCZYCOGPMU->Add(YJFYXRLPWU,"");
    
    TH1F *ZPELLYJRUK = new TH1F("ZPELLYJRUK","InvariantMassSynBosons",2100,0,2100);
@@ -9016,6 +9032,7 @@
    ZPELLYJRUK->GetZaxis()->SetLabelSize(0.035);
    ZPELLYJRUK->GetZaxis()->SetTitleSize(0.035);
    ZPELLYJRUK->GetZaxis()->SetTitleFont(42);
+   ZPELLYJRUK->Rebin(10);
    HCZYCOGPMU->Add(ZPELLYJRUK,"");
    
    TH1F *XLUQKXWARS = new TH1F("XLUQKXWARS","InvariantMassSynBosons",2100,0,2100);
@@ -9253,6 +9270,7 @@
    XLUQKXWARS->GetZaxis()->SetLabelSize(0.035);
    XLUQKXWARS->GetZaxis()->SetTitleSize(0.035);
    XLUQKXWARS->GetZaxis()->SetTitleFont(42);
+   XLUQKXWARS->Rebin(10);
    HCZYCOGPMU->Add(XLUQKXWARS,"");
    
    TH1F *OLWEAXNXCW = new TH1F("OLWEAXNXCW","InvariantMassSynBosons",2100,0,2100);
@@ -9431,6 +9449,7 @@
    OLWEAXNXCW->GetZaxis()->SetLabelSize(0.035);
    OLWEAXNXCW->GetZaxis()->SetTitleSize(0.035);
    OLWEAXNXCW->GetZaxis()->SetTitleFont(42);
+   OLWEAXNXCW->Rebin(10);
    HCZYCOGPMU->Add(OLWEAXNXCW,"");
    
    TH1F *ZSSHIDLHYQ = new TH1F("ZSSHIDLHYQ","InvariantMassSynBosons",2100,0,2100);
@@ -9483,6 +9502,7 @@
    ZSSHIDLHYQ->GetZaxis()->SetLabelSize(0.035);
    ZSSHIDLHYQ->GetZaxis()->SetTitleSize(0.035);
    ZSSHIDLHYQ->GetZaxis()->SetTitleFont(42);
+   ZSSHIDLHYQ->Rebin(10);
    HCZYCOGPMU->Add(ZSSHIDLHYQ,"");
    HCZYCOGPMU->Draw("");
    HCZYCOGPMU->GetXaxis()->SetRangeUser(0,700);
