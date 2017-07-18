@@ -834,6 +834,7 @@
    FEFLVVLKZP->GetZaxis()->SetLabelSize(0.035);
    FEFLVVLKZP->GetZaxis()->SetTitleSize(0.035);
    FEFLVVLKZP->GetZaxis()->SetTitleFont(42);
+   FEFLVVLKZP->Rebin(10);
    LAPCRJHOKQ->Add(FEFLVVLKZP,"");
    
    TH1F *VWMDKOVRXT = new TH1F("VWMDKOVRXT","TransverseMomentum",2100,0,2100);
@@ -1552,6 +1553,7 @@
    VWMDKOVRXT->GetZaxis()->SetLabelSize(0.035);
    VWMDKOVRXT->GetZaxis()->SetTitleSize(0.035);
    VWMDKOVRXT->GetZaxis()->SetTitleFont(42);
+   VWMDKOVRXT->Rebin(10);
    LAPCRJHOKQ->Add(VWMDKOVRXT,"");
    
    TH1F *HSNOYQURQG = new TH1F("HSNOYQURQG","TransverseMomentum",2100,0,2100);
@@ -2102,6 +2104,7 @@
    HSNOYQURQG->GetZaxis()->SetLabelSize(0.035);
    HSNOYQURQG->GetZaxis()->SetTitleSize(0.035);
    HSNOYQURQG->GetZaxis()->SetTitleFont(42);
+   HSNOYQURQG->Rebin(10);
    LAPCRJHOKQ->Add(HSNOYQURQG,"");
    
    TH1F *VYKVGSSIJY = new TH1F("VYKVGSSIJY","TransverseMomentum",2100,0,2100);
@@ -2406,6 +2409,7 @@
    VYKVGSSIJY->GetZaxis()->SetLabelSize(0.035);
    VYKVGSSIJY->GetZaxis()->SetTitleSize(0.035);
    VYKVGSSIJY->GetZaxis()->SetTitleFont(42);
+   VYKVGSSIJY->Rebin(10);
    LAPCRJHOKQ->Add(VYKVGSSIJY,"");
    
    TH1F *WDOAVANXOG = new TH1F("WDOAVANXOG","TransverseMomentum",2100,0,2100);
@@ -3167,6 +3171,7 @@
    WDOAVANXOG->GetZaxis()->SetLabelSize(0.035);
    WDOAVANXOG->GetZaxis()->SetTitleSize(0.035);
    WDOAVANXOG->GetZaxis()->SetTitleFont(42);
+   WDOAVANXOG->Rebin(10);
    LAPCRJHOKQ->Add(WDOAVANXOG,"");
    
    TH1F *WWZANVFNDW = new TH1F("WWZANVFNDW","TransverseMomentum",2100,0,2100);
@@ -3950,6 +3955,7 @@
    WWZANVFNDW->GetZaxis()->SetLabelSize(0.035);
    WWZANVFNDW->GetZaxis()->SetTitleSize(0.035);
    WWZANVFNDW->GetZaxis()->SetTitleFont(42);
+   WWZANVFNDW->Rebin(10);
    LAPCRJHOKQ->Add(WWZANVFNDW,"");
    
    TH1F *TUXNFBUFGN = new TH1F("TUXNFBUFGN","TransverseMomentum",2100,0,2100);
@@ -4455,6 +4461,7 @@
    TUXNFBUFGN->GetZaxis()->SetLabelSize(0.035);
    TUXNFBUFGN->GetZaxis()->SetTitleSize(0.035);
    TUXNFBUFGN->GetZaxis()->SetTitleFont(42);
+   TUXNFBUFGN->Rebin(10);
    LAPCRJHOKQ->Add(TUXNFBUFGN,"");
    
    TH1F *OSUVEDPCGF = new TH1F("OSUVEDPCGF","TransverseMomentum",2100,0,2100);
@@ -4817,6 +4824,7 @@
    OSUVEDPCGF->GetZaxis()->SetLabelSize(0.035);
    OSUVEDPCGF->GetZaxis()->SetTitleSize(0.035);
    OSUVEDPCGF->GetZaxis()->SetTitleFont(42);
+   OSUVEDPCGF->Rebin(10);
    LAPCRJHOKQ->Add(OSUVEDPCGF,"");
    
    TH1F *SXTBJQEXQI = new TH1F("SXTBJQEXQI","TransverseMomentum",2100,0,2100);
@@ -5085,6 +5093,7 @@
    SXTBJQEXQI->GetZaxis()->SetLabelSize(0.035);
    SXTBJQEXQI->GetZaxis()->SetTitleSize(0.035);
    SXTBJQEXQI->GetZaxis()->SetTitleFont(42);
+   SXTBJQEXQI->Rebin(10);
    LAPCRJHOKQ->Add(SXTBJQEXQI,"");
    
    TH1F *YBXXCVEYRM = new TH1F("YBXXCVEYRM","TransverseMomentum",2100,0,2100);
@@ -5278,6 +5287,7 @@
    YBXXCVEYRM->GetZaxis()->SetLabelSize(0.035);
    YBXXCVEYRM->GetZaxis()->SetTitleSize(0.035);
    YBXXCVEYRM->GetZaxis()->SetTitleFont(42);
+   YBXXCVEYRM->Rebin(10);
    LAPCRJHOKQ->Add(YBXXCVEYRM,"");
    
    TH1F *LCTETHJIVJ = new TH1F("LCTETHJIVJ","TransverseMomentum",2100,0,2100);
@@ -5571,6 +5581,7 @@
    LCTETHJIVJ->GetZaxis()->SetLabelSize(0.035);
    LCTETHJIVJ->GetZaxis()->SetTitleSize(0.035);
    LCTETHJIVJ->GetZaxis()->SetTitleFont(42);
+   LCTETHJIVJ->Rebin(10);
    LAPCRJHOKQ->Add(LCTETHJIVJ,"");
    
    TH1F *VLOUZGIFFR = new TH1F("VLOUZGIFFR","TransverseMomentum",2100,0,2100);
@@ -5740,6 +5751,7 @@
    VLOUZGIFFR->GetZaxis()->SetLabelSize(0.035);
    VLOUZGIFFR->GetZaxis()->SetTitleSize(0.035);
    VLOUZGIFFR->GetZaxis()->SetTitleFont(42);
+   VLOUZGIFFR->Rebin(10);
    LAPCRJHOKQ->Add(VLOUZGIFFR,"");
    
    TH1F *IVNYIOAWZH = new TH1F("IVNYIOAWZH","TransverseMomentum",2100,0,2100);
@@ -6354,6 +6366,7 @@
    IVNYIOAWZH->GetZaxis()->SetLabelSize(0.035);
    IVNYIOAWZH->GetZaxis()->SetTitleSize(0.035);
    IVNYIOAWZH->GetZaxis()->SetTitleFont(42);
+   IVNYIOAWZH->Rebin(10);
    LAPCRJHOKQ->Add(IVNYIOAWZH,"");
    
    TH1F *PNSRVTPHSC = new TH1F("PNSRVTPHSC","TransverseMomentum",2100,0,2100);
@@ -6945,6 +6958,7 @@
    PNSRVTPHSC->GetZaxis()->SetLabelSize(0.035);
    PNSRVTPHSC->GetZaxis()->SetTitleSize(0.035);
    PNSRVTPHSC->GetZaxis()->SetTitleFont(42);
+   PNSRVTPHSC->Rebin(10);
    LAPCRJHOKQ->Add(PNSRVTPHSC,"");
    
    TH1F *EJOMWSJDGU = new TH1F("EJOMWSJDGU","TransverseMomentum",2100,0,2100);
@@ -7561,6 +7575,7 @@
    EJOMWSJDGU->GetZaxis()->SetLabelSize(0.035);
    EJOMWSJDGU->GetZaxis()->SetTitleSize(0.035);
    EJOMWSJDGU->GetZaxis()->SetTitleFont(42);
+   EJOMWSJDGU->Rebin(10);
    LAPCRJHOKQ->Add(EJOMWSJDGU,"");
    
    TH1F *WGNUDQJDRX = new TH1F("WGNUDQJDRX","TransverseMomentum",2100,0,2100);
@@ -8144,6 +8159,7 @@
    WGNUDQJDRX->GetZaxis()->SetLabelSize(0.035);
    WGNUDQJDRX->GetZaxis()->SetTitleSize(0.035);
    WGNUDQJDRX->GetZaxis()->SetTitleFont(42);
+   WGNUDQJDRX->Rebin(10);
    LAPCRJHOKQ->Add(WGNUDQJDRX,"");
    
    TH1F *NJFXFHVKAV = new TH1F("NJFXFHVKAV","TransverseMomentum",2100,0,2100);
@@ -8393,6 +8409,7 @@
    NJFXFHVKAV->GetZaxis()->SetLabelSize(0.035);
    NJFXFHVKAV->GetZaxis()->SetTitleSize(0.035);
    NJFXFHVKAV->GetZaxis()->SetTitleFont(42);
+   NJFXFHVKAV->Rebin(10);
    LAPCRJHOKQ->Add(NJFXFHVKAV,"");
    
    TH1F *RONQKZTITM = new TH1F("RONQKZTITM","TransverseMomentum",2100,0,2100);
@@ -8614,6 +8631,7 @@
    RONQKZTITM->GetZaxis()->SetLabelSize(0.035);
    RONQKZTITM->GetZaxis()->SetTitleSize(0.035);
    RONQKZTITM->GetZaxis()->SetTitleFont(42);
+   RONQKZTITM->Rebin(10);
    LAPCRJHOKQ->Add(RONQKZTITM,"");
    
    TH1F *MGKMDTPQHL = new TH1F("MGKMDTPQHL","TransverseMomentum",2100,0,2100);
@@ -8805,6 +8823,7 @@
    MGKMDTPQHL->GetZaxis()->SetLabelSize(0.035);
    MGKMDTPQHL->GetZaxis()->SetTitleSize(0.035);
    MGKMDTPQHL->GetZaxis()->SetTitleFont(42);
+   MGKMDTPQHL->Rebin(10);
    LAPCRJHOKQ->Add(MGKMDTPQHL,"");
    
    TH1F *RHCSIWFVJT = new TH1F("RHCSIWFVJT","TransverseMomentum",2100,0,2100);
@@ -8949,6 +8968,7 @@
    RHCSIWFVJT->GetZaxis()->SetLabelSize(0.035);
    RHCSIWFVJT->GetZaxis()->SetTitleSize(0.035);
    RHCSIWFVJT->GetZaxis()->SetTitleFont(42);
+   RHCSIWFVJT->Rebin(10);
    LAPCRJHOKQ->Add(RHCSIWFVJT,"");
    LAPCRJHOKQ->Draw("");
 
