@@ -368,9 +368,17 @@ A refined selection of the \nu{\nu}qqqq signal final state is achieved using a M
 \label{sec:mva1400GeV}
 Having established the preselection cuts, a MVA was applied using the TMVA toolkit \cite{Hocker:2007ht}, to refine the event selection.  The signal and background final state samples were separated into two equally sized samples; one sample was used to train the MVA and the other sample was used in the subsequent analysis.  
 
-HERE
+The performance of several MVA classifiers was examined to determine the optimal classifier for this analysis.  The MVA classifiers considered were \cite{Hocker:2007ht}:
+\begin{itemize}
+\item \textbf{Boosted Decision Tree (BDT)}.  Decision trees are formed by the sequential application of cuts that splits the data into multiple nodes.  The final nodes are used to classify whether the input event corresponds to signal or background.  Boosting a decision tree involves the use of several decision trees.  A single classifier output is obtained from a weighted average of the individual decision trees.  The cuts applied in the decision tree are determined using the training sample.  
+\item \textbf{$k$-Nearest Neighbour (KNN)}.  For a given input event, the $k$ closest neighbours from the training sample are found.  The classifier for that input event is determined as the fraction of those $k$ events that belong to the signal sample.  Distances in this classifier are defined as the Euclidean distance between events in the $n$-dimensional space of the variables used for training the classifier.  Weights are applied when calculating the Euclidean distances to account for the differing widths of the input variable distributions.  
+\item \textbf{Multilayer Perceptron (MLP)}.  This is an example of a neutral network.  Neutral networks consist of an interconnected series of neurones each with a different response to a set of input signals.  The signal for the first layer of neurones in this case are the event variables used to train the MVA.  The input signal proceeds to travel through several hidden layers of neurones.  The number of neurones in a given layers is reduced as the number of hidden layers passes through increases until two neurones are left, one corresponding to signal and the other background.  The neurone giving the larger response in the final layer determines the event classifier.  The training sample is used to determine the response of all neurones in the neural network.
+\item \textbf{Fisher and H-Matrix Discriminants}.  These procedures involve the calculation of a hyperplane in $n$-dimensional space that maximally separates signal and background events in the training sample.  The location of an input event in that $n$-dimensional space with respect to that hyperplane determines the classifier for the event.  Both the Fisher and H-Matrix discriminants search for the hyperplane in $n$-dimensional space, however, the Fisher discriminant begins this procedure by transforming the input variables into a variable space with zero linear correlations.  
+\item \textbf{Likelihood}.  The likelihood is determined using the probability density function (PDF) for each of the input variables.  PDFs are determined using the training sample for both signal and background events.  For a given event, the likelihood is given by the product of the probability of obtaining each of the input variables for that event.  The signal and background likelihoods are calculated using the signal and background PDFs respectively and the ratio of the signal likelihood to the sum of the signal and background likelihoods gives the event classifier.   
+\item \textbf{Cuts}.  Rectangular cuts are applied to the input event variables to determine the classifier for the event.  The training sample is used to optimised the cuts that are applied.
+\end{itemize}
 
-The following variables were used for training of the MVA:
+The input variables used for these MVA classifiers were:
 \begin{itemize}
 \item Number of PFOs in each jet;
 \item Energy of the highest energy PFO;
@@ -384,7 +392,9 @@ The following variables were used for training of the MVA:
 \item The derived jet clustering parameter variables $-\text{log}_{10}(y_{ij})$ where $y_{ij}$ are jet clustering parameters, $i = 3,4$ and $j=i+1$.  
 \end{itemize}
 
-A variety of MVA options were considered and it was found that the optimal algorithm was the boosted decision tree (BDT) as shown by figure \ref{fig:mvaalternatives1400GeV}.  
+Figure \ref{fig:mvaalternatives1400GeV} shows the background rejection, which is equivalent to one minus the background efficiency, as a function of signal efficiency for various MVA classifiers.  Efficiency is defined as the fraction of events classified as signal by the MVA.  The efficiencies reported by TMVA are calculated after the application of the preselection cuts, which are described in section \ref{sec:preselection1400GeV}.  
+
+The classifier giving the optimal performance in terms of signal efficiency and background rejection was the BDT.  The performance of the BDT was optimised further by varying the number of trees used and the depth of the trees.  An optimal significance, S/$\sqrt(\text{S + B})$, where S and B are the number of signal and background events passing the preselection respectively, of 52.7 was obtained using the optimised BDT. 
 
 \begin{figure}
 \centering
@@ -393,23 +403,22 @@ A variety of MVA options were considered and it was found that the optimal algor
 \label{fig:mvaalternatives1400GeV}
 \end{figure}
 
-The BDT was further optimised by varying the number of trees used, the depth of the trees and the number of cuts applied.  An optimal significance, S/$\sqrt(\text{S + B})$ where S and B are the number of signal and background events passing the preselection respectively, of 52.7 was obtained. 
-
 %========================================================================================
 
 \subsection{Event Selection Summary}
 \label{sec:eventselsummary1400GeV}
-The event selection is summarised using the distribution of the invariant mass of the candidate bosons, which for the signal final state should peak around the W mass.  This distribution is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact} with no event selection, with the preselection cuts applied and with both preselections cuts and MVA applied.  The event selection is also summarised using efficiencies shown in table \ref{table:selectionsummary1400GeV}.
+The event selection is summarised using the distribution of the invariant mass of the candidate bosons, which for the signal final state should peak around the W mass.  This distribution is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact} with: no event selection; with the preselection cuts applied; and with both preselections cuts and MVA applied.  The event selection efficiencies are also summarised in table \ref{table:selectionsummary1400GeV}.
 
-As expected the dominant background processes after the MVA is applied are those that will look identical to the signal process, i.e. four primary quarks with missing energy.  Two smaller sources of background are also present: two jet events with missing energy that are confused with four jet events with missing energy and events where a lepton is not properly reconstructed causing the event to look like four jets and missing energy.  
+As expected the dominant background processes after the MVA is applied are those that have the same topology as the signal process, i.e. four primary quarks with missing energy.  Two smaller sources of background are also present: two jet events with missing energy that are confused with four jet events with missing energy and events where a lepton is not properly reconstructed causing the event to look like four jets and missing energy.  
 
 \begin{figure}
 \centering
 \subfloat[]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_No_Cuts_StackPlot.pdf}}
-\subfloat[]{\label{fig:nocutssynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf}}\hfill
+\subfloat[]{\label{fig:postpresynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf}}\hfill
 \subfloat[]{\label{fig:postmvasynbosonmass1400GeVMVAimpact}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_PostPreSelection_PostMVA_Cuts_StackPlot.pdf}} 
-\subfloat[]{\label{fig:legendselection}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}}
-\caption[Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at $\sqrt{s}=1.4$~TeV.   \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} No cuts applied.  \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} Preselection cuts applied.  \protect\subref{fig:postmvasynbosonmass1400GeVMVAimpact} MVA with preselection applied.  \protect\subref{fig:legendselection} The legend for the event selection plots.]{Impact of preselection and MVA on the reconstructed invariant mass of the bosons arising from jet pairing at $\sqrt{s}=1.4$~TeV.   \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} No cuts applied.  \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} Preselection cuts applied.  \protect\subref{fig:postmvasynbosonmass1400GeVMVAimpact} MVA with preselection applied.  \protect\subref{fig:legendselection} The legend for the event selection plots.}
+\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}
+%\subfloat[]{\label{fig:legendselection}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}}
+\caption[Impact of preselection and MVA on the reconstructed invariant mass of the candidate bosons at $\sqrt{s}=1.4$~TeV:   \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} no cuts; \protect\subref{fig:postpresynbosonmass1400GeVMVAimpact} after preselection; and \protect\subref{fig:postmvasynbosonmass1400GeVMVAimpact} after preselection and MVA.]{Impact of preselection and MVA on the reconstructed invariant mass of the candidate bosons at $\sqrt{s}=1.4$~TeV:   \protect\subref{fig:nocutssynbosonmass1400GeVMVAimpact} no cuts; \protect\subref{fig:postpresynbosonmass1400GeVMVAimpact} after preselection; and \protect\subref{fig:postmvasynbosonmass1400GeVMVAimpact} after preselection and MVA.}
 \label{fig:synbosonmass1400GeVMVAimpact}
 \end{figure}
 
@@ -441,14 +450,14 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & - & - & 53 \\
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & - & - & 0 \\
 \hline
 \end{tabular}
-\caption[Event selection efficiencies at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Event selection efficiencies at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
+\caption[Event selection efficiencies at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Entries with a dash indicate an efficiency of less than 0.1\%.]{Event selection efficiencies at $\sqrt{s}=1.4$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Entries with a dash indicate an efficiency of less than 0.1\%.}
 \label{table:selectionsummary1400GeV}
 \end{table}
 
 %========================================================================================
 %========================================================================================
 
-\section{Effect of Anomalous Coupling/Fitting Methodology}
+\section{Anomalous Coupling Fitting Methodology}
 \label{sec:fitting}
 This section describes the procedure used for constructing the $\chi^{2}$ surface and the subsequent confidence contours used to determine the sensitivity of CLIC to the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.
 
@@ -640,7 +649,7 @@ $\gamma_{\text{BS}}\gamma_{\text{EPA}} \rightarrow \text{qqqq}$ & 3.5\% & 0.4\% 
 $\gamma_{\text{BS}}\gamma_{\text{BS}} \rightarrow \text{qqqq}$ & 0.6\% & - & 4,124 \\
 \hline
 \end{tabular}
-\caption[Event selection efficiencies at $\sqrt{s}=3$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.]{Event selection efficiencies at $\sqrt{s}=3$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Cells omitting the efficiency indicate an efficiency of less than 0.1\%.}
+\caption[Event selection efficiencies at $\sqrt{s}=3$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Entries with a dash indicate an efficiency of less than 0.1\%.]{Event selection efficiencies at $\sqrt{s}=3$~TeV.  In the above table, $\epsilon_{presel}$ denotes the number of events passing the preselection as a fraction of the total number of events, while $\epsilon_{BDT}$ denotes the number of events passing both the preselection and the BDT as a fraction of the total number of events.  The EPA and BS subscript on the incoming photon indicates whether the photon is generated from the equivalent photon approximation or beamstrahlung.  Entries with a dash indicate an efficiency of less than 0.1\%.}
 \label{table:selectionsummary3000GeV}
 \end{table}
 
