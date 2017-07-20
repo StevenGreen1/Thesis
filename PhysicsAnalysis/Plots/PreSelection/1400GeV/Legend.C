@@ -8971,7 +8971,7 @@
    leg->SetLineWidth(1);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("FEFLVVLKZP","e^{+}e^{-} #rightarrow #nu #nu qqqq","f");
+   TLegendEntry *entry=leg->AddEntry("FEFLVVLKZP","e^{+}e^{-} #rightarrow #nu#nuqqqq","f");
    entry->SetFillColor(1);
    entry->SetFillStyle(3001);
    entry->SetLineColor(1);
@@ -8981,7 +8981,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("VWMDKOVRXT","e^{+}e^{-} #rightarrow l #nu qqqq","f");
+   entry=leg->AddEntry("VWMDKOVRXT","e^{+}e^{-} #rightarrow #nulqqqq","f");
 
    ci = TColor::GetColor(203,94,221);
    entry->SetFillColor(ci);
@@ -9023,7 +9023,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("WDOAVANXOG","e^{+}e^{-} #rightarrow #nu #nu qq","f");
+   entry=leg->AddEntry("WDOAVANXOG","e^{+}e^{-} #rightarrow #nu#nuqq","f");
 
    ci = TColor::GetColor(189,226,61);
    entry->SetFillColor(ci);
@@ -9037,7 +9037,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("WWZANVFNDW","e^{+}e^{-} #rightarrow l #nu qq","f");
+   entry=leg->AddEntry("WWZANVFNDW","e^{+}e^{-} #rightarrow #nulqq","f");
 
    ci = TColor::GetColor(127,141,224);
    entry->SetFillColor(ci);
@@ -9051,7 +9051,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("TUXNFBUFGN","e^{+}e^{-} #rightarrow qqll","f");
+   entry=leg->AddEntry("TUXNFBUFGN","e^{+}e^{-} #rightarrow llqq","f");
 
    ci = TColor::GetColor(225,188,51);
    entry->SetFillColor(ci);
@@ -9079,7 +9079,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("SXTBJQEXQI","#gamma_{EPA} e^{-} #rightarrow qqqq e^{-}","f");
+   entry=leg->AddEntry("SXTBJQEXQI","e^{-}#gamma_{EPA} #rightarrow e^{-}qqqq","f");
    entry->SetFillColor(TColor::GetColor(113,161,55));
    entry->SetFillStyle(3001);
    entry->SetLineColor(TColor::GetColor(113,161,55));
@@ -9089,7 +9089,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("YBXXCVEYRM","#gamma_{BS} e^{-} #rightarrow qqqq e^{-}","f");
+   entry=leg->AddEntry("YBXXCVEYRM","e^{-}#gamma_{BS} #rightarrow e^{-}qqqq","f");
 
    ci = TColor::GetColor(208,214,112);
    entry->SetFillColor(ci);
@@ -9103,7 +9103,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("LCTETHJIVJ","e^{+} #gamma_{EPA} #rightarrow qqqq e^{+}","f");
+   entry=leg->AddEntry("LCTETHJIVJ","e^{+}#gamma_{EPA} #rightarrow e^{+}qqqq","f");
 
    ci = TColor::GetColor(105,174,204);
    entry->SetFillColor(ci);
@@ -9117,7 +9117,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("VLOUZGIFFR","e^{+} #gamma_{BS} #rightarrow qqqq e^{+}","f");
+   entry=leg->AddEntry("VLOUZGIFFR","e^{+}#gamma_{BS} #rightarrow e^{+}qqqq","f");
 
    ci = TColor::GetColor(233,104,50);
    entry->SetFillColor(ci);
@@ -9131,7 +9131,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("IVNYIOAWZH","#gamma_{EPA} e^{-} #rightarrow qqqq #nu","f");
+   entry=leg->AddEntry("IVNYIOAWZH","e^{-}#gamma_{EPA} #rightarrow #nu_{e}qqqq","f");
 
    ci = TColor::GetColor(99,224,195);
    entry->SetFillColor(ci);
@@ -9145,7 +9145,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("PNSRVTPHSC","#gamma_{BS} e^{-} #rightarrow qqqq #nu","f");
+   entry=leg->AddEntry("PNSRVTPHSC","e^{-}#gamma_{BS} #rightarrow #nu_{e}qqqq","f");
 
    ci = TColor::GetColor(212,127,110);
    entry->SetFillColor(ci);
@@ -9159,7 +9159,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("EJOMWSJDGU","e^{+} #gamma_{EPA} #rightarrow qqqq #nu","f");
+   entry=leg->AddEntry("EJOMWSJDGU","e^{+}#gamma_{EPA} #rightarrow #nu_{e}qqqq","f");
 
    ci = TColor::GetColor("#620e00");
    entry->SetFillColor(ci);
@@ -9173,7 +9173,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("WGNUDQJDRX","e^{+} #gamma_{BS} #rightarrow qqqq #nu","f");
+   entry=leg->AddEntry("WGNUDQJDRX","e^{+}#gamma_{BS} #rightarrow #nu_{e}qqqq","f");
 
    ci = TColor::GetColor(192,160,184);
    entry->SetFillColor(ci);

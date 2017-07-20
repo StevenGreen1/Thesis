@@ -103,6 +103,6 @@ void SensitiveDistributionsMass()
     pTH1F_0_0->Draw("same");
     pTLegend->Draw();
 
-    pTCanvas->SaveAs(name + "_SPFOs_kt_0p70_" + energy + "GeV.pdf");
-    pTCanvas->SaveAs(name + "_SPFOs_kt_0p70_" + energy + "GeV.C");
+    pTCanvas->SaveAs(name + "_SPFOs_kt_0p90_" + energy + "GeV.pdf");
+    pTCanvas->SaveAs(name + "_SPFOs_kt_0p90_" + energy + "GeV.C");
 }
