@@ -1,0 +1,6 @@
+Longitudinally Invariant Kt, Selected PFOs, R = 0.9
+CosThetaStarBosons
+The 1D confidence limits for alpha 4 are (-0.011098, 0.0155022)
+The 1D confidence limits for alpha 5 are (-0.00818386, 0.0110243)
+-0.0111 & 0.0155
+-0.00818 & 0.011

@@ -8,19 +8,23 @@ void PlotDecomposition2()
 {
     TString name = "SPFOs_kt_0p90_1400GeV_FitDataOptimal.root";
 
-    MakePlots(name, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "CosThetaStarBosons");
+    MakePlots(name, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "CosThetaStarBosons", "Chi2CosThetaStarSynBosons");
+    MakePlots(name, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "CosThetaStarJets", "Chi2CosThetaStarSynJets");
+    MakePlots(name, "Longitudinally Invariant Kt, Selected PFOs, R = 0.9", "MVV", "Chi2MVV");
 }
 
 //================================================================
 
-void MakePlots(TString name, TString description, TString briefDescription)
+void MakePlots(TString name, TString description, TString briefDescription, TString variable)
 {
-    TGraph2D *pTGraph2D = SinglePlot(name,"Chi2CosThetaStarSynBosons");
-//    TGraph *pTGraph_a4 = OneDSinglePlot(name,"Chi2MVV", "Alpha4");
-//    TGraph *pTGraph_a5 = OneDSinglePlot(name,"Chi2MVV", "Alpha5");
+    TString plotdescription = briefDescription + "_" + variable;
+
+    TGraph2D *pTGraph2D = SinglePlot(name, variable);
+    TGraph *pTGraph_a4 = OneDSinglePlot(name, variable, "Alpha4");
+    TGraph *pTGraph_a5 = OneDSinglePlot(name, variable, "Alpha5");
 
     // 2D Plot
-    TCanvas *pTCanvas = new TCanvas(briefDescription, "", 600, 600);
+    TCanvas *pTCanvas = new TCanvas(plotdescription, "", 600, 600);
     pTCanvas->SetRightMargin(0.05);
     pTCanvas->SetLeftMargin(0.2);
     pTCanvas->SetTopMargin(0.10);
@@ -44,20 +48,20 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTGraph2D->SetLineWidth(3);
     pTGraph2D->Draw("CONT1");
     pTLegend_all->Draw();
-    TString plotPDF = briefDescription + ".pdf";
-    TString plotDotC = briefDescription + ".C";
+    TString plotPDF = plotdescription + ".pdf";
+    TString plotDotC = plotdescription + ".C";
     pTCanvas->SaveAs(plotPDF);
     pTCanvas->SaveAs(plotDotC);
-/*
+
     // Alpha 4 Plot
-    TCanvas *pTCanvas_a4 = new TCanvas(briefDescription + "_Alpha4", "", 600, 600);
+    TCanvas *pTCanvas_a4 = new TCanvas(plotdescription + "_Alpha4", "", 600, 600);
     pTCanvas_a4->SetRightMargin(0.05);
     pTCanvas_a4->SetLeftMargin(0.2);
     pTCanvas_a4->SetTopMargin(0.10);
     pTCanvas_a4->SetBottomMargin(0.15);
     pTGraph_a4->Draw("APL");
-    TString plotPDF_a4 = briefDescription + "_alpha4.pdf";
-    TString plotDotC_a4 = briefDescription + "_alpha4.C";
+    TString plotPDF_a4 = plotdescription + "_alpha4.pdf";
+    TString plotDotC_a4 = plotdescription + "_alpha4.C";
     TF1 *pTF1a4 = new TF1("Alpha4Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.015,0.015);
     pTGraph_a4->Fit("Alpha4Fit","MR","",-0.015,0.015);
     pTF1a4->SetLineColor(kBlue);
@@ -73,14 +77,14 @@ void MakePlots(TString name, TString description, TString briefDescription)
     pTCanvas_a4->SaveAs(plotDotC_a4);
 
     // Alpha 5 Plot
-    TCanvas *pTCanvas_a5 = new TCanvas(briefDescription + "_Alpha5", "", 600, 600);
+    TCanvas *pTCanvas_a5 = new TCanvas(plotdescription + "_Alpha5", "", 600, 600);
     pTCanvas_a5->SetRightMargin(0.05);
     pTCanvas_a5->SetLeftMargin(0.2);
     pTCanvas_a5->SetTopMargin(0.10);
     pTCanvas_a5->SetBottomMargin(0.15);
     pTGraph_a5->Draw("APL");
-    TString plotPDF_a5 = briefDescription + "_alpha5.pdf";
-    TString plotDotC_a5 = briefDescription + "_alpha5.C";
+    TString plotPDF_a5 = plotdescription + "_alpha5.pdf";
+    TString plotDotC_a5 = plotdescription + "_alpha5.C";
     TF1 *pTF1a5 = new TF1("Alpha5Fit","[0]*x +[1]*x*x + [2]*x*x*x + [3]*x*x*x*x",-0.015,0.015);
     pTGraph_a5->Fit("Alpha5Fit","MR","",-0.015,0.015);
     pTF1a5->SetLineColor(kBlue);
@@ -106,7 +110,7 @@ void MakePlots(TString name, TString description, TString briefDescription)
     alphaHigh_a5 = pTF1a5->GetX(0.989, 0.0, 0.02);
 
     std::ofstream resultsFile;
-    std::string resultFileName = briefDescription + ".txt";
+    std::string resultFileName = plotdescription + ".txt";
     resultsFile.open(resultFileName.c_str());
     resultsFile << description << std::endl;
     resultsFile << briefDescription << std::endl;
@@ -115,7 +119,6 @@ void MakePlots(TString name, TString description, TString briefDescription)
     resultsFile << std::setprecision(3) << alphaLow_a4 << " & " << alphaHigh_a4 << std::endl;
     resultsFile << std::setprecision(3) << alphaLow_a5 << " & " << alphaHigh_a5 << std::endl;
     resultsFile.close();
-*/
 }
 
 //================================================================
