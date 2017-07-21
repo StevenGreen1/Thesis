@@ -1,17 +1,18 @@
 {
 //=========Macro generated from canvas: Canvas_Nuisance/
-//=========  (Tue Jul 11 16:13:52 2017) by ROOT version5.34/37
+//=========  (Fri Jul 21 13:47:16 2017) by ROOT version5.34/37
    TCanvas *Canvas_Nuisance = new TCanvas("Canvas_Nuisance", "",0,45,600,600);
    gStyle->SetOptStat(0);
-   Canvas_Nuisance->Range(-0.01285714,-0.007714286,0.01285714,0.009428572);
+   Canvas_Nuisance->Range(-0.012375,-0.00825,0.010125,0.00675);
    Canvas_Nuisance->SetFillColor(0);
    Canvas_Nuisance->SetBorderMode(0);
    Canvas_Nuisance->SetBorderSize(2);
    Canvas_Nuisance->SetTickx(1);
    Canvas_Nuisance->SetTicky(1);
    Canvas_Nuisance->SetLeftMargin(0.15);
-   Canvas_Nuisance->SetRightMargin(0.15);
-   Canvas_Nuisance->SetTopMargin(0.2);
+   Canvas_Nuisance->SetRightMargin(0.05);
+   Canvas_Nuisance->SetTopMargin(0.05);
+   Canvas_Nuisance->SetBottomMargin(0.15);
    Canvas_Nuisance->SetFrameLineWidth(2);
    Canvas_Nuisance->SetFrameBorderMode(0);
    Canvas_Nuisance->SetFrameLineWidth(2);
@@ -29385,7 +29386,7 @@
    graph2d->SetPoint(3720,0.003,0.003,135.5329);
    graph2d->Draw("cont1 same");
    
-   TLegend *leg = new TLegend(0.1,0.825,0.9,1,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.5,0.775,0.8,0.925,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
@@ -29399,15 +29400,7 @@
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("NULL","Error assumed on #sigma_{e^{+}e^{-} #rightarrow qqqq#nu#nu}","h");
-   entry->SetLineColor(1);
-   entry->SetLineStyle(1);
-   entry->SetLineWidth(1);
-   entry->SetMarkerColor(1);
-   entry->SetMarkerStyle(21);
-   entry->SetMarkerSize(1);
-   entry->SetTextFont(132);
-   entry=leg->AddEntry("","0%","l");
+   TLegendEntry *entry=leg->AddEntry("","#sigma_{e^{+}e^{-} #rightarrow #nu#nuqqqq} = 0%","l");
    entry->SetLineColor(2);
    entry->SetLineStyle(1);
    entry->SetLineWidth(2);
@@ -29415,7 +29408,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("","1%","l");
+   entry=leg->AddEntry("","#sigma_{e^{+}e^{-} #rightarrow #nu#nuqqqq} = 1%","l");
 
    ci = TColor::GetColor("#009900");
    entry->SetLineColor(ci);
@@ -29425,7 +29418,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("","2%","l");
+   entry=leg->AddEntry("","#sigma_{e^{+}e^{-} #rightarrow #nu#nuqqqq} = 2%","l");
 
    ci = TColor::GetColor("#0000ff");
    entry->SetLineColor(ci);
@@ -29437,7 +29430,7 @@
    entry->SetTextFont(132);
    leg->Draw();
    
-   leg = new TLegend(0.2,0.125,0.4,0.175,NULL,"brNDC");
+   leg = new TLegend(0.2,0.225,0.4,0.275,NULL,"brNDC");
    leg->SetBorderSize(1);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);

@@ -26,18 +26,18 @@ void NuisancePlotSignal()
 
     gStyle->SetLegendBorderSize(1); 
 
-    TLegend *pTLegend_all = new TLegend(0.1, 0.825, 0.9, 1.0);
+    TLegend *pTLegend_all = new TLegend(0.5, 0.775, 0.8, 0.925);
     pTLegend_all->SetTextSize(0.05);
-    pTLegend_all->SetNColumns(2);
-    pTLegend_all->SetHeader("Error assumed on #sigma_{e^{+}e^{-} #rightarrow qqqq#nu#nu}");
-    pTLegend_all->AddEntry(pTH1FDummy1,"0\%", "l");
+//    pTLegend_all->SetNColumns(2);
+//    pTLegend_all->SetHeader("Error assumed on #sigma_{e^{+}e^{-} #rightarrow qqqq#nu#nu}");
+    pTLegend_all->AddEntry(pTH1FDummy1,"#sigma_{e^{+}e^{-} #rightarrow #nu#nuqqqq} = 0\%", "l");
 //    pTLegend_all->AddEntry(pTH1FDummy2,"0.1\%", "l");
-    pTLegend_all->AddEntry(pTH1FDummy3,"1\%", "l");
-    pTLegend_all->AddEntry(pTH1FDummy4,"2\%", "l");
+    pTLegend_all->AddEntry(pTH1FDummy3,"#sigma_{e^{+}e^{-} #rightarrow #nu#nuqqqq} = 1\%", "l");
+    pTLegend_all->AddEntry(pTH1FDummy4,"#sigma_{e^{+}e^{-} #rightarrow #nu#nuqqqq} = 2\%", "l");
     pTLegend_all->SetLineColorAlpha(0,0);
     pTLegend_all->SetFillColor(0);
 
-    TLegend *pTLegend_all2 = new TLegend(0.2, 0.125, 0.4, 0.175);
+    TLegend *pTLegend_all2 = new TLegend(0.2, 0.225, 0.4, 0.275);
     pTLegend_all2->SetHeader("68\% Confidence Region.");
     pTLegend_all2->SetTextSize(0.05);
     pTLegend_all2->SetLineColorAlpha(0,0);
@@ -49,10 +49,10 @@ void NuisancePlotSignal()
     TExec *ex4 = new TExec("ex4","Int_t colors4[] = {0, kBlue, 1}; gStyle->SetPalette((sizeof(colors4)/sizeof(Int_t)), colors4);"); // Blue
 
     TCanvas *pTCanvas = new TCanvas("Canvas_Nuisance", "", 600, 600);
-    pTCanvas->SetRightMargin(0.15);
+    pTCanvas->SetRightMargin(0.05);
     pTCanvas->SetLeftMargin(0.15);
-    pTCanvas->SetTopMargin(0.2);
-    pTCanvas->SetBottomMargin(0.1);
+    pTCanvas->SetTopMargin(0.05);
+    pTCanvas->SetBottomMargin(0.15);
 
     pTGraph2D->SetTitle("");
     ex1->Draw();
