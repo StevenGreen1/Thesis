@@ -30,6 +30,7 @@
    frame__1->SetMarkerStyle(21);
    frame__1->SetMarkerSize(0.3);
    frame__1->GetXaxis()->SetTitle("Signal Efficiency");
+   frame__1->GetXaxis()->SetDecimals();
    frame__1->GetXaxis()->SetNdivisions(505);
    frame__1->GetXaxis()->SetLabelFont(132);
    frame__1->GetXaxis()->SetLabelOffset(0.012);
@@ -38,6 +39,7 @@
    frame__1->GetXaxis()->SetTitleOffset(1.25);
    frame__1->GetXaxis()->SetTitleFont(132);
    frame__1->GetYaxis()->SetTitle("Background Rejection");
+   frame__1->GetYaxis()->SetDecimals();
    frame__1->GetYaxis()->SetLabelFont(132);
    frame__1->GetYaxis()->SetLabelOffset(0.012);
    frame__1->GetYaxis()->SetLabelSize(0.05);
@@ -169,7 +171,7 @@
    MVA_Cuts_1400GeV_rejBvsS->GetZaxis()->SetLabelSize(0.03);
    MVA_Cuts_1400GeV_rejBvsS->GetZaxis()->SetTitleSize(0.036);
    MVA_Cuts_1400GeV_rejBvsS->GetZaxis()->SetTitleFont(132);
-   MVA_Cuts_1400GeV_rejBvsS->Draw("csame");
+//   MVA_Cuts_1400GeV_rejBvsS->Draw("csame");
    
    TH1D *MVA_Likelihood_1400GeV_rejBvsS = new TH1D("MVA_Likelihood_1400GeV_rejBvsS","MVA_Likelihood_1400GeV",100,0,1);
    MVA_Likelihood_1400GeV_rejBvsS->SetBinContent(1,0.9699315);
@@ -943,7 +945,8 @@
    frame->GetZaxis()->SetTitleFont(132);
    frame->Draw("sameaxis");
    
-   TLegend *leg = new TLegend(-2.353437e-185,-2.353437e-185,-2.353437e-185,-2.353437e-185,NULL,"brNDC");
+   TLegend *leg = new TLegend(0.1,0.8,0.975,1.0,NULL,"brNDC");
+   leg->SetNColumns(3);
    leg->SetBorderSize(0);
    leg->SetTextFont(132);
    leg->SetTextSize(0.05);
@@ -1012,6 +1015,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
+/*
    entry=leg->AddEntry("MVA_Cuts_1400GeV_rejBvsS","Cuts","l");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
@@ -1020,9 +1024,10 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
+*/
    leg->Draw();
    
-   TPaveText *pt = new TPaveText(-2.353437e-185,-2.353437e-185,-2.353437e-185,-2.353437e-185,"blNDC");
+   TPaveText *pt = new TPaveText(0.1,0.9,0.9,1.0,"blNDC");
    pt->SetName("title");
    pt->SetBorderSize(1);
 
@@ -1039,4 +1044,5 @@
    pTCanvas->Modified();
    pTCanvas->cd();
    pTCanvas->SetSelected(pTCanvas);
+   pTCanvas->SaveAs("ThesisPlotMVAAlternatives1400GeV.pdf");
 }
