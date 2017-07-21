@@ -10,7 +10,7 @@ void NuisancePlotExplanation()
     TFile *pTFile = new TFile(name0);
     TH1F *pTH1F_S_SM = (TH1F*)pTFile->Get("MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq");
     pTH1F_S_SM->SetLineColor(kRed);
-    pTH1F_S_SM->SetLineStyle(2);
+    pTH1F_S_SM->SetLineStyle(1);
 //    pTH1F_S_SM->SetFillColor(kRed);
 //    pTH1F_S_SM->SetFillStyle(3004);
     pTH1F_S_SM->Rebin(2);
@@ -18,6 +18,7 @@ void NuisancePlotExplanation()
 
     TH1F *pTH1F_S_BSM = (TH1F*)pTFile->Get("MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq");
     pTH1F_S_BSM->SetLineColor(kRed);
+    pTH1F_S_BSM->SetLineStyle(2);
 //    pTH1F_S_BSM->SetFillColor(kMagenta);
 //    pTH1F_S_BSM->SetFillStyle(3004);
     pTH1F_S_BSM->Rebin(2);
@@ -43,9 +44,9 @@ void NuisancePlotExplanation()
 
     TLegend *pTLegned = new TLegend(0.35,0.65,0.85,0.85);
     pTLegned->SetTextSize(0.05);
-    pTLegned->AddEntry(pTH1F_S_SM,"e^{+}e^{-} #rightarrow qqqq#nu#nu, #alpha_{4} = #alpha_{5} = 0");
-    pTLegned->AddEntry(pTH1F_S_BSM,"e^{+}e^{-} #rightarrow qqqq#nu#nu, #alpha_{4} = #alpha_{5} = 0.05");
-    pTLegned->AddEntry(pTH1F_B,"e^{#pm} #gamma_{BS} #rightarrow qqqq#nu");
+    pTLegned->AddEntry(pTH1F_S_SM,"e^{+}e^{-} #rightarrow #nu#nuqqqq, #alpha_{4} = #alpha_{5} = 0");
+    pTLegned->AddEntry(pTH1F_S_BSM,"e^{+}e^{-} #rightarrow #nu#nuqqqq, #alpha_{4} = #alpha_{5} = 0.05");
+    pTLegned->AddEntry(pTH1F_B,"e^{#pm}#gamma_{BS} #rightarrow #nu_{e}qqqq");
 
     TCanvas *pTCanvas = new TCanvas("pTCanvas","");
     pTCanvas->cd();

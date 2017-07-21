@@ -1,12 +1,13 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Thu Jul 20 15:44:22 2017) by ROOT version5.34/37
+//=========  (Fri Jul 21 12:23:05 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
    gStyle->SetOptStat(0);
    c1->Range(-316.129,-5778.411,1490.323,32744.33);
    c1->SetFillColor(0);
    c1->SetBorderMode(0);
    c1->SetBorderSize(2);
+   c1->SetLogy();
    c1->SetTickx(1);
    c1->SetTicky(1);
    c1->SetLeftMargin(0.175);

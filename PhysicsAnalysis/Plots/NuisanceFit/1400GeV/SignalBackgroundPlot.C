@@ -44,6 +44,7 @@ void SignalBackgroundPlot()
     pTHStack->GetYaxis()->SetTitleSize(0.065);
     pTHStack->GetYaxis()->SetLabelSize(0.065);
     pTCanvas->Modified();
+    pTCanvas->SetLogy();
 
     pTCanvas->SaveAs("FitPlotMVV.C");
     pTCanvas->SaveAs("FitPlotMVV.pdf");

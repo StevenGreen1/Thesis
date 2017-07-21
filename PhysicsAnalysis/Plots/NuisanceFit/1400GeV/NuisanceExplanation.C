@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: pTCanvas/
-//=========  (Fri May  5 10:03:07 2017) by ROOT version5.34/37
+//=========  (Fri Jul 21 10:37:11 2017) by ROOT version5.34/37
    TCanvas *pTCanvas = new TCanvas("pTCanvas", "",10,45,700,500);
    gStyle->SetOptStat(0);
    pTCanvas->Range(0,0,1,1);
@@ -73,7 +73,6 @@
 
    ci = TColor::GetColor("#ff0000");
    MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq->SetLineColor(ci);
-   MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq->SetLineStyle(2);
    MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq->SetLineWidth(2);
    MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq->GetXaxis()->SetTitle("M_{VV} [GeV]");
    MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq->GetXaxis()->SetRange(1,28);
@@ -113,6 +112,7 @@
 
    ci = TColor::GetColor("#ff0000");
    MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq->SetLineColor(ci);
+   MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq->SetLineStyle(2);
    MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq->SetLineWidth(2);
    MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq->GetXaxis()->SetTitle("M_{VV} [GeV]");
    MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq->GetXaxis()->SetRange(1,28);
@@ -141,21 +141,21 @@
    leg->SetLineWidth(2);
    leg->SetFillColor(0);
    leg->SetFillStyle(1001);
-   TLegendEntry *entry=leg->AddEntry("MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq","e^{+}e^{-} #rightarrow qqqq#nu#nu, #alpha_{4} = #alpha_{5} = 0","lpf");
+   TLegendEntry *entry=leg->AddEntry("MVV_Alpha4_0.0_Alpha5_0.0_ee_nunuqqqq","e^{+}e^{-} #rightarrow #nu#nuqqqq, #alpha_{4} = #alpha_{5} = 0","lpf");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq","e^{+}e^{-} #rightarrow qqqq#nu#nu, #alpha_{4} = #alpha_{5} = 0.05","lpf");
+   entry=leg->AddEntry("MVV_Alpha4_0.05_Alpha5_0.05_ee_nunuqqqq","e^{+}e^{-} #rightarrow #nu#nuqqqq, #alpha_{4} = #alpha_{5} = 0.05","lpf");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
    entry->SetMarkerColor(1);
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
-   entry=leg->AddEntry("MVV_Alpha4_0.0_Alpha5_0.0_gammae_qqqqnu_BS","e^{#pm} #gamma_{BS} #rightarrow qqqq#nu","lpf");
+   entry=leg->AddEntry("MVV_Alpha4_0.0_Alpha5_0.0_gammae_qqqqnu_BS","e^{#pm}#gamma_{BS} #rightarrow #nu_{e}qqqq","lpf");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
