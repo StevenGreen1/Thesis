@@ -36,7 +36,7 @@ void Run(TString name)
 
     pTH1F->SetTitle("");
     pTH1F->SetStats(kFALSE);
-    pTH1F->GetXaxis()->SetTitle("HCal Active Layer Calorimeter Hit Energy [GeV]");
+    pTH1F->GetXaxis()->SetTitle("HCal Active Layer Energy [GeV]");
     pTH1F->GetXaxis()->SetTitleSize(0.05);
     pTH1F->GetXaxis()->SetTitleFont(132);
     pTH1F->GetXaxis()->SetLabelFont(132);

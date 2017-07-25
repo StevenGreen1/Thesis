@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: c1/
-//=========  (Thu Jun 22 13:53:26 2017) by ROOT version5.34/37
-   TCanvas *c1 = new TCanvas("c1", "",1120,480,800,600);
+//=========  (Tue Jul 25 11:52:29 2017) by ROOT version5.34/37
+   TCanvas *c1 = new TCanvas("c1", "",0,45,800,600);
    gStyle->SetOptStat(0);
    c1->Range(-0.0002,2.239222,0.001133333,5.210045);
    c1->SetFillColor(0);
@@ -432,7 +432,7 @@
    ci = TColor::GetColor("#0000ff");
    HCalDirectionCorrectedSimCaloHitBarrel->SetLineColor(ci);
    HCalDirectionCorrectedSimCaloHitBarrel->SetLineWidth(2);
-   HCalDirectionCorrectedSimCaloHitBarrel->GetXaxis()->SetTitle("HCal Active Layer Calorimeter Hit Energy [GeV]");
+   HCalDirectionCorrectedSimCaloHitBarrel->GetXaxis()->SetTitle("HCal Active Layer Energy [GeV]");
    HCalDirectionCorrectedSimCaloHitBarrel->GetXaxis()->SetNdivisions(505);
    HCalDirectionCorrectedSimCaloHitBarrel->GetXaxis()->SetLabelFont(132);
    HCalDirectionCorrectedSimCaloHitBarrel->GetXaxis()->SetLabelSize(0.05);
