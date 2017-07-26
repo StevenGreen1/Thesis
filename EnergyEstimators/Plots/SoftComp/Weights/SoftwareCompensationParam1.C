@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/
-//=========  (Wed May 17 11:47:01 2017) by ROOT version5.34/37
+//=========  (Wed Jul 26 09:01:33 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "",10,45,700,500);
    gStyle->SetOptStat(0);
    c1->Range(0,0,1,1);
@@ -9,8 +9,8 @@
    c1->SetBorderSize(2);
    c1->SetTickx(1);
    c1->SetTicky(1);
-   c1->SetLeftMargin(0.15);
-   c1->SetBottomMargin(0.2);
+   c1->SetLeftMargin(0.25);
+   c1->SetBottomMargin(0.25);
    c1->SetFrameLineWidth(2);
    c1->SetFrameBorderMode(0);
    
@@ -26,13 +26,14 @@
    p1->GetXaxis()->SetTitle("#it{E}_{Raw} [GeV]");
    p1->GetXaxis()->SetNdivisions(505);
    p1->GetXaxis()->SetLabelFont(132);
-   p1->GetXaxis()->SetLabelSize(0.076);
-   p1->GetXaxis()->SetTitleSize(0.076);
+   p1->GetXaxis()->SetLabelSize(0.114);
+   p1->GetXaxis()->SetTitleSize(0.114);
    p1->GetXaxis()->SetTitleFont(132);
    p1->GetYaxis()->SetTitle("#it{p}_{1}");
+   p1->GetYaxis()->SetNdivisions(6);
    p1->GetYaxis()->SetLabelFont(132);
-   p1->GetYaxis()->SetLabelSize(0.076);
-   p1->GetYaxis()->SetTitleSize(0.076);
+   p1->GetYaxis()->SetLabelSize(0.114);
+   p1->GetYaxis()->SetTitleSize(0.114);
    p1->GetYaxis()->SetTitleFont(132);
    p1->SetParameter(0,2.49632);
    p1->SetParError(0,0);
