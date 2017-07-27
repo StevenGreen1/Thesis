@@ -92,7 +92,7 @@ There are a number of different pixel technology options under consideration for
 \subsection{Time Projection Chamber}
 The central tracking system for the ILD detector is a TPC, which is shown in figure \ref{fig:tracker}.  The TPC consists of a cylindrical gas volume with a central electrode providing an axial electric field.  When a charged particle passes through the TPC, it ionises the gas and the ionised molecules drift in the axial electric field.  The direction of the electric field is chosen such that the electrons drift towards the endplates where they are collected.  The position of the ionisation point can then be calculated using the drift time of the electrons in the TPC.  Combining these TPC hits together makes reconstruction of the full charged particle track possible.  TPCs have an advantage over silicon tracking in that they continuously track any charged particle passing through them, while silicon detectors are only sensitive within each silicon layer.  This compensates for the worse single point resolution that TPCs have in comparison to silicon detectors and makes TPCs a viable option for the ILD detector.  Furthermore, TPCs have a very low material budget.  This benefits calorimetry as it minimises energy losses prior to the particle energy entering the calorimeters, which means the calorimetric energy deposits give a better reflection of the true particle energy.  
 
-The ILD TPC has a point resolution of better than 100~{\mu}m and a double hit resolution in $\phi$ of less than 2~mm.  The gas used for the TPC will be Ar:$\text{CH}_4$:$CO_{2}$ (95:3:2) \cite{Abe:2010aa}.  Several readout technology options, designed to measure the ionisation current, are currently under development.  For all potential options it is envisaged that the readout pads would be $\approx 1 \times 6 \text{mm}^{2}$ giving a total of approximately $10^{6}$ pads on each TPC endplate.
+The ILD TPC has a point resolution of better than 100~{\mu}m and a double hit resolution in $\phi$ of less than 2~mm.  The gas used for the TPC will be Ar:$\text{CH}_4$:$CO_{2}$ (95:3:2) \cite{arXiv:1006.3396}.  Several readout technology options, designed to measure the ionisation current, are currently under development.  For all potential options it is envisaged that the readout pads would be $\approx 1 \times 6 \text{mm}^{2}$ giving a total of approximately $10^{6}$ pads on each TPC endplate.
 
 \begin{figure}[h!]
 \centering
@@ -250,7 +250,7 @@ This yoke is instrumented by a muon system in the barrel and forward regions of 
 \subsection{Forward Calorimetry}
 Forward calorimetry in the ILD detector consists of three additional sampling calorimeters:
 \begin{itemize}
-\item The LumiCal, which is located within the octagonal hole in the ECal endcap.  This will give a precise measurement of the luminosity of the linear collider beam.   The LumiCal uses Bhabha scattering, $\text{e}^{+}\text{e}^{-} \rightarrow \text{e}^{+}\text{e}^{-}(\gamma)$, as a gauge process for the luminosity measurement.  Using this approach the luminosity can be measured with precision of less than $10^{-3}$ at $\sqrt{s}=500$~GeV \cite{Abe:2010aa}. 
+\item The LumiCal, which is located within the octagonal hole in the ECal endcap.  This will give a precise measurement of the luminosity of the linear collider beam.   The LumiCal uses Bhabha scattering, $\text{e}^{+}\text{e}^{-} \rightarrow \text{e}^{+}\text{e}^{-}(\gamma)$, as a gauge process for the luminosity measurement.  Using this approach the luminosity can be measured with precision of less than $10^{-3}$ at $\sqrt{s}=500$~GeV \cite{arXiv:1006.3396}. 
 \item The LHCal, which is positioned within the square hole of the HCal endcap.  This hadronic calorimeter is designed to extend the coverage of the HCal down to small polar angles.  
 \item The BeamCal, which is located just in front of the final focusing quadrupole.  This calorimeter will perform a bunch-by-bunch estimate of the luminosity based on the energy deposited in the calorimeter.
 \end{itemize}
@@ -303,20 +303,12 @@ Detector model simulation for all studies presented in this work was performed u
 \item The forward calorimeters, the LumiCal, LHCal and BeamCal, are all included in the simulation.  Tungsten is used as the absorber material for each of the calorimeters.  The LumiCal and LHCal use a silicon readout material, while the BeamCal uses a diamond readout.  
 \end{itemize}
 
-%========================================================================================
-
-%\section{Reconstruction Chain}
-
-%\section{Event Generation, Simulation and Reconstruction}
-
-%The jet fragmentation and hadronisation for the Z $\rightarrow$ uds events used for determining the metric for detector performance was controlled using PYTHIA \cite{Sjostrand:2006za} that had been tuned using data from LEP \cite{Alexander:1995bk}.  Single particle spatially isotropic samples of $K_{L}^{0}$, $\gamma$ and $\mu^{-}$ were produced for the calibration of each detector model.  A simple c++ script was written to generate the relevant HEPEvt common blocks for these samples. 
-
-%Event reconstruction was performed using MARLIN \cite{Gaede:2006pj}, a c++ framework designed for reconstruction at the linear collider.  PandoraPFA \cite{arXiv:0907.3577, arXiv:1209.4039} was used to apply Particle Flow Calorimetry in the reconstruction, the full details of which can be found in chapter PANDORA CHAPTER.
+The simulation and reconstruction of the large event samples used in the studies presented in the work was performed using the ILCDIRAC \cite{Grefe:2014sca, Tsaregorodtsev:2008zz} grid production tools.  
 
 %========================================================================================
 
 \section{CLIC ILD}
-The increased collision energy of the proposed CLIC accelerator means the use of the nominal ILD detector model would be inappropriate.  Therefore, a new detector model, CLIC\_ILD \cite{Linssen:2012hp}, based upon the nominal ILD detector model was created to cope with the experimental conditions found at the CLIC experiment.  The main differences between the nominal ILD detector and CLIC\_ILD are:
+The increased collision energy of the proposed CLIC accelerator means the use of the nominal ILD detector model would be inappropriate.  Therefore, a new detector model, CLIC\_ILD \cite{Linssen:2012hp,AlipourTehrani:2254048}, based upon the nominal ILD detector model was created to cope with the experimental conditions found at the CLIC experiment.  The main differences between the nominal ILD detector and CLIC\_ILD are:
 
 \begin{figure}[h!]
 \centering
