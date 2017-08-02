@@ -8,7 +8,7 @@ void TidyPlot()
     TH1F *pTH1F = (TH1F*)pTFile->Get("fPFA_L7A");
     pTH1F->Rebin(10);
     pTH1F->GetXaxis()->SetRangeUser(180,220);
-    pTH1F->GetXaxis()->SetTitle("E_{j}");
+    pTH1F->GetXaxis()->SetTitle("E_{jj} [GeV]");
     pTH1F->GetXaxis()->SetTitleSize(0.05);
     pTH1F->GetXaxis()->SetLabelSize(0.05);
     pTH1F->GetYaxis()->SetTitle("Entries");

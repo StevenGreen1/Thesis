@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: name/
-//=========  (Mon Mar 20 11:51:07 2017) by ROOT version5.34/37
+//=========  (Wed Aug  2 10:24:20 2017) by ROOT version5.34/37
    TCanvas *name = new TCanvas("name", "",10,45,700,500);
    gStyle->SetOptStat(0);
    name->Range(172,-62.31397,225.3333,353.1125);
@@ -119,7 +119,7 @@
    fPFA_L7A->SetEntries(6098);
    fPFA_L7A->SetStats(0);
    fPFA_L7A->SetLineWidth(2);
-   fPFA_L7A->GetXaxis()->SetTitle("E_{j}");
+   fPFA_L7A->GetXaxis()->SetTitle("E_{jj} [GeV]");
    fPFA_L7A->GetXaxis()->SetRange(361,440);
    fPFA_L7A->GetXaxis()->SetNdivisions(505);
    fPFA_L7A->GetXaxis()->SetLabelFont(132);

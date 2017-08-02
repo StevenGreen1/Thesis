@@ -12,7 +12,7 @@
     pAxesEj->GetYaxis()->SetDecimals();
     pAxesEj->GetYaxis()->SetTitleSize(0.05);
     pAxesEj->GetYaxis()->SetLabelSize(0.05);
-    pAxesEj->GetXaxis()->SetTitle("E_{j} [GeV]");
+    pAxesEj->GetXaxis()->SetTitle("E_{jj} [GeV]");
     pAxesEj->GetXaxis()->SetTitleOffset(0.95);
     pAxesEj->GetXaxis()->SetDecimals();
     pAxesEj->GetXaxis()->SetTitleSize(0.05);
