@@ -398,10 +398,6 @@ paren " " swap$ *
 }
 FUNCTION {format.book.entry}
 { format.btitle
-format.bvolume *
-format.number.series *
-format.edition *
-format.pub.addr.date *
 }
 FUNCTION {format.inbook.entry}
 { format.book.entry
