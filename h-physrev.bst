@@ -23,6 +23,7 @@ title
 type
 volume
 year
+archivePrefix
 }
 {}
 { label }
@@ -448,6 +449,12 @@ year empty$
 { ", " * year * " (unpublished)" * }
 if$
 }
+FUNCTION {format.tr.num}
+{ number empty$
+{ "" }
+{ number tie.or.space.connect }
+if$
+}
 FUNCTION {format.article.crossref}
 { key empty$
 { journal empty$
@@ -526,6 +533,19 @@ if$
 if$
 " \cite{" * crossref * "}" *
 }
+FUNCTION {format.archive}
+{
+  archivePrefix empty$
+      { "" }
+      { archivePrefix ":" * }
+  if$
+}
+FUNCTION {format.eprint}
+{ eprint empty$
+      { "" }
+      { format.archive eprint * }
+  if$
+}
 FUNCTION {article}
 { output.bibitem
 collaboration output
@@ -549,7 +569,7 @@ output
 format.pages output
 }
 if$
-eprint output
+format.eprint output
 new.block
 note output
 fin.entry
