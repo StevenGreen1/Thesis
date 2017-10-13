@@ -1,32 +1,471 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{arXiv:1006.3396}
-Toshinori Abe et~al.
-\newblock {The International Large Detector: Letter of Intent}.
-\newblock 2010, 1006.3396.
+\bibitem{Aad:2012tfa}
+ATLAS Collaboration, G.~Aad {\em et~al.},
+\newblock {\em {Observation of a new particle in the search for the Standard
+  Model Higgs boson with the ATLAS detector at the LHC}}, Phys. Lett. {\bf
+  B716}, 1 (2012), arXiv:1207.7214.
 
-\bibitem{hepthesis}
-Andy Buckley.
-\newblock The hepthesis {\LaTeX} class.
+\bibitem{Chatrchyan:2012xdj}
+CMS Collaboration, S.~Chatrchyan {\em et~al.},
+\newblock {\em {Observation of a new boson at a mass of 125 GeV with the CMS
+  experiment at the LHC}}, Phys. Lett. {\bf B716}, 30 (2012), arXiv:1207.7235.
 
-\bibitem{0708.4233}
-Wolfgang Kilian, Thorsten Ohl, and Jurgen Reuter.
-\newblock {WHIZARD: Simulating Multi-Particle Processes at LHC and ILC}.
-\newblock {\em Eur. Phys. J.}, C71:1742, 2011, 0708.4233.
+\bibitem{Behnke:2013xla}
+T.~Behnke {\em et~al.},
+\newblock {\em {The International Linear Collider Technical Design Report -
+  Volume 1: Executive Summary}}, ILC-REPORT-2013-040  (2013), arXiv:1306.6327.
 
-\bibitem{arXiv:1209.4039}
-J.~S. Marshall, A.~Münnich, and M.~A. Thomson.
-\newblock {Performance of Particle Flow Calorimetry at CLIC}.
-\newblock {\em Nucl. Instrum. Meth.}, A700:153--162, 2013, 1209.4039.
+\bibitem{Linssen:2012hp}
+L.~Linssen, A.~Miyamoto, M.~Stanitzki, and H.~Weerts,
+\newblock {\em {Physics and Detectors at CLIC: CLIC Conceptual Design Report}},
+  CERN-2012-003  (2012), arXiv:1202.5940.
 
-\bibitem{hep-ph/0102195}
-Mauro Moretti, Thorsten Ohl, and Jurgen Reuter.
-\newblock {O'Mega: An Optimizing matrix element generator}.
-\newblock 2001, hep-ph/0102195.
+\bibitem{CLIC:2016zwp}
+CLIC and CLICdp Collaborations, M.~J. Boland {\em et~al.},
+\newblock {\em {Updated baseline for a staged Compact Linear Collider}},
+  CERN-2016-004  (2016), arXiv:1608.07537.
+
+\bibitem{Aicheler:2012bya}
+M.~Aicheler {\em et~al.},
+\newblock {\em {A Multi-TeV Linear Collider Based on CLIC Technology}},
+  CERN-2012-007  (2012).
+
+\bibitem{Pilicer:2015ijy}
+B.~Pilicer {\em et~al.},
+\newblock {\em {Study of Muon Backgrounds in the CLIC Beam Delivery System}},
+\newblock in {\em {Proceedings, 6th International Particle Accelerator
+  Conference (IPAC)}}, 2015.
+
+\bibitem{Sailer:2012mfa}
+A.~Sailer,
+\newblock {\em {Radiation and Background Levels in a CLIC Detector due to
+  Beam-Beam Effects}},
+\newblock PhD thesis, CERN-THESIS-2012-223, (2012).
+
+\bibitem{Griffiths:1987tj}
+D.~J. Griffiths,
+\newblock {\em {Introduction To Elementary Particles}},
+\newblock 1987.
+
+\bibitem{Peskin:1995ev}
+M.~E. Peskin and D.~V. Schroeder,
+\newblock {\em {An Introduction to quantum field theory}},
+\newblock 1995.
+
+\bibitem{Beringer:1900zz}
+Particle Data Group, J.~Beringer {\em et~al.},
+\newblock {\em {Review of Particle Physics (RPP)}}, Phys. Rev. {\bf D86},
+  010001 (2012).
+
+\bibitem{Weinberg:1967tq}
+S.~Weinberg,
+\newblock {\em {A Model of Leptons}}, Phys. Rev. Lett. {\bf 19}, 1264 (1967).
+
+\bibitem{Goldstone:1962es}
+J.~Goldstone, A.~Salam, and S.~Weinberg,
+\newblock {\em {Broken Symmetries}}, Phys. Rev. {\bf 127}, 965 (1962).
+
+\bibitem{Ellis:2013jnq}
+J.~Ellis,
+\newblock {\em {Higgs Physics}},
+\newblock in {\em {Proceedings, 2013 European School of High-Energy Physics
+  (ESHEP)}}, 2015, arXiv:1312.5672.
+
+\bibitem{Agashe:2014kda}
+Particle Data Group, K.~A. Olive {\em et~al.},
+\newblock {\em {Review of Particle Physics}}, Chin. Phys. {\bf C38}, 090001
+  (2014).
+
+\bibitem{Ellis:1991qj}
+R.~K. Ellis, W.~J. Stirling, and B.~R. Webber,
+\newblock {\em {QCD and collider physics}}, Camb. Monogr. Part. Phys. Nucl.
+  Phys. Cosmol. {\bf 8}, 1 (1996).
+
+\bibitem{Andersen:2011yj}
+J.~R. Andersen {\em et~al.},
+\newblock {\em {Discovering Technicolor}}, Eur. Phys. J. Plus {\bf 126}, 81
+  (2011), arXiv:1104.1255.
+
+\bibitem{Grojean:2007zz}
+C.~Grojean,
+\newblock {\em {New approaches to electroweak symmetry breaking}}, Phys. Usp.
+  {\bf 50}, 1 (2007).
+
+\bibitem{Degrande:2013rea}
+C.~Degrande {\em et~al.},
+\newblock {\em {Monte Carlo tools for studies of non-standard electroweak gauge
+  boson interactions in multi-boson processes: A Snowmass White Paper}},
+\newblock in {\em {Proceedings, 2013 Community Summer Study on the Future of
+  U.S. Particle Physics: Snowmass on the Mississippi (CSS2013)}}, 2013,
+  arXiv:1309.7890.
+
+\bibitem{Arzt:1993gz}
+C.~Arzt,
+\newblock {\em {Reduced effective Lagrangians}}, Phys. Lett. {\bf B342}, 189
+  (1995), arXiv:hep-ph/9304230.
+
+\bibitem{Gripaios:2015qya}
+B.~Gripaios,
+\newblock {\em {Lectures on Effective Field Theory}}, (2015), arXiv:1506.05039.
+
+\bibitem{Herrero:1994tj}
+M.~J. Herrero and E.~Ruiz~Morales,
+\newblock {\em {The Electroweak chiral Lagrangian as an effective field theory
+  of the standard model with a heavy Higgs}},
+\newblock in {\em {Workshop on Electroweak Symmetry Breaking Budapest}}, 1994,
+  arXiv:hep-ph/9412317.
+
+\bibitem{Longhitano:1980tm}
+A.~C. Longhitano,
+\newblock {\em {Low-Energy Impact of a Heavy Higgs Boson Sector}}, Nucl. Phys.
+  {\bf B188}, 118 (1981).
+
+\bibitem{Belyaev:1998ih}
+A.~S. Belyaev {\em et~al.},
+\newblock {\em {Strongly interacting vector bosons at the CERN LHC: Quartic
+  anomalous couplings}}, Phys. Rev. {\bf D59}, 015022 (1999),
+  arXiv:hep-ph/9805229.
 
 \bibitem{arXiv:0907.3577}
-M.~A. Thomson.
-\newblock {Particle Flow Calorimetry and the PandoraPFA Algorithm}.
-\newblock {\em Nucl. Instrum. Meth.}, A611:25--40, 2009, 0907.3577.
+M.~A. Thomson,
+\newblock {\em {Particle Flow Calorimetry and the PandoraPFA Algorithm}}, Nucl.
+  Instrum. Meth. {\bf A611}, 25 (2009), arXiv:0907.3577.
+
+\bibitem{Marshall:2015rfa}
+J.~S. Marshall and M.~A. Thomson,
+\newblock {\em {The Pandora Software Development Kit for Pattern Recognition}},
+  Eur. Phys. J. {\bf C75}, 439 (2015), arXiv:1506.05348.
+
+\bibitem{arXiv:1209.4039}
+J.~S. Marshall, A.~M{\"u}nnich, and M.~A. Thomson,
+\newblock {\em {Performance of Particle Flow Calorimetry at CLIC}}, Nucl.
+  Instrum. Meth. {\bf A700}, 153 (2013), arXiv:1209.4039.
+
+\bibitem{Behnke:2013lya}
+H.~Abramowicz {\em et~al.},
+\newblock {\em {The International Linear Collider Technical Design Report -
+  Volume 4: Detectors}}, ILC-REPORT-2013-040  (2013), arXiv:1306.6329.
+
+\bibitem{arXiv:1006.3396}
+Linear Collider ILD Concept Group, T.~Abe {\em et~al.},
+\newblock {\em {The International Large Detector: Letter of Intent}},
+  FERMILAB-LOI-2010-03  (2010), arXiv:1006.3396.
+
+\bibitem{Chatrchyan:2013dga}
+CMS Collaboration, S.~Chatrchyan {\em et~al.},
+\newblock {\em {Energy Calibration and Resolution of the CMS Electromagnetic
+  Calorimeter in $pp$ Collisions at $\sqrt{s}$ = 7 TeV}}, JINST {\bf 8}, P09009
+  (2013), arXiv:1306.2016.
+
+\bibitem{Aharrouche:2006nf}
+ATLAS Electromagnetic Barrel Calorimeter Collaboration, M.~Aharrouche {\em
+  et~al.},
+\newblock {\em {Energy linearity and resolution of the ATLAS electromagnetic
+  barrel calorimeter in an electron test-beam}}, Nucl. Instrum. Meth. {\bf
+  A568}, 601 (2006), arXiv:physics/0608012.
+
+\bibitem{Perret:2014owa}
+LHCb Collaboration, P.~Perret,
+\newblock {\em {First Years of Running for the LHCb Calorimeter System}}, PoS
+  {\bf TIPP2014}, 030 (2014), arXiv:1407.4289.
+
+\bibitem{Tran:2017tgr}
+H.~L. Tran {\em et~al.},
+\newblock {\em {Software compensation in Particle Flow reconstruction}},
+  DESY-17-083  (2017), arXiv:1705.10363.
+
+\bibitem{Blaising:2015nla}
+CALICE collaboration, M.~Chefdeville {\em et~al.},
+\newblock {\em {Shower development of particles with momenta from 15 GeV to 150
+  GeV in the CALICE scintillator-tungsten hadronic calorimeter}}, JINST {\bf
+  10}, P12006 (2015), arXiv:1509.00617.
+
+\bibitem{Budd:2001eu}
+H.~S. Budd,
+\newblock {\em {CMS central hadron calorimeter}}, Nucl. Phys. Proc. Suppl. {\bf
+  54B}, 191 (1997), arXiv:hep-ex/0102032.
+
+\bibitem{Airapetian:1996iv}
+ATLAS Collaboration, A.~Airapetian {\em et~al.},
+\newblock {\em {ATLAS calorimeter performance Technical Design Report}},
+  CERN-LHCC-96-40  (1996).
+
+\bibitem{MoradeFreitas:2002kj}
+P.~Mora~de Freitas and H.~Videau,
+\newblock {\em {Detector simulation with MOKKA / GEANT4: Present and future}},
+\newblock in {\em {Proceedings, International Workshop on physics and
+  experiments with future electron-positron linear colliders (LCWS)}},
+  LC-TOOL-2003-010 (2002).
+
+\bibitem{Agostinelli:2002hh}
+GEANT4 Collaboration, S.~Agostinelli {\em et~al.},
+\newblock {\em {GEANT4: A Simulation toolkit}}, Nucl. Instrum. Meth. {\bf
+  A506}, 250 (2003).
+
+\bibitem{Allison:2006ve}
+GEANT4 Collaboration, J.~Allison {\em et~al.},
+\newblock {\em {GEANT4 developments and applications}}, IEEE Trans. Nucl. Sci.
+  {\bf 53}, 270 (2006).
+
+\bibitem{Birks:1951boa}
+J.~B. Birks,
+\newblock {\em {Scintillations from Organic Crystals: Specific Fluorescence and
+  Relative Response to Different Radiations}}, Proc. Phys. Soc. {\bf A64}, 874
+  (1951).
+
+\bibitem{Grefe:2014sca}
+CLICdp Collaboration, C.~Grefe, S.~Poss, A.~Sailer, and A.~Tsaregorodtsev,
+\newblock {\em {ILCDIRAC, a DIRAC extension for the Linear Collider
+  community}}, J. Phys. Conf. Ser. {\bf 513}, 032077 (2014).
+
+\bibitem{Tsaregorodtsev:2008zz}
+A.~Tsaregorodtsev {\em et~al.},
+\newblock {\em {DIRAC: A community grid solution}}, J. Phys. Conf. Ser. {\bf
+  119}, 062048 (2008).
+
+\bibitem{AlipourTehrani:2254048}
+N.~Alipour~Tehrani {\em et~al.},
+\newblock {\em {CLICdet: The post-CDR CLIC detector model}},
+  CLICdp-Note-2017-001  (2017).
+
+\bibitem{Gaede:2006pj}
+F.~Gaede,
+\newblock {\em {Marlin and LCCD: Software tools for the ILC}}, Nucl. Instrum.
+  Meth. {\bf A559}, 177 (2006).
+
+\bibitem{Abramowicz:2016zbo}
+H.~Abramowicz {\em et~al.},
+\newblock {\em {Higgs Physics at the CLIC Electron-Positron Linear Collider}},
+  CLICDP-PUB-2016-001  (2016), arXiv:1608.07538.
+
+\bibitem{Sjostrand:2006za}
+T.~Sjostrand, S.~Mrenna, and P.~Z. Skands,
+\newblock {\em {PYTHIA 6.4 Physics and Manual}}, JHEP {\bf 05}, 026 (2006),
+  arXiv:hep-ph/0603175.
+
+\bibitem{Alexander:1995bk}
+OPAL Collaboration, G.~Alexander {\em et~al.},
+\newblock {\em {A Comparison of b and u d s quark jets to gluon jets}}, Z.
+  Phys. {\bf C69}, 543 (1996).
+
+\bibitem{Was:2000st}
+Z.~Was,
+\newblock {\em {TAUOLA the library for tau lepton decay, and KKMC / KORALB /
+  KORALZ /... status report}}, Nucl. Phys. Proc. Suppl. {\bf 98}, 96 (2001),
+  arXiv:hep-ph/0011305.
+
+\bibitem{Chatrchyan:2013fya}
+CMS Collaboration, S.~Chatrchyan {\em et~al.},
+\newblock {\em {Measurement of the $W\gamma$ and $Z\gamma$ inclusive cross
+  sections in $pp$ collisions at $\sqrt s=7$~TeV and limits on anomalous triple
+  gauge boson couplings}}, Phys. Rev. {\bf D89}, 092005 (2014),
+  arXiv:1308.6832.
+
+\bibitem{ATLAS:2012mec}
+ATLAS Collaboration, G.~Aad {\em et~al.},
+\newblock {\em {Measurement of $W^+W^-$ production in pp collisions at
+  $\sqrt{s}$ = 7 TeV with the ATLAS detector and limits on anomalous WWZ and
+  WWγ couplings}}, Phys. Rev. {\bf D87}, 112001 (2013), arXiv:1210.2979.
+
+\bibitem{Chatrchyan:2014bza}
+CMS Collaboration, S.~Chatrchyan {\em et~al.},
+\newblock {\em {Search for $WW \gamma$ and $WZ \gamma$ production and
+  constraints on anomalous quartic gauge couplings in $pp$ collisions at
+  $\sqrt{s}$ = 8 TeV}}, Phys. Rev. {\bf D90}, 032008 (2014), arXiv:1404.4619.
+
+\bibitem{Fabjan:2003aq}
+C.~W. Fabjan and F.~Gianotti,
+\newblock {\em {Calorimetry for particle physics}}, Rev. Mod. Phys. {\bf 75},
+  1243 (2003).
+
+\bibitem{Adloff:2012gv}
+CALICE Collaboration, C.~Adloff {\em et~al.},
+\newblock {\em {Hadronic energy resolution of a highly granular
+  scintillator-steel hadron calorimeter using software compensation
+  techniques}}, JINST {\bf 7}, P09017 (2012), arXiv:1207.4210.
+
+\bibitem{Weste:2010:CVD:1841628}
+N.~Weste and D.~Harris,
+\newblock {\em CMOS VLSI Design: A Circuits and Systems Perspective},
+\newblock 2010.
+
+\bibitem{Benoit:2016vup}
+M.~Benoit {\em et~al.},
+\newblock {\em {Testbeam results of irradiated ams H18 HV-CMOS pixel sensor
+  prototypes}}, (2016), arXiv:1611.02669.
+
+\bibitem{Aaij:2244311}
+LHCb Collaboration, R.~Aaij {\em et~al.},
+\newblock {\em {Expression of Interest for a Phase-II LHCb Upgrade:
+  Opportunities in flavour physics, and beyond, in the HL-LHC era}},
+  CERN-LHCC-2017-003  (2017).
+
+\bibitem{Dominguez:1481838}
+CMS Collaboration, A.~Dominguez {\em et~al.},
+\newblock {\em {CMS Technical Design Report for the Pixel Detector Upgrade}},
+  CERN-LHCC-2012-016  (2012).
+
+\bibitem{FabricationNote}
+M.~Benoit {\em et~al.},
+\newblock {\em {Fabrication of capacitively coupled hybrid pixel detectors (in
+  preparation)}}.
+
+\bibitem{AlipourTehrani:2054922}
+N.~Alipour~Tehrani {\em et~al.},
+\newblock {\em {Calibration of ultra-thin hybrid pixel detector assemblies with
+  Timepix readout ASICs}}, CLICdp-Note-2015-003  (2015).
+
+\bibitem{Rubinskiy:2000287}
+I.~Rubinskiy,
+\newblock {\em {An EUDET/AIDA Pixel Beam Telescope for Detector Development}},
+  AIDA-CONF-2015-035  (2011).
+
+\bibitem{Tehrani:2016ogb}
+N.~Alipour~Tehrani {\em et~al.},
+\newblock {\em {Capacitively coupled hybrid pixel assemblies for the CLIC
+  vertex detector}}, Nucl. Instrum. Meth. {\bf A823}, 1 (2016).
+
+\bibitem{Derrick:1991tq}
+M.~Derrick {\em et~al.},
+\newblock {\em {Design and construction of the ZEUS barrel calorimeter}}, Nucl.
+  Instrum. Meth. {\bf A309}, 77 (1991).
+
+\bibitem{Wigmans:2000vf}
+R.~Wigmans,
+\newblock {\em {Calorimetry: Energy measurement in particle physics}}, Int.
+  Ser. Monogr. Phys. {\bf 107}, 1 (2000).
+
+\bibitem{Landau:1944if}
+L.~Landau,
+\newblock {\em {On the energy loss of fast particles by ionization}}, J. Phys.
+  (USSR) {\bf 8}, 201 (1944).
+
+\bibitem{Bichsel:2004ej}
+Particle Data Group, S.~Eidelman {\em et~al.},
+\newblock {\em {Review of particle physics}}, Phys. Lett. {\bf B592}, 1 (2004).
+
+\bibitem{Hartbrich:292251}
+O.~Hartbrich,
+\newblock {\em {AHCAL} {D}igitisation},
+\newblock CALICE Spring Meeting 2015 $\&$ LCWS 2015, PUBDB-2015-05964 (2015).
+
+\bibitem{Adloff:2014rya}
+CALICE Collaboration, C.~Adloff {\em et~al.},
+\newblock {\em {The Time Structure of Hadronic Showers in highly granular
+  Calorimeters with Tungsten and Steel Absorbers}}, JINST {\bf 9}, P07022
+  (2014), arXiv:1404.6454.
+
+\bibitem{Olive:2016xmw}
+Particle Data Group, C.~Patrignani {\em et~al.},
+\newblock {\em {Review of Particle Physics}}, Chin. Phys. {\bf C40}, 100001
+  (2016).
+
+\bibitem{Folger:2003sb}
+G.~Folger and J.~P. Wellisch,
+\newblock {\em {String parton models in GEANT4}},
+\newblock in {\em {Proceedings, 13th International Conference on Computing in
+  High-Enery and Nuclear Physics (CHEP 2003)}}, 2003, nucl-th/0306007.
+
+\bibitem{geantStringModel}
+{\em {Geant4 Physics Reference Manual, Section IV, Chapter 28.}}
+
+\bibitem{Guthrie:1968ue}
+M.~P. Guthrie, R.~G. Alsmiller, and H.~W. Bertini,
+\newblock {\em {Calculation of the capture of negative pions in light elements
+  and comparison with experiments pertaining to cancer radiotherapy}}, Nucl.
+  Instrum. Meth. {\bf 66}, 29 (1968).
+
+\bibitem{Caldwell:1992te}
+A.~Caldwell {\em et~al.},
+\newblock {\em {Measurement of the time development of particle showers in a
+  uranium scintillator calorimeter}}, Nucl. Instrum. Meth. {\bf A330}, 389
+  (1993).
+
+\bibitem{Fermi:1934hr}
+E.~Fermi,
+\newblock {\em {An attempt of a theory of beta radiation. 1.}}, Z. Phys. {\bf
+  88}, 161 (1934).
+
+\bibitem{Aad:2014zda}
+ATLAS Collaboration, G.~Aad {\em et~al.},
+\newblock {\em {Evidence for Electroweak Production of $W^{\pm}W^{\pm}jj$ in
+  $pp$ Collisions at $\sqrt{s}=8$ TeV with the ATLAS Detector}}, Phys. Rev.
+  Lett. {\bf 113}, 141803 (2014), arXiv:1405.6241.
+
+\bibitem{0708.4233}
+W.~Kilian, T.~Ohl, and J.~Reuter,
+\newblock {\em {WHIZARD: Simulating Multi-Particle Processes at LHC and ILC}},
+  Eur. Phys. J. {\bf C71}, 1742 (2011), arXiv:0708.4233.
+
+\bibitem{hep-ph/0102195}
+M.~Moretti, T.~Ohl, and J.~Reuter,
+\newblock {\em {O'Mega: An Optimizing matrix element generator}}, (2001),
+  arXiv:hep-ph/0102195.
+
+\bibitem{vonWeizsacker:1934nji}
+C.~F. von Weizsacker,
+\newblock {\em {Radiation emitted in collisions of very fast electrons}}, Z.
+  Phys. {\bf 88}, 612 (1934).
+
+\bibitem{Williams:1935dka}
+E.~J. Williams,
+\newblock {\em {Correlation of certain collision problems with radiation
+  theory}}, Kong. Dan. Vid. Sel. Mat. Fys. Med. {\bf 13N4}, 1 (1935).
+
+\bibitem{WhizardManual}
+W.~Kilian,
+\newblock {\em {Whizard 1.0: A generic Monte-Carlo integration and event
+  generation package for multi-particle processes}},
+\newblock in {\em {Proceedings, ICHEP}}, {LC-TOOL-2001-039 (2002)}.
+
+\bibitem{Cacciari:2011ma}
+M.~Cacciari, G.~P. Salam, and G.~Soyez,
+\newblock {\em {FastJet User Manual}}, Eur. Phys. J. {\bf C72}, 1896 (2012),
+  arXiv:1111.6097.
+
+\bibitem{Catani:1993hr}
+S.~Catani, Y.~L. Dokshitzer, M.~H. Seymour, and B.~R. Webber,
+\newblock {\em {Longitudinally invariant $K_t$ clustering algorithms for hadron
+  hadron collisions}}, Nucl. Phys. {\bf B406}, 187 (1993).
+
+\bibitem{Ellis:1993tq}
+S.~D. Ellis and D.~E. Soper,
+\newblock {\em {Successive combination jet algorithm for hadron collisions}},
+  Phys. Rev. {\bf D48}, 3160 (1993), arXiv:hep-ph/9305266.
+
+\bibitem{Catani:1991hj}
+S.~Catani, Y.~L. Dokshitzer, M.~Olsson, G.~Turnock, and B.~R. Webber,
+\newblock {\em {New clustering algorithm for multi - jet cross-sections in e+
+  e- annihilation}}, Phys. Lett. {\bf B269}, 432 (1991).
+
+\bibitem{Dokshitzer:1997in}
+Y.~L. Dokshitzer, G.~D. Leder, S.~Moretti, and B.~R. Webber,
+\newblock {\em {Better jet clustering algorithms}}, JHEP {\bf 08}, 001 (1997),
+  arXiv:hep-ph/9707323.
+
+\bibitem{Wendt:2007iw}
+O.~Wendt, F.~Gaede, and T.~Kramer,
+\newblock {\em {Event Reconstruction with MarlinReco at the ILC}}, Pramana {\bf
+  69}, 1109 (2007), arXiv:physics/0702171.
+
+\bibitem{Hocker:2007ht}
+A.~Hoecker {\em et~al.},
+\newblock {\em {TMVA: Toolkit for Multivariate Data Analysis}}, PoS {\bf ACAT},
+  040 (2007), arXiv:physics/0703039.
+
+\bibitem{Green:2016trm}
+D.~R. Green, P.~Meade, and M.-A. Pleier,
+\newblock {\em {Multi-Boson Interactions at the Run 1 LHC}}, Submitted to: Rev.
+  Mod. Phys.  (2016), arXiv:1610.07572.
+
+\bibitem{hepthesis}
+A.~Buckley,
+\newblock {\em The hepthesis {\LaTeX} class}.
+
+\bibitem{Ellis:2016jkw}
+J.~Ellis,
+\newblock {\em {TikZ-Feynman: Feynman diagrams with TikZ}}, Comput. Phys.
+  Commun. {\bf 210}, 103 (2017), arXiv:1601.05437.
 
 \end{thebibliography}

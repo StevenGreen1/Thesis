@@ -1,17 +1,123 @@
-\BOOKMARK [0][-]{chapter.1}{The Sensitivity of CLIC to Anomalous Gauge Couplings through Vector Boson Scattering}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Event Generation}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Validation of New Samples}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Simulation and Reconstruction}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{Analysis Processor and Jet Pairing}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.6}{Methodology for Fitting}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.7}{Optimisation of Jet Reconstruction}{chapter.1}% 8
-\BOOKMARK [1][-]{section.1.8}{Event Selection}{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.8.1}{Pre Selection}{section.1.8}% 10
-\BOOKMARK [2][-]{subsection.1.8.2}{MVA}{section.1.8}% 11
-\BOOKMARK [1][-]{section.1.9}{Fit}{chapter.1}% 12
-\BOOKMARK [0][-]{appendix.A}{Pointless extras}{}% 13
-\BOOKMARK [1][-]{section.A.1}{Anomalous Gauge Coupling Quartic Vertices Of Relevance in Vector Boson Scattering}{appendix.A}% 14
-\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 15
-\BOOKMARK [0][-]{chapter*.13}{List of figures}{}% 16
-\BOOKMARK [0][-]{chapter*.14}{List of tables}{}% 17
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Future Linear Colliders}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{The International Linear Collider}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{The Compact Linear Collider}{section.1.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.1.2.1}{Experimental Conditions at CLIC}{subsection.1.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.1.2.2}{Beam-Related Backgrounds at CLIC}{subsection.1.1.2}% 6
+\BOOKMARK [0][-]{chapter.2}{Anomalous Gauge Coupling Theory}{}% 7
+\BOOKMARK [1][-]{section.2.1}{The Standard Model}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Higgs Physics}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Spontaneous Symmetry Breaking}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{Electroweak Interactions}{section.2.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.2.1}{Custodial Symmetry}{subsection.2.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Effective Field Theory}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.4}{Electroweak Chiral Lagrangian}{chapter.2}% 14
+\BOOKMARK [0][-]{chapter.3}{Particle Flow Calorimetry for Future Linear Colliders}{}% 15
+\BOOKMARK [1][-]{section.3.1}{Particle Flow Calorimetry}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{International Large Detector}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.2.1}{Overview}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.2}{Vertex Detector}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.3}{Time Projection Chamber}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.4}{Supplemental Silicon Tracking System}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.5}{Electromagnetic Calorimeter}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.6}{Hadronic Calorimeter}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.7}{Solenoid, Yoke and Muon System}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.8}{Forward Calorimetry}{section.3.2}% 25
+\BOOKMARK [1][-]{section.3.3}{Simulation}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.4}{CLIC\137ILD}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.5}{Particle Flow Reconstruction}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.5.1}{PandoraPFA}{section.3.5}% 29
+\BOOKMARK [1][-]{section.3.6}{Performance}{chapter.3}% 30
+\BOOKMARK [2][-]{subsection.3.6.1}{Jet Energy Resolution}{section.3.6}% 31
+\BOOKMARK [2][-]{subsection.3.6.2}{Decomposition of the Jet Energy Resolution}{section.3.6}% 32
+\BOOKMARK [2][-]{subsection.3.6.3}{Single Particle Energy Resolution}{section.3.6}% 33
+\BOOKMARK [1][-]{section.3.7}{Summary of ILD Detector Performance}{chapter.3}% 34
+\BOOKMARK [0][-]{chapter.4}{Capacitively Coupled Pixel Detectors for the CLIC Vertex Detector}{}% 35
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.1.1}{HV-CMOS}{section.4.1}% 37
+\BOOKMARK [2][-]{subsection.4.1.2}{CLIC ASICs}{section.4.1}% 38
+\BOOKMARK [3][-]{subsubsection.4.1.2.1}{CLICpix}{subsection.4.1.2}% 39
+\BOOKMARK [2][-]{subsection.4.1.3}{Capacitive Coupling}{section.4.1}% 40
+\BOOKMARK [1][-]{section.4.2}{Device Fabrication}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.3}{Device Characterisation}{chapter.4}% 42
+\BOOKMARK [2][-]{subsection.4.3.1}{Source Measurements}{section.4.3}% 43
+\BOOKMARK [3][-]{subsubsection.4.3.1.1}{Experimental Setup}{subsection.4.3.1}% 44
+\BOOKMARK [3][-]{subsubsection.4.3.1.2}{Analysis}{subsection.4.3.1}% 45
+\BOOKMARK [3][-]{subsubsection.4.3.1.3}{Results: Rise Time vs Pulse Height}{subsection.4.3.1}% 46
+\BOOKMARK [3][-]{subsubsection.4.3.1.4}{Results: ToT vs Pulse Height}{subsection.4.3.1}% 47
+\BOOKMARK [3][-]{subsubsection.4.3.1.5}{Results: Cross Couplings}{subsection.4.3.1}% 48
+\BOOKMARK [2][-]{subsection.4.3.2}{Test Pulse Calibration}{section.4.3}% 49
+\BOOKMARK [3][-]{subsubsection.4.3.2.1}{Experimental Setup}{subsection.4.3.2}% 50
+\BOOKMARK [3][-]{subsubsection.4.3.2.2}{Analysis}{subsection.4.3.2}% 51
+\BOOKMARK [3][-]{subsubsection.4.3.2.3}{Results}{subsection.4.3.2}% 52
+\BOOKMARK [1][-]{section.4.4}{Test Beam Analysis}{chapter.4}% 53
+\BOOKMARK [2][-]{subsection.4.4.1}{Test Beam Setup}{section.4.4}% 54
+\BOOKMARK [2][-]{subsection.4.4.2}{Analysis}{section.4.4}% 55
+\BOOKMARK [2][-]{subsection.4.4.3}{Results}{section.4.4}% 56
+\BOOKMARK [1][-]{section.4.5}{Conclusions}{chapter.4}% 57
+\BOOKMARK [0][-]{chapter.5}{Energy Estimators}{}% 58
+\BOOKMARK [1][-]{section.5.1}{Motivation}{chapter.5}% 59
+\BOOKMARK [1][-]{section.5.2}{Calibration in the Particle Flow Paradigm}{chapter.5}% 60
+\BOOKMARK [2][-]{subsection.5.2.1}{Overview of the Calibration Procedure}{section.5.2}% 61
+\BOOKMARK [2][-]{subsection.5.2.2}{MIP Scale Determination in the Digitiser}{section.5.2}% 62
+\BOOKMARK [2][-]{subsection.5.2.3}{Digitisation Implementation}{section.5.2}% 63
+\BOOKMARK [3][-]{subsubsection.5.2.3.1}{ECal Digitisation Implementation}{subsection.5.2.3}% 64
+\BOOKMARK [3][-]{subsubsection.5.2.3.2}{HCal Digitisation Implementation}{subsection.5.2.3}% 65
+\BOOKMARK [3][-]{subsubsection.5.2.3.3}{HCal Ring Digitisation Implementation}{subsection.5.2.3}% 66
+\BOOKMARK [2][-]{subsection.5.2.4}{MIP Scale Determination in PandoraPFA}{section.5.2}% 67
+\BOOKMARK [2][-]{subsection.5.2.5}{Electromagnetic Scale in PandoraPFA}{section.5.2}% 68
+\BOOKMARK [2][-]{subsection.5.2.6}{Hadronic Scale in PandoraPFA}{section.5.2}% 69
+\BOOKMARK [2][-]{subsection.5.2.7}{Summary}{section.5.2}% 70
+\BOOKMARK [1][-]{section.5.3}{Novel Energy Estimators}{chapter.5}% 71
+\BOOKMARK [2][-]{subsection.5.3.1}{HCal Hit Energy Truncation}{section.5.3}% 72
+\BOOKMARK [3][-]{subsubsection.5.3.1.1}{Legacy Energy Corrections}{subsection.5.3.1}% 73
+\BOOKMARK [3][-]{subsubsection.5.3.1.2}{Impact on Single Particle Energy Resolution}{subsection.5.3.1}% 74
+\BOOKMARK [3][-]{subsubsection.5.3.1.3}{Impact on Jet Energy Resolution}{subsection.5.3.1}% 75
+\BOOKMARK [2][-]{subsection.5.3.2}{Software Compensation}{section.5.3}% 76
+\BOOKMARK [3][-]{subsubsection.5.3.2.1}{Impact on Single Particle Energy Resolution}{subsection.5.3.2}% 77
+\BOOKMARK [3][-]{subsubsection.5.3.2.2}{Impact on Jet Energy Resolution}{subsection.5.3.2}% 78
+\BOOKMARK [2][-]{subsection.5.3.3}{Summary}{section.5.3}% 79
+\BOOKMARK [1][-]{section.5.4}{Timing Cuts}{chapter.5}% 80
+\BOOKMARK [2][-]{subsection.5.4.1}{Impact on Single Particle Energy Resolution}{section.5.4}% 81
+\BOOKMARK [2][-]{subsection.5.4.2}{Impact on Jet Energy Resolution}{section.5.4}% 82
+\BOOKMARK [2][-]{subsection.5.4.3}{Summary}{section.5.4}% 83
+\BOOKMARK [0][-]{chapter.6}{Calorimeter Optimisation Studies}{}% 84
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 85
+\BOOKMARK [1][-]{section.6.2}{Electromagnetic Calorimeter Optimisation}{chapter.6}% 86
+\BOOKMARK [2][-]{subsection.6.2.1}{ECal Cell Size}{section.6.2}% 87
+\BOOKMARK [2][-]{subsection.6.2.2}{ECal Longitudinal Sampling Frequency}{section.6.2}% 88
+\BOOKMARK [2][-]{subsection.6.2.3}{ECal Active Material}{section.6.2}% 89
+\BOOKMARK [1][-]{section.6.3}{Hadronic Calorimeter Optimisation}{chapter.6}% 90
+\BOOKMARK [2][-]{subsection.6.3.1}{HCal Cell Size}{section.6.3}% 91
+\BOOKMARK [2][-]{subsection.6.3.2}{HCal Number of Layers}{section.6.3}% 92
+\BOOKMARK [2][-]{subsection.6.3.3}{HCal Longitudinal Sampling Frequency}{section.6.3}% 93
+\BOOKMARK [2][-]{subsection.6.3.4}{HCal Sampling Fraction}{section.6.3}% 94
+\BOOKMARK [2][-]{subsection.6.3.5}{HCal Absorber Material}{section.6.3}% 95
+\BOOKMARK [1][-]{section.6.4}{Global Detector Parameters}{chapter.6}% 96
+\BOOKMARK [2][-]{subsection.6.4.1}{The Magnetic Field Strength}{section.6.4}% 97
+\BOOKMARK [2][-]{subsection.6.4.2}{Inner ECal Radius}{section.6.4}% 98
+\BOOKMARK [1][-]{section.6.5}{Summary}{chapter.6}% 99
+\BOOKMARK [0][-]{chapter.7}{The Sensitivity of CLIC to Anomalous Gauge Couplings through Vector Boson Scattering}{}% 100
+\BOOKMARK [1][-]{section.7.1}{Motivation}{chapter.7}% 101
+\BOOKMARK [1][-]{section.7.2}{Event Generation, Simulation and Reconstruction}{chapter.7}% 102
+\BOOKMARK [1][-]{section.7.3}{Modelling of Anomalous Gauge Couplings}{chapter.7}% 103
+\BOOKMARK [1][-]{section.7.4}{Data Analysis}{chapter.7}% 104
+\BOOKMARK [2][-]{subsection.7.4.1}{Limiting Beam Related Backgrounds}{section.7.4}% 105
+\BOOKMARK [2][-]{subsection.7.4.2}{Jet Finding}{section.7.4}% 106
+\BOOKMARK [3][-]{subsubsection.7.4.2.1}{Optimal Jet Finding Algorithm}{subsection.7.4.2}% 107
+\BOOKMARK [2][-]{subsection.7.4.3}{Lepton Finding}{section.7.4}% 108
+\BOOKMARK [2][-]{subsection.7.4.4}{Discriminant Variables}{section.7.4}% 109
+\BOOKMARK [2][-]{subsection.7.4.5}{Jet Energy Resolution at CLIC}{section.7.4}% 110
+\BOOKMARK [1][-]{section.7.5}{Event Selection}{chapter.7}% 111
+\BOOKMARK [2][-]{subsection.7.5.1}{Preselection}{section.7.5}% 112
+\BOOKMARK [2][-]{subsection.7.5.2}{Multivariate analysis}{section.7.5}% 113
+\BOOKMARK [2][-]{subsection.7.5.3}{Event Selection Summary}{section.7.5}% 114
+\BOOKMARK [1][-]{section.7.6}{Anomalous Coupling Fitting Methodology}{chapter.7}% 115
+\BOOKMARK [2][-]{subsection.7.6.1}{Sensitive Distribution}{section.7.6}% 116
+\BOOKMARK [2][-]{subsection.7.6.2}{2 Surface and Confidence Limit Definition}{section.7.6}% 117
+\BOOKMARK [2][-]{subsection.7.6.3}{Event Weight Interpolation Scheme}{section.7.6}% 118
+\BOOKMARK [1][-]{section.7.7}{Results}{chapter.7}% 119
+\BOOKMARK [2][-]{subsection.7.7.1}{Systematic Uncertainties}{section.7.7}% 120
+\BOOKMARK [1][-]{section.7.8}{Sensitivity at s=3 TeV}{chapter.7}% 121
+\BOOKMARK [0][-]{chapter.8}{Summary}{}% 122
+\BOOKMARK [0][-]{chapter*.135}{Bibliography}{}% 123

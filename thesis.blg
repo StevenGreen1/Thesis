@@ -1,49 +1,49 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
-The style file: hplain.bst
+The style file: h-physrev.bst
 Database file #1: thesis.bib
-Warning--empty journal in arXiv:1006.3396
-Warning--empty journal in hep-ph/0102195
-You've used 6 entries,
-            2156 wiz_defined-function locations,
-            537 strings with 4744 characters,
-and the built_in function-call counts, 1709 in all, are:
-= -- 158
-> -- 81
+Warning--empty booktitle in Hartbrich:292251
+Warning--empty author and editor in geantStringModel
+You've used 89 entries,
+            1983 wiz_defined-function locations,
+            1216 strings with 20000 characters,
+and the built_in function-call counts, 18214 in all, are:
+= -- 1210
+> -- 848
 < -- 0
-+ -- 33
-- -- 26
-* -- 107
-:= -- 302
-add.period$ -- 17
-call.type$ -- 6
-change.case$ -- 30
++ -- 303
+- -- 173
+* -- 1541
+:= -- 2392
+add.period$ -- 89
+call.type$ -- 89
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 66
-empty$ -- 142
-format.name$ -- 26
-if$ -- 351
+cite$ -- 91
+duplicate$ -- 1110
+empty$ -- 2047
+format.name$ -- 261
+if$ -- 4250
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 5
-newline$ -- 32
-num.names$ -- 12
-pop$ -- 33
+int.to.str$ -- 89
+missing$ -- 90
+newline$ -- 370
+num.names$ -- 88
+pop$ -- 430
 preamble$ -- 1
-purify$ -- 24
+purify$ -- 0
 quote$ -- 0
-skip$ -- 47
+skip$ -- 668
 stack$ -- 0
-substring$ -- 79
-swap$ -- 4
+substring$ -- 644
+swap$ -- 310
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
+type$ -- 0
 warning$ -- 2
-while$ -- 15
-width$ -- 7
-write$ -- 65
+while$ -- 144
+width$ -- 91
+write$ -- 799
 (There were 2 warnings)
