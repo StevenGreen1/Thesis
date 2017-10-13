@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.21)  4 AUG 2017 13:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.21)  13 OCT 2017 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1311,7 +1311,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-<Miscellaneous/Emmanuel_College_Crest.png, id=501, 525.965pt x 602.25pt>
+<Miscellaneous/Emmanuel_College_Crest.png, id=505, 525.965pt x 602.25pt>
 File: Miscellaneous/Emmanuel_College_Crest.png Graphic file (type png)
 
 <use Miscellaneous/Emmanuel_College_Crest.png>
@@ -1350,22 +1350,25 @@ Package microtype Info: Loading generic settings for font family
 Package tocbasic Info: character protrusion at toc deactivated on input line 55
 .
 (./thesis.toc [9] [10]
-Overfull \hbox (2.03773pt too wide) detected at line 86
+Overfull \hbox (2.03773pt too wide) detected at line 87
  []\T1/lmr/bx/n/12 115
  []
 
-[11]
-Overfull \hbox (2.03773pt too wide) detected at line 102
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+Overfull \hbox (2.03773pt too wide) detected at line 103
  []\T1/lmr/bx/n/12 147
  []
 
 
-Overfull \hbox (2.03773pt too wide) detected at line 124
+Overfull \hbox (2.03773pt too wide) detected at line 125
  []\T1/lmr/bx/n/12 185
  []
 
 
-Overfull \hbox (2.03773pt too wide) detected at line 125
+Overfull \hbox (2.03773pt too wide) detected at line 126
  []\T1/lmr/bx/n/12 189
  []
 
@@ -1394,7 +1397,7 @@ Underfull \vbox (badness 2809) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-<Introduction/Plots/ILC.jpg, id=722, 481.8pt x 284.9847pt>
+<Introduction/Plots/ILC.jpg, id=727, 481.8pt x 284.9847pt>
 File: Introduction/Plots/ILC.jpg Graphic file (type jpg)
 
 <use Introduction/Plots/ILC.jpg>
@@ -1407,57 +1410,58 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 6658) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-<Introduction/Plots/CLIC.jpg, id=735, 1284.8pt x 689.57625pt>
-File: Introduction/Plots/CLIC.jpg Graphic file (type jpg)
+<Introduction/Plots/CLIC.png, id=740, 1592.95125pt x 834.11626pt>
+File: Introduction/Plots/CLIC.png Graphic file (type png)
 
-<use Introduction/Plots/CLIC.jpg>
-Package pdftex.def Info: Introduction/Plots/CLIC.jpg used on input line 41.
-(pdftex.def)             Requested size: 448.07378pt x 240.4925pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<Introduction/Plots/CDRPlots/HiggsCrossSectionCLIC.pdf, id=738, 569.12625pt x 4
+<use Introduction/Plots/CLIC.png>
+Package pdftex.def Info: Introduction/Plots/CLIC.png used on input line 46.
+(pdftex.def)             Requested size: 448.07378pt x 234.62007pt.
+ [4 <./Introduction/Plots/ILC.jpg>]
+<Introduction/Plots/CDRPlots/HiggsCrossSectionCLIC.pdf, id=752, 569.12625pt x 4
 80.79625pt>
 File: Introduction/Plots/CDRPlots/HiggsCrossSectionCLIC.pdf Graphic file (type 
 pdf)
  <use Introduction/Plots/CDRPlots/HiggsCrossSectionCLIC.pdf>
 Package pdftex.def Info: Introduction/Plots/CDRPlots/HiggsCrossSectionCLIC.pdf 
-used on input line 47.
+used on input line 52.
 (pdftex.def)             Requested size: 224.03688pt x 189.2705pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+ [5 <./Introduction/Plots/CLIC.png> <./Introduction/Plots/CDRPlots/HiggsCrossSe
+ctionCLIC.pdf, page is rotated 90 degrees>]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 63.
 
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 58.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 58.
- [4 <./Introduction/Plots/ILC.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 63.
 
- [5 <./Introduction/Plots/CLIC.jpg> <./Introduction/Plots/CDRPlots/HiggsCrossSe
-ctionCLIC.pdf, page is rotated 90 degrees>] [6]
-<Introduction/Plots/CDRPlots/BackgroundAngleCut.pdf, id=810, 569.12625pt x 481.
+Underfull \vbox (badness 4647) has occurred while \output is active []
+
+ [6]
+<Introduction/Plots/CDRPlots/BackgroundAngleCut.pdf, id=822, 569.12625pt x 481.
 8pt>
 File: Introduction/Plots/CDRPlots/BackgroundAngleCut.pdf Graphic file (type pdf
 )
  <use Introduction/Plots/CDRPlots/BackgroundAngleCut.pdf>
 Package pdftex.def Info: Introduction/Plots/CDRPlots/BackgroundAngleCut.pdf use
-d on input line 82.
+d on input line 103.
 (pdftex.def)             Requested size: 224.03688pt x 189.66563pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./AnomalousCouplingsTheory/AnomalousCouplingsTheory.tex [7 <./Introduction/P
-lots/CDRPlots/BackgroundAngleCut.pdf, page is rotated 90 degrees>] [8]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7])
+(./AnomalousCouplingsTheory/AnomalousCouplingsTheory.tex [8 <./Introduction/Plo
+ts/CDRPlots/BackgroundAngleCut.pdf, page is rotated 90 degrees>]
 chapter 2.
 [9
 
@@ -1496,7 +1500,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20]
-<AnomalousCouplingsTheory/Plots/AGCVertex1.pdf, id=1032, 89.0256pt x 69.89513pt
+<AnomalousCouplingsTheory/Plots/AGCVertex1.pdf, id=1043, 89.0256pt x 69.89513pt
 >
 File: AnomalousCouplingsTheory/Plots/AGCVertex1.pdf Graphic file (type pdf)
  <use AnomalousCouplingsTheory/Plots/AGCVertex1.pdf>
@@ -1510,7 +1514,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 379.
 
-<AnomalousCouplingsTheory/Plots/AGCVertex3.pdf, id=1033, 89.0256pt x 68.76591pt
+<AnomalousCouplingsTheory/Plots/AGCVertex3.pdf, id=1044, 89.0256pt x 68.76591pt
 >
 File: AnomalousCouplingsTheory/Plots/AGCVertex3.pdf Graphic file (type pdf)
  <use AnomalousCouplingsTheory/Plots/AGCVertex3.pdf>
@@ -1518,7 +1522,7 @@ Package pdftex.def Info: AnomalousCouplingsTheory/Plots/AGCVertex3.pdf used on
 input line 380.
 (pdftex.def)             Requested size: 134.4235pt x 103.84322pt.
 
-<AnomalousCouplingsTheory/Plots/AGCVertex2.pdf, id=1034, 69.05399pt x 67.63669p
+<AnomalousCouplingsTheory/Plots/AGCVertex2.pdf, id=1045, 69.05399pt x 67.63669p
 t>
 File: AnomalousCouplingsTheory/Plots/AGCVertex2.pdf Graphic file (type pdf)
  <use AnomalousCouplingsTheory/Plots/AGCVertex2.pdf>
@@ -1526,7 +1530,7 @@ Package pdftex.def Info: AnomalousCouplingsTheory/Plots/AGCVertex2.pdf used on
 input line 381.
 (pdftex.def)             Requested size: 101.93376pt x 99.85097pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex1.pdf, id=1035, 96.17531pt x 71.
+<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex1.pdf, id=1046, 96.17531pt x 71.
 3596pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex1.pdf Graphic file (type pd
 f)
@@ -1535,7 +1539,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex1.pdf us
 ed on input line 387.
 (pdftex.def)             Requested size: 134.4235pt x 99.74158pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex2.pdf, id=1036, 87.91444pt x 71.
+<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex2.pdf, id=1047, 87.91444pt x 71.
 3596pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex2.pdf Graphic file (type pd
 f)
@@ -1544,7 +1548,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex2.pdf us
 ed on input line 388.
 (pdftex.def)             Requested size: 134.4235pt x 109.1199pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex3.pdf, id=1037, 87.91444pt x 69.
+<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex3.pdf, id=1048, 87.91444pt x 69.
 49763pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex3.pdf Graphic file (type pd
 f)
@@ -1553,7 +1557,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex3.pdf us
 ed on input line 389.
 (pdftex.def)             Requested size: 134.4235pt x 106.27269pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex4.pdf, id=1038, 87.91444pt x 69.
+<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex4.pdf, id=1049, 87.91444pt x 69.
 49763pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex4.pdf Graphic file (type pd
 f)
@@ -1562,7 +1566,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex4.pdf us
 ed on input line 390.
 (pdftex.def)             Requested size: 134.4235pt x 106.27269pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex5.pdf, id=1039, 87.91444pt x 68.
+<PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex5.pdf, id=1050, 87.91444pt x 68.
 91446pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex5.pdf Graphic file (type pd
 f)
@@ -1585,7 +1589,7 @@ chapter 3.
 [23
 
 ] [24]
-<LCDetectorsAndPFlow/Plots/Pictures/PFlow.png, id=1173, 729.72626pt x 628.3475p
+<LCDetectorsAndPFlow/Plots/Pictures/PFlow.png, id=1184, 729.72626pt x 628.3475p
 t>
 File: LCDetectorsAndPFlow/Plots/Pictures/PFlow.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/PFlow.png>
@@ -1593,7 +1597,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/PFlow.png used on i
 nput line 43.
 (pdftex.def)             Requested size: 224.03688pt x 192.9065pt.
  [25 <./LCDetectorsAndPFlow/Plots/Pictures/PFlow.png>]
-<LCDetectorsAndPFlow/Plots/Pictures/ILD.jpg, id=1186, 273.20566pt x 247.30544pt
+<LCDetectorsAndPFlow/Plots/Pictures/ILD.jpg, id=1197, 273.20566pt x 247.30544pt
 >
 File: LCDetectorsAndPFlow/Plots/Pictures/ILD.jpg Graphic file (type jpg)
  <use LCDetectorsAndPFlow/Plots/Pictures/ILD.jpg>
@@ -1601,7 +1605,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/ILD.jpg used on inp
 ut line 57.
 (pdftex.def)             Requested size: 224.03688pt x 202.79553pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/ILD_2.jpg, id=1187, 2389.92876pt x 1690.315
+<LCDetectorsAndPFlow/Plots/Pictures/ILD_2.jpg, id=1198, 2389.92876pt x 1690.315
 pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/ILD_2.jpg Graphic file (type jpg)
  <use LCDetectorsAndPFlow/Plots/Pictures/ILD_2.jpg>
@@ -1611,7 +1615,7 @@ nput line 58.
  [26 <./LCDetectorsAndPFlow/Plots/Pictures/ILD.jpg> <./LCDetectorsAndPFlow/Plot
 s/Pictures/ILD_2.jpg>]
 [27]
-<LCDetectorsAndPFlow/Plots/Pictures/Vertex3.png, id=1208, 509.905pt x 659.46375
+<LCDetectorsAndPFlow/Plots/Pictures/Vertex3.png, id=1219, 509.905pt x 659.46375
 pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Vertex3.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/Vertex3.png>
@@ -1619,7 +1623,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Vertex3.png used on
  input line 85.
 (pdftex.def)             Requested size: 134.4235pt x 173.85143pt.
  [28 <./LCDetectorsAndPFlow/Plots/Pictures/Vertex3.png>]
-<LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png, id=1221, 605.26125pt x 597.23
+<LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png, id=1232, 605.26125pt x 597.23
 125pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png>
@@ -1627,7 +1631,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png used o
 n input line 99.
 (pdftex.def)             Requested size: 224.03688pt x 221.06323pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Tracker2.png, id=1222, 697.60625pt x 600.24
+<LCDetectorsAndPFlow/Plots/Pictures/Tracker2.png, id=1233, 697.60625pt x 600.24
 25pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Tracker2.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/Tracker2.png>
@@ -1639,7 +1643,7 @@ n input line 100.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<LCDetectorsAndPFlow/Plots/Pictures/Vertex1.jpg, id=1230, 769.87625pt x 623.328
+<LCDetectorsAndPFlow/Plots/Pictures/Vertex1.jpg, id=1241, 769.87625pt x 623.328
 75pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Vertex1.jpg Graphic file (type jpg)
  <use LCDetectorsAndPFlow/Plots/Pictures/Vertex1.jpg>
@@ -1647,7 +1651,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Vertex1.jpg used on
  input line 117.
 (pdftex.def)             Requested size: 224.03688pt x 181.38844pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Vertex2.pdf, id=1231, 168.63pt x 147.55125p
+<LCDetectorsAndPFlow/Plots/Pictures/Vertex2.pdf, id=1242, 168.63pt x 147.55125p
 t>
 File: LCDetectorsAndPFlow/Plots/Pictures/Vertex2.pdf Graphic file (type pdf)
  <use LCDetectorsAndPFlow/Plots/Pictures/Vertex2.pdf>
@@ -1667,7 +1671,7 @@ Underfull \vbox (badness 1902) has occurred while \output is active []
  [29]
 [30 <./LCDetectorsAndPFlow/Plots/Pictures/Tracker1.png> <./LCDetectorsAndPFlow/
 Plots/Pictures/Tracker2.png>]
-<LCDetectorsAndPFlow/Plots/Pictures/FTD.png, id=1258, 1415.2875pt x 404.51125pt
+<LCDetectorsAndPFlow/Plots/Pictures/FTD.png, id=1269, 1415.2875pt x 404.51125pt
 >
 File: LCDetectorsAndPFlow/Plots/Pictures/FTD.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/FTD.png>
@@ -1680,7 +1684,7 @@ Underfull \vbox (badness 3179) has occurred while \output is active []
  [31 <./LCDetectorsAndPFlow/Plots/Pictures/Vertex1.jpg> <./LCDetectorsAndPFlow/
 Plots/Pictures/Vertex2.pdf> <./LCDetectorsAndPFlow/Plots/Pictures/FTD.png>] [32
 ]
-<LCDetectorsAndPFlow/Plots/Pictures/SiECal.png, id=1287, 844.15375pt x 661.4712
+<LCDetectorsAndPFlow/Plots/Pictures/SiECal.png, id=1298, 844.15375pt x 661.4712
 5pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/SiECal.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/SiECal.png>
@@ -1688,7 +1692,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/SiECal.png used on
 input line 184.
 (pdftex.def)             Requested size: 179.22676pt x 140.43713pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/ScECal.png, id=1288, 576.1525pt x 664.4825p
+<LCDetectorsAndPFlow/Plots/Pictures/ScECal.png, id=1299, 576.1525pt x 664.4825p
 t>
 File: LCDetectorsAndPFlow/Plots/Pictures/ScECal.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/ScECal.png>
@@ -1705,7 +1709,7 @@ Underfull \vbox (badness 4660) has occurred while \output is active []
 
  [34]
 [35]
-<LCDetectorsAndPFlow/Plots/Pictures/Muon.png, id=1338, 948.54375pt x 693.59125p
+<LCDetectorsAndPFlow/Plots/Pictures/Muon.png, id=1349, 948.54375pt x 693.59125p
 t>
 File: LCDetectorsAndPFlow/Plots/Pictures/Muon.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/Muon.png>
@@ -1713,14 +1717,14 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Muon.png used on in
 put line 241.
 (pdftex.def)             Requested size: 224.03688pt x 163.81946pt.
  [36 <./LCDetectorsAndPFlow/Plots/Pictures/Muon.png>]
-<LCDetectorsAndPFlow/Plots/Pictures/FCal.png, id=1351, 421.575pt x 312.16624pt>
+<LCDetectorsAndPFlow/Plots/Pictures/FCal.png, id=1362, 421.575pt x 312.16624pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/FCal.png Graphic file (type png)
 <use LCDetectorsAndPFlow/Plots/Pictures/FCal.png>
 Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/FCal.png used on in
 put line 259.
 (pdftex.def)             Requested size: 224.03688pt x 165.89507pt.
  [37 <./LCDetectorsAndPFlow/Plots/Pictures/FCal.png>] [38]
-<LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png, id=1377, 598.235pt x 632.3625
+<LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png, id=1389, 598.235pt x 632.3625
 pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png Graphic file (type png)
  <use LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png>
@@ -1728,7 +1732,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD.png used o
 n input line 313.
 (pdftex.def)             Requested size: 179.22676pt x 189.44969pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD_2.png, id=1378, 575.14874pt x 601.
+<LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD_2.png, id=1390, 575.14874pt x 601.
 24625pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD_2.png Graphic file (type png)
 
@@ -1741,7 +1745,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/CLIC_ILD_2.png used
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42]
-<LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer1.png, id=1431, 481.8pt x 398.48
+<LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer1.png, id=1442, 481.8pt x 398.48
 875pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer1.png Graphic file (type pn
 g)
@@ -1750,7 +1754,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer1.png us
 ed on input line 365.
 (pdftex.def)             Requested size: 179.22676pt x 148.23506pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer2.png, id=1432, 501.875pt x 451.
+<LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer2.png, id=1443, 501.875pt x 451.
 6875pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/PseudoLayer2.png Graphic file (type pn
 g)
@@ -1763,7 +1767,7 @@ ed on input line 367.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association1.png, id=1439, 328.22626pt x 27
+<LCDetectorsAndPFlow/Plots/Pictures/Association1.png, id=1450, 328.22626pt x 27
 2.01625pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association1.png Graphic file (type pn
 g)
@@ -1772,7 +1776,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association1.png us
 ed on input line 374.
 (pdftex.def)             Requested size: 89.61337pt x 74.26718pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association2.png, id=1440, 174.6525pt x 288
+<LCDetectorsAndPFlow/Plots/Pictures/Association2.png, id=1451, 174.6525pt x 288
 .07625pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association2.png Graphic file (type pn
 g)
@@ -1781,7 +1785,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association2.png us
 ed on input line 376.
 (pdftex.def)             Requested size: 89.61337pt x 147.80925pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association3.png, id=1441, 190.7125pt x 287
+<LCDetectorsAndPFlow/Plots/Pictures/Association3.png, id=1452, 190.7125pt x 287
 .0725pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association3.png Graphic file (type pn
 g)
@@ -1790,7 +1794,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association3.png us
 ed on input line 378.
 (pdftex.def)             Requested size: 89.61337pt x 134.88904pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association4.png, id=1442, 222.8325pt x 284
+<LCDetectorsAndPFlow/Plots/Pictures/Association4.png, id=1453, 222.8325pt x 284
 .06125pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association4.png Graphic file (type pn
 g)
@@ -1799,7 +1803,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association4.png us
 ed on input line 380.
 (pdftex.def)             Requested size: 89.61337pt x 114.23796pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association5.png, id=1443, 196.735pt x 283.
+<LCDetectorsAndPFlow/Plots/Pictures/Association5.png, id=1454, 196.735pt x 283.
 0575pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association5.png Graphic file (type pn
 g)
@@ -1808,7 +1812,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association5.png us
 ed on input line 381.
 (pdftex.def)             Requested size: 89.61337pt x 128.92957pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association6.png, id=1444, 188.705pt x 275.
+<LCDetectorsAndPFlow/Plots/Pictures/Association6.png, id=1455, 188.705pt x 275.
 0275pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association6.png Graphic file (type pn
 g)
@@ -1817,7 +1821,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association6.png us
 ed on input line 383.
 (pdftex.def)             Requested size: 89.61337pt x 130.60583pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association7.png, id=1445, 207.77625pt x 28
+<LCDetectorsAndPFlow/Plots/Pictures/Association7.png, id=1456, 207.77625pt x 28
 5.065pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association7.png Graphic file (type pn
 g)
@@ -1826,7 +1830,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association7.png us
 ed on input line 385.
 (pdftex.def)             Requested size: 89.61337pt x 122.94528pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association8.png, id=1446, 197.73875pt x 28
+<LCDetectorsAndPFlow/Plots/Pictures/Association8.png, id=1457, 197.73875pt x 28
 4.06125pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association8.png Graphic file (type pn
 g)
@@ -1835,7 +1839,7 @@ Package pdftex.def Info: LCDetectorsAndPFlow/Plots/Pictures/Association8.png us
 ed on input line 387.
 (pdftex.def)             Requested size: 89.61337pt x 128.73225pt.
 
-<LCDetectorsAndPFlow/Plots/Pictures/Association9.png, id=1447, 198.7425pt x 293
+<LCDetectorsAndPFlow/Plots/Pictures/Association9.png, id=1458, 198.7425pt x 293
 .095pt>
 File: LCDetectorsAndPFlow/Plots/Pictures/Association9.png Graphic file (type pn
 g)
@@ -1869,7 +1873,7 @@ ctorsAndPFlow/Plots/Pictures/Association5.png> <./LCDetectorsAndPFlow/Plots/Pic
 tures/Association6.png> <./LCDetectorsAndPFlow/Plots/Pictures/Association7.png>
  <./LCDetectorsAndPFlow/Plots/Pictures/Association8.png> <./LCDetectorsAndPFlow
 /Plots/Pictures/Association9.png>]
-<OptimisationStudies/Plots/MethodDescription/500GeVEvent.png, id=1517, 764.8575
+<OptimisationStudies/Plots/MethodDescription/500GeVEvent.png, id=1528, 764.8575
 pt x 565.11125pt>
 File: OptimisationStudies/Plots/MethodDescription/500GeVEvent.png Graphic file 
 (type png)
@@ -1883,7 +1887,7 @@ t.png used on input line 418.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<OptimisationStudies/Plots/MethodDescription/RMS90Plot.pdf, id=1518, 569.12625p
+<OptimisationStudies/Plots/MethodDescription/RMS90Plot.pdf, id=1529, 569.12625p
 t x 387.4475pt>
 File: OptimisationStudies/Plots/MethodDescription/RMS90Plot.pdf Graphic file (t
 ype pdf)
@@ -1906,7 +1910,7 @@ Underfull \vbox (badness 2213) has occurred while \output is active []
 ationStudies/Plots/MethodDescription/RMS90Plot.pdf, page is rotated 90 degrees>
 ] [48]
 [49]
-<OptimisationStudies/Plots/EnergyResolution/EKaon0L_50GeV.pdf, id=1593, 569.126
+<OptimisationStudies/Plots/EnergyResolution/EKaon0L_50GeV.pdf, id=1604, 569.126
 25pt x 387.4475pt>
 File: OptimisationStudies/Plots/EnergyResolution/EKaon0L_50GeV.pdf Graphic file
  (type pdf)
@@ -1916,7 +1920,7 @@ Package pdftex.def Info: OptimisationStudies/Plots/EnergyResolution/EKaon0L_50G
 eV.pdf used on input line 471.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<OptimisationStudies/Plots/EnergyResolution/EPhoton_100GeV.pdf, id=1594, 569.12
+<OptimisationStudies/Plots/EnergyResolution/EPhoton_100GeV.pdf, id=1605, 569.12
 625pt x 387.4475pt>
 File: OptimisationStudies/Plots/EnergyResolution/EPhoton_100GeV.pdf Graphic fil
 e (type pdf)
@@ -1931,7 +1935,7 @@ otated 90 degrees> <./OptimisationStudies/Plots/EnergyResolution/EPhoton_100GeV
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [51]
-<OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_SiECal.pdf, id=1712, 5
+<OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_SiECal.pdf, id=1723, 5
 69.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_SiECal.pdf Graphi
 c file (type pdf)
@@ -1941,7 +1945,7 @@ Package pdftex.def Info: OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamm
 a_SiECal.pdf used on input line 502.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_ScECal.pdf, id=1713, 5
+<OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_ScECal.pdf, id=1724, 5
 69.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamma_ScECal.pdf Graphi
 c file (type pdf)
@@ -1951,7 +1955,7 @@ Package pdftex.def Info: OptimisationStudies/Plots/EnergyResolution/ER_vs_EGamm
 a_ScECal.pdf used on input line 503.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<OptimisationStudies/Plots/EnergyResolution/ER_vs_EKaon0L_SiECal.pdf, id=1714, 
+<OptimisationStudies/Plots/EnergyResolution/ER_vs_EKaon0L_SiECal.pdf, id=1725, 
 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_EKaon0L_SiECal.pdf Graph
 ic file (type pdf)
@@ -1962,7 +1966,7 @@ Package pdftex.def Info: OptimisationStudies/Plots/EnergyResolution/ER_vs_EKaon
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_NominalDetecto
-rPerformance.pdf, id=1715, 569.12625pt x 387.4475pt>
+rPerformance.pdf, id=1726, 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_JetEnergy_NominalDe
 tectorPerformance.pdf Graphic file (type pdf)
 
@@ -2194,7 +2198,7 @@ Package microtype Warning: Unknown slot number of character
 (microtype)                `cmr-textcomp'.
 
 [55]
-<CLICdpVertex/Plots/HV-CMOSDiagram.png, id=1923, 592.2125pt x 300.12125pt>
+<CLICdpVertex/Plots/HV-CMOSDiagram.png, id=1934, 592.2125pt x 300.12125pt>
 File: CLICdpVertex/Plots/HV-CMOSDiagram.png Graphic file (type png)
 
 <use CLICdpVertex/Plots/HV-CMOSDiagram.png>
@@ -2205,7 +2209,7 @@ ne 25.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<CLICdpVertex/Plots/FETDiagram.pdf, id=1926, 336.09573pt x 424.46298pt>
+<CLICdpVertex/Plots/FETDiagram.pdf, id=1937, 336.09573pt x 424.46298pt>
 File: CLICdpVertex/Plots/FETDiagram.pdf Graphic file (type pdf)
 
 <use CLICdpVertex/Plots/FETDiagram.pdf>
@@ -2221,7 +2225,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57 <./CLICdpVertex/Plots/HV-CMOSDiagram.png> <./CLICdpVertex/Plots/FETDiagram
 .pdf>]
-<CLICdpVertex/Plots/schematic.pdf, id=1958, 256.07481pt x 88.20354pt>
+<CLICdpVertex/Plots/schematic.pdf, id=1969, 256.07481pt x 88.20354pt>
 File: CLICdpVertex/Plots/schematic.pdf Graphic file (type pdf)
 
 <use CLICdpVertex/Plots/schematic.pdf>
@@ -2239,7 +2243,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 2005) has occurred while \output is active []
 
  [59 <./CLICdpVertex/Plots/schematic.pdf>]
-<CLICdpVertex/Plots/misalignedPads.pdf, id=1987, 951.70798pt x 163.09192pt>
+<CLICdpVertex/Plots/misalignedPads.pdf, id=1998, 951.70798pt x 163.09192pt>
 File: CLICdpVertex/Plots/misalignedPads.pdf Graphic file (type pdf)
 
 <use CLICdpVertex/Plots/misalignedPads.pdf>
@@ -2464,7 +2468,7 @@ Underfull \vbox (badness 1466) has occurred while \output is active []
 Underfull \vbox (badness 3219) has occurred while \output is active []
 
  [61 <./CLICdpVertex/Plots/misalignedPads.pdf>]
-<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000NoOffset.pdf, id=2029, 569.12
+<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000NoOffset.pdf, id=2040, 569.12
 625pt x 387.4475pt>
 File: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000NoOffset.pdf Graphic fil
 e (type pdf)
@@ -2474,7 +2478,7 @@ Package pdftex.def Info: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000NoOff
 set.pdf used on input line 131.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005NoOffset.pdf, id=2030, 569.12
+<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005NoOffset.pdf, id=2041, 569.12
 625pt x 387.4475pt>
 File: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005NoOffset.pdf Graphic fil
 e (type pdf)
@@ -2484,7 +2488,7 @@ Package pdftex.def Info: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005NoOff
 set.pdf used on input line 132.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01006NoOffset.pdf, id=2031, 569.12
+<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01006NoOffset.pdf, id=2042, 569.12
 625pt x 387.4475pt>
 File: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01006NoOffset.pdf Graphic fil
 e (type pdf)
@@ -2494,7 +2498,7 @@ Package pdftex.def Info: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01006NoOff
 set.pdf used on input line 133.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01008NoOffset.pdf, id=2032, 569.12
+<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01008NoOffset.pdf, id=2043, 569.12
 625pt x 387.4475pt>
 File: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01008NoOffset.pdf Graphic fil
 e (type pdf)
@@ -2515,7 +2519,7 @@ rotated 90 degrees> <./CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01005NoOffse
 t.pdf, page is rotated 90 degrees> <./CLICdpVertex/Plots/HV-CMOS/Frames/PulseSh
 ape01006NoOffset.pdf, page is rotated 90 degrees> <./CLICdpVertex/Plots/HV-CMOS
 /Frames/PulseShape01008NoOffset.pdf, page is rotated 90 degrees>]
-<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf, id=2220, 
+<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf, id=2231, 
 569.12625pt x 387.4475pt>
 File: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf Graph
 ic file (type pdf)
@@ -2525,7 +2529,7 @@ Package pdftex.def Info: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000Fitti
 ngVoltage.pdf used on input line 152.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf, id=2221,
+<CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf, id=2232,
  569.12625pt x 387.4475pt>
 File: CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingRiseTime.pdf Grap
 hic file (type pdf)
@@ -2538,7 +2542,7 @@ ngRiseTime.pdf used on input line 153.
 [64 <./CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000FittingVoltage.pdf, pag
 e is rotated 90 degrees> <./CLICdpVertex/Plots/HV-CMOS/Frames/PulseShape01000Fi
 ttingRiseTime.pdf, page is rotated 90 degrees>]
-<CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight.pdf, id=2321
+<CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight.pdf, id=2333
 , 569.12625pt x 302.12875pt>
 File: CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight.pdf Gra
 phic file (type pdf)
@@ -2552,8 +2556,8 @@ Underfull \vbox (badness 2088) has occurred while \output is active []
 
  [65 <./CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_RiseTime_PulseHeight.pdf, 
 page is rotated 90 degrees>]
-<CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight.pdf, id=237
-5, 569.12625pt x 302.12875pt>
+<CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight.pdf, id=238
+6, 569.12625pt x 302.12875pt>
 File: CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight.pdf Gr
 aphic file (type pdf)
 
@@ -2565,7 +2569,7 @@ _PulseHeight.pdf used on input line 181.
 [66 <./CLICdpVertex/Plots/RadSourceAnalysis/AllSETs_TargetTot_PulseHeight.pdf, 
 page is rotated 90 degrees>]
 <CLICdpVertex/Plots/RadSourceAnalysis/NoCrossCouplingSETs_Tot_X_PulseHeight.pdf
-, id=2427, 569.12625pt x 302.12875pt>
+, id=2438, 569.12625pt x 302.12875pt>
 File: CLICdpVertex/Plots/RadSourceAnalysis/NoCrossCouplingSETs_Tot_X_PulseHeigh
 t.pdf Graphic file (type pdf)
 
@@ -2576,7 +2580,7 @@ Ts_Tot_X_PulseHeight.pdf used on input line 197.
 (pdftex.def)             Requested size: 448.07378pt x 237.87692pt.
 
 <CLICdpVertex/Plots/RadSourceAnalysis/CrossCouplingSETs_Tot_X_PulseHeight.pdf, 
-id=2428, 569.12625pt x 302.12875pt>
+id=2439, 569.12625pt x 302.12875pt>
 File: CLICdpVertex/Plots/RadSourceAnalysis/CrossCouplingSETs_Tot_X_PulseHeight.
 pdf Graphic file (type pdf)
 
@@ -2599,7 +2603,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ght.pdf, page is rotated 90 degrees> <./CLICdpVertex/Plots/RadSourceAnalysis/Cr
 ossCouplingSETs_Tot_X_PulseHeight.pdf, page is rotated 90 degrees>]
 <CLICdpVertex/Plots/TestPulseCalibration/Fits/Set9/ToT_PulseHeight_Set_9_ChipID
-_001ec0db94b1_Pixel_x0_y0_NoFit.pdf, id=2534, 569.12625pt x 300.12125pt>
+_001ec0db94b1_Pixel_x0_y0_NoFit.pdf, id=2545, 569.12625pt x 300.12125pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/Fits/Set9/ToT_PulseHeight_Set_9_C
 hipID_001ec0db94b1_Pixel_x0_y0_NoFit.pdf Graphic file (type pdf)
 
@@ -2615,7 +2619,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [69]
 <CLICdpVertex/Plots/TestPulseCalibration/Fits/Set9/ToT_PulseHeight_Set_9_ChipID
-_001ec0db94b1_Pixel_x0_y0_Fit.pdf, id=2544, 569.12625pt x 300.12125pt>
+_001ec0db94b1_Pixel_x0_y0_Fit.pdf, id=2555, 569.12625pt x 300.12125pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/Fits/Set9/ToT_PulseHeight_Set_9_C
 hipID_001ec0db94b1_Pixel_x0_y0_Fit.pdf Graphic file (type pdf)
 
@@ -2627,7 +2631,7 @@ PulseHeight_Set_9_ChipID_001ec0db94b1_Pixel_x0_y0_Fit.pdf used on input line 23
 (pdftex.def)             Requested size: 448.07378pt x 236.29636pt.
 
 <CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamA_Set9.pdf, i
-d=2546, 569.12625pt x 451.6875pt>
+d=2557, 569.12625pt x 451.6875pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamA_Set9.p
 df Graphic file (type pdf)
 
@@ -2638,7 +2642,7 @@ istFitParamA_Set9.pdf used on input line 251.
 (pdftex.def)             Requested size: 224.03688pt x 177.81154pt.
 
 <CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamB_Set9.pdf, i
-d=2547, 569.12625pt x 451.6875pt>
+d=2558, 569.12625pt x 451.6875pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamB_Set9.p
 df Graphic file (type pdf)
 
@@ -2649,7 +2653,7 @@ istFitParamB_Set9.pdf used on input line 252.
 (pdftex.def)             Requested size: 224.03688pt x 177.81154pt.
 
 <CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamC_Set9.pdf, i
-d=2548, 569.12625pt x 451.6875pt>
+d=2559, 569.12625pt x 451.6875pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamC_Set9.p
 df Graphic file (type pdf)
 
@@ -2660,7 +2664,7 @@ istFitParamC_Set9.pdf used on input line 253.
 (pdftex.def)             Requested size: 224.03688pt x 177.81154pt.
 
 <CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamT_Set9.pdf, i
-d=2549, 569.12625pt x 451.6875pt>
+d=2560, 569.12625pt x 451.6875pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamT_Set9.p
 df Graphic file (type pdf)
 
@@ -2675,7 +2679,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [70 <./CLICdpVertex/Plots/TestPulseCalibration/Fits/Set9/ToT_PulseHeight_Set_9_
 ChipID_001ec0db94b1_Pixel_x0_y0_NoFit.pdf, page is rotated 90 degrees>]
-<CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf, id=2608, 
+<CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf, id=2619, 
 569.12625pt x 387.4475pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf Graph
 ic file (type pdf)
@@ -2685,7 +2689,7 @@ Package pdftex.def Info: CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitPa
 ramC_Set9.pdf used on input line 263.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamT_Set9.pdf, id=2609, 
+<CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamT_Set9.pdf, id=2620, 
 569.12625pt x 387.4475pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamT_Set9.pdf Graph
 ic file (type pdf)
@@ -2703,7 +2707,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <CLICdpVertex/Plots/TestPulseCalibration/FitParam/AverageToT_vs_InjectedPulseHe
-ight.pdf, id=2617, 569.12625pt x 300.12125pt>
+ight.pdf, id=2628, 569.12625pt x 300.12125pt>
 File: CLICdpVertex/Plots/TestPulseCalibration/FitParam/AverageToT_vs_InjectedPu
 lseHeight.pdf Graphic file (type pdf)
 
@@ -2737,7 +2741,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
 [75]
-<CLICdpVertex/Plots/TestBeamData/EfficiencyThresholdPlot.pdf, id=3000, 569.1262
+<CLICdpVertex/Plots/TestBeamData/EfficiencyThresholdPlot.pdf, id=3011, 569.1262
 5pt x 300.12125pt>
 File: CLICdpVertex/Plots/TestBeamData/EfficiencyThresholdPlot.pdf Graphic file 
 (type pdf)
@@ -2765,7 +2769,7 @@ Underfull \vbox (badness 2653) has occurred while \output is active []
 
  [83]
 <EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserECal.pd
-f, id=3103, 569.12625pt x 410.53375pt>
+f, id=3114, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserEC
 al.pdf Graphic file (type pdf)
 
@@ -2776,7 +2780,7 @@ MIPScaleDigitiserECal.pdf used on input line 87.
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
 <EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalbar
-rel.pdf, id=3104, 569.12625pt x 410.53375pt>
+rel.pdf, id=3115, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHC
 albarrel.pdf Graphic file (type pdf)
 
@@ -2787,7 +2791,7 @@ MIPScaleDigitiserHCalbarrel.pdf used on input line 88.
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
 <EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalend
-cap.pdf, id=3105, 569.12625pt x 410.53375pt>
+cap.pdf, id=3116, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHC
 alendcap.pdf Graphic file (type pdf)
 
@@ -2798,7 +2802,7 @@ MIPScaleDigitiserHCalendcap.pdf used on input line 89.
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
 <EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHCalOth
-er.pdf, id=3106, 569.12625pt x 410.53375pt>
+er.pdf, id=3117, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/MIPScale/Digitiser/MIPScaleDigitiserHC
 alOther.pdf Graphic file (type pdf)
 
@@ -2813,7 +2817,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <EnergyEstimators/Plots/Calibration/Digitsation/ECal/ECalHCalPhotonSplit.pdf, i
-d=3117, 569.12625pt x 408.52625pt>
+d=3128, 569.12625pt x 408.52625pt>
 File: EnergyEstimators/Plots/Calibration/Digitsation/ECal/ECalHCalPhotonSplit.p
 df Graphic file (type pdf)
 
@@ -2824,7 +2828,7 @@ alHCalPhotonSplit.pdf used on input line 108.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalSelection.
-pdf, id=3118, 569.12625pt x 408.52625pt>
+pdf, id=3129, 569.12625pt x 408.52625pt>
 File: EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalSelec
 tion.pdf Graphic file (type pdf)
 
@@ -2847,7 +2851,7 @@ Scale/Digitiser/MIPScaleDigitiserHCalbarrel.pdf, page is rotated 90 degrees> <.
 cap.pdf, page is rotated 90 degrees> <./EnergyEstimators/Plots/Calibration/MIPS
 cale/Digitiser/MIPScaleDigitiserHCalOther.pdf, page is rotated 90 degrees>]
 <EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalFit.pdf, i
-d=3316, 569.12625pt x 410.53375pt>
+d=3327, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/Digitsation/ECal/DigitisationECalFit.p
 df Graphic file (type pdf)
 
@@ -2864,7 +2868,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 pdf, page is rotated 90 degrees> <./EnergyEstimators/Plots/Calibration/Digitsat
 ion/ECal/DigitisationECalSelection.pdf, page is rotated 90 degrees>]
 <EnergyEstimators/Plots/Calibration/Digitsation/HCal/ECalHCalKaon0LSplit.pdf, i
-d=3414, 569.12625pt x 408.52625pt>
+d=3425, 569.12625pt x 408.52625pt>
 File: EnergyEstimators/Plots/Calibration/Digitsation/HCal/ECalHCalKaon0LSplit.p
 df Graphic file (type pdf)
 
@@ -2875,7 +2879,7 @@ alHCalKaon0LSplit.pdf used on input line 138.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalSelection.
-pdf, id=3415, 569.12625pt x 408.52625pt>
+pdf, id=3426, 569.12625pt x 408.52625pt>
 File: EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalSelec
 tion.pdf Graphic file (type pdf)
 
@@ -2890,7 +2894,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalbarrelFit.
-pdf, id=3421, 569.12625pt x 410.53375pt>
+pdf, id=3432, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalbarre
 lFit.pdf Graphic file (type pdf)
 
@@ -2901,7 +2905,7 @@ gitisationHCalbarrelFit.pdf used on input line 147.
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
 <EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalendcapFit.
-pdf, id=3422, 569.12625pt x 410.53375pt>
+pdf, id=3433, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/Digitsation/HCal/DigitisationHCalendca
 pFit.pdf Graphic file (type pdf)
 
@@ -2921,7 +2925,7 @@ timators/Plots/Calibration/Digitsation/HCal/DigitisationHCalSelection.pdf, page
 DigitisationHCalbarrelFit.pdf, page is rotated 90 degrees> <./EnergyEstimators/
 Plots/Calibration/Digitsation/HCal/DigitisationHCalendcapFit.pdf, page is rotat
 ed 90 degrees>]
-<EnergyEstimators/Plots/Calibration/VisualDisplay/ECalWithScale.pdf, id=3656, 7
+<EnergyEstimators/Plots/Calibration/VisualDisplay/ECalWithScale.pdf, id=3667, 7
 18.4302pt x 512.64565pt>
 File: EnergyEstimators/Plots/Calibration/VisualDisplay/ECalWithScale.pdf Graphi
 c file (type pdf)
@@ -2931,7 +2935,7 @@ Package pdftex.def Info: EnergyEstimators/Plots/Calibration/VisualDisplay/ECalW
 ithScale.pdf used on input line 168.
 (pdftex.def)             Requested size: 147.86516pt x 105.50761pt.
 
-<EnergyEstimators/Plots/Calibration/VisualDisplay/HCal.png, id=3657, 853.1875pt
+<EnergyEstimators/Plots/Calibration/VisualDisplay/HCal.png, id=3668, 853.1875pt
  x 602.25pt>
 File: EnergyEstimators/Plots/Calibration/VisualDisplay/HCal.png Graphic file (t
 ype png)
@@ -2940,7 +2944,7 @@ Package pdftex.def Info: EnergyEstimators/Plots/Calibration/VisualDisplay/HCal.
 png used on input line 169.
 (pdftex.def)             Requested size: 147.86516pt x 104.37527pt.
 
-<EnergyEstimators/Plots/Calibration/VisualDisplay/HCalring.png, id=3658, 853.18
+<EnergyEstimators/Plots/Calibration/VisualDisplay/HCalring.png, id=3669, 853.18
 75pt x 602.25pt>
 File: EnergyEstimators/Plots/Calibration/VisualDisplay/HCalring.png Graphic fil
 e (type png)
@@ -2953,7 +2957,7 @@ ing.png used on input line 170.
 EnergyEstimators/Plots/Calibration/VisualDisplay/HCal.png> <./EnergyEstimators/
 Plots/Calibration/VisualDisplay/HCalring.png>]
 <EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFAECal.
-pdf, id=3695, 569.12625pt x 410.53375pt>
+pdf, id=3706, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFA
 ECal.pdf Graphic file (type pdf)
 
@@ -2964,7 +2968,7 @@ Package pdftex.def Info: EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
 <EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFAHCal.
-pdf, id=3696, 569.12625pt x 410.53375pt>
+pdf, id=3707, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFA
 HCal.pdf Graphic file (type pdf)
 
@@ -2975,7 +2979,7 @@ Package pdftex.def Info: EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
 <EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFAMuon.
-pdf, id=3697, 569.12625pt x 410.53375pt>
+pdf, id=3708, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFA
 Muon.pdf Graphic file (type pdf)
 
@@ -2997,7 +3001,7 @@ IPScale/PandoraPFA/MIPScalePandoraPFAHCal.pdf, page is rotated 90 degrees> <./E
 nergyEstimators/Plots/Calibration/MIPScale/PandoraPFA/MIPScalePandoraPFAMuon.pd
 f, page is rotated 90 degrees>]
 <EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleECalSelection.pdf, id
-=3850, 569.12625pt x 408.52625pt>
+=3861, 569.12625pt x 408.52625pt>
 File: EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleECalSelection.pd
 f Graphic file (type pdf)
 
@@ -3008,7 +3012,7 @@ aleECalSelection.pdf used on input line 207.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleSettingECalFit.pdf, i
-d=3851, 569.12625pt x 410.53375pt>
+d=3862, 569.12625pt x 410.53375pt>
 File: EnergyEstimators/Plots/Calibration/EMScaleSetting/EMScaleSettingECalFit.p
 df Graphic file (type pdf)
 
@@ -3021,7 +3025,7 @@ aleSettingECalFit.pdf used on input line 208.
 pdf, page is rotated 90 degrees> <./EnergyEstimators/Plots/Calibration/EMScaleS
 etting/EMScaleSettingECalFit.pdf, page is rotated 90 degrees>]
 <EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionNo
-Cuts.pdf, id=3952, 569.12625pt x 408.52625pt>
+Cuts.pdf, id=3963, 569.12625pt x 408.52625pt>
 File: EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelect
 ionNoCuts.pdf Graphic file (type pdf)
 
@@ -3032,7 +3036,7 @@ ScaleECalHCalSelectionNoCuts.pdf used on input line 222.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionCu
-ts.pdf, id=3953, 569.12625pt x 408.52625pt>
+ts.pdf, id=3964, 569.12625pt x 408.52625pt>
 File: EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelect
 ionCuts.pdf Graphic file (type pdf)
 
@@ -3046,7 +3050,7 @@ ctionNoCuts.pdf, page is rotated 90 degrees> <./EnergyEstimators/Plots/Calibrat
 ion/HadScaleSetting/HadScaleECalHCalSelectionCuts.pdf, page is rotated 90 degre
 es>]
 <EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelectionEx
-ample.pdf, id=4056, 569.12625pt x 552.0625pt>
+ample.pdf, id=4067, 569.12625pt x 552.0625pt>
 File: EnergyEstimators/Plots/Calibration/HadScaleSetting/HadScaleECalHCalSelect
 ionExample.pdf Graphic file (type pdf)
 
@@ -3063,7 +3067,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [96]
-<EnergyEstimators/Plots/SoftComp/Weights/CellTruncWeights.pdf, id=4124, 569.126
+<EnergyEstimators/Plots/SoftComp/Weights/CellTruncWeights.pdf, id=4135, 569.126
 25pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/Weights/CellTruncWeights.pdf Graphic file
  (type pdf)
@@ -3078,7 +3082,7 @@ Underfull \vbox (badness 1062) has occurred while \output is active []
  [97 <./EnergyEstimators/Plots/SoftComp/Weights/CellTruncWeights.pdf, page is r
 otated 90 degrees>]
 <EnergyEstimators/Plots/CellTruncation/ER_vs_Kaon0LCellTrunc_50GeVKaon0L.pdf, i
-d=4178, 569.12625pt x 387.4475pt>
+d=4189, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/CellTruncation/ER_vs_Kaon0LCellTrunc_50GeVKaon0L.p
 df Graphic file (type pdf)
 
@@ -3089,7 +3093,7 @@ Trunc_50GeVKaon0L.pdf used on input line 338.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <EnergyEstimators/Plots/CellTruncation/ER_vs_PhotonCellTrunc_100GeVPhoton.pdf, 
-id=4179, 569.12625pt x 387.4475pt>
+id=4190, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/CellTruncation/ER_vs_PhotonCellTrunc_100GeVPhoton.
 pdf Graphic file (type pdf)
 
@@ -3100,7 +3104,7 @@ Trunc_100GeVPhoton.pdf used on input line 339.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
  [98]
 <EnergyEstimators/Plots/CellTruncation/JER_vs_JetEnergy_HCalCellTruncation.pdf,
- id=4191, 569.12625pt x 387.4475pt>
+ id=4202, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/CellTruncation/JER_vs_JetEnergy_HCalCellTruncation
 .pdf Graphic file (type pdf)
 
@@ -3116,8 +3120,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [99 <./EnergyEstimators/Plots/CellTruncation/ER_vs_Kaon0LCellTrunc_50GeVKaon0L.
 pdf, page is rotated 90 degrees> <./EnergyEstimators/Plots/CellTruncation/ER_vs
 _PhotonCellTrunc_100GeVPhoton.pdf, page is rotated 90 degrees>]
-<OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf, id=428
-7, 569.12625pt x 385.44pt>
+<OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf, id=429
+8, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize.pdf Gr
 aphic file (type pdf)
 
@@ -3127,7 +3131,7 @@ HCalCellSize.pdf used on input line 360.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <EnergyEstimators/Plots/CellTruncation/JER_vs_HCalCellSizeBadTruncation.pdf, id
-=4288, 569.12625pt x 387.4475pt>
+=4299, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/CellTruncation/JER_vs_HCalCellSizeBadTruncation.pd
 f Graphic file (type pdf)
 
@@ -3141,7 +3145,7 @@ ion.pdf, page is rotated 90 degrees>] [101 <./OptimisationStudies/Plots/JetEner
 gyResolutions/JER_vs_HCalCellSize.pdf, page is rotated 90 degrees> <./EnergyEst
 imators/Plots/CellTruncation/JER_vs_HCalCellSizeBadTruncation.pdf, page is rota
 ted 90 degrees>]
-<EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp1.png, id=4440, 1056.948
+<EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp1.png, id=4451, 1056.948
 75pt x 784.9325pt>
 File: EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp1.png Graphic file 
 (type png)
@@ -3151,7 +3155,7 @@ Package pdftex.def Info: EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp
 1.png used on input line 382.
 (pdftex.def)             Requested size: 224.03688pt x 166.37375pt.
 
-<EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp3.png, id=4441, 602.25pt
+<EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp3.png, id=4452, 602.25pt
  x 772.8875pt>
 File: EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp3.png Graphic file 
 (type png)
@@ -3165,8 +3169,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [102 <./EnergyEstimators/Plots/SoftComp/VisualDisplay/SoftComp1.png> <./Energy
 Estimators/Plots/SoftComp/VisualDisplay/SoftComp3.png>]
-<EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam1.pdf, id=446
-0, 569.12625pt x 387.4475pt>
+<EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam1.pdf, id=447
+1, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam1.pdf Gr
 aphic file (type pdf)
 
@@ -3175,8 +3179,8 @@ Package pdftex.def Info: EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompen
 sationParam1.pdf used on input line 418.
 (pdftex.def)             Requested size: 147.86516pt x 100.66302pt.
 
-<EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam2.pdf, id=446
-1, 569.12625pt x 387.4475pt>
+<EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam2.pdf, id=447
+2, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam2.pdf Gr
 aphic file (type pdf)
 
@@ -3185,8 +3189,8 @@ Package pdftex.def Info: EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompen
 sationParam2.pdf used on input line 419.
 (pdftex.def)             Requested size: 147.86516pt x 100.66302pt.
 
-<EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam3.pdf, id=446
-2, 569.12625pt x 387.4475pt>
+<EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam3.pdf, id=447
+3, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationParam3.pdf Gr
 aphic file (type pdf)
 
@@ -3200,7 +3204,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationWeights.pdf, id=44
-69, 569.12625pt x 387.4475pt>
+80, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationWeights.pdf G
 raphic file (type pdf)
 
@@ -3225,7 +3229,7 @@ reCompensationParam2.pdf, page is rotated 90 degrees> <./EnergyEstimators/Plots
 ./EnergyEstimators/Plots/SoftComp/Weights/SoftwareCompensationWeights.pdf, page
  is rotated 90 degrees>]
 <EnergyEstimators/Plots/SoftComp/EnergyResolution/ER_vs_Kaon0LSoftComp_Kaon0L.p
-df, id=4666, 569.12625pt x 387.4475pt>
+df, id=4677, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/EnergyResolution/ER_vs_Kaon0LSoftComp_Kao
 n0L.pdf Graphic file (type pdf)
 
@@ -3243,7 +3247,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [105]
 <EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_Default.p
-df, id=4673, 569.12625pt x 387.4475pt>
+df, id=4684, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_Defa
 ult.pdf Graphic file (type pdf)
 
@@ -3262,7 +3266,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [106 <./EnergyEstimators/Plots/SoftComp/EnergyResolution/ER_vs_Kaon0LSoftComp_
 Kaon0L.pdf, page is rotated 90 degrees>]
 <EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_PerfectPF
-A.pdf, id=4726, 569.12625pt x 387.4475pt>
+A.pdf, id=4737, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_Perf
 ectPFA.pdf Graphic file (type pdf)
 
@@ -3273,7 +3277,7 @@ R_vs_JetEnergy_PerfectPFA.pdf used on input line 467.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_TotalConf
-usion.pdf, id=4727, 569.12625pt x 387.4475pt>
+usion.pdf, id=4738, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/SoftComp/JetEnergyResolution/JER_vs_JetEnergy_Tota
 lConfusion.pdf Graphic file (type pdf)
 
@@ -3300,7 +3304,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [109]
-<EnergyEstimators/Plots/TimingCuts/ER_vs_PhotonTiming_100GeVPhoton.pdf, id=4890
+<EnergyEstimators/Plots/TimingCuts/ER_vs_PhotonTiming_100GeVPhoton.pdf, id=4901
 , 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/TimingCuts/ER_vs_PhotonTiming_100GeVPhoton.pdf Gra
 phic file (type pdf)
@@ -3310,7 +3314,7 @@ Package pdftex.def Info: EnergyEstimators/Plots/TimingCuts/ER_vs_PhotonTiming_1
 00GeVPhoton.pdf used on input line 514.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<EnergyEstimators/Plots/TimingCuts/ER_vs_Kaon0LTiming_50GeVKaon0L.pdf, id=4891,
+<EnergyEstimators/Plots/TimingCuts/ER_vs_Kaon0LTiming_50GeVKaon0L.pdf, id=4902,
  569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/TimingCuts/ER_vs_Kaon0LTiming_50GeVKaon0L.pdf Grap
 hic file (type pdf)
@@ -3325,7 +3329,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <OptimisationStudies/Plots/Description/CalorimeterHitTimes_91GeV_Z_uds_Steel_No
-rmalised.pdf, id=4896, 569.12625pt x 387.4475pt>
+rmalised.pdf, id=4907, 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/Description/CalorimeterHitTimes_91GeV_Z_uds_Ste
 el_Normalised.pdf Graphic file (type pdf)
 
@@ -3339,8 +3343,8 @@ mes_91GeV_Z_uds_Steel_Normalised.pdf used on input line 522.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<EnergyEstimators/Plots/TimingCuts/JER_vs_JetEnergy_TimingCutStudies.pdf, id=48
-98, 569.12625pt x 387.4475pt>
+<EnergyEstimators/Plots/TimingCuts/JER_vs_JetEnergy_TimingCutStudies.pdf, id=49
+09, 569.12625pt x 387.4475pt>
 File: EnergyEstimators/Plots/TimingCuts/JER_vs_JetEnergy_TimingCutStudies.pdf G
 raphic file (type pdf)
 
@@ -3370,7 +3374,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [116]
 <OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalCellSize_100GeVPhoton.p
-df, id=5114, 569.12625pt x 385.44pt>
+df, id=5125, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalCellSize_100GeVPho
 ton.pdf Graphic file (type pdf)
 
@@ -3381,7 +3385,7 @@ lCellSize_100GeVPhoton.pdf used on input line 58.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalCellSize_100GeVPhoton.p
-df, id=5115, 569.12625pt x 385.44pt>
+df, id=5126, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalCellSize_100GeVPho
 ton.pdf Graphic file (type pdf)
 
@@ -3399,7 +3403,7 @@ Underfull \vbox (badness 1817) has occurred while \output is active []
 
  [117]
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize.pdf,
- id=5129, 569.12625pt x 385.44pt>
+ id=5140, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize
 .pdf Graphic file (type pdf)
 
@@ -3410,7 +3414,7 @@ SiliconECalCellSize.pdf used on input line 68.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCellSize
-.pdf, id=5130, 569.12625pt x 385.44pt>
+.pdf, id=5141, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCel
 lSize.pdf Graphic file (type pdf)
 
@@ -3421,7 +3425,7 @@ ScintillatorECalCellSize.pdf used on input line 69.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize_91Ge
-V_DiJet_Breakdown.pdf, id=5135, 569.12625pt x 385.44pt>
+V_DiJet_Breakdown.pdf, id=5146, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize
 _91GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3432,7 +3436,7 @@ SiliconECalCellSize_91GeV_DiJet_Breakdown.pdf used on input line 76.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCellSize
-_91GeV_DiJet_Breakdown.pdf, id=5136, 569.12625pt x 385.44pt>
+_91GeV_DiJet_Breakdown.pdf, id=5147, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCel
 lSize_91GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3443,7 +3447,7 @@ ScintillatorECalCellSize_91GeV_DiJet_Breakdown.pdf used on input line 77.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize_500G
-eV_DiJet_Breakdown.pdf, id=5137, 569.12625pt x 385.44pt>
+eV_DiJet_Breakdown.pdf, id=5148, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalCellSize
 _500GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3454,7 +3458,7 @@ SiliconECalCellSize_500GeV_DiJet_Breakdown.pdf used on input line 78.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCellSize
-_500GeV_DiJet_Breakdown.pdf, id=5138, 569.12625pt x 385.44pt>
+_500GeV_DiJet_Breakdown.pdf, id=5149, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalCel
 lSize_500GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3483,7 +3487,7 @@ olutions/JER_vs_SiliconECalCellSize_500GeV_DiJet_Breakdown.pdf, page is rotated
  90 degrees> <./OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_Scintilla
 torECalCellSize_500GeV_DiJet_Breakdown.pdf, page is rotated 90 degrees>]
 <OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalNLayers_100GeVPhoton.pd
-f, id=5518, 569.12625pt x 385.44pt>
+f, id=5529, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_SiECalNLayers_100GeVPhot
 on.pdf Graphic file (type pdf)
 
@@ -3494,7 +3498,7 @@ lNLayers_100GeVPhoton.pdf used on input line 114.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalNLayers_100GeVPhoton.pd
-f, id=5519, 569.12625pt x 385.44pt>
+f, id=5530, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_ScECalNLayers_100GeVPhot
 on.pdf Graphic file (type pdf)
 
@@ -3509,7 +3513,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [120]
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayer
-s.pdf, id=5537, 569.12625pt x 385.44pt>
+s.pdf, id=5548, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberof
 Layers.pdf Graphic file (type pdf)
 
@@ -3520,7 +3524,7 @@ SiliconECalNumberofLayers.pdf used on input line 126.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberof
-Layers.pdf, id=5538, 569.12625pt x 385.44pt>
+Layers.pdf, id=5549, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNum
 berofLayers.pdf Graphic file (type pdf)
 
@@ -3535,7 +3539,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayer
-s_91GeV_DiJet_Breakdown.pdf, id=5543, 569.12625pt x 385.44pt>
+s_91GeV_DiJet_Breakdown.pdf, id=5554, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberof
 Layers_91GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3546,7 +3550,7 @@ SiliconECalNumberofLayers_91GeV_DiJet_Breakdown.pdf used on input line 134.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberof
-Layers_91GeV_DiJet_Breakdown.pdf, id=5544, 569.12625pt x 385.44pt>
+Layers_91GeV_DiJet_Breakdown.pdf, id=5555, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNum
 berofLayers_91GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3558,7 +3562,7 @@ ScintillatorECalNumberofLayers_91GeV_DiJet_Breakdown.pdf used on input line 135
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberofLayer
-s_500GeV_DiJet_Breakdown.pdf, id=5545, 569.12625pt x 385.44pt>
+s_500GeV_DiJet_Breakdown.pdf, id=5556, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_SiliconECalNumberof
 Layers_500GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3569,7 +3573,7 @@ SiliconECalNumberofLayers_500GeV_DiJet_Breakdown.pdf used on input line 136.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNumberof
-Layers_500GeV_DiJet_Breakdown.pdf, id=5546, 569.12625pt x 385.44pt>
+Layers_500GeV_DiJet_Breakdown.pdf, id=5557, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ScintillatorECalNum
 berofLayers_500GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3601,7 +3605,7 @@ etEnergyResolutions/JER_vs_SiliconECalNumberofLayers_500GeV_DiJet_Breakdown.pdf
 /JER_vs_ScintillatorECalNumberofLayers_500GeV_DiJet_Breakdown.pdf, page is rota
 ted 90 degrees>] [124] [125]
 <OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L.pdf,
- id=5943, 569.12625pt x 385.44pt>
+ id=5954, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalCellSize_50GeVKaon0L
 .pdf Graphic file (type pdf)
 
@@ -3621,7 +3625,7 @@ HCalCellSize.pdf used on input line 221.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_91GeV_DiJet
-_Breakdown.pdf, id=5996, 569.12625pt x 385.44pt>
+_Breakdown.pdf, id=6007, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_91GeV_
 DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3632,7 +3636,7 @@ HCalCellSize_91GeV_DiJet_Breakdown.pdf used on input line 228.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_500GeV_DiJe
-t_Breakdown.pdf, id=5997, 569.12625pt x 385.44pt>
+t_Breakdown.pdf, id=6008, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_HCalCellSize_500GeV
 _DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3650,7 +3654,7 @@ e_91GeV_DiJet_Breakdown.pdf, page is rotated 90 degrees> <./OptimisationStudies
 /Plots/JetEnergyResolutions/JER_vs_HCalCellSize_500GeV_DiJet_Breakdown.pdf, pag
 e is rotated 90 degrees>]
 <OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalNFixedLayers_50GeVKaon0L.
-pdf, id=6101, 569.12625pt x 385.44pt>
+pdf, id=6112, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalNFixedLayers_50GeVKa
 on0L.pdf Graphic file (type pdf)
 
@@ -3662,7 +3666,7 @@ FixedLayers_50GeVKaon0L.pdf used on input line 248.
  [129 <./OptimisationStudies/Plots/EnergyResolution/ER_vs_HCalNFixedLayers_50Ge
 VKaon0L.pdf, page is rotated 90 degrees>]
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixe
-dDepth.pdf, id=6154, 569.12625pt x 385.44pt>
+dDepth.pdf, id=6165, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersO
 fFixedDepth.pdf Graphic file (type pdf)
 
@@ -3673,7 +3677,7 @@ NumberOfHCalLayersOfFixedDepth.pdf used on input line 259.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixe
-dDepth_91GeV_DiJet_Breakdown.pdf, id=6155, 569.12625pt x 385.44pt>
+dDepth_91GeV_DiJet_Breakdown.pdf, id=6166, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersO
 fFixedDepth_91GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3685,7 +3689,7 @@ NumberOfHCalLayersOfFixedDepth_91GeV_DiJet_Breakdown.pdf used on input line 266
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixe
-dDepth_500GeV_DiJet_Breakdown.pdf, id=6156, 569.12625pt x 385.44pt>
+dDepth_500GeV_DiJet_Breakdown.pdf, id=6167, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersO
 fFixedDepth_500GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3709,7 +3713,7 @@ sOfFixedDepth_91GeV_DiJet_Breakdown.pdf, page is rotated 90 degrees> <./Optimis
 ationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfHCalLayersOfFixedDepth_5
 00GeV_DiJet_Breakdown.pdf, page is rotated 90 degrees>]
 <OptimisationStudies/Plots/EnergyResolution/ER_vs_NHCalVariableLayers_50GeVKaon
-0L.pdf, id=6309, 569.12625pt x 387.4475pt>
+0L.pdf, id=6320, 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/EnergyResolution/ER_vs_NHCalVariableLayers_50Ge
 VKaon0L.pdf Graphic file (type pdf)
 
@@ -3721,7 +3725,7 @@ VariableLayers_50GeVKaon0L.pdf used on input line 305.
  [132 <./OptimisationStudies/Plots/EnergyResolution/ER_vs_NHCalVariableLayers_5
 0GeVKaon0L.pdf, page is rotated 90 degrees>]
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal.
-pdf, id=6361, 569.12625pt x 387.4475pt>
+pdf, id=6372, 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInThe
 HCal.pdf Graphic file (type pdf)
 
@@ -3732,7 +3736,7 @@ NumberOfLayersInTheHCal.pdf used on input line 316.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_
-91GeV_DiJet_Breakdown.pdf, id=6362, 569.12625pt x 387.4475pt>
+91GeV_DiJet_Breakdown.pdf, id=6373, 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInThe
 HCal_91GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3743,7 +3747,7 @@ NumberOfLayersInTheHCal_91GeV_DiJet_Breakdown.pdf used on input line 323.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInTheHCal_
-500GeV_DiJet_Breakdown.pdf, id=6363, 569.12625pt x 387.4475pt>
+500GeV_DiJet_Breakdown.pdf, id=6374, 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_NumberOfLayersInThe
 HCal_500GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3772,7 +3776,7 @@ Overfull \hbox (9.75711pt too wide) in paragraph at lines 349--360
  []
 
 [135]
-<OptimisationStudies/Plots/Description/HCalAbsorberMaterialTimings.pdf, id=6531
+<OptimisationStudies/Plots/Description/HCalAbsorberMaterialTimings.pdf, id=6542
 , 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/Description/HCalAbsorberMaterialTimings.pdf Gra
 phic file (type pdf)
@@ -3788,7 +3792,7 @@ page is rotated 90 degrees>] [137]
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<OptimisationStudies/Plots/EnergyResolution/ShowerShape/Profile2.pdf, id=6594, 
+<OptimisationStudies/Plots/EnergyResolution/ShowerShape/Profile2.pdf, id=6605, 
 569.12625pt x 387.4475pt>
 File: OptimisationStudies/Plots/EnergyResolution/ShowerShape/Profile2.pdf Graph
 ic file (type pdf)
@@ -3807,7 +3811,7 @@ Underfull \vbox (badness 4927) has occurred while \output is active []
  [139 <./OptimisationStudies/Plots/EnergyResolution/ShowerShape/Profile2.pdf, p
 age is rotated 90 degrees>]
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStrength.pd
-f, id=6650, 569.12625pt x 385.44pt>
+f, id=6662, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStreng
 th.pdf Graphic file (type pdf)
 
@@ -3822,7 +3826,7 @@ Underfull \vbox (badness 1448) has occurred while \output is active []
 
  [141]
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStrength_91
-GeV_DiJet_Breakdown.pdf, id=6714, 569.12625pt x 385.44pt>
+GeV_DiJet_Breakdown.pdf, id=6725, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStreng
 th_91GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3833,7 +3837,7 @@ MagneticFieldStrength_91GeV_DiJet_Breakdown.pdf used on input line 480.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStrength_50
-0GeV_DiJet_Breakdown.pdf, id=6715, 569.12625pt x 385.44pt>
+0GeV_DiJet_Breakdown.pdf, id=6726, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStreng
 th_500GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3844,7 +3848,7 @@ MagneticFieldStrength_500GeV_DiJet_Breakdown.pdf used on input line 481.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/Description/BField/BFieldNumbers_91GeV_Z_uds.pdf, id
-=6720, 569.12625pt x 385.44pt>
+=6731, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/Description/BField/BFieldNumbers_91GeV_Z_uds.pd
 f Graphic file (type pdf)
 
@@ -3865,7 +3869,7 @@ ength_91GeV_DiJet_Breakdown.pdf, page is rotated 90 degrees> <./OptimisationStu
 dies/Plots/JetEnergyResolutions/JER_vs_MagneticFieldStrength_500GeV_DiJet_Break
 down.pdf, page is rotated 90 degrees>]
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius.pdf, id=
-6817, 569.12625pt x 385.44pt>
+6828, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius.pdf
  Graphic file (type pdf)
 
@@ -3878,7 +3882,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius_91GeV_Di
-Jet_Breakdown.pdf, id=6818, 569.12625pt x 385.44pt>
+Jet_Breakdown.pdf, id=6829, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius_91G
 eV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3889,7 +3893,7 @@ ECalInnerRadius_91GeV_DiJet_Breakdown.pdf used on input line 508.
 (pdftex.def)             Requested size: 224.03688pt x 151.73251pt.
 
 <OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius_500GeV_D
-iJet_Breakdown.pdf, id=6819, 569.12625pt x 385.44pt>
+iJet_Breakdown.pdf, id=6830, 569.12625pt x 385.44pt>
 File: OptimisationStudies/Plots/JetEnergyResolutions/JER_vs_ECalInnerRadius_500
 GeV_DiJet_Breakdown.pdf Graphic file (type pdf)
 
@@ -3960,7 +3964,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 1371) has occurred while \output is active []
 
  [147]
-<PhysicsAnalysis/Plots/FeynmanDiagrams/FermiTheory.pdf, id=7026, 132.16777pt x 
+<PhysicsAnalysis/Plots/FeynmanDiagrams/FermiTheory.pdf, id=7037, 132.16777pt x 
 109.34853pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/FermiTheory.pdf Graphic file (type 
 pdf)
@@ -3983,7 +3987,7 @@ Package Fancyhdr Warning: \headheight is too small (20.625pt):
  This may cause the page layout to be inconsistent, however.
 
 [148]
-<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC1.pdf, id=7040, 219.85136pt x 150
+<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC1.pdf, id=7051, 219.85136pt x 150
 .37079pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC1.pdf Graphic file (type pdf
 )
@@ -3992,7 +3996,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC1.pdf use
 d on input line 42.
 (pdftex.def)             Requested size: 224.03688pt x 153.23619pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC2.pdf, id=7041, 219.85136pt x 150
+<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC2.pdf, id=7052, 219.85136pt x 150
 .37079pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC2.pdf Graphic file (type pdf
 )
@@ -4001,7 +4005,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC2.pdf use
 d on input line 43.
 (pdftex.def)             Requested size: 224.03688pt x 153.23619pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC3.pdf, id=7042, 213.85898pt x 150
+<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC3.pdf, id=7053, 213.85898pt x 150
 .37079pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC3.pdf Graphic file (type pdf
 )
@@ -4010,7 +4014,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC3.pdf use
 d on input line 44.
 (pdftex.def)             Requested size: 224.03688pt x 157.53603pt.
 
-<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC4.pdf, id=7043, 213.80276pt x 150
+<PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC4.pdf, id=7054, 213.80276pt x 150
 .37079pt>
 File: PhysicsAnalysis/Plots/FeynmanDiagrams/VBSCLIC4.pdf Graphic file (type pdf
 )
@@ -4043,7 +4047,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [152]
 [153]
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7167, 569.12625pt x 
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7178, 569.12625pt x 
 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf Graphic file (type 
@@ -4057,7 +4061,7 @@ used on input line 132.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7168, 569.12625pt x 
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7179, 569.12625pt x 
 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf Graphic file (type 
@@ -4071,7 +4075,7 @@ used on input line 133.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7169, 569.12625pt x 
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7180, 569.12625pt x 
 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf Graphic file (type 
@@ -4085,7 +4089,7 @@ used on input line 134.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7170, 569.12625pt x 
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf, id=7181, 569.12625pt x 
 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw.pdf Graphic file (type 
@@ -4114,7 +4118,7 @@ age is rotated 90 degrees> <./PhysicsAnalysis/Plots/EventWeights/1400GeV/EventW
 eightsForEvent100001051_1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Raw
 .pdf, page is rotated 90 degrees>] [156]
 <PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto.pdf, id=7
-378, 569.12625pt x 547.04375pt>
+389, 569.12625pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/SimpleInvMassPlot/InvariantMassesAlgorithmVeto.pdf 
 Graphic file (type pdf)
 
@@ -4137,7 +4141,7 @@ Overfull \hbox (9.1874pt too wide) in paragraph at lines 229--244
 
 
 <PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_Optimal.pd
-f, id=7452, 569.12625pt x 547.04375pt>
+f, id=7463, 569.12625pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_Optim
 al.pdf Graphic file (type pdf)
 
@@ -4148,7 +4152,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
 <PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha4_Opt
-imal.pdf, id=7453, 569.12625pt x 547.04375pt>
+imal.pdf, id=7464, 569.12625pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha
 4_Optimal.pdf Graphic file (type pdf)
 
@@ -4159,7 +4163,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
 <PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha5_Opt
-imal.pdf, id=7454, 569.12625pt x 547.04375pt>
+imal.pdf, id=7465, 569.12625pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/Chi2ContoursOptimisation/1400GeV/KtSPFOsR0p90_alpha
 5_Optimal.pdf Graphic file (type pdf)
 
@@ -4186,7 +4190,7 @@ t line 326.
 
 [162]
 <PhysicsAnalysis/Plots/JetEnergyResolution/JetEnergyResolutionScan_1400GeV.pdf,
- id=7620, 569.12625pt x 387.4475pt>
+ id=7631, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/JetEnergyResolution/JetEnergyResolutionScan_1400GeV
 .pdf Graphic file (type pdf)
 
@@ -4197,7 +4201,7 @@ olutionScan_1400GeV.pdf used on input line 332.
 (pdftex.def)             Requested size: 336.05533pt x 228.78712pt.
  [163 <./PhysicsAnalysis/Plots/JetEnergyResolution/JetEnergyResolutionScan_1400
 GeV.pdf, page is rotated 90 degrees>]
-<PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf, id=7672, 56
+<PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf, id=7683, 56
 9.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf Graphic
  file (type pdf)
@@ -4207,8 +4211,8 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseM
 omentum.pdf used on input line 359.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf, id=767
-3, 569.12625pt x 387.4475pt>
+<PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf, id=768
+4, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf Gr
 aphic file (type pdf)
 
@@ -4217,7 +4221,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIso
 latedLeptons.pdf used on input line 360.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf, id=7674, 569.12625pt x 
+<PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf, id=7685, 569.12625pt x 
 387.4475pt>
 File: PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf Graphic file (type 
 pdf)
@@ -4237,7 +4241,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [166]
 <PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV.pdf, i
-d=7831, 569.12625pt x 417.56pt>
+d=7842, 569.12625pt x 417.56pt>
 File: PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV.p
 df Graphic file (type pdf)
 
@@ -4252,7 +4256,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [167 <./PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400Ge
 V.pdf, page is rotated 90 degrees>]
 <PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_
-No_Cuts_StackPlot.pdf, id=7883, 569.12625pt x 387.4475pt>
+No_Cuts_StackPlot.pdf, id=7894, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_140
 0GeV_No_Cuts_StackPlot.pdf Graphic file (type pdf)
 
@@ -4263,7 +4267,7 @@ ntMassSynBosons_1400GeV_No_Cuts_StackPlot.pdf used on input line 416.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_
-Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7884, 569.12625pt x 387.4475pt>
+Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7895, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_140
 0GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf Graphic file (type pdf)
 
@@ -4275,7 +4279,7 @@ t line 417.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_
-PostPreSelection_PostMVA_Cuts_StackPlot.pdf, id=7885, 569.12625pt x 387.4475pt>
+PostPreSelection_PostMVA_Cuts_StackPlot.pdf, id=7896, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_140
 0GeV_PostPreSelection_PostMVA_Cuts_StackPlot.pdf Graphic file (type pdf)
 
@@ -4306,7 +4310,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [170]
 <PhysicsAnalysis/Plots/SensitiveDistributions/MVVs_SPFOs_kt_0p90_1400GeV.pdf, i
-d=8044, 569.12625pt x 547.04375pt>
+d=8055, 569.12625pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/SensitiveDistributions/MVVs_SPFOs_kt_0p90_1400GeV.p
 df Graphic file (type pdf)
 
@@ -4317,7 +4321,7 @@ s_kt_0p90_1400GeV.pdf used on input line 476.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
 <PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt_0p90
-_1400GeV.pdf, id=8045, 569.12625pt x 547.04375pt>
+_1400GeV.pdf, id=8056, 569.12625pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynJets_SPFOs_kt
 _0p90_1400GeV.pdf Graphic file (type pdf)
 
@@ -4333,7 +4337,7 @@ Overfull \hbox (7.8332pt too wide) in paragraph at lines 476--477
 
 
 <PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_0p
-90_1400GeV.pdf, id=8046, 569.12625pt x 547.04375pt>
+90_1400GeV.pdf, id=8057, 569.12625pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_
 kt_0p90_1400GeV.pdf Graphic file (type pdf)
 
@@ -4370,7 +4374,7 @@ V.pdf, page is rotated 90 degrees> <./PhysicsAnalysis/Plots/SensitiveDistributi
 ons/CosThetaStarSynJets_SPFOs_kt_0p90_1400GeV.pdf, page is rotated 90 degrees> 
 <./PhysicsAnalysis/Plots/SensitiveDistributions/CosThetaStarSynBosons_SPFOs_kt_
 0p90_1400GeV.pdf, page is rotated 90 degrees>]
-<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/FitPlotMVV.pdf, id=8198, 569.12625pt
+<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/FitPlotMVV.pdf, id=8209, 569.12625pt
  x 387.4475pt>
 File: PhysicsAnalysis/Plots/NuisanceFit/1400GeV/FitPlotMVV.pdf Graphic file (ty
 pe pdf)
@@ -4388,7 +4392,7 @@ used on input line 523.
  [173 <./PhysicsAnalysis/Plots/NuisanceFit/1400GeV/FitPlotMVV.pdf, page is rota
 ted 90 degrees>]
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8250, 569.1
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8261, 569.1
 2625pt x 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001009_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf Graphic fi
@@ -4402,7 +4406,7 @@ ated.pdf used on input line 538.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8251, 569.1
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8262, 569.1
 2625pt x 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001014_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf Graphic fi
@@ -4416,7 +4420,7 @@ ated.pdf used on input line 539.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8252, 569.1
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8263, 569.1
 2625pt x 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001044_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf Graphic fi
@@ -4430,7 +4434,7 @@ ated.pdf used on input line 540.
 (pdftex.def)             Requested size: 224.03688pt x 160.82066pt.
 
 <PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_1400G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8253, 569.1
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf, id=8264, 569.1
 2625pt x 408.52625pt>
 File: PhysicsAnalysis/Plots/EventWeights/1400GeV/EventWeightsForEvent100001051_
 1400GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_1400GeV_Interpolated.pdf Graphic fi
@@ -4447,7 +4451,7 @@ ated.pdf used on input line 541.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<PhysicsAnalysis/Plots/FinalResult/1400GeV/Final.pdf, id=8255, 569.12625pt x 54
+<PhysicsAnalysis/Plots/FinalResult/1400GeV/Final.pdf, id=8266, 569.12625pt x 54
 7.04375pt>
 File: PhysicsAnalysis/Plots/FinalResult/1400GeV/Final.pdf Graphic file (type pd
 f)
@@ -4456,7 +4460,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FinalResult/1400GeV/Final.pdf us
 ed on input line 559.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
-<PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4.pdf, id=8256, 569.12625
+<PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4.pdf, id=8267, 569.12625
 pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4.pdf Graphic file (
 type pdf)
@@ -4466,7 +4470,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4
 .pdf used on input line 560.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
-<PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha5.pdf, id=8257, 569.12625
+<PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha5.pdf, id=8268, 569.12625
 pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha5.pdf Graphic file (
 type pdf)
@@ -4497,7 +4501,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 0 degrees> <./PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha4.pdf, page 
 is rotated 90 degrees> <./PhysicsAnalysis/Plots/FinalResult/1400GeV/Final_alpha
 5.pdf, page is rotated 90 degrees>]
-<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/NuisanceSignal.pdf, id=8594, 569.126
+<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/NuisanceSignal.pdf, id=8605, 569.126
 25pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/NuisanceFit/1400GeV/NuisanceSignal.pdf Graphic file
  (type pdf)
@@ -4507,7 +4511,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/NuisanceFit/1400GeV/NuisanceSign
 al.pdf used on input line 584.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
-<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/Nuisance.pdf, id=8595, 569.12625pt x
+<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/Nuisance.pdf, id=8606, 569.12625pt x
  547.04375pt>
 File: PhysicsAnalysis/Plots/NuisanceFit/1400GeV/Nuisance.pdf Graphic file (type
  pdf)
@@ -4516,7 +4520,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/NuisanceFit/1400GeV/Nuisance.pdf
  used on input line 585.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
-<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/NuisanceExplanation.pdf, id=8600, 56
+<PhysicsAnalysis/Plots/NuisanceFit/1400GeV/NuisanceExplanation.pdf, id=8611, 56
 9.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/NuisanceFit/1400GeV/NuisanceExplanation.pdf Graphic
  file (type pdf)
@@ -4560,7 +4564,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [179]
 [180]
 <PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Raw.pdf, id=8761, 569.12625pt x 
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Raw.pdf, id=8772, 569.12625pt x 
 410.53375pt>
 File: PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_
 3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Raw.pdf Graphic file (type 
@@ -4574,7 +4578,7 @@ used on input line 677.
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
 <PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_3000G
-eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Interpolated.pdf, id=8762, 569.1
+eV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Interpolated.pdf, id=8773, 569.1
 2625pt x 410.53375pt>
 File: PhysicsAnalysis/Plots/EventWeights/3000GeV/EventWeightsForEvent100001099_
 3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Interpolated.pdf Graphic fi
@@ -4587,7 +4591,7 @@ sForEvent100001099_3000GeV_SPFOs_kt_0p70_10Bins_Start_0_End_10_3000GeV_Interpol
 ated.pdf used on input line 678.
 (pdftex.def)             Requested size: 224.03688pt x 161.61093pt.
 
-<PhysicsAnalysis/Plots/NuisanceFit/3000GeV/FitPlotMVV.pdf, id=8768, 569.12625pt
+<PhysicsAnalysis/Plots/NuisanceFit/3000GeV/FitPlotMVV.pdf, id=8779, 569.12625pt
  x 387.4475pt>
 File: PhysicsAnalysis/Plots/NuisanceFit/3000GeV/FitPlotMVV.pdf Graphic file (ty
 pe pdf)
@@ -4607,7 +4611,7 @@ used on input line 688.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<PhysicsAnalysis/Plots/FinalResult/3000GeV/Final.pdf, id=8772, 569.12625pt x 54
+<PhysicsAnalysis/Plots/FinalResult/3000GeV/Final.pdf, id=8783, 569.12625pt x 54
 7.04375pt>
 File: PhysicsAnalysis/Plots/FinalResult/3000GeV/Final.pdf Graphic file (type pd
 f)
@@ -4616,7 +4620,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FinalResult/3000GeV/Final.pdf us
 ed on input line 703.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
-<PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha4.pdf, id=8773, 569.12625
+<PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha4.pdf, id=8784, 569.12625
 pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha4.pdf Graphic file (
 type pdf)
@@ -4626,7 +4630,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha4
 .pdf used on input line 704.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
-<PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha5.pdf, id=8774, 569.12625
+<PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha5.pdf, id=8785, 569.12625
 pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha5.pdf Graphic file (
 type pdf)
@@ -4644,7 +4648,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/FinalResult/3000GeV/Final_alpha5
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<PhysicsAnalysis/Plots/NuisanceFit/3000GeV/NuisanceSignal.pdf, id=8881, 569.126
+<PhysicsAnalysis/Plots/NuisanceFit/3000GeV/NuisanceSignal.pdf, id=8892, 569.126
 25pt x 547.04375pt>
 File: PhysicsAnalysis/Plots/NuisanceFit/3000GeV/NuisanceSignal.pdf Graphic file
  (type pdf)
@@ -4654,7 +4658,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/NuisanceFit/3000GeV/NuisanceSign
 al.pdf used on input line 714.
 (pdftex.def)             Requested size: 224.03688pt x 215.34952pt.
 
-<PhysicsAnalysis/Plots/NuisanceFit/3000GeV/Nuisance.pdf, id=8882, 569.12625pt x
+<PhysicsAnalysis/Plots/NuisanceFit/3000GeV/Nuisance.pdf, id=8893, 569.12625pt x
  547.04375pt>
 File: PhysicsAnalysis/Plots/NuisanceFit/3000GeV/Nuisance.pdf Graphic file (type
  pdf)
@@ -4713,7 +4717,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2834E076068D9938C40A4C1ED255B0D9;9411.
+(rerunfilecheck)             Checksum: 535D351CA6416733F6E68D460776E244;9510.
 
 
 LaTeX Warning: There were undefined references.
@@ -4723,13 +4727,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 32065 strings out of 493014
- 645108 string characters out of 6133350
- 830573 words of memory out of 5000000
- 33549 multiletter control sequences out of 15000+600000
+ 32067 strings out of 493014
+ 645146 string characters out of 6133350
+ 830841 words of memory out of 5000000
+ 33550 multiletter control sequences out of 15000+600000
  179035 words of font info for 321 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,19n,91p,8482b,741s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,19n,91p,8482b,739s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -4758,10 +4762,10 @@ e/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2016/texmf-dist/fon
 ts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (209 pages, 9440412 bytes).
+Output written on thesis.pdf (209 pages, 9450023 bytes).
 PDF statistics:
- 9487 PDF objects out of 10688 (max. 8388607)
- 5313 compressed objects within 54 object streams
- 819 named destinations out of 1000 (max. 500000)
- 39845 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 9498 PDF objects out of 10688 (max. 8388607)
+ 5321 compressed objects within 54 object streams
+ 820 named destinations out of 1000 (max. 500000)
+ 39853 words of extra memory for PDF output out of 42996 (max. 10000000)
 

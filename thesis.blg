@@ -5,45 +5,45 @@ The style file: h-physrev.bst
 Database file #1: thesis.bib
 Warning--empty booktitle in Hartbrich:292251
 Warning--empty author and editor in geantStringModel
-You've used 89 entries,
+You've used 88 entries,
             1983 wiz_defined-function locations,
-            1216 strings with 20000 characters,
-and the built_in function-call counts, 18214 in all, are:
-= -- 1210
-> -- 848
+            1211 strings with 19760 characters,
+and the built_in function-call counts, 18046 in all, are:
+= -- 1200
+> -- 838
 < -- 0
-+ -- 303
-- -- 173
-* -- 1541
-:= -- 2392
-add.period$ -- 89
-call.type$ -- 89
-change.case$ -- 84
++ -- 299
+- -- 171
+* -- 1530
+:= -- 2369
+add.period$ -- 88
+call.type$ -- 88
+change.case$ -- 83
 chr.to.int$ -- 0
-cite$ -- 91
-duplicate$ -- 1110
-empty$ -- 2047
-format.name$ -- 261
-if$ -- 4250
+cite$ -- 90
+duplicate$ -- 1098
+empty$ -- 2028
+format.name$ -- 258
+if$ -- 4212
 int.to.chr$ -- 0
-int.to.str$ -- 89
-missing$ -- 90
-newline$ -- 370
-num.names$ -- 88
-pop$ -- 430
+int.to.str$ -- 88
+missing$ -- 89
+newline$ -- 366
+num.names$ -- 87
+pop$ -- 424
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 668
+skip$ -- 662
 stack$ -- 0
 substring$ -- 644
-swap$ -- 310
+swap$ -- 307
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 144
-width$ -- 91
-write$ -- 799
+while$ -- 143
+width$ -- 90
+write$ -- 791
 (There were 2 warnings)
