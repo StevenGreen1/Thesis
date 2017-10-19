@@ -96,16 +96,32 @@ cin.get();
     pTF1->SetParameter(0,57.6);
     pTF1->SetParameter(1,1.6);
     pTF1->SetLineColor(kRed);
-    pTF1->SetLineStyle(2);
 
-    pTF1->Draw("same");
+    TF1 *pTF1_Mean = new TF1("Reported_Mean","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525);
+    pTF1_Mean->SetParameter(0,57.6);
+    pTF1_Mean->SetParameter(1,1.6);
+    pTF1_Mean->SetLineColor(kRed);
+    pTF1_Mean->SetFillColor(kBlue);
+    pTF1_Mean->SetFillStyle(3001);
+
+    TF1 *pTF1_LowerLim = new TF1("LowerLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525);
+    pTF1_LowerLim->SetParameter(0,57.2);
+    pTF1_LowerLim->SetParameter(1,1.3);
+
+    TF1 *pTF1_UpperLim = new TF1("UpperLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525);
+    pTF1_UpperLim->SetParameter(0,58.0);
+    pTF1_UpperLim->SetParameter(1,1.9);
+
+    Shade(pTCanvas, pTF1_LowerLim, pTF1_UpperLim, pTF1_Mean);
+ 
+    pTF1->Draw("l same");
     pTGraphErrors->Draw("same PL");
 
-    TLegend *pTLegend = new TLegend(0.3,0.55,0.85,0.85);
+    TLegend *pTLegend = new TLegend(0.35,0.45,0.85,0.85);
     pTLegend->SetTextSize(0.05);
     pTLegend->SetHeader("Parameterisation : #frac{#it{a}}{#sqrt{E_{K^{0}_{L}}}} #oplus #it{b}");
-    pTLegend->AddEntry(pTF1,"#it{a} = 57.6\%, #it{b} = 1.6\%","l");
-    pTLegend->AddEntry(pTGraphErrors,"Full ILD Simulation","l");
+    pTLegend->AddEntry(pTF1_Mean,"#splitline{#it{a} = 57.6 #pm 0.4\%,}{#it{b} = 1.6 #pm 0.3\%}","lf");
+    pTLegend->AddEntry(pTGraphErrors,"#splitline{Full ILD}{Simulation}","l");
     pTLegend->Draw();
 
     pTCanvas->Update();

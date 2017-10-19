@@ -104,3 +104,50 @@ void GetRMSFitPercentageRange(TH1F *pTH1F, double fitPercentage, double &fitRang
 }
 
 //===========================================================================
+
+void Shade(TCanvas *pTCanvas, TF1 *pTF1_LowerLim, TF1 *pTF1_UpperLim, TF1 *pTF1_Mean) 
+{
+    //shade the area between pTF1 and pTF1_UpperLim and draw pTF1_Mean on top
+    //create a TGraph to store the function values
+    //shaded area is the fill/color/style of pTF1_Mean
+    TGraph *pTGraph = new TGraph();
+    pTGraph->SetFillColor(pTF1_Mean->GetFillColor());
+    pTGraph->SetFillStyle(pTF1_Mean->GetFillStyle());
+    pTCanvas->Update();
+
+    //get picture range
+    Double_t xmin = pTCanvas->GetUxmin();
+    Double_t xmax = pTCanvas->GetUxmax();
+    Double_t ymin = pTCanvas->GetUymin();
+    Double_t ymax = pTCanvas->GetUymax();
+
+    //process first function
+    Int_t npx = pTF1_Mean->GetNpx();
+    Int_t npoints=0;
+    Double_t dx = (xmax-xmin)/npx;
+    Double_t x = xmin+0.5*dx;
+    while (x <= xmax) 
+    {
+        Double_t y = pTF1_LowerLim->Eval(x);
+//        if (y < ymin) y = ymin;
+//        if (y > ymax) y = ymax;
+        pTGraph->SetPoint(npoints,x,y);
+        npoints++;
+        x += dx;
+    }
+
+    //process second function
+    x = xmax-0.5*dx;
+    while (x >= xmin) 
+    {
+        Double_t y = pTF1_UpperLim->Eval(x);
+//        if (y < ymin) y = ymin;
+//        if (y > ymax) y = ymax;
+        pTGraph->SetPoint(npoints,x,y);
+        npoints++;
+        x -= dx;
+    }
+    pTGraph->Draw("f");     //draw pTGraph with fill area option
+}
+
+//===========================================================================

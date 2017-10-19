@@ -75,7 +75,7 @@ cin.get();
 */
     }
 
-    TH2F *pAxes = new TH2F("axesEj","",100,0,525,1000,1,6);
+    TH2F *pAxes = new TH2F("axesEj","",100,0,525,1000,0.5,6);
     //pAxes->SetTitle("100 GeV Photon Energy Resolution vs Cell Size in ECal (Si)");
     pAxes->GetYaxis()->SetTitle("#sigma_{Reco} / E_{Reco} [%]");
     pAxes->GetXaxis()->SetTitle("E_{#gamma} [GeV]");
@@ -87,24 +87,40 @@ cin.get();
     pAxes->GetXaxis()->SetTitleOffset(0.95);
     pAxes->Draw();
 
-    TF1 *pTF1 = new TF1("Reported","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",10,500);
-    pTF1->SetParameter(0,12.9);
-    pTF1->SetParameter(1,1.2);
+    TF1 *pTF1 = new TF1("Reported","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525);
+    pTF1->SetParameter(0,12.8);
+    pTF1->SetParameter(1,1.0);
     pTF1->SetLineColor(kRed);
-    pTF1->SetLineStyle(2);
 
-    pTF1->Draw("same");
+    TF1 *pTF1_Mean = new TF1("Reported_Mean","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525); 
+    pTF1_Mean->SetParameter(0,12.8); 
+    pTF1_Mean->SetParameter(1,1.0); 
+    pTF1_Mean->SetLineColor(kRed); 
+    pTF1_Mean->SetFillColor(kBlue); 
+    pTF1_Mean->SetFillStyle(3001);  
+ 
+    TF1 *pTF1_LowerLim = new TF1("LowerLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525); 
+    pTF1_LowerLim->SetParameter(0,12.3); 
+    pTF1_LowerLim->SetParameter(1,0.1); 
+ 
+    TF1 *pTF1_UpperLim = new TF1("UpperLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525); 
+    pTF1_UpperLim->SetParameter(0,13.3); 
+    pTF1_UpperLim->SetParameter(1,1.6); 
+ 
+    Shade(pTCanvas, pTF1_LowerLim, pTF1_UpperLim, pTF1_Mean); 
+ 
+    pTF1->Draw("l same"); 
     pTGraphErrors->Draw("same PL");
 
-    TLegend *pTLegend = new TLegend(0.4,0.6,0.85,0.85);
+    TLegend *pTLegend = new TLegend(0.3,0.55,0.85,0.85);
     pTLegend->SetTextSize(0.05);
     pTLegend->SetHeader("Parameterisation : #frac{#it{a}}{#sqrt{E_{#gamma}}} #oplus #it{b}");
-    pTLegend->AddEntry(pTF1,"#it{a} = 12.9\%, #it{b} = 1.2\%","l");
+    pTLegend->AddEntry(pTF1_Mean,"#it{a} = 12.8 #pm 0.5\%, #it{b} = 1.0^{+0.6}_{-0.9}\%","l");
     pTLegend->AddEntry(pTGraphErrors,"Full ILD Simulation","l");
     pTLegend->Draw();
 
     pTCanvas->Update();
-    TLine *pTLine = new TLine(32,1,32,6);
+    TLine *pTLine = new TLine(32,0.5,32,6);
     pTLine->SetLineStyle(2);
     pTLine->Draw();
 
