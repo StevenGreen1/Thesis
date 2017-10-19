@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Thu Oct 19 14:43:45 2017) by ROOT version5.34/37
+//=========  (Thu Oct 19 14:47:01 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
    gStyle->SetOptStat(0);
    c1->Range(-21,2.8,119,24.13333);
@@ -271,7 +271,7 @@
    
    graph->Draw("f");
    
-   TF1 *Reported = new TF1("Reported","TMath::Sqrt(([0]*[0]/x)+[1]*[1])",10,100);
+   TF1 *Reported = new TF1("Reported","TMath::Sqrt(([0]*[0]/x)+[1]*[1])",0,100);
    Reported->SetFillColor(1);
    Reported->SetFillStyle(0);
 

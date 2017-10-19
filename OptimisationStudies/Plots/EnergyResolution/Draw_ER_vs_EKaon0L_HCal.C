@@ -92,23 +92,23 @@ cin.get();
     pAxes->GetXaxis()->SetTitleOffset(0.95);
     pAxes->Draw();
 
-    TF1 *pTF1 = new TF1("Reported","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",10,100);
+    TF1 *pTF1 = new TF1("Reported","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,100);
     pTF1->SetParameter(0,57.6);
     pTF1->SetParameter(1,1.6);
     pTF1->SetLineColor(kRed);
 
-    TF1 *pTF1_Mean = new TF1("Reported_Mean","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525);
+    TF1 *pTF1_Mean = new TF1("Reported_Mean","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,105);
     pTF1_Mean->SetParameter(0,57.6);
     pTF1_Mean->SetParameter(1,1.6);
     pTF1_Mean->SetLineColor(kRed);
     pTF1_Mean->SetFillColor(kBlue);
     pTF1_Mean->SetFillStyle(3001);
 
-    TF1 *pTF1_LowerLim = new TF1("LowerLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525);
+    TF1 *pTF1_LowerLim = new TF1("LowerLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,105);
     pTF1_LowerLim->SetParameter(0,57.2);
     pTF1_LowerLim->SetParameter(1,1.3);
 
-    TF1 *pTF1_UpperLim = new TF1("UpperLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,525);
+    TF1 *pTF1_UpperLim = new TF1("UpperLim","TMath::Sqrt(([0]*[0] / x) + [1]*[1])",0,105);
     pTF1_UpperLim->SetParameter(0,58.0);
     pTF1_UpperLim->SetParameter(1,1.9);
 
