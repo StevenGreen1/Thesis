@@ -77,23 +77,23 @@ The main goal of the ILD vertex detector is to achieve a resolution on the impac
 \end{equation}
 \noindent where $\sigma_{b}$ is the resolution on the track impact parameter, $p$ is the momentum of the track \textcolor{blue}{in units of GeV} and $\theta$ is the angle between the track and the vertex detector plane.  The first term in this parameterisation is the transverse impact parameter\textcolor{blue}{'}s resolution and the second is a multiple-scattering term.  This makes precisely tagging secondary vertices from charm and bottom mesons possible.  Typically these mesons have relatively short proper lifetimes, $\tau$, such that $c\tau \approx \mathcal{O}(300 \text{{ \mu}m})$.  To achieve this impact parameter resolution, a spatial resolution of better than 3~{\mu}m is required near the \textcolor{blue}{interaction} point (IP).  Furthermore, a low material budget of less than 0.15~\% of a radiation length per layer is required to ensure that few electromagnetic showers are initiated within the vertex detector.  A low pixel occupancy is essential for determining the trajectory of individual tracks in the detector.  Furthermore, consideration will have to be given to the mechanical structure of the detector, power consumption and cooling.  
 
-There are a number of different pixel technology options under consideration for the vertex detector for the ILD detector.  This is an active area of ongoing research and development for the linear collider collaboration.  The current design of the vertex detector consists of three concentric layers of double-sided ladders with the first layer containing 10 ladders, the second 11 ladders and the third 17 ladders as shown in figure \ref{fig:vertexpicture}.  Every ladder has two silicon pixel sensors on each side and the ladder thickness is approximately 2~mm.  The radii covered by the detector range from 16~mm to 60~mm from the IP.  \textcolor{blue}{Table \ref{table:vertexdetectorparam} shows the layout, coverage, spatial resolution and readout times for each of the vertex detector layers}.  
+There are a number of different pixel technology options under consideration for the vertex detector for the ILD detector.  This is an active area of ongoing research and development for the linear collider collaboration.  The current design of the vertex detector consists of three concentric layers of double-sided ladders with the first layer containing 10 ladders, the second 11 ladders and the third 17 ladders as shown in figure \ref{fig:vertexpicture}.  Every ladder has two silicon pixel sensors on each side and the ladder thickness is approximately 2~mm.  The radii covered by the detector range from 16~mm to 60~mm from the IP.  \textcolor{blue}{Table \ref{table:vertexdetectorparam} shows the layout, coverage, pitch, spatial resolution and readout times for each of the vertex detector layers.  The first vertex layer is optimised for spatial resolution, while the second layer is optimised for a fast read-out time.  The remaining layers are optimised to reduce power consumption.}  
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{ l c c c c c}
+\begin{tabular}{ l c c c c c c}
 \hline
-& \multirow{2}{*}{$R$ [mm]} & \multirow{2}{*}{Coverage [$z$]} & \multirow{2}{*}{Coverage [$\text{cos}(\theta)$]} & Spatial & Readout \\
-& & & & Resolution [$\mu$m] & Time [$\mu$s] \\
+& \multirow{2}{*}{$R$ [mm]} & Coverage & Coverage & Pitch & Spatial & Readout \\
+& & [$z$] & [$\text{cos}(\theta)$] & [$\mu\text{m}^{2}$] & Resolution [$\mu$m] & Time [$\mu$s] \\
 \hline
-Layer 1 & 16 & 62.5 & 0.97 & 2.8 & 50 \\
-Layer 2 & 18 & 62.5 & 0.96 & 6.0 & 10 \\
+Layer 1 & 16 & 62.5 & 0.97 & $17 \times 17$ & 2.8 & 50 \\
+Layer 2 & 18 & 62.5 & 0.96 & $17 \times 85$ & 6.0 & 10 \\
 \hline
-Layer 3 & 37 & 125.0 & 0.96 & 4.0 & 100 \\
-Layer 4 & 39 & 125.0 & 0.95 & 4.0 & 100 \\
+Layer 3 & 37 & 125.0 & 0.96 & $34 \times 34$ & 4.0 & 100 \\
+Layer 4 & 39 & 125.0 & 0.95 & $34 \times 34$ & 4.0 & 100 \\
 \hline
-Layer 5 & 58 & 125.0 & 0.91 & 4.0 & 100 \\
-Layer 6 & 60 & 125.0 & 0.90 & 4.0 & 100 \\
+Layer 5 & 58 & 125.0 & 0.91 & $34 \times 34$ & 4.0 & 100 \\
+Layer 6 & 60 & 125.0 & 0.90 & $34 \times 34$ & 4.0 & 100 \\
 \hline
 \end{tabular}
 \caption[Parameters for the ILD vertex detector.  In this table $R$ is the radial position of the vertex layer and $\theta$ is the polar angle with respect to the beam direction.  Table taken from \cite{Behnke:2013lya}.]{\textcolor{blue}{Parameters for the ILD vertex detector.  In this table $R$ is the radial position of the vertex layer and $\theta$ is the polar angle with respect to the beam direction.  Table taken from \cite{Behnke:2013lya}}.}
