@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Thu Oct 19 14:35:06 2017) by ROOT version5.34/37
+//=========  (Tue Oct 24 14:18:01 2017) by ROOT version5.34/37
    TCanvas *c1 = new TCanvas("c1", "c1",10,45,700,500);
    gStyle->SetOptStat(0);
    c1->Range(-105,-0.6,595,6.733333);
@@ -353,7 +353,11 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(132);
-   entry=leg->AddEntry("Reported_Mean","#it{a} = 12.8 #pm 0.5%, #it{b} = 1.0^{+0.6}_{-0.9}%","l");
+   entry=leg->AddEntry("Reported_Mean","#it{a} = 12.8 #pm 0.5%, #it{b} = 1.0^{+0.6}_{-0.9}%","lf");
+
+   ci = TColor::GetColor("#0000ff");
+   entry->SetFillColor(ci);
+   entry->SetFillStyle(3001);
 
    ci = TColor::GetColor("#ff0000");
    entry->SetLineColor(ci);

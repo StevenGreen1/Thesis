@@ -115,7 +115,7 @@ cin.get();
     TLegend *pTLegend = new TLegend(0.3,0.55,0.85,0.85);
     pTLegend->SetTextSize(0.05);
     pTLegend->SetHeader("Parameterisation : #frac{#it{a}}{#sqrt{E_{#gamma}}} #oplus #it{b}");
-    pTLegend->AddEntry(pTF1_Mean,"#it{a} = 12.8 #pm 0.5\%, #it{b} = 1.0^{+0.6}_{-0.9}\%","l");
+    pTLegend->AddEntry(pTF1_Mean,"#it{a} = 12.8 #pm 0.5\%, #it{b} = 1.0^{+0.6}_{-0.9}\%","lf");
     pTLegend->AddEntry(pTGraphErrors,"Full ILD Simulation","l");
     pTLegend->Draw();
 
