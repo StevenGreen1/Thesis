@@ -8,7 +8,6 @@
 %========================================================================================
 
 \section{Introduction}
-
 Identification of heavy-flavour quarks and tau-leptons at any of the currently proposed linear collider experiments will rely upon precise reconstruction of secondary displaced vertices that are produced when these particles decay \cite{Linssen:2012hp}.  Furthermore, the ability to accurately associate any daughter tracks produced in such decays to the secondary vertices is essential.  At CLIC, this can only be realised using a vertex detector with a very high spatial resolution, of approximately 3~${\micro}$m, and good geometric coverage, extending to low polar angles $\theta$.  The vertex detector must also have a low material budget (less than 0.2~\%~$\text{X}_{0}$ per layer) in order to prevent additional decay vertices from material interactions, and allow efficient track reconstruction despite the high presence of beam-induced background particles.  Tracking in the vertex detector will be aided by the use of time-stamping of individual hits, to an accuracy of 10~ns, to identify particles produced from the physics event of interest.  
 
 As there are currently no technology options that fulfil all of the criteria for the CLIC vertex detector, the CLIC experiment has developed an extensive R\&D program where new technologies for the vertex detector are considered.  High-voltage complementary metal-oxide-semiconductor (HV-CMOS) sensors, which are capacitively coupled to a separate readout application-specific integrated circuit (ASIC) are one such option. The performance of prototype detectors based upon this technology and the impact of mechanical tolerances present in their manufacture are presented in this chapter.  
@@ -100,7 +99,7 @@ SET 16 & $\frac{1}{2}$ Offset \\
 \label{table:alignment}
 \end{table}
 
-The full details of the glueing procedure can be found in \cite{FabricationNote}, along with a study of the absolute precision of the manufacturing procedure.  For devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1~${\micro}$m and the precision on the pad positioning was less than 2~${\micro}$m.  
+The full details of the \textcolor{blue}{gluing} procedure can be found in \cite{FabricationNote}, along with a study of the absolute precision of the manufacturing procedure.  For devices constructed in an identical fashion to those considered here, the glue layer thicknesses were less than 1~${\micro}$m and the precision on the pad positioning was less than 2~${\micro}$m.  
 
 %========================================================================================
 %========================================================================================
@@ -122,7 +121,7 @@ A radioactive source was used to deposit charge within the CCPDv3 sensor and the
 %========================================================================================
 
 \subsubsection{Experimental Setup}
-The radioactive material used in this study was $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu}_{\text{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  
+The radioactive material used in this study was $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu}_{\text{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  \textcolor{blue}{The decay energy of the $\text{Sr}^{90}$ and $\text{Y}^{90}$ $\beta^{-}$ decays are 0.546~MeV and 2.28~MeV, respectively \cite{radiationhandbook}.  The decay energy will be shared between the electron, anti-neutrino and recoiling daughter nuclei in the $\beta^{-}$ decays.}
 
 The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter, which is located in the CLICpix chip, was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  Examples of CCPDv3 output voltage pulses when using the $\text{Sr}^{90}$ source can be seen in figure \ref{fig:pulseshapes}.  The analogue output has a baseline voltage of $\approx 1.15$~V with signal saturation occurring around a height of 700~mV.  
 
@@ -208,7 +207,7 @@ For the centred samples, cross-coupling seems to have a small effect as the corr
 
 \subsection{Test Pulse Calibration}
 \label{sec:testpulsecalibration}
-In order to fully understand the charge transfer to the CLICpix, a calibration of the CLICpix front-end electronics response was performed.  This was achieved by directly injecting a voltage pulse of fixed height directly into a capacitor help in each CLICpix pixel.  This capacitor will then inject a known amount of charge into the pixel, and by varying the height of the pulse applied the response of the CLICpix to different amounts of charge can be quantified.  This experiment extends the characterisation of the CLICpix chip beyond what was found using the radioactive source measurements, as applying the voltage directly to the CLICpix fully isolates the response of the chip from any effects relating to the glue layer or CCPDv3.  
+In order to fully understand the charge transfer to the CLICpix, a calibration of the CLICpix front-end electronics response was performed.  This was achieved by directly injecting a voltage pulse of fixed height directly into a capacitor \textcolor{blue}{held} in each CLICpix pixel.  This capacitor will then inject a known amount of charge into the pixel, and by varying the height of the pulse applied the response of the CLICpix to different amounts of charge can be quantified.  This experiment extends the characterisation of the CLICpix chip beyond what was found using the radioactive source measurements, as applying the voltage directly to the CLICpix fully isolates the response of the chip from any effects relating to the glue layer or CCPDv3.  
 
 %========================================================================================
 
@@ -252,7 +251,7 @@ A known issue with the design of the CLICpix ASIC is the unwanted feedback capac
 \subfloat[$b$ parameter.]{\label{fig:fitparams2}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamB_Set9.pdf}}\hfill
 \subfloat[$c$ parameter.]{\label{fig:fitparams3}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamC_Set9.pdf}}
 \subfloat[$t$ parameter.]{\label{fig:fitparams4}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/OneDHistFitParamT_Set9.pdf}}
-\caption[The distribution of the surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9.  \protect\subref{fig:fitparams1}, \protect\subref{fig:fitparams2}, \protect\subref{fig:fitparams3} and \protect\subref{fig:fitparams4} show the distribution of the $a$, $b$, $c$ and $d$ parameters respectively.]{The distribution of the surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9.  \protect\subref{fig:fitparams1}, \protect\subref{fig:fitparams2}, \protect\subref{fig:fitparams3} and \protect\subref{fig:fitparams4} show the distribution of the $a$, $b$, $c$ and $d$ parameters respectively.}  
+\caption[The distribution of the surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9.  \protect\subref{fig:fitparams1}, \protect\subref{fig:fitparams2}, \protect\subref{fig:fitparams3} and \protect\subref{fig:fitparams4} show the distribution of the $a$, $b$, $c$ and $d$ parameters\textcolor{blue}{,} respectively.]{The distribution of the surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9.  \protect\subref{fig:fitparams1}, \protect\subref{fig:fitparams2}, \protect\subref{fig:fitparams3} and \protect\subref{fig:fitparams4} show the distribution of the $a$, $b$, $c$ and $d$ parameters\textcolor{blue}{,} respectively.}  
 \label{fig:fitparams}
 \end{figure}
 
@@ -262,11 +261,11 @@ The peaks at zero in the distribution of the $a$ and $b$ parameters, containing 
 \centering
 \subfloat[$c$ parameter.]{\label{fig:fitparams2dc}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamC_Set9.pdf}}
 \subfloat[$t$ parameter.]{\label{fig:fitparams2dt}\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/TestPulseCalibration/FitParam/FitParamT_Set9.pdf}}
-\caption[The distribution of selected surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9 as a function of matrix position.  \protect\subref{fig:fitparams2dc} and \protect\subref{fig:fitparams2dt} show the distribution of the $c$ and $t$ parameters respectively.]{The distribution of selected surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9 as a function of matrix position.  \protect\subref{fig:fitparams2dc} and \protect\subref{fig:fitparams2dt} show the distribution of the $c$ and $t$ parameters respectively.}
+\caption[The distribution of selected surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9 as a function of matrix position.  \protect\subref{fig:fitparams2dc} and \protect\subref{fig:fitparams2dt} show the distribution of the $c$ and $t$ parameters\textcolor{blue}{,} respectively.]{The distribution of selected surrogate function parameters obtained when fitting the ToT as a function of injected pulse height for SET 9 as a function of matrix position.  \protect\subref{fig:fitparams2dc} and \protect\subref{fig:fitparams2dt} show the distribution of the $c$ and $t$ parameters\textcolor{blue}{,} respectively.}
 \label{fig:fitparams2d}
 \end{figure}
 
-The matrix-averaged surrogate function fit parameters for all devices can be found in tables \ref{table:clicpixfitparamseven} and  \ref{table:clicpixfitparamsodd}, for the even and odd columns respectively.  The surrogate function for each device using these average parameters as input is shown in figure \ref{fig:testpulsemeanfit}.
+The matrix-averaged surrogate function fit parameters for all devices can be found in tables \ref{table:clicpixfitparamseven} and  \ref{table:clicpixfitparamsodd}, for the even and odd columns\textcolor{blue}{,} respectively.  The surrogate function for each device using these average parameters as input is shown in figure \ref{fig:testpulsemeanfit}.
 
 \begin{table}[h!]
 \centering
