@@ -112,6 +112,15 @@ A series of laboratory experiments were used to characterise the devices produce
 \item \textbf{Test pulse calibration of the CLICpix chip}.  The goal of this measurement is to calibrate the response of the CLICpix sensor.  This is achieved by examining the CLICpix response when injecting a quantity of charge directly into the input of the chip, which bypasses the CCPDv3 and glue layer.
 \end{itemize} 
 
+\textcolor{blue}{During the laboratory measurements each device was mounted on a circuit board as shown in figure \ref{fig:assembly}.  A field-programmable gate array (FPGA) board was used to configure the devices and to read and process the signals coming from the devices.  The FPGA and device mounted circuit boards were connected via an interface board.}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.5\textwidth]{CLICdpVertex/Plots/Assemblies.png}
+\caption[Hybrid glue assembly of a CLICpix chip with a CCPDv3 active sensor on top.  Figure taken from \cite{Dannheim:2015ffa}.]{\textcolor{blue}{Hybrid glue assembly of a CLICpix chip with a CCPDv3 active sensor on top.  Figure taken from \cite{Dannheim:2015ffa}.}}
+\label{fig:assembly}
+\end{figure}
+
 %========================================================================================
 
 \subsection{Source Measurements}
@@ -121,7 +130,7 @@ A radioactive source was used to deposit charge within the CCPDv3 sensor and the
 %========================================================================================
 
 \subsubsection{Experimental Setup}
-The radioactive material used in this study was $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu}_{\text{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  \textcolor{blue}{The decay energy of the $\text{Sr}^{90}$ and $\text{Y}^{90}$ $\beta^{-}$ decays are 0.546~MeV and 2.28~MeV, respectively \cite{radiationhandbook}.  The decay energy will be shared between the electron, anti-neutrino and recoiling daughter nuclei in the $\beta^{-}$ decays.}
+The radioactive material used in this study was $\text{Sr}^{90}$.  $\text{Sr}^{90}$ undergoes $\beta^{-}$ decay to form $\text{Y}^{90}$, which in turn undergoes $\beta^{-}$ decay to form the stable isotope $\text{Z}^{90}$.  Each $\beta^{-}$ decay produces an $\text{e}^{-}$ and a $\bar{\nu}_{\text{e}}$, and the $\text{e}^{-}$ goes on to deposit charge in the CCPDv3 sensor.  The $\text{Sr}^{90}$ source used had an activity of 29.6 MBq.  \textcolor{blue}{The decay energy of the $\text{Sr}^{90}$ and $\text{Y}^{90}$ $\beta^{-}$ decays are 0.546~MeV and 2.28~MeV, respectively \cite{radiationhandbook}.  This decay energy will be shared between the electron, anti-neutrino and recoiling daughter nuclei in the $\beta^{-}$ decays and gives an upper bound on the energy of the electrons used to characterise these assemblies.}
 
 The radioactive source was positioned directly above the back-side of the CCPDv3 sensor, and measurements were made of both the ToT output from the CLICpix and the CCPDv3 analogue signal for individual pixels on the sensor.  The CCPDv3 pulse shape was recorded on a fast sampling oscilloscope that was also used to trigger the CLICpix readout.  The on-pixel event counter, which is located in the CLICpix chip, was used to veto events where multiple hits occurred within the active shutter period.  The CCPDv3 sensor was biased to 60~V during this experiment.  Examples of CCPDv3 output voltage pulses when using the $\text{Sr}^{90}$ source can be seen in figure \ref{fig:pulseshapes}.  The analogue output has a baseline voltage of $\approx 1.15$~V with signal saturation occurring around a height of 700~mV.  
 
