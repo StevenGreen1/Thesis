@@ -353,13 +353,19 @@ In the reconstruction, these corrections are applied to each cluster of calorime
 %========================================================================================
 
 \subsubsection{Impact on Single Particle Energy Resolution}
-Figure \ref{fig:ercelltrunckaons} shows the energy resolution for neutral hadrons as a function of the HCal hit energy truncation.  The optimal truncation for the ILD detector model simulation was 1~GeV and, using this truncation, a neutral hadron energy resolution of $\sim 8.8\% = 62\% / \sqrt{E\text{(GeV)}}$ was obtained for $E = 50~GeV$ $K^{0}_{L}$ events.  In comparison, the neutral hadron energy resolution for $E = 50~GeV$ $K^{0}_{L}$ events obtained without a truncation was $\sim 10.4\% = 74\% / \sqrt{E\text{(GeV)}}$.  Smaller energy truncations begin to truncate the energy of calorimeter hits produced in typical hadronic shower development, while larger truncations allow for a larger impact from Landau fluctuations.  Both of these effects result in worsening neutral hadron energy resolutions.  For completeness the photon energy resolutions as a function of HCal hit energy truncation are shown in figure \ref{fig:ercelltruncphotons}.  As expected the photon energy resolution is unaffected by the HCal hit energy truncation as the photons are largely contained within the ECal.
+Figure \ref{fig:ercelltrunckaons} shows the energy resolution for neutral hadrons as a function of the HCal hit energy truncation applied.  The optimal truncation for the ILD detector model simulation was 1~GeV and, using this truncation, a neutral hadron energy resolution of $\sim 8.8\% = 62\% / \sqrt{E\text{(GeV)}}$ was obtained for $E = 50~GeV$ $K^{0}_{L}$ events.  In comparison, the neutral hadron energy resolution for $E = 50~GeV$ $K^{0}_{L}$ events obtained without a truncation was $\sim 10.4\% = 74\% / \sqrt{E\text{(GeV)}}$.  Smaller energy truncations begin to truncate the energy of calorimeter hits produced in typical hadronic shower development, while larger truncations allow for a larger impact from Landau fluctuations.  Both of these effects result in worsening neutral hadron energy resolutions.  \textcolor{blue}{Figure \ref{fig:hitenergydistribution} shows the normalised distribution of hit energies for 50~GeV $K^{0}_{L}$ events.  This distribution shows that a 1~GeV truncation affects less than 2\% of the calorimeter hits in these events.}  For completeness the photon energy resolutions as a function of HCal hit energy truncation are shown in figure \ref{fig:ercelltruncphotons}.  As expected the photon energy resolution is unaffected by the HCal hit energy truncation as the photons are largely contained within the ECal.
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:ercelltrunckaons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/ER_vs_Kaon0LCellTrunc_50GeVKaon0L.pdf}}
 \subfloat[]{\label{fig:ercelltruncphotons}\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/ER_vs_PhotonCellTrunc_100GeVPhoton.pdf}}
 \caption[The energy resolution as a function of HCal cell truncation for \protect\subref{fig:ercelltrunckaons} 50~GeV $K^{0}_{L}$ events and \protect\subref{fig:ercelltruncphotons} 100~GeV photons using the nominal ILD detector model.]{The energy resolution as a function of HCal cell truncation for \protect\subref{fig:ercelltrunckaons} 50~GeV $K^{0}_{L}$ events and \protect\subref{fig:ercelltruncphotons} 100~GeV photons using the nominal ILD detector model.}
 \label{fig:ercelltrunc}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=0.5\textwidth]{EnergyEstimators/Plots/CellTruncation/EnergyDensityDistributions.pdf}
+\caption[The normalised hit energy distribution for 50~GeV $K^{0}_{L}$ events in the nominal ILD detector.]{\textcolor{blue}{The normalised hit energy distribution for 50~GeV $K^{0}_{L}$ events in the nominal ILD detector.}}
+\label{fig:hitenergydistribution}
 \end{figure}
 
 %========================================================================================

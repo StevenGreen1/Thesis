@@ -1,6 +1,6 @@
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Fri Oct 27 13:36:02 2017) by ROOT version5.34/30
+//=========  (Fri Oct 27 13:59:34 2017) by ROOT version5.34/30
    TCanvas *c1 = new TCanvas("c1", "c1",10,32,700,500);
    gStyle->SetOptStat(0);
    c1->Range(-1.612903,-7.95104,11.29032,1.131344);
@@ -72,7 +72,7 @@
    EnergyDensityDistributions->SetStats(0);
    EnergyDensityDistributions->SetLineWidth(2);
    EnergyDensityDistributions->SetMarkerStyle(20);
-   EnergyDensityDistributions->GetXaxis()->SetTitle("Hit Energy [GeV]");
+   EnergyDensityDistributions->GetXaxis()->SetTitle("Calorimeter Hit Energy [GeV]");
    EnergyDensityDistributions->GetXaxis()->SetNdivisions(505);
    EnergyDensityDistributions->GetXaxis()->SetLabelFont(132);
    EnergyDensityDistributions->GetXaxis()->SetLabelSize(0.05);
