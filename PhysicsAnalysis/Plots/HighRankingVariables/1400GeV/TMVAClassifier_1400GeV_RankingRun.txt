@@ -1,0 +1,501 @@
+--- Factory                  : You are running ROOT Version: 5.34/30, Apr 23, 2015
+--- Factory                  : 
+--- Factory                  : _/_/_/_/_/ _|      _|  _|      _|    _|_|   
+--- Factory                  :    _/      _|_|  _|_|  _|      _|  _|    _| 
+--- Factory                  :   _/       _|  _|  _|  _|      _|  _|_|_|_| 
+--- Factory                  :  _/        _|      _|    _|  _|    _|    _| 
+--- Factory                  : _/         _|      _|      _|      _|    _| 
+--- Factory                  : 
+--- Factory                  : ___________TMVA Version 4.2.0, Sep 19, 2013
+--- Factory                  : 
+--- DataSetInfo              : Added class "Signal"	 with internal class number 0
+--- Factory                  : Add Tree AnalysisProcessorTree of type Signal with 1348000 events
+--- DataSetInfo              : Added class "Background"	 with internal class number 1
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 370656 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 634293 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 292530 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 292132 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 1046939 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 1049924 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 243756 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 63261 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 61875 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 68409 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 59697 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 88407 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 87120 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 88407 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 86427 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 83457 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 83160 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 84843 events
+--- Factory                  : Add Tree AnalysisProcessorTree of type Background with 79893 events
+--- Factory                  : Preparing trees for training and testing...
+--- Factory                  : Booking method: [1mBDT_NTrees3000_MaxDepth3_NCuts25_1400GeV[0m
+--- DataSetFactory           : Splitmode is: "RANDOM" the mixmode is: "SAMEASSPLITMODE"
+--- DataSetFactory           : Create training and testing trees -- looping over class "Signal" ...
+--- DataSetFactory           : Weight expression for class 'Signal': ""
+--- DataSetFactory           : Create training and testing trees -- looping over class "Background" ...
+--- DataSetFactory           : Weight expression for class 'Background': ""
+--- DataSetFactory           : Number of events in input trees (after possible flattening of arrays):
+--- DataSetFactory           :     Signal          -- number of events       : 1348000  / sum of weights: 36887.1
+--- DataSetFactory           :     Background      -- number of events       : 4865186  / sum of weights: 5.42701e+07
+--- DataSetFactory           :     Signal     tree -- total number of entries: 1348000
+--- DataSetFactory           :     Background tree -- total number of entries: 4865186
+--- DataSetFactory           : Preselection: (will NOT affect number of requested training and testing events)
+--- DataSetFactory           :     Signal     requirement: "TransverseMomentum>100 && TransverseMomentum<10000 && NumberOfIsolatedLeptons==0"
+--- DataSetFactory           :     Signal          -- number of events passed: 862848  / sum of weights: 23621.2
+--- DataSetFactory           :     Signal          -- efficiency             : 0.640365
+--- DataSetFactory           :     Background requirement: "TransverseMomentum>100 && TransverseMomentum<10000 && NumberOfIsolatedLeptons==0"
+--- DataSetFactory           :     Background      -- number of events passed: 542623  / sum of weights: 1.98365e+06
+--- DataSetFactory           :     Background      -- efficiency             : 0.0365514
+--- DataSetFactory           :  you have opted for interpreting the requested number of training/testing events
+--- DataSetFactory           :  to be the number of events AFTER your preselection cuts
+--- DataSetFactory           :  you have opted for interpreting the requested number of training/testing events
+--- DataSetFactory           :  to be the number of events AFTER your preselection cuts
+--- DataSetFactory           : Weight renormalisation mode: "NumEvents": renormalises all event classes 
+--- DataSetFactory           :  such that the effective (weighted) number of events in each class equals the respective 
+--- DataSetFactory           :  number of events (entries) that you demanded in PrepareTrainingAndTestTree("","nTrain_Signal=.. )
+--- DataSetFactory           :  ... i.e. such that Sum[i=1..N_j]{w_i} = N_j, j=0,1,2...
+--- DataSetFactory           :  ... (note that N_j is the sum of TRAINING events (nTrain_j...with j=Signal,Background..
+--- DataSetFactory           :  ..... Testing events are not renormalised nor included in the renormalisation factor! )
+--- DataSetFactory           : --> Rescale Signal     event weights by factor: 36.3833
+--- DataSetFactory           : --> Rescale Background event weights by factor: 0.272434
+--- DataSetFactory           : Number of training and testing events after rescaling:
+--- DataSetFactory           : ------------------------------------------------------
+--- DataSetFactory           : Signal     -- training events            : 431424 (sum of weights: 431424) - requested were 0 events
+--- DataSetFactory           : Signal     -- testing events             : 431424 (sum of weights: 11857.8) - requested were 0 events
+--- DataSetFactory           : Signal     -- training and testing events: 862848 (sum of weights: 443282)
+--- DataSetFactory           : Signal     -- due to the preselection a scaling factor has been applied to the numbers of requested events: 0.640095
+--- DataSetFactory           : Background -- training events            : 271311 (sum of weights: 271311) - requested were 0 events
+--- DataSetFactory           : Background -- testing events             : 271311 (sum of weights: 997375) - requested were 0 events
+--- DataSetFactory           : Background -- training and testing events: 542622 (sum of weights: 1.26869e+06)
+--- DataSetFactory           : Background -- due to the preselection a scaling factor has been applied to the numbers of requested events: 0.111532
+--- DataSetFactory           : Create internal training tree
+--- DataSetFactory           : Create internal testing tree
+--- DataSetInfo              : Correlation matrix (Signal):
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetInfo              :                                                                  NParticlesJet1 NParticlesJet2 NParticlesJet3 NParticlesJet4 TransverseMomentum CosThetaMostEnergeticTrack     y34     y45 Sphericity (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy EnergyBosonSyn1 EnergyBosonSyn2 AcolinearityBosonsSyn InvariantMassSynBoson1 InvariantMassSynBoson2
+--- DataSetInfo              :                                                  NParticlesJet1:         +1.000         +0.003         -0.010         +0.001             +0.017                     +0.006  -0.020  -0.269     +0.132                                                          -0.005                                                -0.227          +0.077          -0.040                -0.026                 +0.046                 +0.025
+--- DataSetInfo              :                                                  NParticlesJet2:         +0.003         +1.000         +0.017         +0.023             +0.001                     -0.017  -0.064  -0.216     -0.014                                                          +0.004                                                -0.034          +0.025          +0.063                -0.052                 +0.033                 +0.082
+--- DataSetInfo              :                                                  NParticlesJet3:         -0.010         +0.017         +1.000         +0.082             +0.028                     -0.012  -0.140  -0.169     -0.022                                                          +0.005                                                -0.009          +0.033          +0.061                -0.046                 +0.043                 +0.093
+--- DataSetInfo              :                                                  NParticlesJet4:         +0.001         +0.023         +0.082         +1.000             +0.020                     -0.011  -0.252  -0.133     +0.001                                                          +0.008                                                +0.003          +0.036          +0.106                -0.043                 +0.107                 +0.153
+--- DataSetInfo              :                                              TransverseMomentum:         +0.017         +0.001         +0.028         +0.020             +1.000                     -0.320  +0.140  +0.130     -0.114                                                          +0.006                                                +0.211          +0.247          +0.135                +0.173                 +0.026                 +0.042
+--- DataSetInfo              :                                      CosThetaMostEnergeticTrack:         +0.006         -0.017         -0.012         -0.011             -0.320                     +1.000  +0.148  +0.191     -0.247                                                          +0.101                                                +0.111          +0.122          +0.128                -0.039                 +0.026                 -0.017
+--- DataSetInfo              :                                                             y34:         -0.020         -0.064         -0.140         -0.252             +0.140                     +0.148  +1.000  +0.421     -0.358                                                          +0.104                                                +0.360          +0.312          +0.281                -0.100                 +0.078                 -0.145
+--- DataSetInfo              :                                                             y45:         -0.269         -0.216         -0.169         -0.133             +0.130                     +0.191  +0.421  +1.000     -0.351                                                          +0.134                                                +0.429          +0.367          +0.347                -0.200                 +0.072                 -0.018
+--- DataSetInfo              :                                                      Sphericity:         +0.132         -0.014         -0.022         +0.001             -0.114                     -0.247  -0.358  -0.351     +1.000                                                          -0.121                                                -0.529          -0.409          -0.291                +0.229                 -0.060                 +0.018
+--- DataSetInfo              : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:         -0.005         +0.004         +0.005         +0.008             +0.006                     +0.101  +0.104  +0.134     -0.121                                                          +1.000                                                +0.122          +0.176          +0.155                -0.115                 +0.068                 +0.036
+--- DataSetInfo              :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:         -0.227         -0.034         -0.009         +0.003             +0.211                     +0.111  +0.360  +0.429     -0.529                                                          +0.122                                                +1.000          +0.538          +0.425                -0.325                 +0.234                 +0.131
+--- DataSetInfo              :                                                 EnergyBosonSyn1:         +0.077         +0.025         +0.033         +0.036             +0.247                     +0.122  +0.312  +0.367     -0.409                                                          +0.176                                                +0.538          +1.000          +0.099                -0.390                 +0.251                 +0.129
+--- DataSetInfo              :                                                 EnergyBosonSyn2:         -0.040         +0.063         +0.061         +0.106             +0.135                     +0.128  +0.281  +0.347     -0.291                                                          +0.155                                                +0.425          +0.099          +1.000                -0.320                 +0.207                 +0.194
+--- DataSetInfo              :                                           AcolinearityBosonsSyn:         -0.026         -0.052         -0.046         -0.043             +0.173                     -0.039  -0.100  -0.200     +0.229                                                          -0.115                                                -0.325          -0.390          -0.320                +1.000                 -0.069                 +0.062
+--- DataSetInfo              :                                          InvariantMassSynBoson1:         +0.046         +0.033         +0.043         +0.107             +0.026                     +0.026  +0.078  +0.072     -0.060                                                          +0.068                                                +0.234          +0.251          +0.207                -0.069                 +1.000                 +0.684
+--- DataSetInfo              :                                          InvariantMassSynBoson2:         +0.025         +0.082         +0.093         +0.153             +0.042                     -0.017  -0.145  -0.018     +0.018                                                          +0.036                                                +0.131          +0.129          +0.194                +0.062                 +0.684                 +1.000
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetInfo              : Correlation matrix (Background):
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetInfo              :                                                                  NParticlesJet1 NParticlesJet2 NParticlesJet3 NParticlesJet4 TransverseMomentum CosThetaMostEnergeticTrack     y34     y45 Sphericity (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy EnergyBosonSyn1 EnergyBosonSyn2 AcolinearityBosonsSyn InvariantMassSynBoson1 InvariantMassSynBoson2
+--- DataSetInfo              :                                                  NParticlesJet1:         +1.000         +0.015         +0.005         +0.075             +0.005                     -0.120  -0.242  -0.355     +0.254                                                          -0.337                                                -0.476          -0.174          -0.098                +0.030                 -0.064                 +0.067
+--- DataSetInfo              :                                                  NParticlesJet2:         +0.015         +1.000         +0.148         +0.180             +0.014                     +0.006  -0.173  -0.171     +0.032                                                          +0.093                                                +0.098          +0.133          +0.099                -0.084                 +0.181                 +0.255
+--- DataSetInfo              :                                                  NParticlesJet3:         +0.005         +0.148         +1.000         +0.287             +0.023                     +0.039  -0.227  -0.139     +0.028                                                          +0.119                                                +0.153          +0.171          +0.216                -0.174                 +0.277                 +0.339
+--- DataSetInfo              :                                                  NParticlesJet4:         +0.075         +0.180         +0.287         +1.000             +0.024                     +0.027  -0.314  -0.156     +0.071                                                          +0.080                                                +0.110          +0.179          +0.218                -0.202                 +0.364                 +0.364
+--- DataSetInfo              :                                              TransverseMomentum:         +0.005         +0.014         +0.023         +0.024             +1.000                     -0.174  +0.183  +0.230     -0.169                                                          +0.074                                                +0.137          +0.207          +0.179                +0.051                 +0.105                 +0.097
+--- DataSetInfo              :                                      CosThetaMostEnergeticTrack:         -0.120         +0.006         +0.039         +0.027             -0.174                     +1.000  +0.322  +0.386     -0.368                                                          +0.342                                                +0.337          +0.309          +0.208                -0.003                 +0.126                 +0.066
+--- DataSetInfo              :                                                             y34:         -0.242         -0.173         -0.227         -0.314             +0.183                     +0.322  +1.000  +0.739     -0.484                                                          +0.279                                                +0.431          +0.344          +0.289                -0.059                 +0.057                 -0.164
+--- DataSetInfo              :                                                             y45:         -0.355         -0.171         -0.139         -0.156             +0.230                     +0.386  +0.739  +1.000     -0.498                                                          +0.381                                                +0.591          +0.510          +0.402                -0.180                 +0.248                 +0.048
+--- DataSetInfo              :                                                      Sphericity:         +0.254         +0.032         +0.028         +0.071             -0.169                     -0.368  -0.484  -0.498     +1.000                                                          -0.253                                                -0.446          -0.391          -0.212                +0.083                 -0.125                 +0.035
+--- DataSetInfo              : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:         -0.337         +0.093         +0.119         +0.080             +0.074                     +0.342  +0.279  +0.381     -0.253                                                          +1.000                                                +0.689          +0.536          +0.233                -0.245                 +0.327                 +0.177
+--- DataSetInfo              :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:         -0.476         +0.098         +0.153         +0.110             +0.137                     +0.337  +0.431  +0.591     -0.446                                                          +0.689                                                +1.000          +0.735          +0.413                -0.412                 +0.496                 +0.284
+--- DataSetInfo              :                                                 EnergyBosonSyn1:         -0.174         +0.133         +0.171         +0.179             +0.207                     +0.309  +0.344  +0.510     -0.391                                                          +0.536                                                +0.735          +1.000          +0.136                -0.445                 +0.592                 +0.350
+--- DataSetInfo              :                                                 EnergyBosonSyn2:         -0.098         +0.099         +0.216         +0.218             +0.179                     +0.208  +0.289  +0.402     -0.212                                                          +0.233                                                +0.413          +0.136          +1.000                -0.334                 +0.455                 +0.414
+--- DataSetInfo              :                                           AcolinearityBosonsSyn:         +0.030         -0.084         -0.174         -0.202             +0.051                     -0.003  -0.059  -0.180     +0.083                                                          -0.245                                                -0.412          -0.445          -0.334                +1.000                 -0.520                 -0.268
+--- DataSetInfo              :                                          InvariantMassSynBoson1:         -0.064         +0.181         +0.277         +0.364             +0.105                     +0.126  +0.057  +0.248     -0.125                                                          +0.327                                                +0.496          +0.592          +0.455                -0.520                 +1.000                 +0.655
+--- DataSetInfo              :                                          InvariantMassSynBoson2:         +0.067         +0.255         +0.339         +0.364             +0.097                     +0.066  -0.164  +0.048     +0.035                                                          +0.177                                                +0.284          +0.350          +0.414                -0.268                 +0.655                 +1.000
+--- DataSetInfo              : -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- DataSetFactory           :  
+--- Factory                  : 
+--- Factory                  : current transformation string: 'I'
+--- Factory                  : Create Transformation "I" with events from all classes.
+--- Id                       : Transformation, Variable selection : 
+--- Id                       : Input : variable 'NParticlesJet1' (index=0).   <---> Output : variable 'NParticlesJet1' (index=0).
+--- Id                       : Input : variable 'NParticlesJet2' (index=1).   <---> Output : variable 'NParticlesJet2' (index=1).
+--- Id                       : Input : variable 'NParticlesJet3' (index=2).   <---> Output : variable 'NParticlesJet3' (index=2).
+--- Id                       : Input : variable 'NParticlesJet4' (index=3).   <---> Output : variable 'NParticlesJet4' (index=3).
+--- Id                       : Input : variable 'TransverseMomentum' (index=4).   <---> Output : variable 'TransverseMomentum' (index=4).
+--- Id                       : Input : variable 'CosThetaMostEnergeticTrack' (index=5).   <---> Output : variable 'CosThetaMostEnergeticTrack' (index=5).
+--- Id                       : Input : variable 'y34' (index=6).   <---> Output : variable 'y34' (index=6).
+--- Id                       : Input : variable 'y45' (index=7).   <---> Output : variable 'y45' (index=7).
+--- Id                       : Input : variable 'Sphericity' (index=8).   <---> Output : variable 'Sphericity' (index=8).
+--- Id                       : Input : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).   <---> Output : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).
+--- Id                       : Input : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).   <---> Output : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).
+--- Id                       : Input : variable 'EnergyBosonSyn1' (index=11).   <---> Output : variable 'EnergyBosonSyn1' (index=11).
+--- Id                       : Input : variable 'EnergyBosonSyn2' (index=12).   <---> Output : variable 'EnergyBosonSyn2' (index=12).
+--- Id                       : Input : variable 'AcolinearityBosonsSyn' (index=13).   <---> Output : variable 'AcolinearityBosonsSyn' (index=13).
+--- Id                       : Input : variable 'InvariantMassSynBoson1' (index=14).   <---> Output : variable 'InvariantMassSynBoson1' (index=14).
+--- Id                       : Input : variable 'InvariantMassSynBoson2' (index=15).   <---> Output : variable 'InvariantMassSynBoson2' (index=15).
+--- Factory                  : 
+--- Factory                  : current transformation string: 'D'
+--- Factory                  : Create Transformation "D" with events from all classes.
+--- Deco                     : Transformation, Variable selection : 
+--- Deco                     : Input : variable 'NParticlesJet1' (index=0).   <---> Output : variable 'NParticlesJet1' (index=0).
+--- Deco                     : Input : variable 'NParticlesJet2' (index=1).   <---> Output : variable 'NParticlesJet2' (index=1).
+--- Deco                     : Input : variable 'NParticlesJet3' (index=2).   <---> Output : variable 'NParticlesJet3' (index=2).
+--- Deco                     : Input : variable 'NParticlesJet4' (index=3).   <---> Output : variable 'NParticlesJet4' (index=3).
+--- Deco                     : Input : variable 'TransverseMomentum' (index=4).   <---> Output : variable 'TransverseMomentum' (index=4).
+--- Deco                     : Input : variable 'CosThetaMostEnergeticTrack' (index=5).   <---> Output : variable 'CosThetaMostEnergeticTrack' (index=5).
+--- Deco                     : Input : variable 'y34' (index=6).   <---> Output : variable 'y34' (index=6).
+--- Deco                     : Input : variable 'y45' (index=7).   <---> Output : variable 'y45' (index=7).
+--- Deco                     : Input : variable 'Sphericity' (index=8).   <---> Output : variable 'Sphericity' (index=8).
+--- Deco                     : Input : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).   <---> Output : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).
+--- Deco                     : Input : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).   <---> Output : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).
+--- Deco                     : Input : variable 'EnergyBosonSyn1' (index=11).   <---> Output : variable 'EnergyBosonSyn1' (index=11).
+--- Deco                     : Input : variable 'EnergyBosonSyn2' (index=12).   <---> Output : variable 'EnergyBosonSyn2' (index=12).
+--- Deco                     : Input : variable 'AcolinearityBosonsSyn' (index=13).   <---> Output : variable 'AcolinearityBosonsSyn' (index=13).
+--- Deco                     : Input : variable 'InvariantMassSynBoson1' (index=14).   <---> Output : variable 'InvariantMassSynBoson1' (index=14).
+--- Deco                     : Input : variable 'InvariantMassSynBoson2' (index=15).   <---> Output : variable 'InvariantMassSynBoson2' (index=15).
+--- Factory                  : 
+--- Factory                  : current transformation string: 'P'
+--- Factory                  : Create Transformation "P" with events from all classes.
+--- PCA                      : Transformation, Variable selection : 
+--- PCA                      : Input : variable 'NParticlesJet1' (index=0).   <---> Output : variable 'NParticlesJet1' (index=0).
+--- PCA                      : Input : variable 'NParticlesJet2' (index=1).   <---> Output : variable 'NParticlesJet2' (index=1).
+--- PCA                      : Input : variable 'NParticlesJet3' (index=2).   <---> Output : variable 'NParticlesJet3' (index=2).
+--- PCA                      : Input : variable 'NParticlesJet4' (index=3).   <---> Output : variable 'NParticlesJet4' (index=3).
+--- PCA                      : Input : variable 'TransverseMomentum' (index=4).   <---> Output : variable 'TransverseMomentum' (index=4).
+--- PCA                      : Input : variable 'CosThetaMostEnergeticTrack' (index=5).   <---> Output : variable 'CosThetaMostEnergeticTrack' (index=5).
+--- PCA                      : Input : variable 'y34' (index=6).   <---> Output : variable 'y34' (index=6).
+--- PCA                      : Input : variable 'y45' (index=7).   <---> Output : variable 'y45' (index=7).
+--- PCA                      : Input : variable 'Sphericity' (index=8).   <---> Output : variable 'Sphericity' (index=8).
+--- PCA                      : Input : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).   <---> Output : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).
+--- PCA                      : Input : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).   <---> Output : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).
+--- PCA                      : Input : variable 'EnergyBosonSyn1' (index=11).   <---> Output : variable 'EnergyBosonSyn1' (index=11).
+--- PCA                      : Input : variable 'EnergyBosonSyn2' (index=12).   <---> Output : variable 'EnergyBosonSyn2' (index=12).
+--- PCA                      : Input : variable 'AcolinearityBosonsSyn' (index=13).   <---> Output : variable 'AcolinearityBosonsSyn' (index=13).
+--- PCA                      : Input : variable 'InvariantMassSynBoson1' (index=14).   <---> Output : variable 'InvariantMassSynBoson1' (index=14).
+--- PCA                      : Input : variable 'InvariantMassSynBoson2' (index=15).   <---> Output : variable 'InvariantMassSynBoson2' (index=15).
+--- Factory                  : 
+--- Factory                  : current transformation string: 'G,D'
+--- Factory                  : Create Transformation "G" with events from all classes.
+--- Gauss                    : Transformation, Variable selection : 
+--- Gauss                    : Input : variable 'NParticlesJet1' (index=0).   <---> Output : variable 'NParticlesJet1' (index=0).
+--- Gauss                    : Input : variable 'NParticlesJet2' (index=1).   <---> Output : variable 'NParticlesJet2' (index=1).
+--- Gauss                    : Input : variable 'NParticlesJet3' (index=2).   <---> Output : variable 'NParticlesJet3' (index=2).
+--- Gauss                    : Input : variable 'NParticlesJet4' (index=3).   <---> Output : variable 'NParticlesJet4' (index=3).
+--- Gauss                    : Input : variable 'TransverseMomentum' (index=4).   <---> Output : variable 'TransverseMomentum' (index=4).
+--- Gauss                    : Input : variable 'CosThetaMostEnergeticTrack' (index=5).   <---> Output : variable 'CosThetaMostEnergeticTrack' (index=5).
+--- Gauss                    : Input : variable 'y34' (index=6).   <---> Output : variable 'y34' (index=6).
+--- Gauss                    : Input : variable 'y45' (index=7).   <---> Output : variable 'y45' (index=7).
+--- Gauss                    : Input : variable 'Sphericity' (index=8).   <---> Output : variable 'Sphericity' (index=8).
+--- Gauss                    : Input : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).   <---> Output : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).
+--- Gauss                    : Input : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).   <---> Output : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).
+--- Gauss                    : Input : variable 'EnergyBosonSyn1' (index=11).   <---> Output : variable 'EnergyBosonSyn1' (index=11).
+--- Gauss                    : Input : variable 'EnergyBosonSyn2' (index=12).   <---> Output : variable 'EnergyBosonSyn2' (index=12).
+--- Gauss                    : Input : variable 'AcolinearityBosonsSyn' (index=13).   <---> Output : variable 'AcolinearityBosonsSyn' (index=13).
+--- Gauss                    : Input : variable 'InvariantMassSynBoson1' (index=14).   <---> Output : variable 'InvariantMassSynBoson1' (index=14).
+--- Gauss                    : Input : variable 'InvariantMassSynBoson2' (index=15).   <---> Output : variable 'InvariantMassSynBoson2' (index=15).
+--- Factory                  : Create Transformation "D" with events from all classes.
+--- Deco                     : Transformation, Variable selection : 
+--- Deco                     : Input : variable 'NParticlesJet1' (index=0).   <---> Output : variable 'NParticlesJet1' (index=0).
+--- Deco                     : Input : variable 'NParticlesJet2' (index=1).   <---> Output : variable 'NParticlesJet2' (index=1).
+--- Deco                     : Input : variable 'NParticlesJet3' (index=2).   <---> Output : variable 'NParticlesJet3' (index=2).
+--- Deco                     : Input : variable 'NParticlesJet4' (index=3).   <---> Output : variable 'NParticlesJet4' (index=3).
+--- Deco                     : Input : variable 'TransverseMomentum' (index=4).   <---> Output : variable 'TransverseMomentum' (index=4).
+--- Deco                     : Input : variable 'CosThetaMostEnergeticTrack' (index=5).   <---> Output : variable 'CosThetaMostEnergeticTrack' (index=5).
+--- Deco                     : Input : variable 'y34' (index=6).   <---> Output : variable 'y34' (index=6).
+--- Deco                     : Input : variable 'y45' (index=7).   <---> Output : variable 'y45' (index=7).
+--- Deco                     : Input : variable 'Sphericity' (index=8).   <---> Output : variable 'Sphericity' (index=8).
+--- Deco                     : Input : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).   <---> Output : variable '(HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy' (index=9).
+--- Deco                     : Input : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).   <---> Output : variable '(HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy' (index=10).
+--- Deco                     : Input : variable 'EnergyBosonSyn1' (index=11).   <---> Output : variable 'EnergyBosonSyn1' (index=11).
+--- Deco                     : Input : variable 'EnergyBosonSyn2' (index=12).   <---> Output : variable 'EnergyBosonSyn2' (index=12).
+--- Deco                     : Input : variable 'AcolinearityBosonsSyn' (index=13).   <---> Output : variable 'AcolinearityBosonsSyn' (index=13).
+--- Deco                     : Input : variable 'InvariantMassSynBoson1' (index=14).   <---> Output : variable 'InvariantMassSynBoson1' (index=14).
+--- Deco                     : Input : variable 'InvariantMassSynBoson2' (index=15).   <---> Output : variable 'InvariantMassSynBoson2' (index=15).
+--- Id                       : Preparing the Identity transformation...
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                        Variable                                                               Mean                                                               RMS                                                       [        Min                                                               Max ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                  NParticlesJet1:                                                           19.834                                                           9.7650   [                                                           1.0000                                                           122.00 ]
+--- TFHandler_Factory        :                                                  NParticlesJet2:                                                           18.072                                                           8.4487   [                                                           1.0000                                                           100.00 ]
+--- TFHandler_Factory        :                                                  NParticlesJet3:                                                           15.690                                                           7.5409   [                                                           1.0000                                                           85.000 ]
+--- TFHandler_Factory        :                                                  NParticlesJet4:                                                           12.917                                                           6.4101   [                                                           1.0000                                                           99.000 ]
+--- TFHandler_Factory        :                                              TransverseMomentum:                                                           201.54                                                           99.489   [                                                           100.00                                                           1019.8 ]
+--- TFHandler_Factory        :                                      CosThetaMostEnergeticTrack:                                                          0.65810                                                          0.28991   [                                                       7.5897e-07                                                          0.99474 ]
+--- TFHandler_Factory        :                                                             y34:                                                           2.8927                                                          0.76777   [                                                          -2.0003                                                           8.8943 ]
+--- TFHandler_Factory        :                                                             y45:                                                           3.8311                                                          0.59080   [                                                           0.0000                                                           8.6899 ]
+--- TFHandler_Factory        :                                                      Sphericity:                                                          0.17718                                                          0.17077   [                                                       9.0231e-05                                                          0.93339 ]
+--- TFHandler_Factory        : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:                                                           32.976                                                           100.93   [                                                           0.0000                                                           2067.2 ]
+--- TFHandler_Factory        :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:                                                           135.34                                                           125.22   [                                                           6.9335                                                           2067.2 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn1:                                                           294.51                                                           176.43   [                                                           14.641                                                           2197.7 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn2:                                                           239.20                                                           157.98   [                                                           3.2275                                                           1889.4 ]
+--- TFHandler_Factory        :                                           AcolinearityBosonsSyn:                                                           92.759                                                           49.409   [                                                         0.060080                                                           179.87 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson1:                                                           101.97                                                           72.168   [                                                           6.6869                                                           1065.4 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson2:                                                           70.800                                                           47.392   [                                                          0.58789                                                           799.36 ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for Id
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA_1400GeV_BDTRankingRun.root:/InputVariables_Id/CorrelationPlots
+--- Deco                     : Preparing the Decorrelation transformation...
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                        Variable                                                               Mean                                                               RMS                                                       [        Min                                                               Max ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                  NParticlesJet1:                                                           2.4277                                                           1.0000   [                                                          -1.2149                                                           13.727 ]
+--- TFHandler_Factory        :                                                  NParticlesJet2:                                                           2.0382                                                           1.0000   [                                                          -2.4694                                                           11.038 ]
+--- TFHandler_Factory        :                                                  NParticlesJet3:                                                           1.9023                                                           1.0000   [                                                          -2.8600                                                           10.786 ]
+--- TFHandler_Factory        :                                                  NParticlesJet4:                                                           1.7730                                                           1.0000   [                                                          -3.2873                                                           14.460 ]
+--- TFHandler_Factory        :                                              TransverseMomentum:                                                           1.4065                                                           1.0000   [                                                         -0.68501                                                           9.4184 ]
+--- TFHandler_Factory        :                                      CosThetaMostEnergeticTrack:                                                           1.0179                                                           1.0000   [                                                          -4.2601                                                           4.3047 ]
+--- TFHandler_Factory        :                                                             y34:                                                           4.4895                                                           1.0000   [                                                          -6.5080                                                           15.317 ]
+--- TFHandler_Factory        :                                                             y45:                                                           9.5877                                                           1.0000   [                                                          -4.2164                                                           19.788 ]
+--- TFHandler_Factory        :                                                      Sphericity:                                                           3.3209                                                           1.0000   [                                                         -0.75123                                                           8.4692 ]
+--- TFHandler_Factory        : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:                                                         -0.16178                                                           1.0000   [                                                          -4.0526                                                           16.796 ]
+--- TFHandler_Factory        :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:                                                          0.46088                                                           1.0000   [                                                          -2.3682                                                           11.297 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn1:                                                           1.6303                                                           1.0000   [                                                          -2.2166                                                           10.347 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn2:                                                           1.4350                                                           1.0000   [                                                          -1.6062                                                           10.567 ]
+--- TFHandler_Factory        :                                           AcolinearityBosonsSyn:                                                           3.1627                                                           1.0000   [                                                          0.20756                                                           6.6992 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson1:                                                          0.70416                                                           1.0000   [                                                          -2.6899                                                           15.376 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson2:                                                          0.45216                                                           1.0000   [                                                          -7.4991                                                           15.109 ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for Deco
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA_1400GeV_BDTRankingRun.root:/InputVariables_Deco/CorrelationPlots
+--- PCA                      : Preparing the Principle Component (PCA) transformation...
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                        Variable                                                               Mean                                                               RMS                                                       [        Min                                                               Max ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                  NParticlesJet1:                                                          -5.1299                                                           215.44   [                                                          -364.71                                                           2530.4 ]
+--- TFHandler_Factory        :                                                  NParticlesJet2:                                                          -8.6585                                                           154.49   [                                                          -1366.2                                                           1098.4 ]
+--- TFHandler_Factory        :                                                  NParticlesJet3:                                                          -9.2058                                                           109.33   [                                                          -1269.4                                                           515.68 ]
+--- TFHandler_Factory        :                                                  NParticlesJet4:                                                           12.471                                                           93.385   [                                                          -510.76                                                           1401.7 ]
+--- TFHandler_Factory        :                                              TransverseMomentum:                                                           3.7507                                                           68.116   [                                                          -687.95                                                           340.07 ]
+--- TFHandler_Factory        :                                      CosThetaMostEnergeticTrack:                                                           1.4634                                                           60.938   [                                                          -419.27                                                           473.47 ]
+--- TFHandler_Factory        :                                                             y34:                                                           1.0867                                                           39.566   [                                                          -157.97                                                           227.37 ]
+--- TFHandler_Factory        :                                                             y45:                                                          -1.0738                                                           30.229   [                                                          -444.95                                                           216.87 ]
+--- TFHandler_Factory        :                                                      Sphericity:                                                         -0.31338                                                           8.2991   [                                                          -35.816                                                           91.167 ]
+--- TFHandler_Factory        : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:                                                          0.51103                                                           8.2193   [                                                          -68.575                                                           47.054 ]
+--- TFHandler_Factory        :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:                                                         -0.29671                                                           7.1429   [                                                          -43.723                                                           56.511 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn1:                                                          0.12940                                                           5.7132   [                                                          -75.189                                                           32.347 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn2:                                                        -0.030021                                                          0.56197   [                                                          -4.4173                                                           6.5909 ]
+--- TFHandler_Factory        :                                           AcolinearityBosonsSyn:                                                       0.00092551                                                          0.36916   [                                                          -3.7018                                                           5.9490 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson1:                                                       -0.0020594                                                          0.24728   [                                                          -1.4145                                                          0.85023 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson2:                                                        0.0010080                                                          0.13517   [                                                         -0.54662                                                          0.70443 ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for PCA
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA_1400GeV_BDTRankingRun.root:/InputVariables_PCA/CorrelationPlots
+--- Gauss                    : Preparing the Gaussian transformation...
+--- Deco                     : Preparing the Decorrelation transformation...
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                        Variable                                                               Mean                                                               RMS                                                       [        Min                                                               Max ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        :                                                  NParticlesJet1:                                                        -0.011224                                                           1.0000   [                                                          -6.0901                                                           6.0784 ]
+--- TFHandler_Factory        :                                                  NParticlesJet2:                                                       -0.0040643                                                           1.0000   [                                                          -4.9000                                                           5.6157 ]
+--- TFHandler_Factory        :                                                  NParticlesJet3:                                                       -0.0063934                                                           1.0000   [                                                          -6.5801                                                           5.7295 ]
+--- TFHandler_Factory        :                                                  NParticlesJet4:                                                        -0.010187                                                           1.0000   [                                                          -7.2396                                                           5.7902 ]
+--- TFHandler_Factory        :                                              TransverseMomentum:                                                        0.0028337                                                           1.0000   [                                                          -4.4659                                                           5.5783 ]
+--- TFHandler_Factory        :                                      CosThetaMostEnergeticTrack:                                                        0.0030213                                                           1.0000   [                                                          -4.6625                                                           7.1113 ]
+--- TFHandler_Factory        :                                                             y34:                                                       0.00021954                                                           1.0000   [                                                          -5.6958                                                           6.8139 ]
+--- TFHandler_Factory        :                                                             y45:                                                       -0.0022363                                                           1.0000   [                                                          -8.2692                                                           6.7798 ]
+--- TFHandler_Factory        :                                                      Sphericity:                                                        0.0044272                                                           1.0000   [                                                          -3.5387                                                           7.8065 ]
+--- TFHandler_Factory        : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:                                                       -0.0019015                                                           1.0000   [                                                          -4.0890                                                           5.1839 ]
+--- TFHandler_Factory        :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:                                                       -0.0015247                                                           1.0000   [                                                          -4.2092                                                           6.0678 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn1:                                                        0.0054095                                                           1.0000   [                                                          -4.5568                                                           6.1803 ]
+--- TFHandler_Factory        :                                                 EnergyBosonSyn2:                                                        0.0047631                                                           1.0000   [                                                          -3.9375                                                           7.4505 ]
+--- TFHandler_Factory        :                                           AcolinearityBosonsSyn:                                                        0.0021756                                                           1.0000   [                                                          -4.2452                                                           7.3114 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson1:                                                        0.0026436                                                           1.0000   [                                                          -3.8852                                                           7.7759 ]
+--- TFHandler_Factory        :                                          InvariantMassSynBoson2:                                                        0.0038888                                                           1.0000   [                                                          -5.3760                                                           7.7287 ]
+--- TFHandler_Factory        : ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_Factory        : Plot event variables for Gauss_Deco
+--- TFHandler_Factory        : Create scatter and profile plots in target-file directory: 
+--- TFHandler_Factory        : TMVA_1400GeV_BDTRankingRun.root:/InputVariables_Gauss_Deco/CorrelationPlots
+--- TFHandler_Factory        :  
+--- TFHandler_Factory        : Ranking input variables (method unspecific)...
+--- IdTransformation         : Ranking result (top variable is best ranked)
+--- IdTransformation         : -------------------------------------------------------------
+--- IdTransformation         : Rank : Variable                             : Separation
+--- IdTransformation         : -------------------------------------------------------------
+--- IdTransformation         :    1 : Invariant Mass Boson 1               : 3.319e-01
+--- IdTransformation         :    2 : Invariant Mass Boson 2               : 3.117e-01
+--- IdTransformation         :    3 : Jet Clustering Parameter Y34         : 2.354e-01
+--- IdTransformation         :    4 : Number of PFOs Jet 4                 : 1.825e-01
+--- IdTransformation         :    5 : Energy Boson 2                       : 1.511e-01
+--- IdTransformation         :    6 : Number of PFOs Jet 3                 : 1.483e-01
+--- IdTransformation         :    7 : Number of PFOs Jet 1                 : 1.405e-01
+--- IdTransformation         :    8 : Sphericity                           : 1.381e-01
+--- IdTransformation         :    9 : Number of PFOs Jet 2                 : 1.049e-01
+--- IdTransformation         :   10 : Highest Energy Pfo Energy            : 1.030e-01
+--- IdTransformation         :   11 : Energy Boson 1                       : 9.991e-02
+--- IdTransformation         :   12 : Acolinearity Bosons                  : 8.942e-02
+--- IdTransformation         :   13 : Jet Clustering Parameter Y45         : 8.037e-02
+--- IdTransformation         :   14 : Highest Energy Electron Energy       : 8.004e-02
+--- IdTransformation         :   15 : Transverse Momentum                  : 4.957e-02
+--- IdTransformation         :   16 : Cosine Theta Of Most Energetic Track : 8.192e-03
+--- IdTransformation         : -------------------------------------------------------------
+--- Factory                  :  
+--- Factory                  : Train all methods for Classification ...
+--- Factory                  : Train method: BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV for Classification
+--- BDT_NTrees3000_MaxDept...: Begin training
+--- BDT_NTrees3000_MaxDept...:  found and suggest the following possible pre-selection cuts 
+--- BDT_NTrees3000_MaxDept...: as option DoPreselection was not used, these cuts however will not be performed, but the training will see the full sample
+--- BDT_NTrees3000_MaxDept...: <InitEventSample> For classification trees, 
+--- BDT_NTrees3000_MaxDept...:  the effective number of backgrounds is scaled to match 
+--- BDT_NTrees3000_MaxDept...:  the signal. Othersise the first boosting step would do 'just that'!
+--- BDT_NTrees3000_MaxDept...: re-normlise events such that Sig and Bkg have respective sum of weights = 1
+--- BDT_NTrees3000_MaxDept...:   sig->sig*0.814437ev. bkg->bkg*1.29507ev.
+--- BDT_NTrees3000_MaxDept...: #events: (reweighted) sig: 351368 bkg: 351368
+--- BDT_NTrees3000_MaxDept...: #events: (unweighted) sig: 431424 bkg: 271311
+--- BDT_NTrees3000_MaxDept...: Training 3000 Decision Trees ... patience please
+--- BinaryTree               : The minimal node size MinNodeSize=2.5 fMinNodeSize=2.5% is translated to an actual number of events = 8768.62 for the training sample size of 350745
+--- BinaryTree               : Note: This number will be taken as absolute minimum in the node, 
+--- BinaryTree               :       in terms of 'weighted events' and unweighted ones !! 
+--- BDT_NTrees3000_MaxDept...: <Train> elapsed time: [1;31m1.52e+03 sec[0m                              
+--- BDT_NTrees3000_MaxDept...: <Train> average number of nodes (w/o pruning) : 9
+--- BDT_NTrees3000_MaxDept...: End of training                                              
+--- BDT_NTrees3000_MaxDept...: Elapsed time for training with 702735 events: [1;31m1.53e+03 sec[0m         
+--- BDT_NTrees3000_MaxDept...: Create MVA output for classification on training sample
+--- BDT_NTrees3000_MaxDept...: Evaluation of BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV on training sample (702735 events)
+--- BDT_NTrees3000_MaxDept...: Elapsed time for evaluation of 702735 events: [1;31m208 sec[0m       
+--- BDT_NTrees3000_MaxDept...: Creating weight file in xml format: [0;36mweights/TMVAClassification_BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV.weights.xml[0m
+--- BDT_NTrees3000_MaxDept...: Creating standalone response class: [0;36mweights/TMVAClassification_BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV.class.C[0m
+--- BDT_NTrees3000_MaxDept...: Write monitoring histograms to file: TMVA_1400GeV_BDTRankingRun.root:/Method_BDT/BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV
+--- Factory                  : Training finished
+--- Factory                  : 
+--- Factory                  : Ranking input variables (method specific)...
+--- BDT_NTrees3000_MaxDept...: Ranking result (top variable is best ranked)
+--- BDT_NTrees3000_MaxDept...: -------------------------------------------------------------------------------------------------
+--- BDT_NTrees3000_MaxDept...: Rank : Variable                                                        : Variable Importance
+--- BDT_NTrees3000_MaxDept...: -------------------------------------------------------------------------------------------------
+--- BDT_NTrees3000_MaxDept...:    1 : AcolinearityBosonsSyn                                           : 8.001e-02
+--- BDT_NTrees3000_MaxDept...:    2 : InvariantMassSynBoson1                                          : 7.341e-02
+--- BDT_NTrees3000_MaxDept...:    3 : NParticlesJet1                                                  : 7.248e-02
+--- BDT_NTrees3000_MaxDept...:    4 : EnergyBosonSyn2                                                 : 6.886e-02
+--- BDT_NTrees3000_MaxDept...:    5 : (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy           : 6.854e-02
+--- BDT_NTrees3000_MaxDept...:    6 : InvariantMassSynBoson2                                          : 6.645e-02
+--- BDT_NTrees3000_MaxDept...:    7 : y34                                                             : 6.540e-02
+--- BDT_NTrees3000_MaxDept...:    8 : EnergyBosonSyn1                                                 : 6.434e-02
+--- BDT_NTrees3000_MaxDept...:    9 : NParticlesJet2                                                  : 6.255e-02
+--- BDT_NTrees3000_MaxDept...:   10 : Sphericity                                                      : 6.162e-02
+--- BDT_NTrees3000_MaxDept...:   11 : NParticlesJet3                                                  : 5.936e-02
+--- BDT_NTrees3000_MaxDept...:   12 : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy : 5.742e-02
+--- BDT_NTrees3000_MaxDept...:   13 : CosThetaMostEnergeticTrack                                      : 5.558e-02
+--- BDT_NTrees3000_MaxDept...:   14 : NParticlesJet4                                                  : 5.442e-02
+--- BDT_NTrees3000_MaxDept...:   15 : TransverseMomentum                                              : 4.578e-02
+--- BDT_NTrees3000_MaxDept...:   16 : y45                                                             : 4.378e-02
+--- BDT_NTrees3000_MaxDept...: -------------------------------------------------------------------------------------------------
+--- Factory                  : 
+--- Factory                  : === Destroy and recreate all methods via weight files for testing ===
+--- Factory                  : 
+--- MethodBase               : Reading weight file: [0;36mweights/TMVAClassification_BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV.weights.xml[0m
+--- BDT_NTrees3000_MaxDept...: Read method "BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV" of type "BDT"
+--- BDT_NTrees3000_MaxDept...: MVA method was trained with TMVA Version: 4.2.0
+--- BDT_NTrees3000_MaxDept...: MVA method was trained with ROOT Version: 5.34/30
+--- Factory                  : Test all methods...
+--- Factory                  : Test method: BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV for Classification performance
+--- BDT_NTrees3000_MaxDept...: Evaluation of BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV on testing sample (702735 events)
+--- BDT_NTrees3000_MaxDept...: Elapsed time for evaluation of 702735 events: [1;31m176 sec[0m       
+--- Factory                  : Evaluate all methods...
+--- Factory                  : Evaluate classifier: BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV
+--- BDT_NTrees3000_MaxDept...: Loop over test events and fill histograms with classifier response...
+--- Factory                  : Write evaluation histograms to file
+--- TFHandler_BDT_NTrees30...: Plot event variables for BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV
+--- TFHandler_BDT_NTrees30...: ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_BDT_NTrees30...:                                                        Variable                                                               Mean                                                               RMS                                                       [        Min                                                               Max ]
+--- TFHandler_BDT_NTrees30...: ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_BDT_NTrees30...:                                                  NParticlesJet1:                                                           15.752                                                           8.9595   [                                                           1.0000                                                           122.00 ]
+--- TFHandler_BDT_NTrees30...:                                                  NParticlesJet2:                                                           15.001                                                           7.5972   [                                                           1.0000                                                           100.00 ]
+--- TFHandler_BDT_NTrees30...:                                                  NParticlesJet3:                                                           12.476                                                           6.5217   [                                                           1.0000                                                           87.000 ]
+--- TFHandler_BDT_NTrees30...:                                                  NParticlesJet4:                                                           9.9579                                                           5.2797   [                                                           1.0000                                                           79.000 ]
+--- TFHandler_BDT_NTrees30...:                                              TransverseMomentum:                                                           177.22                                                           84.127   [                                                           100.00                                                           2614.6 ]
+--- TFHandler_BDT_NTrees30...:                                      CosThetaMostEnergeticTrack:                                                          0.67449                                                          0.29236   [                                                       1.3868e-06                                                          0.99402 ]
+--- TFHandler_BDT_NTrees30...:                                                             y34:                                                           3.3270                                                          0.69748   [                                                          -2.0003                                                           7.8339 ]
+--- TFHandler_BDT_NTrees30...:                                                             y45:                                                           4.0302                                                          0.60901   [                                                           0.0000                                                           7.4604 ]
+--- TFHandler_BDT_NTrees30...:                                                      Sphericity:                                                          0.11635                                                          0.14166   [                                                       5.6561e-05                                                          0.94786 ]
+--- TFHandler_BDT_NTrees30...: (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:                                                           69.334                                                           155.28   [                                                           0.0000                                                           4246.1 ]
+--- TFHandler_BDT_NTrees30...:           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:                                                           171.40                                                           171.06   [                                                           6.1803                                                           4246.1 ]
+--- TFHandler_BDT_NTrees30...:                                                 EnergyBosonSyn1:                                                           281.94                                                           206.76   [                                                           12.413                                                           4528.4 ]
+--- TFHandler_BDT_NTrees30...:                                                 EnergyBosonSyn2:                                                           201.70                                                           171.67   [                                                           2.9893                                                           3195.8 ]
+--- TFHandler_BDT_NTrees30...:                                           AcolinearityBosonsSyn:                                                           106.14                                                           50.938   [                                                         0.018545                                                           179.96 ]
+--- TFHandler_BDT_NTrees30...:                                          InvariantMassSynBoson1:                                                           91.926                                                           86.886   [                                                           6.0388                                                           1088.5 ]
+--- TFHandler_BDT_NTrees30...:                                          InvariantMassSynBoson2:                                                           51.814                                                           45.364   [                                                          0.42758                                                           746.76 ]
+--- TFHandler_BDT_NTrees30...: ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- TFHandler_BDT_NTrees30...: Create scatter and profile plots in target-file directory: 
+--- TFHandler_BDT_NTrees30...: TMVA_1400GeV_BDTRankingRun.root:/Method_BDT/BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV/CorrelationPlots
+--- Factory                  : Correlations between input variables and MVA response (signal):
+--- Factory                  : ----------------------------------------------------------------------------------
+--- Factory                  :                                                                  BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV
+--- Factory                  :                                                  NParticlesJet1:                                   +0.086
+--- Factory                  :                                                  NParticlesJet2:                                   +0.122
+--- Factory                  :                                                  NParticlesJet3:                                   +0.142
+--- Factory                  :                                                  NParticlesJet4:                                   +0.172
+--- Factory                  :                                              TransverseMomentum:                                   +0.323
+--- Factory                  :                                      CosThetaMostEnergeticTrack:                                   -0.023
+--- Factory                  :                                                             y34:                                   -0.111
+--- Factory                  :                                                             y45:                                   +0.028
+--- Factory                  :                                                      Sphericity:                                   -0.012
+--- Factory                  : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:                                   -0.101
+--- Factory                  :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:                                   +0.094
+--- Factory                  :                                                 EnergyBosonSyn1:                                   +0.319
+--- Factory                  :                                                 EnergyBosonSyn2:                                   +0.250
+--- Factory                  :                                           AcolinearityBosonsSyn:                                   -0.198
+--- Factory                  :                                          InvariantMassSynBoson1:                                   -0.128
+--- Factory                  :                                          InvariantMassSynBoson2:                                   +0.050
+--- Factory                  : ----------------------------------------------------------------------------------
+--- Factory                  : 
+--- Factory                  : Correlations between input variables and MVA response (background):
+--- Factory                  : ----------------------------------------------------------------------------------
+--- Factory                  :                                                                  BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV
+--- Factory                  :                                                  NParticlesJet1:                                   +0.419
+--- Factory                  :                                                  NParticlesJet2:                                   +0.306
+--- Factory                  :                                                  NParticlesJet3:                                   +0.353
+--- Factory                  :                                                  NParticlesJet4:                                   +0.382
+--- Factory                  :                                              TransverseMomentum:                                   +0.121
+--- Factory                  :                                      CosThetaMostEnergeticTrack:                                   -0.078
+--- Factory                  :                                                             y34:                                   -0.548
+--- Factory                  :                                                             y45:                                   -0.376
+--- Factory                  :                                                      Sphericity:                                   +0.378
+--- Factory                  : (HighestEnergyElectronEnergy<10000)*HighestEnergyElectronEnergy:                                   -0.446
+--- Factory                  :           (HighestEnergyPfoEnergy<10000)*HighestEnergyPfoEnergy:                                   -0.343
+--- Factory                  :                                                 EnergyBosonSyn1:                                   -0.059
+--- Factory                  :                                                 EnergyBosonSyn2:                                   +0.198
+--- Factory                  :                                           AcolinearityBosonsSyn:                                   -0.210
+--- Factory                  :                                          InvariantMassSynBoson1:                                   +0.186
+--- Factory                  :                                          InvariantMassSynBoson2:                                   +0.327
+--- Factory                  : ----------------------------------------------------------------------------------
+--- Factory                  : 
+--- Factory                  : The following "overlap" matrices contain the fraction of events for which 
+--- Factory                  : the MVAs 'i' and 'j' have returned conform answers about "signal-likeness"
+--- Factory                  : An event is signal-like, if its MVA output exceeds the following value:
+--- Factory                  : -----------------------------------------------------------------------------------
+--- Factory                  :                                   Method:                                Cut value:
+--- Factory                  : -----------------------------------------------------------------------------------
+--- Factory                  : BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV:                                   +0.015
+--- Factory                  : -----------------------------------------------------------------------------------
+--- Factory                  : which correspond to the working point: eff(signal) = 1 - eff(background)
+--- Factory                  : 
+--- Factory                  : Evaluation results ranked by best signal efficiency and purity (area)
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : MVA              Signal efficiency at bkg eff.(error):       | Sepa-    Signifi- 
+--- Factory                  : Method:          @B=0.01    @B=0.10    @B=0.30    ROC-integ. | ration:  cance:   
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV: 0.342(04)  0.916(02)  0.988(00)    0.961    | 0.719    1.818
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : 
+--- Factory                  : Testing efficiency compared to training efficiency (overtraining check)
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : MVA              Signal efficiency: from test sample (from training sample) 
+--- Factory                  : Method:          @B=0.01             @B=0.10            @B=0.30   
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : BDT_NTrees3000_MaxDepth3_NCuts25_1400GeV: 0.342 (0.348)       0.916 (0.919)      0.988 (0.988)
+--- Factory                  : --------------------------------------------------------------------------------
+--- Factory                  : 
+--- Dataset:Default          : Created tree 'TestTree' with 702735 events
+--- Dataset:Default          : Created tree 'TrainTree' with 702735 events
+--- Factory                  :   
+--- Factory                  : [1mThank you for using TMVA![0m
+--- Factory                  : [1mFor citation information, please visit: http://tmva.sf.net/citeTMVA.html[0m
+==> Wrote root file: TMVA_1400GeV_BDTRankingRun.root
+==> TMVAClassification is done!
+
+==> To view the results, launch the GUI: "root -l ./TMVAGui.C"
+
