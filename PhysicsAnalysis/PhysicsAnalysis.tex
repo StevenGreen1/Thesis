@@ -394,13 +394,51 @@ The input variables used for these MVA classifiers were:
 
 Figure \ref{fig:mvaalternatives1400GeV} shows the background rejection, which is equivalent to one minus the background efficiency, as a function of signal efficiency for various MVA classifiers.  Efficiency is defined as the fraction of events classified as signal by the MVA.  The efficiencies reported by TMVA are calculated after the application of the preselection cuts, which are described in section \ref{sec:preselection1400GeV}.  
 
-The classifier giving the optimal performance in terms of signal efficiency and background rejection was the BDT.  The performance of the BDT was optimised further by varying the number of trees used and the depth of the trees.  An optimal significance, S/$\sqrt(\text{S + B})$, where S and B are the number of signal and background events passing the preselection respectively, of 52.7 was obtained using the BDT. 
+The classifier giving the optimal performance in terms of signal efficiency and background rejection was the BDT.  The performance of the BDT was optimised further by varying the number of trees used and the depth of the trees.  An optimal significance, S/$\sqrt(\text{S + B})$, where S and B are the number of signal and background events passing the preselection respectively, of 52.7 was obtained using the BDT.  \textcolor{blue}{Table \ref{table:mvaranking1400GeV} shows the ranking of the variables used by the BDT and figure \ref{fig:rankingvariables} shows the distributions of the three highest ranked variables.}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV.pdf}
 \caption[Background rejection as a function of signal efficiency for a variety of MVA options at $\sqrt{s}=1.4$~TeV.]{Background rejection as a function of signal efficiency for a variety of MVA options at $\sqrt{s}=1.4$~TeV.} 
 \label{fig:mvaalternatives1400GeV}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ l r }
+\hline
+MVA Variable & Ranking \\
+\hline
+Acolinearity of the candidate boson pair & 1 \\
+Invariant mass of the highest energy candidate boson & 2 \\
+Number of particles in the highest energy jet & 3 \\
+Energy of the lowest energy candidate boson & 4 \\
+Energy of the highest energy PFO & 5 \\
+Invariant mass of the lowest energy candidate boson & 6 \\
+Jet clustering parameter $-\text{log}_{10}(y_{34})$ & 7 \\
+Energy of the highest energy candidate boson & 8 \\
+Number of particles in the second highest energy jet & 9 \\
+Sphericity of the event & 10 \\
+Number of particles in the third highest energy jet & 11 \\
+Energy of the highest energy electron & 12 \\
+Cosine of the polar angle of the highest energy track & 13 \\
+Number of particles in the fourth highest energy jet & 14 \\
+The vector sum of the transverse momentum of all PFOs in the event & 15 \\
+Jet clustering parameter $-\text{log}_{10}(y_{45})$ & 16 \\
+\hline
+\end{tabular}
+\caption[Ranking of the MVA variables used by the BDT.]{\textcolor{blue}{Ranking of the MVA variables used by the BDT.}}
+\label{table:mvaranking1400GeV}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\subfloat[]{\label{fig:ranking1}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/AcolinearitySynBosons_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf}}
+\subfloat[]{\label{fig:ranking2}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/AcolinearitySynBosons_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf}} \hfill
+\subfloat[]{\label{fig:ranking3}\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/AcolinearitySynBosons_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf}} 
+\includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf}
+\caption[Distributions of the highest ranked variables used by the BDT: \protect\subref{fig:ranking1} the acolinearity of the candidate boson pair; \protect\subref{fig:ranking2} the invariant mass of the highest energy candidate boson; and \protect\subref{fig:ranking3} the number of particles in the highest energy jet.  All distributions are normalised to an integrated luminosity of $\mathcal{L}_{int} = 1.5\text{ ab}^{-1}$.]{\textcolor{blue}{Distributions of the highest ranked variables used by the BDT: \protect\subref{fig:ranking1} the acolinearity of the candidate boson pair; \protect\subref{fig:ranking2} the invariant mass of the highest energy candidate boson; and \protect\subref{fig:ranking3} the number of particles in the highest energy jet.  All distributions are normalised to an integrated luminosity of $\mathcal{L}_{int} = 1.5\text{ ab}^{-1}$.}}
+\label{fig:rankingvariables}
 \end{figure}
 
 %========================================================================================
