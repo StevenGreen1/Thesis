@@ -1041,6 +1041,15 @@
    pt->SetTextFont(132);
    TText *text = pt->AddText("Background rejection versus Signal efficiency");
    pt->Draw();
+
+//   TArrow *ar1 = new TArrow(0.694,0.6,0.694,0.96,0.05,"|>");
+//   TArrow *ar1 = new TArrow(0.694,0.2,0.694,0.8,0.05,"|>");
+//   ar1->Draw();
+
+   TMarker *m = new TMarker(0.694, 0.96, 20);   
+   m->SetMarkerSize();
+   m->Draw(); 
+
    pTCanvas->Modified();
    pTCanvas->cd();
    pTCanvas->SetSelected(pTCanvas);
