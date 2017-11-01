@@ -10,7 +10,7 @@
 \section{Motivation}
 Vector boson scattering is the interaction of the form $\text{VV} \rightarrow \text{VV}$ where V is any of the electroweak gauge bosons $\text{W}^{+}$, $\text{W}^{-}$, Z or $\gamma$.  This is an interesting process to study because it provides understanding of how the Standard Model Higgs is able to unitarise the otherwise unbounded cross-section for longitudinal massive gauge boson scattering.  Vector boson scattering also provides insights into beyond Standard Model physics that impacts the electroweak sector by probing potential anomalous triple and quartic gauge couplings.  
 
-Triple and quartic gauge couplings lead to interactions of the form $\text{V} \rightarrow \text{VV}$ and $\text{VV} \rightarrow \text{VV}$ respectively.  In the Standard Model there are five allowed vertices, shown in figure \ref{fig:smtripleandquarticvertices}, which arise from the kinematic term $\mathcal{L}_{kin} = -\frac{1}{4}B_{\mu\nu}B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}W^{\mu\nu}$ in the Standard Model Lagrangian.
+Triple and quartic gauge couplings lead to interactions of the form $\text{V} \rightarrow \text{VV}$ and $\text{VV} \rightarrow \text{VV}$\textcolor{blue}{,} respectively.  In the Standard Model there are five allowed vertices, shown in figure \ref{fig:smtripleandquarticvertices}, which arise from the kinematic term $\mathcal{L}_{kin} = -\frac{1}{4}B_{\mu\nu}B^{\mu\nu} - \frac{1}{4}W_{\mu\nu}W^{\mu\nu}$ in the Standard Model Lagrangian.
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:smvertex1}\includegraphics[width=0.3\textwidth]{PhysicsAnalysis/Plots/FeynmanDiagrams/SMVertex1.pdf}} 
@@ -76,7 +76,7 @@ Events were generated using Whizard \cite{0708.4233, hep-ph/0102195} version 1.9
 \centering
 \begin{tabular}{ l r }
 \hline
-Final State & Cross-Section [fb] \\ 
+Final State & Cross-section [fb] \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu\text{lqqqq}$ & 110.4\\
@@ -108,7 +108,7 @@ Monte-Carlo (MC) samples were simulated using the CLID\_ILD detector model \cite
   
 The effect of the $\gamma\gamma \rightarrow hadrons$ backgrounds, discussed in section \ref{sec:beamrelatedbackgrounds}, were incorporated in the analysis by overlaying $\gamma\gamma \rightarrow hadrons$ events onto the signal and background event samples.  The overlaid backgrounds were added prior to reconstruction so that their impact on the reconstruction was fully accounted for.  For each physics event of interest, $\gamma\gamma \rightarrow hadrons$ background events equivalent to 60 bunch crossings (BXs) are included.  As readout time windows are applied in detector readout, 60 BXs is sufficient for accounting for the $\gamma\gamma \rightarrow hadrons$ backgrounds.  These backgrounds occur in a time window of $-5$~ns to 25~ns around the physics event and the BXs are separated by 0.5~ns, to mimic the CLIC bunch train structure.  The number of background events overlaid per BX is drawn from a Poisson distribution with a mean of 1.3 (3.2) events per bunch crossing at $\sqrt{s}=1.4$~(3)~TeV \cite{Linssen:2012hp}.  
 
-Detector readout is simulated using a readout time window, of 10~ns on all detectors apart from the TPC and HCal barrel.  In the TPC, all hits are retained and in the HCal bareel a 100~ns time window is used to account for the additional time it takes hadronic showers to develop in tungsten \cite{Linssen:2012hp}.  All readout times are corrected for straight time-of-flight to the impact point (IP).  Any hits that have are measured outside of these windows are not used in the reconstruction.   
+Detector readout is simulated using a readout time window of 10~ns on all detectors apart from the TPC and HCal barrel.  In the TPC, all hits are retained and in the HCal \textcolor{blue}{barrel} a 100~ns time window is used to account for the additional time it takes hadronic showers to develop in tungsten \cite{Linssen:2012hp}.  All readout times are corrected for straight time-of-flight to the impact point (IP).  Any hits that have are measured outside of these windows are not used in the reconstruction.   
  
 %========================================================================================
 %========================================================================================
@@ -143,7 +143,7 @@ Only final states involving contributions from massive gauge boson quartic verti
 \centering
 \begin{tabular}{ l r r r r }
 \hline
-\multirow{ 2}{*}{Final State} & Cross-Section [fb] & Cross-Section [fb] & Percentage \\ 
+\multirow{ 2}{*}{Final State} & Cross-section [fb] & Cross-section [fb] & Percentage \\ 
 & ($\alpha_{4} = \alpha_{5} = 0.00$) & ($\alpha_{4} = \alpha_{5} = 0.05$) & Change[\%] \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 24.7 & 34.6 & +40.1 \\
@@ -177,7 +177,7 @@ Following the reconstruction, the CLICPfoSelector processor \cite{arXiv:1209.403
 
 \subsection{Jet Finding} 
 \label{sec:jetpairing}
-After the application of the CLICPfoSelector, the MarlinFastJet processor, a wrapper for the FastJet \cite{Cacciari:2011ma} processor, was used to cluster each event into four jets.  These jets are then paired up to form two candidate bosons working under the assumption that the correct pairing is achieved when the difference between the invariant masses of the candidate bosons is a minima.  In the case of the signal final state, $\nu\nu$qqqq, it is assumed that the four jets and two candidate bosons map onto the four primary quarks and two outgoing bosons in the vector boson scattering process.  The jet clustering was performed using the longitudinally invariant $k_{t}$ jet algorithm \cite{Catani:1993hr, Ellis:1993tq} in exclusive mode.  The longitudinally invariant $k_{t}$ algorithm proceeds as follows
+After the application of the CLICPfoSelector, the MarlinFastJet processor, a wrapper for the FastJet \cite{Cacciari:2011ma} processor, was used to cluster each event into four jets.  These jets are then paired up to form two candidate bosons working under the assumption that the correct pairing is achieved when the difference between the invariant masses of the candidate bosons is a \textcolor{blue}{minimum}.  In the case of the signal final state, $\nu\nu$qqqq, it is assumed that the four jets and two candidate bosons map onto the four primary quarks and two outgoing bosons in the vector boson scattering process.  The jet clustering was performed using the longitudinally invariant $k_{t}$ jet algorithm \cite{Catani:1993hr, Ellis:1993tq} in exclusive mode.  The longitudinally invariant $k_{t}$ algorithm proceeds as follows
 
 \begin{enumerate}
 \item Determine the $k_{t}$ distance, $d_{ij}$, for each pair of particles, $i$ and $j$, and the beam, $d_{iB}$, distance for each particle, $i$.  These distances are defined as
@@ -245,7 +245,7 @@ R Parameter & Tight Selected PFOs & Selected PFOs & Loose Selected PFOs \\
 \label{table:precisionsignaljetalgo1400GeV}
 \end{table}
 
-The configuration for the jet algorithm for the $\sqrt{s}=1.4$~TeV analysis was chosen as selected PFOs with an R parameter of 0.9.  While the loose PFO selection gives a marginally better performance, the selected PFO selection was preferred to minimise the effect of the $\gamma\gamma \rightarrow hadrons$ background.  Figure \ref{fig:chi2jetalgoideal1400GeV} shows confidence contours, given a null hypothesis of $\alpha_{4} = \alpha_{5} = 0$, for the selected PFO and R parameter of 0.9 jet algorithm configuration at $\sqrt{s}=1.4$~TeV.  Figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} show the one dimensional $\chi^{2}$ distribution for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$ respectively, for the same configuration.  
+The configuration for the jet algorithm for the $\sqrt{s}=1.4$~TeV analysis was chosen as selected PFOs with an R parameter of 0.9.  While the loose PFO selection gives a marginally better performance, the selected PFO selection was preferred to minimise the effect of the $\gamma\gamma \rightarrow hadrons$ background.  Figure \ref{fig:chi2jetalgoideal1400GeV} shows confidence contours, given a null hypothesis of $\alpha_{4} = \alpha_{5} = 0$, for the selected PFO and R parameter of 0.9 jet algorithm configuration at $\sqrt{s}=1.4$~TeV.  Figures \ref{fig:a4chi2jetalgoideal1400GeV} and \ref{fig:a5chi2jetalgoideal1400GeV} show the one dimensional $\chi^{2}$ distribution for $\alpha_{4}$ and $\alpha_{5}$, assuming $\alpha_{5} = 0$ and $\alpha_{4} = 0$\textcolor{blue}{,} respectively, for the same configuration.  
 
 \begin{figure}[h!]
 \centering
@@ -262,7 +262,7 @@ The configuration for the jet algorithm for the $\sqrt{s}=1.4$~TeV analysis was 
 \label{sec:isolatedleptonfinding}
 An isolated lepton finder \cite{Wendt:2007iw} was included in the analysis chain to reject background final states containing primary leptons.  Leptons produced via hadronisation are unlikely to be flagged as isolated because all hadronisation products are boosted along the direction of the parent quark.  This means isolated leptons are likely to correspond to primary leptons, which makes the number of isolated leptons a powerful discriminating variable to use in event selection.  
 
-The isolated lepton finder determines whether a PFO is an electron or muon by first checking that the PFO has a single charged particle track associated to it.  If that is the case, the calorimetric energy deposits of the PFO are examined to see if they are consistent with what is expected for an electron or muon.  If they are consistent with expectations, the properties of the charged particle track are examined to determine whether the track originates from the IP.  If the PFO is deemed to have originated from the IP, isolation checks, which examine the energy deposited in the calorimeters within a cone surrounding the PFO, are applied to determine whether the particles belongs to a jet.  If the PFO does not appear to belong to a jet then it is counted as an isolated lepton.  The fraction of events rejected by the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.   
+The isolated lepton finder determines whether a PFO is an electron or muon by first checking that the PFO has a single charged particle track associated to it.  If that is the case, the calorimetric energy deposits of the PFO are examined to see if they are consistent with what is expected for an electron or muon.  If they are consistent with expectations, the properties of the charged particle track are examined to determine whether the track originates from the IP.  If the PFO is deemed to have originated from the IP, isolation checks \textcolor{blue}{that} examine the energy deposited in the calorimeters within a cone surrounding the PFO, are applied to determine whether the particle belongs to a jet.  If the PFO does not appear to belong to a jet then it is counted as an isolated lepton.  The fraction of events rejected by the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.   
 
 \begin{table}[h!]
 \centering
@@ -274,7 +274,7 @@ $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 99.7 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu\text{lqqqq}$ & 48.9 \\
 \hline
 \end{tabular}
-\caption[The fraction of events rejected by of isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and {\nu}lqqqq final states.]{The fraction of events rejected by of isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and {\nu}lqqqq final states.}
+\caption[The fraction of events rejected by the isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and {\nu}lqqqq final states.]{The fraction of events rejected by the isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and {\nu}lqqqq final states.}
 \label{table:efficiencyleptonfinding}
 \end{table}
 
@@ -288,34 +288,34 @@ The next stage of the analysis involved the calculation of a number of event-bas
 \item \textbf{Particle level} variables:
 
 \begin{itemize}
-\item Number of PFOs in each jet;
-\item Energy of the highest energy PFO;
-\item Energy of the highest energy electron that was identified by PandoraPFA;
-\item Cosine of the polar angle of the highest energy track;
-\item The number of isolated leptons found using the isolated lepton finder.
+\item number of PFOs in each jet;
+\item energy of the highest energy PFO;
+\item energy of the highest energy electron that was identified by PandoraPFA;
+\item cosine of the polar angle of the highest energy track;
+\item the number of isolated leptons found using the isolated lepton finder.
 \end{itemize}
 
 \item \textbf{Candidate boson} variables:
 \begin{itemize}
-\item Energy of the candidate bosons;
-\item Invariant mass of the candidate bosons;
-\item Acolinearity of the candidate boson pair, which is defined as 180 degrees minus the opening angle of the pair of bosons in the rest frame of the detector.
+\item energy of the candidate bosons;
+\item invariant mass of the candidate bosons;
+\item acolinearity of the candidate boson pair, which is defined as 180 degrees minus the opening angle of the pair of bosons in the rest frame of the detector.
 \end{itemize}
 
 \item \textbf{Event based} variables:  
 \begin{itemize}
-\item The invariant mass of the visible system, $M_{VV}$;
-\item The vector sum of the transverse momentum of all PFOs in the event;
-\item Sphericity, defined through the sphericity tensor $S^{ab}$;
+\item the invariant mass of the visible system, $M_{VV}$;
+\item the vector sum of the transverse momentum of all PFOs in the event;
+\item sphericity, defined through the sphericity tensor $S^{ab}$;
 \begin{equation}
-S^{ab} = \frac{\Sigma_{i}p^{\alpha}_{i}p^{\alpha}_{j}}{\Sigma_{i,\alpha=1,2,3}|p^{\alpha}_{i|^{2}}}
+S^{ab} = \frac{\Sigma_{i}p^{a}_{i}p^{b}_{i}}{\Sigma_{i,\alpha=x,y,z}|p^{\alpha}_{i}|^{2}}\text{ ,}
 \end{equation}
 where $p_{i}$ are the components of the momenta of the $i^{th}$ PFO in the rest frame of the detector and the sum $\Sigma_{i}$ runs over all particles in the event.  Sphericity is defined as $S = (3/2)(\lambda_{2} + \lambda_{3})$, where $\lambda_{i}$ are the eigenvalues of the sphericity tensor defined such $\lambda_{1} \geq \lambda_{2} \geq \lambda_{3}$.  This provides a measure of how spherical the reconstructed event topology is with isotropic events having $S \approx 1$, while two jet events have $S \approx 0$.
 \end{itemize}
 
 \item \textbf{Jet clustering parameters} variables:
 \begin{itemize}
-\item The $y_{ij}$ variables where $i = 3,4$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  
+\item the $y_{ij}$ variables where $i = 3,4$ and $j=i+1$.  These are the smallest $k_{t}$ distance found when combining $j$ jets into $i$ jets.  
 \end{itemize}
 \end{itemize}
 
@@ -323,7 +323,7 @@ where $p_{i}$ are the components of the momenta of the $i^{th}$ PFO in the rest 
 
 \subsection{Jet Energy Resolution at CLIC} 
 \label{sec:jetenergyresolution}
-The importance of the jet energy resolution, which is extensively discussed in chapters \ref{chapt:energyestimators} and \ref{chap:detopt}, should be emphasised at this point.  Many of the discriminant variables that are calculated for this analysis are dependant upon the jet energy resolution.  In particular, all variables related to the candidate bosons, which are formed from pairing up jets, are dependent upon the measurement of jet energies.  
+The importance of the jet energy resolution, which is extensively discussed in chapters \ref{chap:energyestimators} and \ref{chap:detopt}, should be emphasised at this point.  Many of the discriminant variables that are calculated for this analysis are dependant upon the jet energy resolution.  In particular, all variables related to the candidate bosons, which are formed from pairing up jets, are dependent upon the measurement of jet energies.  
 
 Figure \ref{fig:jeteenrgyresolutionphysicsanalysis} shows the jet energy resolution as a function of the MC jet energy for the {\nu}{\nu}qqqq event sample used in the $\sqrt{s}=1.4$~TeV analysis.  The MC jet energy was obtained by pairing up quarks appearing in the final state to the reconstructed jets.  The events were then binned in terms of their MC jet energy and the jet energy resolution calculated for each bin.  When calculating the jet energy resolution, a narrower range of jet energies was used in compared to previous studies, 60\% of the data with narrowest RMS as opposed to 90\%, to minimise the effects of jet finding and beam-induced backgrounds.  The jet energy resolutions reported here are worse than those quoted in earlier chapters.  This is to be expected given the effects of jet finding and beam-induced backgrounds.
 
@@ -373,33 +373,33 @@ The performance of several MVA classifiers was examined to determine the optimal
 \begin{itemize}
 \item \textbf{Boosted Decision Tree (BDT)}.  Decision trees are formed by the sequential application of cuts that split the data into multiple classes.  After the application of the final cut, the remaining classes are used to classify whether the input event corresponds to signal or background.  Boosting a decision tree involves the use of several decision trees.  A single classifier output is obtained from a weighted average of the individual decision trees.  The cuts applied in the decision tree are determined using the training sample.  
 \item \textbf{$k$-Nearest Neighbour (KNN)}.  For a given input event, the $k$ closest neighbours from the training sample are found.  The classifier for that input event is determined as the fraction of those $k$ events that belong to the signal sample.  Distances in this classifier are defined as the Euclidean distance between events in the $n$-dimensional space of the variables used for training the classifier.  Weights are applied when calculating the distances to account for the differing widths of the input variable distributions.  The value of $k$ used in this analysis was 20.
-\item \textbf{Multilayer Perceptron (MLP)}.  This is an example of a neutral network.  Neutral networks consist of an interconnected series of neurons each with a different response to a set of input signals.  The signal for the first layer of neurons are the event variables used to train the MVA.  The input signal proceeds to travel through several layers of neurons.  The number of neurons in a given layer is reduced as the number of layers passed through increases until two neurons are left, one corresponding to signal and the other background.  The neuron giving the larger response in the final layer determines the event classifier.  The training sample is used to determine the response of each neurons in the network.
+\item \textbf{Multilayer Perceptron (MLP)}.  This is an example of a \textcolor{blue}{neural} network.  \textcolor{blue}{Neural} networks consist of an interconnected series of neurons each with a different response to a set of input signals.  The signal for the first layer of neurons are the event variables used to train the MVA.  The input signal proceeds to travel through several layers of neurons.  The number of neurons in a given layer is reduced as the number of layers passed through increases until two neurons are left, one corresponding to signal and the other background.  The neuron giving the larger response in the final layer determines the event classifier.  The training sample is used to determine the response of each neurons in the network.
 \item \textbf{Fisher and H-Matrix Discriminants}.  These procedures involve the calculation of a hyperplane in $n$-dimensional space that maximally separates signal and background events in the training sample.  The location of an input event in that $n$-dimensional space with respect to that hyperplane determines the classifier for the event.  The hyperplane is determined by maximising the differences between the means of the input event variables normalised by a measure of their spread.  Both the Fisher and H-Matrix discriminants search for the hyperplane in $n$-dimensional space, however, the Fisher discriminant begins this procedure by transforming the input variables into a variable space with no linear correlations.  
-\item \textbf{Likelihood}.  The likelihood is determined using the probability density function (PDF) for each of the input variables.  PDFs are determined using the training sample for both signal and background events.  For a given event, the likelihood is given by the product of the probability of obtaining each of the input variables for that event.  The signal and background likelihoods are calculated using the signal and background PDFs respectively and the ratio of the signal likelihood to the sum of the signal and background likelihoods gives the event classifier.   
+\item \textbf{Likelihood}.  The likelihood is determined using the probability density function (PDF) for each of the input variables.  PDFs are determined using the training sample for both signal and background events.  For a given event, the likelihood is given by the product of the probability of obtaining each of the input variables for that event.  The signal and background likelihoods are calculated using the signal and background PDFs\textcolor{blue}{,} respectively\textcolor{blue}{,} and the ratio of the signal likelihood to the sum of the signal and background likelihoods gives the event classifier.   
 \end{itemize}
 
 The input variables used for these MVA classifiers were:
 \begin{itemize}
-\item Number of PFOs in each jet;
-\item Energy of the highest energy PFO;
-\item Energy of the highest energy electron;
-\item Cosine of the polar angle of the highest energy track;
-\item Energy of the candidate bosons;
-\item Invariant mass of the candidate bosons;
-\item Acolinearity of the candidate boson pair;
-\item The vector sum of the transverse momentum of all PFOs in the event;
-\item The sphericity of the event;
-\item The derived jet clustering parameter variables $-\text{log}_{10}(y_{ij})$ where $y_{ij}$ are jet clustering parameters, $i = 3,4$ and $j=i+1$.  
+\item number of PFOs in each jet;
+\item energy of the highest energy PFO;
+\item energy of the highest energy electron;
+\item cosine of the polar angle of the highest energy track;
+\item energy of the candidate bosons;
+\item invariant mass of the candidate bosons;
+\item acolinearity of the candidate boson pair;
+\item the vector sum of the transverse momentum of all PFOs in the event;
+\item the sphericity of the event;
+\item and the derived jet clustering parameter variables $-\text{log}_{10}(y_{ij})$ where $y_{ij}$ are jet clustering parameters, $i = 3,4$ and $j=i+1$.  
 \end{itemize}
 
 Figure \ref{fig:mvaalternatives1400GeV} shows the background rejection, which is equivalent to one minus the background efficiency, as a function of signal efficiency for various MVA classifiers.  Efficiency is defined as the fraction of events classified as signal by the MVA.  The efficiencies reported by TMVA are calculated after the application of the preselection cuts, which are described in section \ref{sec:preselection1400GeV}.  
 
-The classifier giving the optimal performance in terms of signal efficiency and background rejection was the BDT.  The performance of the BDT was optimised further by varying the number of trees used and the depth of the trees.  An optimal significance, S/$\sqrt(\text{S + B})$, where S and B are the number of signal and background events passing the preselection respectively, of 52.7 was obtained using the BDT.  \textcolor{blue}{Table \ref{table:mvaranking1400GeV} shows the ranking of the variables used by the BDT and figure \ref{fig:rankingvariables} shows the distributions of the three highest ranked variables.}
+The classifier giving the optimal performance in terms of signal efficiency and background rejection was the BDT.  The performance of the BDT was optimised further by varying the number of trees used and the depth of the trees.  An optimal significance, S/$\sqrt(\text{S + B})$, where S and B are the number of signal and background events passing the preselection\textcolor{blue}{,} respectively, of 52.7 was obtained using the BDT.  \textcolor{blue}{Table \ref{table:mvaranking1400GeV} shows the ranking of the variables used by the BDT and figure \ref{fig:rankingvariables} shows the distributions of the three highest ranked variables.}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.75\textwidth]{PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV.pdf}
-\caption[Background rejection as a function of signal efficiency for a variety of MVA options at $\sqrt{s}=1.4$~TeV.]{Background rejection as a function of signal efficiency for a variety of MVA options at $\sqrt{s}=1.4$~TeV.} 
+\caption[Background rejection as a function of signal efficiency for a variety of MVA options at $\sqrt{s}=1.4$~TeV.]{Background rejection as a function of signal efficiency for a variety of MVA options at $\sqrt{s}=1.4$~TeV.  \textcolor{blue}{The solid black circle shows the signal efficiency and background rejection obtained when maximising the significance for the BDT method.}}
 \label{fig:mvaalternatives1400GeV}
 \end{figure}
 
@@ -445,7 +445,7 @@ Jet clustering parameter $-\text{log}_{10}(y_{45})$ & 16 \\
 
 \subsection{Event Selection Summary}
 \label{sec:eventselsummary1400GeV}
-The event selection is summarised using the distribution of the invariant mass of the candidate bosons, which for the signal final state should peak around the W mass.  This distribution is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact} with: no event selection; with the preselection cuts applied; and with both preselections cuts and MVA applied.  The event selection efficiencies are also summarised in table \ref{table:selectionsummary1400GeV}.
+The event selection is summarised using the distribution of the invariant mass of the candidate bosons, which for the signal final state should peak around the W mass.  This distribution is shown in figure \ref{fig:synbosonmass1400GeVMVAimpact} with: a) no event selection; b) with the preselection cuts applied; and c) with both preselections cuts and MVA applied.  The event selection efficiencies are also summarised in table \ref{table:selectionsummary1400GeV}.
 
 As expected the dominant background processes after the MVA is applied are those that have the same topology as the signal process, i.e. four primary quarks with missing energy.  Two smaller sources of background are also present: two jet events with missing energy that are confused with four jet events with missing energy and events where a lepton is not properly reconstructed causing the event to look like four jets and missing energy.  
 
@@ -463,7 +463,7 @@ As expected the dominant background processes after the MVA is applied are those
 \centering
 \begin{tabular}{ l r r r }
 \hline
-Final State & $\epsilon_{\text{presel}}$ & $\epsilon_{\text{BDT}}$ & $N_{\text{BDT}}$ \\ 
+Final State & $\epsilon_{presel}$ & $\epsilon_{BDT}$ & $N_{\text{BDT}}$ \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 64.1\% & 44.5\% & 16,470 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu\text{lqqqq}$ & 26.1\% & 5.2\% & 8,582 \\
@@ -508,7 +508,7 @@ The sensitivity of CLIC to the anomalous gauge couplings will be determined thro
 \item \textbf{$\text{cos}\theta^{*}_{Jets}$}.  The angle between the boost direction and the back-to-back jets in the rest frame of the candidate bosons.  As each event contains two candidate bosons, there are two $\text{cos}\theta^{*}_{Jets}$ variables per event. 
 \end{itemize}
 
-Figure \ref{fig:variables} shows the distribution of these variables for the  \nu{\nu}qqqq final state for selected values of the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.  A $\chi^{2}$ fit to each of these variables was applied to obtain confidence limits on the sensitivity of CLIC to the anomalous gauge couplings, as described in section \ref{sec:chi2surfacedefinition}.  The distributions used for the $\chi^{2}$ fit contained signal and background events that passed event selection.  Table \ref{table:sensitivevariables} shows the 68\% confidence limits on the measurement of $\alpha_{4}$ and $\alpha_{5}$ obtained using each of the variables considered.  The $M_{VV}$ distribution shows the greatest sensitive to the anomalous gauge couplings; therefore, it will be used by all subsequent $\chi^{2}$ fits when reporting sensitivities.  This distribution shows the greatest sensitivity of the variables considered because the couplings primarily affect events with large values of $M_{VV}$ and there are relatively few of these events.    
+Figure \ref{fig:variables} shows the distribution of these variables for the  \nu{\nu}qqqq final state for selected values of the anomalous gauge couplings $\alpha_{4}$ and $\alpha_{5}$.  A $\chi^{2}$ fit to each of these variables was applied to obtain confidence limits on the sensitivity of CLIC to the anomalous gauge couplings, as described in section \ref{sec:chi2surfacedefinition}.  The distributions used for the $\chi^{2}$ fit contained signal and background events that passed \textcolor{blue}{the} event selection.  Table \ref{table:sensitivevariables} shows the 68\% confidence limits on the measurement of $\alpha_{4}$ and $\alpha_{5}$ obtained using each of the variables considered.  The $M_{VV}$ distribution shows the greatest \textcolor{blue}{sensitivity} to the anomalous gauge couplings; therefore, it will be used by all subsequent $\chi^{2}$ fits when reporting sensitivities.  This distribution shows the greatest sensitivity of the variables considered because the couplings primarily affect events with large values of $M_{VV}$ and there are relatively few of these events.    
 
 \begin{figure}[h!]
 \subfloat[]{\label{fig:mvv1400GeV} \includegraphics[width=0.5\textwidth]{PhysicsAnalysis/Plots/SensitiveDistributions/MVVs_SPFOs_kt_0p90_1400GeV.pdf}}
@@ -551,7 +551,7 @@ A $\chi^{2}$ surface was used to determine confidence limits on the anomalous ga
 
 When applying the $\chi^{2}$ fit to the $M_{VV}$ distribution, the distribution was binned using 13 bins as shown in figure \ref{fig:signalbackgroundfit}.  The first bin spanned the invariant mass range between 0~GeV and 200~GeV, this was followed by 11 bins of width 100~GeV ranging from 200~GeV to 1300~GeV and finally the last bin contained all invariant masses above 1300~GeV.  The expanded bin widths at the tails of the distribution were chosen to ensure the bin contents were sufficiently large to give a reliable estimate of the likelihood function using the $\chi^{2}$ parameter.  This choice of bin width also ensured the bin contents were sufficiently large to minimise fluctuations arising from individual events with large weights.  When applying the $\chi^{2}$ fit to distributions of the $\text{cos}\theta^{*}_{Bosons}$ and $\text{cos}\theta^{*}_{Jets}$ variables, the distributions were binned using 10 bins ranging from zero to one.  As there are two $\text{cos}\theta^{*}_{Jets}$ variables per event, the $\chi^{2}$ fit was applied to a two dimensional distribution of $\text{cos}\theta^{*}_{Jets}$, where a distinction between the two $\text{cos}\theta^{*}_{Jets}$ variables was made based on the energy of the candidate bosons.  The use of a two dimensional distribution in the $\chi^{2}$ fit was needed to account for any correlation between the two $\text{cos}\theta^{*}_{Jets}$ variables.  
 
-Confidence limits describing the sensitivity of the CLIC experiment to the anomalous gauge couplings were found by examining the $\chi^{2}$ surface in the space of $\alpha_{4}$ and $\alpha_{5}$.  Deviations from the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$ given the null hypothesis that $\alpha_{4} = \alpha_{5} = 0$.  The confidence limits reported in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ surface ($\Delta\chi^{2}$) of 2.28, 4.61 and 9.21 respectively.
+Confidence limits describing the sensitivity of the CLIC experiment to the anomalous gauge couplings were found by examining the $\chi^{2}$ surface in the space of $\alpha_{4}$ and $\alpha_{5}$.  Deviations from the minima of this surface, which by construction occurs at $\alpha_{4} = \alpha_{5} = 0$, yield confidence limits that indicate the probability of observing a particular value of $\alpha_{4}$ and $\alpha_{5}$ given the null hypothesis that $\alpha_{4} = \alpha_{5} = 0$.  The confidence limits reported in subsequent sections, 68\%, 90\% and 99\%, are defined using fixed deviations from the minima of $\chi^{2}$ surface ($\Delta\chi^{2}$) of 2.28, 4.61 and 9.21\textcolor{blue}{,} respectively.
 
 Confidence limits on the individual parameters $\alpha_{4}$ and $\alpha_{5}$ were determined by setting the corresponding coupling term to zero and examining the remaining one dimensional $\chi^{2}$ distribution.  A fourth order polynomial was fitted to the minima of this distribution and the 68\% confidence limit defined using $\Delta\chi^{2} = 1$.  The value of $\Delta\chi^{2}$ corresponding to a 68\% confidence limit is sensitive to the number of degrees of freedom in the fit, therefore, it differs when examining the one and two dimensional $\chi^{2}$ distributions.  
 
@@ -615,7 +615,7 @@ The uncertainty on the cross-section for a given process is included in the $\ch
 %
 \noindent where $O_{i}$ is the observed, $\alpha_{4} = \alpha_{5} = 0$, bin content for bin $i$ in the distribution of $M_{VV}$ with no background fluctuations and $E_{i}(r)$ is the expected, $\alpha_{4} \neq 0$ and $\alpha_{5} \neq 0$, bin content for bin $i$ in the distribution of $M_{VV}$ where the cross-section for the process of interest has been scaled by a factor of $r$.  The sum $\sum_{i}$ runs over the bins in the $M_{VV}$ distribution.  The $\sigma_{r}$ variable is the width of the distribution of $r$, which indicates the uncertainty on the measurement of the cross-section of interest.  A $\chi^{2}$ surface is constructed in the space of $\alpha_{4}$ and $\alpha_{5}$ by minimising $\chi^{2}(r)$ at each point.  
 
-The 68\% confidence region is shown with the inclusion of a nuisance parameter for the signal process $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ and the dominant background processes $\text{e}^{\pm}\gamma_{\text{BS}} \rightarrow \nu_{\text{e}}\text{qqqq}$ in figures \ref{fig:nuisance1400GeVsig} and \ref{fig:nuisance1400GeVbkg} respectively.  Minimal changes in sensitivity are observed when allowing the signal and dominant backgrounds to fluctuate.  This can be understood by considering the shape of the $M_{VV}$ distribution for the signal and dominant background processes, which is shown in figure \ref{fig:nuisanceexplanation1400GeV}.  These distribution shows that anomalous couplings primarily affect events with large invariant masses, while both the signal and dominant backgrounds peak at low invariant masses.  Therefore, by fluctuating the cross-section for the signal and dominant background processes, it is not possible to gain a significantly better match between the observed and expected bin contents in the $M_{VV}$ distribution.  This is encouraging as despite the $\text{e}^{\pm}\gamma_{\text{BS}} \rightarrow \nu_{\text{e}}\text{qqqq}$ backgrounds dominating the $\chi^{2}$ fit that determines the sensitivity of CLIC to the anomalous gauge couplings, precise knowledge of their cross-section is not crucial.  As the uncertainty on these cross-sections does not significantly effect the confidence regions, no cross-section uncertainties are accounted for when reporting the sensitivity of CLIC to the anomalous gauge couplings elsewhere in this analysis.   
+The 68\% confidence region is shown with the inclusion of a nuisance parameter for the signal process $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ and the dominant background processes $\text{e}^{\pm}\gamma_{\text{BS}} \rightarrow \nu_{\text{e}}\text{qqqq}$ in figures \ref{fig:nuisance1400GeVsig} and \ref{fig:nuisance1400GeVbkg}\textcolor{blue}{,} respectively.  Minimal changes in sensitivity are observed when allowing the signal and dominant backgrounds to fluctuate.  This can be understood by considering the shape of the $M_{VV}$ distribution for the signal and dominant background processes, which is shown in figure \ref{fig:nuisanceexplanation1400GeV}.  These distribution shows that anomalous couplings primarily affect events with large invariant masses, while both the signal and dominant backgrounds peak at low invariant masses.  Therefore, by fluctuating the cross-section for the signal and dominant background processes, it is not possible to gain a significantly better match between the observed and expected bin contents in the $M_{VV}$ distribution.  This is encouraging as despite the $\text{e}^{\pm}\gamma_{\text{BS}} \rightarrow \nu_{\text{e}}\text{qqqq}$ backgrounds dominating the $\chi^{2}$ fit that determines the sensitivity of CLIC to the anomalous gauge couplings, precise knowledge of their cross-section is not crucial.  As the uncertainty on these cross-sections does not significantly \textcolor{blue}{affect} the confidence regions, no cross-section uncertainties are accounted for when reporting the sensitivity of CLIC to the anomalous gauge couplings elsewhere in this analysis.   
 
 \begin{figure}[h!]
 \centering
@@ -644,7 +644,7 @@ The signal and background final states for the $\sqrt{s}=3$~TeV analysis were id
 \centering
 \begin{tabular}{ l r r }
 \hline
-Final State & Cross-Section [fb]  \\ 
+Final State & Cross-section [fb]  \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 71.5 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu\text{lqqqq}$ & 106.6 \\
@@ -680,7 +680,7 @@ As opposed to training the MVA using 50\% of the signal and background events, a
 \centering
 \begin{tabular}{ l r r r }
 \hline
-Final State & $\epsilon_{\text{presel}}$ & $\epsilon_{\text{BDT}}$ & $N_{\text{BDT}}$ \\ 
+Final State & $\epsilon_{presel}$ & $\epsilon_{BDT}$ & $N_{\text{BDT}}$ \\ 
 \hline
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 74.4\% & 46.0\% & 65,740 \\
 $\text{e}^{+}\text{e}^{-} \rightarrow \nu\text{lqqqq}$ & 40.0\% & 12.0\% & 25,660 \\
