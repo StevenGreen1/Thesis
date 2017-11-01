@@ -262,7 +262,7 @@ The configuration for the jet algorithm for the $\sqrt{s}=1.4$~TeV analysis was 
 \label{sec:isolatedleptonfinding}
 An isolated lepton finder \cite{Wendt:2007iw} was included in the analysis chain to reject background final states containing primary leptons.  Leptons produced via hadronisation are unlikely to be flagged as isolated because all hadronisation products are boosted along the direction of the parent quark.  This means isolated leptons are likely to correspond to primary leptons, which makes the number of isolated leptons a powerful discriminating variable to use in event selection.  
 
-The isolated lepton finder determines whether a PFO is an electron or muon by first checking that the PFO has a single charged particle track associated to it.  If that is the case, the calorimetric energy deposits of the PFO are examined to see if they are consistent with what is expected for an electron or muon.  If they are consistent with expectations, the properties of the charged particle track are examined to determine whether the track originates from the IP.  If the PFO is deemed to have originated from the IP, isolation checks \textcolor{blue}{that} examine the energy deposited in the calorimeters within a cone surrounding the PFO, are applied to determine whether the particle belongs to a jet.  If the PFO does not appear to belong to a jet then it is counted as an isolated lepton.  The fraction of events rejected by the lepton finder is summarised in table \ref{table:efficiencyleptonfinding}.   
+The isolated lepton finder determines whether a PFO is an electron or muon by first checking that the PFO has a single charged particle track associated to it.  If that is the case, the calorimetric energy deposits of the PFO are examined to see if they are consistent with what is expected for an electron or muon.  If they are consistent with expectations, the properties of the charged particle track are examined to determine whether the track originates from the IP.  \textcolor{blue}{If the PFO is deemed to have originated from the IP and has an energy greater than 15~GeV then it is counted as an isolated lepton.}  Table \ref{table:efficiencyleptonfinding} shows the fraction of events \textcolor{blue}{containing at least one isolated lepton} for selected final states at $\sqrt{s}=1.4$~TeV.  
 
 \begin{table}[h!]
 \centering
@@ -270,11 +270,11 @@ The isolated lepton finder determines whether a PFO is an electron or muon by fi
 \hline
 Final State & $\epsilon_{\text{Lepton Finding}}$ \\ 
 \hline
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 99.7 \\
-$\text{e}^{+}\text{e}^{-} \rightarrow \nu\text{lqqqq}$ & 48.9 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu{\nu}\text{qqqq}$ & 0.3 \\
+$\text{e}^{+}\text{e}^{-} \rightarrow \nu\text{lqqqq}$ & 51.1 \\
 \hline
 \end{tabular}
-\caption[The fraction of events rejected by the isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and {\nu}lqqqq final states.]{The fraction of events rejected by the isolated lepton finding at $\sqrt{s}=1.4$~TeV for the {\nu}{\nu}qqqq and {\nu}lqqqq final states.}
+\caption[The fraction of events \textcolor{blue}{containing at least one isolated lepton} for the {\nu}{\nu}qqqq and {\nu}lqqqq final states at $\sqrt{s}=1.4$~TeV.]{The fraction of events \textcolor{blue}{containing at least one isolated lepton} for the {\nu}{\nu}qqqq and {\nu}lqqqq final states at $\sqrt{s}=1.4$~TeV.}
 \label{table:efficiencyleptonfinding}
 \end{table}
 
