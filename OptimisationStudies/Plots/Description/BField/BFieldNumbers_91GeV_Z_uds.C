@@ -18,7 +18,7 @@
    axesEj->SetStats(0);
    axesEj->SetLineWidth(2);
    axesEj->SetMarkerStyle(20);
-   axesEj->GetXaxis()->SetTitle("Magentic Field Strength [T]");
+   axesEj->GetXaxis()->SetTitle("Magnetic Field Strength [T]");
    axesEj->GetXaxis()->SetNdivisions(505);
    axesEj->GetXaxis()->SetLabelFont(132);
    axesEj->GetXaxis()->SetLabelSize(0.05);
@@ -93,4 +93,5 @@
    c1->Modified();
    c1->cd();
    c1->SetSelected(c1);
+   c1->SaveAs("BFieldNumbers_91GeV_Z_uds.pdf");
 }
