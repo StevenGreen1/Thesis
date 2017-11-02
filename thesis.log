@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.21)  2 NOV 2017 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.21)  2 NOV 2017 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4248,7 +4248,11 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/JetEnergyResolution/JetEnergyRes
 olutionScan_1400GeV.pdf used on input line 339.
 (pdftex.def)             Requested size: 336.05533pt x 228.78712pt.
  [169]
-<PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf, id=7783, 56
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [170 <./PhysicsAnalysis/Plots/JetEnergyResolution/JetEnergyResolutionScan_1400
+GeV.pdf, page is rotated 90 degrees>]
+<PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf, id=7831, 56
 9.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf Graphic
  file (type pdf)
@@ -4258,8 +4262,8 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseM
 omentum.pdf used on input line 366.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf, id=778
-4, 569.12625pt x 387.4475pt>
+<PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf, id=783
+2, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf Gr
 aphic file (type pdf)
 
@@ -4268,7 +4272,7 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfIso
 latedLeptons.pdf used on input line 367.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-<PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf, id=7785, 569.12625pt x 
+<PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf, id=7833, 569.12625pt x 
 387.4475pt>
 File: PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf Graphic file (type 
 pdf)
@@ -4277,12 +4281,10 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf
 used on input line 368.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
-[170 <./PhysicsAnalysis/Plots/JetEnergyResolution/JetEnergyResolutionScan_1400G
-eV.pdf, page is rotated 90 degrees>] [171 <./PhysicsAnalysis/Plots/PreSelection
-/1400GeV/TransverseMomentum.pdf, page is rotated 90 degrees> <./PhysicsAnalysis
-/Plots/PreSelection/1400GeV/NumberOfIsolatedLeptons.pdf, page is rotated 90 deg
-rees> <./PhysicsAnalysis/Plots/PreSelection/1400GeV/Legend.pdf, page is rotated
- 90 degrees>]
+[171 <./PhysicsAnalysis/Plots/PreSelection/1400GeV/TransverseMomentum.pdf, page
+ is rotated 90 degrees> <./PhysicsAnalysis/Plots/PreSelection/1400GeV/NumberOfI
+solatedLeptons.pdf, page is rotated 90 degrees> <./PhysicsAnalysis/Plots/PreSel
+ection/1400GeV/Legend.pdf, page is rotated 90 degrees>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [172]
@@ -4297,12 +4299,15 @@ Package pdftex.def Info: PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAl
 ternatives1400GeV.pdf used on input line 408.
 (pdftex.def)             Requested size: 336.05533pt x 246.56851pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [173]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 <PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/AcolinearitySynBosons_1400G
-eV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7988, 569.12625pt x 387.4475p
+eV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7995, 569.12625pt x 387.4475p
 t>
 File: PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/AcolinearitySynBosons_
 1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf Graphic file (type pdf)
@@ -4315,7 +4320,7 @@ nput line 443.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/InvariantMass_HighestEnergy
-SynBoson_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7989, 569.12625
+SynBoson_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7996, 569.12625
 pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/InvariantMass_HighestE
 nergySynBoson_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf Graphic file (
@@ -4329,7 +4334,7 @@ ariantMass_HighestEnergySynBoson_1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/NPfos_HighestEnergyJet_1400
-GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7990, 569.12625pt x 387.4475
+GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=7997, 569.12625pt x 387.4475
 pt>
 File: PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/NPfos_HighestEnergyJet
 _1400GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf Graphic file (type pdf)
@@ -4352,11 +4357,8 @@ used on input line 446.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [173]
 <PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_
-No_Cuts_StackPlot.pdf, id=8007, 569.12625pt x 387.4475pt>
+No_Cuts_StackPlot.pdf, id=8006, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_140
 0GeV_No_Cuts_StackPlot.pdf Graphic file (type pdf)
 
@@ -4367,7 +4369,7 @@ ntMassSynBosons_1400GeV_No_Cuts_StackPlot.pdf used on input line 461.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_
-Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=8008, 569.12625pt x 387.4475pt>
+Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf, id=8007, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_140
 0GeV_Pt_gt100GeV_NIsoLep_eq0_Cuts_StackPlot.pdf Graphic file (type pdf)
 
@@ -4379,7 +4381,7 @@ t line 462.
 (pdftex.def)             Requested size: 224.03688pt x 152.52278pt.
 
 <PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_1400GeV_
-PostPreSelection_PostMVA_Cuts_StackPlot.pdf, id=8009, 569.12625pt x 387.4475pt>
+PostPreSelection_PostMVA_Cuts_StackPlot.pdf, id=8008, 569.12625pt x 387.4475pt>
 File: PhysicsAnalysis/Plots/PostMVASelection/1400GeV/InvariantMassSynBosons_140
 0GeV_PostPreSelection_PostMVA_Cuts_StackPlot.pdf Graphic file (type pdf)
 
@@ -4400,11 +4402,8 @@ used on input line 464.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [174 <./PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400Ge
-V.pdf, page is rotated 90 degrees>] [175]
+[174 <./PhysicsAnalysis/Plots/MVAPlots/1400GeV/ThesisPlotMVAAlternatives1400GeV
+.pdf, page is rotated 90 degrees>] [175]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [176 <./PhysicsAnalysis/Plots/HighRankingVariables/1400GeV/AcolinearitySynBoso
@@ -4853,7 +4852,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  32165 strings out of 493014
  648792 string characters out of 6133350
- 850509 words of memory out of 5000000
+ 851509 words of memory out of 5000000
  33600 multiletter control sequences out of 15000+600000
  183684 words of font info for 325 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -4887,7 +4886,7 @@ mf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fo
 nts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
 ublic/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msam10.pfb>
-Output written on thesis.pdf (220 pages, 12518423 bytes).
+Output written on thesis.pdf (220 pages, 12523990 bytes).
 PDF statistics:
  9823 PDF objects out of 10688 (max. 8388607)
  5518 compressed objects within 56 object streams
