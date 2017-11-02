@@ -11,6 +11,17 @@ CMS Collaboration, S.~Chatrchyan {\em et~al.},
 \newblock {\em {Observation of a new boson at a mass of 125 GeV with the CMS
   experiment at the LHC}}, Phys. Lett. {\bf B716}, 30 (2012), arXiv:1207.7235.
 
+\bibitem{Adloff:2012gv}
+CALICE Collaboration, C.~Adloff {\em et~al.},
+\newblock {\em {Hadronic energy resolution of a highly granular
+  scintillator-steel hadron calorimeter using software compensation
+  techniques}}, JINST {\bf 7}, P09017 (2012), arXiv:1207.4210.
+
+\bibitem{Tran:2017tgr}
+S.~Green {\em et~al.},
+\newblock {\em {Software compensation in Particle Flow reconstruction}},
+  DESY-17-083  (2017), arXiv:1705.10363.
+
 \bibitem{Behnke:2013xla}
 T.~Behnke {\em et~al.},
 \newblock {\em {The International Linear Collider Technical Design Report -
@@ -25,6 +36,11 @@ L.~Linssen, A.~Miyamoto, M.~Stanitzki, and H.~Weerts,
 CLIC and CLICdp Collaborations, M.~J. Boland {\em et~al.},
 \newblock {\em {Updated baseline for a staged Compact Linear Collider}},
   CERN-2016-004  (2016), arXiv:1608.07537.
+
+\bibitem{Aicheler:2012bya}
+M.~Aicheler {\em et~al.},
+\newblock {\em {A Multi-TeV Linear Collider Based on CLIC Technology}},
+  CERN-2012-007  (2012).
 
 \bibitem{Pilicer:2015ijy}
 B.~Pilicer {\em et~al.},
@@ -87,6 +103,16 @@ C.~Grojean,
 \newblock {\em {New approaches to electroweak symmetry breaking}}, Phys. Usp.
   {\bf 50}, 1 (2007).
 
+\bibitem{tHooft:1979rat}
+G.~'t~Hooft,
+\newblock {\em {Naturalness, chiral symmetry, and spontaneous chiral symmetry
+  breaking}}, NATO Sci. Ser. B {\bf 59}, 135 (1980).
+
+\bibitem{Olive:2016xmw}
+Particle Data Group, C.~Patrignani {\em et~al.},
+\newblock {\em {Review of Particle Physics}}, Chin. Phys. {\bf C40}, 100001
+  (2016).
+
 \bibitem{Degrande:2013rea}
 C.~Degrande {\em et~al.},
 \newblock {\em {Monte Carlo tools for studies of non-standard electroweak gauge
@@ -137,6 +163,16 @@ J.~S. Marshall, A.~M{\"u}nnich, and M.~A. Thomson,
 \newblock {\em {Performance of Particle Flow Calorimetry at CLIC}}, Nucl.
   Instrum. Meth. {\bf A700}, 153 (2013), arXiv:1209.4039.
 
+\bibitem{Fabjan:2003aq}
+C.~W. Fabjan and F.~Gianotti,
+\newblock {\em {Calorimetry for particle physics}}, Rev. Mod. Phys. {\bf 75},
+  1243 (2003).
+
+\bibitem{Wigmans:2000vf}
+R.~Wigmans,
+\newblock {\em {Calorimetry: Energy measurement in particle physics}}, Int.
+  Ser. Monogr. Phys. {\bf 107}, 1 (2000).
+
 \bibitem{Behnke:2013lya}
 H.~Abramowicz {\em et~al.},
 \newblock {\em {The International Linear Collider Technical Design Report -
@@ -165,10 +201,15 @@ LHCb Collaboration, P.~Perret,
 \newblock {\em {First Years of Running for the LHCb Calorimeter System}}, PoS
   {\bf TIPP2014}, 030 (2014), arXiv:1407.4289.
 
-\bibitem{Tran:2017tgr}
-H.~L. Tran {\em et~al.},
-\newblock {\em {Software compensation in Particle Flow reconstruction}},
-  DESY-17-083  (2017), arXiv:1705.10363.
+\bibitem{Ahmet:1990eg}
+OPAL Collaboration, K.~Ahmet {\em et~al.},
+\newblock {\em {The OPAL detector at LEP}}, Nucl. Instrum. Meth. {\bf A305},
+  275 (1991).
+
+\bibitem{Buskulic:1994wz}
+ALEPH Collaboration, D.~Buskulic {\em et~al.},
+\newblock {\em {Performance of the ALEPH detector at LEP}}, Nucl. Instrum.
+  Meth. {\bf A360}, 481 (1995).
 
 \bibitem{Blaising:2015nla}
 CALICE collaboration, M.~Chefdeville {\em et~al.},
@@ -261,7 +302,7 @@ CMS Collaboration, S.~Chatrchyan {\em et~al.},
 ATLAS Collaboration, G.~Aad {\em et~al.},
 \newblock {\em {Measurement of $W^+W^-$ production in pp collisions at
   $\sqrt{s}$ = 7 TeV with the ATLAS detector and limits on anomalous WWZ and
-  WWγ couplings}}, Phys. Rev. {\bf D87}, 112001 (2013), arXiv:1210.2979.
+  WW$\gamma$ couplings}}, Phys. Rev. {\bf D87}, 112001 (2013), arXiv:1210.2979.
 
 \bibitem{Chatrchyan:2014bza}
 CMS Collaboration, S.~Chatrchyan {\em et~al.},
@@ -269,16 +310,10 @@ CMS Collaboration, S.~Chatrchyan {\em et~al.},
   constraints on anomalous quartic gauge couplings in $pp$ collisions at
   $\sqrt{s}$ = 8 TeV}}, Phys. Rev. {\bf D90}, 032008 (2014), arXiv:1404.4619.
 
-\bibitem{Fabjan:2003aq}
-C.~W. Fabjan and F.~Gianotti,
-\newblock {\em {Calorimetry for particle physics}}, Rev. Mod. Phys. {\bf 75},
-  1243 (2003).
-
-\bibitem{Adloff:2012gv}
-CALICE Collaboration, C.~Adloff {\em et~al.},
-\newblock {\em {Hadronic energy resolution of a highly granular
-  scintillator-steel hadron calorimeter using software compensation
-  techniques}}, JINST {\bf 7}, P09017 (2012), arXiv:1207.4210.
+\bibitem{Sefkow:2015hna}
+F.~Sefkow, A.~White, K.~Kawagoe, R.~Poschl, and J.~Repond,
+\newblock {\em {Experimental Tests of Particle Flow Calorimetry}}, Rev. Mod.
+  Phys. {\bf 88}, 015003 (2016), arXiv:1507.05893.
 
 \bibitem{Weste:2010:CVD:1841628}
 N.~Weste and D.~Harris,
@@ -306,6 +341,15 @@ M.~Benoit {\em et~al.},
 \newblock {\em {Fabrication of capacitively coupled hybrid pixel detectors (in
   preparation)}}.
 
+\bibitem{Dannheim:2015ffa}
+CLICdp, D.~Dannheim,
+\newblock {\em {The CLIC Vertex Detector}}, JINST {\bf 10}, C03025 (2015).
+
+\bibitem{radiationhandbook}
+D.~Delacroix, J.~P.~Guerre, P.~Leblanc, and C.~Hickman,
+\newblock {\em Radionuclide And Radiation Protection Data Handbook 2002},
+  Radiation Protection Dosimetry {\bf 98}, 1 (2002).
+
 \bibitem{AlipourTehrani:2054922}
 N.~Alipour~Tehrani {\em et~al.},
 \newblock {\em {Calibration of ultra-thin hybrid pixel detector assemblies with
@@ -326,11 +370,6 @@ M.~Derrick {\em et~al.},
 \newblock {\em {Design and construction of the ZEUS barrel calorimeter}}, Nucl.
   Instrum. Meth. {\bf A309}, 77 (1991).
 
-\bibitem{Wigmans:2000vf}
-R.~Wigmans,
-\newblock {\em {Calorimetry: Energy measurement in particle physics}}, Int.
-  Ser. Monogr. Phys. {\bf 107}, 1 (2000).
-
 \bibitem{Landau:1944if}
 L.~Landau,
 \newblock {\em {On the energy loss of fast particles by ionization}}, J. Phys.
@@ -350,11 +389,6 @@ CALICE Collaboration, C.~Adloff {\em et~al.},
 \newblock {\em {The Time Structure of Hadronic Showers in highly granular
   Calorimeters with Tungsten and Steel Absorbers}}, JINST {\bf 9}, P07022
   (2014), arXiv:1404.6454.
-
-\bibitem{Olive:2016xmw}
-Particle Data Group, C.~Patrignani {\em et~al.},
-\newblock {\em {Review of Particle Physics}}, Chin. Phys. {\bf C40}, 100001
-  (2016).
 
 \bibitem{Folger:2003sb}
 G.~Folger and J.~P. Wellisch,
@@ -382,11 +416,10 @@ E.~Fermi,
 \newblock {\em {An attempt of a theory of beta radiation. 1.}}, Z. Phys. {\bf
   88}, 161 (1934).
 
-\bibitem{Aad:2014zda}
-ATLAS Collaboration, G.~Aad {\em et~al.},
-\newblock {\em {Evidence for Electroweak Production of $W^{\pm}W^{\pm}jj$ in
-  $pp$ Collisions at $\sqrt{s}=8$ TeV with the ATLAS Detector}}, Phys. Rev.
-  Lett. {\bf 113}, 141803 (2014), arXiv:1405.6241.
+\bibitem{Green:2016trm}
+D.~R. Green, P.~Meade, and M.-A. Pleier,
+\newblock {\em {Multi-Boson Interactions at the Run 1 LHC}}, Submitted to: Rev.
+  Mod. Phys.  (2016), arXiv:1610.07572.
 
 \bibitem{0708.4233}
 W.~Kilian, T.~Ohl, and J.~Reuter,
@@ -448,11 +481,6 @@ O.~Wendt, F.~Gaede, and T.~Kramer,
 A.~Hoecker {\em et~al.},
 \newblock {\em {TMVA: Toolkit for Multivariate Data Analysis}}, PoS {\bf ACAT},
   040 (2007), arXiv:physics/0703039.
-
-\bibitem{Green:2016trm}
-D.~R. Green, P.~Meade, and M.-A. Pleier,
-\newblock {\em {Multi-Boson Interactions at the Run 1 LHC}}, Submitted to: Rev.
-  Mod. Phys.  (2016), arXiv:1610.07572.
 
 \bibitem{hepthesis}
 A.~Buckley,
