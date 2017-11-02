@@ -4,3 +4,7 @@ The 1D confidence limits for alpha 4 are (-0.00101576, 0.00112224)
 The 1D confidence limits for alpha 5 are (-0.000697797, 0.000741482)
 -0.00102 & 0.00112
 -0.000698 & 0.000741
+The 2D confidence limits for alpha 4 are (-0.0015, 0.00161)
+The 2D confidence limits for alpha 5 are (-0.00103, 0.00107)
+-0.0015 & 0.00161
+-0.00103 & 0.00107

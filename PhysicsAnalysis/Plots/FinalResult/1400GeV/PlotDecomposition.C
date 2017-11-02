@@ -105,6 +105,16 @@ void MakePlots(TString name, TString description, TString briefDescription)
     alphaLow_a5 = pTF1a5->GetX(0.989, -0.02, 0.0);
     alphaHigh_a5 = pTF1a5->GetX(0.989, 0.0, 0.02);
 
+    double alphaLow_a4b(0.0);
+    double alphaHigh_a4b(0.0);
+    double alphaLow_a5b(0.0);
+    double alphaHigh_a5b(0.0);
+    alphaLow_a4b = pTF1a4->GetX(3.84, -0.02, 0.0);
+    alphaHigh_a4b = pTF1a4->GetX(3.84, 0.0, 0.02);
+    alphaLow_a5b = pTF1a5->GetX(3.84, -0.02, 0.0);
+    alphaHigh_a5b = pTF1a5->GetX(3.84, 0.0, 0.02);
+
+
     std::ofstream resultsFile;
     std::string resultFileName = briefDescription + ".txt";
     resultsFile.open(resultFileName.c_str());
@@ -114,6 +124,11 @@ void MakePlots(TString name, TString description, TString briefDescription)
     resultsFile << "The 1D confidence limits for alpha 5 are (" << alphaLow_a5 << ", " << alphaHigh_a5 << ")" << std::endl;
     resultsFile << std::setprecision(3) << alphaLow_a4 << " & " << alphaHigh_a4 << std::endl;
     resultsFile << std::setprecision(3) << alphaLow_a5 << " & " << alphaHigh_a5 << std::endl;
+    resultsFile << "The 2D confidence limits for alpha 4 are (" << alphaLow_a4b << ", " << alphaHigh_a4b << ")" << std::endl;
+    resultsFile << "The 2D confidence limits for alpha 5 are (" << alphaLow_a5b << ", " << alphaHigh_a5b << ")" << std::endl;
+    resultsFile << std::setprecision(3) << alphaLow_a4b << " & " << alphaHigh_a4b << std::endl;
+    resultsFile << std::setprecision(3) << alphaLow_a5b << " & " << alphaHigh_a5b << std::endl;
+
     resultsFile.close();
 }
 
