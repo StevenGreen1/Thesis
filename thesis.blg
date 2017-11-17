@@ -7,43 +7,43 @@ Warning--empty booktitle in Hartbrich:292251
 Warning--empty author and editor in geantStringModel
 You've used 94 entries,
             1983 wiz_defined-function locations,
-            1251 strings with 20929 characters,
-and the built_in function-call counts, 19338 in all, are:
-= -- 1281
+            1252 strings with 20924 characters,
+and the built_in function-call counts, 19386 in all, are:
+= -- 1285
 > -- 905
 < -- 0
 + -- 322
 - -- 186
-* -- 1646
-:= -- 2539
+* -- 1653
+:= -- 2543
 add.period$ -- 94
 call.type$ -- 94
 change.case$ -- 89
 chr.to.int$ -- 0
 cite$ -- 96
-duplicate$ -- 1175
-empty$ -- 2168
+duplicate$ -- 1176
+empty$ -- 2173
 format.name$ -- 279
-if$ -- 4510
+if$ -- 4523
 int.to.chr$ -- 0
 int.to.str$ -- 94
 missing$ -- 95
 newline$ -- 390
 num.names$ -- 93
-pop$ -- 451
+pop$ -- 449
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 710
+skip$ -- 714
 stack$ -- 0
-substring$ -- 697
-swap$ -- 330
+substring$ -- 707
+swap$ -- 331
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 154
+while$ -- 155
 width$ -- 96
 write$ -- 841
 (There were 2 warnings)
